@@ -1,17 +1,38 @@
 import { useRef, useLayoutEffect } from "react"
 
-// import FirstTs from "."
+import FirstTs from "."
 
 import "./index.scss"
 
 const FirstProduct = () => {
-  const sec3 = useRef(null)
   const total = useRef(null)
-  // const { textHover, sec1Ani, hoverAni, secA } = FirstTs(total)
+  const { textHover, ...restFunc } = FirstTs(total)
 
   useLayoutEffect(() => {
-    console.log("a")
-  }, [])
+    Object.entries(restFunc).forEach(([key, value]) => {
+      if (typeof (restFunc as never)[key] === "function") {
+        value()
+      }
+    })
+    textHover([
+      ".sec5",
+      ".sec8",
+      ".sec9",
+      ".sec11",
+      ".sec12",
+      ".sec13",
+      ".sec14",
+      ".sec15",
+      ".sec17",
+      ".sec20",
+      ".sec21",
+      ".sec22",
+      ".sec23",
+      ".sec24",
+      ".sec25",
+      ".sec27",
+    ])
+  }, [restFunc, textHover])
 
   return (
     <div ref={total}>
@@ -33,8 +54,8 @@ const FirstProduct = () => {
       <section className='section sec3'>
         <div className='play'></div>
       </section>
-      <section className='section sec4' ref={sec3}>
-        <div className='color_title'>
+      <section className='section sec4'>
+        <div className='color_title Kfont'>
           <div>Brand</div> <div>New</div> <div>Mecha</div> <div>Design</div>
         </div>
         {/* <div className='light_wrap'>
@@ -43,9 +64,9 @@ const FirstProduct = () => {
         <div className='roboat'></div>
       </section>
       <section className='section sec5'>
-        <div className='title'>Turbor Mecha Design</div>
-        <div className='slogan'>Energize Your Coolness</div>
-        <div className='desc'>
+        <div className='title Kfont textAni'>Turbor Mecha Design</div>
+        <div className='slogan Hfont textAni'>Energize Your Coolness</div>
+        <div className='desc Hfont textAni'>
           Inspired by energy Mecha, the power-packed POVA NEO 3 comes with three
           color options for an energizing experience!
         </div>
@@ -60,21 +81,21 @@ const FirstProduct = () => {
       <section className='section sec6'>
         <div className='phoneBox'>
           <div className='f1 com'>
-            <div className='name'>Amber Gold</div>
+            <div className='name Kfont'>Amber Gold</div>
             <div className='phone'></div>
           </div>
           <div className='f2 com'>
-            <div className='name'>Mecha Black</div>
+            <div className='name Kfont'>Mecha Black</div>
             <div className='phone'></div>
           </div>
           <div className='f3 com'>
-            <div className='name'>Hurricane Blue</div>
+            <div className='name Kfont'>Hurricane Blue</div>
             <div className='phone'></div>
           </div>
         </div>
       </section>
       <section className='section sec4 sec7'>
-        <div className='color_title'>
+        <div className='color_title Kfont'>
           <div>Power On</div> <div>and On</div> <div>Play </div>
           <div>Non-stop</div>
         </div>
@@ -86,16 +107,16 @@ const FirstProduct = () => {
         <div className='box'>
           <div className='left'></div>
           <div className='right'>
-            <div className='title'>7000mAh Mega Battery</div>
-            <div className='img'></div>
-            <div className='desc'>
+            <div className='title textAni Kfont'>7000mAh Mega Battery</div>
+            <div className='img textAni Hfont'></div>
+            <div className='desc textAni Hfont'>
               Boldly engage in battles with the 7000mAh battery, which provides
               powerful backup for uninterrupted gaming sessions. Combined with
               the added benefit of 18W Flash Charge, say goodbye to power
               shortages from now on.
             </div>
-            <div className='params'>
-              <div className='param'>
+            <div className='params textAni'>
+              <div className='param Hfont'>
                 <div className='big'>18H+</div>
                 <div className='small'>Facebook</div>
               </div>
@@ -118,26 +139,30 @@ const FirstProduct = () => {
       <section className='section sec9'>
         <div className='box'>
           <div className='left'>
-            <div className='title'>Battery Lab 3.0</div>
-            <div className='img'></div>
-            <div className='desc'>
+            <div className='title textAni'>Battery Lab 3.0</div>
+            <div className='img textAni'></div>
+            <div className='desc textAni'>
               Extend your phone's battery life with the new energy-efficient
               Super Power Saver. It intelligently identifies battery-draining
               apps and adjusts to the best power-saving mode for longer use.
             </div>
-            <div className='params'>
+            <div className='params textAni'>
               <div>
+                <div className='img1'></div>
                 Long Battery <br /> Life
               </div>
               <div>
+                <div className='img2'></div>
                 Optimization <br />
                 App
               </div>
               <div>
+                <div className='img3'></div>
                 Super Power <br />
                 Saving
               </div>
               <div>
+                <div className='img4'></div>
                 Smart Power <br />
                 Saving Scenarios
               </div>
@@ -150,7 +175,7 @@ const FirstProduct = () => {
         </div>
       </section>
       <section className='section sec4 sec10'>
-        <div className='color_title'>
+        <div className='color_title Kfont'>
           <div>Pioneering</div> <div>Performance</div> <div>Supercool</div>
           <div>Experience</div>
         </div>
@@ -159,21 +184,21 @@ const FirstProduct = () => {
         </div> */}
       </section>
       <section className='section sec11'>
-        <div className='title'>MediaTek Helio G85 Processor </div>
+        <div className='title textAni Kfont'>MediaTek Helio G85 Processor </div>
         <div className='box'>
-          <div className='left'>
+          <div className='left textAni'>
             <div className='f1'></div>
-            <div className='sub'>Gaming Experience Revamped</div>
-            <div className='desc'>
+            <div className='sub Hfont'>Gaming Experience Revamped</div>
+            <div className='desc Hfont'>
               The MediaTek Helio G85 boosts the Arm Mali-G52 GPU to 1.0 GHz for
               seamless and efficient mobile gaming on-the-go.
             </div>
             <div className='f2'></div>
           </div>
-          <div className='right'>
+          <div className='right textAni'>
             <div className='f1'></div>
-            <div className='sub'>Navigate with Precision</div>
-            <div className='desc'>
+            <div className='sub Hfont'>Navigate with Precision</div>
+            <div className='desc Hfont'>
               Boasting leading inertial navigation, Helio G85 ensures precise
               positioning even in tunnels or underground where GNSS is
               unavailable.
@@ -185,11 +210,11 @@ const FirstProduct = () => {
       <section className='section sec12'>
         <div className='box'>
           <div className='left'>
-            <div className='title'>
+            <div className='title textAni Kfont'>
               Large <br /> Memory With <br /> Extended <br /> RAM
             </div>
-            <div className='sub'>128+4GB</div>
-            <div className='desc'>
+            <div className='sub textAni Hfont'>128+4GB</div>
+            <div className='desc textAni Hfont'>
               • Expandable RAM up to 8GB <br />
               *Optional expansion of 1, 2, 4GB, default expansion of 2GB
               <br />
@@ -197,33 +222,50 @@ const FirstProduct = () => {
               <br />• Application startup speed increased by 45% on average
             </div>
           </div>
-          <div className='right'></div>
+          <div className='right'>
+            <video
+              className='lazy'
+              src='/src/assets/video/v2.mp4'
+              autoPlay
+              webkit-playsinline='true'
+              preload='auto'
+              muted
+              loop
+            ></video>
+          </div>
         </div>
       </section>
       <section className='section sec13'>
-        <div className='title'>6.82'' HD Display with 90Hz Refresh Rate</div>
-        <div className='line'></div>
-        <div className='desc'>
+        <div className='title textAni Kfont'>
+          6.82'' HD Display <br /> with 90Hz <br /> Refresh Rate
+        </div>
+        <div className='line textAni'></div>
+        <div className='desc textAni Hfont'>
           Get the most out of your gaming experience with an enhanced experience
           that features smoother graphics, richer detail, and total immersion.
         </div>
         <div className='img'></div>
       </section>
       <section className='section sec14'>
-        <div className='title'>Dual speaker with DTS Stereo Sound Effect</div>
-        <div className='img'></div>
-        <div className='desc'>
+        <div className='title textAni Kfont'>
+          Dual speaker <br /> with DTS <br /> Stereo Sound <br /> Effect
+        </div>
+        <div className='img textAni'></div>
+        <div className='desc textAni Hfont'>
           Hear the super sensational sound effects that will transport you into
           the game world like never before.
         </div>
-        <div className='logo'></div>
+        <div className='logBox textAni'>
+          <div className='logo'></div>
+          <div className='audo'></div>
+        </div>
       </section>
       <section className='section sec15'>
         <div className='box'>
           <div className='left'>
-            <div className='title'>Dual Game Engine</div>
-            <div className='img'></div>
-            <div className='desc'>
+            <div className='title textAni Kfont'>Dual Game Engine</div>
+            <div className='img textAni'></div>
+            <div className='desc textAni Hfont'>
               Powerful Function with Low Power Consumption. Enjoy seamless,
               lag-free mobile gaming with stunningly realistic visuals and
               immersive sounds.
@@ -233,7 +275,7 @@ const FirstProduct = () => {
         </div>
       </section>
       <section className='section sec4 sec16'>
-        <div className='color_title'>
+        <div className='color_title Kfont'>
           <div>Clear</div> <div>Camera</div> <div>Meets</div>
           <div>Your Shine</div>
         </div>
@@ -242,20 +284,203 @@ const FirstProduct = () => {
         </div> */}
       </section>
       <section className='section sec17'>
-        <div className='title'>
+        <div className='title textAni Kfont'>
           16MP <br /> Clear Main Camera
         </div>
-        <div className='sub'>Capture life's beauty.</div>
-        <div className='img'></div>
+        <div className='sub textAni Hfont'>Capture life's beauty.</div>
+        <div className='img textAni'></div>
         <div className='phone'></div>
+        {/* <div className='bigImg'></div> */}
       </section>
       <section className='section sec18'></section>
       <section className='section sec19'>
-        <div className='sub'>
+        <div className='sub Hfont'>
           Amplify your brilliance with Portrait Beauty feature
         </div>
         <div className='f1'></div>
         <div className='f2'></div>
+      </section>
+      <section className='section sec20'>
+        <div className='title textAni Kfont'>SKY SHOP</div>
+        <div className='box textAni'>
+          <div className='f1 '></div>
+          <div className='text Hfont'>Magic at Your Fingertip</div>
+          <div className='f2'></div>
+        </div>
+        <div className='desc textAni Hfont'>
+          Choose from over 12 sky-themed filters to create your one-of-a-kind
+          photos, magically with just one tap! <br /> Sunny/Rainbow/Azure
+          Sky/Rosy Clouds/Sunset/Twilight <br /> Starry/Milky
+          way/Meteor/Orbit/Aurora/Moon
+        </div>
+        <div className='top'></div>
+        <div className='bot'></div>
+      </section>
+      <section className='section sec21'>
+        <div className='title textAni Kfont'>Show Your Colorful Side</div>
+        <div className='img'>
+          <div className='img1'></div>
+          <div className='img2'></div>
+          <div className='img3'></div>
+          <div className='img4'></div>
+        </div>
+      </section>
+      <section className='section sec4 sec22'>
+        <div className='color_title Kfont'>
+          <div>Clear</div> <div>Camera</div> <div>Meets</div>
+          <div>Your Shine</div>
+        </div>
+        {/* <div className='light_wrap'>
+          <div className='light'></div>
+        </div> */}
+        <div className='log'></div>
+      </section>
+      <section className='section sec23'>
+        <div className='title textAni Kfont'>Vivid Wallpapers</div>
+        <div className='img textAni'></div>
+        <div className='desc textAni Hfont'>
+          Treat your eyes to a tapestry of color and beauty. <br /> A series of
+          interconnected wallpapers merge objects and creatures from the real
+          world and the imagination. Your <br /> life is multicolored and
+          ever-evolving, and your phone should reflect that.{" "}
+        </div>
+        <div className='phone'>
+          <div className='img1'></div>
+          <div className='img2'></div>
+          <div className='img3'></div>
+          <div className='img4'></div>
+          <div className='img5'></div>
+        </div>
+        <div className='params'>
+          <div className='left'>
+            <div className='title Kfont'>
+              UPS-Ultra <br /> Power Signal
+            </div>
+            <div className='desc Hfont'>
+              Enjoy Optimized Performance with Increased Cellular{" "}
+            </div>
+          </div>
+          <div className='right Hfont'>
+            <div className='out'>
+              <div className='up'></div>
+              <div className='com '>
+                <div className='bot'>15-20%</div>
+                <div className='top'>
+                  Signal Throughput <br />{" "}
+                </div>
+              </div>
+            </div>
+            <div className='out'>
+              <div className='up'></div>
+              <div className='com'>
+                <div className='bot'>25%</div>
+                <div className='top'>
+                  Signal Stability <br />{" "}
+                </div>
+              </div>
+            </div>
+            <div className='out'>
+              <div className='up'></div>
+              <div className='com'>
+                <div className='bot'>30%</div>
+                <div className='top'>
+                  Data Rate under Weak <br /> Connection
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='section sec24'>
+        <div className='box'>
+          <div className='left'></div>
+          <div className='right'>
+            <div className='title textAni Kfont'>
+              Linkbooming <br /> 1.0
+            </div>
+            <div className='f1 textAni'></div>
+            <div className='sub textAni Hfont'>
+              Dual Network Collaboration Helps Internet Speeds Take Flight
+            </div>
+            <div className='f2 textAni'></div>
+            <div className='desc textAni Hfont'>
+              Say goodbye to mobile network lagging. <br /> Linkbooming 1.0
+              enables parallel acceleration of Wi-Fi and cellular network
+              connections for a fast and stable network experience.
+            </div>
+            <div className='params textAni Hfont'>
+              <div className='com'>
+                <div className='low'></div>
+                <div className='top'>25%</div>
+                <div className='bot'>Latency 25%</div>
+              </div>
+              <div className='com'>
+                <div className='up'></div>
+                <div className='top'>25%</div>
+                <div className='bot'>Network Speed 25%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='section sec25'>
+        <div className='box'>
+          <div className='title textAni Kfont'>
+            Aurora <br /> Engine
+          </div>
+          <div className='f1 textAni'></div>
+          <div className='sub textAni Hfont'>
+            Launch Apps in an Instant Battle-ready in Seconds
+          </div>
+          <div className='f2 textAni'></div>
+          <div className='desc textAni Hfont'>
+            All-new Aurora Engine powered by AI algorithms delivers
+            lightning-fast speed to launch top 10 large-scale games in seconds.
+            Foreground launch rate up by 85%, enjoy seamless gameplay with no
+            wait. Common App launch rate up by 95%, gain instant access and
+            maximum efficiency.
+          </div>
+        </div>
+      </section>
+      <section className='section sec26'>
+        <div className='title textAni Kfont'>Game Space 2.0</div>
+        <div className='f1'></div>
+        <div className='sub Hfont'>Enjoy Gaming Time</div>
+        <div className='f2'></div>
+        <div className='desc Hfont'>
+          Cool interface upgrade. Instantly switch from a variety of modes.{" "}
+          <br /> View performance improvements in a glance with the new
+          performance radar chart.
+        </div>
+        <div className='img'></div>
+      </section>
+      <section className='section sec27'>
+        <div className='title textAni Kfont'>
+          Find More About <br /> HIOS13
+        </div>
+        <div className='f1 textAni'></div>
+        <div className='sub textAni Hfont'>link</div>
+        <div className='f2 textAni'></div>
+        <div className='params textAni Hfont'>
+          <div>
+            Panther <br /> Engine 2.0
+          </div>
+          <div>
+            Lightning <br /> Multi-Window4.0
+          </div>
+          <div>
+            Smart Refresh <br /> 3.0
+          </div>
+          <div className='bot'>
+            Mobile <br /> Cloner
+          </div>
+          <div className='bot'>
+            Extended <br /> RAM
+          </div>
+          <div className='bot'>
+            Smart <br /> Scanner
+          </div>
+        </div>
       </section>
     </div>
   )
