@@ -1,5 +1,6 @@
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollSmoother } from "gsap-trial/ScrollSmoother"
 
 interface AniType {
   trigger: string
@@ -12,7 +13,7 @@ interface AniType {
 }
 
 const FirstTs = (total: string | object | undefined) => {
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
   /**
    *
@@ -52,7 +53,6 @@ const FirstTs = (total: string | object | undefined) => {
         const textAni = self?.selector?.(`${cla} .textAni`) ?? []
 
         textAni.forEach((box: string, index: number) => {
-          console.log(wrap[0])
           gsap.from(box, {
             opacity: 0,
             y: "100px",
@@ -76,39 +76,96 @@ const FirstTs = (total: string | object | undefined) => {
 
   const sec5Ani = () => {
     const ctx = gsap.context(() => {
-      const tl = gsap
-        .timeline()
-        .from(".sec5 .left", { x: "-50%", opacity: 0 }, "a")
-        .from(".sec5 .right", { x: "50%", opacity: 0 }, "a")
-        .from(".sec5 .phone", { y: "50%", opacity: 0 }, "a")
+      ScrollSmoother.create({
+        smooth: 0.3,
+        effects: true,
+      })
 
-      setAni({
-        trigger: ".sec5",
-        animation: tl,
-        scrub: true,
+      ScrollTrigger.create({
+        trigger: ".sec4",
         pin: true,
-        start: -0.3,
+        start: "bottom bottom",
+
+        markers: true,
       })
+
+      // const tl = gsap
+      //   .timeline()
+      //   .from(".sec5 .left", 1, { x: "-50%" }, "a")
+      //   .from(".sec5 .right", 1, { x: "50%" }, "a")
+      //   .from(".sec5 .phone", 1, { x: "-130%" }, "a")
+
+      // const tl2 = gsap.timeline().to(".sec5", { yPercent: -100 })
+
+      // setAni({
+      //   trigger: ".sec5",
+      //   animation: tl2,
+      //   start: 1,
+      // })
+
+      // setAni({
+      //   trigger: ".sec5",
+      //   animation: tl,
+      //   // scrub: true,
+      //   // pin: true,
+      //   start: -0.2,
+      // })
     }, total) // <- Scope!
 
     return () => ctx.revert() // <- Cleanup!
   }
 
-  const sec8Ani = () => {
+  const secgroupAAni = () => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline().to(".sec8", { y: "-50%" })
-
-      setAni({
-        trigger: ".sec8",
-        animation: tl,
-        scrub: true,
-        start: 0.5,
-        end: -0.3,
+      ScrollSmoother.create({
+        smooth: 2, // seconds it takes to "catch up" to native scroll position
+        effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
       })
+      // const tl = gsap.timeline().to(".groupA .sec5", 1, { top: 0 }, "a")
+      // // .to(".groupA .sec4", 2, { top: "-100%" }, "a")
+
+      // setAni({
+      //   trigger: ".groupA",
+      //   animation: tl,
+      //   start: 0,
+      //   end: 0.2,
+      //   pin: true,
+      //   scrub: true,
+      // })
+
+      // const tl2 = gsap
+      //   .timeline()
+      //   .from(".sec5 .left", 1, { x: "-50%" }, "a")
+      //   .from(".sec5 .right", 1, { x: "50%" }, "a")
+      //   .from(".sec5 .phone", 1, { x: "-130%" }, "a")
+
+      // setAni({
+      //   trigger: ".sec5",
+      //   animation: tl2,
+      //   // scrub: true,
+      //   // pin: true,
+      //   start: -0.2,
+      // })
     }, total) // <- Scope!
 
     return () => ctx.revert() // <- Cleanup!
   }
+
+  // const sec8Ani = () => {
+  //   const ctx = gsap.context(() => {
+  //     const tl = gsap.timeline().to(".sec8", { y: "-50%" })
+
+  //     setAni({
+  //       trigger: ".sec8",
+  //       animation: tl,
+  //       scrub: true,
+  //       start: 0.5,
+  //       end: -0.3,
+  //     })
+  //   }, total) // <- Scope!
+
+  //   return () => ctx.revert() // <- Cleanup!
+  // }
 
   const sec9Ani = () => {
     const ctx = gsap.context(() => {
@@ -131,8 +188,8 @@ const FirstTs = (total: string | object | undefined) => {
       const tl = gsap
         .timeline()
         .to(".sec17 .phone", 3, { scale: 30 }, "a")
-        .to(".sec17 .sub", 1, { opacity: 0 }, "a")
-        .to(".sec17 .title", 1, { opacity: 0 }, "a")
+        .to(".sec17 .group", 1, { opacity: 0 }, "a")
+        .to(".sec17 .img", 1, { opacity: 0 }, "a")
         .to(".sec17 .phone", 3, { x: "1000%" }, "a")
         .to(".sec17 .phone", 3, { y: "750%" }, "a")
         .to(".sec17 .phone", 3, { opacity: 0 }, "a")
@@ -184,7 +241,7 @@ const FirstTs = (total: string | object | undefined) => {
         animation: tl,
         scrub: true,
         pin: true,
-        start: -0.3,
+        start: -0.2,
         end: 2,
       })
     }, total)
@@ -193,15 +250,15 @@ const FirstTs = (total: string | object | undefined) => {
 
   const sec26Ani = () => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline().from(".sec26 .img", 1, { opacity: 0.5 })
+      const tl = gsap.timeline().from(".sec26 .img", 0.8, { opacity: 0.5 })
 
       setAni({
         trigger: ".sec26",
         animation: tl,
-        scrub: true,
-        pin: true,
-        start: -0.3,
-        end: 1,
+        // scrub: true,
+        // pin: true,
+        start: 0,
+        // end: -0.3,
       })
     }, total)
     return () => ctx.revert()
@@ -209,13 +266,14 @@ const FirstTs = (total: string | object | undefined) => {
 
   return {
     textHover,
-    sec5Ani,
+    // sec5Ani,
+    secgroupAAni,
     // sec8Ani,
     sec9Ani,
+    sec17Ani,
     sec21Ani,
     sec23Ani,
     sec26Ani,
-    // sec17Ani,
   }
 }
 

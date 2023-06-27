@@ -54,30 +54,34 @@ const FirstProduct = () => {
       <section className='section sec3'>
         <div className='play'></div>
       </section>
-      <section className='section sec4'>
-        <div className='color_title Kfont'>
-          <div>Brand</div> <div>New</div> <div>Mecha</div> <div>Design</div>
-        </div>
-        {/* <div className='light_wrap'>
+      {/* <div id='smooth-wrapper'> */}
+      <div className='groupA' data-speed='1'>
+        <section className='section sec4' data-speed='.5'>
+          <div className='color_title Kfont'>
+            <div>Brand</div> <div>New</div> <div>Mecha</div> <div>Design</div>
+          </div>
+          {/* <div className='light_wrap'>
           <div className='light'></div>
         </div> */}
-        <div className='roboat'></div>
-      </section>
-      <section className='section sec5'>
-        <div className='title Kfont textAni'>Turbor Mecha Design</div>
-        <div className='slogan Hfont textAni'>Energize Your Coolness</div>
-        <div className='desc Hfont textAni'>
-          Inspired by energy Mecha, the power-packed POVA NEO 3 comes with three
-          color options for an energizing experience!
-        </div>
-        <div className='phoneBox'>
-          <div className='left'></div>
-          <div className='phone'></div>
-          <div className='right'>
-            <div className='phonside'></div>
+          <div className='roboat'></div>
+        </section>
+        {/* </div> */}
+        <section className='section sec5'>
+          <div className='title Kfont textAni'>Turbor Mecha Design</div>
+          <div className='slogan Hfont textAni'>Energize Your Coolness</div>
+          <div className='desc Hfont textAni'>
+            Inspired by energy Mecha, the power-packed POVA NEO 3 comes with
+            three color options for an energizing experience!
           </div>
-        </div>
-      </section>
+          <div className='phoneBox'>
+            <div className='left'></div>
+            <div className='phone'></div>
+            <div className='right'>
+              <div className='phonside'></div>
+            </div>
+          </div>
+        </section>
+      </div>
       <section className='section sec6'>
         <div className='phoneBox'>
           <div className='f1 com'>
@@ -225,7 +229,7 @@ const FirstProduct = () => {
           <div className='right'>
             <video
               className='lazy'
-              src='/src/assets/video/v2.mp4'
+              src='/fileadmin/sitedesign/product/pova-neo3/images/152817.mp4'
               autoPlay
               webkit-playsinline='true'
               preload='auto'
@@ -284,15 +288,17 @@ const FirstProduct = () => {
         </div> */}
       </section>
       <section className='section sec17'>
-        <div className='title textAni Kfont'>
-          16MP <br /> Clear Main Camera
+        <div className='group'>
+          <div className='title textAni Kfont'>
+            16MP <br /> Clear Main Camera
+          </div>
+          <div className='sub textAni Hfont'>Capture life's beauty.</div>
         </div>
-        <div className='sub textAni Hfont'>Capture life's beauty.</div>
-        <div className='img textAni'></div>
+        <div className='img'></div>
         <div className='phone'></div>
-        {/* <div className='bigImg'></div> */}
+        <div className='bigImg'></div>
       </section>
-      <section className='section sec18'></section>
+      {/* <section className='section sec18'></section> */}
       <section className='section sec19'>
         <div className='sub Hfont'>
           Amplify your brilliance with Portrait Beauty feature

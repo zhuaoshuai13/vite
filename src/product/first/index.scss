@@ -51,7 +51,7 @@ section {
   margin-top: -1px;
   overflow: hidden;
   background-color: #000;
-  background-position: center;
+  background-position: top center;
 }
 
 @font-face {
@@ -131,14 +131,16 @@ section {
 }
 
 .sec2 {
+  position: relative;
+  z-index: 2;
+  height: px-to-vw(1223);
 
   @include c-bg('section02/f1.png');
-
-  height: px-to-vw(1223);
 }
 
 .sec3 {
   position: relative;
+  z-index: 3;
   height: px-to-vw(1039);
   background-position: center center;
 
@@ -154,9 +156,17 @@ section {
   }
 }
 
-.sec4 {
+.groupA {
   position: relative;
   height: px-to-vw(2230);
+}
+
+.sec4 {
+  // position: relative;
+  position: absolute;
+  top: px-to-vw(1115);
+  height: px-to-vw(2230);
+  background: #000;
   background-position: center bottom;
 
   @include c-bg('section04/f1.png');
@@ -211,6 +221,9 @@ section {
 }
 
 .sec5 {
+  position: absolute;
+  top: px-to-vw(1115);
+  z-index: 6;
   overflow: hidden;
 
   @include c-bg('section05/f1.png');
@@ -846,9 +859,10 @@ section {
     min-height: 100vh;
     margin: auto;
     background-position: center center;
-    background-size: cover;
 
     @include c-bg('section18/f1.png');
+
+    background-size: cover;
   }
 }
 
