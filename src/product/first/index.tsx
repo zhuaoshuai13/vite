@@ -52,11 +52,13 @@ const FirstProduct = () => {
       </section>
       <section className='section sec2'></section>
       <section className='section sec3'>
-        <div className='play'></div>
+        <div className='box'>
+          <div className='play'></div>
+        </div>
       </section>
       {/* <div id='smooth-wrapper'> */}
-      <div className='groupA' data-speed='1'>
-        <section className='section sec4' data-speed='.5'>
+      <div className='groupA'>
+        <section className='section sec4'>
           <div className='color_title Kfont'>
             <div>Brand</div> <div>New</div> <div>Mecha</div> <div>Design</div>
           </div>
@@ -111,7 +113,9 @@ const FirstProduct = () => {
         <div className='box'>
           <div className='left'></div>
           <div className='right'>
-            <div className='title textAni Kfont'>7000mAh Mega Battery</div>
+            <div className='title textAni Kfont'>
+              7000mAh <br /> Mega Battery
+            </div>
             <div className='img textAni Hfont'></div>
             <div className='desc textAni Hfont'>
               Boldly engage in battles with the 7000mAh battery, which provides
@@ -188,7 +192,9 @@ const FirstProduct = () => {
         </div> */}
       </section>
       <section className='section sec11'>
-        <div className='title textAni Kfont'>MediaTek Helio G85 Processor </div>
+        <div className='title textAni Kfont'>
+          MediaTek Helio G85 <br /> Processor{" "}
+        </div>
         <div className='box'>
           <div className='left textAni'>
             <div className='f1'></div>
@@ -209,6 +215,17 @@ const FirstProduct = () => {
             </div>
             <div className='f2'></div>
           </div>
+        </div>
+        <div className='videoBox'>
+          <video
+            src='src/assets/video/v1.mp4'
+            className='lazy'
+            autoPlay
+            webkit-playsinline='true'
+            preload='auto'
+            muted
+            loop
+          ></video>
         </div>
       </section>
       <section className='section sec12'>
@@ -251,17 +268,22 @@ const FirstProduct = () => {
         <div className='img'></div>
       </section>
       <section className='section sec14'>
-        <div className='title textAni Kfont'>
-          Dual speaker <br /> with DTS <br /> Stereo Sound <br /> Effect
-        </div>
-        <div className='img textAni'></div>
-        <div className='desc textAni Hfont'>
-          Hear the super sensational sound effects that will transport you into
-          the game world like never before.
-        </div>
-        <div className='logBox textAni'>
-          <div className='logo'></div>
-          <div className='audo'></div>
+        <div className='box'>
+          <div className='left'>
+            <div className='title textAni Kfont'>
+              Dual speaker <br /> with DTS <br /> Stereo Sound <br /> Effect
+            </div>
+            <div className='img textAni'></div>
+            <div className='desc textAni Hfont'>
+              Hear the super sensational sound effects that will transport you
+              into the game world like never before.
+            </div>
+            <div className='logBox textAni'>
+              <div className='logo'></div>
+              <div className='audo'></div>
+            </div>
+          </div>
+          <div className='right'></div>
         </div>
       </section>
       <section className='section sec15'>
@@ -300,11 +322,12 @@ const FirstProduct = () => {
       </section>
       {/* <section className='section sec18'></section> */}
       <section className='section sec19'>
-        <div className='sub Hfont'>
-          Amplify your brilliance with Portrait Beauty feature
+        <div className='box'>
+          <div className='title Kfont'>
+            Amplify your brilliance <br /> with Portrait Beauty <br /> feature
+          </div>
+          <div className='right'></div>
         </div>
-        <div className='f1'></div>
-        <div className='f2'></div>
       </section>
       <section className='section sec20'>
         <div className='title textAni Kfont'>SKY SHOP</div>
@@ -323,7 +346,9 @@ const FirstProduct = () => {
         <div className='bot'></div>
       </section>
       <section className='section sec21'>
-        <div className='title textAni Kfont'>Show Your Colorful Side</div>
+        <div className='title textAni Kfont'>
+          Show Your <br /> Colorful Side
+        </div>
         <div className='img'>
           <div className='img1'></div>
           <div className='img2'></div>

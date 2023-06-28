@@ -133,18 +133,24 @@ section {
 .sec2 {
   position: relative;
   z-index: 2;
-  height: px-to-vw(1223);
+  height: px-to-vw(1174);
 
-  @include c-bg('section02/f1.png');
+  @include c-bg('add/top.png');
 }
 
 .sec3 {
   position: relative;
   z-index: 3;
-  height: px-to-vw(1039);
-  background-position: center center;
+  padding-bottom: px-to-vw(212);
 
-  @include c-bg('section03/f1.png');
+  .box {
+    position: relative;
+    width: px-to-vw(1854);
+    height: px-to-vw(1039);
+    margin: 0 auto;
+
+    @include c-bg('section03/f1.png');
+  }
 
   .play {
     width: px-to-vw(104);
@@ -158,22 +164,19 @@ section {
 
 .groupA {
   position: relative;
-  height: px-to-vw(2230);
 }
 
 .sec4 {
-  // position: relative;
-  position: absolute;
-  top: px-to-vw(1115);
-  height: px-to-vw(2230);
+  position: relative;
+  height: px-to-vw(1621);
   background: #000;
   background-position: center bottom;
 
-  @include c-bg('section04/f1.png');
+  @include c-bg('add/bg.png');
 
   .color_title {
     position: absolute;
-    top: px-to-vw(563);
+    top: px-to-vw(350);
     left: px-to-vw(218);
     display: flex;
     flex-direction: column;
@@ -211,8 +214,8 @@ section {
 
   .roboat {
     position: absolute;
-    top: px-to-vw(125);
-    left: px-to-vw(754);
+    top: px-to-vw(-87);
+    right: px-to-vw(112);
     width: px-to-vw(1694);
     height: px-to-vw(1694);
 
@@ -221,12 +224,13 @@ section {
 }
 
 .sec5 {
-  position: absolute;
-  top: px-to-vw(1115);
+  position: relative;
+
+  // top: px-to-vw(1621);
   z-index: 6;
   overflow: hidden;
 
-  @include c-bg('section05/f1.png');
+  @include c-bg('add/top.png');
 
   .title {
     width: fit-content;
@@ -318,7 +322,7 @@ section {
     display: flex;
     gap: px-to-vw(75);
     width: fit-content;
-    margin: px-to-vw(307) auto 0;
+    margin: px-to-vw(270) auto 0;
   }
 
   .com {
@@ -372,26 +376,31 @@ section {
 }
 
 .sec8 {
-  height: px-to-vw(1143);
+  height: px-to-vw(1174);
+  padding-right: px-to-vw(219);
+  padding-left: px-to-vw(208);
   overflow: hidden;
 
-  @include c-bg('section08/f2.png');
+  @include c-bg('add/top.png');
 
   .box {
     display: flex;
-    align-items: flex-end;
-    margin-top: px-to-vw(189);
+    gap: px-to-vw(228);
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: px-to-vw(300);
   }
 
   .left {
-    width: px-to-vw(1515);
-    height: px-to-vw(932);
+    width: px-to-vw(1006);
+    height: px-to-vw(795);
 
     @include c-bg('section08/f1.png');
   }
 
   .right {
-    padding-bottom: px-to-vw(20);
+    width: px-to-vw(898);
+    margin-top: px-to-vw(28);
   }
 
   .title {
@@ -411,7 +420,7 @@ section {
   }
 
   .desc {
-    width: px-to-vw(920);
+    width: px-to-vw(898);
     margin-top: px-to-vw(64);
     color: #fff;
     line-height: 1.2;
@@ -447,7 +456,7 @@ section {
 }
 
 .sec9 {
-  padding: px-to-vw(100) 0 px-to-vw(300);
+  padding: px-to-vw(278) 0 px-to-vw(305);
 
   .box {
     display: flex;
@@ -543,9 +552,8 @@ section {
 }
 
 .sec11 {
-  height: px-to-vw(2101);
 
-  @include c-bg('section12/f2.png');
+  @include c-bg('add/top.png');
 
   .title {
     margin-top: px-to-vw(300);
@@ -605,12 +613,22 @@ section {
 
     @include c-fontsize(32);
   }
+
+  video {
+    width: 100%;
+  }
 }
 
 .sec12 {
-  height: px-to-vw(1251);
+  position: relative;
+  z-index: 9;
+  height: px-to-vw(1261);
+  margin-top: px-to-vw(-136);
+  padding-right: px-to-vw(247);
+  padding-left: px-to-vw(208);
+  background: linear-gradient(transparent 0, transparent 20%, black 20%, black 100%);
 
-  @include c-bg('section13/f2.png');
+  @include c-bg('add/bg06.png');
 
   .box {
     display: flex;
@@ -624,10 +642,9 @@ section {
     line-height: 1.2;
     text-align: center;
     text-align: left;
+    text-transform: uppercase;
 
     @include c-fontsize(64);
-
-    text-transform: uppercase;
   }
 
   .sub {
@@ -639,6 +656,8 @@ section {
   }
 
   .desc {
+    min-width: px-to-vw(850);
+    max-width: px-to-vw(850);
     margin-top: px-to-vw(54);
     color: #fff;
     line-height: 1.2;
@@ -663,7 +682,7 @@ section {
   overflow: hidden;
 
   .title {
-    margin-top: px-to-vw(300);
+    margin-top: px-to-vw(222);
     color: #fff;
     line-height: 1.2;
     text-align: center;
@@ -691,19 +710,25 @@ section {
   }
 
   .img {
-    width: px-to-vw(1698);
-    height: px-to-vw(1699);
-    margin: px-to-vw(-380) auto 0;
+    width: px-to-vw(1153);
+    height: px-to-vw(909);
+    margin: px-to-vw(78) auto 0;
 
     @include c-bg('section14/f1.png');
   }
 }
 
 .sec14 {
-  height: px-to-vw(1467);
+  height: px-to-vw(1261);
+  margin-top: px-to-vw(-100);
   padding-left: px-to-vw(316);
+  background: linear-gradient(transparent 0, transparent 20%, black 20%, black 100%);
 
-  @include c-bg('section15/f1.png');
+  @include c-bg('add/bg06.png');
+
+  .box {
+    display: flex;
+  }
 
   .title {
     margin-top: px-to-vw(338);
@@ -755,7 +780,7 @@ section {
 
 .sec15 {
   padding-top: px-to-vw(100);
-  padding-bottom: px-to-vw(372);
+  padding-bottom: px-to-vw(326);
 
   .box {
     display: flex;
@@ -809,7 +834,7 @@ section {
   @include c-bg('section17/f3.png');
 
   .title {
-    margin-top: px-to-vw(300);
+    margin-top: px-to-vw(270);
     color: #fff;
     line-height: 1.2;
     text-align: center;
@@ -878,41 +903,31 @@ section {
 .sec19 {
   position: relative;
   height: px-to-vw(1550);
+  padding-top: px-to-vw(251);
+  padding-right: px-to-vw(370);
+  padding-left: px-to-vw(260);
+
+  .box {
+    display: flex;
+    align-items: center;
+  }
 
   @include c-bg('section19/f3.png');
 
-  .f1 {
-    position: absolute;
-    top: px-to-vw(246);
-    right: 0;
-    left: 0;
-    width: px-to-vw(1209);
-    height: px-to-vw(686);
+  .right {
+    width: px-to-vw(757);
+    height: px-to-vw(1009);
     margin: auto;
 
-    @include c-bg('section19/f1.png');
+    @include c-bg('section19/f4.png');
   }
 
-  .f2 {
-    position: absolute;
-    top: px-to-vw(835);
-    right: 0;
-    width: px-to-vw(1289);
-    height: px-to-vw(374);
-
-    @include c-bg('section19/f2.png');
-  }
-
-  .sub {
-    position: absolute;
-    top: px-to-vw(1125);
-    left: px-to-vw(296);
-    width: px-to-vw(953);
-    color: #186bd9;
+  .title {
+    color: #fff;
     line-height: 1.2;
-    text-align: left;
+    text-transform: unset;
 
-    @include c-fontsize(48);
+    @include c-fontsize(64);
   }
 }
 
@@ -989,7 +1004,6 @@ section {
   @include c-bg('section21/f2.png');
 
   .title {
-    width: px-to-vw(500);
     margin-top: px-to-vw(257);
     color: #fff;
     text-transform: uppercase;
@@ -1095,6 +1109,7 @@ section {
   }
 
   .img3 {
+    transform-origin: top center;
 
     @include c-bg("section22/fc.png");
   }
