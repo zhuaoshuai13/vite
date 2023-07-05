@@ -19,7 +19,8 @@
     "sass": "^1.63.4",
     "stylelint": "^15.8.0",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-standard-scss": "^9.0.0"
+    "stylelint-config-standard-scss": "^9.0.0",
+    "swiper": "^10.0.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.13",

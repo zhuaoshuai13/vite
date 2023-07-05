@@ -1,5 +1,13 @@
 import { useRef, useLayoutEffect } from "react"
 
+import { Swiper, SwiperSlide } from "swiper/react"
+
+import "swiper/css"
+import "swiper/css/effect-fade"
+import "swiper/css/pagination"
+
+import { EffectFade, Pagination, Autoplay } from "swiper/modules"
+
 import FirstTs from "."
 
 import "./index.scss"
@@ -7,17 +15,21 @@ import "./index.scss"
 const FirstProduct = () => {
   const total = useRef(null)
   const ca = useRef(null)
-  // const ca2 = useRef(null)
+  const ca2 = useRef(null)
   const countUpRef1 = useRef(null)
   const countUpRef2 = useRef(null)
+  const countUpRef3 = useRef(null)
+  const countUpRef4 = useRef(null)
   const videoRef = useRef(null)
   const { textHover, ...restFunc } = FirstTs(
     total,
     ca,
     countUpRef1,
     countUpRef2,
-    videoRef
-    // ca2
+    countUpRef3,
+    countUpRef4,
+    videoRef,
+    ca2
   )
 
   useLayoutEffect(() => {
@@ -28,7 +40,7 @@ const FirstProduct = () => {
     })
     textHover([
       ".sec5",
-      ".sec8",
+      // ".sec8",
       ".sec9",
       ".sec11",
       ".sec12",
@@ -36,46 +48,20 @@ const FirstProduct = () => {
       ".sec14",
       ".sec15",
       ".sec17",
+      ".sec19",
       ".sec20",
       ".sec21",
       ".sec22",
       ".sec23",
       ".sec24",
       ".sec25",
+      ".sec26",
       ".sec27",
     ])
   }, [restFunc, textHover])
 
   return (
     <div ref={total}>
-      {/* <div className='ma'>
-        <CountUp
-          start={0}
-          end={25}
-          duration={2.75}
-          separator=' '
-          decimals={0}
-          decimal=','
-          prefix='EUR '
-          suffix=' left'
-          onEnd={() => console.log("Ended! 👏")}
-          onStart={() => console.log("Started! 💨")}
-        >
-          {({ countUpRef, start }) => (
-            <div>
-              <span ref={countUpRef} />
-              <button onClick={start}>Start</button>
-            </div>
-          )}
-        </CountUp>
-        <div ref={countUpRef} />
-        <div className='c' onClick={start}>
-          casc
-        </div>
-      </div>
-
-      <div className='aa'>0</div> */}
-
       <div className='groupTop'>
         <section className='section sec1'>
           <div className='name'></div>
@@ -90,63 +76,45 @@ const FirstProduct = () => {
             <div className='line'></div>
             <div>128GB ROM + 8GB RAM</div>
           </div>
+          <div className='nameGroup'></div>
         </section>
         <section className='section sec2'>
           <div className='group'>
-            <div className='box'>
-              <div className='outer'></div>
-              <div className='img'></div>
-              <div className='text Kfont'>
-                Power On <br />
-                and On, Play Non-
-                <br />
-                stop
+            <div className='out'>
+              <div className='box box1'>
+                <div className='text Kfont'>
+                  Innovative <br />
+                  Design
+                </div>
               </div>
             </div>
-            <div className='box'>
-              <div className='outer'></div>
-              <div className='img'></div>
-              <div className='text Kfont'>
-                Power On <br />
-                and On <br />
-                Play <br />
-                Non-stop
+            <div className='out'>
+              <div className='box box2'>
+                <div className='text Kfont'>
+                  Stunning <br />
+                  Power
+                </div>
               </div>
             </div>
-            <div className='box'>
-              <div className='outer'></div>
-              <div className='img'></div>
-              <div className='text Kfont'>
-                Pioneering <br />
-                Performa
-                <br />
-                nce, <br />
-                Supercool <br />
-                Experie
-                <br />
-                nce
+            <div className='out'>
+              <div className='box box3'>
+                <div className='text Kfont'>
+                  Stunning <br />
+                  Power
+                </div>
               </div>
             </div>
-            <div className='box'>
-              <div className='outer'></div>
-              <div className='img'></div>
-              <div className='text Kfont'>
-                Clear <br />
-                Camera <br />
-                Meets <br />
-                Your <br />
-                Shine
+            <div className='out'>
+              <div className='box box4'>
+                <div className='text Kfont'>
+                  Clear <br />
+                  Camear
+                </div>
               </div>
             </div>
-            <div className='box'>
-              <div className='outer'></div>
-              <div className='img'></div>
-              <div className='text Kfont'>
-                Clear <br />
-                Camera <br />
-                Meets <br />
-                Your <br />
-                Shine
+            <div className='out'>
+              <div className='box box5'>
+                <div className='text Kfont'>HIOS 13</div>
               </div>
             </div>
           </div>
@@ -164,9 +132,10 @@ const FirstProduct = () => {
         <div className='color_title Kfont'>
           <div>Brand</div> <div>New</div> <div>Mecha</div> <div>Design</div>
         </div>
-        {/* <div className='light_wrap'>
+
+        <div className='light_wrap'>
           <div className='light'></div>
-        </div> */}
+        </div>
         <div className='roboat'></div>
       </section>
       {/* </div> */}
@@ -216,12 +185,12 @@ const FirstProduct = () => {
           <div>Non-stop</div>
         </div>
         <div className='roboat'></div>
-        {/* <div className='light_wrap'>
+        <div className='light_wrap'>
           <div className='light'></div>
-        </div> */}
+        </div>
       </section>
       <section className='section sec8'>
-        <div className='box'>
+        <div className='box box2'>
           <div className='right'>
             <div className='title textAni Kfont'>
               7000mAh <br /> Mega Battery
@@ -253,8 +222,26 @@ const FirstProduct = () => {
             </div>
           </div>
         </div>
+
+        <div className='box box1'>
+          <div className='right'>
+            <div className='title textAni Kfont'>
+              STS Secure <br />
+              Battery <br />
+              Technology
+            </div>
+            <div className='f1'></div>
+            <div className='sub'>The Power You Can Trust</div>
+            <div className='f2'></div>
+            <div className='desc textAni Hfont'>
+              The STS coating technology ensures safety by preventing dangerous
+              internal short circuits caused by direct contact between aluminum
+              foil and anode, providing you with complete peace of mind.
+            </div>
+          </div>
+        </div>
         <div className='movie'>
-          {/* <canvas width={1920} height={1080} ref={ca2}></canvas> */}
+          <canvas width='1006' height='795' ref={ca2}></canvas>
         </div>
       </section>
 
@@ -306,9 +293,9 @@ const FirstProduct = () => {
           <div>Experience</div>
         </div>
         <div className='roboat'></div>
-        {/* <div className='light_wrap'>
+        <div className='light_wrap'>
           <div className='light'></div>
-        </div> */}
+        </div>
       </section>
       <section className='section sec11'>
         <div className='head'></div>
@@ -373,6 +360,7 @@ const FirstProduct = () => {
               <video
                 className='lazy'
                 src='/fileadmin/sitedesign/product/pova-neo3/images/152817.mp4'
+                // src='src/assets/video/v2.mp4'
                 autoPlay
                 webkit-playsinline='true'
                 preload='auto'
@@ -392,7 +380,7 @@ const FirstProduct = () => {
           Get the most out of your gaming experience with an enhanced experience
           that features smoother graphics, richer detail, and total immersion.
         </div>
-        <div className='img'></div>
+        <div className='img textAni'></div>
       </section>
       <section className='section sec14'>
         <div className='box'>
@@ -445,9 +433,9 @@ const FirstProduct = () => {
           <div>Your Shine</div>
         </div>
         <div className='roboat'></div>
-        {/* <div className='light_wrap'>
+        <div className='light_wrap'>
           <div className='light'></div>
-        </div> */}
+        </div>
       </section>
       <section className='section sec17'>
         <div className='group'>
@@ -464,7 +452,7 @@ const FirstProduct = () => {
       {/* <section className='section sec18'></section> */}
       <section className='section sec19'>
         <div className='box'>
-          <div className='title Kfont'>
+          <div className='title Kfont textAni'>
             Amplify your brilliance <br /> with Portrait Beauty <br /> feature
           </div>
           <div className='right'>
@@ -517,9 +505,9 @@ const FirstProduct = () => {
           <div>Clear</div> <div>Camera</div> <div>Meets</div>
           <div>Your Shine</div>
         </div>
-        {/* <div className='light_wrap'>
+        <div className='light_wrap'>
           <div className='light'></div>
-        </div> */}
+        </div>
         <div className='log'></div>
       </section>
       <section className='section sec23'>
@@ -604,12 +592,16 @@ const FirstProduct = () => {
             <div className='params textAni Hfont'>
               <div className='com'>
                 <div className='low'></div>
-                <div className='top'>25%</div>
+                <div className='top'>
+                  <span ref={countUpRef3} />%
+                </div>
                 <div className='bot'>Latency 25%</div>
               </div>
               <div className='com'>
                 <div className='up'></div>
-                <div className='top'>25%</div>
+                <div className='top'>
+                  <span ref={countUpRef4} />%
+                </div>
                 <div className='bot'>Network Speed 25%</div>
               </div>
             </div>
@@ -640,19 +632,38 @@ const FirstProduct = () => {
       </section>
       <section className='section sec26'>
         <div className='title textAni Kfont'>Game Space 2.0</div>
-        <div className='f1'></div>
-        <div className='sub Hfont'>Enjoy Gaming Time</div>
-        <div className='f2'></div>
-        <div className='desc Hfont'>
+        <div className='f1 textAni'></div>
+        <div className='sub Hfont textAni'>Enjoy Gaming Time</div>
+        <div className='f2 textAni'></div>
+        <div className='desc Hfont textAni'>
           Cool interface upgrade. Instantly switch from a variety of modes.{" "}
           <br /> View performance improvements in a glance with the new
           performance radar chart.
         </div>
         <div className='img'>
-          <div className='fa'></div>
-          <div className='fb'></div>
-          <div className='fc'></div>
-          <div className='fd'></div>
+          <Swiper
+            effect={"fade"}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[EffectFade, Pagination, Autoplay]}
+            className='mySwiper'
+            loop
+            autoplay={{ delay: 2000 }}
+          >
+            <SwiperSlide>
+              <div className='fa imgs'></div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='fb imgs'></div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='fc imgs'></div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='fd imgs'></div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
       <section className='section sec27'>

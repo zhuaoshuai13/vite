@@ -26,8 +26,10 @@ const FirstTs = (
   ca: MutableRefObject<null>,
   countUpRef1: MutableRefObject<null>,
   countUpRef2: MutableRefObject<null>,
-  videoRef: MutableRefObject<null>
-  // ca2: MutableRefObject<null>
+  countUpRef3: MutableRefObject<null>,
+  countUpRef4: MutableRefObject<null>,
+  videoRef: MutableRefObject<null>,
+  ca2: MutableRefObject<null>
 ) => {
   gsap.registerPlugin(ScrollTrigger, TextPlugin)
 
@@ -40,6 +42,20 @@ const FirstTs = (
 
   const { update: secondUpDate } = useCountUp({
     ref: countUpRef2,
+    start: 0,
+    end: 0,
+    duration: 2,
+  })
+
+  const { update: thirdUpDate } = useCountUp({
+    ref: countUpRef3,
+    start: 0,
+    end: 0,
+    duration: 2,
+  })
+
+  const { update: fourUpDate } = useCountUp({
+    ref: countUpRef4,
     start: 0,
     end: 0,
     duration: 2,
@@ -130,6 +146,105 @@ const FirstTs = (
     return () => ctx.revert() // <- Cleanup!
   }
 
+  const sec4FirstAni = () => {
+    const ctx = gsap.context(() => {
+      const tl = gsap
+        .timeline()
+        .from(".sec4First .light_wrap", 1, { left: pxToVw(-50) }, "a")
+        .to(".sec4First .light_wrap", 1, { opacity: 0, delay: 0.5 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec4First",
+        start: `top 30%`,
+        animation: tl,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+        // toggleClass: "active",
+      })
+    }, total) // <- Scope!
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  const sec7Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl = gsap
+        .timeline()
+        .from(".sec7 .light_wrap", 1, { left: pxToVw(-50) }, "a")
+        .to(".sec7 .light_wrap", 1, { opacity: 0, delay: 0.5 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec7",
+        start: `top 30%`,
+        animation: tl,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+        // toggleClass: "active",
+      })
+    }, total) // <- Scope!
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  const sec10Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl = gsap
+        .timeline()
+        .from(".sec10 .light_wrap", 1, { left: pxToVw(-50) }, "a")
+        .to(".sec10 .light_wrap", 1, { opacity: 0, delay: 0.5 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec10",
+        start: `top 30%`,
+        animation: tl,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+        // toggleClass: "active",
+      })
+    }, total) // <- Scope!
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+  const sec16Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl = gsap
+        .timeline()
+        .from(".sec16 .light_wrap", 1, { left: pxToVw(-50) }, "a")
+        .to(".sec16 .light_wrap", 1, { opacity: 0, delay: 0.5 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec16",
+        start: `top 30%`,
+        animation: tl,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+        // toggleClass: "active",
+      })
+    }, total) // <- Scope!
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  const sec22Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl = gsap
+        .timeline()
+        .from(".sec22 .light_wrap", 1, { left: pxToVw(-50) }, "a")
+        .to(".sec22 .light_wrap", 1, { opacity: 0, delay: 0.5 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec22",
+        start: `top 30%`,
+        animation: tl,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+        // toggleClass: "active",
+      })
+    }, total) // <- Scope!
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
   const secgroupAAni = () => {
     const ctx = gsap.context(() => {
       const tl = gsap
@@ -151,11 +266,11 @@ const FirstTs = (
 
   const sec2Ani = () => {
     const ctx = gsap.context((self) => {
-      const item = self?.selector?.(".sec2 .box") ?? []
+      const item = self?.selector?.(".sec2 .out") ?? []
       item.forEach((box: string, index: number) => {
         gsap.from(box, {
           opacity: 0,
-          y: "100",
+          x: "100",
           duration: 1,
           delay: index * 0.1,
           scrollTrigger: {
@@ -257,18 +372,20 @@ const FirstTs = (
     const ctx = gsap.context(() => {
       const tl2 = gsap
         .timeline()
-        .to(".sec17 .phone", 3, { scale: 30 }, "a")
-        .to(".sec17 .group", 0.1, { opacity: 0 }, "a")
-        .to(".sec17 .img", 1, { opacity: 0 }, "a")
-        .to(".sec17 .phone", 3, { x: "1000%" }, "a")
-        .to(".sec17 .phone", 3, { y: "750%" }, "a")
-        .to(".sec17 .phone", 3, { opacity: 0 }, "a")
-        .from(".sec17 .bigImg", 1, { opacity: 0, delay: 2 }, "a")
+        .to(".sec17", 1, { opacity: 1, ease: "none" }, "m")
+        .to(".sec17 .phone", 3, { scale: 30, ease: "none" }, "a")
+        .to(".sec17 .group", 0.1, { opacity: 0, ease: "none" }, "a")
+        .to(".sec17 .img", 1, { opacity: 0, ease: "none" }, "a")
+        .to(".sec17 .phone", 3, { x: "1000%", ease: "none" }, "a")
+        .to(".sec17 .phone", 3, { y: "750%", ease: "none" }, "a")
+        .to(".sec17 .phone", 3, { opacity: 0, ease: "none" }, "a")
+        .from(".sec17 .bigImg", 1, { opacity: 0, delay: 2, ease: "none" }, "a")
 
-      setAni({
+      ScrollTrigger.create({
         trigger: ".sec17",
         animation: tl2,
-        start: 0,
+        start: "top 0",
+        end: "+=400%",
         pin: true,
         anticipatePin: 2,
         scrub: true,
@@ -295,60 +412,115 @@ const FirstTs = (
     return () => ctx.revert() // <- Cleanup!
   }
 
-  // const sec8Ani = () => {
-  //   const ctxs = (ca2 as any).current.getContext("2d")
+  const sec8Ani = () => {
+    const ctxs = (ca2 as any).current.getContext("2d")
 
-  //   const imgs: HTMLImageElement[] = []
-  //   const images = []
-  //   for (let i = 0; i < 200; i++) {
-  //     //  将i变成三位数 例如001 010
-  //     const num = i.toString().padStart(3, "0")
+    const imgs: HTMLImageElement[] = []
+    const images = []
 
-  //     images.push(`/src/assets/img/light/LH6N-电池${num}.png`)
-  //   }
+    for (let i = 0; i < 200; i++) {
+      images.push(
+        `https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pova-neo3/images/battery/${i
+          .toString()
+          .padStart(3, "0")}.webp`
+      )
+    }
 
-  //   images.forEach((src) => {
-  //     const img = new Image()
-  //     img.src = src
-  //     imgs.push(img)
-  //   })
-  //   const ani = (type: number) => {
-  //     console.log(imgs[type])
-  //     ctxs.drawImage(imgs[type], 0, 0)
-  //   }
-  //   const ctx = gsap.context(() => {
-  //     const tl = gsap.timeline().to(".sec8 ", 1, { opacity: 1 })
+    images.forEach((src) => {
+      const img = new Image()
+      img.src = src
+      imgs.push(img)
+    })
+    const ani = (type: number) => {
+      console.log(type)
+      ctxs.drawImage(imgs[type], 0, 0)
+    }
 
-  //     let now = 0
-  //     let type = 0
-  //     const time = 1 / images.length
+    const ctx = gsap.context(() => {
+      const tl = gsap
+        .timeline()
+        .to(".sec8 ", 5, { opacity: 1 }, "m")
+        .from(".sec8 .box2 .title", 1, { opacity: 0, y: "100px" }, "a")
+        .from(
+          ".sec8 .box2 .img",
+          1,
+          { opacity: 0, y: "100px", delay: 0.2 },
+          "a"
+        )
+        .from(
+          ".sec8 .box2 .desc",
+          1,
+          { opacity: 0, y: "100px", delay: 0.4 },
+          "a"
+        )
+        .from(
+          ".sec8 .box2 .params",
+          1,
+          { opacity: 0, y: "100px", delay: 0.6 },
+          "a"
+        )
+        .to(".sec8 .box2 .params", 1, { opacity: 0, y: "100px" }, "b")
+        .to(".sec8 .box2 .desc", 1, { opacity: 0, y: "100px" }, "b")
+        .to(".sec8 .box2 .img", 1, { opacity: 0, y: "100px" }, "b")
+        .to(".sec8 .box2 .title", 1, { opacity: 0, y: "100px" }, "b")
+        .to(".sec8", 5, { opacity: 1 }, "mm")
+        .from(
+          ".sec8 .box1 .title",
+          1,
+          { opacity: 0, y: "100px", delay: 0.2 },
+          "c"
+        )
+        .from(".sec8 .box1 .f1", 1, { opacity: 0, y: "100px", delay: 0.4 }, "c")
+        .from(
+          ".sec8 .box1 .sub",
+          1,
+          { opacity: 0, y: "100px", delay: 0.6 },
+          "c"
+        )
+        .from(".sec8 .box1 .f2", 1, { opacity: 0, y: "100px", delay: 0.8 }, "c")
+        .from(".sec8 .box1 .desc", 1, { opacity: 0, y: "100px", delay: 1 }, "c")
 
-  //     ScrollTrigger.create({
-  //       trigger: ".sec8",
-  //       animation: tl,
-  //       pin: true,
-  //       start: "top 0",
-  //       onUpdate: ({ progress, direction }) => {
-  //         if (direction === 1) {
-  //           if (progress > now) {
-  //             now += time
-  //             ani(type)
-  //             if (type === images.length - 1) return
-  //             type++
-  //           }
-  //         } else {
-  //           if (progress < now) {
-  //             now -= time
-  //             ani(type)
-  //             if (type === 0) return
-  //             type--
-  //           }
-  //         }
-  //       },
-  //     })
-  //   }, total)
-  //   return () => ctx.revert() // <- Cleanup!
-  // }
+      let isPlay = true
+
+      ScrollTrigger.create({
+        trigger: ".sec8",
+        animation: tl,
+        start: "top 0",
+        scrub: true,
+        pin: true,
+        end: "=+400%",
+
+        onUpdate: ({ progress }) => {
+          console.log(progress)
+          if ((progress > 0.2 && progress < 0.6) || progress > 0.8) {
+            isPlay = false
+            if (progress > 0.2 && progress < 0.8) {
+              ani(100)
+            } else {
+              ani(200)
+            }
+          } else {
+            isPlay = true
+          }
+
+          // 是否可以播放
+          if (isPlay) {
+            // 播放第1段
+            if (progress < 0.2) {
+              const now = (progress * 500).toFixed(0)
+              ani(Number(now))
+            } else {
+              console.log(progress)
+              console.log(progress - 0.6)
+              const now = ((progress - 0.6) * 500 + 100).toFixed(0)
+              ani(Number(now))
+            }
+          }
+        },
+      })
+    }, total)
+    return () => ctx.revert() // <- Cleanup!
+  }
 
   const sec9Ani = () => {
     const ctx = gsap.context(() => {
@@ -406,6 +578,23 @@ const FirstTs = (
         start: 0,
         pin: true,
         scrub: true,
+      })
+    }, total) // <- Scope!
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  const sec14Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl = gsap
+        .timeline()
+        .from(".sec14 .right", 1, { x: "10%", opacity: 0.5 }, "a")
+
+      setAni({
+        trigger: ".sec14",
+        animation: tl,
+        start: 0.3,
+        toggleActions: true,
       })
     }, total) // <- Scope!
 
@@ -496,7 +685,7 @@ const FirstTs = (
         scrub: true,
         pin: true,
         start: -0.2,
-        end: 1,
+        end: 0.5,
       })
     }, total)
     return () => ctx.revert()
@@ -525,6 +714,40 @@ const FirstTs = (
             if (!isActive) {
               firstUpDate(0)
               secondUpDate(0)
+              switchs = true
+            }
+          }
+        },
+      })
+    }, total)
+    return () => ctx.revert()
+  }
+
+  const sec24Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline().to(".sec24", 0.4, { opacity: 1 })
+      let switchs = true
+
+      ScrollTrigger.create({
+        animation: tl,
+        trigger: ".sec24",
+        start: "top 30%",
+        toggleActions: "restart none none reverse",
+        onUpdate: ({ isActive, direction }) => {
+          if (direction === 1) {
+            if (isActive) {
+              if (switchs) {
+                setTimeout(() => {
+                  thirdUpDate(25)
+                  fourUpDate(25)
+                }, 1000)
+                switchs = false
+              }
+            }
+          } else {
+            if (!isActive) {
+              thirdUpDate(0)
+              fourUpDate(0)
               switchs = true
             }
           }
@@ -565,15 +788,20 @@ const FirstTs = (
       ScrollTrigger.create({
         trigger: ".sec25",
         animation: tl,
-        pin: true,
-        start: "top 0",
-        onUpdate: ({ progress, direction }) => {
+        start: "top 30%",
+        end: "+=800",
+        onUpdate: ({ progress, direction, isActive }) => {
           if (direction === 1) {
             if (progress > now) {
               now += time
               ani(type)
               if (type === images.length - 1) return
               type++
+            }
+            if (isActive === false) {
+              now = 1
+              type = images.length - 1
+              ani(images.length - 1)
             }
           } else {
             if (progress < now) {
@@ -582,6 +810,11 @@ const FirstTs = (
               if (type === 0) return
               type--
             }
+            if (isActive === false) {
+              now = 0
+              type = 0
+              ani(0)
+            }
           }
         },
       })
@@ -589,50 +822,57 @@ const FirstTs = (
     return () => ctx.revert() // <- Cleanup!
   }
 
-  const sec26Ani = () => {
-    const ctx = gsap.context(() => {
-      const tl = gsap
-        .timeline()
-        .to(".sec26 .fa", 1, { opacity: 0 }, "a")
-        .to(".sec26 .fb", 1, { opacity: 1 }, "b")
-        .to(".sec26 .fb", 1, { opacity: 0 }, "c")
-        .to(".sec26 .fc", 1, { opacity: 1 }, "d")
-        .to(".sec26 .fc", 1, { opacity: 0 }, "e")
-        .to(".sec26 .fd", 1, { opacity: 1 }, "d")
+  // const sec26Ani = () => {
+  //   const ctx = gsap.context(() => {
+  //     const tl = gsap
+  //       .timeline()
+  //       .to(".sec26 .fa", 1, { opacity: 0 }, "a")
+  //       .to(".sec26 .fb", 1, { opacity: 1 }, "b")
+  //       .to(".sec26 .fb", 1, { opacity: 0 }, "c")
+  //       .to(".sec26 .fc", 1, { opacity: 1 }, "d")
+  //       .to(".sec26 .fc", 1, { opacity: 0 }, "e")
+  //       .to(".sec26 .fd", 1, { opacity: 1 }, "f")
 
-      ScrollTrigger.create({
-        trigger: ".sec26",
-        animation: tl,
-        scrub: true,
-        pin: true,
-        start: "top -30%",
-        end: "+=400%",
-      })
-    }, total)
-    return () => ctx.revert()
-  }
+  //     ScrollTrigger.create({
+  //       trigger: ".sec26",
+  //       animation: tl,
+  //       scrub: true,
+  //       pin: true,
+  //       start: "top -30%",
+  //       end: "+=400%",
+  //     })
+  //   }, total)
+  //   return () => ctx.revert()
+  // }
 
   return {
     numberAdd,
     textHover,
     sec2Ani,
     groupTop,
+    sec4FirstAni,
     secgroupAAni,
     groupB,
-    groupC,
     otherAni,
-    // sec8Ani,
+    sec7Ani,
+    sec8Ani,
     sec9Ani,
+    sec10Ani,
+    groupC,
     sec12Ani,
     groupD,
+    sec14Ani,
     sec15Ani,
+    sec16Ani,
     sec17Ani,
     sec19Ani,
     sec21Ani,
+    sec22Ani,
     sec23Ani,
     numAdd,
+    sec24Ani,
     sec25Ani,
-    sec26Ani,
+    // sec26Ani,
   }
 }
 
