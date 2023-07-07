@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { RefObject } from "react"
+
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { TextPlugin } from "gsap-trial/TextPlugin"
@@ -21,7 +23,7 @@ const pxToVw = (num: number) => {
   const res = (num * 1) / 25.6
   return `${res}vw`
 }
-const FirstTs = (
+const FirstPcTs = (
   total: string | object | undefined,
   ca: MutableRefObject<null>,
   countUpRef1: MutableRefObject<null>,
@@ -29,9 +31,13 @@ const FirstTs = (
   countUpRef3: MutableRefObject<null>,
   countUpRef4: MutableRefObject<null>,
   videoRef: MutableRefObject<null>,
-  ca2: MutableRefObject<null>
+  ca2: MutableRefObject<null>,
+  playRef: RefObject<HTMLVideoElement>,
+  btnRef: RefObject<HTMLDivElement>
 ) => {
   gsap.registerPlugin(ScrollTrigger, TextPlugin)
+
+  const baseUrl = import.meta.env.VITE_URL
 
   const { update: firstUpDate } = useCountUp({
     ref: countUpRef1,
@@ -126,25 +132,6 @@ const FirstTs = (
 
       // <- Scope!
     )
-  }
-
-  const sec4TestAni = () => {
-    const ctx = gsap.context(() => {
-      const tl = gsap
-        .timeline()
-        .from(".sec4test .roboat", 1, { opacity: 0, x: 100 })
-
-      ScrollTrigger.create({
-        trigger: ".sec4test",
-        start: `top 30%`,
-        animation: tl,
-        // scrub: true,
-        toggleActions: "restart none none reverse",
-        toggleClass: "active",
-      })
-    }, total) // <- Scope!
-
-    return () => ctx.revert() // <- Cleanup!
   }
 
   const sec4FirstAni = () => {
@@ -435,7 +422,7 @@ const FirstTs = (
 
     for (let i = 0; i < 200; i++) {
       images.push(
-        `https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pova-neo3/images/battery/${i
+        `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/battery/${i
           .toString()
           .padStart(3, "0")}.webp`
       )
@@ -748,7 +735,7 @@ const FirstTs = (
     const images = []
     for (let i = 0; i < 75; i++) {
       images.push(
-        `https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pova-neo3/images/engine/${
+        `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/engine/${
           i + 100
         }.png`
       )
@@ -806,6 +793,24 @@ const FirstTs = (
     return () => ctx.revert() // <- Cleanup!
   }
 
+  const playClick = () => {
+    if (playRef.current) {
+      playRef.current.play()
+    }
+    if (btnRef.current) {
+      btnRef.current.className = "play false"
+    }
+  }
+
+  const videoClick = () => {
+    playRef?.current?.pause()
+
+    if (btnRef.current) {
+      btnRef.current.className = "play true"
+    }
+    // setPlayShow(true)
+  }
+
   // const sec26Ani = () => {
   //   const ctx = gsap.context(() => {
   //     const tl = gsap
@@ -833,7 +838,6 @@ const FirstTs = (
     textHover,
     sec2Ani,
     groupTop,
-    sec4TestAni,
     sec4FirstAni,
     secgroupAAni,
     groupB,
@@ -857,8 +861,10 @@ const FirstTs = (
     numAdd,
     sec24Ani,
     sec25Ani,
+    playClick,
+    videoClick,
     // sec26Ani,
   }
 }
 
-export default FirstTs
+export default FirstPcTs

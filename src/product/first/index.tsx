@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useState } from "react"
+import { useRef, useLayoutEffect } from "react"
 
 import { Swiper, SwiperSlide } from "swiper/react"
 
@@ -10,27 +10,29 @@ import { EffectFade, Pagination, Autoplay } from "swiper/modules"
 
 import UseResponse from "../../hooks/useResponse"
 
-import FirstTs from "."
+import FirstPcTs from "./pc"
+
+import FirstMobTs from "./mob"
 
 import "./index.scss"
 
 const FirstProduct = () => {
+  const baseUrl = import.meta.env.VITE_URL
   const { responsive } = UseResponse()
   const total = useRef(null)
   const ca = useRef(null)
   const ca2 = useRef(null)
-  const playRef = useRef(null)
+  const playRef = useRef<HTMLVideoElement>(null)
   const countUpRef1 = useRef(null)
   const countUpRef2 = useRef(null)
   const countUpRef3 = useRef(null)
   const countUpRef4 = useRef(null)
   const videoRef = useRef(null)
-  // const countUpRef11 = useRef(null)
-  // const countUpRef22 = useRef(null)
+  const btnRef = useRef<HTMLDivElement>(null)
+  const countUpRef11 = useRef(null)
+  const countUpRef22 = useRef(null)
 
-  const [playShow, setPlayShow] = useState(true)
-
-  const { textHover, ...restFunc } = FirstTs(
+  const { textHover, playClick, videoClick, ...restFunc } = FirstPcTs(
     total,
     ca,
     countUpRef1,
@@ -38,49 +40,89 @@ const FirstProduct = () => {
     countUpRef3,
     countUpRef4,
     videoRef,
-    ca2
+    ca2,
+    playRef,
+    btnRef
   )
 
-  // useLayoutEffect(() => {
-  //   if (responsive?.md) {
-  //     console.log("aa")
-  //     Object.entries(restFunc).forEach(([key, value]) => {
-  //       if (typeof (restFunc as never)[key] === "function") {
-  //         value()
-  //       }
-  //     })
-  //     textHover([
-  //       ".sec5",
-  //       // ".sec8",
-  //       ".sec9",
-  //       ".sec11",
-  //       ".sec12",
-  //       ".sec13",
-  //       ".sec14",
-  //       ".sec15",
-  //       ".sec17",
-  //       ".sec19",
-  //       ".sec20",
-  //       ".sec21",
-  //       ".sec22",
-  //       ".sec23",
-  //       ".sec24",
-  //       ".sec25",
-  //       ".sec26",
-  //       ".sec27",
-  //     ])
-  //   }
-  // }, [responsive, restFunc, textHover])
+  const {
+    textHover: mobTextHover,
+    sec20Ani,
+    sec21Ani,
+    sec23Ani,
+    numAdd,
+    sec24Ani,
+    sec25Ani,
+  } = FirstMobTs(
+    total,
+    ca,
+    countUpRef3,
+    countUpRef4,
+    videoRef,
+    ca2,
+    playRef,
+    btnRef,
+    countUpRef11,
+    countUpRef22
+  )
 
-  const playClick = () => {
-    playRef.current.play()
-    setPlayShow(false)
-  }
+  useLayoutEffect(() => {
+    if (responsive?.md === undefined) return
 
-  const videoClick = () => {
-    playRef.current.pause()
-    setPlayShow(true)
-  }
+    if (responsive?.md) {
+      Object.entries(restFunc).forEach(([key, value]) => {
+        if (typeof (restFunc as never)[key] === "function") {
+          value()
+        }
+      })
+      textHover([
+        ".sec5",
+        ".sec9",
+        ".sec11",
+        ".sec12",
+        ".sec13",
+        ".sec14",
+        ".sec15",
+        ".sec17",
+        ".sec19",
+        ".sec20",
+        ".sec21",
+        ".sec22",
+        ".sec23",
+        ".sec24",
+        ".sec25",
+        ".sec26",
+        ".sec27",
+      ])
+    } else {
+      sec20Ani()
+      sec21Ani()
+      sec23Ani()
+      numAdd()
+      sec24Ani()
+      sec25Ani()
+      mobTextHover([
+        ".sec5",
+        ".sec9",
+        ".sec11",
+        ".sec12",
+        ".sec13",
+        ".sec14",
+        ".sec15",
+        ".sec17",
+        ".sec19",
+        ".sec20",
+        ".sec21",
+        ".sec22",
+        ".sec23",
+        ".sec24",
+        ".sec25",
+        ".sec26",
+        ".sec27",
+      ])
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [responsive?.md])
 
   return (
     <div ref={total}>
@@ -142,12 +184,12 @@ const FirstProduct = () => {
           </div>
         </section>
       </div>
-
       <section className='section sec3'>
         <div className='box'>
+          <div className='outer' onClick={videoClick}></div>
           <video
-            // src='/fileadmin/sitedesign/product/pova-neo3/images/152810.mp4'
-            src='src/assets/video/v1.mp4'
+            src={`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/152810.mp4`}
+            // src='src/assets/video/v1.mp4'
             className='lazy'
             autoPlay={false}
             webkit-playsinline='true'
@@ -155,9 +197,8 @@ const FirstProduct = () => {
             muted
             loop
             ref={playRef}
-            onClick={videoClick}
           ></video>
-          <div className={`play`} onClick={playClick}></div>
+          <div className={`play`} onClick={playClick} ref={btnRef}></div>
         </div>
       </section>
 
@@ -281,7 +322,7 @@ const FirstProduct = () => {
           </div>
         </div>
         <div className='movie'>
-          <canvas width='1006' height='795' ref={ca2}></canvas>
+          <canvas width='1920' height='1080' ref={ca2}></canvas>
         </div>
 
         <div className='footer mob'></div>
@@ -374,8 +415,8 @@ const FirstProduct = () => {
         </div>
         <div className='videoBox'>
           <video
-            // src='/fileadmin/sitedesign/product/pova-neo3/images/152810.mp4'
-            src='src/assets/video/v1.mp4'
+            src={`${`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/152810.mp4`}`}
+            // src='src/assets/video/v1.mp4'
             className='lazy'
             autoPlay
             webkit-playsinline='true'
@@ -421,7 +462,7 @@ const FirstProduct = () => {
             <div className='videoBox'>
               <video
                 className='lazy'
-                src='/fileadmin/sitedesign/product/pova-neo3/images/152817.mp4'
+                src={`${`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/152817.mp4`}`}
                 // src='src/assets/video/v2.mp4'
                 autoPlay
                 webkit-playsinline='true'
@@ -463,7 +504,7 @@ const FirstProduct = () => {
           </div>
           <div className='right'>
             <video
-              src='/fileadmin/sitedesign/product/pova-neo3/images/1.mp4'
+              src={`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/1.mp4`}
               // src='src/assets/video/v5.mp4'
               className='lazy'
               autoPlay
@@ -529,7 +570,7 @@ const FirstProduct = () => {
             <div className='videoBox'>
               <video
                 ref={videoRef}
-                src='/fileadmin/sitedesign/product/pova-neo3/images/2.mp4'
+                src={`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/2.mp4`}
                 // src='src/assets/video/v4.mp4'
                 className='lazy'
                 // autoPlay
@@ -541,8 +582,8 @@ const FirstProduct = () => {
             </div>
           </div>
         </div>
-        <div className='footer mob'></div>
       </section>
+      <div className='footer mob'></div>
       <section className='section sec20'>
         <div className='title textAni Kfont'>SKY SHOP</div>
         <div className='box textAni'>
@@ -687,8 +728,7 @@ const FirstProduct = () => {
               <div className='up'></div>
               <div className='com'>
                 <div className='bot'>
-                  {/* <span ref={countUpRef11} />% */}
-                  25%
+                  <span ref={countUpRef11} />%{/* 25% */}
                 </div>
                 <div className='top'>
                   {" "}
@@ -701,8 +741,7 @@ const FirstProduct = () => {
               <div className='up'></div>
               <div className='com'>
                 <div className='bot'>
-                  {/* <span ref={countUpRef22} />% */}
-                  30%
+                  <span ref={countUpRef22} />%{/* 30% */}
                 </div>
                 <div className='top'>
                   Data Rate under Weak <br /> Connection
@@ -769,6 +808,7 @@ const FirstProduct = () => {
         <div className='movie'>
           <canvas ref={ca} width={1600} height={800}></canvas>
         </div>
+        <div className='footer mob'></div>
       </section>
       <section className='section sec26'>
         <div className='title textAni Kfont'>Game Space 2.0</div>
