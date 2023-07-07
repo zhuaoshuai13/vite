@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect } from "react"
+import { useRef, useLayoutEffect, useState } from "react"
 
 import { Swiper, SwiperSlide } from "swiper/react"
 
@@ -8,19 +8,28 @@ import "swiper/css/pagination"
 
 import { EffectFade, Pagination, Autoplay } from "swiper/modules"
 
+import UseResponse from "../../hooks/useResponse"
+
 import FirstTs from "."
 
 import "./index.scss"
 
 const FirstProduct = () => {
+  const { responsive } = UseResponse()
   const total = useRef(null)
   const ca = useRef(null)
   const ca2 = useRef(null)
+  const playRef = useRef(null)
   const countUpRef1 = useRef(null)
   const countUpRef2 = useRef(null)
   const countUpRef3 = useRef(null)
   const countUpRef4 = useRef(null)
   const videoRef = useRef(null)
+  // const countUpRef11 = useRef(null)
+  // const countUpRef22 = useRef(null)
+
+  const [playShow, setPlayShow] = useState(true)
+
   const { textHover, ...restFunc } = FirstTs(
     total,
     ca,
@@ -32,33 +41,46 @@ const FirstProduct = () => {
     ca2
   )
 
-  useLayoutEffect(() => {
-    Object.entries(restFunc).forEach(([key, value]) => {
-      if (typeof (restFunc as never)[key] === "function") {
-        value()
-      }
-    })
-    textHover([
-      ".sec5",
-      // ".sec8",
-      ".sec9",
-      ".sec11",
-      ".sec12",
-      ".sec13",
-      ".sec14",
-      ".sec15",
-      ".sec17",
-      ".sec19",
-      ".sec20",
-      ".sec21",
-      ".sec22",
-      ".sec23",
-      ".sec24",
-      ".sec25",
-      ".sec26",
-      ".sec27",
-    ])
-  }, [restFunc, textHover])
+  // useLayoutEffect(() => {
+  //   if (responsive?.md) {
+  //     console.log("aa")
+  //     Object.entries(restFunc).forEach(([key, value]) => {
+  //       if (typeof (restFunc as never)[key] === "function") {
+  //         value()
+  //       }
+  //     })
+  //     textHover([
+  //       ".sec5",
+  //       // ".sec8",
+  //       ".sec9",
+  //       ".sec11",
+  //       ".sec12",
+  //       ".sec13",
+  //       ".sec14",
+  //       ".sec15",
+  //       ".sec17",
+  //       ".sec19",
+  //       ".sec20",
+  //       ".sec21",
+  //       ".sec22",
+  //       ".sec23",
+  //       ".sec24",
+  //       ".sec25",
+  //       ".sec26",
+  //       ".sec27",
+  //     ])
+  //   }
+  // }, [responsive, restFunc, textHover])
+
+  const playClick = () => {
+    playRef.current.play()
+    setPlayShow(false)
+  }
+
+  const videoClick = () => {
+    playRef.current.pause()
+    setPlayShow(true)
+  }
 
   return (
     <div ref={total}>
@@ -123,22 +145,34 @@ const FirstProduct = () => {
 
       <section className='section sec3'>
         <div className='box'>
-          <div className='play'></div>
+          <video
+            // src='/fileadmin/sitedesign/product/pova-neo3/images/152810.mp4'
+            src='src/assets/video/v1.mp4'
+            className='lazy'
+            autoPlay={false}
+            webkit-playsinline='true'
+            preload='auto'
+            muted
+            loop
+            ref={playRef}
+            onClick={videoClick}
+          ></video>
+          <div className={`play`} onClick={playClick}></div>
         </div>
       </section>
-      {/* <div id='smooth-wrapper'> */}
 
       <section className='section sec4 sec4First'>
+        <div className='bgT Kfont'>
+          <div>Brand</div> <div>New</div> <div>Mecha</div> <div>Design</div>
+        </div>
+        <div className='lightT Kfont'>
+          <div>Brand</div> <div>New</div> <div>Mecha</div> <div>Design</div>
+        </div>
         <div className='color_title Kfont'>
           <div>Brand</div> <div>New</div> <div>Mecha</div> <div>Design</div>
         </div>
-
-        <div className='light_wrap'>
-          <div className='light'></div>
-        </div>
         <div className='roboat'></div>
       </section>
-      {/* </div> */}
       <section className='section sec5'>
         <div className='title Kfont textAni'>
           Turbor Mecha <br /> Design
@@ -180,15 +214,21 @@ const FirstProduct = () => {
         </div>
       </section>
       <section className='section sec4 sec7'>
+        <div className='bgT Kfont'>
+          <div>Power On</div> <div>and On</div> <div>Play </div>
+          <div>Non-stop</div>
+        </div>
+        <div className='lightT Kfont'>
+          <div>Power On</div> <div>and On</div> <div>Play </div>
+          <div>Non-stop</div>
+        </div>
         <div className='color_title Kfont'>
           <div>Power On</div> <div>and On</div> <div>Play </div>
           <div>Non-stop</div>
         </div>
         <div className='roboat'></div>
-        <div className='light_wrap'>
-          <div className='light'></div>
-        </div>
       </section>
+
       <section className='section sec8'>
         <div className='box box2'>
           <div className='right'>
@@ -243,20 +283,24 @@ const FirstProduct = () => {
         <div className='movie'>
           <canvas width='1006' height='795' ref={ca2}></canvas>
         </div>
+
+        <div className='footer mob'></div>
       </section>
 
       <section className='section sec9'>
         <div className='box'>
           <div className='left'>
             <div className='title textAni Kfont'>
-              Battery <br /> Lab 3.0
+              Battery <br className='pc' /> Lab 3.0
             </div>
             <div className='img textAni'></div>
             <div className='desc textAni'>
               Extend your phone's battery life with the new energy-efficient
-              Super <br /> Power Saver. It intelligently identifies
-              battery-draining apps and <br /> adjusts to the best power-saving
-              mode for longer use.
+              Super
+              <br className='pc' /> Power Saver. It intelligently identifies
+              battery-draining apps and
+              <br className='pc' /> adjusts to the best power-saving mode for
+              longer use.
             </div>
             <div className='params textAni'>
               <div>
@@ -288,14 +332,19 @@ const FirstProduct = () => {
       </section>
 
       <section className='section sec4 sec10'>
+        <div className='bgT Kfont'>
+          <div>Pioneering</div> <div>Performance</div> <div>Supercool</div>
+          <div>Experience</div>
+        </div>
+        <div className='lightT Kfont'>
+          <div>Pioneering</div> <div>Performance</div> <div>Supercool</div>
+          <div>Experience</div>
+        </div>
         <div className='color_title Kfont'>
           <div>Pioneering</div> <div>Performance</div> <div>Supercool</div>
           <div>Experience</div>
         </div>
         <div className='roboat'></div>
-        <div className='light_wrap'>
-          <div className='light'></div>
-        </div>
       </section>
       <section className='section sec11'>
         <div className='head'></div>
@@ -325,8 +374,8 @@ const FirstProduct = () => {
         </div>
         <div className='videoBox'>
           <video
-            src='/fileadmin/sitedesign/product/pova-neo3/images/152810.mp4'
-            // src='src/assets/video/v1.mp4'
+            // src='/fileadmin/sitedesign/product/pova-neo3/images/152810.mp4'
+            src='src/assets/video/v1.mp4'
             className='lazy'
             autoPlay
             webkit-playsinline='true'
@@ -341,16 +390,29 @@ const FirstProduct = () => {
         <div className='box'>
           <div className='left'>
             <div className='title textAni Kfont'>
-              Large <br /> Memory With <br /> Extended <br /> RAM
+              Large <br className='pc' /> Memory With <br className='pc' />
+              Extended <br className='pc' /> RAM
             </div>
             <div className='group'>
-              <div className='sub textAni Hfont'>128+4GB</div>
+              <div className='sub textAni Hfont'>
+                <div className='sub1'>128+4GB</div>
+                <div className='sub2'>128+8GB</div>
+              </div>
               <div className='desc textAni Hfont'>
-                • Expandable RAM up to 8GB <br />
-                *Optional expansion of 1, 2, 4GB, default expansion of 2GB
-                <br />
-                •The number of active background apps reaching 11
-                <br />• Application startup speed increased by 45% on average
+                <div className='desc1'>
+                  • Expandable RAM up to 8GB <br />
+                  *Optional expansion of 1, 2, 4GB, default expansion of 2GB
+                  <br />
+                  •The number of active background apps reaching 11
+                  <br />• Application startup speed increased by 45% on average
+                </div>
+                <div className='desc2'>
+                  • Expandable RAM up to 16GB <br />
+                  *Optional expansion of 3, 5, 8GB, default expansion of 5GB
+                  <br />
+                  •The number of active background apps reaching 20 <br />
+                  •Application startup speed increased by 55% on average"`,
+                </div>
               </div>
             </div>
           </div>
@@ -370,6 +432,7 @@ const FirstProduct = () => {
             </div>
           </div>
         </div>
+        <div className='footer mob'></div>
       </section>
       <section className='section sec13'>
         <div className='title textAni Kfont'>
@@ -411,6 +474,7 @@ const FirstProduct = () => {
             ></video>
           </div>
         </div>
+        <div className='footer mob'></div>
       </section>
       <section className='section sec15'>
         <div className='box'>
@@ -428,14 +492,19 @@ const FirstProduct = () => {
       </section>
 
       <section className='section sec4 sec16'>
+        <div className='bgT Kfont'>
+          <div>Clear</div> <div>Camera</div> <div>Meets</div>
+          <div>Your Shine</div>
+        </div>
+        <div className='lightT Kfont'>
+          <div>Clear</div> <div>Camera</div> <div>Meets</div>
+          <div>Your Shine</div>
+        </div>
         <div className='color_title Kfont'>
           <div>Clear</div> <div>Camera</div> <div>Meets</div>
           <div>Your Shine</div>
         </div>
         <div className='roboat'></div>
-        <div className='light_wrap'>
-          <div className='light'></div>
-        </div>
       </section>
       <section className='section sec17'>
         <div className='group'>
@@ -472,6 +541,7 @@ const FirstProduct = () => {
             </div>
           </div>
         </div>
+        <div className='footer mob'></div>
       </section>
       <section className='section sec20'>
         <div className='title textAni Kfont'>SKY SHOP</div>
@@ -482,12 +552,27 @@ const FirstProduct = () => {
         </div>
         <div className='desc textAni Hfont'>
           Choose from over 12 sky-themed filters to create your one-of-a-kind
-          photos, magically with just one tap! <br /> Sunny/Rainbow/Azure
+          photos, magically with just one tap!
+          {/* <br /> Sunny/Rainbow/Azure
           Sky/Rosy Clouds/Sunset/Twilight <br /> Starry/Milky
-          way/Meteor/Orbit/Aurora/Moon
+          way/Meteor/Orbit/Aurora/Moon */}
         </div>
-        <div className='top'></div>
-        <div className='bot'></div>
+        {/* <div className='top'></div> */}
+        {/* <div className='bot'></div> */}
+        <div className='imgBox'>
+          <div className='fa'>
+            <div className='text'>Sunny</div>
+          </div>
+          <div className='fb'>
+            <div className='text'>Sunset</div>
+          </div>
+          <div className='fc'>
+            <div className='text'>Sunny</div>
+          </div>
+          <div className='fd'>
+            <div className='text'>Orbit</div>
+          </div>
+        </div>
       </section>
       <section className='section sec21'>
         <div className='title textAni Kfont'>
@@ -501,12 +586,17 @@ const FirstProduct = () => {
         </div>
       </section>
       <section className='section sec4 sec22'>
-        <div className='color_title Kfont'>
+        <div className='bgT Kfont'>
           <div>Clear</div> <div>Camera</div> <div>Meets</div>
           <div>Your Shine</div>
         </div>
-        <div className='light_wrap'>
-          <div className='light'></div>
+        <div className='lightT Kfont'>
+          <div>Clear</div> <div>Camera</div> <div>Meets</div>
+          <div>Your Shine</div>
+        </div>
+        <div className='color_title Kfont'>
+          <div>Clear</div> <div>Camera</div> <div>Meets</div>
+          <div>Your Shine</div>
         </div>
         <div className='log'></div>
       </section>
@@ -516,8 +606,8 @@ const FirstProduct = () => {
         <div className='desc textAni Hfont'>
           Treat your eyes to a tapestry of color and beauty. <br /> A series of
           interconnected wallpapers merge objects and creatures from the real
-          world and the imagination. Your <br /> life is multicolored and
-          ever-evolving, and your phone should reflect that.{" "}
+          world and the imagination. Your <br className='pc' /> life is
+          multicolored and ever-evolving, and your phone should reflect that.{" "}
         </div>
         <div className='phone'>
           <div className='img1'></div>
@@ -527,7 +617,7 @@ const FirstProduct = () => {
           <div className='img5'></div>
         </div>
       </section>
-      <div className='secPar'>
+      <div className='secPar pc'>
         <div className='params'>
           <div className='left'>
             <div className='title Kfont'>
@@ -563,6 +653,56 @@ const FirstProduct = () => {
               <div className='com'>
                 <div className='bot'>
                   <span ref={countUpRef2} />%
+                </div>
+                <div className='top'>
+                  Data Rate under Weak <br /> Connection
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='secPar mob'>
+        <div className='tops'>
+          <div className='title'>UPS-Ultra Power Signal</div>
+          <div className='desc'>
+            Enjoy Optimized Performance with Increased Cellular
+          </div>
+        </div>
+        <div className='bots'>
+          <div className='right Hfont'>
+            <div className='out'>
+              <div className='up'></div>
+              <div className='com '>
+                <div className='bot'>15-20%</div>
+                <div className='top'>
+                  {" "}
+                  <br />
+                  Signal Throughput <br />{" "}
+                </div>
+              </div>
+            </div>
+            <div className='out'>
+              <div className='up'></div>
+              <div className='com'>
+                <div className='bot'>
+                  {/* <span ref={countUpRef11} />% */}
+                  25%
+                </div>
+                <div className='top'>
+                  {" "}
+                  <br />
+                  Signal Stability <br />{" "}
+                </div>
+              </div>
+            </div>
+            <div className='out'>
+              <div className='up'></div>
+              <div className='com'>
+                <div className='bot'>
+                  {/* <span ref={countUpRef22} />% */}
+                  30%
                 </div>
                 <div className='top'>
                   Data Rate under Weak <br /> Connection

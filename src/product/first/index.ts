@@ -108,7 +108,9 @@ const FirstTs = (
             opacity: 0,
             y: "100px",
             duration: 1,
-            delay: index * 0.1,
+            ease: "power2.out",
+            delay: index * 0.2,
+
             scrollTrigger: {
               trigger: wrap[0],
               start: "top 30%",
@@ -126,21 +128,20 @@ const FirstTs = (
     )
   }
 
-  const numberAdd = () => {
+  const sec4TestAni = () => {
     const ctx = gsap.context(() => {
-      const tls = gsap.timeline()
+      const tl = gsap
+        .timeline()
+        .from(".sec4test .roboat", 1, { opacity: 0, x: 100 })
 
-      const tl = gsap.from(".aa", {
-        innerText: "25",
-
-        scrollTrigger: {
-          trigger: ".aa",
-          start: "top 0",
-          end: "+=200",
-        },
+      ScrollTrigger.create({
+        trigger: ".sec4test",
+        start: `top 30%`,
+        animation: tl,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+        toggleClass: "active",
       })
-
-      tls.add(tl)
     }, total) // <- Scope!
 
     return () => ctx.revert() // <- Cleanup!
@@ -150,8 +151,7 @@ const FirstTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .from(".sec4First .light_wrap", 1, { left: pxToVw(-50) }, "a")
-        .to(".sec4First .light_wrap", 1, { opacity: 0, delay: 0.5 }, "a")
+        .from(".sec4First .roboat", 1, { opacity: 0, x: 100 })
 
       ScrollTrigger.create({
         trigger: ".sec4First",
@@ -159,7 +159,7 @@ const FirstTs = (
         animation: tl,
         // scrub: true,
         toggleActions: "restart none none reverse",
-        // toggleClass: "active",
+        toggleClass: "active",
       })
     }, total) // <- Scope!
 
@@ -170,8 +170,7 @@ const FirstTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .from(".sec7 .light_wrap", 1, { left: pxToVw(-50) }, "a")
-        .to(".sec7 .light_wrap", 1, { opacity: 0, delay: 0.5 }, "a")
+        .from(".sec7 .roboat", 1, { opacity: 0, x: 100 })
 
       ScrollTrigger.create({
         trigger: ".sec7",
@@ -179,7 +178,7 @@ const FirstTs = (
         animation: tl,
         // scrub: true,
         toggleActions: "restart none none reverse",
-        // toggleClass: "active",
+        toggleClass: "active",
       })
     }, total) // <- Scope!
 
@@ -190,8 +189,7 @@ const FirstTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .from(".sec10 .light_wrap", 1, { left: pxToVw(-50) }, "a")
-        .to(".sec10 .light_wrap", 1, { opacity: 0, delay: 0.5 }, "a")
+        .from(".sec10 .roboat", 1, { opacity: 0, x: 100 })
 
       ScrollTrigger.create({
         trigger: ".sec10",
@@ -199,7 +197,7 @@ const FirstTs = (
         animation: tl,
         // scrub: true,
         toggleActions: "restart none none reverse",
-        // toggleClass: "active",
+        toggleClass: "active",
       })
     }, total) // <- Scope!
 
@@ -209,8 +207,7 @@ const FirstTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .from(".sec16 .light_wrap", 1, { left: pxToVw(-50) }, "a")
-        .to(".sec16 .light_wrap", 1, { opacity: 0, delay: 0.5 }, "a")
+        .from(".sec16 .roboat", 1, { opacity: 0, x: 100 })
 
       ScrollTrigger.create({
         trigger: ".sec16",
@@ -218,7 +215,28 @@ const FirstTs = (
         animation: tl,
         // scrub: true,
         toggleActions: "restart none none reverse",
-        // toggleClass: "active",
+        toggleClass: "active",
+      })
+    }, total) // <- Scope!
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  const sec20Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl = gsap
+        .timeline()
+        .to(".sec20 .fb", 1, { clipPath: `inset(0% 0 0)` }, "a")
+        .to(".sec20 .fc", 1, { clipPath: `inset(0% 0 0)` }, "b")
+        .to(".sec20 .fd", 1, { clipPath: `inset(0% 0 0)` }, "c")
+
+      ScrollTrigger.create({
+        trigger: ".sec20",
+        start: `top 0`,
+        end: "+=300%",
+        animation: tl,
+        scrub: true,
+        pin: true,
       })
     }, total) // <- Scope!
 
@@ -227,10 +245,7 @@ const FirstTs = (
 
   const sec22Ani = () => {
     const ctx = gsap.context(() => {
-      const tl = gsap
-        .timeline()
-        .from(".sec22 .light_wrap", 1, { left: pxToVw(-50) }, "a")
-        .to(".sec22 .light_wrap", 1, { opacity: 0, delay: 0.5 }, "a")
+      const tl = gsap.timeline()
 
       ScrollTrigger.create({
         trigger: ".sec22",
@@ -238,7 +253,7 @@ const FirstTs = (
         animation: tl,
         // scrub: true,
         toggleActions: "restart none none reverse",
-        // toggleClass: "active",
+        toggleClass: "active",
       })
     }, total) // <- Scope!
 
@@ -372,7 +387,7 @@ const FirstTs = (
     const ctx = gsap.context(() => {
       const tl2 = gsap
         .timeline()
-        .to(".sec17", 1, { opacity: 1, ease: "none" }, "m")
+        .to(".sec17", 0.2, { opacity: 1, ease: "none" }, "m")
         .to(".sec17 .phone", 3, { scale: 30, ease: "none" }, "a")
         .to(".sec17 .group", 0.1, { opacity: 0, ease: "none" }, "a")
         .to(".sec17 .img", 1, { opacity: 0, ease: "none" }, "a")
@@ -432,7 +447,6 @@ const FirstTs = (
       imgs.push(img)
     })
     const ani = (type: number) => {
-      console.log(type)
       ctxs.drawImage(imgs[type], 0, 0)
     }
 
@@ -464,21 +478,21 @@ const FirstTs = (
         .to(".sec8 .box2 .img", 1, { opacity: 0, y: "100px" }, "b")
         .to(".sec8 .box2 .title", 1, { opacity: 0, y: "100px" }, "b")
         .to(".sec8", 5, { opacity: 1 }, "mm")
-        .from(
-          ".sec8 .box1 .title",
-          1,
-          { opacity: 0, y: "100px", delay: 0.2 },
-          "c"
-        )
-        .from(".sec8 .box1 .f1", 1, { opacity: 0, y: "100px", delay: 0.4 }, "c")
+        .from(".sec8 .box1 .title", 1, { opacity: 0, y: "100px" }, "c")
+        .from(".sec8 .box1 .f1", 1, { opacity: 0, y: "100px", delay: 0.2 }, "c")
         .from(
           ".sec8 .box1 .sub",
           1,
-          { opacity: 0, y: "100px", delay: 0.6 },
+          { opacity: 0, y: "100px", delay: 0.4 },
           "c"
         )
-        .from(".sec8 .box1 .f2", 1, { opacity: 0, y: "100px", delay: 0.8 }, "c")
-        .from(".sec8 .box1 .desc", 1, { opacity: 0, y: "100px", delay: 1 }, "c")
+        .from(".sec8 .box1 .f2", 1, { opacity: 0, y: "100px", delay: 0.6 }, "c")
+        .from(
+          ".sec8 .box1 .desc",
+          1,
+          { opacity: 0, y: "100px", delay: 0.8 },
+          "c"
+        )
 
       let isPlay = true
 
@@ -491,10 +505,9 @@ const FirstTs = (
         end: "=+400%",
 
         onUpdate: ({ progress }) => {
-          console.log(progress)
-          if ((progress > 0.2 && progress < 0.6) || progress > 0.8) {
+          if ((progress > 0.4 && progress < 0.52) || progress > 0.9) {
             isPlay = false
-            if (progress > 0.2 && progress < 0.8) {
+            if (progress > 0.4 && progress < 0.52) {
               ani(100)
             } else {
               ani(200)
@@ -506,13 +519,11 @@ const FirstTs = (
           // 是否可以播放
           if (isPlay) {
             // 播放第1段
-            if (progress < 0.2) {
-              const now = (progress * 500).toFixed(0)
+            if (progress < 0.4) {
+              const now = (progress * (100 / 0.4)).toFixed(0)
               ani(Number(now))
             } else {
-              console.log(progress)
-              console.log(progress - 0.6)
-              const now = ((progress - 0.6) * 500 + 100).toFixed(0)
+              const now = ((progress - 0.52) * (100 / 0.48) + 100).toFixed(0)
               ani(Number(now))
             }
           }
@@ -543,39 +554,15 @@ const FirstTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .to(".sec12 .group", 1, { opacity: 0 }, "a")
-        .to(
-          ".sec12 .sub",
-          0,
-          {
-            text: {
-              value: "128+8GB",
-            },
-            opacity: 1,
-          },
-          "b"
-        )
-        .to(
-          ".sec12 .desc",
-          0,
-          {
-            text: {
-              value: `
-            • Expandable RAM up to 16GB <br />
-            *Optional expansion of 3, 5, 8GB, default expansion of 5GB <br />
-            •The number of active background apps reaching 20 <br />
-            • Application startup speed increased by 55% on average"`,
-              delimiter: "",
-            },
-          },
-          "b"
-        )
-        .to(".sec12 .group", 1, { opacity: 1 }, "c")
+        .to(".sec12 .sub1", 1, { opacity: 0, y: 100 }, "a")
+        .to(".sec12 .desc1", 1, { opacity: 0, y: 100 }, "a")
+        .from(".sec12 .sub2", 1, { opacity: 0, y: 100 }, "b")
+        .from(".sec12 .desc2", 1, { opacity: 0, y: 100, delay: 0.4 }, "b")
 
       setAni({
         trigger: ".sec12",
         animation: tl,
-        start: 0,
+        start: 0.01,
         pin: true,
         scrub: true,
       })
@@ -677,15 +664,12 @@ const FirstTs = (
         .from(".sec23 .img2", 1, { x: "-30%", opacity: 0 }, "a")
         .from(".sec23 .img4", 1, { x: "30%", opacity: 0 }, "a")
         .from(".sec23 .img5", 1, { x: "60%", opacity: 0 }, "a")
-      // .from(".sec23 .img2", 2, { x: "-84%" })
 
-      setAni({
+      ScrollTrigger.create({
         trigger: ".sec23",
         animation: tl,
-        scrub: true,
-        pin: true,
-        start: -0.2,
-        end: 0.5,
+        start: "top 0%",
+        toggleActions: "restart none none reverse",
       })
     }, total)
     return () => ctx.revert()
@@ -694,7 +678,7 @@ const FirstTs = (
   const numAdd = () => {
     let switchs = true
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline().to(".sec23 .params", 1, { opacity: 1 })
+      const tl = gsap.timeline()
 
       ScrollTrigger.create({
         animation: tl,
@@ -740,7 +724,7 @@ const FirstTs = (
                 setTimeout(() => {
                   thirdUpDate(25)
                   fourUpDate(25)
-                }, 1000)
+                }, 2000)
                 switchs = false
               }
             }
@@ -846,10 +830,10 @@ const FirstTs = (
   // }
 
   return {
-    numberAdd,
     textHover,
     sec2Ani,
     groupTop,
+    sec4TestAni,
     sec4FirstAni,
     secgroupAAni,
     groupB,
@@ -866,6 +850,7 @@ const FirstTs = (
     sec16Ani,
     sec17Ani,
     sec19Ani,
+    sec20Ani,
     sec21Ani,
     sec22Ani,
     sec23Ani,
