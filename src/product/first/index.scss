@@ -1,25 +1,4 @@
 
-:root {
-  --width: 2560;
-  --height: 1440;
-}
-
-.aa {
-  width: 100vw;
-  height: 100vh;
-  color: #fff;
-  font-size: 64px;
-
-  .num {
-    color: #fff;
-  }
-}
-
-.ma {
-  color: #fff;
-  font-size: 63px;
-}
-
 .product-toolbar {
   display: none !important;
 }
@@ -36,14 +15,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-@mixin c-width($width:2560) {
-  width: calc(#{$width} / var(--width) * 100vw);
-}
-
-@mixin c-height($height) {
-  height: calc(#{$height} / var(--height) * 100vh);
 }
 
 @mixin c-fontsize($fontSize) {
