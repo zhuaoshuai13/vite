@@ -8,7 +8,8 @@
     "build:dev": "tsc && vite build",
     "build:prod": "tsc && vite build  --mode staging",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dimg":"node ./img.js"
   },
   "dependencies": {
     "gsap": "^3.12.1",

@@ -4,6 +4,9 @@ import { RefObject } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { TextPlugin } from "gsap-trial/TextPlugin"
+import { ScrollToPlugin } from "gsap-trial/ScrollToPlugin"
+
+import UseResponse from "../../hooks/useResponse"
 
 interface AniType {
   trigger: string
@@ -35,7 +38,10 @@ const FirstPcTs = (
   playRef: RefObject<HTMLVideoElement>,
   btnRef: RefObject<HTMLDivElement>
 ) => {
-  gsap.registerPlugin(ScrollTrigger, TextPlugin)
+  const { responsive } = UseResponse()
+  if (responsive?.md !== undefined) {
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, TextPlugin)
+  }
 
   const baseUrl = import.meta.env.VITE_URL
 
@@ -259,7 +265,7 @@ const FirstPcTs = (
         end: "+=80%",
         scrub: true,
         animation: tl,
-        anticipatePin: 1,
+        anticipatePin: 0,
       })
     }, total) // <- Scope!
 
@@ -327,7 +333,7 @@ const FirstPcTs = (
         scrub: true,
         // pin: pin,
         animation: tl,
-        anticipatePin: 1,
+        anticipatePin: 0,
       })
     }, total) // <- Scope!
 
@@ -346,7 +352,7 @@ const FirstPcTs = (
         end: "+=80%",
         scrub: true,
         animation: tl,
-        anticipatePin: 1,
+        anticipatePin: 0,
       })
     }, total) // <- Scope!
 
@@ -360,10 +366,9 @@ const FirstPcTs = (
       ScrollTrigger.create({
         trigger: ".sec16",
         start: `top -10%`,
-        end: "+=70%",
+        end: "+=50%",
         scrub: true,
         animation: tl,
-        anticipatePin: 1,
       })
     }, total) // <- Scope!
 
@@ -386,10 +391,10 @@ const FirstPcTs = (
       ScrollTrigger.create({
         trigger: ".sec17",
         animation: tl2,
-        start: "top 0",
+        start: "top 1%",
         end: "+=400%",
         pin: true,
-        anticipatePin: 2,
+        anticipatePin: 0,
         scrub: true,
       })
     })
@@ -489,6 +494,7 @@ const FirstPcTs = (
         start: "top 0",
         scrub: true,
         pin: true,
+        anticipatePin: 0,
         end: "=+400%",
 
         onUpdate: ({ progress }) => {
@@ -541,6 +547,7 @@ const FirstPcTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
+        .to(".sec12", 1.5, { opacity: 1 })
         .to(".sec12 .sub1", 1, { opacity: 0, y: 100 }, "a")
         .to(".sec12 .desc1", 1, { opacity: 0, y: 100 }, "a")
         .from(".sec12 .sub2", 1, { opacity: 0, y: 100 }, "b")
@@ -552,6 +559,17 @@ const FirstPcTs = (
         start: 0.01,
         pin: true,
         scrub: true,
+      })
+
+      const tl2 = gsap
+        .timeline()
+        .from(".sec12 .right", 1, { opacity: 0.5, x: "10%" })
+
+      ScrollTrigger.create({
+        animation: tl2,
+        start: "top 30%",
+        trigger: ".sec12",
+        toggleActions: "restart none none reverse",
       })
     }, total) // <- Scope!
 
@@ -636,7 +654,7 @@ const FirstPcTs = (
         scrub: true,
         pin: true,
         animation: tl,
-        anticipatePin: 1,
+        anticipatePin: 0,
       })
     }, total)
     return () => ctx.revert()
@@ -665,19 +683,23 @@ const FirstPcTs = (
   const numAdd = () => {
     let switchs = true
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline()
+      const tl = gsap
+        .timeline()
+        .from(".secPar .params", 1, { opacity: 0, x: "25%" })
 
       ScrollTrigger.create({
         animation: tl,
         trigger: ".secPar .params",
         start: "top 70%",
+        toggleActions: "restart none none reverse",
         onUpdate: ({ isActive, direction }) => {
           if (direction === 1) {
             if (isActive) {
               if (switchs) {
-                firstUpDate(25)
-                secondUpDate(30)
-
+                setTimeout(() => {
+                  firstUpDate(25)
+                  secondUpDate(30)
+                }, 1000)
                 switchs = false
               }
             }
@@ -811,6 +833,26 @@ const FirstPcTs = (
     // setPlayShow(true)
   }
 
+  const test1 = () => {
+    gsap.to(window, { duration: 2, scrollTo: "#sec4ID" })
+  }
+
+  const test2 = () => {
+    gsap.to(window, { duration: 2, scrollTo: "#sec7ID" })
+  }
+
+  const test3 = () => {
+    gsap.to(window, { duration: 2, scrollTo: "#sec10ID" })
+  }
+
+  const test4 = () => {
+    gsap.to(window, { duration: 2, scrollTo: "#sec16ID" })
+  }
+
+  const test5 = () => {
+    gsap.to(window, { duration: 2, scrollTo: "#sec22ID" })
+  }
+
   // const sec26Ani = () => {
   //   const ctx = gsap.context(() => {
   //     const tl = gsap
@@ -863,6 +905,11 @@ const FirstPcTs = (
     sec25Ani,
     playClick,
     videoClick,
+    test1,
+    test2,
+    test3,
+    test4,
+    test5,
     // sec26Ani,
   }
 }

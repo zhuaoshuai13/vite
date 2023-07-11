@@ -3,7 +3,7 @@ import { RefObject } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { TextPlugin } from "gsap-trial/TextPlugin"
+// import { TextPlugin } from "gsap-trial/TextPlugin"
 
 interface AniType {
   trigger: string
@@ -35,7 +35,7 @@ const FirstMobTs = (
   countUpRef11: MutableRefObject<null>,
   countUpRef22: MutableRefObject<null>
 ) => {
-  gsap.registerPlugin(ScrollTrigger, TextPlugin)
+  // gsap.registerPlugin(ScrollTrigger, TextPlugin)
   const baseUrl = import.meta.env.VITE_URL
 
   const { update: thirdUpDate } = useCountUp({
@@ -141,7 +141,7 @@ const FirstMobTs = (
 
       ScrollTrigger.create({
         trigger: ".sec4First",
-        start: `top 30%`,
+        start: "top 70%",
         animation: tl,
         // scrub: true,
         toggleActions: "restart none none reverse",
@@ -160,7 +160,7 @@ const FirstMobTs = (
 
       ScrollTrigger.create({
         trigger: ".sec7",
-        start: `top 30%`,
+        start: "top 70%",
         animation: tl,
         // scrub: true,
         toggleActions: "restart none none reverse",
@@ -179,7 +179,7 @@ const FirstMobTs = (
 
       ScrollTrigger.create({
         trigger: ".sec10",
-        start: `top 30%`,
+        start: "top 70%",
         animation: tl,
         // scrub: true,
         toggleActions: "restart none none reverse",
@@ -197,7 +197,7 @@ const FirstMobTs = (
 
       ScrollTrigger.create({
         trigger: ".sec16",
-        start: `top 30%`,
+        start: "top 70%",
         animation: tl,
         // scrub: true,
         toggleActions: "restart none none reverse",
@@ -235,7 +235,7 @@ const FirstMobTs = (
 
       ScrollTrigger.create({
         trigger: ".sec22",
-        start: `top 30%`,
+        start: "top 70%",
         animation: tl,
         // scrub: true,
         toggleActions: "restart none none reverse",
