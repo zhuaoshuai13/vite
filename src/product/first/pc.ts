@@ -426,22 +426,22 @@ const FirstPcTs = (
     const imgs: HTMLImageElement[] = []
     const images = []
 
-    // for (let i = 0; i < 200; i++) {
-    //   images.push(
-    //     `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/battery/${i
-    //       .toString()
-    //       .padStart(3, "0")}.webp`
-    //   )
-    // }
-
-    // fixed
     for (let i = 0; i < 200; i++) {
       images.push(
-        `src/assets/img/LH6N-蓝色电池/LH6N-蓝色电池_${i
+        `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/battery/${i
           .toString()
-          .padStart(5, "0")}.png`
+          .padStart(3, "0")}.webp`
       )
     }
+
+    // fixed
+    // for (let i = 0; i < 200; i++) {
+    //   images.push(
+    //     `src/assets/img/LH6N-蓝色电池/LH6N-蓝色电池_${i
+    //       .toString()
+    //       .padStart(5, "0")}.png`
+    //   )
+    // }
 
     images.forEach((src) => {
       const img = new Image()
