@@ -421,15 +421,25 @@ const FirstPcTs = (
 
   const sec8Ani = () => {
     const ctxs = (ca2 as any).current.getContext("2d")
+    ctxs.globalCompositeOperation = "copy"
 
     const imgs: HTMLImageElement[] = []
     const images = []
 
+    // for (let i = 0; i < 200; i++) {
+    //   images.push(
+    //     `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/battery/${i
+    //       .toString()
+    //       .padStart(3, "0")}.webp`
+    //   )
+    // }
+
+    // fixed
     for (let i = 0; i < 200; i++) {
       images.push(
-        `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/battery/${i
+        `src/assets/img/LH6N-蓝色电池/LH6N-蓝色电池_${i
           .toString()
-          .padStart(3, "0")}.webp`
+          .padStart(5, "0")}.png`
       )
     }
 
