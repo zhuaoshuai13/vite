@@ -144,7 +144,8 @@ const FirstPcTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .from(".sec4First .roboat", 1, { opacity: 0, x: 100 })
+        .from(".sec4First .roboat", 1, { x: 100 }, "a")
+        .from(".sec4First .roboat", 0.3, { opacity: 0 }, "a")
 
       ScrollTrigger.create({
         trigger: ".sec4First",
@@ -153,6 +154,18 @@ const FirstPcTs = (
         // scrub: true,
         toggleActions: "restart none none reverse",
         toggleClass: "active",
+      })
+
+      const tl2 = gsap
+        .timeline()
+        .from(".sec4First .bg", 1, { opacity: 0, y: 100 })
+
+      ScrollTrigger.create({
+        trigger: ".sec4First",
+        start: `top 60%`,
+        animation: tl2,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
       })
     }, total) // <- Scope!
 
@@ -173,6 +186,18 @@ const FirstPcTs = (
         toggleActions: "restart none none reverse",
         toggleClass: "active",
       })
+      const tl2 = gsap
+        .timeline()
+        .from(".sec7 .bg", 1, { y: 100 }, "a")
+        .from(".sec7 .bg", 0.3, { opacity: 0 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec7",
+        start: `top 60%`,
+        animation: tl2,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+      })
     }, total) // <- Scope!
 
     return () => ctx.revert() // <- Cleanup!
@@ -192,6 +217,19 @@ const FirstPcTs = (
         toggleActions: "restart none none reverse",
         toggleClass: "active",
       })
+
+      const tl2 = gsap
+        .timeline()
+        .from(".sec10 .bg", 1, { y: 100 }, "a")
+        .from(".sec10 .bg", 0.3, { opacity: 0 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec10",
+        start: `top 60%`,
+        animation: tl2,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+      })
     }, total) // <- Scope!
 
     return () => ctx.revert() // <- Cleanup!
@@ -209,6 +247,19 @@ const FirstPcTs = (
         // scrub: true,
         toggleActions: "restart none none reverse",
         toggleClass: "active",
+      })
+
+      const tl2 = gsap
+        .timeline()
+        .from(".sec16 .bg", 1, { y: 100 }, "a")
+        .from(".sec16 .bg", 0.3, { opacity: 0 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec16",
+        start: `top 60%`,
+        animation: tl2,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
       })
     }, total) // <- Scope!
 
@@ -248,6 +299,30 @@ const FirstPcTs = (
         toggleActions: "restart none none reverse",
         toggleClass: "active",
       })
+
+      const tl2 = gsap
+        .timeline()
+        .from(".sec22 .bg", 1, { y: 100 }, "a")
+        .from(".sec22 .bg", 0.3, { opacity: 0 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec22",
+        start: `top 60%`,
+        animation: tl2,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+      })
+
+      const tl3 = gsap.timeline().from(".sec22 .log", 1, { opacity: 0, x: 100 })
+
+      ScrollTrigger.create({
+        trigger: ".sec22",
+        start: `top 30%`,
+        animation: tl3,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+        toggleClass: "active",
+      })
     }, total) // <- Scope!
 
     return () => ctx.revert() // <- Cleanup!
@@ -257,15 +332,17 @@ const FirstPcTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .from(".sec5", 0.3, { y: pxToVw(100), ease: "none" }, "a")
+        .from(".sec5", 0.5, { opacity: 0, ease: "none" }, "a")
+        .from(".sec5", 1, { y: pxToVw(100), ease: "none" }, "a")
 
       ScrollTrigger.create({
-        trigger: ".sec4First",
-        start: `top -10%`,
-        end: "+=80%",
-        scrub: true,
+        trigger: ".sec5",
+        start: `top 80%`,
+        // end: "+=80%",
+        // scrub: true,
         animation: tl,
         anticipatePin: 0,
+        toggleActions: "restart none none reverse",
       })
     }, total) // <- Scope!
 
@@ -325,15 +402,21 @@ const FirstPcTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .from(".sec8", 0.3, { y: pxToVw(100), ease: "none" }, "a")
+        .from(
+          ".sec8 .bg",
+          0.3,
+          { y: pxToVw(100), opacity: 0, ease: "none" },
+          "a"
+        )
       ScrollTrigger.create({
-        trigger: ".sec7",
-        start: `top -10%`,
+        trigger: ".sec8",
+        start: `top 70%`,
         end: "+=80%",
-        scrub: true,
+        // scrub: true,
         // pin: pin,
         animation: tl,
         anticipatePin: 0,
+        toggleActions: "restart none none reverse",
       })
     }, total) // <- Scope!
 
@@ -344,15 +427,16 @@ const FirstPcTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
+        .from(".sec11", 0.3, { opacity: 0, ease: "none" }, "a")
         .from(".sec11", 1, { y: pxToVw(100), ease: "none" }, "a")
 
       ScrollTrigger.create({
-        trigger: ".sec10",
-        start: `top -10%`,
-        end: "+=80%",
-        scrub: true,
+        trigger: ".sec11",
+        start: `top 80%`,
+        // end: "+=80%",
         animation: tl,
         anticipatePin: 0,
+        toggleActions: "restart none none reverse",
       })
     }, total) // <- Scope!
 
@@ -361,13 +445,17 @@ const FirstPcTs = (
 
   const groupD = () => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline().from(".sec17 ", 3, { y: pxToVw(100) }, "a")
+      const tl = gsap
+        .timeline()
+        .from(".sec17 .bg", 1, { y: pxToVw(100) }, "a")
+        .from(".sec17 .bg", 0.3, { opacity: 0 }, "a")
 
       ScrollTrigger.create({
-        trigger: ".sec16",
-        start: `top -10%`,
-        end: "+=50%",
-        scrub: true,
+        trigger: ".sec17",
+        start: `top 80%`,
+        toggleActions: "restart none none reverse",
+        // end: "+=80%",
+        // scrub: true,
         animation: tl,
       })
     }, total) // <- Scope!
@@ -391,7 +479,7 @@ const FirstPcTs = (
       ScrollTrigger.create({
         trigger: ".sec17",
         animation: tl2,
-        start: "top 1%",
+        start: "top 0%",
         end: "+=400%",
         pin: true,
         anticipatePin: 0,
@@ -428,20 +516,11 @@ const FirstPcTs = (
 
     for (let i = 0; i < 200; i++) {
       images.push(
-        `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/battery/${i
+        `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/LH6N/${i
           .toString()
           .padStart(3, "0")}.webp`
       )
     }
-
-    // fixed
-    // for (let i = 0; i < 200; i++) {
-    //   images.push(
-    //     `src/assets/img/LH6N-蓝色电池/LH6N-蓝色电池_${i
-    //       .toString()
-    //       .padStart(5, "0")}.png`
-    //   )
-    // }
 
     images.forEach((src) => {
       const img = new Image()
@@ -449,13 +528,14 @@ const FirstPcTs = (
       imgs.push(img)
     })
     const ani = (type: number) => {
+      console.log(type)
       ctxs.drawImage(imgs[type], 0, 0)
     }
 
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .to(".sec8 ", 5, { opacity: 1 }, "m")
+        .to(".sec8", 0.2, { opacity: 1 }, "mm")
         .from(".sec8 .box2 .title", 1, { opacity: 0, y: "100px" }, "a")
         .from(
           ".sec8 .box2 .img",
@@ -479,7 +559,7 @@ const FirstPcTs = (
         .to(".sec8 .box2 .desc", 1, { opacity: 0, y: "100px" }, "b")
         .to(".sec8 .box2 .img", 1, { opacity: 0, y: "100px" }, "b")
         .to(".sec8 .box2 .title", 1, { opacity: 0, y: "100px" }, "b")
-        .to(".sec8", 5, { opacity: 1 }, "mm")
+        .to(".sec8", 1, { opacity: 1 }, "mm")
         .from(".sec8 .box1 .title", 1, { opacity: 0, y: "100px" }, "c")
         .from(".sec8 .box1 .f1", 1, { opacity: 0, y: "100px", delay: 0.2 }, "c")
         .from(
@@ -508,9 +588,10 @@ const FirstPcTs = (
         end: "=+400%",
 
         onUpdate: ({ progress }) => {
-          if ((progress > 0.4 && progress < 0.52) || progress > 0.9) {
+          console.log(progress)
+          if ((progress > 0.4 && progress < 0.6) || progress > 0.9) {
             isPlay = false
-            if (progress > 0.4 && progress < 0.52) {
+            if (progress > 0.4 && progress < 0.6) {
               ani(100)
             } else {
               ani(200)
@@ -522,11 +603,11 @@ const FirstPcTs = (
           // 是否可以播放
           if (isPlay) {
             // 播放第1段
-            if (progress < 0.4) {
+            if (progress < 0.6) {
               const now = (progress * (100 / 0.4)).toFixed(0)
               ani(Number(now))
             } else {
-              const now = ((progress - 0.52) * (100 / 0.48) + 100).toFixed(0)
+              const now = ((progress - 0.6) * (100 / 0.3) + 100).toFixed(0)
               ani(Number(now))
             }
           }
@@ -581,6 +662,18 @@ const FirstPcTs = (
         trigger: ".sec12",
         toggleActions: "restart none none reverse",
       })
+
+      const tl3 = gsap
+        .timeline()
+        .from(".sec12 .bg", 0.8, { opacity: 1, y: 100 })
+
+      ScrollTrigger.create({
+        trigger: ".sec12",
+        start: `top 100%`,
+        animation: tl3,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+      })
     }, total) // <- Scope!
 
     return () => ctx.revert() // <- Cleanup!
@@ -597,6 +690,16 @@ const FirstPcTs = (
         animation: tl,
         start: 0.3,
         toggleActions: true,
+      })
+
+      const tl3 = gsap.timeline().from(".sec14 .bg", 0.8, { y: 100 })
+
+      ScrollTrigger.create({
+        trigger: ".sec14",
+        start: `top 100%`,
+        animation: tl3,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
       })
     }, total) // <- Scope!
 
@@ -666,6 +769,19 @@ const FirstPcTs = (
         animation: tl,
         anticipatePin: 0,
       })
+
+      const tl2 = gsap
+        .timeline()
+        .from(".sec21 .bg", 0.3, { opacity: 0 }, "a")
+        .from(".sec21 .bg", 1, { y: 100 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec21",
+        start: `top 60%`,
+        animation: tl2,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+      })
     }, total)
     return () => ctx.revert()
   }
@@ -684,6 +800,19 @@ const FirstPcTs = (
         trigger: ".sec23",
         animation: tl,
         start: "top 0%",
+        toggleActions: "restart none none reverse",
+      })
+
+      const tl2 = gsap
+        .timeline()
+        .from(".sec23 .bg", 0.3, { opacity: 0 }, "a")
+        .from(".sec23 .bg", 1, { y: 100 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec23",
+        start: `top 60%`,
+        animation: tl2,
+        // scrub: true,
         toggleActions: "restart none none reverse",
       })
     }, total)
@@ -822,6 +951,19 @@ const FirstPcTs = (
         },
       })
     }, total)
+
+    const tl2 = gsap
+      .timeline()
+      .from(".sec25 .bg", 1, { y: 100 }, "a")
+      .from(".sec25 .bg", 0.3, { opacity: 0 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec25",
+      start: `top 60%`,
+      animation: tl2,
+      // scrub: true,
+      toggleActions: "restart none none reverse",
+    })
     return () => ctx.revert() // <- Cleanup!
   }
 
@@ -861,6 +1003,24 @@ const FirstPcTs = (
 
   const test5 = () => {
     gsap.to(window, { duration: 2, scrollTo: "#sec22ID" })
+  }
+
+  const sec27Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl2 = gsap
+        .timeline()
+        .from(".sec27 .bg", 0.3, { opacity: 0 }, "a")
+        .from(".sec27 .bg", 1, { y: 100 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec27",
+        start: `top 60%`,
+        animation: tl2,
+        // scrub: true,
+        toggleActions: "restart none none reverse",
+      })
+      return () => ctx.revert() // <- Cleanup!
+    })
   }
 
   // const sec26Ani = () => {
@@ -920,6 +1080,7 @@ const FirstPcTs = (
     test3,
     test4,
     test5,
+    sec27Ani,
     // sec26Ani,
   }
 }

@@ -237,7 +237,6 @@ const FirstMobTs = (
         trigger: ".sec22",
         start: "top 70%",
         animation: tl,
-        // scrub: true,
         toggleActions: "restart none none reverse",
         toggleClass: "active",
       })
@@ -281,15 +280,6 @@ const FirstMobTs = (
           },
         })
       })
-      // const tl = gsap.timeline().from(".sec2 .group", 1, { opacity: 0 }, "a")
-
-      // ScrollTrigger.create({
-      //   trigger: ".sec2",
-      //   start: `top 50%`,
-      //   animation: tl,
-      //   anticipatePin: 1,
-      //   toggleActions: "restart none none reverse",
-      // })
     }, total) // <- Scope!
 
     return () => ctx.revert() // <- Cleanup!
@@ -406,8 +396,27 @@ const FirstMobTs = (
       setAni({
         trigger: ".sec5",
         animation: tl2,
-        start: -0.1,
+        start: 0.3,
         toggleActions: true,
+      })
+    })
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  const sec18Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl2 = gsap
+        .timeline()
+        .from(".sec18", 0.6, { opacity: 0 }, "a")
+        .from(".sec18", 1, { y: "50%" }, "a")
+
+      ScrollTrigger.create({
+        animation: tl2,
+        trigger: ".sec17",
+        toggleActions: "restart none none reverse",
+        scrub: true,
+        start: "top 30%",
+        end: "+=50%",
       })
     })
     return () => ctx.revert() // <- Cleanup!
@@ -523,7 +532,7 @@ const FirstMobTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .from(".sec9 .f2", { x: "-50%", opacity: 0, delay: 1 }, "a")
+        .from(".sec9 .f2", { x: "-50%", opacity: 0 }, "a")
 
       setAni({
         trigger: ".sec9",
@@ -561,7 +570,7 @@ const FirstMobTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .from(".sec14 .right", 1, { x: "10%", opacity: 0.5 }, "a")
+        .from(".sec14 .right", 1, { y: "10%", opacity: 0 }, "a")
 
       setAni({
         trigger: ".sec14",
@@ -578,7 +587,7 @@ const FirstMobTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .from(".sec15 .right", 1, { x: "10%", opacity: 0.5 }, "a")
+        .from(".sec15 .right", 1, { y: "10%", opacity: 0 }, "a")
 
       setAni({
         trigger: ".sec15",
@@ -593,21 +602,23 @@ const FirstMobTs = (
 
   const sec19Ani = () => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline().to(".sec19 video", 1, { scale: 1.5 }, "a")
+      const tl = gsap
+        .timeline()
+        .from(".sec19 .right", 1, { y: 100, opacity: 0 }, "a")
+        .from(".sec19 .title", 1, { y: 100, opacity: 0, delay: 0.2 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec19",
+        start: `top 70%`,
+        animation: tl,
+        toggleActions: "restart none none reverse",
+      })
+
       const tl2 = gsap.timeline().to(".sec19", 1, { opacity: 1 }, "a")
 
       ScrollTrigger.create({
         trigger: ".sec19",
-        start: `top 0%`,
-        end: "+=100",
-        animation: tl,
-        toggleActions: "restart none none reverse",
-        scrub: true,
-      })
-
-      ScrollTrigger.create({
-        trigger: ".sec19",
-        start: `top 20%`,
+        start: `top 70%`,
         animation: tl2,
 
         onUpdate: ({ isActive }) => {
@@ -626,7 +637,7 @@ const FirstMobTs = (
     const ctx = gsap.context(() => {
       const tl = gsap
         .timeline()
-        .to(".sec21 .img", 2, { x: "-240%", duration: 0.1 })
+        .to(".sec21 .img", 2, { x: "-220%", duration: 0.1 })
 
       ScrollTrigger.create({
         trigger: ".sec21",
@@ -647,7 +658,8 @@ const FirstMobTs = (
         .from(
           ".sec23 .img3",
           1,
-          { width: pxToVw(285), height: pxToVw(624) },
+          // { width: pxToVw(285), height: pxToVw(624) },
+          { scale: 1.3 },
           "a"
         )
         .from(".sec23 .img1", 1, { x: "-60%", opacity: 0 }, "a")
@@ -668,18 +680,24 @@ const FirstMobTs = (
   const numAdd = () => {
     let switchs = true
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline()
+      const tl = gsap
+        .timeline()
+        .from(".secPar .bots", 1, { opacity: 0, x: "25%" }, "a")
+        .from(".secPar .tops", 1, { opacity: 0, x: "-25%" }, "a")
 
       ScrollTrigger.create({
         animation: tl,
-        trigger: ".secPar",
+        trigger: ".secPar.mob",
         start: "top 70%",
+        toggleActions: "restart none none reverse",
         onUpdate: ({ isActive, direction }) => {
           if (direction === 1) {
             if (isActive) {
               if (switchs) {
-                UpDate1(25)
-                UpDate2(30)
+                setTimeout(() => {
+                  UpDate1(25)
+                  UpDate2(30)
+                }, 1000)
 
                 switchs = false
               }
@@ -705,7 +723,7 @@ const FirstMobTs = (
       ScrollTrigger.create({
         animation: tl,
         trigger: ".sec24",
-        start: "top 30%",
+        start: "top 70%",
         toggleActions: "restart none none reverse",
         onUpdate: ({ isActive, direction }) => {
           if (direction === 1) {
@@ -868,6 +886,7 @@ const FirstMobTs = (
     sec25Ani,
     playClick,
     videoClick,
+    sec18Ani,
     // sec26Ani,
   }
 }
