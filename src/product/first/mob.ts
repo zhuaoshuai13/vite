@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { RefObject } from "react"
+import { MutableRefObject } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -17,7 +18,6 @@ interface AniType {
 }
 
 import { useCountUp } from "react-countup"
-import { MutableRefObject } from "react"
 
 const pxToVw = (num: number) => {
   const res = (num * 1) / 10.8
@@ -30,13 +30,12 @@ const FirstMobTs = (
   countUpRef4: MutableRefObject<null>,
   videoRef: MutableRefObject<null>,
   ca2: MutableRefObject<null>,
-  playRef: RefObject<HTMLVideoElement>,
-  btnRef: RefObject<HTMLDivElement>,
+  playRef2: RefObject<HTMLVideoElement>,
+  btnRefMob: RefObject<HTMLDivElement>,
   countUpRef11: MutableRefObject<null>,
   countUpRef22: MutableRefObject<null>
 ) => {
   // gsap.registerPlugin(ScrollTrigger, TextPlugin)
-  const baseUrl = import.meta.env.VITE_URL
 
   const { update: thirdUpDate } = useCountUp({
     ref: countUpRef3,
@@ -389,9 +388,10 @@ const FirstMobTs = (
     const ctx = gsap.context(() => {
       const tl2 = gsap
         .timeline()
+        // .to(".sec5 .left", 1, { x: "-50%", opacity: 0 }, "a")
         .from(".sec5 .left", 1, { x: "-50%", opacity: 0 }, "a")
-        .from(".sec5 .right", 1, { x: "50%", opacity: 0 }, "a")
-        .from(".sec5 .phone", 1, { x: "-130%", opacity: 0 }, "a")
+        .from(".sec5 .phone", 1, { x: "50%", opacity: 0 }, "a")
+      // .from(".sec5 .phone", 1, { x: "-130%", opacity: 0 }, "a")
 
       setAni({
         trigger: ".sec5",
@@ -407,8 +407,8 @@ const FirstMobTs = (
     const ctx = gsap.context(() => {
       const tl2 = gsap
         .timeline()
-        .from(".sec18", 0.6, { opacity: 0 }, "a")
-        .from(".sec18", 1, { y: "50%" }, "a")
+        .from(".sec18", 0.6, { opacity: 1 }, "a")
+        .from(".sec18", 1, { y: "100%" }, "a")
 
       ScrollTrigger.create({
         animation: tl2,
@@ -424,13 +424,14 @@ const FirstMobTs = (
 
   const sec8Ani = () => {
     const ctxs = (ca2 as any).current.getContext("2d")
+    ctxs.globalCompositeOperation = "copy"
 
     const imgs: HTMLImageElement[] = []
     const images = []
 
     for (let i = 0; i < 200; i++) {
       images.push(
-        `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/battery/${i
+        `${(window as any).povaCanvas.LH6N}/${i
           .toString()
           .padStart(3, "0")}.webp`
       )
@@ -751,15 +752,12 @@ const FirstMobTs = (
 
   const sec25Ani = () => {
     const ctxs = (ca as any).current.getContext("2d")
+    ctxs.globalCompositeOperation = "copy"
 
     const imgs: HTMLImageElement[] = []
     const images = []
     for (let i = 0; i < 75; i++) {
-      images.push(
-        `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/engine/${
-          i + 100
-        }.png`
-      )
+      images.push(`${(window as any).povaCanvas.engine}/${i + 100}.webp`)
     }
 
     images.forEach((src) => {
@@ -816,20 +814,20 @@ const FirstMobTs = (
     return () => ctx.revert() // <- Cleanup!
   }
 
-  const playClick = () => {
-    if (playRef.current) {
-      playRef.current.play()
+  const playMobClick = () => {
+    if (playRef2.current) {
+      playRef2.current.play()
     }
-    if (btnRef.current) {
-      btnRef.current.className = "play false"
+    if (btnRefMob.current) {
+      btnRefMob.current.className = "play false"
     }
   }
 
-  const videoClick = () => {
-    playRef?.current?.pause()
+  const videoClick2 = () => {
+    playRef2?.current?.pause()
 
-    if (btnRef.current) {
-      btnRef.current.className = "play true"
+    if (btnRefMob.current) {
+      btnRefMob.current.className = "play true"
     }
     // setPlayShow(true)
   }
@@ -884,8 +882,8 @@ const FirstMobTs = (
     numAdd,
     sec24Ani,
     sec25Ani,
-    playClick,
-    videoClick,
+    playMobClick,
+    videoClick2,
     sec18Ani,
     // sec26Ani,
   }

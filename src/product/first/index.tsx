@@ -12,29 +12,32 @@ import UseResponse from "../../hooks/useResponse"
 
 import FirstPcTs from "./pc"
 
+import lan from "./lan"
+
 import FirstMobTs from "./mob"
 
 import "./index.scss"
 
 const FirstProduct = () => {
-  const baseUrl = import.meta.env.VITE_URL
   const { responsive } = UseResponse()
   const total = useRef(null)
   const ca = useRef(null)
   const ca2 = useRef(null)
-  const playRef = useRef<HTMLVideoElement>(null)
+  const playRef1 = useRef<HTMLVideoElement>(null)
+  const playRef2 = useRef<HTMLVideoElement>(null)
   const countUpRef1 = useRef(null)
   const countUpRef2 = useRef(null)
   const countUpRef3 = useRef(null)
   const countUpRef4 = useRef(null)
   const videoRef = useRef(null)
-  const btnRef = useRef<HTMLDivElement>(null)
+  const btnRefPc = useRef<HTMLDivElement>(null)
+  const btnRefMob = useRef<HTMLDivElement>(null)
   const countUpRef11 = useRef(null)
   const countUpRef22 = useRef(null)
 
   const {
     textHover,
-    playClick,
+    playPcClick,
     videoClick,
     test1,
     test2,
@@ -51,8 +54,8 @@ const FirstProduct = () => {
     countUpRef4,
     videoRef,
     ca2,
-    playRef,
-    btnRef
+    playRef1,
+    btnRefPc
   )
 
   const {
@@ -75,6 +78,8 @@ const FirstProduct = () => {
     numAdd,
     sec24Ani,
     sec25Ani,
+    playMobClick,
+    videoClick2,
   } = FirstMobTs(
     total,
     ca,
@@ -82,8 +87,8 @@ const FirstProduct = () => {
     countUpRef4,
     videoRef,
     ca2,
-    playRef,
-    btnRef,
+    playRef2,
+    btnRefMob,
     countUpRef11,
     countUpRef22
   )
@@ -161,20 +166,20 @@ const FirstProduct = () => {
   }, [responsive?.md])
 
   return (
-    <div ref={total} className='total'>
+    <div ref={total} className='total pova3'>
       <div className='groupTop'>
         <section className='section sec1'>
           <div className='name'></div>
           <div className='product'></div>
           <div className='slogan'></div>
           <div className='title_wrap'>
-            <div>7000mAh Mega Battery </div>
+            <div>{lan.section1.f1}</div>
             <div className='line'></div>
-            <div>18W Flash Charge </div>
+            <div>{lan.section1.f2}</div>
             <div className='line'></div>
-            <div>MTK G85 Processor </div>
+            <div>{lan.section1.f3}</div>
             <div className='line'></div>
-            <div>128GB ROM + 8GB RAM</div>
+            <div>{lan.section1.f4}</div>
           </div>
           <div className='nameGroup'></div>
         </section>
@@ -183,38 +188,38 @@ const FirstProduct = () => {
             <div className='out' onClick={test1}>
               <div className='box box1'>
                 <div className='text Kfont'>
-                  Innovative <br />
-                  Design
+                  {lan.section2.f1a} <br />
+                  {lan.section2.f1b}
                 </div>
               </div>
             </div>
             <div className='out' onClick={test2}>
               <div className='box box2'>
                 <div className='text Kfont'>
-                  Stunning <br />
-                  Power
+                  {lan.section2.f2a} <br />
+                  {lan.section2.f2b}
                 </div>
               </div>
             </div>
             <div className='out' onClick={test3}>
               <div className='box box3'>
                 <div className='text Kfont'>
-                  Stunning <br />
-                  Power
+                  {lan.section2.f3a} <br />
+                  {lan.section2.f3b}
                 </div>
               </div>
             </div>
             <div className='out' onClick={test4}>
               <div className='box box4'>
                 <div className='text Kfont'>
-                  Clear <br />
-                  Camear
+                  {lan.section2.f4a} <br />
+                  {lan.section2.f4b}
                 </div>
               </div>
             </div>
             <div className='out' onClick={test5}>
               <div className='box box5'>
-                <div className='text Kfont'>HIOS 13</div>
+                <div className='text Kfont'>{lan.section2.f5}</div>
               </div>
             </div>
           </div>
@@ -222,69 +227,85 @@ const FirstProduct = () => {
       </div>
       <section className='section sec3'>
         <div className='box'>
-          <div className='outer' onClick={videoClick}></div>
+          {responsive?.md ? (
+            <div className='outer' onClick={videoClick}></div>
+          ) : (
+            <div className='outer' onClick={videoClick2}></div>
+          )}
           <video
-            src={`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/sec3pc.mp4`}
+            src={lan.pov3Video.sec3Pc}
             // src='src/assets/video/v1.mp4'
             className='lazy pc'
             autoPlay={false}
             webkit-playsinline='true'
             preload='auto'
-            poster={`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/post.jpg`}
+            poster={lan.pov3Video.sec3Post}
             loop
-            ref={playRef}
+            ref={playRef1}
           ></video>
           <video
-            src={`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/sec3mob.mp4`}
+            src={lan.pov3Video.sec3Mob}
             // src='src/assets/video/v1.mp4'
             className='lazy mob'
-            poster={`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/post.jpg`}
+            poster={lan.pov3Video.sec3Post}
             autoPlay={false}
             webkit-playsinline='true'
             preload='auto'
             muted
             loop
-            ref={playRef}
+            ref={playRef2}
           ></video>
-          <div className={`play`} onClick={playClick} ref={btnRef}></div>
+          {responsive?.md ? (
+            <div
+              className={`play`}
+              onClick={playPcClick}
+              key={1}
+              ref={btnRefPc}
+            ></div>
+          ) : (
+            <div
+              className={`play`}
+              key={2}
+              onClick={playMobClick}
+              ref={btnRefMob}
+            ></div>
+          )}
         </div>
       </section>
 
       <section className='section sec4 sec4First' id='sec4ID'>
         <div className='bg'></div>
         <div className='bgT Kfont'>
-          <div>Brand</div> <div>New</div> <div>Mecha</div> <div>Design</div>
+          <div>{lan.section4.f1}</div> <div>{lan.section4.f2}</div>
+          <div>{lan.section4.f3}</div> <div>{lan.section4.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>Brand</div> <div>New</div> <div>Mecha</div> <div>Design</div>
+          <div>{lan.section4.f1}</div> <div>{lan.section4.f2}</div>
+          <div>{lan.section4.f3}</div> <div>{lan.section4.f4}</div>
         </div>
         <div className='color_title Kfont'>
-          <div>Brand</div> <div>New</div> <div>Mecha</div> <div>Design</div>
+          <div>{lan.section4.f1}</div> <div>{lan.section4.f2}</div>
+          <div>{lan.section4.f3}</div> <div>{lan.section4.f4}</div>
         </div>
         <div className='roboat'></div>
       </section>
+
       <section className='section sec5'>
         <div className='title Kfont textAni'>
-          Turbor Mecha <br /> Design
+          {lan.section5.titlea} <br /> {lan.section5.titleb}
         </div>
-        <div className='slogan Hfont textAni'>Energize Your Coolness</div>
-        <div className='desc Hfont textAni'>
-          Inspired by energy Mecha, the power-packed POVA NEO 3 comes with three
-          color options for an energizing experience!
-        </div>
+        <div className='slogan Hfont textAni'> {lan.section5.slogan}</div>
+        <div className='desc Hfont textAni'>{lan.section5.desc}</div>
         <div className='phoneBox Kfont'>
           <div className='left'>
-            {/* <div className='text'>
-              Life-like 3D Mecha Design <br /> with Turbo Stripes
-            </div> */}
+            <div className='text'>
+              {lan.section5.titlea} <br /> {lan.section5.titleb}
+            </div>
           </div>
           <div className='phone'></div>
-          <div className='right'>
-            {/* <div className='text Kfont'>
-              9mm-thin Body <br /> Comfortable Grip
-            </div> */}
+          {/* <div className='right'>
             <div className='phonside'></div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -292,19 +313,19 @@ const FirstProduct = () => {
         <div className='phoneBox'>
           <div className='f1 com'>
             <div className='name Kfont'>
-              Amber <br /> Gold
+              {lan.section6.f1a} <br /> {lan.section6.f1b}
             </div>
             <div className='phone'></div>
           </div>
           <div className='f2 com'>
             <div className='name Kfont'>
-              Mecha <br /> Black
+              {lan.section6.f2a} <br /> {lan.section6.f2b}
             </div>
             <div className='phone'></div>
           </div>
           <div className='f3 com'>
             <div className='name Kfont'>
-              Hurricane <br /> Blue
+              {lan.section6.f3a} <br /> {lan.section6.f3b}
             </div>
             <div className='phone'></div>
           </div>
@@ -313,16 +334,19 @@ const FirstProduct = () => {
       <section className='section sec4 sec7' id='sec7ID'>
         <div className='bg'></div>
         <div className='bgT Kfont'>
-          <div>Power On</div> <div>and On</div> <div>Play </div>
-          <div>Non-stop</div>
+          <div>{lan.section7.f1}</div> <div>{lan.section7.f2}</div>
+          <div>{lan.section7.f3} </div>
+          <div>{lan.section7.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>Power On</div> <div>and On</div> <div>Play </div>
-          <div>Non-stop</div>
+          <div>{lan.section7.f1}</div> <div>{lan.section7.f2}</div>
+          <div>{lan.section7.f3} </div>
+          <div>{lan.section7.f4}</div>
         </div>
         <div className='color_title Kfont'>
-          <div>Power On</div> <div>and On</div> <div>Play </div>
-          <div>Non-stop</div>
+          <div>{lan.section7.f1}</div> <div>{lan.section7.f2}</div>
+          <div>{lan.section7.f3} </div>
+          <div>{lan.section7.f4}</div>
         </div>
         <div className='roboat'></div>
       </section>
@@ -333,31 +357,27 @@ const FirstProduct = () => {
           <div className='box box2'>
             <div className='right'>
               <div className='title textAni Kfont'>
-                7000mAh <br /> Mega Battery
+                {lan.section8.titlea} <br />
+                {lan.section8.titleb}
               </div>
               <div className='img textAni Hfont'></div>
-              <div className='desc textAni Hfont'>
-                Boldly engage in battles with the 7000mAh battery, which
-                provides powerful backup for uninterrupted gaming sessions.
-                Combined with the added benefit of 18W Flash Charge, say goodbye
-                to power shortages from now on.
-              </div>
+              <div className='desc textAni Hfont'>{lan.section8.desca}</div>
               <div className='params textAni'>
                 <div className='param Hfont'>
-                  <div className='big'>18H+</div>
-                  <div className='small'>Facebook</div>
+                  <div className='big'>{lan.section8.pa}</div>
+                  <div className='small'>{lan.section8.pat}</div>
                 </div>
                 <div className='param'>
-                  <div className='big'>14H+</div>
-                  <div className='small'>Watch video</div>
+                  <div className='big'>{lan.section8.pb}</div>
+                  <div className='small'>{lan.section8.pbt}</div>
                 </div>
                 <div className='param'>
-                  <div className='big'>11H+</div>
-                  <div className='small'>Play FREEFIRE</div>
+                  <div className='big'>{lan.section8.pc}</div>
+                  <div className='small'>{lan.section8.pct}</div>
                 </div>
                 <div className='param'>
-                  <div className='big'>39H+</div>
-                  <div className='small'>Calls</div>
+                  <div className='big'>{lan.section8.pd}</div>
+                  <div className='small'>{lan.section8.pdt}</div>
                 </div>
               </div>
             </div>
@@ -366,19 +386,14 @@ const FirstProduct = () => {
           <div className='box box1'>
             <div className='right'>
               <div className='title textAni Kfont'>
-                STS Secure <br />
-                Battery <br />
-                Technology
+                {lan.section8.titlec} <br />
+                {lan.section8.titled} <br />
+                {lan.section8.titlee}
               </div>
               <div className='f1'></div>
-              <div className='sub'>The Power You Can Trust</div>
+              <div className='sub'>{lan.section8.sub}</div>
               <div className='f2'></div>
-              <div className='desc textAni Hfont'>
-                The STS coating technology ensures safety by preventing
-                dangerous internal short circuits caused by direct contact
-                between aluminum foil and anode, providing you with complete
-                peace of mind.
-              </div>
+              <div className='desc textAni Hfont'>{lan.section8.descb}</div>
             </div>
           </div>
           <div className='movie'>
@@ -401,31 +416,27 @@ const FirstProduct = () => {
             <div className='box box2'>
               <div className='right'>
                 <div className='title textAni Kfont'>
-                  7000mAh <br /> Mega Battery
+                  {lan.section8.titlea} <br />
+                  {lan.section8.titleb}
                 </div>
                 <div className='img textAni Hfont'></div>
-                <div className='desc textAni Hfont'>
-                  Boldly engage in battles with the 7000mAh battery, which
-                  provides powerful backup for uninterrupted gaming sessions.
-                  Combined with the added benefit of 18W Flash Charge, say
-                  goodbye to power shortages from now on.
-                </div>
+                <div className='desc textAni Hfont'>{lan.section8.desca}</div>
                 <div className='params textAni'>
                   <div className='param Hfont'>
-                    <div className='big'>18H+</div>
-                    <div className='small'>Facebook</div>
+                    <div className='big'>{lan.section8.pa}</div>
+                    <div className='small'>{lan.section8.pat}</div>
                   </div>
                   <div className='param'>
-                    <div className='big'>14H+</div>
-                    <div className='small'>Watch video</div>
+                    <div className='big'>{lan.section8.pb}</div>
+                    <div className='small'>{lan.section8.pbt}</div>
                   </div>
                   <div className='param'>
-                    <div className='big'>11H+</div>
-                    <div className='small'>Play FREEFIRE</div>
+                    <div className='big'>{lan.section8.pc}</div>
+                    <div className='small'>{lan.section8.pct}</div>
                   </div>
                   <div className='param'>
-                    <div className='big'>39H+</div>
-                    <div className='small'>Calls</div>
+                    <div className='big'>{lan.section8.pd}</div>
+                    <div className='small'>{lan.section8.pdt}</div>
                   </div>
                 </div>
               </div>
@@ -436,19 +447,14 @@ const FirstProduct = () => {
             <div className='box box1'>
               <div className='right'>
                 <div className='title textAni Kfont'>
-                  STS Secure <br />
-                  Battery <br />
-                  Technology
+                  {lan.section8.titlec} <br />
+                  {lan.section8.titled} <br />
+                  {lan.section8.titlee}
                 </div>
                 <div className='f1 textAni'></div>
-                <div className='sub textAni'>The Power You Can Trust</div>
+                <div className='sub textAni'> {lan.section8.sub}</div>
                 <div className='f2 textAni'></div>
-                <div className='desc textAni Hfont'>
-                  The STS coating technology ensures safety by preventing
-                  dangerous internal short circuits caused by direct contact
-                  between aluminum foil and anode, providing you with complete
-                  peace of mind.
-                </div>
+                <div className='desc textAni Hfont'>{lan.section8.descb}</div>
               </div>
             </div>
             <div className='movie movie1 textAni'></div>
@@ -461,36 +467,30 @@ const FirstProduct = () => {
         <div className='box'>
           <div className='left'>
             <div className='title textAni Kfont'>
-              Battery <br className='pc' /> Lab 3.0
+              {lan.section9.titlea} <br className='pc' /> {lan.section9.titleb}
             </div>
             <div className='img textAni'></div>
             <div className='desc textAni'>
-              Extend your phone's battery life with the new energy-efficient
-              Super
-              <br className='pc' /> Power Saver. It intelligently identifies
-              battery-draining apps and
-              <br className='pc' /> adjusts to the best power-saving mode for
-              longer use.
+              {lan.section9.desca}
+              <br className='pc' /> {lan.section9.descb}
+              <br className='pc' /> {lan.section9.descc}
             </div>
             <div className='params textAni'>
               <div>
                 <div className='img1'></div>
-                Long Battery <br /> Life
+                {lan.section9.pa1} <br /> {lan.section9.pa2}
               </div>
               <div>
                 <div className='img2'></div>
-                Optimization <br />
-                App
+                {lan.section9.pa1} <br /> {lan.section9.pb2}
               </div>
               <div>
                 <div className='img3'></div>
-                Super Power <br />
-                Saving
+                {lan.section9.pc1} <br /> {lan.section9.pc2}
               </div>
               <div>
                 <div className='img4'></div>
-                Smart Power <br />
-                Saving Scenarios
+                {lan.section9.pd1} <br /> {lan.section9.pd2}
               </div>
             </div>
           </div>
@@ -504,48 +504,45 @@ const FirstProduct = () => {
       <section className='section sec4 sec10' id='sec10ID'>
         <div className='bg'></div>
         <div className='bgT Kfont'>
-          <div>Pioneering</div> <div>Performance</div> <div>Supercool</div>
-          <div>Experience</div>
+          <div>{lan.section10.f1}</div> <div>{lan.section10.f2}</div>
+          <div>{lan.section10.f3}</div>
+          <div>{lan.section10.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>Pioneering</div> <div>Performance</div> <div>Supercool</div>
-          <div>Experience</div>
+          <div>{lan.section10.f1}</div> <div>{lan.section10.f2}</div>
+          <div>{lan.section10.f3}</div>
+          <div>{lan.section10.f4}</div>
         </div>
         <div className='color_title Kfont'>
-          <div>Pioneering</div> <div>Performance</div> <div>Supercool</div>
-          <div>Experience</div>
+          <div>{lan.section10.f1}</div> <div>{lan.section10.f2}</div>
+          <div>{lan.section10.f3}</div>
+          <div>{lan.section10.f4}</div>
         </div>
         <div className='roboat'></div>
       </section>
       <section className='section sec11'>
         <div className='head'></div>
         <div className='title textAni Kfont'>
-          MediaTek Helio G85 <br /> Processor{" "}
+          {lan.section11.titlea} <br /> {lan.section11.titleb}
         </div>
         <div className='box'>
           <div className='left textAni'>
             <div className='f1'></div>
-            <div className='sub Hfont'>Gaming Experience Revamped</div>
-            <div className='desc Hfont'>
-              The MediaTek Helio G85 boosts the Arm Mali-G52 GPU to 1.0 GHz for
-              seamless and efficient mobile gaming on-the-go.
-            </div>
+            <div className='sub Hfont'>{lan.section11.suba}</div>
+            <div className='desc Hfont'>{lan.section11.desca}</div>
             <div className='f2'></div>
           </div>
           <div className='right textAni'>
             <div className='f1'></div>
-            <div className='sub Hfont'>Navigate with Precision</div>
-            <div className='desc Hfont'>
-              Boasting leading inertial navigation, Helio G85 ensures precise
-              positioning even in tunnels or underground where GNSS is
-              unavailable.
-            </div>
+            <div className='sub Hfont'> {lan.section11.subb}</div>
+            <div className='desc Hfont'>{lan.section11.descb}</div>
             <div className='f2'></div>
           </div>
         </div>
         <div className='videoBox'>
           <video
-            src={`${`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/152810.mp4`}`}
+            src={lan.pov3Video.sec11V}
+            poster={lan.pov3Video.sec11VPost}
             // src='src/assets/video/v1.mp4'
             className='lazy'
             autoPlay
@@ -562,28 +559,30 @@ const FirstProduct = () => {
         <div className='box pc'>
           <div className='left'>
             <div className='title textAni Kfont'>
-              Large <br className='pc' /> Memory With <br className='pc' />
-              Extended <br className='pc' /> RAM
+              {lan.section12.titlea} <br className='pc' />
+              {lan.section12.titleb} <br className='pc' />
+              {lan.section12.titlec} <br className='pc' />
+              {lan.section12.titled}
             </div>
             <div className='group'>
               <div className='sub textAni Hfont'>
-                <div className='sub1'>128+4GB</div>
-                <div className='sub2'>128+8GB</div>
+                <div className='sub1'>{lan.section12.suba}</div>
+                <div className='sub2'>{lan.section12.subb}</div>
               </div>
               <div className='desc textAni Hfont'>
                 <div className='desc1'>
-                  • Expandable RAM up to 8GB <br />
-                  *Optional expansion of 1, 2, 4GB, default expansion of 2GB
+                  {lan.section12.desc1a} <br />
+                  {lan.section12.desc1b}
                   <br />
-                  •The number of active background apps reaching 11
-                  <br />• Application startup speed increased by 45% on average
+                  {lan.section12.desc1c}
+                  <br /> {lan.section12.desc1d}
                 </div>
                 <div className='desc2'>
-                  • Expandable RAM up to 16GB <br />
-                  *Optional expansion of 3, 5, 8GB, default expansion of 5GB
+                  {lan.section12.desc2a} <br />
+                  {lan.section12.desc2b}
                   <br />
-                  •The number of active background apps reaching 20 <br />
-                  •Application startup speed increased by 55% on average"`,
+                  {lan.section12.desc2c} <br />
+                  {lan.section12.desc2d}
                 </div>
               </div>
             </div>
@@ -593,7 +592,8 @@ const FirstProduct = () => {
             <div className='videoBox'>
               <video
                 className='lazy'
-                src={`${`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/152817.mp4`}`}
+                src={lan.pov3Video.sec12PcV}
+                poster={lan.pov3Video.sec12PcVPost}
                 // src='src/assets/video/v2.mp4'
                 autoPlay
                 webkit-playsinline='true'
@@ -603,6 +603,11 @@ const FirstProduct = () => {
               ></video>
             </div>
           </div>
+        </div>
+        <div className='title textAni Kfont mob'>
+          {lan.section12.titlea} <br className='pc' /> {lan.section12.titleb}{" "}
+          <br className='pc' />
+          {lan.section12.titlec} <br className='pc' /> {lan.section12.titled}
         </div>
         <Swiper
           // effect={"fade"}
@@ -617,22 +622,19 @@ const FirstProduct = () => {
           <SwiperSlide>
             <div className='box'>
               <div className='left'>
-                <div className='title textAni Kfont'>
-                  Large <br className='pc' /> Memory With <br className='pc' />
-                  Extended <br className='pc' /> RAM
-                </div>
                 <div className='group'>
                   <div className='sub textAni Hfont'>
-                    <div className='sub1'>128+4GB</div>
+                    <div className='sub1'>{lan.section12.suba}</div>
                   </div>
                   <div className='desc textAni Hfont'>
                     <div className='desc1'>
-                      • Expandable RAM up to 8GB <br />
-                      *Optional expansion of 1, 2, 4GB, default expansion of 2GB
+                      {lan.section12.desc1a}
                       <br />
-                      •The number of active background apps reaching 11
-                      <br />• Application startup speed increased by 45% on
-                      average
+                      {lan.section12.desc1b}
+                      <br />
+                      {lan.section12.desc1c}
+                      <br />
+                      {lan.section12.desc1d}
                     </div>
                   </div>
                 </div>
@@ -642,7 +644,8 @@ const FirstProduct = () => {
                 <div className='videoBox'>
                   <video
                     className='lazy'
-                    src={`${`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/152817.mp4`}`}
+                    src={lan.pov3Video.sec12MobV1}
+                    poster={lan.pov3Video.sec12MobV1Post}
                     // src='src/assets/video/v2.mp4'
                     autoPlay
                     webkit-playsinline='true'
@@ -657,21 +660,21 @@ const FirstProduct = () => {
           <SwiperSlide>
             <div className='box'>
               <div className='left'>
-                <div className='title textAni Kfont'>
+                {/* <div className='title textAni Kfont'>
                   Large <br className='pc' /> Memory With <br className='pc' />
                   Extended <br className='pc' /> RAM
-                </div>
+                </div> */}
                 <div className='group'>
                   <div className='sub textAni Hfont'>
-                    <div className='sub1'>128+8GB</div>
+                    <div className='sub1'>{lan.section12.subb}</div>
                   </div>
                   <div className='desc textAni Hfont'>
                     <div className='desc1'>
-                      • Expandable RAM up to 16GB <br />
-                      *Optional expansion of 3, 5, 8GB, default expansion of 5GB
+                      {lan.section12.desc2a} <br />
+                      {lan.section12.desc2b}
                       <br />
-                      •The number of active background apps reaching 20 <br />
-                      •Application startup speed increased by 55% on average"`,
+                      {lan.section12.desc2c} <br />
+                      {lan.section12.desc2d}
                     </div>
                   </div>
                 </div>
@@ -681,7 +684,8 @@ const FirstProduct = () => {
                 <div className='videoBox'>
                   <video
                     className='lazy'
-                    src={`${`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/152817.mp4`}`}
+                    src={lan.pov3Video.sec12MobV2}
+                    poster={lan.pov3Video.sec12MobV2Post}
                     // src='src/assets/video/v2.mp4'
                     autoPlay
                     webkit-playsinline='true'
@@ -699,13 +703,11 @@ const FirstProduct = () => {
       </section>
       <section className='section sec13'>
         <div className='title textAni Kfont'>
-          6.82'' HD Display <br /> with 90Hz <br /> Refresh Rate
+          {lan.section13.titlea} <br /> {lan.section13.titleb} <br />
+          {lan.section13.titlec}
         </div>
         <div className='line textAni'></div>
-        <div className='desc textAni Hfont'>
-          Get the most out of your gaming experience with an enhanced experience
-          that features smoother graphics, richer detail, and total immersion.
-        </div>
+        <div className='desc textAni Hfont'>{lan.section13.desc}</div>
         <div className='img textAni'></div>
       </section>
       <section className='section sec14'>
@@ -713,13 +715,11 @@ const FirstProduct = () => {
         <div className='box'>
           <div className='left'>
             <div className='title textAni Kfont'>
-              Dual speaker <br /> with DTS <br /> Stereo Sound <br /> Effect
+              {lan.section14.titlea} <br /> {lan.section14.titleb} <br />
+              {lan.section14.titlec} <br /> {lan.section14.titled}
             </div>
             <div className='img textAni'></div>
-            <div className='desc textAni Hfont'>
-              Hear the super sensational sound effects that will transport you
-              into the game world like never before.
-            </div>
+            <div className='desc textAni Hfont'>{lan.section14.desc}</div>
             <div className='logBox textAni'>
               <div className='logo'></div>
               <div className='audo'></div>
@@ -727,7 +727,8 @@ const FirstProduct = () => {
           </div>
           <div className='right'>
             <video
-              src={`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/1.mp4`}
+              src={lan.pov3Video.sec14V}
+              poster={lan.pov3Video.sec14VPost}
               // src='src/assets/video/v5.mp4'
               className='lazy'
               autoPlay
@@ -743,12 +744,11 @@ const FirstProduct = () => {
       <section className='section sec15'>
         <div className='box'>
           <div className='left'>
-            <div className='title textAni Kfont'>Dual Game Engine</div>
+            <div className='title textAni Kfont'>{lan.section15.title}</div>
             <div className='img textAni'></div>
             <div className='desc textAni Hfont'>
-              Powerful Function with Low Power Consumption. <br />
-              Enjoy seamless, lag-free mobile gaming with stunningly realistic
-              visuals and immersive sounds.
+              {lan.section15.desca} <br />
+              {lan.section15.descb}
             </div>
           </div>
           <div className='right'></div>
@@ -758,16 +758,19 @@ const FirstProduct = () => {
       <section className='section sec4 sec16' id='sec16ID'>
         <div className='bg'></div>
         <div className='bgT Kfont'>
-          <div>Clear</div> <div>Camera</div> <div>Meets</div>
-          <div>Your Shine</div>
+          <div>{lan.section16.f1}</div> <div>{lan.section16.f2}</div>
+          <div>{lan.section16.f3}</div>
+          <div>{lan.section16.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>Clear</div> <div>Camera</div> <div>Meets</div>
-          <div>Your Shine</div>
+          <div>{lan.section16.f1}</div> <div>{lan.section16.f2}</div>
+          <div>{lan.section16.f3}</div>
+          <div>{lan.section16.f4}</div>
         </div>
         <div className='color_title Kfont'>
-          <div>Clear</div> <div>Camera</div> <div>Meets</div>
-          <div>Your Shine</div>
+          <div>{lan.section16.f1}</div> <div>{lan.section16.f2}</div>
+          <div>{lan.section16.f3}</div>
+          <div>{lan.section16.f4}</div>
         </div>
         <div className='roboat'></div>
       </section>
@@ -775,10 +778,10 @@ const FirstProduct = () => {
         <div className='bg'></div>
         <div className='group'>
           <div className='title textAni Kfont'>
-            16MP <br /> Clear Main Camera
+            {lan.section17.titlea} <br /> {lan.section17.titleb}
           </div>
           <div className='f1 textAni'></div>
-          <div className='sub textAni Hfont'>Capture life's beauty.</div>
+          <div className='sub textAni Hfont'>{lan.section17.desc}</div>
           <div className='f2 textAni'></div>
         </div>
         <div className='img'></div>
@@ -799,7 +802,8 @@ const FirstProduct = () => {
             <div className='videoBox'>
               <video
                 ref={videoRef}
-                src={`${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/2.mp4`}
+                src={lan.pov3Video.sec19V}
+                poster={lan.pov3Video.sec19VPost}
                 // src='src/assets/video/v4.mp4'
                 className='lazy'
                 // autoPlay
@@ -814,40 +818,32 @@ const FirstProduct = () => {
       </section>
       <div className='footer mob'></div>
       <section className='section sec20'>
-        <div className='title textAni Kfont'>SKY SHOP</div>
+        <div className='title textAni Kfont'>{lan.section20.title}</div>
         <div className='box textAni'>
           <div className='f1 '></div>
-          <div className='text Hfont'>Magic at Your Fingertip</div>
+          <div className='text Hfont'>{lan.section20.sub}</div>
           <div className='f2'></div>
         </div>
-        <div className='desc textAni Hfont'>
-          Choose from over 12 sky-themed filters to create your one-of-a-kind
-          photos, magically with just one tap!
-          {/* <br /> Sunny/Rainbow/Azure
-  Sky/Rosy Clouds/Sunset/Twilight <br /> Starry/Milky
-  way/Meteor/Orbit/Aurora/Moon */}
-        </div>
-        {/* <div className='top'></div> */}
-        {/* <div className='bot'></div> */}
+        <div className='desc textAni Hfont'>{lan.section20.desc}</div>
         <div className='imgBox'>
           <div className='fa'>
-            <div className='text'>Sunny</div>
+            <div className='text'>{lan.section20.f1}</div>
           </div>
           <div className='fb'>
-            <div className='text'>Sunset</div>
+            <div className='text'>{lan.section20.f2}</div>
           </div>
           <div className='fc'>
-            <div className='text'>Sunny</div>
+            <div className='text'>{lan.section20.f3}</div>
           </div>
           <div className='fd'>
-            <div className='text'>Orbit</div>
+            <div className='text'>{lan.section20.f4}</div>
           </div>
         </div>
       </section>
       <section className='section sec21'>
         <div className='bg'></div>
         <div className='title textAni Kfont'>
-          Show Your <br /> Colorful Side
+          {lan.section21.titlea} <br /> {lan.section21.titleb}
         </div>
         <div className='img'>
           <div className='img1'></div>
@@ -859,28 +855,30 @@ const FirstProduct = () => {
       <section className='section sec4 sec22' id='sec22ID'>
         <div className='bg'></div>
         <div className='bgT Kfont'>
-          <div>Clear</div> <div>Camera</div> <div>Meets</div>
-          <div>Your Shine</div>
+          <div>{lan.section22.f1}</div> <div>{lan.section22.f2}</div>{" "}
+          <div>{lan.section22.f3}</div>
+          <div>{lan.section22.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>Clear</div> <div>Camera</div> <div>Meets</div>
-          <div>Your Shine</div>
+          <div>{lan.section22.f1}</div> <div>{lan.section22.f2}</div>{" "}
+          <div>{lan.section22.f3}</div>
+          <div>{lan.section22.f4}</div>
         </div>
         <div className='color_title Kfont'>
-          <div>Clear</div> <div>Camera</div> <div>Meets</div>
-          <div>Your Shine</div>
+          <div>{lan.section22.f1}</div> <div>{lan.section22.f2}</div>{" "}
+          <div>{lan.section22.f3}</div>
+          <div>{lan.section22.f4}</div>
         </div>
         <div className='log'></div>
       </section>
       <section className='section sec23'>
         <div className='bg'></div>
-        <div className='title textAni Kfont'>Vivid Wallpapers</div>
+        <div className='title textAni Kfont'>{lan.section23.title}</div>
         <div className='img textAni'></div>
         <div className='desc textAni Hfont'>
-          Treat your eyes to a tapestry of color and beauty. <br /> A series of
-          interconnected wallpapers merge objects and creatures from the real
-          world and the imagination. Your <br className='pc' /> life is
-          multicolored and ever-evolving, and your phone should reflect that.{" "}
+          {lan.section23.desca} <br />
+          {lan.section23.descb}
+          <br className='pc' /> {lan.section23.descc}
         </div>
         <div className='phone'>
           <div className='img1'></div>
@@ -894,19 +892,17 @@ const FirstProduct = () => {
         <div className='params'>
           <div className='left'>
             <div className='title Kfont'>
-              UPS-Ultra <br /> Power Signal
+              {lan.secPar.titlePca} <br /> {lan.secPar.titlePcb}
             </div>
-            <div className='desc Hfont'>
-              Enjoy Optimized Performance with Increased Cellular{" "}
-            </div>
+            <div className='desc Hfont'>{lan.secPar.sub}</div>
           </div>
           <div className='right Hfont'>
             <div className='out'>
               <div className='up'></div>
               <div className='com '>
-                <div className='bot'>15-20%</div>
+                <div className='bot'>{lan.secPar.num}</div>
                 <div className='top'>
-                  Signal Throughput <br />{" "}
+                  {lan.secPar.desca} <br />
                 </div>
               </div>
             </div>
@@ -917,7 +913,7 @@ const FirstProduct = () => {
                   <span ref={countUpRef1} />%
                 </div>
                 <div className='top'>
-                  Signal Stability <br />{" "}
+                  {lan.secPar.descb} <br />{" "}
                 </div>
               </div>
             </div>
@@ -928,7 +924,7 @@ const FirstProduct = () => {
                   <span ref={countUpRef2} />%
                 </div>
                 <div className='top'>
-                  Data Rate under Weak <br /> Connection
+                  {lan.secPar.descc1} <br /> {lan.secPar.descc2}
                 </div>
               </div>
             </div>
@@ -938,21 +934,19 @@ const FirstProduct = () => {
 
       <div className='secPar mob'>
         <div className='tops'>
-          <div className='title'>UPS-Ultra Power Signal</div>
-          <div className='desc'>
-            Enjoy Optimized Performance with Increased Cellular
-          </div>
+          <div className='title'>{lan.secPar.titleMob}</div>
+          <div className='desc'>{lan.secPar.sub}</div>
         </div>
         <div className='bots'>
           <div className='right Hfont'>
             <div className='out'>
               <div className='up'></div>
               <div className='com '>
-                <div className='bot'>15-20%</div>
+                <div className='bot'>{lan.secPar.num}</div>
                 <div className='top'>
                   {" "}
                   <br />
-                  Signal Throughput <br />{" "}
+                  {lan.secPar.desca} <br />{" "}
                 </div>
               </div>
             </div>
@@ -965,7 +959,7 @@ const FirstProduct = () => {
                 <div className='top'>
                   {" "}
                   <br />
-                  Signal Stability <br />{" "}
+                  {lan.secPar.descb} <br />{" "}
                 </div>
               </div>
             </div>
@@ -976,30 +970,28 @@ const FirstProduct = () => {
                   <span ref={countUpRef22} />%
                 </div>
                 <div className='top'>
-                  Data Rate under Weak <br /> Connection
+                  {lan.secPar.descc1} <br /> {lan.secPar.descc2}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <section className='section sec24'>
         <div className='box'>
           <div className='left'></div>
           <div className='right'>
             <div className='title textAni Kfont'>
-              Linkbooming <br className='pc' /> 1.0
+              {lan.section24.titlea} <br className='pc' />
+              {lan.section24.titleb}
             </div>
             <div className='f1 textAni'></div>
-            <div className='sub textAni Hfont'>
-              Dual Network Collaboration Helps Internet Speeds Take Flight
-            </div>
+            <div className='sub textAni Hfont'>{lan.section24.sub}</div>
             <div className='f2 textAni'></div>
             <div className='desc textAni Hfont'>
-              Say goodbye to mobile network lagging. <br className='pc' />
-              Linkbooming 1.0 enables parallel acceleration of Wi-Fi and
-              cellular network connections for a fast and stable network
-              experience.
+              {lan.section24.desca} <br className='pc' />
+              {lan.section24.descb}
             </div>
             <div className='params textAni Hfont'>
               <div className='com'>
@@ -1007,14 +999,14 @@ const FirstProduct = () => {
                 <div className='top'>
                   <span ref={countUpRef3} />%
                 </div>
-                <div className='bot'>Latency 25%</div>
+                <div className='bot'>{lan.section24.texta}</div>
               </div>
               <div className='com'>
                 <div className='up'></div>
                 <div className='top'>
                   <span ref={countUpRef4} />%
                 </div>
-                <div className='bot'>Network Speed 25%</div>
+                <div className='bot'>{lan.section24.textb}</div>
               </div>
             </div>
           </div>
@@ -1024,20 +1016,12 @@ const FirstProduct = () => {
         <div className='bg'></div>
         <div className='box'>
           <div className='title textAni Kfont'>
-            Aurora <br className='pc' /> Engine
+            {lan.section25.titlea} <br className='pc' /> {lan.section25.titleb}
           </div>
           <div className='f1 textAni'></div>
-          <div className='sub textAni Hfont'>
-            Launch Apps in an Instant Battle-ready in Seconds
-          </div>
+          <div className='sub textAni Hfont'>{lan.section25.sub}</div>
           <div className='f2 textAni'></div>
-          <div className='desc textAni Hfont'>
-            All-new Aurora Engine powered by AI algorithms delivers
-            lightning-fast speed to launch top 10 large-scale games in seconds.
-            Foreground launch rate up by 85%, enjoy seamless gameplay with no
-            wait. Common App launch rate up by 95%, gain instant access and
-            maximum efficiency.
-          </div>
+          <div className='desc textAni Hfont'>{lan.section25.desc}</div>
         </div>
         <div className='movie'>
           <canvas ref={ca} width={1600} height={800}></canvas>
@@ -1046,14 +1030,13 @@ const FirstProduct = () => {
       </section>
       <div className='footer25 pc'></div>
       <section className='section sec26'>
-        <div className='title textAni Kfont'>Game Space 2.0</div>
+        <div className='title textAni Kfont'>{lan.section26.title}</div>
         <div className='f1 textAni'></div>
-        <div className='sub Hfont textAni'>Enjoy Gaming Time</div>
+        <div className='sub Hfont textAni'>{lan.section26.sub}</div>
         <div className='f2 textAni'></div>
         <div className='desc Hfont textAni'>
-          Cool interface upgrade. Instantly switch from a variety of modes.{" "}
-          <br /> View performance improvements in a glance with the new
-          performance radar chart.
+          {lan.section26.desca}
+          <br /> {lan.section26.descb}
         </div>
         <div className='img'>
           <Swiper
@@ -1085,33 +1068,33 @@ const FirstProduct = () => {
         <div className='bg'></div>
         <div className='box'>
           <div className='title textAni Kfont'>
-            Find More About <br /> HIOS13
+            {lan.section27.titlea} <br /> {lan.section27.titleb}
           </div>
           <div className='f1 textAni'></div>
           <div className='sub textAni Hfont'>
             <a href='https://www.tecno-mobile.com/hios-detail/' target='blank'>
-              HIOS 13
+              {lan.section27.sub}
             </a>
           </div>
           <div className='f2 textAni'></div>
           <div className='params textAni Hfont'>
             <div>
-              Panther <br /> Engine 2.0
+              {lan.section27.f1a} <br /> {lan.section27.f1b}
             </div>
             <div>
-              Lightning <br /> Multi-Window4.0
+              {lan.section27.f2a} <br /> {lan.section27.f2b}
             </div>
             <div>
-              Smart Refresh <br /> 3.0
+              {lan.section27.f3a} <br /> {lan.section27.f3b}
             </div>
             <div className='bot'>
-              Mobile <br /> Cloner
+              {lan.section27.f4a} <br /> {lan.section27.f4b}
             </div>
             <div className='bot'>
-              Extended <br /> RAM
+              {lan.section27.f5a} <br /> {lan.section27.f5b}
             </div>
             <div className='bot'>
-              Smart <br /> Scanner
+              {lan.section27.f6a} <br /> {lan.section27.f6b}
             </div>
           </div>
         </div>

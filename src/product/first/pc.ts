@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { RefObject } from "react"
+import { MutableRefObject } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -20,7 +21,6 @@ interface AniType {
 }
 
 import { useCountUp } from "react-countup"
-import { MutableRefObject } from "react"
 
 const pxToVw = (num: number) => {
   const res = (num * 1) / 25.6
@@ -35,15 +35,13 @@ const FirstPcTs = (
   countUpRef4: MutableRefObject<null>,
   videoRef: MutableRefObject<null>,
   ca2: MutableRefObject<null>,
-  playRef: RefObject<HTMLVideoElement>,
-  btnRef: RefObject<HTMLDivElement>
+  playRef1: RefObject<HTMLVideoElement>,
+  btnRefPc: RefObject<HTMLDivElement>
 ) => {
   const { responsive } = UseResponse()
   if (responsive?.md !== undefined) {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, TextPlugin)
   }
-
-  const baseUrl = import.meta.env.VITE_URL
 
   const { update: firstUpDate } = useCountUp({
     ref: countUpRef1,
@@ -494,8 +492,8 @@ const FirstPcTs = (
       const tl2 = gsap
         .timeline()
         .from(".sec5 .left", 1, { x: "-50%", opacity: 0 }, "a")
-        .from(".sec5 .right", 1, { x: "50%", opacity: 0 }, "a")
-        .from(".sec5 .phone", 1, { x: "-130%", opacity: 0 }, "a")
+        .from(".sec5 .phone", 1, { x: "50%", opacity: 0 }, "a")
+      // .from(".sec5 .phone", 1, { x: "-130%", opacity: 0 }, "a")
 
       setAni({
         trigger: ".sec5",
@@ -516,7 +514,7 @@ const FirstPcTs = (
 
     for (let i = 0; i < 200; i++) {
       images.push(
-        `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/LH6N/${i
+        `${(window as any).povaCanvas.LH6N}/${i
           .toString()
           .padStart(3, "0")}.webp`
       )
@@ -528,7 +526,6 @@ const FirstPcTs = (
       imgs.push(img)
     })
     const ani = (type: number) => {
-      console.log(type)
       ctxs.drawImage(imgs[type], 0, 0)
     }
 
@@ -588,7 +585,6 @@ const FirstPcTs = (
         end: "=+400%",
 
         onUpdate: ({ progress }) => {
-          console.log(progress)
           if ((progress > 0.4 && progress < 0.6) || progress > 0.9) {
             isPlay = false
             if (progress > 0.4 && progress < 0.6) {
@@ -891,15 +887,12 @@ const FirstPcTs = (
 
   const sec25Ani = () => {
     const ctxs = (ca as any).current.getContext("2d")
+    ctxs.globalCompositeOperation = "copy"
 
     const imgs: HTMLImageElement[] = []
     const images = []
     for (let i = 0; i < 75; i++) {
-      images.push(
-        `${baseUrl}/fileadmin/sitedesign/product/pova-neo3/images/engine/${
-          i + 100
-        }.png`
-      )
+      images.push(`${(window as any).povaCanvas.engine}/${i + 100}.webp`)
     }
 
     images.forEach((src) => {
@@ -967,20 +960,20 @@ const FirstPcTs = (
     return () => ctx.revert() // <- Cleanup!
   }
 
-  const playClick = () => {
-    if (playRef.current) {
-      playRef.current.play()
+  const playPcClick = () => {
+    if (playRef1.current) {
+      playRef1.current.play()
     }
-    if (btnRef.current) {
-      btnRef.current.className = "play false"
+    if (btnRefPc.current) {
+      btnRefPc.current.className = "play false"
     }
   }
 
   const videoClick = () => {
-    playRef?.current?.pause()
+    playRef1?.current?.pause()
 
-    if (btnRef.current) {
-      btnRef.current.className = "play true"
+    if (btnRefPc.current) {
+      btnRefPc.current.className = "play true"
     }
     // setPlayShow(true)
   }
@@ -1073,7 +1066,7 @@ const FirstPcTs = (
     numAdd,
     sec24Ani,
     sec25Ani,
-    playClick,
+    playPcClick,
     videoClick,
     test1,
     test2,

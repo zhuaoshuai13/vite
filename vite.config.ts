@@ -15,6 +15,13 @@ export default defineConfig({
   //       assetFileNames: `assets/[name].[ext]`,
   //     },
   //   },
+  // rollupOptions: {
+  //   output: {
+  //     manualChunks: {
+  //       lan: ["lan.js"],
+  //     },
+  //   },
+  // },
   // },
   // 不要缓存
   server: {
