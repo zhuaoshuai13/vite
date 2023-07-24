@@ -12,8 +12,6 @@ import UseResponse from "../../hooks/useResponse"
 
 import FirstPcTs from "./pc"
 
-import lan from "./lan"
-
 import FirstMobTs from "./mob"
 
 import "./index.scss"
@@ -173,13 +171,29 @@ const FirstProduct = () => {
           <div className='product'></div>
           <div className='slogan'></div>
           <div className='title_wrap'>
-            <div>{lan.section1.f1}</div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section1.f1,
+              }}
+            ></div>
             <div className='line'></div>
-            <div>{lan.section1.f2}</div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section1.f2,
+              }}
+            ></div>
             <div className='line'></div>
-            <div>{lan.section1.f3}</div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section1.f3,
+              }}
+            ></div>
             <div className='line'></div>
-            <div>{lan.section1.f4}</div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section1.f1,
+              }}
+            ></div>
           </div>
           <div className='nameGroup'></div>
         </section>
@@ -187,39 +201,52 @@ const FirstProduct = () => {
           <div className='group'>
             <div className='out' onClick={test1}>
               <div className='box box1'>
-                <div className='text Kfont'>
-                  {lan.section2.f1a} <br />
-                  {lan.section2.f1b}
-                </div>
+                <div
+                  className='text Kfont'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section2.f1,
+                  }}
+                ></div>
               </div>
             </div>
             <div className='out' onClick={test2}>
               <div className='box box2'>
-                <div className='text Kfont'>
-                  {lan.section2.f2a} <br />
-                  {lan.section2.f2b}
-                </div>
+                <div
+                  className='text Kfont'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section2.f2,
+                  }}
+                ></div>
               </div>
             </div>
             <div className='out' onClick={test3}>
               <div className='box box3'>
-                <div className='text Kfont'>
-                  {lan.section2.f3a} <br />
-                  {lan.section2.f3b}
-                </div>
+                <div
+                  className='text Kfont'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section2.f3,
+                  }}
+                ></div>
               </div>
             </div>
             <div className='out' onClick={test4}>
               <div className='box box4'>
-                <div className='text Kfont'>
-                  {lan.section2.f4a} <br />
-                  {lan.section2.f4b}
-                </div>
+                <div
+                  className='text Kfont'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section2.f4,
+                  }}
+                ></div>
               </div>
             </div>
             <div className='out' onClick={test5}>
               <div className='box box5'>
-                <div className='text Kfont'>{lan.section2.f5}</div>
+                <div
+                  className='text Kfont'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section2.f5,
+                  }}
+                ></div>
               </div>
             </div>
           </div>
@@ -233,21 +260,21 @@ const FirstProduct = () => {
             <div className='outer' onClick={videoClick2}></div>
           )}
           <video
-            src={lan.pov3Video.sec3Pc}
+            src={(window as any).lan.pov3Video.sec3Pc}
             // src='src/assets/video/v1.mp4'
             className='lazy pc'
             autoPlay={false}
             webkit-playsinline='true'
             preload='auto'
-            poster={lan.pov3Video.sec3Post}
+            poster={(window as any).lan.pov3Video.sec3Post}
             loop
             ref={playRef1}
           ></video>
           <video
-            src={lan.pov3Video.sec3Mob}
+            src={(window as any).lan.pov3Video.sec3Mob}
             // src='src/assets/video/v1.mp4'
             className='lazy mob'
-            poster={lan.pov3Video.sec3Post}
+            poster={(window as any).lan.pov3Video.sec3Post}
             autoPlay={false}
             webkit-playsinline='true'
             preload='auto'
@@ -276,31 +303,53 @@ const FirstProduct = () => {
       <section className='section sec4 sec4First' id='sec4ID'>
         <div className='bg'></div>
         <div className='bgT Kfont'>
-          <div>{lan.section4.f1}</div> <div>{lan.section4.f2}</div>
-          <div>{lan.section4.f3}</div> <div>{lan.section4.f4}</div>
+          <div>{(window as any).lan.section4.f1}</div>
+          <div>{(window as any).lan.section4.f2}</div>
+          <div>{(window as any).lan.section4.f3}</div>
+          <div>{(window as any).lan.section4.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>{lan.section4.f1}</div> <div>{lan.section4.f2}</div>
-          <div>{lan.section4.f3}</div> <div>{lan.section4.f4}</div>
+          <div>{(window as any).lan.section4.f1}</div>
+          <div>{(window as any).lan.section4.f2}</div>
+          <div>{(window as any).lan.section4.f3}</div>
+          <div>{(window as any).lan.section4.f4}</div>
         </div>
         <div className='color_title Kfont'>
-          <div>{lan.section4.f1}</div> <div>{lan.section4.f2}</div>
-          <div>{lan.section4.f3}</div> <div>{lan.section4.f4}</div>
+          <div>{(window as any).lan.section4.f1}</div>
+          <div>{(window as any).lan.section4.f2}</div>
+          <div>{(window as any).lan.section4.f3}</div>
+          <div>{(window as any).lan.section4.f4}</div>
         </div>
         <div className='roboat'></div>
       </section>
 
       <section className='section sec5'>
-        <div className='title Kfont textAni'>
-          {lan.section5.titlea} <br /> {lan.section5.titleb}
-        </div>
-        <div className='slogan Hfont textAni'> {lan.section5.slogan}</div>
-        <div className='desc Hfont textAni'>{lan.section5.desc}</div>
+        <div
+          className='title Kfont textAni'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section5.title,
+          }}
+        ></div>
+        <div
+          className='slogan Hfont textAni'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section5.slogan,
+          }}
+        ></div>
+        <div
+          className='desc Hfont textAni'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section5.desc,
+          }}
+        ></div>
         <div className='phoneBox Kfont'>
           <div className='left'>
-            <div className='text'>
-              {lan.section5.titlea} <br /> {lan.section5.titleb}
-            </div>
+            <div
+              className='text'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section5.text,
+              }}
+            ></div>
           </div>
           <div className='phone'></div>
           {/* <div className='right'>
@@ -312,21 +361,30 @@ const FirstProduct = () => {
       <section className='section sec6'>
         <div className='phoneBox'>
           <div className='f1 com'>
-            <div className='name Kfont'>
-              {lan.section6.f1a} <br /> {lan.section6.f1b}
-            </div>
+            <div
+              className='name Kfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section6.f1,
+              }}
+            ></div>
             <div className='phone'></div>
           </div>
           <div className='f2 com'>
-            <div className='name Kfont'>
-              {lan.section6.f2a} <br /> {lan.section6.f2b}
-            </div>
+            <div
+              className='name Kfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section6.f2,
+              }}
+            ></div>
             <div className='phone'></div>
           </div>
           <div className='f3 com'>
-            <div className='name Kfont'>
-              {lan.section6.f3a} <br /> {lan.section6.f3b}
-            </div>
+            <div
+              className='name Kfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section6.f3,
+              }}
+            ></div>
             <div className='phone'></div>
           </div>
         </div>
@@ -334,19 +392,22 @@ const FirstProduct = () => {
       <section className='section sec4 sec7' id='sec7ID'>
         <div className='bg'></div>
         <div className='bgT Kfont'>
-          <div>{lan.section7.f1}</div> <div>{lan.section7.f2}</div>
-          <div>{lan.section7.f3} </div>
-          <div>{lan.section7.f4}</div>
+          <div>{(window as any).lan.section7.f1}</div>{" "}
+          <div>{(window as any).lan.section7.f2}</div>
+          <div>{(window as any).lan.section7.f3} </div>
+          <div>{(window as any).lan.section7.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>{lan.section7.f1}</div> <div>{lan.section7.f2}</div>
-          <div>{lan.section7.f3} </div>
-          <div>{lan.section7.f4}</div>
+          <div>{(window as any).lan.section7.f1}</div>{" "}
+          <div>{(window as any).lan.section7.f2}</div>
+          <div>{(window as any).lan.section7.f3} </div>
+          <div>{(window as any).lan.section7.f4}</div>
         </div>
         <div className='color_title Kfont'>
-          <div>{lan.section7.f1}</div> <div>{lan.section7.f2}</div>
-          <div>{lan.section7.f3} </div>
-          <div>{lan.section7.f4}</div>
+          <div>{(window as any).lan.section7.f1}</div>{" "}
+          <div>{(window as any).lan.section7.f2}</div>
+          <div>{(window as any).lan.section7.f3} </div>
+          <div>{(window as any).lan.section7.f4}</div>
         </div>
         <div className='roboat'></div>
       </section>
@@ -356,28 +417,75 @@ const FirstProduct = () => {
         <div className='pc'>
           <div className='box box2'>
             <div className='right'>
-              <div className='title textAni Kfont'>
-                {lan.section8.titlea} <br />
-                {lan.section8.titleb}
-              </div>
+              <div
+                className='title textAni Kfont'
+                dangerouslySetInnerHTML={{
+                  __html: (window as any).lan.section8.titlea,
+                }}
+              ></div>
               <div className='img textAni Hfont'></div>
-              <div className='desc textAni Hfont'>{lan.section8.desca}</div>
+              <div
+                className='desc textAni Hfont'
+                dangerouslySetInnerHTML={{
+                  __html: (window as any).lan.section8.desca,
+                }}
+              ></div>
               <div className='params textAni'>
                 <div className='param Hfont'>
-                  <div className='big'>{lan.section8.pa}</div>
-                  <div className='small'>{lan.section8.pat}</div>
+                  <div
+                    className='big'
+                    dangerouslySetInnerHTML={{
+                      __html: (window as any).lan.section8.pa,
+                    }}
+                  ></div>
+                  <div
+                    className='small'
+                    dangerouslySetInnerHTML={{
+                      __html: (window as any).lan.section8.pat,
+                    }}
+                  ></div>
                 </div>
                 <div className='param'>
-                  <div className='big'>{lan.section8.pb}</div>
-                  <div className='small'>{lan.section8.pbt}</div>
+                  <div
+                    className='big'
+                    dangerouslySetInnerHTML={{
+                      __html: (window as any).lan.section8.pb,
+                    }}
+                  ></div>
+                  <div
+                    className='small'
+                    dangerouslySetInnerHTML={{
+                      __html: (window as any).lan.section8.pbt,
+                    }}
+                  ></div>
                 </div>
                 <div className='param'>
-                  <div className='big'>{lan.section8.pc}</div>
-                  <div className='small'>{lan.section8.pct}</div>
+                  <div
+                    className='big'
+                    dangerouslySetInnerHTML={{
+                      __html: (window as any).lan.section8.pc,
+                    }}
+                  ></div>
+                  <div
+                    className='small'
+                    dangerouslySetInnerHTML={{
+                      __html: (window as any).lan.section8.pct,
+                    }}
+                  ></div>
                 </div>
                 <div className='param'>
-                  <div className='big'>{lan.section8.pd}</div>
-                  <div className='small'>{lan.section8.pdt}</div>
+                  <div
+                    className='big'
+                    dangerouslySetInnerHTML={{
+                      __html: (window as any).lan.section8.pd,
+                    }}
+                  ></div>
+                  <div
+                    className='small'
+                    dangerouslySetInnerHTML={{
+                      __html: (window as any).lan.section8.pdt,
+                    }}
+                  ></div>
                 </div>
               </div>
             </div>
@@ -385,15 +493,26 @@ const FirstProduct = () => {
 
           <div className='box box1'>
             <div className='right'>
-              <div className='title textAni Kfont'>
-                {lan.section8.titlec} <br />
-                {lan.section8.titled} <br />
-                {lan.section8.titlee}
-              </div>
+              <div
+                className='title textAni Kfont'
+                dangerouslySetInnerHTML={{
+                  __html: (window as any).lan.section8.titleb,
+                }}
+              ></div>
               <div className='f1'></div>
-              <div className='sub'>{lan.section8.sub}</div>
+              <div
+                className='sub'
+                dangerouslySetInnerHTML={{
+                  __html: (window as any).lan.section8.sub,
+                }}
+              ></div>
               <div className='f2'></div>
-              <div className='desc textAni Hfont'>{lan.section8.descb}</div>
+              <div
+                className='desc textAni Hfont'
+                dangerouslySetInnerHTML={{
+                  __html: (window as any).lan.section8.descb,
+                }}
+              ></div>
             </div>
           </div>
           <div className='movie'>
@@ -415,28 +534,75 @@ const FirstProduct = () => {
           <SwiperSlide>
             <div className='box box2'>
               <div className='right'>
-                <div className='title textAni Kfont'>
-                  {lan.section8.titlea} <br />
-                  {lan.section8.titleb}
-                </div>
+                <div
+                  className='title textAni Kfont'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section8.titlea,
+                  }}
+                ></div>
                 <div className='img textAni Hfont'></div>
-                <div className='desc textAni Hfont'>{lan.section8.desca}</div>
+                <div
+                  className='desc textAni Hfont'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section8.desca,
+                  }}
+                ></div>
                 <div className='params textAni'>
                   <div className='param Hfont'>
-                    <div className='big'>{lan.section8.pa}</div>
-                    <div className='small'>{lan.section8.pat}</div>
+                    <div
+                      className='big'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section8.pa,
+                      }}
+                    ></div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section8.pat,
+                      }}
+                    ></div>
                   </div>
                   <div className='param'>
-                    <div className='big'>{lan.section8.pb}</div>
-                    <div className='small'>{lan.section8.pbt}</div>
+                    <div
+                      className='big'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section8.pb,
+                      }}
+                    ></div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section8.pbt,
+                      }}
+                    ></div>
                   </div>
                   <div className='param'>
-                    <div className='big'>{lan.section8.pc}</div>
-                    <div className='small'>{lan.section8.pct}</div>
+                    <div
+                      className='big'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section8.pc,
+                      }}
+                    ></div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section8.pct,
+                      }}
+                    ></div>
                   </div>
                   <div className='param'>
-                    <div className='big'>{lan.section8.pd}</div>
-                    <div className='small'>{lan.section8.pdt}</div>
+                    <div
+                      className='big'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section8.pd,
+                      }}
+                    ></div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section8.pdt,
+                      }}
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -446,15 +612,26 @@ const FirstProduct = () => {
           <SwiperSlide>
             <div className='box box1'>
               <div className='right'>
-                <div className='title textAni Kfont'>
-                  {lan.section8.titlec} <br />
-                  {lan.section8.titled} <br />
-                  {lan.section8.titlee}
-                </div>
+                <div
+                  className='title textAni Kfont'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section8.titleb,
+                  }}
+                ></div>
                 <div className='f1 textAni'></div>
-                <div className='sub textAni'> {lan.section8.sub}</div>
+                <div
+                  className='sub textAni'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section8.sub,
+                  }}
+                ></div>
                 <div className='f2 textAni'></div>
-                <div className='desc textAni Hfont'>{lan.section8.descb}</div>
+                <div
+                  className='desc textAni Hfont'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section8.descb,
+                  }}
+                ></div>
               </div>
             </div>
             <div className='movie movie1 textAni'></div>
@@ -466,31 +643,51 @@ const FirstProduct = () => {
       <section className='section sec9'>
         <div className='box'>
           <div className='left'>
-            <div className='title textAni Kfont'>
-              {lan.section9.titlea} <br className='pc' /> {lan.section9.titleb}
-            </div>
+            <div
+              className='title textAni Kfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section9.title,
+              }}
+            ></div>
             <div className='img textAni'></div>
-            <div className='desc textAni'>
-              {lan.section9.desca}
-              <br className='pc' /> {lan.section9.descb}
-              <br className='pc' /> {lan.section9.descc}
-            </div>
+            <div
+              className='desc textAni'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section9.desc,
+              }}
+            ></div>
             <div className='params textAni'>
               <div>
                 <div className='img1'></div>
-                {lan.section9.pa1} <br /> {lan.section9.pa2}
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section9.pa1,
+                  }}
+                ></span>
               </div>
               <div>
                 <div className='img2'></div>
-                {lan.section9.pa1} <br /> {lan.section9.pb2}
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section9.pa2,
+                  }}
+                ></span>
               </div>
               <div>
                 <div className='img3'></div>
-                {lan.section9.pc1} <br /> {lan.section9.pc2}
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section9.pa3,
+                  }}
+                ></span>
               </div>
               <div>
                 <div className='img4'></div>
-                {lan.section9.pd1} <br /> {lan.section9.pd2}
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section9.pa4,
+                  }}
+                ></span>
               </div>
             </div>
           </div>
@@ -504,45 +701,72 @@ const FirstProduct = () => {
       <section className='section sec4 sec10' id='sec10ID'>
         <div className='bg'></div>
         <div className='bgT Kfont'>
-          <div>{lan.section10.f1}</div> <div>{lan.section10.f2}</div>
-          <div>{lan.section10.f3}</div>
-          <div>{lan.section10.f4}</div>
+          <div>{(window as any).lan.section10.f1}</div>{" "}
+          <div>{(window as any).lan.section10.f2}</div>
+          <div>{(window as any).lan.section10.f3}</div>
+          <div>{(window as any).lan.section10.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>{lan.section10.f1}</div> <div>{lan.section10.f2}</div>
-          <div>{lan.section10.f3}</div>
-          <div>{lan.section10.f4}</div>
+          <div>{(window as any).lan.section10.f1}</div>{" "}
+          <div>{(window as any).lan.section10.f2}</div>
+          <div>{(window as any).lan.section10.f3}</div>
+          <div>{(window as any).lan.section10.f4}</div>
         </div>
         <div className='color_title Kfont'>
-          <div>{lan.section10.f1}</div> <div>{lan.section10.f2}</div>
-          <div>{lan.section10.f3}</div>
-          <div>{lan.section10.f4}</div>
+          <div>{(window as any).lan.section10.f1}</div>{" "}
+          <div>{(window as any).lan.section10.f2}</div>
+          <div>{(window as any).lan.section10.f3}</div>
+          <div>{(window as any).lan.section10.f4}</div>
         </div>
         <div className='roboat'></div>
       </section>
+
       <section className='section sec11'>
         <div className='head'></div>
-        <div className='title textAni Kfont'>
-          {lan.section11.titlea} <br /> {lan.section11.titleb}
-        </div>
+        <div
+          className='title textAni Kfont'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section11.title,
+          }}
+        ></div>
         <div className='box'>
           <div className='left textAni'>
             <div className='f1'></div>
-            <div className='sub Hfont'>{lan.section11.suba}</div>
-            <div className='desc Hfont'>{lan.section11.desca}</div>
+            <div
+              className='sub Hfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section11.suba,
+              }}
+            ></div>
+            <div
+              className='desc Hfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section11.desca,
+              }}
+            ></div>
             <div className='f2'></div>
           </div>
           <div className='right textAni'>
             <div className='f1'></div>
-            <div className='sub Hfont'> {lan.section11.subb}</div>
-            <div className='desc Hfont'>{lan.section11.descb}</div>
+            <div
+              className='sub Hfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section11.subb,
+              }}
+            ></div>
+            <div
+              className='desc Hfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section11.descb,
+              }}
+            ></div>
             <div className='f2'></div>
           </div>
         </div>
         <div className='videoBox'>
           <video
-            src={lan.pov3Video.sec11V}
-            poster={lan.pov3Video.sec11VPost}
+            src={(window as any).lan.pov3Video.sec11V}
+            poster={(window as any).lan.pov3Video.sec11VPost}
             // src='src/assets/video/v1.mp4'
             className='lazy'
             autoPlay
@@ -558,32 +782,40 @@ const FirstProduct = () => {
         <div className='bg'></div>
         <div className='box pc'>
           <div className='left'>
-            <div className='title textAni Kfont'>
-              {lan.section12.titlea} <br className='pc' />
-              {lan.section12.titleb} <br className='pc' />
-              {lan.section12.titlec} <br className='pc' />
-              {lan.section12.titled}
-            </div>
+            <div
+              className='title textAni Kfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section12.title,
+              }}
+            ></div>
             <div className='group'>
               <div className='sub textAni Hfont'>
-                <div className='sub1'>{lan.section12.suba}</div>
-                <div className='sub2'>{lan.section12.subb}</div>
+                <div
+                  className='sub1'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section12.suba,
+                  }}
+                ></div>
+                <div
+                  className='sub2'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section12.subb,
+                  }}
+                ></div>
               </div>
               <div className='desc textAni Hfont'>
-                <div className='desc1'>
-                  {lan.section12.desc1a} <br />
-                  {lan.section12.desc1b}
-                  <br />
-                  {lan.section12.desc1c}
-                  <br /> {lan.section12.desc1d}
-                </div>
-                <div className='desc2'>
-                  {lan.section12.desc2a} <br />
-                  {lan.section12.desc2b}
-                  <br />
-                  {lan.section12.desc2c} <br />
-                  {lan.section12.desc2d}
-                </div>
+                <div
+                  className='desc1'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section12.desca,
+                  }}
+                ></div>
+                <div
+                  className='desc2'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section12.descb,
+                  }}
+                ></div>
               </div>
             </div>
           </div>
@@ -592,8 +824,8 @@ const FirstProduct = () => {
             <div className='videoBox'>
               <video
                 className='lazy'
-                src={lan.pov3Video.sec12PcV}
-                poster={lan.pov3Video.sec12PcVPost}
+                src={(window as any).lan.pov3Video.sec12PcV}
+                poster={(window as any).lan.pov3Video.sec12PcVPost}
                 // src='src/assets/video/v2.mp4'
                 autoPlay
                 webkit-playsinline='true'
@@ -604,11 +836,12 @@ const FirstProduct = () => {
             </div>
           </div>
         </div>
-        <div className='title textAni Kfont mob'>
-          {lan.section12.titlea} <br className='pc' /> {lan.section12.titleb}{" "}
-          <br className='pc' />
-          {lan.section12.titlec} <br className='pc' /> {lan.section12.titled}
-        </div>
+        <div
+          className='title textAni Kfont mob'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section12.title,
+          }}
+        ></div>
         <Swiper
           // effect={"fade"}
           pagination={{
@@ -624,18 +857,20 @@ const FirstProduct = () => {
               <div className='left'>
                 <div className='group'>
                   <div className='sub textAni Hfont'>
-                    <div className='sub1'>{lan.section12.suba}</div>
+                    <div
+                      className='sub1'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section12.suba,
+                      }}
+                    ></div>
                   </div>
                   <div className='desc textAni Hfont'>
-                    <div className='desc1'>
-                      {lan.section12.desc1a}
-                      <br />
-                      {lan.section12.desc1b}
-                      <br />
-                      {lan.section12.desc1c}
-                      <br />
-                      {lan.section12.desc1d}
-                    </div>
+                    <div
+                      className='desc1'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section12.desca,
+                      }}
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -644,8 +879,8 @@ const FirstProduct = () => {
                 <div className='videoBox'>
                   <video
                     className='lazy'
-                    src={lan.pov3Video.sec12MobV1}
-                    poster={lan.pov3Video.sec12MobV1Post}
+                    src={(window as any).lan.pov3Video.sec12MobV1}
+                    poster={(window as any).lan.pov3Video.sec12MobV1Post}
                     // src='src/assets/video/v2.mp4'
                     autoPlay
                     webkit-playsinline='true'
@@ -666,16 +901,20 @@ const FirstProduct = () => {
                 </div> */}
                 <div className='group'>
                   <div className='sub textAni Hfont'>
-                    <div className='sub1'>{lan.section12.subb}</div>
+                    <div
+                      className='sub1'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section12.subb,
+                      }}
+                    ></div>
                   </div>
                   <div className='desc textAni Hfont'>
-                    <div className='desc1'>
-                      {lan.section12.desc2a} <br />
-                      {lan.section12.desc2b}
-                      <br />
-                      {lan.section12.desc2c} <br />
-                      {lan.section12.desc2d}
-                    </div>
+                    <div
+                      className='desc1'
+                      dangerouslySetInnerHTML={{
+                        __html: (window as any).lan.section12.descb,
+                      }}
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -684,8 +923,8 @@ const FirstProduct = () => {
                 <div className='videoBox'>
                   <video
                     className='lazy'
-                    src={lan.pov3Video.sec12MobV2}
-                    poster={lan.pov3Video.sec12MobV2Post}
+                    src={(window as any).lan.pov3Video.sec12MobV2}
+                    poster={(window as any).lan.pov3Video.sec12MobV2Post}
                     // src='src/assets/video/v2.mp4'
                     autoPlay
                     webkit-playsinline='true'
@@ -702,24 +941,38 @@ const FirstProduct = () => {
         <div className='footer mob'></div>
       </section>
       <section className='section sec13'>
-        <div className='title textAni Kfont'>
-          {lan.section13.titlea} <br /> {lan.section13.titleb} <br />
-          {lan.section13.titlec}
-        </div>
+        <div
+          className='title textAni Kfont'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section13.title,
+          }}
+        ></div>
         <div className='line textAni'></div>
-        <div className='desc textAni Hfont'>{lan.section13.desc}</div>
+        <div
+          className='desc textAni Hfont'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section13.desc,
+          }}
+        ></div>
         <div className='img textAni'></div>
       </section>
       <section className='section sec14'>
         <div className='bg'></div>
         <div className='box'>
           <div className='left'>
-            <div className='title textAni Kfont'>
-              {lan.section14.titlea} <br /> {lan.section14.titleb} <br />
-              {lan.section14.titlec} <br /> {lan.section14.titled}
-            </div>
+            <div
+              className='title textAni Kfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section14.title,
+              }}
+            ></div>
             <div className='img textAni'></div>
-            <div className='desc textAni Hfont'>{lan.section14.desc}</div>
+            <div
+              className='desc textAni Hfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section14.desc,
+              }}
+            ></div>
             <div className='logBox textAni'>
               <div className='logo'></div>
               <div className='audo'></div>
@@ -727,8 +980,8 @@ const FirstProduct = () => {
           </div>
           <div className='right'>
             <video
-              src={lan.pov3Video.sec14V}
-              poster={lan.pov3Video.sec14VPost}
+              src={(window as any).lan.pov3Video.sec14V}
+              poster={(window as any).lan.pov3Video.sec14VPost}
               // src='src/assets/video/v5.mp4'
               className='lazy'
               autoPlay
@@ -744,12 +997,19 @@ const FirstProduct = () => {
       <section className='section sec15'>
         <div className='box'>
           <div className='left'>
-            <div className='title textAni Kfont'>{lan.section15.title}</div>
+            <div
+              className='title textAni Kfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section15.title,
+              }}
+            ></div>
             <div className='img textAni'></div>
-            <div className='desc textAni Hfont'>
-              {lan.section15.desca} <br />
-              {lan.section15.descb}
-            </div>
+            <div
+              className='desc textAni Hfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section15.desc,
+              }}
+            ></div>
           </div>
           <div className='right'></div>
         </div>
@@ -758,30 +1018,41 @@ const FirstProduct = () => {
       <section className='section sec4 sec16' id='sec16ID'>
         <div className='bg'></div>
         <div className='bgT Kfont'>
-          <div>{lan.section16.f1}</div> <div>{lan.section16.f2}</div>
-          <div>{lan.section16.f3}</div>
-          <div>{lan.section16.f4}</div>
+          <div>{(window as any).lan.section16.f1}</div>{" "}
+          <div>{(window as any).lan.section16.f2}</div>
+          <div>{(window as any).lan.section16.f3}</div>
+          <div>{(window as any).lan.section16.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>{lan.section16.f1}</div> <div>{lan.section16.f2}</div>
-          <div>{lan.section16.f3}</div>
-          <div>{lan.section16.f4}</div>
+          <div>{(window as any).lan.section16.f1}</div>{" "}
+          <div>{(window as any).lan.section16.f2}</div>
+          <div>{(window as any).lan.section16.f3}</div>
+          <div>{(window as any).lan.section16.f4}</div>
         </div>
         <div className='color_title Kfont'>
-          <div>{lan.section16.f1}</div> <div>{lan.section16.f2}</div>
-          <div>{lan.section16.f3}</div>
-          <div>{lan.section16.f4}</div>
+          <div>{(window as any).lan.section16.f1}</div>{" "}
+          <div>{(window as any).lan.section16.f2}</div>
+          <div>{(window as any).lan.section16.f3}</div>
+          <div>{(window as any).lan.section16.f4}</div>
         </div>
         <div className='roboat'></div>
       </section>
       <section className='section sec17'>
         <div className='bg'></div>
         <div className='group'>
-          <div className='title textAni Kfont'>
-            {lan.section17.titlea} <br /> {lan.section17.titleb}
-          </div>
+          <div
+            className='title textAni Kfont'
+            dangerouslySetInnerHTML={{
+              __html: (window as any).lan.section17.title,
+            }}
+          ></div>
           <div className='f1 textAni'></div>
-          <div className='sub textAni Hfont'>{lan.section17.desc}</div>
+          <div
+            className='sub textAni Hfont'
+            dangerouslySetInnerHTML={{
+              __html: (window as any).lan.section17.desc,
+            }}
+          ></div>
           <div className='f2 textAni'></div>
         </div>
         <div className='img'></div>
@@ -794,16 +1065,19 @@ const FirstProduct = () => {
       </section>
       <section className='section sec19'>
         <div className='box'>
-          <div className='title Kfont textAni'>
-            Amplify your brilliance <br /> with Portrait Beauty <br /> feature
-          </div>
+          <div
+            className='title Kfont textAni'
+            dangerouslySetInnerHTML={{
+              __html: (window as any).lan.section19.title,
+            }}
+          ></div>
           <div className='right'>
             <div className='outer'></div>
             <div className='videoBox'>
               <video
                 ref={videoRef}
-                src={lan.pov3Video.sec19V}
-                poster={lan.pov3Video.sec19VPost}
+                src={(window as any).lan.pov3Video.sec19V}
+                poster={(window as any).lan.pov3Video.sec19VPost}
                 // src='src/assets/video/v4.mp4'
                 className='lazy'
                 // autoPlay
@@ -818,33 +1092,71 @@ const FirstProduct = () => {
       </section>
       <div className='footer mob'></div>
       <section className='section sec20'>
-        <div className='title textAni Kfont'>{lan.section20.title}</div>
+        <div
+          className='title textAni Kfont'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section20.title,
+          }}
+        ></div>
         <div className='box textAni'>
           <div className='f1 '></div>
-          <div className='text Hfont'>{lan.section20.sub}</div>
+          <div
+            className='text Hfont'
+            dangerouslySetInnerHTML={{
+              __html: (window as any).lan.section20.sub,
+            }}
+          ></div>
           <div className='f2'></div>
         </div>
-        <div className='desc textAni Hfont'>{lan.section20.desc}</div>
+        <div
+          className='desc textAni Hfont'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section20.desc,
+          }}
+        ></div>
         <div className='imgBox'>
           <div className='fa'>
-            <div className='text'>{lan.section20.f1}</div>
+            <div
+              className='text'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section20.f1,
+              }}
+            ></div>
           </div>
           <div className='fb'>
-            <div className='text'>{lan.section20.f2}</div>
+            <div
+              className='text'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section20.f2,
+              }}
+            ></div>
           </div>
           <div className='fc'>
-            <div className='text'>{lan.section20.f3}</div>
+            <div
+              className='text'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section20.f3,
+              }}
+            ></div>
           </div>
           <div className='fd'>
-            <div className='text'>{lan.section20.f4}</div>
+            <div
+              className='text'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section20.f4,
+              }}
+            ></div>
           </div>
         </div>
       </section>
       <section className='section sec21'>
         <div className='bg'></div>
-        <div className='title textAni Kfont'>
-          {lan.section21.titlea} <br /> {lan.section21.titleb}
-        </div>
+        <div
+          className='title textAni Kfont'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section21.title,
+          }}
+        ></div>
         <div className='img'>
           <div className='img1'></div>
           <div className='img2'></div>
@@ -855,31 +1167,40 @@ const FirstProduct = () => {
       <section className='section sec4 sec22' id='sec22ID'>
         <div className='bg'></div>
         <div className='bgT Kfont'>
-          <div>{lan.section22.f1}</div> <div>{lan.section22.f2}</div>{" "}
-          <div>{lan.section22.f3}</div>
-          <div>{lan.section22.f4}</div>
+          <div>{(window as any).lan.section22.f1}</div>{" "}
+          <div>{(window as any).lan.section22.f2}</div>{" "}
+          <div>{(window as any).lan.section22.f3}</div>
+          <div>{(window as any).lan.section22.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>{lan.section22.f1}</div> <div>{lan.section22.f2}</div>{" "}
-          <div>{lan.section22.f3}</div>
-          <div>{lan.section22.f4}</div>
+          <div>{(window as any).lan.section22.f1}</div>{" "}
+          <div>{(window as any).lan.section22.f2}</div>{" "}
+          <div>{(window as any).lan.section22.f3}</div>
+          <div>{(window as any).lan.section22.f4}</div>
         </div>
         <div className='color_title Kfont'>
-          <div>{lan.section22.f1}</div> <div>{lan.section22.f2}</div>{" "}
-          <div>{lan.section22.f3}</div>
-          <div>{lan.section22.f4}</div>
+          <div>{(window as any).lan.section22.f1}</div>{" "}
+          <div>{(window as any).lan.section22.f2}</div>{" "}
+          <div>{(window as any).lan.section22.f3}</div>
+          <div>{(window as any).lan.section22.f4}</div>
         </div>
         <div className='log'></div>
       </section>
       <section className='section sec23'>
         <div className='bg'></div>
-        <div className='title textAni Kfont'>{lan.section23.title}</div>
+        <div
+          className='title textAni Kfont'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section23.title,
+          }}
+        ></div>
         <div className='img textAni'></div>
-        <div className='desc textAni Hfont'>
-          {lan.section23.desca} <br />
-          {lan.section23.descb}
-          <br className='pc' /> {lan.section23.descc}
-        </div>
+        <div
+          className='desc textAni Hfont'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section23.desc,
+          }}
+        ></div>
         <div className='phone'>
           <div className='img1'></div>
           <div className='img2'></div>
@@ -891,19 +1212,35 @@ const FirstProduct = () => {
       <div className='secPar pc'>
         <div className='params'>
           <div className='left'>
-            <div className='title Kfont'>
-              {lan.secPar.titlePca} <br /> {lan.secPar.titlePcb}
-            </div>
-            <div className='desc Hfont'>{lan.secPar.sub}</div>
+            <div
+              className='title Kfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.secPar.titlePc,
+              }}
+            ></div>
+            <div
+              className='desc Hfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.secPar.titlePc,
+              }}
+            ></div>
           </div>
           <div className='right Hfont'>
             <div className='out'>
               <div className='up'></div>
               <div className='com '>
-                <div className='bot'>{lan.secPar.num}</div>
-                <div className='top'>
-                  {lan.secPar.desca} <br />
-                </div>
+                <div
+                  className='bot'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.secPar.num,
+                  }}
+                ></div>
+                <div
+                  className='top'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.secPar.desca,
+                  }}
+                ></div>
               </div>
             </div>
             <div className='out'>
@@ -912,9 +1249,12 @@ const FirstProduct = () => {
                 <div className='bot'>
                   <span ref={countUpRef1} />%
                 </div>
-                <div className='top'>
-                  {lan.secPar.descb} <br />{" "}
-                </div>
+                <div
+                  className='top'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.secPar.descb,
+                  }}
+                ></div>
               </div>
             </div>
             <div className='out'>
@@ -923,9 +1263,12 @@ const FirstProduct = () => {
                 <div className='bot'>
                   <span ref={countUpRef2} />%
                 </div>
-                <div className='top'>
-                  {lan.secPar.descc1} <br /> {lan.secPar.descc2}
-                </div>
+                <div
+                  className='top'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.secPar.descc,
+                  }}
+                ></div>
               </div>
             </div>
           </div>
@@ -934,20 +1277,36 @@ const FirstProduct = () => {
 
       <div className='secPar mob'>
         <div className='tops'>
-          <div className='title'>{lan.secPar.titleMob}</div>
-          <div className='desc'>{lan.secPar.sub}</div>
+          <div
+            className='title'
+            dangerouslySetInnerHTML={{
+              __html: (window as any).lan.secPar.titleMob,
+            }}
+          ></div>
+          <div
+            className='desc'
+            dangerouslySetInnerHTML={{
+              __html: (window as any).lan.secPar.sub,
+            }}
+          ></div>
         </div>
         <div className='bots'>
           <div className='right Hfont'>
             <div className='out'>
               <div className='up'></div>
               <div className='com '>
-                <div className='bot'>{lan.secPar.num}</div>
-                <div className='top'>
-                  {" "}
-                  <br />
-                  {lan.secPar.desca} <br />{" "}
-                </div>
+                <div
+                  className='bot'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.secPar.num,
+                  }}
+                ></div>
+                <div
+                  className='top'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.secPar.desca,
+                  }}
+                ></div>
               </div>
             </div>
             <div className='out'>
@@ -956,11 +1315,12 @@ const FirstProduct = () => {
                 <div className='bot'>
                   <span ref={countUpRef11} />%
                 </div>
-                <div className='top'>
-                  {" "}
-                  <br />
-                  {lan.secPar.descb} <br />{" "}
-                </div>
+                <div
+                  className='top'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.secPar.descb,
+                  }}
+                ></div>
               </div>
             </div>
             <div className='out'>
@@ -969,9 +1329,12 @@ const FirstProduct = () => {
                 <div className='bot'>
                   <span ref={countUpRef22} />%
                 </div>
-                <div className='top'>
-                  {lan.secPar.descc1} <br /> {lan.secPar.descc2}
-                </div>
+                <div
+                  className='top'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.secPar.descc,
+                  }}
+                ></div>
               </div>
             </div>
           </div>
@@ -982,46 +1345,79 @@ const FirstProduct = () => {
         <div className='box'>
           <div className='left'></div>
           <div className='right'>
-            <div className='title textAni Kfont'>
-              {lan.section24.titlea} <br className='pc' />
-              {lan.section24.titleb}
-            </div>
+            <div
+              className='title textAni Kfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section24.title,
+              }}
+            ></div>
             <div className='f1 textAni'></div>
-            <div className='sub textAni Hfont'>{lan.section24.sub}</div>
+            <div
+              className='sub textAni Hfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section24.sub,
+              }}
+            ></div>
             <div className='f2 textAni'></div>
-            <div className='desc textAni Hfont'>
-              {lan.section24.desca} <br className='pc' />
-              {lan.section24.descb}
-            </div>
+            <div
+              className='desc textAni Hfont'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section24.desc,
+              }}
+            ></div>
             <div className='params textAni Hfont'>
               <div className='com'>
                 <div className='low'></div>
                 <div className='top'>
                   <span ref={countUpRef3} />%
                 </div>
-                <div className='bot'>{lan.section24.texta}</div>
+                <div
+                  className='bot'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section24.texta,
+                  }}
+                ></div>
               </div>
               <div className='com'>
                 <div className='up'></div>
                 <div className='top'>
                   <span ref={countUpRef4} />%
                 </div>
-                <div className='bot'>{lan.section24.textb}</div>
+                <div
+                  className='bot'
+                  dangerouslySetInnerHTML={{
+                    __html: (window as any).lan.section24.textb,
+                  }}
+                ></div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section className='section sec25'>
         <div className='bg'></div>
         <div className='box'>
-          <div className='title textAni Kfont'>
-            {lan.section25.titlea} <br className='pc' /> {lan.section25.titleb}
-          </div>
+          <div
+            className='title textAni Kfont'
+            dangerouslySetInnerHTML={{
+              __html: (window as any).lan.section25.title,
+            }}
+          ></div>
           <div className='f1 textAni'></div>
-          <div className='sub textAni Hfont'>{lan.section25.sub}</div>
+          <div
+            className='sub textAni Hfont'
+            dangerouslySetInnerHTML={{
+              __html: (window as any).lan.section25.sub,
+            }}
+          ></div>
           <div className='f2 textAni'></div>
-          <div className='desc textAni Hfont'>{lan.section25.desc}</div>
+          <div
+            className='desc textAni Hfont'
+            dangerouslySetInnerHTML={{
+              __html: (window as any).lan.section25.desc,
+            }}
+          ></div>
         </div>
         <div className='movie'>
           <canvas ref={ca} width={1600} height={800}></canvas>
@@ -1030,14 +1426,26 @@ const FirstProduct = () => {
       </section>
       <div className='footer25 pc'></div>
       <section className='section sec26'>
-        <div className='title textAni Kfont'>{lan.section26.title}</div>
+        <div
+          className='title textAni Kfont'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section26.title,
+          }}
+        ></div>
         <div className='f1 textAni'></div>
-        <div className='sub Hfont textAni'>{lan.section26.sub}</div>
+        <div
+          className='sub Hfont textAni'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section26.sub,
+          }}
+        ></div>
         <div className='f2 textAni'></div>
-        <div className='desc Hfont textAni'>
-          {lan.section26.desca}
-          <br /> {lan.section26.descb}
-        </div>
+        <div
+          className='desc Hfont textAni'
+          dangerouslySetInnerHTML={{
+            __html: (window as any).lan.section26.desc,
+          }}
+        ></div>
         <div className='img'>
           <Swiper
             effect={"fade"}
@@ -1067,35 +1475,57 @@ const FirstProduct = () => {
       <section className='section sec27'>
         <div className='bg'></div>
         <div className='box'>
-          <div className='title textAni Kfont'>
-            {lan.section27.titlea} <br /> {lan.section27.titleb}
-          </div>
+          <div
+            className='title textAni Kfont'
+            dangerouslySetInnerHTML={{
+              __html: (window as any).lan.section27.title,
+            }}
+          ></div>
           <div className='f1 textAni'></div>
           <div className='sub textAni Hfont'>
-            <a href='https://www.tecno-mobile.com/hios-detail/' target='blank'>
-              {lan.section27.sub}
-            </a>
+            <a
+              href={`${(window as any).lan.section27.href}`}
+              target='blank'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section27.sub,
+              }}
+            ></a>
           </div>
           <div className='f2 textAni'></div>
           <div className='params textAni Hfont'>
-            <div>
-              {lan.section27.f1a} <br /> {lan.section27.f1b}
-            </div>
-            <div>
-              {lan.section27.f2a} <br /> {lan.section27.f2b}
-            </div>
-            <div>
-              {lan.section27.f3a} <br /> {lan.section27.f3b}
-            </div>
-            <div className='bot'>
-              {lan.section27.f4a} <br /> {lan.section27.f4b}
-            </div>
-            <div className='bot'>
-              {lan.section27.f5a} <br /> {lan.section27.f5b}
-            </div>
-            <div className='bot'>
-              {lan.section27.f6a} <br /> {lan.section27.f6b}
-            </div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section27.f1,
+              }}
+            ></div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section27.f2,
+              }}
+            ></div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section27.f3,
+              }}
+            ></div>
+            <div
+              className='bot'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section27.f4,
+              }}
+            ></div>
+            <div
+              className='bot'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section27.f5,
+              }}
+            ></div>
+            <div
+              className='bot'
+              dangerouslySetInnerHTML={{
+                __html: (window as any).lan.section27.f6,
+              }}
+            ></div>
           </div>
         </div>
         <div className='botImg'></div>
