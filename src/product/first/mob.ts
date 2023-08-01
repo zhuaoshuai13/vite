@@ -506,7 +506,7 @@ const FirstMobTs = (
             if (progress > 0.4 && progress < 0.52) {
               ani(100)
             } else {
-              ani(200)
+              ani(199)
             }
           } else {
             isPlay = true

@@ -191,7 +191,7 @@ const FirstProduct = () => {
             <div className='line'></div>
             <div
               dangerouslySetInnerHTML={{
-                __html: (window as any).lan.section1.f1,
+                __html: (window as any).lan.section1.f4,
               }}
             ></div>
           </div>
@@ -260,21 +260,21 @@ const FirstProduct = () => {
             <div className='outer' onClick={videoClick2}></div>
           )}
           <video
-            src={(window as any).lan.pov3Video.sec3Pc}
+            src={(window as any).pov3Video.sec3Pc}
             // src='src/assets/video/v1.mp4'
-            className='lazy pc'
+            className='pc'
             autoPlay={false}
             webkit-playsinline='true'
             preload='auto'
-            poster={(window as any).lan.pov3Video.sec3Post}
+            poster={(window as any).pov3Video.sec3Post}
             loop
             ref={playRef1}
           ></video>
           <video
-            src={(window as any).lan.pov3Video.sec3Mob}
+            src={(window as any).pov3Video.sec3Mob}
             // src='src/assets/video/v1.mp4'
-            className='lazy mob'
-            poster={(window as any).lan.pov3Video.sec3Post}
+            className='mob'
+            poster={(window as any).pov3Video.sec3Post}
             autoPlay={false}
             webkit-playsinline='true'
             preload='auto'
@@ -309,12 +309,6 @@ const FirstProduct = () => {
           <div>{(window as any).lan.section4.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>{(window as any).lan.section4.f1}</div>
-          <div>{(window as any).lan.section4.f2}</div>
-          <div>{(window as any).lan.section4.f3}</div>
-          <div>{(window as any).lan.section4.f4}</div>
-        </div>
-        <div className='color_title Kfont'>
           <div>{(window as any).lan.section4.f1}</div>
           <div>{(window as any).lan.section4.f2}</div>
           <div>{(window as any).lan.section4.f3}</div>
@@ -398,12 +392,6 @@ const FirstProduct = () => {
           <div>{(window as any).lan.section7.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>{(window as any).lan.section7.f1}</div>{" "}
-          <div>{(window as any).lan.section7.f2}</div>
-          <div>{(window as any).lan.section7.f3} </div>
-          <div>{(window as any).lan.section7.f4}</div>
-        </div>
-        <div className='color_title Kfont'>
           <div>{(window as any).lan.section7.f1}</div>{" "}
           <div>{(window as any).lan.section7.f2}</div>
           <div>{(window as any).lan.section7.f3} </div>
@@ -712,12 +700,6 @@ const FirstProduct = () => {
           <div>{(window as any).lan.section10.f3}</div>
           <div>{(window as any).lan.section10.f4}</div>
         </div>
-        <div className='color_title Kfont'>
-          <div>{(window as any).lan.section10.f1}</div>{" "}
-          <div>{(window as any).lan.section10.f2}</div>
-          <div>{(window as any).lan.section10.f3}</div>
-          <div>{(window as any).lan.section10.f4}</div>
-        </div>
         <div className='roboat'></div>
       </section>
 
@@ -765,10 +747,9 @@ const FirstProduct = () => {
         </div>
         <div className='videoBox'>
           <video
-            src={(window as any).lan.pov3Video.sec11V}
-            poster={(window as any).lan.pov3Video.sec11VPost}
+            src={(window as any).pov3Video.sec11V}
+            poster={(window as any).pov3Video.sec11VPost}
             // src='src/assets/video/v1.mp4'
-            className='lazy'
             autoPlay
             webkit-playsinline='true'
             preload='auto'
@@ -823,9 +804,8 @@ const FirstProduct = () => {
             <div className='outer'></div>
             <div className='videoBox'>
               <video
-                className='lazy'
-                src={(window as any).lan.pov3Video.sec12PcV}
-                poster={(window as any).lan.pov3Video.sec12PcVPost}
+                src={(window as any).pov3Video.sec12PcV}
+                poster={(window as any).pov3Video.sec12PcVPost}
                 // src='src/assets/video/v2.mp4'
                 autoPlay
                 webkit-playsinline='true'
@@ -878,9 +858,8 @@ const FirstProduct = () => {
                 <div className='outer'></div>
                 <div className='videoBox'>
                   <video
-                    className='lazy'
-                    src={(window as any).lan.pov3Video.sec12MobV1}
-                    poster={(window as any).lan.pov3Video.sec12MobV1Post}
+                    src={(window as any).pov3Video.sec12MobV1}
+                    poster={(window as any).pov3Video.sec12MobV1Post}
                     // src='src/assets/video/v2.mp4'
                     autoPlay
                     webkit-playsinline='true'
@@ -922,9 +901,8 @@ const FirstProduct = () => {
                 <div className='outer'></div>
                 <div className='videoBox'>
                   <video
-                    className='lazy'
-                    src={(window as any).lan.pov3Video.sec12MobV2}
-                    poster={(window as any).lan.pov3Video.sec12MobV2Post}
+                    src={(window as any).pov3Video.sec12MobV2}
+                    poster={(window as any).pov3Video.sec12MobV2Post}
                     // src='src/assets/video/v2.mp4'
                     autoPlay
                     webkit-playsinline='true'
@@ -975,15 +953,14 @@ const FirstProduct = () => {
             ></div>
             <div className='logBox textAni'>
               <div className='logo'></div>
-              <div className='audo'></div>
+              {/* <div className='audo'></div> */}
             </div>
           </div>
           <div className='right'>
             <video
-              src={(window as any).lan.pov3Video.sec14V}
-              poster={(window as any).lan.pov3Video.sec14VPost}
+              src={(window as any).pov3Video.sec14V}
+              poster={(window as any).pov3Video.sec14VPost}
               // src='src/assets/video/v5.mp4'
-              className='lazy'
               autoPlay
               webkit-playsinline='true'
               preload='auto'
@@ -1024,12 +1001,6 @@ const FirstProduct = () => {
           <div>{(window as any).lan.section16.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>{(window as any).lan.section16.f1}</div>{" "}
-          <div>{(window as any).lan.section16.f2}</div>
-          <div>{(window as any).lan.section16.f3}</div>
-          <div>{(window as any).lan.section16.f4}</div>
-        </div>
-        <div className='color_title Kfont'>
           <div>{(window as any).lan.section16.f1}</div>{" "}
           <div>{(window as any).lan.section16.f2}</div>
           <div>{(window as any).lan.section16.f3}</div>
@@ -1076,10 +1047,9 @@ const FirstProduct = () => {
             <div className='videoBox'>
               <video
                 ref={videoRef}
-                src={(window as any).lan.pov3Video.sec19V}
-                poster={(window as any).lan.pov3Video.sec19VPost}
+                src={(window as any).pov3Video.sec19V}
+                poster={(window as any).pov3Video.sec19VPost}
                 // src='src/assets/video/v4.mp4'
-                className='lazy'
                 // autoPlay
                 webkit-playsinline='true'
                 preload='auto'
@@ -1173,12 +1143,6 @@ const FirstProduct = () => {
           <div>{(window as any).lan.section22.f4}</div>
         </div>
         <div className='lightT Kfont'>
-          <div>{(window as any).lan.section22.f1}</div>{" "}
-          <div>{(window as any).lan.section22.f2}</div>{" "}
-          <div>{(window as any).lan.section22.f3}</div>
-          <div>{(window as any).lan.section22.f4}</div>
-        </div>
-        <div className='color_title Kfont'>
           <div>{(window as any).lan.section22.f1}</div>{" "}
           <div>{(window as any).lan.section22.f2}</div>{" "}
           <div>{(window as any).lan.section22.f3}</div>

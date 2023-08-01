@@ -590,7 +590,7 @@ const FirstPcTs = (
             if (progress > 0.4 && progress < 0.6) {
               ani(100)
             } else {
-              ani(200)
+              ani(199)
             }
           } else {
             isPlay = true
