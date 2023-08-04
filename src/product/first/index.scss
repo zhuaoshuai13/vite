@@ -11,10 +11,17 @@
     font-size: calc(#{$fontSize} * (1 / 25.6) * 1vw);
   }
 
-  @mixin c-bg($url) {
+  @mixin bg($url,$size:true) {
     background-image: url('../../assets/img/#{$url}');
     background-repeat: no-repeat;
-    background-size: contain;
+
+    @if  $size == true {
+      background-size: contain;
+    }
+
+    @if  $size == false {
+      background-size: cover;
+    }
   }
 
   @function px-to-vw($value) {

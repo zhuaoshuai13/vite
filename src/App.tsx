@@ -1,11 +1,12 @@
-import FirstProduct from './product/first/index.tsx';
+// import FirstProduct from "./product/first/index.tsx"
+import Product from "./product/second/index.tsx"
 
 function App() {
   return (
     <>
-      <FirstProduct />
+      <Product />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
