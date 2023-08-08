@@ -7,7 +7,7 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 
-import { EffectFade, Pagination, Autoplay } from "swiper/modules"
+import { EffectFade, Pagination } from "swiper/modules"
 
 import UseResponse from "../../hooks/useResponse"
 import Pc from "./pc"
@@ -18,11 +18,18 @@ const Product = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const global = window as any
   const { responsive } = UseResponse()
+  const sec2VideoRef = useRef<HTMLVideoElement>(null)
 
-  // const [open, setOpen] = useState(false)
   const total = useRef<HTMLDivElement>(null)
   const can1 = useRef<HTMLCanvasElement>(null)
   const [firstSwiper, setFirstSwiper] = useState(null)
+  const [isPlay, setIsPlay] = useState(false)
+  const countUpRef1 = useRef(null)
+  const countUpRef2 = useRef(null)
+  const countUpRef3 = useRef(null)
+  const countUpRef4 = useRef(null)
+  const countUpRef5 = useRef(null)
+  const countUpRef6 = useRef(null)
 
   const next = () => {
     if (firstSwiper) {
@@ -38,11 +45,18 @@ const Product = () => {
     }
   }
 
-  const { open, setOpen, ...restFunc } = Pc(total, can1)
+  const { open, setOpen, ...restFunc } = Pc(
+    total,
+    can1,
+    countUpRef1,
+    countUpRef2,
+    countUpRef3,
+    countUpRef4,
+    countUpRef5
+  )
   // 监听页面宽度
 
   useEffect(() => {
-    console.log(responsive)
     if (responsive?.md == undefined) return
     Object.entries(restFunc).forEach(([key, value]) => {
       if (typeof (restFunc as never)[key] === "function") {
@@ -95,8 +109,40 @@ const Product = () => {
         </div>
       </div>
       <div className='sec2'>
-        <div className='video'>
-          <div className='play'></div>
+        <div
+          className='video'
+          onClick={() => {
+            sec2VideoRef.current?.pause()
+            setIsPlay(false)
+          }}
+        >
+          <video
+            src={
+              responsive?.md
+                ? global.pova5ProConfig.sec2video.hpath
+                : global.pova5ProConfig.sec2video.vpath
+            }
+            poster={
+              responsive?.md
+                ? global.pova5ProConfig.sec2video.vpost
+                : global.pova5ProConfig.sec2video.vpost
+            }
+            className='videos'
+            autoPlay={false}
+            ref={sec2VideoRef}
+            webkit-playsinline='true'
+            preload='auto'
+            muted
+            loop
+          ></video>
+          <div
+            className={`play ${isPlay ? "true" : "false"}`}
+            onClick={(e) => {
+              e.stopPropagation()
+              sec2VideoRef.current?.play()
+              setIsPlay(true)
+            }}
+          ></div>
         </div>
       </div>
       <div className='sec3'>
@@ -141,7 +187,7 @@ const Product = () => {
               }}
             ></div>
           </div>
-          <div className='box'></div>
+          <div className='box f6'></div>
         </div>
       </div>
       <div className='sec4 open'>
@@ -229,7 +275,7 @@ const Product = () => {
         ></div>
       </div>
       <div className='section sec8'>
-        <div className='content'>
+        <div className='content pc'>
           <div className='box1 box'>
             <div className='left'>
               <div
@@ -397,7 +443,191 @@ const Product = () => {
             </div>
           </div>
         </div>
-        <canvas width='1920' height='1080' ref={can1}></canvas>
+        <div className='content mob'>
+          <Swiper
+            // effect={"fade"}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[EffectFade, Pagination]}
+            className='sec8swiper'
+            autoplay={{ delay: 2000 }}
+          >
+            <SwiperSlide>
+              <div className='box1 box'>
+                <div className='left'>
+                  <div
+                    className='title'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pova5ProConfig.sec8.titlea,
+                    }}
+                  ></div>
+                  <div className='subgroup'>
+                    <div className='f1'></div>
+                    <div
+                      className='subtitle weight'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.suba,
+                      }}
+                    ></div>
+                    <div className='f2'></div>
+                  </div>
+                  <div
+                    className='desc'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pova5ProConfig.sec8.desca,
+                    }}
+                  ></div>
+                </div>
+                <div className='right'>
+                  <div className='param'>
+                    <div
+                      className='big bigtext'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p1a,
+                      }}
+                    ></div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p1b,
+                      }}
+                    ></div>
+                  </div>
+                  <div className='param'>
+                    <div
+                      className='big bigtext'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p2a,
+                      }}
+                    ></div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p2b,
+                      }}
+                    ></div>
+                  </div>
+                  <div className='param'>
+                    <div
+                      className='big bigtext'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p3a,
+                      }}
+                    ></div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p3b,
+                      }}
+                    ></div>
+                  </div>
+                  <div className='param'>
+                    <div
+                      className='big bigtext'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p4a,
+                      }}
+                    ></div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p4b,
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='box2 box'>
+                <div className='left'>
+                  <div
+                    className='title'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pova5ProConfig.sec8.titleb,
+                    }}
+                  ></div>
+                  <div className='subgroup'>
+                    <div className='f1'></div>
+                    <div
+                      className='subtitle weight'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.subb,
+                      }}
+                    ></div>
+                    <div className='f2'></div>
+                  </div>
+                  <div
+                    className='desc'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pova5ProConfig.sec8.descb,
+                    }}
+                  ></div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='box3 box'>
+                <div className='left'>
+                  <div
+                    className='title'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pova5ProConfig.sec8.titlec,
+                    }}
+                  ></div>
+                  <div className='subgroup'>
+                    <div className='f1'></div>
+                    <div
+                      className='subtitle weight'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.subc,
+                      }}
+                    ></div>
+                    <div className='f2'></div>
+                  </div>
+                  <div
+                    className='desc'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pova5ProConfig.sec8.descc,
+                    }}
+                  ></div>
+                </div>
+                <div className='right'>
+                  <div className='param'>
+                    <div
+                      className='big bigtext'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p5a,
+                      }}
+                    ></div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p5b,
+                      }}
+                    ></div>
+                  </div>
+                  <div className='param'>
+                    <div
+                      className='big bigtext'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p6a,
+                      }}
+                    ></div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec8.p6b,
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <canvas width='1920' height='1080' className='pc' ref={can1}></canvas>
       </div>
       <div className='section sec9 open'>
         <div className='top'></div>
@@ -435,7 +665,20 @@ const Product = () => {
               }}
             ></div>
           </div>
-          <div className='right'></div>
+          <div className='right'>
+            <div className='out mob'>
+              <video
+                src={global.pova5ProConfig.sec10video.path}
+                poster={global.pova5ProConfig.sec10video.post}
+                className='video'
+                autoPlay
+                webkit-playsinline='true'
+                preload='auto'
+                muted
+                loop
+              ></video>
+            </div>
+          </div>
         </div>
         <div className='outbox'>
           <div className='out'>
@@ -453,7 +696,7 @@ const Product = () => {
         </div>
       </div>
       <div className='section sec11'>
-        <div className='content'>
+        <div className='content pc'>
           <div className='left'>
             <div className='videobox'>
               <video
@@ -492,7 +735,7 @@ const Product = () => {
                 ></div>
               </div>
               <div className='param'>
-                <div className='bigtext big'>67%</div>
+                <div className='bigtext big'>25%</div>
                 <div
                   className='small'
                   dangerouslySetInnerHTML={{
@@ -501,7 +744,7 @@ const Product = () => {
                 ></div>
               </div>
               <div className='param'>
-                <div className='bigtext big'>67%</div>
+                <div className='bigtext big'>39%</div>
                 <div
                   className='small'
                   dangerouslySetInnerHTML={{
@@ -513,7 +756,7 @@ const Product = () => {
           </div>
         </div>
 
-        <div className='content2'>
+        <div className='content2 pc'>
           <div className='left2'></div>
           <div className='right'>
             <div
@@ -530,6 +773,109 @@ const Product = () => {
             ></div>
           </div>
         </div>
+
+        <Swiper
+          pagination={{
+            clickable: true,
+          }}
+          modules={[EffectFade, Pagination]}
+          className='sec11swiper mob'
+          autoplay={{ delay: 2000 }}
+        >
+          <SwiperSlide>
+            <div className='content'>
+              <div className='left'>
+                <div className='videobox'>
+                  <video
+                    src={global.pova5ProConfig.sec11video.path}
+                    poster={global.pova5ProConfig.sec11video.post}
+                    className='video'
+                    autoPlay
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+              <div className='right'>
+                <div
+                  className='title'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pova5ProConfig.sec11.titlea,
+                  }}
+                ></div>
+                <div
+                  className='desc'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pova5ProConfig.sec11.desca,
+                  }}
+                ></div>
+                <div className='params'>
+                  <div className='param'>
+                    <div className='bigtext big'>67%</div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec11.p1,
+                      }}
+                    ></div>
+                  </div>
+                  <div className='param'>
+                    <div className='bigtext big'>25%</div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec11.p2,
+                      }}
+                    ></div>
+                  </div>
+                  <div className='param'>
+                    <div className='bigtext big'>39%</div>
+                    <div
+                      className='small'
+                      dangerouslySetInnerHTML={{
+                        __html: global.pova5ProConfig.sec11.p3,
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='content content2'>
+              <div className='left'>
+                <div className='videobox'>
+                  <video
+                    src={global.pova5ProConfig.sec11video.path}
+                    poster={global.pova5ProConfig.sec11video.post}
+                    className='video'
+                    autoPlay
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+              <div className='right'>
+                <div
+                  className='title'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pova5ProConfig.sec11.titleb,
+                  }}
+                ></div>
+                <div
+                  className='desc'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pova5ProConfig.sec11.descb,
+                  }}
+                ></div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
       <div className='section sec12'>
         <div className='content'>
@@ -573,7 +919,20 @@ const Product = () => {
       </div>
       <div className='section sec13'>
         <div className='content'>
-          <div className='left'></div>
+          <div className='left'>
+            <div className='out mob'>
+              <video
+                src={global.pova5ProConfig.sec13video.path}
+                poster={global.pova5ProConfig.sec13video.post}
+                className='video'
+                autoPlay
+                webkit-playsinline='true'
+                preload='auto'
+                muted
+                loop
+              ></video>
+            </div>
+          </div>
           <div className='right'>
             <div
               className='title'
@@ -722,7 +1081,7 @@ const Product = () => {
         <div className='bigimg'></div>
       </div>
       <div className='section sec18'>
-        <div className='imgbox'>
+        <div className='imgbox pc'>
           <div className='imgb'>
             <div className='f1'>
               <div className='img'></div>
@@ -744,6 +1103,37 @@ const Product = () => {
             </div>
           </div>
         </div>
+        <Swiper
+          pagination={{
+            clickable: true,
+          }}
+          modules={[EffectFade, Pagination]}
+          className='sec11swiper mob'
+          autoplay={{ delay: 2000 }}
+        >
+          <SwiperSlide>
+            <div className='f1'>
+              <div className='img'></div>
+              <div
+                className='title'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec18.titlea,
+                }}
+              ></div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='f2'>
+              <div className='img'></div>
+              <div
+                className='title'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec18.titleb,
+                }}
+              ></div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
       <div className='section sec19'>
         <div
@@ -851,7 +1241,7 @@ const Product = () => {
             __html: global.pova5ProConfig.sec21.title,
           }}
         ></div>
-        <div className='imgBox'>
+        <div className='imgBox pc'>
           <div className='imgs'>
             <div className='img1'></div>
             <div className='img2'></div>
@@ -859,6 +1249,28 @@ const Product = () => {
             <div className='img4'></div>
           </div>
         </div>
+
+        <Swiper
+          pagination={{
+            clickable: true,
+          }}
+          modules={[EffectFade, Pagination]}
+          className='sec21swiper mob'
+          autoplay={{ delay: 2000 }}
+        >
+          <SwiperSlide>
+            <div className='img1 img'></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='img2 img'></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='img3 img'></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='img4 img'></div>
+          </SwiperSlide>
+        </Swiper>
       </div>
       <div className='section sec22 open'>
         <div className='top'></div>
@@ -916,6 +1328,7 @@ const Product = () => {
               slidesPerView={3}
               navigation
               loop
+              spaceBetween={50}
               // @ts-ignore
               onSwiper={setFirstSwiper}
               pagination={{ clickable: true }}
@@ -1212,7 +1625,7 @@ const Product = () => {
               ></div>
             </div>
             <div className='param'>
-              <div className='big bigtext'>25%</div>
+              <div className='big bigtext' ref={countUpRef1}></div>
               <div
                 className='small'
                 dangerouslySetInnerHTML={{
@@ -1221,7 +1634,7 @@ const Product = () => {
               ></div>
             </div>
             <div className='param'>
-              <div className='big bigtext'>30%</div>
+              <div className='big bigtext' ref={countUpRef2}></div>
               <div
                 className='small'
                 dangerouslySetInnerHTML={{
@@ -1230,7 +1643,7 @@ const Product = () => {
               ></div>
             </div>
             <div className='param'>
-              <div className='big bigtext'>50%</div>
+              <div className='big bigtext' ref={countUpRef3}></div>
               <div
                 className='small'
                 dangerouslySetInnerHTML={{
@@ -1270,7 +1683,7 @@ const Product = () => {
             <div className='param'>
               <div className='top up'></div>
               <div className='bot'>
-                <div className='big bigtext'>25%</div>
+                <div className='big bigtext' ref={countUpRef4}></div>
                 <div
                   className='small'
                   dangerouslySetInnerHTML={{
@@ -1282,7 +1695,7 @@ const Product = () => {
             <div className='param'>
               <div className='top down'></div>
               <div className='bot'>
-                <div className='big bigtext'>25%</div>
+                <div className='big bigtext' ref={countUpRef5}></div>
                 <div
                   className='small'
                   dangerouslySetInnerHTML={{
@@ -1395,7 +1808,10 @@ const Product = () => {
               </div>
             </div>
           </div>
-          <div className='right'></div>
+          <div className='right'>
+            <div className='f1'></div>
+            <div className='f2'></div>
+          </div>
         </div>
       </div>
       <div className='section sec28'>
@@ -1482,22 +1898,29 @@ const Product = () => {
             pagination={{
               clickable: true,
             }}
-            modules={[EffectFade, Pagination, Autoplay]}
+            modules={[EffectFade, Pagination]}
             className='mySwiper'
             loop
             autoplay={{ delay: 2000 }}
           >
             <SwiperSlide>
-              <div className='fa imgs'></div>
+              <div className='fa imgs'>
+                <video
+                  src={global.pova5ProConfig.sec30video.path}
+                  poster={global.pova5ProConfig.sec30video.post}
+                  className='video'
+                  autoPlay
+                  webkit-playsinline='true'
+                  preload='auto'
+                  muted
+                ></video>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className='fb imgs'></div>
             </SwiperSlide>
             <SwiperSlide>
               <div className='fc imgs'></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='fd imgs'></div>
             </SwiperSlide>
           </Swiper>
         </div>

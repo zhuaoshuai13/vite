@@ -31,8 +31,7 @@ window.pova5ProConfig = {
   sec8: {
     titlea: "5000mAh Mega Battery",
     suba: "Enjoy A Full-day Gaming Thrill",
-    desca:
-      "Work or entertainment, 5000mAh is  <br />sufficient to support any daily use  <br />throughout an entire day. No need  <br />to worry about running out of <br />power anymore!",
+    desca: `Work or entertainment, 5000mAh is  <br class="pc"/>sufficient to support <br  class="mob"/>any daily use  <br  class="pc"/>throughout an entire day. No need  <br  class="pc"/>to<br  class="mob"/> worry about running out of <br  class="pc"/>power anymore!`,
     p1a: "60H+",
     p1b: "Phone Call",
     p2a: "9H+",
@@ -60,26 +59,26 @@ window.pova5ProConfig = {
   sec10: {
     title: "MTK D6080 5G Processor",
     sub: "Join the 5G League, Take One Step Ahead",
-    desc: "Equipped with MTK D6080 5G high-speed chip. CPU performance up by 7%. Get lightning-fast performance for an extraordinary experience.",
+    desc: `Equipped with MTK D6080 5G high-speed chip.<br class="mob"/> CPU performance up by 7%. Get lightning-fast<br class="mob"/> performance for an extraordinary experience.`,
   },
   sec11: {
-    titlea: "8+8GB Extended RAM",
+    titlea: `8+8GB Extended<br class="mob"/> RAM`,
     desca:
       "Extraordinarily Smooth Experience <br />Say Goodbye to Latency, Slow Loading",
-    p1: "Hot Start-up up<br />by ",
+    p1: `Hot Start-up up<br class="pc"/>by `,
     p2: "Background Cached <br />Apps increased to",
     p3: "Avg App Start-up <br />time improved by ",
-    titleb: "8GB RAM+256GB ROM",
+    titleb: `8GB RAM+256GB <br class="mob" />ROM`,
     descb: "Large Storage. Flagship Experience.",
   },
   sec12: {
-    title: `6.78" FHD Display with 120Hz Refresh Rate`,
+    title: `6.78" FHD Display<br class="mob"/> with 120Hz Refresh<br class="mob"/> Rate`,
     sub: "Never Miss A Frame",
-    desc: "1080*2460 Resolution. Up to 580typ Brightness. Smooth Motion. Sharp View.",
+    desc: `1080*2460 Resolution. Up to 580typ Brightness.y<br class="mob"/> Smooth Motion. Sharp View.`,
   },
   sec13: {
     title: "MTK D6080 5G Processor",
-    sub: "Join the 5G League, Take One Step Ahead",
+    sub: "Conquer the Heat, Win the Battle!",
     desc: "Equipped with MTK D6080 5G high-speed chip. CPU performance up by 7%. Get lightning-fast performance for an extraordinary experience.",
   },
   sec14: {
@@ -98,7 +97,7 @@ window.pova5ProConfig = {
   sec17: {
     title: "50MP AI Camera",
     sub: "Capture Your Coolest Moments",
-    desc: "Cool moments don't wait. Capture them with 50MP AI camera! See <br />ultra-clear images that bring your coolest moments to life",
+    desc: `Cool moments don't wait. Capture them with 50MP AI camera! See <br class="pc"/>ultra-clear images that bring your coolest moments to life`,
   },
   sec18: {
     titlea: "Amplify your brilliance with Portrait Beauty feature",
@@ -107,7 +106,7 @@ window.pova5ProConfig = {
   sec19: {
     title: "Sky Shop",
     sub: "Finger-cast Magic Spells",
-    desc: "Choose from over 12 sky-themed filters to create your one-of-a-kind <br />photos, magically with just one tap!",
+    desc: `Choose from over 12 sky-themed filters to create your <br class="mob"/>one-of-a-kind <br class="pc"/>photos, magically with just one tap!`,
     p1: "Sunny",
     p2: "Sunset",
     p3: "Sunny",
@@ -116,7 +115,7 @@ window.pova5ProConfig = {
   sec20: {
     title: "Front and Back, <br />On At Once.",
     sub: "Vlog Your Life from Both Sides!",
-    desc: "No need to shoot twice! Capture everything effortlessly with the front+back dual-camera setup. Create fun and interactive on-the-go videos that reflect your creativity in travel, <br />work, and play.",
+    desc: `No need to shoot twice! Capture everything<br class="mob"/> effortlessly with the front+back dual-camera<br class="mob"/> setup. Create fun and interactive on-the-go<br class="mob"/> videos that reflect your creativity in travel, <br />work, and play.`,
   },
   sec21: {
     title: "Show Your Colorful Side",
@@ -128,7 +127,7 @@ window.pova5ProConfig = {
   sec23: {
     title: "Colorful LED Ambient Light",
     sub: "Light up Your Vitality",
-    desc: "Explore a range of dynamic visual effects with POVA's cool breathing LED lights <br />on the back. Power-on, message notification, charging, gaming, music, face-down, <br />or low battery, every mode has its unique lighting pattern.",
+    desc: `Explore a range of dynamic visual effects with POVA's cool breathing LED lights <br class="pc"/>on the back. Power-on, message notification, charging, gaming, music, face-down, <br class="pc"/>or low battery, every mode has its unique lighting pattern.`,
     p1: "Incoming Calls",
     p2: "Charging",
     p3: "Startup",
@@ -136,7 +135,7 @@ window.pova5ProConfig = {
     p5: "Message",
   },
   sec24: {
-    titlea: "Turbo Charged Engine",
+    titlea: `Turbo Charged <br class="mob"/>Engine`,
     titleb: "Smooth, Extended Endurance",
     titlec: "UPS-Ultra Power Signal",
     desc: "Enjoy optimized performance with <br />increased cellular",
@@ -155,7 +154,7 @@ window.pova5ProConfig = {
   sec26: {
     title: "Smart 5G 2.0",
     sub: "Intelligent scheduling -- a ticket to the future",
-    desc: "Smart5G 2.0 recognizes usage scenarios and analyzes the current network <br />environment to intelligently switch between 4G and 5G. This reduces power <br />consumption and extends battery life.",
+    desc: `Smart5G 2.0 recognizes usage scenarios and analyzes <br class="mob"/> the current network <br class="pc"/>environment to intelligently switch <br class="mob"/> between 4G and 5G. This reduces power <br class="pc"/>consumption <br class="mob"/> and extends battery life.`,
   },
   sec27: {
     titlea: "Guardian of Safe Charging",
@@ -176,12 +175,12 @@ window.pova5ProConfig = {
   sec29: {
     title: "Charging Port Monitoring",
     sub: "Unable to Charge? Beware of Liquid or Foreign Objects!",
-    desc: "Pop-ups keep you alerted for any liquid or foreign objects detected in <br />the charging port, preventing potential hazards.",
+    desc: `Pop-ups keep you alerted for any liquid or foreign<br class="mob"/> objects detected in <br class="pc"/>the charging port, preventing<br class="mob"/> potential hazards.`,
   },
   sec30: {
     title: "Game Space 2.0",
     sub: "Enjoy Gaming Time",
-    desc: "Cool interface upgrade, a variety of modes extremely fast switching. <br />New performance radar chart, performance improvement is clear.",
+    desc: `Cool interface upgrade, a variety of modes extremely fast switching. <br class="pc"/>New performance radar chart, performance improvement is clear.`,
   },
   sec31: {
     title: "Panther Engine 3.0",
@@ -192,14 +191,22 @@ window.pova5ProConfig = {
     title: "Find More About HIOS13",
     sub: "link",
     url: "",
-    p1: "Smart Refresh<br /> 3.0",
-    p2: `Aurora Engine <br /> ${"\u00A0"}`,
+    p1: `Smart <br class="mob"/>Refresh<br class="pc"/> 3.0`,
+    p2: `Aurora <br class="mob"/> Engine <br /> ${"\u00A0"}`,
     p3: `Extended RAM <br /> ${"\u00A0"}`,
     p4: `Ella <br /> ${"\u00A0"}`,
     p5: "High Resolution <br />Audio",
     p6: `Mobile Cloner <br /> ${"\u00A0"}`,
     p7: "Exclusive AI Noise <br />Cancelation",
-    p8: `My Health <br /> ${"\u00A0"}`,
+    p8: `My <br class="mob"/> Health <br /> ${"\u00A0"}`,
+  },
+  sec2video: {
+    // 竖版
+    vpath: "http://127.0.0.1:5173/src/assets/video/sec2V.mp4",
+    vpost: "",
+    // 横版
+    hpath: "http://127.0.0.1:5173/src/assets/video/sec2H.mp4",
+    hpost: "",
   },
   sec10video: {
     path: "http://127.0.0.1:5173/src/assets/video/sec10.mp4",
@@ -236,6 +243,10 @@ window.pova5ProConfig = {
     message: "http://127.0.0.1:5173/src/assets/video/message.mp4",
     // 充电
     charge: "http://127.0.0.1:5173/src/assets/video/charge.mp4",
+  },
+  sec30video: {
+    path: "http://127.0.0.1:5173/src/assets/video/sec30.mp4",
+    post: "",
   },
   sec8frames: {
     path: "http://127.0.0.1:5173/src/assets/ani/ani1",
