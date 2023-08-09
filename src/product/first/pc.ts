@@ -6,6 +6,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { TextPlugin } from "gsap-trial/TextPlugin"
 import { ScrollToPlugin } from "gsap-trial/ScrollToPlugin"
+import { useCountUp } from "react-countup"
 
 import UseResponse from "../../hooks/useResponse"
 
@@ -19,8 +20,6 @@ interface AniType {
   anticipatePin?: number
   toggleActions?: boolean
 }
-
-import { useCountUp } from "react-countup"
 
 const pxToVw = (num: number) => {
   const res = (num * 1) / 25.6

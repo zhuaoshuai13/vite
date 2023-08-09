@@ -1,4 +1,5 @@
 import { MutableRefObject, RefObject, useState } from "react"
+
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap-trial/ScrollToPlugin"
@@ -334,7 +335,6 @@ const Pc = (
           "c"
         )
         .from(".sec8 .box2 .desc", 1, { opacity: 0, y: 100, delay: 0.3 }, "c")
-        .from(".sec8 .box2 .right", 1, { opacity: 0, y: 100, delay: 0.45 }, "c")
         .to(".sec8 .box2", 1, { opacity: 0 }, "d")
         .from(".sec8 .box3 .title", 1, { opacity: 0, y: 100 }, "e")
         .from(
@@ -433,6 +433,7 @@ const Pc = (
           .from(".sec10 .title", 1, { opacity: 0, y: 100 }, "a")
           .from(".sec10 .subgroup", 1, { opacity: 0, y: 100, delay: 0.15 }, "a")
           .from(".sec10 .desc", 1, { opacity: 0, y: 100, delay: 0.3 }, "a")
+          .from(".sec10 .params", 1, { opacity: 0, y: 100, delay: 0.45 }, "a")
           .from(".sec10 .outbox", 1, { width: "100vw" }, "a")
         ScrollTrigger.create({
           trigger: ".sec10",
@@ -453,7 +454,8 @@ const Pc = (
             "a"
           )
           .from(".sec10  .desc", 1, { opacity: 0, y: 100, delay: 0.3 }, "a")
-          .from(".sec10  .out", 1, { opacity: 0, y: 100, delay: 0.45 }, "a")
+          .from(".sec10 .params", 1, { opacity: 0, y: 100, delay: 0.45 }, "a")
+          .from(".sec10  .out", 1, { opacity: 0, y: 100, delay: 0.6 }, "a")
 
         ScrollTrigger.create({
           trigger: ".sec10",
@@ -544,6 +546,7 @@ const Pc = (
         .from(".sec12 .title", 1, { opacity: 0, y: 100 }, "a")
         .from(".sec12 .subgroup", 1, { opacity: 0, y: 100, delay: 0.15 }, "a")
         .from(".sec12 .desc", 1, { opacity: 0, y: 100, delay: 0.3 }, "a")
+        .from(".sec12 .params", 1, { opacity: 0, y: 100, delay: 0.45 }, "a")
         .from(".sec12 .right", 1, { opacity: 0, x: "10%" }, "a")
       ScrollTrigger.create({
         trigger: ".sec12",
@@ -676,7 +679,7 @@ const Pc = (
         const tl = gsap
           .timeline()
           .from(".sec17 .bigimg", 1, { y: "10%", ease: "none" }, "a")
-          .to(".sec17 .bigimg", 1, { opacity: 0, ease: "none" }, "b")
+          .to(".sec17 .bimg", 1, { opacity: 0, ease: "none" }, "b")
 
         ScrollTrigger.create({
           trigger: ".sec17",
@@ -707,7 +710,7 @@ const Pc = (
           .from(".sec17 .title", 1, { opacity: 0, y: 100 }, "a")
           .from(".sec17 .subgroup", 1, { opacity: 0, y: 100, delay: 0.15 }, "a")
           .from(".sec17 .desc", 1, { opacity: 0, y: 100, delay: 0.3 }, "a")
-          .from(".sec17 .img", 1, { opacity: 0, y: 100, delay: 0.45 }, "a")
+          .from(".sec17 .simg", 1, { opacity: 0, y: 100, delay: 0.45 }, "a")
         ScrollTrigger.create({
           trigger: ".sec17",
           start: `top 50%`,
@@ -1069,23 +1072,53 @@ const Pc = (
   }
 
   const test1 = () => {
-    gsap.to(window, { duration: 2, scrollTo: { y: "#sec4ID", offsetY: -200 } })
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: {
+        y: "#sec4ID",
+        offsetY: Number(`${responsive?.md ? -200 : 0}`),
+      },
+    })
   }
 
   const test2 = () => {
-    gsap.to(window, { duration: 2, scrollTo: "#sec7ID" })
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: {
+        y: "#sec7ID",
+        offsetY: Number(`${responsive?.md ? -200 : 0}`),
+      },
+    })
   }
 
   const test3 = () => {
-    gsap.to(window, { duration: 2, scrollTo: "#sec9ID" })
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: {
+        y: "#sec9ID",
+        offsetY: Number(`${responsive?.md ? -200 : 0}`),
+      },
+    })
   }
 
   const test4 = () => {
-    gsap.to(window, { duration: 2, scrollTo: "#sec16ID" })
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: {
+        y: "#sec16ID",
+        offsetY: Number(`${responsive?.md ? -200 : 0}`),
+      },
+    })
   }
 
   const test5 = () => {
-    gsap.to(window, { duration: 2, scrollTo: "#sec22ID" })
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: {
+        y: "#sec22ID",
+        offsetY: Number(`${responsive?.md ? -200 : 0}`),
+      },
+    })
   }
 
   return {

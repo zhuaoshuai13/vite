@@ -54,6 +54,14 @@ body {
     transform: translate(-50%, -50%);
   }
 
+  .sec5 + .pin-spacer {
+    background-color: #fff;
+  }
+
+  .pin-spacer {
+    background-color: #000;
+  }
+
   .mob {
     display: none;
   }
@@ -708,6 +716,10 @@ body {
       .subgroup {
         width: px-to-vw(273);
       }
+
+      .right {
+        text-align: center;
+      }
     }
 
     .box2 {
@@ -745,7 +757,7 @@ body {
     }
 
     .left {
-      width: px-to-vw(546);
+      width: px-to-vw(650);
     }
 
     .title {
@@ -808,6 +820,49 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+    }
+
+    .params {
+      display: flex;
+      gap: px-to-vw(64);
+      margin-top: px-to-vw(83);
+
+      .lf {
+        width: px-to-vw(41);
+        height: px-to-vw(41);
+      }
+
+      .fa {
+
+        @include bg('sec10/fa.png');
+      }
+
+      .fb {
+
+        @include bg('sec10/fb.png');
+      }
+
+      .fc {
+
+        @include bg('sec10/fc.png');
+      }
+
+      .param {
+        display: flex;
+        gap: px-to-vw(16);
+      }
+
+      .bigtext {
+        font-size: px-to-vw(24);
+        font-family: 'Korataki';
+        text-transform: unset;
+      }
+
+      .small {
+        color: #fff;
+        font-size: px-to-vw(16);
+        font-family: "HurmeGeometricSans";
       }
     }
   }
@@ -947,6 +1002,24 @@ body {
     .video {
       width: 100%;
       height: 100%;
+    }
+
+    .params {
+      display: flex;
+      gap: px-to-vw(70);
+      margin-top: px-to-vw(83);
+    }
+
+    .big {
+      font-size: px-to-vw(28);
+      font-family: "Korataki";
+      text-transform: unset;
+    }
+
+    .small {
+      color: #fff;
+      font-size: px-to-vw(17);
+      font-family: "HurmeGeometricSans";
     }
   }
 
@@ -1119,6 +1192,26 @@ body {
     .desc {
       max-width: 100%;
     }
+
+    .params {
+      display: flex;
+      gap: px-to-vw(37);
+      margin-top: px-to-vw(70);
+    }
+
+    .f1a {
+      width: px-to-vw(203);
+      height: px-to-vw(79);
+
+      @include bg('sec15/f1.png');
+    }
+
+    .f2a {
+      width: px-to-vw(78);
+      height: px-to-vw(79);
+
+      @include bg('sec15/f2.png');
+    }
   }
 
   .sec16 {
@@ -1142,16 +1235,6 @@ body {
       text-align: center;
     }
 
-    .img {
-      position: relative;
-      z-index: 2;
-      width: px-to-vw(457);
-      height: px-to-vw(457);
-      margin: px-to-vw(75) auto 0;
-
-      @include bg('sec17/f1.png');
-    }
-
     .bigimg {
       position: absolute;
       top: 41.6%;
@@ -1162,7 +1245,30 @@ body {
       margin: px-to-vw(75) auto 0;
       margin: auto;
 
-      @include bg('sec17/f2.png');
+      .inner {
+        position: relative;
+        width: 56.229vw;
+        height: 202.229vw;
+
+        .bimg {
+          width: 56.229vw;
+          height: 202.229vw;
+
+          @include bg('sec17/f2.png');
+        }
+
+        .img {
+          position: absolute;
+          top: .8vw;
+          left: 1.2vw;
+          z-index: 2;
+          width: 24vw;
+          height: 24vw;
+          margin-top: 0;
+
+          @include bg('sec17/f1.png');
+        }
+      }
     }
   }
 
@@ -2484,7 +2590,7 @@ body {
       .left {
         box-sizing: border-box;
         width: 100%;
-        padding: 0 10%;
+        padding: 0 6%;
       }
 
       .title {
@@ -2516,6 +2622,28 @@ body {
           &:before {
             display: none;
           }
+        }
+      }
+
+      .params {
+        justify-content: space-between;
+        margin-top: pxm-to-vw(80);
+
+        .param {
+          gap: pxm-to-vw(27);
+        }
+
+        .lf {
+          width: pxm-to-vw(70);
+          height: pxm-to-vw(70);
+        }
+
+        .big {
+          font-size: pxm-to-vw(38);
+        }
+
+        .small {
+          font-size: pxm-to-vw(28);
         }
       }
     }
@@ -2608,7 +2736,9 @@ body {
     }
 
     .sec12 {
+      position: relative;
       padding-top: pxm-to-vw(300);
+      padding-bottom: 0;
 
       .content {
         flex-direction: column;
@@ -2617,7 +2747,6 @@ body {
       }
 
       .left {
-        position: relative;
         z-index: 2;
         width: 100%;
         padding: 0 10%;
@@ -2640,6 +2769,24 @@ body {
         width: 100%;
         height: pxm-to-vw(1080);
         margin-top: pxm-to-vw(-100);
+      }
+
+      .params {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        gap: pxm-to-vw(80);
+        width: fit-content;
+        margin: auto;
+      }
+
+      .big {
+        font-size: pxm-to-vw(35);
+      }
+
+      .small {
+        font-size: pxm-to-vw(21);
       }
     }
 
@@ -2739,6 +2886,7 @@ body {
     }
 
     .sec15 {
+      position: relative;
       padding-top: pxm-to-vw(300);
 
       .content {
@@ -2775,6 +2923,25 @@ body {
       .desc {
         text-align: center;
       }
+
+      .params {
+        position: absolute;
+        right: pxm-to-vw(67);
+        bottom: pxm-to-vw(100);
+        display: flex;
+        gap: pxm-to-vw(37);
+        margin-top: 0;
+      }
+
+      .f1a {
+        width: pxm-to-vw(203);
+        height: pxm-to-vw(79);
+      }
+
+      .f2a {
+        width: pxm-to-vw(78);
+        height: pxm-to-vw(79);
+      }
     }
 
     .sec17 {
@@ -2793,10 +2960,12 @@ body {
         display: none;
       }
 
-      .img {
+      .simg {
         width: pxm-to-vw(524);
         height: pxm-to-vw(524);
-        margin-top: pxm-to-vw(200);
+        margin: pxm-to-vw(200) auto 0;
+
+        @include bg('sec17/f1.png');
       }
     }
 
@@ -2840,7 +3009,7 @@ body {
 
     .sec19 {
       box-sizing: border-box !important;
-      min-height: 100vh;
+      min-height: unset;
       padding-top: pxm-to-vw(300);
 
       .subgroup {
@@ -2869,6 +3038,8 @@ body {
     }
 
     .sec20 {
+      padding-top: pxm-to-vw(300);
+
       .content {
         flex-direction: column;
         padding-right: 0;
@@ -2914,6 +3085,7 @@ body {
     .sec21 {
       min-height: unset;
       padding-top: pxm-to-vw(300);
+      padding-bottom: pxm-to-vw(240);
 
       .sec21swiper {
         width: pxm-to-vw(840);
@@ -2935,6 +3107,8 @@ body {
     }
 
     .sec22 {
+      margin-top: 0;
+
       .b {
         font-size: pxm-to-vw(42);
       }
@@ -3306,6 +3480,7 @@ body {
 
         .text {
           margin-top: pxm-to-vw(35);
+          font-size: pxm-to-vw(24);
           white-space: nowrap;
         }
 
