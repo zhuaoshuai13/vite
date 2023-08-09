@@ -188,7 +188,7 @@ window.pova5ProConfig = {
     desc: "One-click temperature control with smart temperature <br />sensing: stabilizes gaming frame rate, improves gaming <br />fluency, extends gaming usage, and saves power <br />consumption!",
   },
   sec32: {
-    title: "Find More About HIOS13",
+    title: "FIND MORE ABOUT HIOS13",
     sub: "link",
     url: "",
     p1: `Smart <br class="mob"/>Refresh<br class="pc"/> 3.0`,
@@ -203,10 +203,10 @@ window.pova5ProConfig = {
   sec2video: {
     // 竖版
     vpath: "http://127.0.0.1:5173/src/assets/video/sec2V.mp4",
-    vpost: "",
+    vpost: "http://127.0.0.1:5173/src/assets/post/sec2V.png",
     // 横版
     hpath: "http://127.0.0.1:5173/src/assets/video/sec2H.mp4",
-    hpost: "",
+    hpost: "http://127.0.0.1:5173/src/assets/post/sec2H.png",
   },
   sec10video: {
     path: "http://127.0.0.1:5173/src/assets/video/sec10.mp4",
@@ -249,6 +249,6 @@ window.pova5ProConfig = {
     post: "",
   },
   sec8frames: {
-    path: "http://127.0.0.1:5173/src/assets/ani/ani1",
+    path: "http://127.0.0.1:5173/src/assets/frame/ani1",
   },
 }

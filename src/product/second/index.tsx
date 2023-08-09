@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useState, useEffect, useRef } from "react"
-import { Controller } from "swiper/modules"
+import { Controller, Scrollbar } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 import "swiper/css"
@@ -19,22 +19,60 @@ const Product = () => {
   const global = window as any
   const { responsive } = UseResponse()
   const sec2VideoRef = useRef<HTMLVideoElement>(null)
+  const v1 = useRef<HTMLVideoElement>(null)
+  const v2 = useRef<HTMLVideoElement>(null)
+  const v3 = useRef<HTMLVideoElement>(null)
+  const v4 = useRef<HTMLVideoElement>(null)
+  const v5 = useRef<HTMLVideoElement>(null)
+  const v6 = useRef<HTMLVideoElement>(null)
+  const v7 = useRef<HTMLVideoElement>(null)
+  const v8 = useRef<HTMLVideoElement>(null)
+  const v9 = useRef<HTMLVideoElement>(null)
+  const v10 = useRef<HTMLVideoElement>(null)
 
   const total = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLDivElement>(null)
   const can1 = useRef<HTMLCanvasElement>(null)
   const [firstSwiper, setFirstSwiper] = useState(null)
+  const [vPlay, setVPlay] = useState(2)
+
   const [isPlay, setIsPlay] = useState(false)
   const countUpRef1 = useRef(null)
   const countUpRef2 = useRef(null)
   const countUpRef3 = useRef(null)
   const countUpRef4 = useRef(null)
   const countUpRef5 = useRef(null)
-  const countUpRef6 = useRef(null)
+
+  const scrollPlay = (num: number) => {
+    const play = num + 2
+    const pause = vPlay
+
+    eval(`v${pause}`).current?.pause()
+    eval(`v${pause}`).current.currentTime = 0
+    eval(`v${play}`).current?.play()
+
+    setVPlay(play)
+  }
 
   const next = () => {
     if (firstSwiper) {
       // @ts-ignore
       firstSwiper.slideNext()
+
+      let temp = vPlay
+
+      if (temp == 10) {
+        eval(`v${temp}`).current?.pause()
+        eval(`v${temp}`).current.currentTime = 0
+        v1.current?.play()
+        setVPlay(1)
+        return
+      }
+      eval(`v${temp}`).current?.pause()
+      eval(`v${temp}`).current.currentTime = 0
+      eval(`v${temp + 1}`).current?.play()
+      temp++
+      setVPlay(temp)
     }
   }
 
@@ -42,10 +80,24 @@ const Product = () => {
     if (firstSwiper) {
       // @ts-ignore
       firstSwiper.slidePrev()
+
+      let temp = vPlay
+      if (temp == 1) {
+        eval(`v${temp}`).current?.pause()
+        eval(`v${temp}`).current.currentTime = 0
+        v10.current?.play()
+        setVPlay(10)
+        return
+      }
+      eval(`v${temp}`).current?.pause()
+      eval(`v${temp}`).current.currentTime = 0
+      eval(`v${temp - 1}`).current?.play()
+      temp--
+      setVPlay(temp)
     }
   }
 
-  const { open, setOpen, ...restFunc } = Pc(
+  const { open, setOpen, test1, test2, test3, test4, test5, ...restFunc } = Pc(
     total,
     can1,
     countUpRef1,
@@ -124,7 +176,7 @@ const Product = () => {
             }
             poster={
               responsive?.md
-                ? global.pova5ProConfig.sec2video.vpost
+                ? global.pova5ProConfig.sec2video.hpost
                 : global.pova5ProConfig.sec2video.vpost
             }
             className='videos'
@@ -147,50 +199,60 @@ const Product = () => {
       </div>
       <div className='sec3'>
         <div className='content'>
-          <div className='box aniBox f1'>
-            <div
-              className='text'
-              dangerouslySetInnerHTML={{
-                __html: global.pova5ProConfig.sec3.p1,
-              }}
-            ></div>
+          <div className='out'>
+            <div className='box aniBox f1' onClick={test1}>
+              <div
+                className='text'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec3.p1,
+                }}
+              ></div>
+            </div>
           </div>
-          <div className='box aniBox f2'>
-            <div
-              className='text'
-              dangerouslySetInnerHTML={{
-                __html: global.pova5ProConfig.sec3.p2,
-              }}
-            ></div>
+          <div className='out'>
+            <div className='box aniBox f2' onClick={test2}>
+              <div
+                className='text'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec3.p2,
+                }}
+              ></div>
+            </div>
           </div>
-          <div className='box aniBox f3'>
-            <div
-              className='text'
-              dangerouslySetInnerHTML={{
-                __html: global.pova5ProConfig.sec3.p3,
-              }}
-            ></div>
+          <div className='out'>
+            <div className='box aniBox f3' onClick={test3}>
+              <div
+                className='text'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec3.p3,
+                }}
+              ></div>
+            </div>
           </div>
-          <div className='box aniBox f4'>
-            <div
-              className='text'
-              dangerouslySetInnerHTML={{
-                __html: global.pova5ProConfig.sec3.p4,
-              }}
-            ></div>
+          <div className='out'>
+            <div className='box aniBox f4' onClick={test4}>
+              <div
+                className='text'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec3.p4,
+                }}
+              ></div>
+            </div>
           </div>
-          <div className='box aniBox f5'>
-            <div
-              className='text'
-              dangerouslySetInnerHTML={{
-                __html: global.pova5ProConfig.sec3.p5,
-              }}
-            ></div>
+          <div className='out'>
+            <div className='box aniBox f5' onClick={test5}>
+              <div
+                className='text'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec3.p5,
+                }}
+              ></div>
+            </div>
           </div>
           <div className='box f6'></div>
         </div>
       </div>
-      <div className='sec4 open'>
+      <div className='sec4 open' id='sec4ID'>
         <div className='top'></div>
         <div className='bot'></div>
         <div
@@ -227,13 +289,13 @@ const Product = () => {
           <div className={`light ${open}`}></div>
           <div className={`dark ${open}`}></div>
         </div>
-        <div className='switch'>
-          <div
-            className={`btns ${open}`}
-            onClick={() => {
-              setOpen((e) => !e)
-            }}
-          ></div>
+        <div
+          className='switch'
+          onClick={() => {
+            setOpen((e) => !e)
+          }}
+        >
+          <div className={`btns ${open}`}></div>
           <div className='on text'>on</div>
           <div className='off text'>off</div>
         </div>
@@ -264,7 +326,7 @@ const Product = () => {
         <div className='img'></div>
         <div className='img2'></div>
       </div>
-      <div className='sec7 open'>
+      <div className='sec7 open' id='sec7ID'>
         <div className='top'></div>
         <div className='bot'></div>
         <div
@@ -629,7 +691,7 @@ const Product = () => {
         </div>
         <canvas width='1920' height='1080' className='pc' ref={can1}></canvas>
       </div>
-      <div className='section sec9 open'>
+      <div className='section sec9 open' id='sec9ID'>
         <div className='top'></div>
         <div className='bot'></div>
         <div
@@ -1044,7 +1106,7 @@ const Product = () => {
           </div>
         </div>
       </div>
-      <div className='section sec16 open'>
+      <div className='section sec16 open' id='sec16ID'>
         <div className='top'></div>
         <div className='bot'></div>
         <div
@@ -1191,6 +1253,9 @@ const Product = () => {
               }}
             ></div>
           </div>
+          <div className='line'>
+            <div className='lines'></div>
+          </div>
         </div>
       </div>
       <div className='section sec20'>
@@ -1272,7 +1337,7 @@ const Product = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className='section sec22 open'>
+      <div className='section sec22 open' id='sec22ID'>
         <div className='top'></div>
         <div className='bot'></div>
         <div className='content'>
@@ -1322,13 +1387,16 @@ const Product = () => {
               }}
             ></div>
           </div>
-          <div className='content'>
+          <div className='content' ref={videoRef}>
             <Swiper
-              modules={[Controller]}
+              modules={[Controller, Scrollbar]}
               slidesPerView={3}
               navigation
               loop
               spaceBetween={50}
+              onTransitionEnd={(e) => {
+                scrollPlay(e.realIndex)
+              }}
               // @ts-ignore
               onSwiper={setFirstSwiper}
               pagination={{ clickable: true }}
@@ -1341,8 +1409,9 @@ const Product = () => {
                       <video
                         src={global.pova5ProConfig.sec23video.open}
                         poster={global.pova5ProConfig.sec10video.post}
+                        ref={v1}
                         className='video'
-                        autoPlay
+                        autoPlay={false}
                         webkit-playsinline='true'
                         preload='auto'
                         muted
@@ -1367,6 +1436,7 @@ const Product = () => {
                         poster={global.pova5ProConfig.sec10video.post}
                         className='video'
                         autoPlay
+                        ref={v2}
                         webkit-playsinline='true'
                         preload='auto'
                         muted
@@ -1390,7 +1460,8 @@ const Product = () => {
                         src={global.pova5ProConfig.sec23video.charge}
                         poster={global.pova5ProConfig.sec10video.post}
                         className='video'
-                        autoPlay
+                        ref={v3}
+                        autoPlay={false}
                         webkit-playsinline='true'
                         preload='auto'
                         muted
@@ -1414,7 +1485,8 @@ const Product = () => {
                         src={global.pova5ProConfig.sec23video.game}
                         poster={global.pova5ProConfig.sec10video.post}
                         className='video'
-                        autoPlay
+                        ref={v4}
+                        autoPlay={false}
                         webkit-playsinline='true'
                         preload='auto'
                         muted
@@ -1438,7 +1510,8 @@ const Product = () => {
                         src={global.pova5ProConfig.sec23video.message}
                         poster={global.pova5ProConfig.sec10video.post}
                         className='video'
-                        autoPlay
+                        ref={v5}
+                        autoPlay={false}
                         webkit-playsinline='true'
                         preload='auto'
                         muted
@@ -1462,7 +1535,8 @@ const Product = () => {
                         src={global.pova5ProConfig.sec23video.open}
                         poster={global.pova5ProConfig.sec10video.post}
                         className='video'
-                        autoPlay
+                        ref={v6}
+                        autoPlay={false}
                         webkit-playsinline='true'
                         preload='auto'
                         muted
@@ -1486,7 +1560,8 @@ const Product = () => {
                         src={global.pova5ProConfig.sec23video.calling}
                         poster={global.pova5ProConfig.sec10video.post}
                         className='video'
-                        autoPlay
+                        ref={v7}
+                        autoPlay={false}
                         webkit-playsinline='true'
                         preload='auto'
                         muted
@@ -1510,7 +1585,8 @@ const Product = () => {
                         src={global.pova5ProConfig.sec23video.charge}
                         poster={global.pova5ProConfig.sec10video.post}
                         className='video'
-                        autoPlay
+                        ref={v8}
+                        autoPlay={false}
                         webkit-playsinline='true'
                         preload='auto'
                         muted
@@ -1534,7 +1610,8 @@ const Product = () => {
                         src={global.pova5ProConfig.sec23video.game}
                         poster={global.pova5ProConfig.sec10video.post}
                         className='video'
-                        autoPlay
+                        ref={v9}
+                        autoPlay={false}
                         webkit-playsinline='true'
                         preload='auto'
                         muted
@@ -1558,7 +1635,8 @@ const Product = () => {
                         src={global.pova5ProConfig.sec23video.message}
                         poster={global.pova5ProConfig.sec10video.post}
                         className='video'
-                        autoPlay
+                        autoPlay={false}
+                        ref={v10}
                         webkit-playsinline='true'
                         preload='auto'
                         muted
@@ -1706,6 +1784,7 @@ const Product = () => {
             </div>
           </div>
         </div>
+        <div className='bg mob'></div>
       </div>
       <div className='section sec26'>
         <div

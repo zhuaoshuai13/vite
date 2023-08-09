@@ -303,6 +303,15 @@ body {
       row-gap: px-to-vw(19);
     }
 
+    .out {
+      cursor: pointer;
+      transition: all .5s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
     .box {
       position: relative;
       width: px-to-vw(745);
@@ -323,7 +332,7 @@ body {
       }
     }
 
-    @for $i from 0 through 5 {
+    @for $i from 1 through 5 {
       .f#{$i} {
 
         @include bg('sec3/f#{$i}.png');
@@ -337,7 +346,8 @@ body {
     background-color: #000;
 
     &.sec4 {
-      background-color: #fff;
+      margin-top: px-to-vw(-100);
+      background-color: transparent;
 
       .top {
 
@@ -519,7 +529,7 @@ body {
       .phone {
         position: absolute;
         right: px-to-vw(100);
-        bottom: px-to-vw(31);
+        bottom: 1.34vw;
         width: px-to-vw(183);
         height: px-to-vw(338);
 
@@ -532,7 +542,7 @@ body {
       justify-content: flex-start;
       box-sizing: border-box;
       width: 100%;
-      margin-top: px-to-vw(100);
+      margin-top: px-to-vw(130);
       padding-left: px-to-vw(197);
 
       .contnet {
@@ -558,8 +568,8 @@ body {
 
       .phone {
         position: absolute;
-        bottom: px-to-vw(14);
-        left: px-to-vw(102);
+        bottom: .55vw;
+        left: 8.6vw;
         width: px-to-vw(202);
         height: px-to-vw(338);
 
@@ -715,7 +725,7 @@ body {
 
   .sec9 {
     margin-top: -17vw;
-    background: linear-gradient(transparent, transparent 18.8%, black 18.8%);
+    background: linear-gradient(transparent, transparent 18.4%, black 18.4%);
 
     .top {
       background-color: transparent;
@@ -905,7 +915,7 @@ body {
       align-items: center;
       justify-content: space-between;
       box-sizing: border-box;
-      padding-right: px-to-vw(153);
+      padding-right: 2vw;
       padding-left: px-to-vw(192);
     }
 
@@ -914,8 +924,8 @@ body {
     }
 
     .right {
-      width: px-to-vw(980);
-      height: px-to-vw(980);
+      width: 60vw;
+      height: 60vw;
     }
 
     .title {
@@ -1144,10 +1154,10 @@ body {
 
     .bigimg {
       position: absolute;
-      top: 27%;
+      top: 41.6%;
       right: 0;
-      left: 28.2%;
-      width: 92.229vw;
+      left: 29.9%;
+      width: 56.229vw;
       height: 202.229vw;
       margin: px-to-vw(75) auto 0;
       margin: auto;
@@ -1232,6 +1242,38 @@ body {
       }
     }
 
+    .line {
+      position: absolute;
+      top: 99%;
+      right: 0;
+      left: 0;
+      z-index: 4;
+      width: calc(100% - 3px);
+      height: 4px;
+      margin: auto;
+      background: rgba(202, 222, 236, 1);
+      box-shadow: 0 .4297px .1432px 0 rgba(52, 68, 83, 1);
+
+      .lines {
+        position: relative;
+        width: calc(100% - 10px);
+        height: 4px;
+
+        &:before {
+          position: absolute;
+          top: -9px;
+          right: 0;
+          left: 0;
+          width: px-to-vw(110);
+          height: px-to-vw(10);
+          margin: auto;
+          content: "";
+
+          @include bg('sec19/icon.png');
+        }
+      }
+    }
+
     .img {
       position: absolute;
       top: 0;
@@ -1241,8 +1283,6 @@ body {
       background-position: center center;
 
       @include center;
-
-      @include bg('sec19/f1.png');
     }
 
     .fa {
@@ -1332,6 +1372,8 @@ body {
   }
 
   .sec21 {
+    position: relative;
+    z-index: 2;
     box-sizing: content-box !important;
     min-height: 100vh;
     padding-top: px-to-vw(240);
@@ -1387,6 +1429,8 @@ body {
   }
 
   .sec22 {
+    margin-top: px-to-vw(-300);
+
     .a {
       font-family: "Korataki";
     }
@@ -1857,6 +1901,10 @@ body {
         margin: 0 px-to-vw(18);
         background-color: #fff;
       }
+
+      .swiper-wrapper {
+        height: 94%;
+      }
     }
 
     .img {
@@ -2027,6 +2075,28 @@ body {
       .subtitle {
         margin: pxm-to-vw(16) 0;
       }
+
+      .f1 {
+        height: 2px;
+
+        &:before {
+          bottom: 2px;
+          left: -.8vw;
+          width: pxm-to-vw(112);
+          height: pxm-to-vw(10);
+        }
+      }
+
+      .f2 {
+        height: 2px;
+
+        &:before {
+          top: 2px;
+          right: -.8vw;
+          width: pxm-to-vw(112);
+          height: 1.1vw;
+        }
+      }
     }
 
     .desc {
@@ -2035,7 +2105,7 @@ body {
     }
 
     .open {
-      height: 150vw;
+      height: 156vw;
 
       .content {
         padding-right: pxm-to-vw(150);
@@ -2044,7 +2114,7 @@ body {
       }
 
       &.sec4 {
-        height: 111vw;
+        height: 120vw;
 
         .top {
           width: 100%;
@@ -2062,6 +2132,7 @@ body {
       }
 
       .top {
+        top: 0 !important;
         width: 100%;
         height: pxm-to-vw(677);
 
@@ -2069,6 +2140,7 @@ body {
       }
 
       .bot {
+        bottom: 0 !important;
         width: 100%;
         height: pxm-to-vw(657);
 
@@ -2092,6 +2164,17 @@ body {
         @include bg('sec1m/phone.png');
       }
 
+      .slogen {
+        top: 0;
+        right: 0;
+        left: 0;
+        width: pxm-to-vw(785);
+        height: pxm-to-vw(213);
+        margin: auto;
+
+        @include bg('sec1m/logo02.png');
+      }
+
       .params {
         display: none ;
       }
@@ -2104,6 +2187,18 @@ body {
         width: pxm-to-vw(960);
         height: pxm-to-vw(1706);
         background-size: cover;
+
+        &:before {
+          top: pxm-to-vw(-27);
+          width: pxm-to-vw(160);
+          height: pxm-to-vw(13);
+        }
+
+        &:after {
+          bottom: pxm-to-vw(-26);
+          width: pxm-to-vw(160);
+          height: pxm-to-vw(13);
+        }
 
         .play {
           width: pxm-to-vw(225);
@@ -2138,6 +2233,8 @@ body {
     }
 
     .sec5 {
+      padding-top: pxm-to-vw(240);
+
       .subgroup {
         width: pxm-to-vw(586);
       }
@@ -2594,8 +2691,11 @@ body {
     }
 
     .sec14 {
+      padding-top: pxm-to-vw(300);
+
       .content {
         flex-direction: column;
+        align-items: flex-end;
         padding-left: 0;
       }
 
@@ -2752,6 +2852,20 @@ body {
         height: pxm-to-vw(943);
         margin-top: pxm-to-vw(120);
       }
+
+      .text {
+        font-size: pxm-to-vw(24) !important;
+      }
+
+      .line {
+        .lines {
+          &:before {
+            top: -4px;
+            width: 10vw;
+            height: 1vw;
+          }
+        }
+      }
     }
 
     .sec20 {
@@ -2868,6 +2982,8 @@ body {
     }
 
     .sec24 {
+      padding-top: pxm-to-vw(300);
+
       .params {
         width: pxm-to-vw(994);
         height: pxm-to-vw(1117);
@@ -2889,13 +3005,16 @@ body {
         position: relative;
         top: unset;
         left: unset;
+        display: grid;
         flex-wrap: wrap;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
         gap: 0;
         justify-content: space-between;
         margin-top: pxm-to-vw(106);
         padding: 0 pxm-to-vw(115);
+        column-gap: unset;
         row-gap: pxm-to-vw(70);
-        column-gap: 10vw;
 
         .big {
           font-size: pxm-to-vw(90);
@@ -2917,13 +3036,9 @@ body {
     }
 
     .sec25 {
-      height: 135vw;
+      height: fit-content;
       padding-top: pxm-to-vw(300);
-
-      @include bg('sec25m/bg.png');
-
-      background-position: center bottom;
-      background-size: pxm-to-vw(1080) pxm-to-vw(1080);
+      background-image: unset;
 
       .box {
         box-sizing: border-box;
@@ -2971,6 +3086,14 @@ body {
       .small {
         font-size: pxm-to-vw(24);
       }
+
+      .bg {
+        width: 100%;
+        height: pxm-to-vw(1080);
+        margin-top: pxm-to-vw(-150);
+
+        @include bg('sec25m/bg.png');
+      }
     }
 
     .sec26 {
@@ -2985,14 +3108,19 @@ body {
       }
 
       .img {
+        width: 100%;
+        height: 49.5vw;
         margin-top: pxm-to-vw(30);
       }
     }
 
     .sec27 {
+      padding-top: pxm-to-vw(300);
+
       .content {
         flex-direction: column;
         width: 100%;
+        margin-top: 0;
         padding: 0;
         padding-top: pxm-to-vw(300);
       }
@@ -3030,6 +3158,10 @@ body {
         .img {
           width: pxm-to-vw(136);
           height: pxm-to-vw(136);
+        }
+
+        .text {
+          font-size: pxm-to-vw(24);
         }
       }
 

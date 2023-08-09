@@ -69,7 +69,7 @@ const Pc = (
       .from(".sec1 .phone", 1, { opacity: 0, x: "20%", y: "20%" }, "a")
     ScrollTrigger.create({
       trigger: ".sec1",
-      start: `top 5%`,
+      start: `top 20%`,
       end: "+=40%",
       animation: tl,
     })
@@ -117,22 +117,14 @@ const Pc = (
 
   const sec4Ani = () => {
     const ctx = gsap.context(() => {
-      const tl = gsap
-        .timeline()
-        .to(".sec4 .top", 1, { top: 0, ease: "none" }, "a")
-        .to(".sec4 .bot", 1, { bottom: 0, ease: "none" }, "a")
       if (responsive?.md) {
+        const tl = gsap
+          .timeline()
+          .to(".sec4 .top", 1, { top: 0, ease: "none" }, "a")
+          .to(".sec4 .bot", 1, { bottom: 0, ease: "none" }, "a")
         ScrollTrigger.create({
           trigger: ".sec4",
           start: `top 10%`,
-          end: "+=40%",
-          animation: tl,
-          scrub: true,
-        })
-      } else {
-        ScrollTrigger.create({
-          trigger: ".sec4",
-          start: `top 80%`,
           end: "+=40%",
           animation: tl,
           scrub: true,
@@ -244,22 +236,14 @@ const Pc = (
 
   const sec7Ani = () => {
     const ctx = gsap.context(() => {
-      const tl = gsap
-        .timeline()
-        .to(".sec7 .top", 1, { top: 0 }, "a")
-        .to(".sec7 .bot", 1, { bottom: 0 }, "a")
       if (responsive?.md) {
+        const tl = gsap
+          .timeline()
+          .to(".sec7 .top", 1, { top: 0 }, "a")
+          .to(".sec7 .bot", 1, { bottom: 0 }, "a")
         ScrollTrigger.create({
           trigger: ".sec7",
           start: `top 10%`,
-          end: "+=40%",
-          animation: tl,
-          scrub: true,
-        })
-      } else {
-        ScrollTrigger.create({
-          trigger: ".sec7",
-          start: `top 60%`,
           end: "+=40%",
           animation: tl,
           scrub: true,
@@ -421,23 +405,15 @@ const Pc = (
 
   const sec9Ani = () => {
     // const ctx = gsap.context(() => {
-    const tl = gsap
-      .timeline()
-      .to(".sec9 .top", 1, { top: 0, ease: "none" }, "a")
-      .to(".sec9 .bot", 1, { bottom: 0, ease: "none" }, "a")
 
     if (responsive?.md) {
+      const tl = gsap
+        .timeline()
+        .to(".sec9 .top", 1, { top: 0, ease: "none" }, "a")
+        .to(".sec9 .bot", 1, { bottom: 0, ease: "none" }, "a")
       ScrollTrigger.create({
         trigger: ".sec9",
         start: `top 10%`,
-        end: "+=40%",
-        animation: tl,
-        scrub: true,
-      })
-    } else {
-      ScrollTrigger.create({
-        trigger: ".sec9",
-        start: `top 60%`,
         end: "+=40%",
         animation: tl,
         scrub: true,
@@ -676,23 +652,14 @@ const Pc = (
 
   const sec16Ani = () => {
     const ctx = gsap.context(() => {
-      const tl = gsap
-        .timeline()
-        .to(".sec16 .top", 1, { top: 0 }, "a")
-        .to(".sec16 .bot", 1, { bottom: 0 }, "a")
-
       if (responsive?.md) {
+        const tl = gsap
+          .timeline()
+          .to(".sec16 .top", 1, { top: 0 }, "a")
+          .to(".sec16 .bot", 1, { bottom: 0 }, "a")
         ScrollTrigger.create({
           trigger: ".sec16",
           start: `top 10%`,
-          end: "+=40%",
-          animation: tl,
-          scrub: true,
-        })
-      } else {
-        ScrollTrigger.create({
-          trigger: ".sec16",
-          start: `top 60%`,
           end: "+=40%",
           animation: tl,
           scrub: true,
@@ -760,7 +727,7 @@ const Pc = (
 
         ScrollTrigger.create({
           trigger: ".sec18 .imgbox",
-          start: `top 70`,
+          start: `top 90`,
           end: "+=80%",
           pin: true,
           animation: tl,
@@ -800,8 +767,13 @@ const Pc = (
       const tl = gsap
         .timeline()
         .to(".sec19 .fb", 1, { clipPath: `inset(0% 0 0)` }, "a")
+        .to(".sec19 .line", 1, { top: "1%" }, "a")
+        .to(".sec19 .line", 0, { top: "99%" }, "b")
         .to(".sec19 .fc", 1, { clipPath: `inset(0% 0 0)` }, "b")
+        .to(".sec19 .line", 1, { top: "1%" }, "b")
+        .to(".sec19 .line", 0, { top: "99%" }, "c")
         .to(".sec19 .fd", 1, { clipPath: `inset(0% 0 0)` }, "c")
+        .to(".sec19 .line", 1, { top: "1%" }, "c")
 
       if (responsive?.md) {
         ScrollTrigger.create({
@@ -882,22 +854,14 @@ const Pc = (
 
   const sec22Ani = () => {
     const ctx = gsap.context(() => {
-      const tl = gsap
-        .timeline()
-        .to(".sec22 .top", 1, { top: 0 }, "a")
-        .to(".sec22 .bot", 1, { bottom: 0 }, "a")
       if (responsive?.md) {
+        const tl = gsap
+          .timeline()
+          .to(".sec22 .top", 1, { top: 0 }, "a")
+          .to(".sec22 .bot", 1, { bottom: 0 }, "a")
         ScrollTrigger.create({
           trigger: ".sec22",
           start: `top 10%`,
-          end: "+=40%",
-          animation: tl,
-          scrub: true,
-        })
-      } else {
-        ScrollTrigger.create({
-          trigger: ".sec22",
-          start: `top 60%`,
           end: "+=40%",
           animation: tl,
           scrub: true,
@@ -1104,6 +1068,26 @@ const Pc = (
     return () => ctx.revert() // <- Cleanup!
   }
 
+  const test1 = () => {
+    gsap.to(window, { duration: 2, scrollTo: { y: "#sec4ID", offsetY: -200 } })
+  }
+
+  const test2 = () => {
+    gsap.to(window, { duration: 2, scrollTo: "#sec7ID" })
+  }
+
+  const test3 = () => {
+    gsap.to(window, { duration: 2, scrollTo: "#sec9ID" })
+  }
+
+  const test4 = () => {
+    gsap.to(window, { duration: 2, scrollTo: "#sec16ID" })
+  }
+
+  const test5 = () => {
+    gsap.to(window, { duration: 2, scrollTo: "#sec22ID" })
+  }
+
   return {
     sec1Ani,
     sec2Ani,
@@ -1139,6 +1123,11 @@ const Pc = (
     sec32Ani,
     open,
     setOpen,
+    test1,
+    test2,
+    test3,
+    test4,
+    test5,
   }
 }
 
