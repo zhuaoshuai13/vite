@@ -2,7 +2,7 @@ import { MutableRefObject, RefObject, useState } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ScrollToPlugin } from "gsap-trial/ScrollToPlugin"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useCountUp } from "react-countup"
 
 import UseResponse from "../../hooks/useResponse"
@@ -17,9 +17,11 @@ const Pc = (
   countUpRef5: MutableRefObject<null>
 ) => {
   const { responsive } = UseResponse()
+
   if (responsive?.md !== undefined) {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   }
+
   const [open, setOpen] = useState(false)
   const global = window as any
 
@@ -67,7 +69,7 @@ const Pc = (
     // const ctx = gsap.context(() => {
     const tl = gsap
       .timeline()
-      .from(".sec1 .phone", 1, { opacity: 0, x: "20%", y: "20%" }, "a")
+      .from(".sec1 .phone", 1, { x: "20%", y: "20%" }, "a")
     ScrollTrigger.create({
       trigger: ".sec1",
       start: `top 20%`,
@@ -96,24 +98,41 @@ const Pc = (
   }
 
   const sec3Ani = () => {
-    const ctx = gsap.context((self) => {
-      const item = self?.selector?.(".sec3 .aniBox") ?? []
-      item.forEach((box: string, index: number) => {
-        gsap.from(box, {
-          opacity: 0,
-          x: "100",
-          duration: 1,
-          delay: index * 0.1,
-          scrollTrigger: {
-            trigger: ".sec3",
-            start: "top 50%",
-            // toggleActions: "restart none none reverse",
-          },
-        })
-      })
-    }, total) // <- Scope!
+    // const ctx = gsap.context((self) => {
 
-    return () => ctx.revert() // <- Cleanup!
+    const tl = gsap
+      .timeline()
+      .from(".sec3 .f1", 1, { opacity: 0, x: "100", duration: 1 }, "a")
+      .from(
+        ".sec3 .f2",
+        1,
+        { opacity: 0, x: "100", duration: 1, delay: 0.1 },
+        "a"
+      )
+      .from(
+        ".sec3 .f3",
+        1,
+        { opacity: 0, x: "100", duration: 1, delay: 0.2 },
+        "a"
+      )
+      .from(
+        ".sec3 .f4",
+        1,
+        { opacity: 0, x: "100", duration: 1, delay: 0.3 },
+        "a"
+      )
+      .from(
+        ".sec3 .f5",
+        1,
+        { opacity: 0, x: "100", duration: 1, delay: 0.4 },
+        "a"
+      )
+
+    ScrollTrigger.create({
+      trigger: ".sec3",
+      start: "top 50%",
+      animation: tl,
+    })
   }
 
   const sec4Ani = () => {
@@ -282,7 +301,7 @@ const Pc = (
     }
 
     for (let i = 0; i < 150; i++) {
-      images.push(`${global.pova5ProConfig.sec8frames.path}/0${i}.gif`)
+      images.push(`${global.pova5ProConfig.sec8frames.path}/0${i}.webp`)
     }
 
     images.forEach((src) => {
@@ -968,7 +987,12 @@ const Pc = (
         .from(".sec27 .subgroup", 1, { opacity: 0, y: 100, delay: 0.45 }, "a")
         .from(".sec27 .desc", 1, { opacity: 0, y: 100, delay: 0.5 }, "a")
         .from(".sec27 .params", 1, { opacity: 0, y: 100, delay: 0.65 }, "a")
-        .from(".sec27 .right .f2", 1, { left: "3%", delay: 0.3 }, "a")
+        .from(
+          ".sec27 .right .f2",
+          1,
+          { left: responsive?.md ? "3%" : "28%", delay: 0.3 },
+          "a"
+        )
 
       ScrollTrigger.create({
         trigger: ".sec27",
@@ -1026,9 +1050,6 @@ const Pc = (
         trigger: ".sec30",
         start: `${responsive?.md ? "top 40%" : "top 60%"}`,
         animation: tl,
-        onEnter: () => {
-          console.log("a")
-        },
       })
     })
 

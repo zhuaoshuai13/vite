@@ -1,13 +1,11 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useState, useEffect, useRef } from "react"
-import { Controller, Scrollbar } from "swiper/modules"
+import { EffectFade, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
-
-import { EffectFade, Pagination } from "swiper/modules"
 
 import UseResponse from "../../hooks/useResponse"
 import Pc from "./pc"
@@ -33,7 +31,7 @@ const Product = () => {
   const total = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLDivElement>(null)
   const can1 = useRef<HTMLCanvasElement>(null)
-  const [firstSwiper, setFirstSwiper] = useState(null)
+  const swiperRef = useRef(null)
   const [vPlay, setVPlay] = useState(2)
 
   const [isPlay, setIsPlay] = useState(false)
@@ -55,9 +53,9 @@ const Product = () => {
   }
 
   const next = () => {
-    if (firstSwiper) {
+    if (swiperRef) {
       // @ts-ignore
-      firstSwiper.slideNext()
+      swiperRef.current.swiper.slideNext()
 
       let temp = vPlay
 
@@ -77,9 +75,9 @@ const Product = () => {
   }
 
   const prev = () => {
-    if (firstSwiper) {
+    if (swiperRef) {
       // @ts-ignore
-      firstSwiper.slidePrev()
+      swiperRef.current.swiper.slidePrev()
 
       let temp = vPlay
       if (temp == 1) {
@@ -106,6 +104,7 @@ const Product = () => {
     countUpRef4,
     countUpRef5
   )
+
   // 监听页面宽度
 
   useEffect(() => {
@@ -123,7 +122,7 @@ const Product = () => {
       <div className='sec1'>
         <div className='slogen'></div>
         <div className='phone'></div>
-        <div className='params'>
+        <div className='params pc'>
           <div
             className='param'
             dangerouslySetInnerHTML={{
@@ -156,6 +155,33 @@ const Product = () => {
             className='param'
             dangerouslySetInnerHTML={{
               __html: global.pova5ProConfig.sec1.p5,
+            }}
+          ></div>
+        </div>
+
+        <div className='mob mparams'>
+          <div
+            className='param'
+            dangerouslySetInnerHTML={{
+              __html: global.pova5ProConfig.sec1.p1m,
+            }}
+          ></div>
+          <div
+            className='param'
+            dangerouslySetInnerHTML={{
+              __html: global.pova5ProConfig.sec1.p2m,
+            }}
+          ></div>
+          <div
+            className='param'
+            dangerouslySetInnerHTML={{
+              __html: global.pova5ProConfig.sec1.p3m,
+            }}
+          ></div>
+          <div
+            className='param'
+            dangerouslySetInnerHTML={{
+              __html: global.pova5ProConfig.sec1.p4m,
             }}
           ></div>
         </div>
@@ -252,7 +278,7 @@ const Product = () => {
           <div className='box f6'></div>
         </div>
       </div>
-      <div className='sec4 open' id='sec4ID'>
+      <section className='sec4 open' id='sec4ID'>
         <div className='top'></div>
         <div className='bot'></div>
         <div
@@ -261,7 +287,7 @@ const Product = () => {
             __html: global.pova5ProConfig.sec4.title,
           }}
         ></div>
-      </div>
+      </section>
       <div className='sec5'>
         <div
           className='title'
@@ -326,7 +352,7 @@ const Product = () => {
         <div className='img'></div>
         <div className='img2'></div>
       </div>
-      <div className='sec7 open' id='sec7ID'>
+      <section className='sec7 open' id='sec7ID'>
         <div className='top'></div>
         <div className='bot'></div>
         <div
@@ -335,7 +361,7 @@ const Product = () => {
             __html: global.pova5ProConfig.sec7.title,
           }}
         ></div>
-      </div>
+      </section>
       <div className='section sec8'>
         <div className='content pc'>
           <div className='box1 box'>
@@ -691,7 +717,7 @@ const Product = () => {
         </div>
         <canvas width='1920' height='1080' className='pc' ref={can1}></canvas>
       </div>
-      <div className='section sec9 open' id='sec9ID'>
+      <section className='section sec9 open' id='sec9ID'>
         <div className='top'></div>
         <div className='bot'></div>
         <div
@@ -700,7 +726,7 @@ const Product = () => {
             __html: global.pova5ProConfig.sec9.title,
           }}
         ></div>
-      </div>
+      </section>
       <div className='section sec10'>
         <div className='content'>
           <div className='left'>
@@ -788,6 +814,7 @@ const Product = () => {
                 className='video'
                 autoPlay
                 webkit-playsinline='true'
+                controls
                 preload='auto'
                 muted
                 loop
@@ -802,6 +829,7 @@ const Product = () => {
               poster={global.pova5ProConfig.sec10video.post}
               className='video'
               autoPlay
+              controls
               webkit-playsinline='true'
               preload='auto'
               muted
@@ -1225,7 +1253,7 @@ const Product = () => {
           </div>
         </div>
       </div>
-      <div className='section sec16 open' id='sec16ID'>
+      <section className='section sec16 open' id='sec16ID'>
         <div className='top'></div>
         <div className='bot'></div>
         <div
@@ -1234,7 +1262,7 @@ const Product = () => {
             __html: global.pova5ProConfig.sec16.title,
           }}
         ></div>
-      </div>
+      </section>
       <div className='section sec17'>
         <div
           className='title'
@@ -1462,7 +1490,7 @@ const Product = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className='section sec22 open' id='sec22ID'>
+      <section className='section sec22 open' id='sec22ID'>
         <div className='top'></div>
         <div className='bot'></div>
         <div className='content'>
@@ -1479,7 +1507,7 @@ const Product = () => {
             }}
           ></div>
         </div>
-      </div>
+      </section>
       <div className='section sec23'>
         <div
           className='title'
@@ -1514,16 +1542,15 @@ const Product = () => {
           </div>
           <div className='content' ref={videoRef}>
             <Swiper
-              modules={[Controller, Scrollbar]}
               slidesPerView={3}
               navigation
               loop
               spaceBetween={50}
+              ref={swiperRef}
               onTransitionEnd={(e) => {
                 scrollPlay(e.realIndex)
               }}
               // @ts-ignore
-              onSwiper={setFirstSwiper}
               pagination={{ clickable: true }}
               scrollbar={{ draggable: true }}
             >
@@ -1533,7 +1560,7 @@ const Product = () => {
                     <div className='phone'>
                       <video
                         src={global.pova5ProConfig.sec23video.open}
-                        poster={global.pova5ProConfig.sec10video.post}
+                        poster={global.pova5ProConfig.sec23video.openpost}
                         ref={v1}
                         className='video'
                         autoPlay={false}
@@ -1558,7 +1585,7 @@ const Product = () => {
                     <div className='phone'>
                       <video
                         src={global.pova5ProConfig.sec23video.calling}
-                        poster={global.pova5ProConfig.sec10video.post}
+                        poster={global.pova5ProConfig.sec23video.callingpost}
                         className='video'
                         autoPlay
                         ref={v2}
@@ -1583,7 +1610,7 @@ const Product = () => {
                     <div className='phone'>
                       <video
                         src={global.pova5ProConfig.sec23video.charge}
-                        poster={global.pova5ProConfig.sec10video.post}
+                        poster={global.pova5ProConfig.sec23video.chargepost}
                         className='video'
                         ref={v3}
                         autoPlay={false}
@@ -1608,7 +1635,7 @@ const Product = () => {
                     <div className='phone'>
                       <video
                         src={global.pova5ProConfig.sec23video.game}
-                        poster={global.pova5ProConfig.sec10video.post}
+                        poster={global.pova5ProConfig.sec23video.gamepost}
                         className='video'
                         ref={v4}
                         autoPlay={false}
@@ -1633,7 +1660,7 @@ const Product = () => {
                     <div className='phone'>
                       <video
                         src={global.pova5ProConfig.sec23video.message}
-                        poster={global.pova5ProConfig.sec10video.post}
+                        poster={global.pova5ProConfig.sec23video.messagepost}
                         className='video'
                         ref={v5}
                         autoPlay={false}
@@ -1658,7 +1685,7 @@ const Product = () => {
                     <div className='phone'>
                       <video
                         src={global.pova5ProConfig.sec23video.open}
-                        poster={global.pova5ProConfig.sec10video.post}
+                        poster={global.pova5ProConfig.sec23video.openpost}
                         className='video'
                         ref={v6}
                         autoPlay={false}
@@ -1683,7 +1710,7 @@ const Product = () => {
                     <div className='phone'>
                       <video
                         src={global.pova5ProConfig.sec23video.calling}
-                        poster={global.pova5ProConfig.sec10video.post}
+                        poster={global.pova5ProConfig.sec23video.callingpost}
                         className='video'
                         ref={v7}
                         autoPlay={false}
@@ -1708,7 +1735,7 @@ const Product = () => {
                     <div className='phone'>
                       <video
                         src={global.pova5ProConfig.sec23video.charge}
-                        poster={global.pova5ProConfig.sec10video.post}
+                        poster={global.pova5ProConfig.sec23video.chargepost}
                         className='video'
                         ref={v8}
                         autoPlay={false}
@@ -1733,7 +1760,7 @@ const Product = () => {
                     <div className='phone'>
                       <video
                         src={global.pova5ProConfig.sec23video.game}
-                        poster={global.pova5ProConfig.sec10video.post}
+                        poster={global.pova5ProConfig.sec23video.gamepost}
                         className='video'
                         ref={v9}
                         autoPlay={false}
@@ -1758,7 +1785,7 @@ const Product = () => {
                     <div className='phone'>
                       <video
                         src={global.pova5ProConfig.sec23video.message}
-                        poster={global.pova5ProConfig.sec10video.post}
+                        poster={global.pova5ProConfig.sec23video.messagepost}
                         className='video'
                         autoPlay={false}
                         ref={v10}

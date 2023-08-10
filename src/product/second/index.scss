@@ -358,6 +358,7 @@ body {
       background-color: transparent;
 
       .top {
+        position: relative;
 
         @include bg('/sec4/top.png',false);
       }
@@ -595,7 +596,7 @@ body {
       width: 100%;
       height: 100%;
 
-      @include bg('sec6/bg.png');
+      @include bg('sec6/bg.jpg');
     }
 
     .img2 {
@@ -605,7 +606,7 @@ body {
       width: 100%;
       height: 100%;
 
-      @include bg('sec6/bg2.png', false);
+      @include bg('sec6/bg2.jpg', false);
     }
   }
 
@@ -637,7 +638,7 @@ body {
   .sec8 {
     position: relative;
     height: px-to-vw(1073);
-    margin-top: px-to-vw(-80);
+    margin-top: px-to-vw(-95);
 
     canvas {
       position: absolute;
@@ -800,8 +801,9 @@ body {
       width: 100%;
       height: px-to-vw(1080);
       padding: 5px;
-      background: linear-gradient(179.68deg, #b5c5d3 30.52%, #a7b4c1 60.8%);
-      box-shadow: 0 0 4px 0 rgba(0, 0, 0, .8) inset;
+      background: linear-gradient(180deg, #74818d .28%, #95a2ae 99.72%);
+      box-shadow: 0 0 1px 0 rgba(0, 0, 0, 1);
+      box-shadow: 0 0 2px 0 rgba(43, 38, 38, .7) inset;
 
       &:before {
         position: absolute;
@@ -923,8 +925,8 @@ body {
       .video {
         position: absolute;
         top: 6%;
-        left: 8%;
-        width: px-to-vw(750);
+        left: 7%;
+        width: px-to-vw(768);
         height: px-to-vw(493);
         object-fit: cover;
         background: #000;
@@ -1054,8 +1056,8 @@ body {
       width: 100%;
       height: px-to-vw(1080);
       padding: 5px;
-      background: linear-gradient(179.68deg, #b5c5d3 30.52%, #a7b4c1 60.8%);
-      box-shadow: 0 0 4px 0 rgba(0, 0, 0, .8) inset;
+      background: linear-gradient(180deg, #74818d .28%, #95a2ae 99.72%);
+      box-shadow: 0 0 2px 0 rgba(43, 38, 38, .7) inset;
 
       &:before {
         position: absolute;
@@ -1336,8 +1338,7 @@ body {
       height: px-to-vw(562);
       margin: px-to-vw(47) auto 0;
       padding: 5px;
-      background: linear-gradient(179.68deg, #b5c5d3 30.52%, #a7b4c1 60.8%);
-      box-shadow: 0 0 4px 0 rgba(0, 0, 0, .8) inset;
+      background: #000;
 
       .text {
         margin-top: px-to-vw(35);
@@ -1354,7 +1355,7 @@ body {
       right: 0;
       left: 0;
       z-index: 4;
-      width: calc(100% - 3px);
+      width: calc(100% - 11px);
       height: 4px;
       margin: auto;
       background: rgba(202, 222, 236, 1);
@@ -1742,6 +1743,7 @@ body {
 
     .desc {
       max-width: 100%;
+      text-align: center;
     }
 
     .params {
@@ -2183,24 +2185,26 @@ body {
       }
 
       .f1 {
-        height: 2px;
+        height: 1px;
 
         &:before {
-          bottom: 2px;
+          bottom: 1px;
           left: -.8vw;
           width: pxm-to-vw(112);
           height: pxm-to-vw(10);
+          background-size: cover;
         }
       }
 
       .f2 {
-        height: 2px;
+        height: 1px;
 
         &:before {
-          top: 2px;
+          top: 1px;
           right: -.8vw;
           width: pxm-to-vw(112);
           height: 1.1vw;
+          background-size: cover;
         }
       }
     }
@@ -2211,16 +2215,28 @@ body {
     }
 
     .open {
-      height: 156vw;
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
 
       .content {
+        position: relative;
+        top: unset;
+        left: unset;
+        order: 2;
+        margin-top: -8vw;
         padding-right: pxm-to-vw(150);
         padding-left: pxm-to-vw(141);
         font-size: pxm-to-vw(64);
+        transform: unset;
       }
 
       &.sec4 {
-        height: 120vw;
+        height: fit-content;
+
+        .content {
+          margin-top: -8vw;
+        }
 
         .top {
           width: 100%;
@@ -2230,15 +2246,19 @@ body {
         }
 
         .bot {
+          position: relative;
+          z-index: 4;
           width: 100%;
           height: pxm-to-vw(510);
+          margin-top: -9vw;
 
           @include bg('sec4m/f2.png');
         }
       }
 
       .top {
-        top: 0 !important;
+        position: relative;
+        top: unset !important;
         width: 100%;
         height: pxm-to-vw(677);
 
@@ -2246,16 +2266,19 @@ body {
       }
 
       .bot {
-        bottom: 0 !important;
+        position: relative;
+        bottom: unset !important;
+        order: 3;
         width: 100%;
         height: pxm-to-vw(657);
+        margin-top: -5vw;
 
         @include bg('sec4m/f4.png');
       }
     }
 
     .sec1 {
-      height: pxm-to-vw(1620);
+      height: pxm-to-vw(2100);
       margin-top: pxm-to-vw(160);
 
       @include bg('sec1m/bg.png');
@@ -2282,26 +2305,41 @@ body {
       }
 
       .params {
-        display: none ;
+        display: none;
+      }
+
+      .mparams {
+        position: absolute;
+        bottom: pxm-to-vw(300);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        div {
+          font-size: pxm-to-vw(45);
+          font-family: "HurmeGeometricSans";
+          line-height: 1.2;
+        }
       }
     }
 
     .sec2 {
-      padding-top: pxm-to-vw(147);
+      padding-top: pxm-to-vw(0);
 
       .video {
+        box-sizing: content-box;
         width: pxm-to-vw(960);
         height: pxm-to-vw(1706);
         background-size: cover;
 
         &:before {
-          top: pxm-to-vw(-27);
+          top: -8px;
           width: pxm-to-vw(160);
           height: pxm-to-vw(13);
         }
 
         &:after {
-          bottom: pxm-to-vw(-26);
+          bottom: -7px;
           width: pxm-to-vw(160);
           height: pxm-to-vw(13);
         }
@@ -2477,7 +2515,6 @@ body {
 
       .box {
         flex-direction: column;
-        gap: pxm-to-vw(652);
         justify-content: flex-start;
         padding: 0;
       }
@@ -2498,6 +2535,7 @@ body {
         justify-content: space-between;
         box-sizing: border-box;
         width: 100%;
+        margin-top: pxm-to-vw(652);
         padding: 0 10%;
       }
 
@@ -2606,6 +2644,10 @@ body {
         }
       }
 
+      .out {
+        padding: 3px;
+      }
+
       .desc {
         text-align: center;
       }
@@ -2693,6 +2735,7 @@ body {
           left: 7.8%;
           width: 72.278vw;
           height: 47.3vw;
+          border-radius: 6vw;
         }
       }
 
@@ -2788,10 +2831,14 @@ body {
       .small {
         font-size: pxm-to-vw(21);
       }
+
+      .video {
+        margin-left: -10vw;
+      }
     }
 
     .sec13 {
-      padding-top: pxm-to-vw(150);
+      padding-top: pxm-to-vw(300);
 
       .content {
         flex-direction: column;
@@ -2815,6 +2862,10 @@ body {
         .subtitle {
           text-align: center;
         }
+      }
+
+      .out {
+        padding: 3px;
       }
 
       .desc {
@@ -2961,9 +3012,9 @@ body {
       }
 
       .simg {
-        width: pxm-to-vw(524);
-        height: pxm-to-vw(524);
-        margin: pxm-to-vw(200) auto 0;
+        width: pxm-to-vw(734);
+        height: pxm-to-vw(734);
+        margin: pxm-to-vw(50) auto 0;
 
         @include bg('sec17/f1.png');
       }
@@ -3027,9 +3078,13 @@ body {
       }
 
       .line {
+        height: 2px;
+
         .lines {
+          height: 2px;
+
           &:before {
-            top: -4px;
+            top: -3px;
             width: 10vw;
             height: 1vw;
           }
@@ -3470,13 +3525,17 @@ body {
       }
 
       .group {
+        // column-gap: pxm-to-vw(260);
+        // row-gap: pxm-to-vw(116);
+
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0;
         justify-content: space-between;
         box-sizing: border-box;
         width: 100%;
-        margin-top: pxm-to-vw(120);
+        margin-top: pxm-to-vw(40);
         padding: 0 pxm-to-vw(230);
-        column-gap: pxm-to-vw(260);
-        row-gap: pxm-to-vw(116);
 
         .text {
           margin-top: pxm-to-vw(35);
@@ -3486,6 +3545,9 @@ body {
 
         .out {
           gap: 0;
+          justify-content: flex-start;
+          width: auto;
+          margin-top: pxm-to-vw(100);
 
           .img {
             width: pxm-to-vw(115);

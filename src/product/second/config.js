@@ -7,6 +7,10 @@ window.pova5ProConfig = {
     p3: "<span>68W</span>Ultra <br />Charge",
     p4: "<span>256GB</span> <br />ROM",
     p5: "<span>8GB</span> <br /> RAM",
+    p1m: " MediaTek D6080 5G Processor",
+    p2m: "5000mAh Mega Battery",
+    p3m: "68W Ultra Charge",
+    p4m: "256GB ROM + 8GB RAM",
   },
   sec3: {
     p1: "Innovative <br />Design",
@@ -223,39 +227,44 @@ window.pova5ProConfig = {
   },
   sec10video: {
     path: "http://127.0.0.1:5173/src/assets/video/sec10.mp4",
-    post: "",
+    post: "http://127.0.0.1:5173/src/assets/post/sec10H.png",
   },
   sec11video: {
     path: "http://127.0.0.1:5173/src/assets/video/sec11.mp4",
-    post: "",
+    post: "http://127.0.0.1:5173/src/assets/post/sec11H.png",
   },
   sec12video: {
     path: "http://127.0.0.1:5173/src/assets/video/sec12.mp4",
-    post: "",
+    post: "http://127.0.0.1:5173/src/assets/post/sec12H.png",
   },
   sec13video: {
     path: "http://127.0.0.1:5173/src/assets/video/sec13.mp4",
-    post: "",
+    post: "http://127.0.0.1:5173/src/assets/post/sec13H.png",
   },
   sec15video: {
     path: "http://127.0.0.1:5173/src/assets/video/sec15.mp4",
-    post: "",
+    post: "http://127.0.0.1:5173/src/assets/post/sec15H.png",
   },
   sec20video: {
     path: "http://127.0.0.1:5173/src/assets/video/sec20.mp4",
-    post: "",
+    post: "http://127.0.0.1:5173/src/assets/post/sec20H.png",
   },
   sec23video: {
     // 来电
     calling: "http://127.0.0.1:5173/src/assets/video/calling.mp4",
+    callingpost: "",
     // 游戏
     game: "http://127.0.0.1:5173/src/assets/video/game.mp4",
+    gamepost: "",
     // 开机
     open: "http://127.0.0.1:5173/src/assets/video/open.mp4",
+    openpost: "",
     // 消息
     message: "http://127.0.0.1:5173/src/assets/video/message.mp4",
+    messagepost: "",
     // 充电
     charge: "http://127.0.0.1:5173/src/assets/video/charge.mp4",
+    chargepost: "",
   },
   sec30video: {
     path: "http://127.0.0.1:5173/src/assets/video/sec30.mp4",
