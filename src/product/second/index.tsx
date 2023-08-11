@@ -540,7 +540,7 @@ const Product = () => {
                   }}
                 ></div>
               </div>
-              <div className='param'>
+              <div className='param hparam'>
                 <div
                   className='big bigtext'
                   dangerouslySetInnerHTML={{
@@ -722,7 +722,7 @@ const Product = () => {
                       }}
                     ></div>
                   </div>
-                  <div className='param'>
+                  <div className='param hparam'>
                     <div
                       className='big bigtext'
                       dangerouslySetInnerHTML={{

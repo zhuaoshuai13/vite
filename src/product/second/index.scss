@@ -603,7 +603,7 @@ body {
 
     .text {
       position: absolute;
-      top: px-to-vw(950);
+      top: 90vh;
       right: px-to-vw(165);
       color: #fff;
       font-size: px-to-vw(36);
@@ -659,6 +659,10 @@ body {
     position: relative;
     height: px-to-vw(1073);
     margin-top: px-to-vw(-95);
+
+    .hparam {
+      visibility: hidden;
+    }
 
     canvas {
       position: absolute;
@@ -886,6 +890,7 @@ body {
         color: #fff;
         font-size: px-to-vw(16);
         font-family: "HurmeGeometricSans";
+        white-space: nowrap;
       }
     }
   }
@@ -2938,7 +2943,7 @@ body {
       .right {
         box-sizing: border-box;
         width: 100%;
-        padding: 0 10%;
+        padding: 0 6%;
       }
 
       .title {

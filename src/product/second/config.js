@@ -28,7 +28,7 @@ window.pova5ProConfig = {
   sec5: {
     title: "Shine Brighter, Look Cooler",
     sub: "Turbo Light Mecha Design",
-    desc: "POVA 5 PRO features an innovative LED light strip <br /> and 9-color RGB interactive design. With every flash, <br /> you become the center of attention.",
+    desc: `POVA 5 PRO features an innovative LED light strip <br /> and 9-color RGB interactive design. With every flash, <br class="pc"/> you<br class="mob"/> become the center of attention.`,
     text1: "Lifelike 3D Mecha Design with Turbo Stripes",
     text2: "NCVM Process",
   },
@@ -55,20 +55,19 @@ window.pova5ProConfig = {
     subb: "The Power You Can Trust",
     descb:
       "The STS coating technology ensures safety by preventing dangerous internal short circuits caused by direct contact between aluminum foil and anode, providing you with complete peace of mind.",
-    titlec: "65W Ultra Charge",
-    subc: "Charge for 20 Minutes, Talk for 2 Hours.",
-    descc:
-      "Charge your phone in a flash - 50% <br />in 24 mins, fully charge in 88 mins.<br /> Plus, turn your phone into a power<br /> bank with 10W reverse charging!",
+    titlec: "68W Ultra Charge",
+    subc: "45 Minutes,Chargeing for 100%",
+    descc: `Charge your phone in a flash - 50% <br class="pc"/>in 15 mins, fully<br class="mob"/> charge in 45 min`,
     p5a: "50% +",
-    p5b: "charged in 24 min",
+    p5b: "charged in 15 min",
     p6a: "10W",
     p6b: "Reverse Charging",
   },
   sec9: {
-    title: "Ultimate Performance. <br />Multi-faceted Indulgence",
+    title: "Ultimate Performance. <br />Immensed Gratification",
   },
   sec10: {
-    title: "MTK D6080 5G Processor",
+    title: "MediaTek Dimensity 6080 5G Processor",
     sub: "Join the 5G League, Take One Step Ahead",
     desc: `Equipped with MediaTek Dimensity 6080 5G high-speed<br /> chip, Get lightning-fast performance for an extraordinary<br />experience.`,
     p1a: "6nm",
@@ -83,11 +82,11 @@ window.pova5ProConfig = {
     desca:
       "Extraordinarily Smooth Experience <br />Say Goodbye to Latency, Slow Loading",
     p1a: "67%",
-    p1b: `Hot Start-up up<br class="pc"/>by `,
+    p1b: `Hot Start-up`,
     p2a: "25",
-    p2b: "Background Cached <br />Apps increased to",
+    p2b: "Background Cached",
     p3a: "39%",
-    p3b: "Avg App Start-up <br />time improved by ",
+    p3b: "Avg App Start-up time",
     titleb: `8GB RAM+256GB <br class="mob" />ROM`,
     descb: "Large Storage. Flagship Experience.",
   },
@@ -101,9 +100,9 @@ window.pova5ProConfig = {
     p2b: "Maximum Brightness",
   },
   sec13: {
-    title: "MTK D6080 5G Processor",
-    sub: "Join the 5G League, Take One Step Ahead",
-    desc: `2820 mm² Vapor Chamber Cooling+10159mm² Graphene heat sink<br /> Dual Heat Dissipation, Double the Thermal Performance!`,
+    title: `12979mm² Ultra<br class="mob"/> Large Heat<br class="mob"/> Dissipation Area`,
+    sub: "Conquer the Heat, Win the Battle!",
+    desc: `2820 mm² Vapor Chamber Cooling+10159mm² Graphene heat sink<br class="pc"/> Dual Heat Dissipation, Double the Thermal Performance!`,
   },
   sec14: {
     title: "Empowered by Hard Gyroscope",
@@ -111,9 +110,9 @@ window.pova5ProConfig = {
     desc: "Vibration adapted exclusively for FREEFIRE. Get steady aim, and precise hit!",
   },
   sec15: {
-    title: "Dual Speaker with AI Noise Reduction",
+    title: "Dual Speaker with  DTS& Hi-Res",
     sub: "Hear the Sound, Step into the Scene",
-    desc: "Experience immersive and full-bodied sound certified by DTS and Hi-Res. Enjoy the pure audio quality that restores the essence of sound.",
+    desc: `Experience immersive and full-bodied sound certified by DTS and Hi-Res. Enjoy the pure audio quality that<br class="mob"/> restores the essence of sound.`,
   },
   sec16: {
     title: "Brilliance Captured in Clarity",
@@ -133,7 +132,7 @@ window.pova5ProConfig = {
     desc: `Choose from over 12 sky-themed filters to create your <br class="mob"/>one-of-a-kind <br class="pc"/>photos, magically with just one tap!`,
     p1: "Sunny",
     p2: "Sunset",
-    p3: "Sunny",
+    p3: "Aurora",
     p4: "Orbit",
   },
   sec20: {
@@ -155,8 +154,8 @@ window.pova5ProConfig = {
     p1: "Incoming Calls",
     p2: "Charging",
     p3: "Startup",
-    p4: "Gamine",
-    p5: "Message",
+    p4: "Games",
+    p5: "Notifications",
   },
   sec24: {
     titlea: `Turbo Charged <br class="mob"/>Engine`,
@@ -194,7 +193,7 @@ window.pova5ProConfig = {
   sec28: {
     title: "Bypass Charge",
     sub: "Keep Calm and Game On",
-    desc: "Keep your phone cool when gaming and charging at once. Bypass charge directs power to the motherboard while high-power battery remains in sleep mode to prevent overheating and extend battery life.",
+    desc: `Keep your phone cool when gaming and <br class="mob"/>charging at once. Bypass charge directs power<br class="mob"/> to the motherboard while high-power battery<br class="mob"/> remains in sleep mode to prevent overheating<br class="mob"/> and extend battery life.`,
   },
   sec29: {
     title: "Charging Port Monitoring",
@@ -212,7 +211,7 @@ window.pova5ProConfig = {
     desc: "One-click temperature control with smart temperature <br />sensing: stabilizes gaming frame rate, improves gaming <br />fluency, extends gaming usage, and saves power <br />consumption!",
   },
   sec32: {
-    title: `FIND MORE ABOUT${"\u00A0"}<a href='' target='_blank'>HIOS13</a>`,
+    title: `FIND MORE ABOUT${"\u00A0"}<a href='' target='_blank'>HiOS13</a>`,
     // sub: "link",
     // url: "",
     p1: `Smart <br class="mob"/>Refresh<br class="pc"/> 3.0`,
