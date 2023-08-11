@@ -119,72 +119,84 @@ const Product = () => {
 
   return (
     <div className='pova5Pro' ref={total}>
-      <div className='sec1'>
-        <div className='slogen'></div>
-        <div className='phone'></div>
-        <div className='params pc'>
-          <div
-            className='param'
-            dangerouslySetInnerHTML={{
-              __html: global.pova5ProConfig.sec1.p1,
-            }}
-          ></div>
-          <div className='line'></div>
-          <div
-            className='param'
-            dangerouslySetInnerHTML={{
-              __html: global.pova5ProConfig.sec1.p2,
-            }}
-          ></div>
-          <div className='line'></div>
-          <div
-            className='param'
-            dangerouslySetInnerHTML={{
-              __html: global.pova5ProConfig.sec1.p3,
-            }}
-          ></div>
-          <div className='line'></div>
-          <div
-            className='param'
-            dangerouslySetInnerHTML={{
-              __html: global.pova5ProConfig.sec1.p4,
-            }}
-          ></div>
-          <div className='add weight'>+</div>
-          <div
-            className='param'
-            dangerouslySetInnerHTML={{
-              __html: global.pova5ProConfig.sec1.p5,
-            }}
-          ></div>
-        </div>
+      <div className={`sec1 ${global.pova5ProConfig.sec1.useImage}`}>
+        {global.pova5ProConfig.sec1.useImage ? (
+          <>
+            {responsive?.md ? (
+              <img src={global.pova5ProConfig.sec1.pcImgSrc as string}></img>
+            ) : (
+              <img src={global.pova5ProConfig.sec1.mobImgSrc as string}></img>
+            )}
+          </>
+        ) : (
+          <>
+            <div className='slogen'></div>
+            <div className='phone'></div>
+            <div className='params pc'>
+              <div
+                className='param'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec1.p1,
+                }}
+              ></div>
+              <div className='line'></div>
+              <div
+                className='param'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec1.p2,
+                }}
+              ></div>
+              <div className='line'></div>
+              <div
+                className='param'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec1.p3,
+                }}
+              ></div>
+              <div className='line'></div>
+              <div
+                className='param'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec1.p4,
+                }}
+              ></div>
+              <div className='add weight'>+</div>
+              <div
+                className='param'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec1.p5,
+                }}
+              ></div>
+            </div>
 
-        <div className='mob mparams'>
-          <div
-            className='param'
-            dangerouslySetInnerHTML={{
-              __html: global.pova5ProConfig.sec1.p1m,
-            }}
-          ></div>
-          <div
-            className='param'
-            dangerouslySetInnerHTML={{
-              __html: global.pova5ProConfig.sec1.p2m,
-            }}
-          ></div>
-          <div
-            className='param'
-            dangerouslySetInnerHTML={{
-              __html: global.pova5ProConfig.sec1.p3m,
-            }}
-          ></div>
-          <div
-            className='param'
-            dangerouslySetInnerHTML={{
-              __html: global.pova5ProConfig.sec1.p4m,
-            }}
-          ></div>
-        </div>
+            <div className='mob mparams'>
+              <div
+                className='param'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec1.p1m,
+                }}
+              ></div>
+              <div
+                className='param'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec1.p2m,
+                }}
+              ></div>
+              <div
+                className='param'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec1.p3m,
+                }}
+              ></div>
+              <div
+                className='param'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec1.p4m,
+                }}
+              ></div>
+            </div>
+          </>
+        )}
       </div>
       <div className='sec2'>
         <div
@@ -349,8 +361,22 @@ const Product = () => {
         </div>
       </div>
       <div className='sec6'>
-        <div className='img'></div>
-        <div className='img2'></div>
+        <div className='img'>
+          <div
+            className='text'
+            dangerouslySetInnerHTML={{
+              __html: global.pova5ProConfig.sec6.p1,
+            }}
+          ></div>
+        </div>
+        <div className='img2'>
+          <div
+            className='text'
+            dangerouslySetInnerHTML={{
+              __html: global.pova5ProConfig.sec6.p2,
+            }}
+          ></div>
+        </div>
       </div>
       <section className='sec7 open' id='sec7ID'>
         <div className='top'></div>
@@ -814,7 +840,6 @@ const Product = () => {
                 className='video'
                 autoPlay
                 webkit-playsinline='true'
-                controls
                 preload='auto'
                 muted
                 loop
@@ -829,7 +854,6 @@ const Product = () => {
               poster={global.pova5ProConfig.sec10video.post}
               className='video'
               autoPlay
-              controls
               webkit-playsinline='true'
               preload='auto'
               muted
@@ -869,12 +893,15 @@ const Product = () => {
             ></div>
             <div className='params'>
               <div className='param'>
-                <div
-                  className='bigtext big'
-                  dangerouslySetInnerHTML={{
-                    __html: global.pova5ProConfig.sec11.p1a,
-                  }}
-                ></div>
+                <div className='up'>
+                  <div
+                    className='bigtext big'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pova5ProConfig.sec11.p1a,
+                    }}
+                  ></div>
+                  <div className='icon'></div>
+                </div>
                 <div
                   className='small'
                   dangerouslySetInnerHTML={{
@@ -883,12 +910,15 @@ const Product = () => {
                 ></div>
               </div>
               <div className='param'>
-                <div
-                  className='bigtext big'
-                  dangerouslySetInnerHTML={{
-                    __html: global.pova5ProConfig.sec11.p2a,
-                  }}
-                ></div>
+                <div className='up'>
+                  <div
+                    className='bigtext big'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pova5ProConfig.sec11.p2a,
+                    }}
+                  ></div>
+                  <div className='bigtext icontext'>APP</div>
+                </div>
                 <div
                   className='small'
                   dangerouslySetInnerHTML={{
@@ -897,12 +927,15 @@ const Product = () => {
                 ></div>
               </div>
               <div className='param'>
-                <div
-                  className='bigtext big'
-                  dangerouslySetInnerHTML={{
-                    __html: global.pova5ProConfig.sec11.p3a,
-                  }}
-                ></div>
+                <div className='up'>
+                  <div
+                    className='bigtext big'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pova5ProConfig.sec11.p3a,
+                    }}
+                  ></div>
+                  <div className='icon'></div>
+                </div>
                 <div
                   className='small'
                   dangerouslySetInnerHTML={{
@@ -971,12 +1004,15 @@ const Product = () => {
                 ></div>
                 <div className='params'>
                   <div className='param'>
-                    <div
-                      className='bigtext big'
-                      dangerouslySetInnerHTML={{
-                        __html: global.pova5ProConfig.sec11.p1a,
-                      }}
-                    ></div>
+                    <div className='up'>
+                      <div
+                        className='bigtext big'
+                        dangerouslySetInnerHTML={{
+                          __html: global.pova5ProConfig.sec11.p1a,
+                        }}
+                      ></div>
+                      <div className='icon'></div>
+                    </div>
                     <div
                       className='small'
                       dangerouslySetInnerHTML={{
@@ -985,12 +1021,15 @@ const Product = () => {
                     ></div>
                   </div>
                   <div className='param'>
-                    <div
-                      className='bigtext big'
-                      dangerouslySetInnerHTML={{
-                        __html: global.pova5ProConfig.sec11.p2a,
-                      }}
-                    ></div>
+                    <div className='up'>
+                      <div
+                        className='bigtext big'
+                        dangerouslySetInnerHTML={{
+                          __html: global.pova5ProConfig.sec11.p2a,
+                        }}
+                      ></div>
+                      <div className='bigtext icontext'>APP</div>
+                    </div>
                     <div
                       className='small'
                       dangerouslySetInnerHTML={{
@@ -999,12 +1038,16 @@ const Product = () => {
                     ></div>
                   </div>
                   <div className='param'>
-                    <div
-                      className='bigtext big'
-                      dangerouslySetInnerHTML={{
-                        __html: global.pova5ProConfig.sec11.p3a,
-                      }}
-                    ></div>
+                    <div className='up'>
+                      <div
+                        className='bigtext big'
+                        dangerouslySetInnerHTML={{
+                          __html: global.pova5ProConfig.sec11.p3a,
+                        }}
+                      ></div>
+
+                      <div className='icon'></div>
+                    </div>
                     <div
                       className='small'
                       dangerouslySetInnerHTML={{
@@ -1249,6 +1292,7 @@ const Product = () => {
             <div className='params'>
               <div className='f1a'></div>
               <div className='f2a'></div>
+              <div className='f3a'></div>
             </div>
           </div>
         </div>
@@ -1846,7 +1890,10 @@ const Product = () => {
           </div>
           <div className='box2'>
             <div className='param'>
-              <div className='big bigtext'>15-20%</div>
+              <div className='up'>
+                <div className='icon'></div>
+                <div className='big bigtext'>15-20%</div>
+              </div>
               <div
                 className='small'
                 dangerouslySetInnerHTML={{
@@ -1855,7 +1902,10 @@ const Product = () => {
               ></div>
             </div>
             <div className='param'>
-              <div className='big bigtext' ref={countUpRef1}></div>
+              <div className='up'>
+                <div className='icon'></div>
+                <div className='big bigtext' ref={countUpRef1}></div>
+              </div>
               <div
                 className='small'
                 dangerouslySetInnerHTML={{
@@ -1864,7 +1914,10 @@ const Product = () => {
               ></div>
             </div>
             <div className='param'>
-              <div className='big bigtext' ref={countUpRef2}></div>
+              <div className='up'>
+                <div className='icon'></div>
+                <div className='big bigtext' ref={countUpRef2}></div>
+              </div>
               <div
                 className='small'
                 dangerouslySetInnerHTML={{
@@ -1873,7 +1926,10 @@ const Product = () => {
               ></div>
             </div>
             <div className='param'>
-              <div className='big bigtext' ref={countUpRef3}></div>
+              <div className='up'>
+                <div className='icon'></div>
+                <div className='big bigtext' ref={countUpRef3}></div>
+              </div>
               <div
                 className='small'
                 dangerouslySetInnerHTML={{
@@ -2189,18 +2245,6 @@ const Product = () => {
             __html: global.pova5ProConfig.sec32.title,
           }}
         ></div>
-        <div className='subgroup'>
-          <div className='f1'></div>
-          <a href={`${global.pova5ProConfig.sec32.url}`} target='blank'>
-            <div
-              className='subtitle weight'
-              dangerouslySetInnerHTML={{
-                __html: global.pova5ProConfig.sec32.sub,
-              }}
-            ></div>
-          </a>
-          <div className='f2'></div>
-        </div>
         <div className='group'>
           <div className='out'>
             <div className='img'></div>

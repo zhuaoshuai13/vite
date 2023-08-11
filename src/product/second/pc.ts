@@ -646,6 +646,7 @@ const Pc = (
           .from(".sec15 .title", 1, { opacity: 0, y: 100 }, "a")
           .from(".sec15 .subgroup", 1, { opacity: 0, y: 100, delay: 0.15 }, "a")
           .from(".sec15 .desc", 1, { opacity: 0, y: 100, delay: 0.3 }, "a")
+          .from(".sec15 .params", 1, { opacity: 0, y: 100, delay: 0.45 }, "a")
           .from(".sec15 .left", 1, { opacity: 0, x: "-10%" }, "a")
         ScrollTrigger.create({
           trigger: ".sec15",

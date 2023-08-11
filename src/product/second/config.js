@@ -11,6 +11,9 @@ window.pova5ProConfig = {
     p2m: "5000mAh Mega Battery",
     p3m: "68W Ultra Charge",
     p4m: "256GB ROM + 8GB RAM",
+    useImage: false,
+    pcImgSrc: "",
+    mobImgSrc: "",
   },
   sec3: {
     p1: "Innovative <br />Design",
@@ -28,6 +31,10 @@ window.pova5ProConfig = {
     desc: "POVA 5 PRO features an innovative LED light strip <br /> and 9-color RGB interactive design. With every flash, <br /> you become the center of attention.",
     text1: "Lifelike 3D Mecha Design with Turbo Stripes",
     text2: "NCVM Process",
+  },
+  sec6: {
+    p1: `Dark <br class="pc"/>Illusion`,
+    p2: `Silver <br class="pc"/>Fantasy`,
   },
   sec7: {
     title: "Dominate with <br /> Unstoppable Power!",
@@ -117,8 +124,8 @@ window.pova5ProConfig = {
     desc: `Cool moments don't wait. Capture them with 50MP AI camera! See <br class="pc"/>ultra-clear images that bring your coolest moments to life`,
   },
   sec18: {
-    titlea: "Amplify your brilliance with Portrait Beauty feature",
-    titleb: "Stay cool and clear in backlight with HDR mode",
+    titlea: "Portrait Beauty",
+    titleb: "HDR mode",
   },
   sec19: {
     title: "Sky Shop",
@@ -205,9 +212,9 @@ window.pova5ProConfig = {
     desc: "One-click temperature control with smart temperature <br />sensing: stabilizes gaming frame rate, improves gaming <br />fluency, extends gaming usage, and saves power <br />consumption!",
   },
   sec32: {
-    title: "FIND MORE ABOUT HIOS13",
-    sub: "link",
-    url: "",
+    title: `FIND MORE ABOUT${"\u00A0"}<a href='' target='_blank'>HIOS13</a>`,
+    // sub: "link",
+    // url: "",
     p1: `Smart <br class="mob"/>Refresh<br class="pc"/> 3.0`,
     p2: `Aurora <br class="mob"/> Engine <br /> ${"\u00A0"}`,
     p3: `Extended RAM <br /> ${"\u00A0"}`,
@@ -268,7 +275,7 @@ window.pova5ProConfig = {
   },
   sec30video: {
     path: "http://127.0.0.1:5173/src/assets/video/sec30.mp4",
-    post: "",
+    post: "http://127.0.0.1:5173/src/assets/post/sec30V.webp",
   },
   sec8frames: {
     path: "http://127.0.0.1:5173/src/assets/frame/ani1",

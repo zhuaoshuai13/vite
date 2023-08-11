@@ -184,6 +184,15 @@ body {
     position: relative;
     height: px-to-vw(1021);
 
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.true {
+      background-image: unset !important;
+    }
+
     @include bg('sec1/bg.png');
 
     .phone {
@@ -592,6 +601,17 @@ body {
     height: px-to-vw(1305);
     overflow: hidden;
 
+    .text {
+      position: absolute;
+      top: px-to-vw(950);
+      right: px-to-vw(165);
+      color: #fff;
+      font-size: px-to-vw(36);
+      font-family: "Korataki";
+      line-height: 1.2;
+      text-align: right;
+    }
+
     .img {
       width: 100%;
       height: 100%;
@@ -858,6 +878,7 @@ body {
       .bigtext {
         font-size: px-to-vw(24);
         font-family: 'Korataki';
+        white-space: nowrap;
         text-transform: unset;
       }
 
@@ -883,6 +904,25 @@ body {
       padding-bottom: px-to-vw(83);
       padding-left: px-to-vw(130);
       opacity: 1;
+    }
+
+    .up {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      width: px-to-vw(22);
+      height: px-to-vw(18);
+      margin-left: px-to-vw(10);
+
+      @include bg('sec11/icon.png');
+    }
+
+    .icontext {
+      margin-left: px-to-vw(10);
+      font-size: px-to-vw(14);
+      font-family: "Korataki";
     }
 
     .content2 {
@@ -1213,6 +1253,13 @@ body {
       height: px-to-vw(79);
 
       @include bg('sec15/f2.png');
+    }
+
+    .f3a {
+      width: px-to-vw(78);
+      height: px-to-vw(98);
+
+      @include bg('sec15/f3.png');
     }
   }
 
@@ -1675,6 +1722,19 @@ body {
       @include bg('sec24/bg.png');
     }
 
+    .up {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        width: px-to-vw(18);
+        height: px-to-vw(41);
+        margin-right: px-to-vw(17);
+
+        @include bg('sec24/icon.png');
+      }
+    }
+
     .box1 {
       position: absolute;
       top: px-to-vw(119);
@@ -1743,7 +1803,6 @@ body {
 
     .desc {
       max-width: 100%;
-      text-align: center;
     }
 
     .params {
@@ -2099,7 +2158,17 @@ body {
     padding: px-to-vw(240) 0 px-to-vw(478);
 
     .title {
+      display: flex;
+      width: fit-content;
       text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        a {
+          color: #1890ff;
+          text-decoration-color: #1890ff !important;
+        }
+      }
     }
 
     .subgroup {
@@ -2109,21 +2178,18 @@ body {
 
     a {
       display: block;
+      color: #fff;
+      font-family: "Korataki";
       text-decoration: underline !important;
-      cursor: pointer;
-      transition: all .8s;
+      transition: all .5s;
       text-decoration-color: #fff !important;
-
-      &:hover {
-        transform: scale(1.2);
-      }
     }
 
     .group {
       display: flex;
       flex-wrap: wrap;
       width: 60%;
-      margin: px-to-vw(112) auto 0;
+      margin: px-to-vw(166) auto 0;
       row-gap: px-to-vw(87);
 
       .out {
@@ -2333,7 +2399,7 @@ body {
         background-size: cover;
 
         &:before {
-          top: -8px;
+          top: -7px;
           width: pxm-to-vw(160);
           height: pxm-to-vw(13);
         }
@@ -2482,6 +2548,15 @@ body {
     .sec6 {
       height: pxm-to-vw(1664);
       min-height: 100vh;
+
+      .text {
+        top: pxm-to-vw(130);
+        right: 0;
+        left: 0;
+        width: fit-content;
+        margin: auto;
+        font-size: pxm-to-vw(48);
+      }
 
       .img {
 
@@ -2692,6 +2767,21 @@ body {
 
     .sec11 {
       min-height: unset;
+
+      .up {
+        align-items: baseline;
+      }
+
+      .icon {
+        width: pxm-to-vw(39);
+        height: pxm-to-vw(33);
+        margin-left: pxm-to-vw(8);
+      }
+
+      .icontext {
+        margin-left: px-to-vw(8);
+        font-size: pxm-to-vw(25);
+      }
 
       .pc {
         display: none !important;
@@ -2993,6 +3083,11 @@ body {
         width: pxm-to-vw(78);
         height: pxm-to-vw(79);
       }
+
+      .f3a {
+        width: pxm-to-vw(72);
+        height: pxm-to-vw(90);
+      }
     }
 
     .sec17 {
@@ -3213,6 +3308,19 @@ body {
     .sec24 {
       padding-top: pxm-to-vw(300);
 
+      .bigtitle,.smalltitle {
+        width: fit-content;
+        height: fit-content;
+        color: transparent;
+        line-height: 1.2;
+        background: linear-gradient(275.88deg, #9db7d4 10.18%, #7297c0 10.56%, #bed5ee 83.85%);
+
+        /* stylelint-disable-next-line property-no-vendor-prefix */
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
       .params {
         width: pxm-to-vw(994);
         height: pxm-to-vw(1117);
@@ -3220,6 +3328,14 @@ body {
         overflow: hidden;
 
         @include bg('sec24m/bg.png');
+      }
+
+      .up {
+        .icon {
+          width: pxm-to-vw(32);
+          height: pxm-to-vw(73);
+          margin-right: pxm-to-vw(20);
+        }
       }
 
       .box1 {
@@ -3251,6 +3367,7 @@ body {
 
         .small {
           margin-top: pxm-to-vw(15);
+          padding-left: pxm-to-vw(52);
           font-size: pxm-to-vw(28);
         }
       }
@@ -3288,6 +3405,10 @@ body {
         .subtitle {
           text-align: center;
         }
+      }
+
+      .desc {
+        text-align: center;
       }
 
       .params {
@@ -3345,6 +3466,19 @@ body {
 
     .sec27 {
       padding-top: pxm-to-vw(300);
+
+      .bigtitle,.smalltitle {
+        width: fit-content;
+        height: fit-content;
+        color: transparent;
+        line-height: 1.2;
+        background: linear-gradient(275.88deg, #9db7d4 10.18%, #7297c0 10.56%, #bed5ee 83.85%);
+
+        /* stylelint-disable-next-line property-no-vendor-prefix */
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
       .content {
         flex-direction: column;
@@ -3522,6 +3656,15 @@ body {
       .subgroup {
         width: pxm-to-vw(466);
         margin-top: pxm-to-vw(120);
+      }
+
+      .title {
+        flex-direction: column;
+
+        a {
+          margin-top: pxm-to-vw(50);
+          font-size: pxm-to-vw(48);
+        }
       }
 
       .group {
