@@ -107,7 +107,7 @@ window.pova5ProConfig = {
   sec14: {
     title: "Empowered by Hard Gyroscope",
     sub: "Be the Sharpshooter!",
-    desc: "Vibration adapted exclusively for FREEFIRE. Get steady aim, and precise hit!",
+    desc: "Vibration adapted exclusively for Games. Get steady aim, and precise hit!",
   },
   sec15: {
     title: "Dual Speaker with  DTS& Hi-Res",
