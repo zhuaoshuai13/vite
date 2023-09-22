@@ -211,8 +211,24 @@ body {
       left: px-to-vw(87);
       width: px-to-vw(610);
       height: px-to-vw(190);
+      padding-top: px-to-vw(91);
+      font-size: px-to-vw(39);
 
-      @include bg('sec1/slogen.png');
+      .text {
+        font-family: "Korataki";
+        line-height: 1.2;
+      }
+
+      .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: inset(0 0 76% 0%);
+
+        @include bg('sec1/slogen.png');
+      }
     }
 
     .params {
@@ -302,6 +318,7 @@ body {
       video {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
   }
@@ -1654,10 +1671,10 @@ body {
       align-items: center;
       justify-content: space-between;
       width: px-to-vw(904);
-      height: px-to-vw(694);
+      height: px-to-vw(720);
 
       .swiper {
-        height: px-to-vw(694);
+        height: px-to-vw(720);
       }
 
       .swiper-wrapper {
@@ -2211,6 +2228,13 @@ body {
 
           @include bg('sec32/f1.png');
         }
+
+        @for $i from 1 through 8 {
+          .img#{$i} {
+
+            @include bg('sec32/f#{$i}.png');
+          }
+        }
       }
 
       .text {
@@ -2371,8 +2395,15 @@ body {
         width: pxm-to-vw(785);
         height: pxm-to-vw(213);
         margin: auto;
+        padding-top: pxm-to-vw(84);
+        font-size: pxm-to-vw(54);
+        text-align: center;
 
-        @include bg('sec1m/logo02.png');
+        .img {
+          clip-path: inset(0 0 75% 0%);
+
+          @include bg('sec1m/logo02.png');
+        }
       }
 
       .params {

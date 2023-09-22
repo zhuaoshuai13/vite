@@ -1,7 +1,11 @@
+const url = import.meta.env.VITE_URL
+
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 window.pova5ProConfig = {
   sec1: {
+    a: `${url}`,
+    t1: `LIGHT UP <br />YOUR POWER`,
     p1: "MediaTek <span>D60805G</span> <br /> Processor",
     p2: "<span>5000mAh</span> <br />Mega Battery",
     p3: "<span>68W</span>Ultra <br />Charge",
@@ -20,10 +24,10 @@ window.pova5ProConfig = {
     p2: "Stunning <br />Power",
     p3: "Ultimate <br />Performance",
     p4: "High-Definition <br />Camera",
-    p5: "HIOS13",
+    p5: "HiOS 13",
   },
   sec4: {
-    title: "NEW DESIGN, NEW <br /> REVOLUTION",
+    title: "NEW DESIGN,<br /> NEW REVOLUTION",
   },
   sec5: {
     title: "Shine Brighter, Look Cooler",
@@ -144,13 +148,13 @@ window.pova5ProConfig = {
     title: "Show Your Colorful Side",
   },
   sec22: {
-    title: "HIOS13 New Interaction, New Experience",
+    title: "HiOS 13 <br />New Interaction, <br />New Experience",
     sub: "—Based on Android 13",
   },
   sec23: {
     title: "Colorful LED Ambient Light",
     sub: "Light up Your Vitality",
-    desc: `Explore a range of dynamic visual effects with POVA's cool breathing LED lights <br class="pc"/>on the back. Power-on, message notification, charging, gaming, music, face-down, <br class="pc"/>or low battery, every mode has its unique lighting pattern.`,
+    desc: `Explore a range of dynamic visual effects with POVA's cool breathing LED lights<br class="pc"/> on the back. Incoming Calls, startup,  notification, charging, games, music or low battery,<br class="pc"/> every mode has its unique lighting pattern.`,
     p1: "Incoming Calls",
     p2: "Charging",
     p3: "Startup",
@@ -177,7 +181,7 @@ window.pova5ProConfig = {
   sec26: {
     title: "Smart 5G 2.0",
     sub: "Intelligent scheduling -- a ticket to the future",
-    desc: `Smart5G 2.0 recognizes usage scenarios and analyzes <br class="mob"/> the current network <br class="pc"/>environment to intelligently switch <br class="mob"/> between 4G and 5G. This reduces power <br class="pc"/>consumption <br class="mob"/> and extends battery life.`,
+    desc: `Smart 5G 2.0 recognizes usage scenarios and analyzes <br class="mob"/> the current network <br class="pc"/>environment to intelligently switch <br class="mob"/> between 4G and 5G. This reduces power <br class="pc"/>consumption <br class="mob"/> and extends battery life.`,
   },
   sec27: {
     titlea: "Guardian of Safe Charging",
@@ -203,7 +207,7 @@ window.pova5ProConfig = {
   sec30: {
     title: "Game Space 2.0",
     sub: "Enjoy Gaming Time",
-    desc: `Cool interface upgrade, a variety of modes extremely fast switching. <br class="pc"/>New performance radar chart, performance improvement is clear.`,
+    desc: `Cool interface upgrade. Instantly switch from a variety of modes. <br class="pc"/>View performance improvements in a glance with the new performance radar chart.`,
   },
   sec31: {
     title: "Panther Engine 3.0",
@@ -211,7 +215,7 @@ window.pova5ProConfig = {
     desc: "One-click temperature control with smart temperature <br />sensing: stabilizes gaming frame rate, improves gaming <br />fluency, extends gaming usage, and saves power <br />consumption!",
   },
   sec32: {
-    title: `FIND MORE ABOUT${"\u00A0"}<a href='' target='_blank'>HiOS13</a>`,
+    title: `FIND MORE ABOUT${"\u00A0"}<a href='' target='_blank'>HiOS 13</a>`,
     // sub: "link",
     // url: "",
     p1: `Smart <br class="mob"/>Refresh<br class="pc"/> 3.0`,

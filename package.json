@@ -14,9 +14,11 @@
   "dependencies": {
     "gsap": "^3.12.1",
     "gsap-trial": "^3.12.1",
+    "postcss-plugin": "^1.0.0",
     "react": "^16.14.0",
     "react-countup": "^6.4.2",
     "react-dom": "^16.14.0",
+    "rollup": "^3.29.0",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-image": "^1.0.2",
     "rollup-plugin-postcss": "^4.0.2",
@@ -25,7 +27,8 @@
     "stylelint": "^15.8.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard-scss": "^9.0.0",
-    "swiper": "^10.0.3"
+    "swiper": "^10.0.3",
+    "vite-plugin-static-copy": "^0.17.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.13",

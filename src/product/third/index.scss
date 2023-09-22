@@ -1,0 +1,52 @@
+
+@mixin bg($url,$size:true) {
+  background-image: url('../../assets/img/#{$url}');
+  background-repeat: no-repeat;
+
+  @if  $size == true {
+    background-size: contain;
+  }
+
+  @if  $size == false {
+    background-size: cover;
+  }
+}
+
+@font-face {
+  font-family: 'HurmeGeometricSans';
+  src: url('../../assets/font/HurmeGeometricSans_No3_4_Regular.otf');
+}
+
+@font-face {
+  font-family: 'HBold';
+  src: url('../../assets/font/HurmeGeometricSans_No3_6_Bold.otf');
+}
+
+.f {
+  width: 100vw;
+  height: 100vh;
+}
+
+.f1 {
+  background-image: url('../../assets/img/bg.jpg');
+}
+
+.f2 {
+  background-image: url('../../assets/img/bg2.png');
+}
+
+.sec3 {
+  .f3 {
+    background-image: url('@/assets/img/bg3.png');
+  }
+
+  &.false {
+    .f3 {
+      background-image: unset;
+    }
+  }
+}
+
+.f4 {
+  background-image: url('../../assets/img/bg2.png');
+}

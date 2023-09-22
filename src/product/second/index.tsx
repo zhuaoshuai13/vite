@@ -130,7 +130,15 @@ const Product = () => {
           </>
         ) : (
           <>
-            <div className='slogen'></div>
+            <div className='slogen'>
+              <div className='img'></div>
+              <div
+                className='text'
+                dangerouslySetInnerHTML={{
+                  __html: global.pova5ProConfig.sec1.t1,
+                }}
+              ></div>
+            </div>
             <div className='phone'></div>
             <div className='params pc'>
               <div
@@ -1967,7 +1975,7 @@ const Product = () => {
           ></div>
           <div className='params'>
             <div className='param'>
-              <div className='top up'></div>
+              <div className='top down'></div>
               <div className='bot'>
                 <div className='big bigtext' ref={countUpRef4}></div>
                 <div
@@ -1979,7 +1987,7 @@ const Product = () => {
               </div>
             </div>
             <div className='param'>
-              <div className='top down'></div>
+              <div className='top up'></div>
               <div className='bot'>
                 <div className='big bigtext' ref={countUpRef5}></div>
                 <div
@@ -2247,7 +2255,7 @@ const Product = () => {
         ></div>
         <div className='group'>
           <div className='out'>
-            <div className='img'></div>
+            <div className='img img1'></div>
             <div
               className='text'
               dangerouslySetInnerHTML={{
@@ -2256,7 +2264,7 @@ const Product = () => {
             ></div>
           </div>
           <div className='out'>
-            <div className='img'></div>
+            <div className='img img2'></div>
             <div
               className='text'
               dangerouslySetInnerHTML={{
@@ -2265,7 +2273,7 @@ const Product = () => {
             ></div>
           </div>
           <div className='out'>
-            <div className='img'></div>
+            <div className='img img3'></div>
             <div
               className='text'
               dangerouslySetInnerHTML={{
@@ -2274,7 +2282,7 @@ const Product = () => {
             ></div>
           </div>
           <div className='out'>
-            <div className='img'></div>
+            <div className='img img4'></div>
             <div
               className='text'
               dangerouslySetInnerHTML={{
@@ -2283,7 +2291,7 @@ const Product = () => {
             ></div>
           </div>
           <div className='out'>
-            <div className='img'></div>
+            <div className='img img5'></div>
             <div
               className='text'
               dangerouslySetInnerHTML={{
@@ -2292,7 +2300,7 @@ const Product = () => {
             ></div>
           </div>
           <div className='out'>
-            <div className='img'></div>
+            <div className='img img6'></div>
             <div
               className='text'
               dangerouslySetInnerHTML={{
@@ -2301,7 +2309,7 @@ const Product = () => {
             ></div>
           </div>
           <div className='out'>
-            <div className='img'></div>
+            <div className='img img7'></div>
             <div
               className='text'
               dangerouslySetInnerHTML={{
@@ -2310,7 +2318,7 @@ const Product = () => {
             ></div>
           </div>
           <div className='out'>
-            <div className='img'></div>
+            <div className='img img8'></div>
             <div
               className='text'
               dangerouslySetInnerHTML={{
