@@ -1,46 +1,52 @@
+
+$pcwidth: 19.2;
+$mobwidth: 10.8;
+
+@mixin position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin fontsize($fontSize) {
+  font-size: calc(#{$fontSize} * (1 / $pcwidth) * 1vw);
+}
+
+@mixin bg($url,$size:true) {
+  background-image: url('../../assets/img/#{$url}');
+  background-repeat: no-repeat;
+
+  @if  $size == true {
+    background-size: contain;
+  }
+
+  @if  $size == false {
+    background-size: cover;
+  }
+}
+
+@function px-to-vw($value) {
+
+  @return #{$value * calc(1 / $pcwidth)}vw;
+}
+
+@function px-to-vw-mb($value) {
+
+  @return #{$value * calc(1 / $mobwidth)}vw;
+}
+
+@function px-to-vh($value) {
+
+  @return #{$value * calc(1 / 14.4)}vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .pop8 {
-  $pcwidth: 19.2;
-  $mobwidth: 10.8;
-
-  @mixin position {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  @mixin fontsize($fontSize) {
-    font-size: calc(#{$fontSize} * (1 / $pcWidth) * 1vw);
-  }
-
-  @mixin bg($url,$size:true) {
-    background-image: url('../../assets/img/#{$url}');
-    background-repeat: no-repeat;
-
-    @if  $size == true {
-      background-size: contain;
-    }
-
-    @if  $size == false {
-      background-size: cover;
-    }
-  }
-
-  @function px-to-vw($value) {
-
-    @return #{$value * calc(1 / $pcWidth)}vw;
-  }
-
-  @function px-to-vw-mb($value) {
-
-    @return #{$value * calc(1 / $mobWidth)}vw;
-  }
-
-  @function px-to-vh($value) {
-
-    @return #{$value * calc(1 / 14.4)}vh;
-  }
-
   box-sizing: border-box;
   width: 100%;
   overflow: hidden;
