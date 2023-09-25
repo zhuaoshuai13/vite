@@ -84,9 +84,13 @@ $mobwidth: 10.8;
     width: px-to-vw(1320);
     margin: auto;
     color: #fff;
-    font-size: px-to-vw(130);
-    font-family: 'HB';
-    line-height: 90%;
+
+    .title {
+      width: unset !important;
+      font-size: px-to-vw(130) !important;
+      font-family: 'HB';
+      line-height: 90%;
+    }
 
     .icon {
       position: absolute;

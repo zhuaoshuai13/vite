@@ -32,6 +32,76 @@ const Sec11 = () => {
           }}
         ></div>
       </div>
+      <div className='sec11_phone'></div>
+      <div className='sec11_text'></div>
+      <div className='left_circle'></div>
+      <div className='right_circle'>
+        <div className='content_box'>
+          <div className='text_box'>
+            <div
+              className='title'
+              dangerouslySetInnerHTML={{
+                __html: global.pop8Config.sec11.title,
+              }}
+            ></div>
+            <div
+              className='desc_18'
+              dangerouslySetInnerHTML={{
+                __html: global.pop8Config.sec11.desc,
+              }}
+            ></div>
+            <div className='params'>
+              <div className='param'>
+                <div
+                  className='big_text'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec11.p1a,
+                  }}
+                ></div>
+                <div
+                  className='small_text'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec11.p1b,
+                  }}
+                ></div>
+              </div>
+              <div className='param'>
+                <div
+                  className='big_text'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec11.p2a,
+                  }}
+                ></div>
+                <div
+                  className='small_text'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec11.p2b,
+                  }}
+                ></div>
+              </div>
+              <div className='param'>
+                <div
+                  className='big_text'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec11.p3a,
+                  }}
+                ></div>
+                <div
+                  className='small_text'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec11.p3b,
+                  }}
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div className='product'></div>
+        </div>
+      </div>
+      <div
+        className='tips'
+        dangerouslySetInnerHTML={{ __html: global.pop8Config.sec11.tips }}
+      ></div>
     </div>
   )
 }

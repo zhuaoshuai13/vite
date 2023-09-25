@@ -1,6 +1,7 @@
 @import '../index';
 
 .sec11.pop8 {
+  position: relative;
   padding-top: px-to-vw(308);
 
   .title_box {
@@ -24,5 +25,95 @@
 
       @include bg('sec11PcIcon3.png');
     }
+  }
+
+  .left_circle {
+    position: absolute;
+    top: 37%;
+    left: 9%;
+    width: px-to-vw(871);
+    height: px-to-vw(871);
+
+    @include bg('sec11PcLeftCircle.png');
+  }
+
+  .right_circle {
+    position: absolute;
+    top: 34%;
+    right: 4%;
+    z-index: 4;
+    width: px-to-vw(1112);
+    height: px-to-vw(1112);
+
+    @include bg('sec11PcRightCircle.png');
+  }
+
+  .sec11_phone {
+    position: absolute;
+    top: 46%;
+    left: 12%;
+    z-index: 4;
+    width: px-to-vw(373);
+    height: px-to-vw(805);
+
+    @include bg('sec11Phone.png');
+  }
+
+  .sec11_text {
+    position: absolute;
+    top: 79%;
+    left: 31%;
+    z-index: 5;
+    width: px-to-vw(290);
+    height: px-to-vw(216);
+
+    @include bg('sec11Text.png');
+  }
+
+  .content_box {
+    padding-top: px-to-vw(480);
+    padding-left: px-to-vw(100);
+    color: #fff;
+  }
+
+  .text_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    width: px-to-vw(496);
+    font-size: px-to-vw(48);
+    font-family: "HB";
+    line-height: 90%;
+  }
+
+  .desc_18 {
+    width: 27.2vw;
+  }
+
+  .params {
+    display: flex;
+    gap: px-to-vw(61);
+    margin-top: px-to-vw(57);
+  }
+
+  .big_text {
+    color: rgba(250, 255, 0, 1);
+    font-size: px-to-vw(35);
+    font-family: "HB";
+    line-height: 1.2;
+  }
+
+  .small_text {
+    font-size: px-to-vw(18);
+    font-family: "HB";
+  }
+
+  .tips {
+    margin-top: px-to-vw(1100);
+    padding-bottom: px-to-vw(40);
+    padding-left: px-to-vw(253);
   }
 }

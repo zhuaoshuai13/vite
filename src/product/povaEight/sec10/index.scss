@@ -2,6 +2,8 @@
 @import '../index';
 
 .sec10.pop8 {
+  overflow: unset;
+
   .title_box {
     .icon1 {
       width: px-to-vw(218);
@@ -43,7 +45,7 @@
     @include bg('sec10Bg.png');
 
     .text_box {
-      width: px-to-vw(525);
+      width: 28vw;
       margin-left: px-to-vw(1174);
 
       .title {
