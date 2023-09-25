@@ -3,12 +3,22 @@
 
 window.pop8Config = {
   sec1: {
-    title: "All You Want Just Doubled",
-    p1: "Double Speakers",
-    p2: "Double Rear Camera",
-    p3: "Double RAM",
-    p4: "Double Interactive Way",
-    p22: "Up to 4+4GB",
+    title: 'All You Want Just Doubled',
+    p1: 'Double <br/> Speakers',
+    p2: 'Double <br/> Rear Camera',
+    p3: 'Double <br/> RAM <span>Up to <br/> 4+4GB</span>',
+    p4: 'Double <br/> Interactive Way',
+    tips: '64GB ROM+6GB RAM*(3GB+3GB Extended); 64GB ROM+8GB RAM*(4GB+4GB Extended) <br/> 128GB ROM+8GB RAM*(4GB+4GB Extended)',
+    icon1Top: '1%',
+    icon1Left: '-1%',
+    icon2Top: '1%',
+    icon2Left: '83%',
+    icon3Top: '46%',
+    icon3Left: '-2%',
+    icon4Top: '52%',
+    icon4Left: '28%',
+    icon5Top: '41%',
+    icon5Left: '85%',
   },
   sec9: {
     title: "Quality",

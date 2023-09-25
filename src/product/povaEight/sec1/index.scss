@@ -1,3 +1,95 @@
-.sec1 {
+@import '../index';
+
+.sec1.pop8 {
   position: relative;
+
+  .bg_wrapper {
+    height: px-to-vw(1013);
+
+    @include bg('sec1PcBg.png', false);
+  }
+
+  .content {
+    max-width: px-to-vw(780);
+    padding: px-to-vw(240) 0 0 px-to-vw(40);
+  }
+
+  .slogan {
+    width: px-to-vw(249);
+    height: px-to-vw(66);
+    margin-bottom: px-to-vw(60);
+
+    @include bg('sec1PcSlogan.png', false);
+  }
+
+  .icon_container {
+    padding-left: px-to-vw(40);
+  }
+
+  .title_130 {
+    font-size: px-to-vw(100);
+  }
+
+  .params {
+    display: flex;
+    margin-top: px-to-vw(50);
+
+    .param {
+      position: relative;
+      margin-right: px-to-vw(57);
+      color: #ff9855;
+      font-size: px-to-vw(25);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      span {
+        position: absolute;
+        margin: px-to-vw(3) 0 0 px-to-vw(3);
+        font-size: px-to-vw(10);
+      }
+    }
+  }
+
+  .tips {
+    margin-top: px-to-vw(120);
+    color: #161616;
+    font-size: px-to-vw(10);
+  }
+
+  .icon1 {
+    width: px-to-vw(88);
+    height: px-to-vw(88);
+
+    @include bg('sec1PcIcon1.png');
+  }
+
+  .icon2 {
+    width: px-to-vw(88);
+    height: px-to-vw(88);
+
+    @include bg('sec1PcIcon2.png');
+  }
+
+  .icon3 {
+    width: px-to-vw(100);
+    height: px-to-vw(100);
+
+    @include bg('sec1PcIcon3.png');
+  }
+
+  .icon4 {
+    width: px-to-vw(76);
+    height: px-to-vw(76);
+
+    @include bg('sec1PcIcon4.png');
+  }
+
+  .icon5 {
+    width: px-to-vw(115);
+    height: px-to-vw(115);
+
+    @include bg('sec1PcIcon5.png');
+  }
 }

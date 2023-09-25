@@ -1,4 +1,3 @@
-
 $pcwidth: 19.2;
 $mobwidth: 10.8;
 
@@ -100,19 +99,29 @@ $mobwidth: 10.8;
     }
   }
 
+  .icon_container {
+    position: relative;
+
+    .icon {
+      position: absolute;
+    }
+  }
+
   .title_130 {
-    font-size: px-to-vw(130) !important;
+    font-weight: 700;
+    font-size: px-to-vw(130);
+    line-height: .9;
     word-wrap: break-word;
   }
 
   .title_48 {
-    font-size: px-to-vw(48) !important;
+    font-size: px-to-vw(48);
     word-wrap: break-word;
   }
 
   .desc_18 {
     margin-top: px-to-vw(24);
-    font-size: px-to-vw(18) !important;
+    font-size: px-to-vw(18);
     word-wrap: break-word;
   }
 
