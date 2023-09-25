@@ -1,15 +1,15 @@
 .pop8 {
-  $pcWidth: 19.2;
-  $mobWidth: 10.8;
+  $pcwidth: 19.2;
+  $mobwidth: 10.8;
 
-  @mixin c_position {
+  @mixin position {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  @mixin c_fontsize($fontSize) {
+  @mixin fontsize($fontSize) {
     font-size: calc(#{$fontSize} * (1 / $pcWidth) * 1vw);
   }
 
@@ -77,9 +77,9 @@
   }
 
   .desc_18 {
+    margin-top: px-to-vw(24);
     font-size: px-to-vw(18) !important;
     word-wrap: break-word;
-    margin-top: px-to-vw(24);
   }
 
   .sub {
