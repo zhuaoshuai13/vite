@@ -14,7 +14,7 @@ $mobwidth: 10.8;
 }
 
 @mixin bg($url,$size:true) {
-  background-image: url('../../assets/img/#{$url}');
+  background-image: url('../../../src/assets/img/#{$url}');
   background-repeat: no-repeat;
 
   @if  $size == true {
@@ -64,12 +64,43 @@ $mobwidth: 10.8;
   }
 
   @font-face {
-    font-family: 'HurmeGeometricSans';
-    src: url('../../assets/font/HurmeGeometricSans_No3_4_Regular.otf');
+    font-family: 'HR';
+    src: url('../../../src/assets/font/HurmeGeometricSans_No3_4_Regular.otf');
   }
 
-  .Hfont {
-    font-family: 'HurmeGeometricSans';
+  @font-face {
+    font-family: 'HB';
+    src: url('../../../src/assets/font/HurmeGeometricSans_No3_6_Bold.otf');
+  }
+
+  @font-face {
+    font-family: 'KT';
+    src: url('../../../src/assets/font/korataki-rg.otf');
+  }
+
+  .HBfont {
+    font-family: 'HB';
+  }
+
+  .HRfont {
+    font-family: 'HR';
+  }
+
+  .title_box {
+    position: relative;
+    width: px-to-vw(1320);
+    margin: auto;
+    color: #fff;
+    font-size: px-to-vw(130);
+    font-family: 'HB';
+    line-height: 90%;
+
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
   }
 
   .title_130 {

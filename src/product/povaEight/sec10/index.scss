@@ -1,0 +1,40 @@
+
+@import '../index';
+
+.sec10 {
+  width: 100%;
+
+  .title_box {
+    .icon1 {
+      width: px-to-vw(218);
+      height: px-to-vw(218);
+
+      @include bg('sec10Icon1.png');
+    }
+
+    .icon2 {
+      width: px-to-vw(169);
+      height: px-to-vw(169);
+
+      @include bg('sec10Icon2.png');
+    }
+
+    .icon3 {
+      width: px-to-vw(132);
+      height: px-to-vw(139);
+
+      @include bg('sec10Icon3.png');
+    }
+
+    .icon4 {
+      width: px-to-vw(205);
+      height: px-to-vw(205);
+
+      @include bg('sec10Icon4.png');
+    }
+  }
+
+  .content_box {
+    margin-top: px-to-vw(397);
+  }
+}
