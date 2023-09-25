@@ -1,5 +1,11 @@
+import Sec1  from './sec1'
+
 const PovaEight = () => {
-  return <div>PovaEight</div>
+  return (
+    <div>
+      <Sec1/>
+    </div>
+  )
 }
 
 export default PovaEight
