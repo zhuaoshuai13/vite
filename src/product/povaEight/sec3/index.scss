@@ -1,0 +1,52 @@
+@import '../index';
+
+.sec3.pop8 {
+  background-color: #c9f556;
+
+  .bar {
+    width: 100%;
+    height: px-to-vw(55);
+    background-color: #fff;
+
+    @include bg('sec3PcBar.png');
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: px-to-vw(1003);
+    height: px-to-vw(260);
+    margin: px-to-vw(345) auto px-to-vw(400);
+    color: #fff;
+    font-size: px-to-vw(96);
+    font-family: "HB";
+
+    @include bg('sec3PcTextBg.png');
+  }
+
+  .icon_container {
+    margin: 0 px-to-vw(240);
+  }
+  
+  .icon1 {
+    width: px-to-vw(152);
+    height: px-to-vw(152);
+
+    @include bg('sec3PcIcon1.png');
+  }
+
+  .icon2 {
+    width: px-to-vw(200);
+    height: px-to-vw(163);
+
+    @include bg('sec3PcIcon2.png');
+  }
+
+  .icon3 {
+    width: px-to-vw(147);
+    height: px-to-vw(147);
+
+    @include bg('sec3PcIcon3.png');
+  }
+}
