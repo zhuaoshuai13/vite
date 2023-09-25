@@ -1,0 +1,28 @@
+@import '../index';
+
+.sec11.pop8 {
+  padding-top: px-to-vw(308);
+
+  .title_box {
+    .icon1 {
+      width: px-to-vw(164);
+      height: px-to-vw(165);
+
+      @include bg('sec11PcIcon1.png');
+    }
+
+    .icon2 {
+      width: px-to-vw(175);
+      height: px-to-vw(137);
+
+      @include bg('sec11PcIcon2.png');
+    }
+
+    .icon3 {
+      width: px-to-vw(221);
+      height: px-to-vw(157);
+
+      @include bg('sec11PcIcon3.png');
+    }
+  }
+}

@@ -1,12 +1,26 @@
 @import '../index';
 
-.sec9 {
+.sec9.pop8 {
 
   @include bg('sec9PcText.png');
 
   overflow: hidden;
   background-color: #f964b8;
   background-repeat: repeat-y;
+
+  .text {
+    width: fit-content;
+    margin: px-to-vw(316) auto px-to-vw(530);
+    padding: px-to-vw(65) px-to-vw(153) px-to-vw(109);
+    color: #fff;
+    font-weight: 700;
+    font-size: px-to-vw(96);
+    line-height: 1.2;
+    text-align: center;
+    background-position: center;
+
+    @include bg('sec9PcBg.png');
+  }
 }
 
 // .circle {
@@ -15,17 +29,3 @@
 
 //   @include bg('sec9PcCircle.png');
 // }
-
-.text {
-  width: fit-content;
-  margin: px-to-vw(316) auto px-to-vw(530);
-  padding: px-to-vw(65) px-to-vw(153) px-to-vw(109);
-  color: #fff;
-  font-weight: 700;
-  font-size: px-to-vw(96);
-  line-height: 1.2;
-  text-align: center;
-  background-position: center;
-
-  @include bg('sec9PcBg.png');
-}

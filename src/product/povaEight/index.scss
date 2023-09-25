@@ -42,6 +42,7 @@ $mobwidth: 10.8;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -63,27 +64,19 @@ $mobwidth: 10.8;
     display: none;
   }
 
-  @font-face {
-    font-family: 'HR';
-    src: url('../../../src/assets/font/HurmeGeometricSans_No3_4_Regular.otf');
-  }
-
-  @font-face {
-    font-family: 'HB';
-    src: url('../../../src/assets/font/HurmeGeometricSans_No3_6_Bold.otf');
-  }
-
-  @font-face {
-    font-family: 'KT';
-    src: url('../../../src/assets/font/korataki-rg.otf');
-  }
-
   .HBfont {
     font-family: 'HB';
   }
 
   .HRfont {
     font-family: 'HR';
+  }
+
+  .tips {
+    display: flex;
+    color: rgba(255, 255, 255, .62);
+    font-size: px-to-vw(16);
+    font-family: "HR";
   }
 
   .title_box {

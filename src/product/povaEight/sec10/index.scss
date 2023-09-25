@@ -1,9 +1,7 @@
 
 @import '../index';
 
-.sec10 {
-  width: 100%;
-
+.sec10.pop8 {
   .title_box {
     .icon1 {
       width: px-to-vw(218);
@@ -35,6 +33,60 @@
   }
 
   .content_box {
+    position: relative;
+    width: 100%;
+    height: px-to-vw(661);
     margin-top: px-to-vw(397);
+    padding-top: px-to-vw(144);
+    color: #fff;
+
+    @include bg('sec10Bg.png');
+
+    .text_box {
+      width: px-to-vw(525);
+      margin-left: px-to-vw(1174);
+
+      .title {
+        font-size: px-to-vw(48);
+        font-family: "HB";
+        line-height: 1.2;
+      }
+
+      .params {
+        display: flex;
+        justify-content: space-between;
+        margin-top: px-to-vw(75);
+      }
+
+      .big_text {
+        color: #faff00;
+        font-size: px-to-vw(48);
+        font-family: "HB";
+        line-height: 90%;
+      }
+
+      .small_text {
+        margin-top: 5px;
+        font-size: px-to-vw(18);
+        font-family: "HB";
+      }
+    }
+
+    .product {
+      position: absolute;
+      top: px-to-vw(-191);
+      left: px-to-vw(151);
+      width: px-to-vw(895);
+      height: px-to-vw(962);
+
+      @include bg('sec10Product.png');
+    }
+  }
+
+  .tips {
+    justify-content: flex-end;
+    margin-top: px-to-vw(26);
+    padding-right: px-to-vw(114);
+    padding-bottom: px-to-vw(63);
   }
 }

@@ -3,6 +3,8 @@
 // import Third from "./product/third"
 import PovaEight from "./product/povaEight"
 
+import "./App.scss"
+
 function App() {
   return <PovaEight />
 }
