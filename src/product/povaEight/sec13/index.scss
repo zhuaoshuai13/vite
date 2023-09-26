@@ -1,0 +1,79 @@
+@import '../index';
+
+.sec13 {
+  padding-top: px-to-vw(328);
+
+  .title_box {
+    .icon1 {
+      width: px-to-vw(209);
+      height: px-to-vw(210);
+
+      @include bg('sec13PcIcon1.png');
+    }
+
+    .icon2 {
+      width: px-to-vw(241);
+      height: px-to-vw(176);
+
+      @include bg('sec13PcIcon2.png');
+    }
+
+    .icon3 {
+      width: px-to-vw(179);
+      height: px-to-vw(179);
+
+      @include bg('sec13PcIcon3.png');
+    }
+  }
+
+  .sec13_content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    margin-top: px-to-vw(150);
+
+    .sec13_left {
+      width: px-to-vw(927);
+      height: px-to-vw(738);
+      padding-top: px-to-vw(180);
+      padding-left: px-to-vw(150);
+
+      @include bg('sec13PcLeft.png');
+    }
+
+    .sec13_right {
+      width: px-to-vw(1053);
+      height: px-to-vw(776);
+      margin-left: -20vw;
+
+      @include bg('sec13PcRight.png');
+    }
+
+    .text_box {
+      width: 33vw;
+
+      .title {
+        padding-left: px-to-vw(100);
+      }
+
+      .desc_18 {
+        padding-left: px-to-vw(100);
+      }
+    }
+
+    .params {
+      flex-direction: column;
+      gap: px-to-vw(22);
+      margin-top: px-to-vw(60);
+
+      .big_text {
+        color: rgba(250, 255, 0, 1);
+      }
+    }
+  }
+
+  .tips {
+    padding-bottom: px-to-vw(145);
+    padding-left: px-to-vw(1383);
+  }
+}

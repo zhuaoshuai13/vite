@@ -94,21 +94,12 @@
   }
 
   .params {
-    display: flex;
     gap: px-to-vw(61);
     margin-top: px-to-vw(57);
-  }
 
-  .big_text {
-    color: rgba(250, 255, 0, 1);
-    font-size: px-to-vw(35);
-    font-family: "HB";
-    line-height: 1.2;
-  }
-
-  .small_text {
-    font-size: px-to-vw(18);
-    font-family: "HB";
+    .big_text {
+      color: rgba(250, 255, 0, 1);
+    }
   }
 
   .tips {

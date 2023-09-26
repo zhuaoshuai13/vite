@@ -55,22 +55,17 @@
       }
 
       .params {
-        display: flex;
         justify-content: space-between;
         margin-top: px-to-vw(75);
       }
 
       .big_text {
         color: #faff00;
-        font-size: px-to-vw(48);
-        font-family: "HB";
         line-height: 90%;
       }
 
       .small_text {
         margin-top: 5px;
-        font-size: px-to-vw(18);
-        font-family: "HB";
       }
     }
 

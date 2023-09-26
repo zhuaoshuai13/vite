@@ -28,6 +28,65 @@
   }
 
   .sec12_content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
     margin-top: px-to-vw(150);
+    color: #fff;
+
+    .sec12_left {
+      width: px-to-vw(910);
+      height: px-to-vw(483);
+      margin-top: px-to-vw(196);
+      padding-top: px-to-vw(86);
+      padding-left: px-to-vw(175);
+
+      @include bg('sec12PcRight.png');
+
+      .sec12_title {
+        font-size: px-to-vw(48);
+        font-family: "HB";
+        line-height: 90%;
+      }
+
+      .desc_18 {
+        width: 20vw;
+      }
+    }
+
+    .sec12_right {
+      width: px-to-vw(913);
+      height: px-to-vw(482);
+      padding-top: px-to-vw(102);
+      padding-left: px-to-vw(491);
+
+      @include bg('sec12PcLeft.png');
+
+      .params {
+        flex-direction: column;
+        gap: px-to-vw(30);
+
+        .big_text {
+          color: rgba(40, 255, 232, 1);
+        }
+      }
+    }
+
+    .sec12_phone {
+      position: absolute;
+      top: px-to-vw(-90);
+      right: 0;
+      left: 0;
+      width: px-to-vw(1069);
+      height: px-to-vw(828);
+      margin: auto;
+
+      @include bg('sec12PcPhone.png');
+    }
+  }
+
+  .tips {
+    margin-top: px-to-vw(65);
+    padding-left: px-to-vw(1276);
   }
 }

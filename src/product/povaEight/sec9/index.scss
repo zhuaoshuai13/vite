@@ -22,6 +22,31 @@
 
     @include bg('sec9PcBg.png');
   }
+
+  .text_box {
+    color: #fff;
+
+    .title {
+      font-size: px-to-vw(48);
+      font-family: "HB";
+      line-height: 90%;
+    }
+  }
+
+  .params {
+    display: flex;
+
+    .big_text {
+      color: #fff;
+      font-size: px-to-vw(48);
+      font-family: "HB";
+    }
+
+    .small_text {
+      font-size: px-to-vw(18);
+      font-family: "HB";
+    }
+  }
 }
 
 // .circle {

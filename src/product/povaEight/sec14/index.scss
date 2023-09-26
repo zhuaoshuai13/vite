@@ -1,0 +1,81 @@
+@import '../index';
+
+.sec14.pop8 {
+  padding-top: px-to-vw(294);
+
+  .title_box {
+    .icon1 {
+      width: px-to-vw(232);
+      height: px-to-vw(233);
+
+      @include bg('sec14PcIcon1.png');
+    }
+
+    .icon2 {
+      width: px-to-vw(224);
+      height: px-to-vw(164);
+
+      @include bg('sec14PcIcon2.png');
+    }
+
+    .icon3 {
+      width: px-to-vw(203);
+      height: px-to-vw(203);
+
+      @include bg('sec14PcIcon3.png');
+    }
+  }
+
+  .sec14_content {
+    display: flex;
+    margin-top: px-to-vw(151);
+
+    .sec14_left {
+      width: px-to-vw(1131);
+      height: px-to-vw(856);
+      padding-top: px-to-vw(270);
+      padding-left: px-to-vw(240);
+
+      @include bg('sec14PcLeft.png');
+
+      .text_box {
+        display: flex;
+        gap: px-to-vw(74);
+
+        .group {
+          width: px-to-vw(293);
+
+          .title {
+            line-height: 1.2;
+          }
+        }
+      }
+
+      .params {
+        flex-direction: column;
+        gap: px-to-vw(63);
+        width: px-to-vw(260);
+        margin-top: px-to-vw(5);
+
+        .big_text {
+          color: rgba(250, 255, 0, 1);
+          line-height: 1;
+        }
+      }
+    }
+
+    .sec14_right {
+      width: px-to-vw(855);
+      height: px-to-vw(857);
+      margin-left: px-to-vw(-265);
+
+      @include bg('sec14PcRight.png');
+    }
+  }
+
+  .tips {
+    margin-top: px-to-vw(20);
+    margin-bottom: px-to-vw(140);
+    padding-left: px-to-vw(1272);
+  }
+}
