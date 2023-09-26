@@ -44,7 +44,7 @@ const Sec3 = () => {
           <div className='box1'>
             <div className='text_wrapper'>
               <div
-                className='title_48'
+                className='title_48 HBfont'
                 dangerouslySetInnerHTML={{
                   __html: global.pop8Config.sec3.t1,
                 }}
@@ -103,6 +103,14 @@ const Sec3 = () => {
               </div>
             </div>
           </div>
+          <div className='circle'>
+            <div className='img img1'></div>
+            <div className='img img2'></div>
+          </div>
+          <div
+            className='tips'
+            dangerouslySetInnerHTML={{ __html: global.pop8Config.sec3.tips }}
+          ></div>
         </div>
       </div>
     </section>

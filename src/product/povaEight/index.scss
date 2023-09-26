@@ -101,9 +101,14 @@ $mobwidth: 10.8;
 
   .icon_container {
     position: relative;
+    margin: 0 px-to-vw(240);
 
     .icon {
       position: absolute;
+    }
+
+    .title_130 {
+      font-family: 'HB';
     }
   }
 

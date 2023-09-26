@@ -1,0 +1,119 @@
+@import '../index';
+
+.sec4.pop8 {
+  padding-top: px-to-vw(100);
+  background-color: #c9f556;
+
+  .icon_container {
+    max-width: px-to-vw(1000);
+    margin-left: px-to-vw(240);
+
+    .icon1 {
+      width: px-to-vw(188);
+      height: px-to-vw(188);
+
+      @include bg('sec4PcIcon1.png');
+    }
+
+    .icon2 {
+      width: px-to-vw(238);
+      height: px-to-vw(144);
+
+      @include bg('sec4PcIcon2.png');
+    }
+
+    .icon3 {
+      width: px-to-vw(168);
+      height: px-to-vw(168);
+
+      @include bg('sec4PcIcon3.png');
+    }
+
+    .icon4 {
+      width: px-to-vw(170);
+      height: px-to-vw(170);
+
+      @include bg('sec4PcIcon4.png');
+    }
+  }
+
+  .content_wrapper {
+    position: relative;
+    margin: px-to-vw(240) 0 px-to-vw(300);
+  }
+
+  .text_box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+  }
+
+  .left_box {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    width: px-to-vw(975);
+    height: px-to-vw(482);
+    margin-top: px-to-vw(150);
+    padding-left: px-to-vw(240);
+
+    @include bg('sec4PcLeft.png');
+
+    .text_wrapper {
+      max-width: px-to-vw(380);
+    }
+  }
+
+  .right_box {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    width: px-to-vw(848);
+    height: px-to-vw(482);
+    padding-left: px-to-vw(450);
+
+    @include bg('sec4PcRight.png');
+
+    .param {
+      margin-bottom: px-to-vw(20);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .title {
+      color: #76ffe6;
+      font-size: px-to-vw(48);
+      font-family: 'HB';
+    }
+
+    .desc {
+      font-size: px-to-vw(18);
+      font-family: 'HB';
+    }
+  }
+
+  .tips {
+    position: absolute;
+    top: px-to-vw(506);
+    left: px-to-vw(1508);
+  }
+
+  .pic_container {
+    position: absolute;
+    top: 50%;
+    left: px-to-vw(600);
+    width: px-to-vw(877);
+    height: px-to-vw(593);
+    transform: translate(0, -50%);
+
+    .pic {
+      width: 100%;
+      height: 100%;
+
+      @include bg('sec4PcPic.png');
+    }
+  }
+}

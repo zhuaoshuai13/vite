@@ -1,0 +1,75 @@
+@import '../index';
+
+.sec5.pop8 {
+  padding-top: px-to-vw(100);
+  background-color: #c9f556;
+
+  .icon_container {
+    margin-left: px-to-vw(240);
+
+    .icon1 {
+      width: px-to-vw(280);
+      height: px-to-vw(280);
+
+      @include bg('sec5PcIcon1.png');
+    }
+
+    .icon2 {
+      width: px-to-vw(227);
+      height: px-to-vw(227);
+
+      @include bg('sec5PcIcon2.png');
+    }
+
+    .icon3 {
+      width: px-to-vw(148);
+      height: px-to-vw(115);
+
+      @include bg('sec5PcIcon3.png');
+    }
+
+    .icon4 {
+      width: px-to-vw(283);
+      height: px-to-vw(188);
+
+      @include bg('sec5PcIcon4.png');
+    }
+  }
+
+  .content_wrapper {
+    position: relative;
+    height: px-to-vw(1100);
+
+    .box1 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: px-to-vw(948);
+      height: px-to-vw(838);
+      padding: px-to-vw(280) px-to-vw(230) 0;
+      color: #fff;
+
+      @include bg('sec5PcF1.png');
+    }
+
+    .box2 {
+      position: absolute;
+      right: 0;
+      bottom: px-to-vw(200);
+      width: px-to-vw(380);
+      height: px-to-vw(402);
+
+      @include bg('sec5PcF2.png');
+    }
+
+    .phone {
+      position: absolute;
+      bottom: 0;
+      left: px-to-vw(850);
+      width: px-to-vw(803);
+      height: px-to-vw(838);
+
+      @include bg('sec5PcF3.png');
+    }
+  }
+}

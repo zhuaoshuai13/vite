@@ -49,4 +49,96 @@
 
     @include bg('sec3PcIcon3.png');
   }
+  
+  .box {
+    position: relative;
+    margin: px-to-vw(270) 0 px-to-vw(300);
+  }
+
+  .box1 {
+    padding: px-to-vw(163) 0 px-to-vw(77);
+    color: #fff;
+    background-color: #6036f2;
+
+    .text_wrapper {
+      max-width: px-to-vw(620);
+      margin-left: px-to-vw(240);
+    }
+  }
+
+  .box2 {
+    padding: px-to-vw(40) 0 px-to-vw(40) px-to-vw(207) ;
+
+    @include bg('sec3Pcbox2Bg.png', false);
+
+    .params {
+      display: flex;
+
+      .param {
+        margin-right: px-to-vw(64);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .title {
+        color: #76ffe6;
+        font-size: px-to-vw(34);
+        font-family: 'HB';
+      }
+
+      .desc {
+        margin-top: px-to-vw(12);
+        color: #fff;
+        font-size: px-to-vw(25);
+        font-family: 'HB';
+      }
+    }
+  }
+
+  .circle {
+    position: absolute;
+    top: 50%;
+    right: px-to-vw(140);
+    width: px-to-vw(866);
+    height: px-to-vw(866);
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    @include bg('sec3PcCircle.png');
+
+    &:hover {
+      .img {
+        background-size: 105% 105% !important;
+      }
+    }
+
+    .img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: px-to-vw(762);
+      height: px-to-vw(762);
+      background-position: center center;
+      background-size: 100% 100% !important;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: all .3s;
+    }
+
+    .img1 {
+
+      @include bg('sec3PcImg1.png');
+    }
+
+    .img2 {
+      
+      @include bg('sec3PcImg2.png');
+    }
+  }
+
+  .tips {
+    margin: px-to-vw(20) 0 0 px-to-vw(205);
+  }
 }

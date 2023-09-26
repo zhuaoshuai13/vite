@@ -1,0 +1,127 @@
+@import '../index';
+
+.sec8.pop8 {
+  .bg_wrapper {
+    padding: px-to-vw(100) 0;
+    background-color: #571deb;
+  }
+
+  .icon_container {
+    color: #fff;
+
+    .icon1 {
+      width: px-to-vw(142);
+      height: px-to-vw(139);
+
+      @include bg('sec8PcIcon1.png');
+    }
+
+    .icon2 {
+      width: px-to-vw(92);
+      height: px-to-vw(92);
+
+      @include bg('sec8PcIcon2.png');
+    }
+
+    .icon3 {
+      width: px-to-vw(188);
+      height: px-to-vw(143);
+
+      @include bg('sec8PcIcon3.png');
+    }
+  }
+
+  .sec8_swiper {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    
+    .swiper {
+      padding: px-to-vw(150) 0 px-to-vw(100);
+    }
+
+    .swiper-slide-next + .swiper-slide {
+      .pic_box {
+        transform: scale(1.2);
+      }
+    }
+
+    .pic_box {
+      width: px-to-vw(210);
+      height: px-to-vw(457);
+      transition: all .5s;
+
+      .pic {
+        width: 100%;
+        height: 100%;
+  
+        @include bg('sec8PcF3.png');
+      }
+
+      .pic1 {
+
+        @include bg('sec8PcF3.png');
+      }
+
+      .pic2 {
+        
+        @include bg('sec8PcF4.png');
+      }
+
+      .pic3 {
+
+        @include bg('sec8PcF3.png');
+      }
+
+      .pic4 {
+        
+        @include bg('sec8PcF4.png');
+      }
+
+      .pic5 {
+
+        @include bg('sec8PcF3.png');
+      }
+    }
+
+    .button_box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: px-to-vw(40);
+
+      .button {
+        width: px-to-vw(33);
+        height: px-to-vw(35);
+        margin-right: px-to-vw(26);
+        cursor: pointer;
+  
+        @include bg('sec8PcF8.png');
+
+        &.active {
+          width: px-to-vw(40);
+          height: px-to-vw(38);
+    
+          @include bg('sec8PcF7.png');
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .text_wrapper {
+      position: absolute;
+      top: px-to-vw(570);
+      left: px-to-vw(850);
+      max-width: px-to-vw(470);
+      color: #fff;
+    }
+  }
+
+  .tips {
+    width: fit-content;
+    margin: px-to-vw(60) px-to-vw(120) 0 auto;
+  }
+}

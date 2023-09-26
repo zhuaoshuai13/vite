@@ -1,0 +1,193 @@
+@import '../index';
+
+.sec6.pop8 {
+  position: relative;
+  margin-top: px-to-vw(-86);
+
+  .bg_wrapper {
+    margin-top: -1px;
+    padding: px-to-vw(160) 0 px-to-vw(200);
+    background-color: #571deb;
+  }
+
+  .bar {
+    height: px-to-vw(97);
+
+    @include bg('sec6PcBar.png');
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: px-to-vw(638);
+    height: px-to-vw(453);
+    margin: 0 auto px-to-vw(400);
+    padding-bottom: px-to-vw(25);
+    color: #fff;
+    font-size: px-to-vw(96);
+    font-family: "HB";
+
+    @include bg('sec6PcTextBg.png');
+  }
+
+  .icon_container {
+    margin-left: px-to-vw(240);
+    color: #fff;
+
+    .icon1 {
+      width: px-to-vw(232);
+      height: px-to-vw(168);
+
+      @include bg('sec6PcIcon1.png');
+    }
+
+    .icon2 {
+      width: px-to-vw(177);
+      height: px-to-vw(145);
+
+      @include bg('sec6PcIcon2.png');
+    }
+
+    .icon3 {
+      width: px-to-vw(136);
+      height: px-to-vw(124);
+
+      @include bg('sec6PcIcon3.png');
+    }
+
+    .icon4 {
+      width: px-to-vw(283);
+      height: px-to-vw(236);
+
+      @include bg('sec6PcIcon4.png');
+    }
+  }
+
+  .box {
+    position: relative;
+    height: px-to-vw(929);
+    margin-top: px-to-vw(60);
+
+    @include bg('sec7PcF1.png');
+
+    .text_wrapper {
+      position: absolute;
+      top: px-to-vw(350);
+      left: px-to-vw(1153);
+      max-width: px-to-vw(553);
+    }
+  }
+
+  .pic_box {
+    position: absolute;
+    top: px-to-vw(184);
+    left: px-to-vw(404);
+    width: px-to-vw(408);
+    height: px-to-vw(877);
+    color: #fff;
+
+    .phone {
+      width: 100%;
+      height: 100%;
+
+      @include bg('sec7PcF3.png');
+    }
+
+    .light {
+      position: absolute;
+      top: px-to-vw(-56);
+      right: px-to-vw(8);
+      width: px-to-vw(206);
+      height: px-to-vw(123);
+
+      @include bg('sec7PcF2.png');
+    }
+
+    .desc {
+      font-family: 'HB';
+    }
+
+    .param1 {
+      position: absolute;
+      top: px-to-vw(110);
+      left: px-to-vw(-266);
+      width: px-to-vw(354);
+      height: px-to-vw(188);
+      padding: px-to-vw(35) px-to-vw(55) 0;
+
+      @include bg('sec7PcF4.png');
+
+      .title {
+        font-size: px-to-vw(41);
+      }
+
+      .desc {
+        font-size: px-to-vw(24);
+      }
+    }
+
+    .param2 {
+      position: absolute;
+      top: px-to-vw(40);
+      right: px-to-vw(-240);
+      width: px-to-vw(331);
+      height: px-to-vw(266);
+      padding: px-to-vw(50) 0 0 px-to-vw(70);
+      color: #571deb;
+
+      @include bg('sec7PcF5.png');
+
+      .title {
+        font-size: px-to-vw(102);
+      }
+
+      .desc {
+        font-size: px-to-vw(26);
+      }
+    }
+
+    .param3 {
+      position: absolute;
+      top: px-to-vw(398);
+      left: px-to-vw(-200);
+      width: px-to-vw(317);
+      height: px-to-vw(194);
+      padding: px-to-vw(45) px-to-vw(75) 0;
+
+      @include bg('sec7PcF6.png');
+
+      .title {
+        font-size: px-to-vw(58);
+      }
+
+      .desc {
+        font-size: px-to-vw(16);
+      }
+    }
+
+    .param4 {
+      position: absolute;
+      top: px-to-vw(470);
+      left: px-to-vw(285);
+      width: px-to-vw(406);
+      height: px-to-vw(162);
+      padding: px-to-vw(22) px-to-vw(35) 0;
+
+      @include bg('sec7PcF7.png');
+
+      .title {
+        font-size: px-to-vw(43);
+      }
+
+      .desc {
+        font-size: px-to-vw(24);
+      }
+    }
+  }
+
+  .tips {
+    max-width: px-to-vw(350);
+    margin: px-to-vw(12) auto 0;
+  }
+}
