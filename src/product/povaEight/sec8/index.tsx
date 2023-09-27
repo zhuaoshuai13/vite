@@ -8,10 +8,11 @@ import "swiper/css/pagination"
 
 const Sec8 = () => {
   const global = window as any
-  const [vPlay, setVPlay] = useState(2)
+  // const [vPlay, setVPlay] = useState(2)
   const [realIndex, setRealIndex] = useState(0)
   const swiperRef = useRef(null)
   const scrollPlay = (num: number) => {
+    console.log(num)
     // const play = num + 2
     // const pause = vPlay
     // eval(`v${pause}`).current?.pause()
@@ -78,7 +79,7 @@ const Sec8 = () => {
             scrollbar={{ draggable: true }}
             onSlideChange={(swiper) => slideChange(swiper.realIndex)}
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, index) => {
               return (
                 <SwiperSlide key={index}>
                   <div
@@ -142,7 +143,7 @@ const Sec8 = () => {
           </Swiper>
           <div className='button_box'>
             {["button1", "button2", "button3", "button4", "button5"].map(
-              (item, index) => {
+              (_, index) => {
                 return (
                   <div
                     className={`button ${

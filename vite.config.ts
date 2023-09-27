@@ -8,8 +8,6 @@ export default defineConfig({
   plugins: [react()],
   base: "./",
 
-  css: {},
-
   build: {
     rollupOptions: {
       input: {
@@ -31,13 +29,13 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: path.resolve(__dirname, "src/product/second/config.js"),
+              src: path.resolve(__dirname, "src/product/povaEight/config.js"),
               dest: "dist",
             },
-            {
-              src: path.resolve(__dirname, "src/assets/video/*"),
-              dest: "dist/video",
-            },
+            // {
+            //   src: path.resolve(__dirname, "src/assets/video/*"),
+            //   dest: "dist/video",
+            // },
           ],
           hook: "writeBundle",
         }),
