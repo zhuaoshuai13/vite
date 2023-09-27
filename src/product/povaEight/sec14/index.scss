@@ -1,4 +1,4 @@
-@import '../index';
+@import "../index";
 
 .sec14.pop8 {
   padding-top: px-to-vw(294);
@@ -8,21 +8,21 @@
       width: px-to-vw(232);
       height: px-to-vw(233);
 
-      @include bg('sec14PcIcon1.png');
+      @include bg("sec14PcIcon1.png");
     }
 
     .icon2 {
       width: px-to-vw(224);
       height: px-to-vw(164);
 
-      @include bg('sec14PcIcon2.png');
+      @include bg("sec14PcIcon2.png");
     }
 
     .icon3 {
       width: px-to-vw(203);
       height: px-to-vw(203);
 
-      @include bg('sec14PcIcon3.png');
+      @include bg("sec14PcIcon3.png");
     }
   }
 
@@ -36,7 +36,7 @@
       padding-top: px-to-vw(270);
       padding-left: px-to-vw(240);
 
-      @include bg('sec14PcLeft.png');
+      @include bg("sec14PcLeft.png");
 
       .text_box {
         display: flex;
@@ -69,7 +69,7 @@
       height: px-to-vw(857);
       margin-left: px-to-vw(-265);
 
-      @include bg('sec14PcRight.png');
+      @include bg("sec14PcRight.png");
     }
   }
 

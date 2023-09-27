@@ -12,15 +12,15 @@ $mobwidth: 10.8;
   font-size: calc(#{$fontSize} * (1 / $pcwidth) * 1vw);
 }
 
-@mixin bg($url,$size:true) {
-  background-image: url('../../../src/assets/img/#{$url}');
+@mixin bg($url, $size: true) {
+  background-image: url("../../../assets/img/#{$url}");
   background-repeat: no-repeat;
 
-  @if  $size == true {
+  @if $size == true {
     background-size: contain;
   }
 
-  @if  $size == false {
+  @if $size == false {
     background-size: cover;
   }
 }
@@ -64,11 +64,11 @@ $mobwidth: 10.8;
   }
 
   .HBfont {
-    font-family: 'HB';
+    font-family: "HB";
   }
 
   .HRfont {
-    font-family: 'HR';
+    font-family: "HR";
   }
 
   .tips {
@@ -87,7 +87,7 @@ $mobwidth: 10.8;
     .title {
       width: unset !important;
       font-size: px-to-vw(130) !important;
-      font-family: 'HB';
+      font-family: "HB";
       line-height: 90%;
     }
 
@@ -108,7 +108,7 @@ $mobwidth: 10.8;
     }
 
     .title_130 {
-      font-family: 'HB';
+      font-family: "HB";
     }
   }
 

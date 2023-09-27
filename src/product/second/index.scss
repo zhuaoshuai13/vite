@@ -10,18 +10,18 @@ body {
   overflow: hidden;
 
   @font-face {
-    font-family: 'HurmeGeometricSans';
-    src: url('../../assets/font/HurmeGeometricSans_No3_4_Regular.otf');
+    font-family: "HurmeGeometricSans";
+    src: url("../../assets/font/HurmeGeometricSans_No3_4_Regular.otf");
   }
 
   @font-face {
-    font-family: 'HBold';
-    src: url('../../assets/font/HurmeGeometricSans_No3_6_Bold.otf');
+    font-family: "HBold";
+    src: url("../../assets/font/HurmeGeometricSans_No3_6_Bold.otf");
   }
 
   @font-face {
-    font-family: 'Korataki';
-    src: url('../../assets/font/korataki-rg.otf');
+    font-family: "Korataki";
+    src: url("../../assets/font/korataki-rg.otf");
   }
 
   @function px-to-vw($value) {
@@ -34,15 +34,15 @@ body {
     @return #{$value * calc(1 / 10.8)}vw;
   }
 
-  @mixin bg($url,$size:true) {
-    background-image: url('../../assets/img/#{$url}');
+  @mixin bg($url, $size: true) {
+    background-image: url("../../assets/img/#{$url}");
     background-repeat: no-repeat;
 
-    @if  $size == true {
+    @if $size == true {
       background-size: contain;
     }
 
-    @if  $size == false {
+    @if $size == false {
       background-size: cover;
     }
   }
@@ -131,9 +131,9 @@ body {
         left: px-to-vw(-8);
         width: px-to-vw(86);
         height: px-to-vw(9);
-        content: '';
+        content: "";
 
-        @include bg('sec32/top.png');
+        @include bg("sec32/top.png");
       }
     }
 
@@ -150,9 +150,9 @@ body {
         right: px-to-vw(-8);
         width: px-to-vw(86);
         height: px-to-vw(9);
-        content: '';
+        content: "";
 
-        @include bg('sec32/bot.png');
+        @include bg("sec32/bot.png");
       }
     }
   }
@@ -193,7 +193,7 @@ body {
       background-image: unset !important;
     }
 
-    @include bg('sec1/bg.png');
+    @include bg("sec1/bg.png");
 
     .phone {
       position: absolute;
@@ -202,7 +202,7 @@ body {
       width: px-to-vw(1250);
       height: px-to-vw(954);
 
-      @include bg('sec1/phone.png');
+      @include bg("sec1/phone.png");
     }
 
     .slogen {
@@ -227,7 +227,7 @@ body {
         height: 100%;
         clip-path: inset(0 0 76% 0%);
 
-        @include bg('sec1/slogen.png');
+        @include bg("sec1/slogen.png");
       }
     }
 
@@ -286,7 +286,7 @@ body {
         margin: auto;
         content: " ";
 
-        @include bg('sec2/top.png');
+        @include bg("sec2/top.png");
       }
 
       &:after {
@@ -299,7 +299,7 @@ body {
         margin: auto;
         content: " ";
 
-        @include bg('sec2/bot.png');
+        @include bg("sec2/bot.png");
       }
 
       .play {
@@ -312,7 +312,7 @@ body {
 
         @include center;
 
-        @include bg('sec2/play.png');
+        @include bg("sec2/play.png");
       }
 
       video {
@@ -369,7 +369,7 @@ body {
     @for $i from 1 through 5 {
       .f#{$i} {
 
-        @include bg('sec3/f#{$i}.png');
+        @include bg("sec3/f#{$i}.png");
       }
     }
   }
@@ -386,12 +386,12 @@ body {
       .top {
         position: relative;
 
-        @include bg('/sec4/top.png',false);
+        @include bg("/sec4/top.png", false);
       }
 
       .bot {
 
-        @include bg('/sec4/bot.png',false);
+        @include bg("/sec4/bot.png", false);
       }
     }
 
@@ -402,7 +402,7 @@ body {
       width: 100%;
       height: px-to-vw(689);
 
-      @include bg('/sec7/top.png',false);
+      @include bg("/sec7/top.png", false);
     }
 
     .bot {
@@ -412,7 +412,7 @@ body {
       width: 100%;
       height: px-to-vw(660);
 
-      @include bg('/sec7/bot.png',false);
+      @include bg("/sec7/bot.png", false);
     }
 
     .content {
@@ -459,7 +459,7 @@ body {
       height: px-to-vw(615);
       margin: px-to-vw(48) auto 0;
 
-      @include bg('sec5/bg.png');
+      @include bg("sec5/bg.png");
 
       div {
         width: px-to-vw(1300);
@@ -475,7 +475,7 @@ body {
           opacity: 0;
         }
 
-        @include bg('sec5/light.png',false);
+        @include bg("sec5/light.png", false);
       }
 
       .dark {
@@ -486,7 +486,7 @@ body {
           opacity: 1;
         }
 
-        @include bg('sec5/dark.png',false);
+        @include bg("sec5/dark.png", false);
       }
     }
 
@@ -501,7 +501,7 @@ body {
       margin: px-to-vw(36) auto 0;
       padding: 0 px-to-vw(62);
 
-      @include bg('sec5/btnbg.png');
+      @include bg("sec5/btnbg.png");
 
       .text {
         color: rgba(144, 148, 152, 1);
@@ -529,7 +529,7 @@ body {
         left: px-to-vw(40);
       }
 
-      @include bg('sec5/btn.png');
+      @include bg("sec5/btn.png");
     }
 
     .right {
@@ -545,7 +545,7 @@ body {
         width: px-to-vw(996);
         height: px-to-vw(274);
 
-        @include bg('sec5/box.png');
+        @include bg("sec5/box.png");
       }
 
       .text {
@@ -568,7 +568,7 @@ body {
         width: px-to-vw(183);
         height: px-to-vw(338);
 
-        @include bg('sec5/f1.png');
+        @include bg("sec5/f1.png");
       }
     }
 
@@ -585,7 +585,7 @@ body {
         width: px-to-vw(996);
         height: px-to-vw(274);
 
-        @include bg('sec5/box.png');
+        @include bg("sec5/box.png");
       }
 
       .text {
@@ -608,7 +608,7 @@ body {
         width: px-to-vw(202);
         height: px-to-vw(338);
 
-        @include bg('sec5/f2.png');
+        @include bg("sec5/f2.png");
       }
     }
   }
@@ -633,7 +633,7 @@ body {
       width: 100%;
       height: 100%;
 
-      @include bg('sec6/bg.jpg');
+      @include bg("sec6/bg.jpg");
     }
 
     .img2 {
@@ -643,7 +643,7 @@ body {
       width: 100%;
       height: 100%;
 
-      @include bg('sec6/bg2.jpg', false);
+      @include bg("sec6/bg2.jpg", false);
     }
   }
 
@@ -660,7 +660,7 @@ body {
 
       // background-color: black;
 
-      @include bg('/sec7/top.png',false);
+      @include bg("/sec7/top.png", false);
     }
 
     .bot {
@@ -668,7 +668,7 @@ body {
 
       // background-color: black;
 
-      @include bg('/sec7/bot.png',false);
+      @include bg("/sec7/bot.png", false);
     }
   }
 
@@ -856,7 +856,7 @@ body {
         margin: auto;
         content: "";
 
-        @include bg('sec10/icon.png');
+        @include bg("sec10/icon.png");
       }
 
       .video {
@@ -878,17 +878,17 @@ body {
 
       .fa {
 
-        @include bg('sec10/fa.png');
+        @include bg("sec10/fa.png");
       }
 
       .fb {
 
-        @include bg('sec10/fb.png');
+        @include bg("sec10/fb.png");
       }
 
       .fc {
 
-        @include bg('sec10/fc.png');
+        @include bg("sec10/fc.png");
       }
 
       .param {
@@ -898,7 +898,7 @@ body {
 
       .bigtext {
         font-size: px-to-vw(24);
-        font-family: 'Korataki';
+        font-family: "Korataki";
         white-space: nowrap;
         text-transform: unset;
       }
@@ -938,7 +938,7 @@ body {
       height: px-to-vw(18);
       margin-left: px-to-vw(10);
 
-      @include bg('sec11/icon.png');
+      @include bg("sec11/icon.png");
     }
 
     .icontext {
@@ -982,7 +982,7 @@ body {
       width: px-to-vw(911);
       height: px-to-vw(583);
 
-      @include bg('sec11/bg.png');
+      @include bg("sec11/bg.png");
 
       .video {
         position: absolute;
@@ -1131,7 +1131,7 @@ body {
         margin: auto;
         content: "";
 
-        @include bg('sec13/icon.png');
+        @include bg("sec13/icon.png");
       }
 
       .video {
@@ -1202,7 +1202,7 @@ body {
       width: px-to-vw(1057);
       height: px-to-vw(766);
 
-      @include bg('sec14/bg.png');
+      @include bg("sec14/bg.png");
     }
 
     .icon {
@@ -1212,7 +1212,7 @@ body {
       width: px-to-vw(189);
       height: px-to-vw(192);
 
-      @include bg('sec14/icon.png');
+      @include bg("sec14/icon.png");
     }
   }
 
@@ -1267,21 +1267,21 @@ body {
       width: px-to-vw(203);
       height: px-to-vw(79);
 
-      @include bg('sec15/f1.png');
+      @include bg("sec15/f1.png");
     }
 
     .f2a {
       width: px-to-vw(78);
       height: px-to-vw(79);
 
-      @include bg('sec15/f2.png');
+      @include bg("sec15/f2.png");
     }
 
     .f3a {
       width: px-to-vw(78);
       height: px-to-vw(98);
 
-      @include bg('sec15/f3.png');
+      @include bg("sec15/f3.png");
     }
   }
 
@@ -1325,7 +1325,7 @@ body {
           width: 56.229vw;
           height: 202.229vw;
 
-          @include bg('sec17/f2.png');
+          @include bg("sec17/f2.png");
         }
 
         .img {
@@ -1337,7 +1337,7 @@ body {
           height: 24vw;
           margin-top: 0;
 
-          @include bg('sec17/f1.png');
+          @include bg("sec17/f1.png");
         }
       }
     }
@@ -1352,7 +1352,7 @@ body {
       height: px-to-vw(615);
       margin: auto;
 
-      @include bg('sec18/f1.png');
+      @include bg("sec18/f1.png");
     }
 
     .imgbox {
@@ -1379,7 +1379,7 @@ body {
         height: px-to-vw(615);
         margin: auto;
 
-        @include bg('sec18/f2.png');
+        @include bg("sec18/f2.png");
       }
     }
   }
@@ -1445,7 +1445,7 @@ body {
           margin: auto;
           content: "";
 
-          @include bg('sec19/icon.png');
+          @include bg("sec19/icon.png");
         }
       }
     }
@@ -1465,28 +1465,28 @@ body {
       z-index: 1;
       clip-path: inset(0% 0 0);
 
-      @include bg("sec19/f1.jpg",false);
+      @include bg("sec19/f1.jpg", false);
     }
 
     .fb {
       z-index: 2;
       clip-path: inset(100% 0 0);
 
-      @include bg("sec19/f2.jpg",false);
+      @include bg("sec19/f2.jpg", false);
     }
 
     .fc {
       z-index: 3;
       clip-path: inset(100% 0 0);
 
-      @include bg("sec19/f3.jpg",false);
+      @include bg("sec19/f3.jpg", false);
     }
 
     .fd {
       z-index: 4;
       clip-path: inset(100% 0 0);
 
-      @include bg("sec19/f4.jpg",false);
+      @include bg("sec19/f4.jpg", false);
     }
   }
 
@@ -1537,7 +1537,7 @@ body {
         width: px-to-vw(363);
         height: px-to-vw(792);
 
-        @include bg('sec20/bg.png');
+        @include bg("sec20/bg.png");
       }
 
       .video {
@@ -1579,28 +1579,28 @@ body {
       width: px-to-vw(908);
       height: px-to-vw(681);
 
-      @include bg('sec21/f1.png');
+      @include bg("sec21/f1.png");
     }
 
     .img2 {
       width: px-to-vw(908);
       height: px-to-vw(681);
 
-      @include bg('sec21/f2.png');
+      @include bg("sec21/f2.png");
     }
 
     .img3 {
       width: px-to-vw(908);
       height: px-to-vw(681);
 
-      @include bg('sec21/f3.png');
+      @include bg("sec21/f3.png");
     }
 
     .img4 {
       width: px-to-vw(908);
       height: px-to-vw(681);
 
-      @include bg('sec21/f4.png');
+      @include bg("sec21/f4.png");
     }
   }
 
@@ -1662,7 +1662,7 @@ body {
         background-color: unset;
         border: unset;
 
-        @include bg('sec23/left.png');
+        @include bg("sec23/left.png");
       }
     }
 
@@ -1703,7 +1703,7 @@ body {
         width: px-to-vw(238);
         height: px-to-vw(518);
 
-        @include bg('sec23/phone.png');
+        @include bg("sec23/phone.png");
       }
 
       .text {
@@ -1727,7 +1727,7 @@ body {
         background-color: unset;
         border: unset;
 
-        @include bg('sec23/right.png');
+        @include bg("sec23/right.png");
       }
     }
   }
@@ -1741,7 +1741,7 @@ body {
       height: px-to-vw(469);
       margin: px-to-vw(240) auto 0;
 
-      @include bg('sec24/bg.png');
+      @include bg("sec24/bg.png");
     }
 
     .up {
@@ -1753,7 +1753,7 @@ body {
         height: px-to-vw(41);
         margin-right: px-to-vw(17);
 
-        @include bg('sec24/icon.png');
+        @include bg("sec24/icon.png");
       }
     }
 
@@ -1800,7 +1800,7 @@ body {
     height: px-to-vw(1161);
     overflow: hidden;
 
-    @include bg('sec25/bg.png');
+    @include bg("sec25/bg.png");
 
     .box {
       width: px-to-vw(635);
@@ -1843,14 +1843,14 @@ body {
       width: px-to-vw(50);
       height: px-to-vw(54);
 
-      @include bg('sec25/up.png');
+      @include bg("sec25/up.png");
     }
 
     .down {
       width: px-to-vw(50);
       height: px-to-vw(54);
 
-      @include bg('sec25/down.png');
+      @include bg("sec25/down.png");
     }
 
     .big {
@@ -1884,7 +1884,7 @@ body {
       height: px-to-vw(624);
       margin: auto;
 
-      @include bg('sec26/bg.png');
+      @include bg("sec26/bg.png");
     }
   }
 
@@ -1929,7 +1929,7 @@ body {
         width: px-to-vw(310);
         height: px-to-vw(677);
 
-        @include bg('sec27/left.png');
+        @include bg("sec27/left.png");
       }
 
       .f2 {
@@ -1940,7 +1940,7 @@ body {
         width: px-to-vw(268);
         height: px-to-vw(632);
 
-        @include bg('sec27/right.png');
+        @include bg("sec27/right.png");
       }
     }
 
@@ -1970,22 +1970,22 @@ body {
 
     .fa {
 
-      @include bg('sec27/f1.png');
+      @include bg("sec27/f1.png");
     }
 
     .fb {
 
-      @include bg('sec27/f2.png');
+      @include bg("sec27/f2.png");
     }
 
     .fc {
 
-      @include bg('sec27/f3.png');
+      @include bg("sec27/f3.png");
     }
 
     .fd {
 
-      @include bg('sec27/f4.png');
+      @include bg("sec27/f4.png");
     }
   }
 
@@ -2019,7 +2019,7 @@ body {
       width: px-to-vw(910);
       height: 100%;
 
-      @include bg('sec28/bg.png');
+      @include bg("sec28/bg.png");
     }
 
     .right {
@@ -2062,7 +2062,7 @@ body {
       height: px-to-vw(912);
       margin: auto;
 
-      @include bg('sec29/bg.png');
+      @include bg("sec29/bg.png");
     }
   }
 
@@ -2115,17 +2115,17 @@ body {
 
     .fb {
 
-      @include bg('sec30/f2.jpg');
+      @include bg("sec30/f2.jpg");
     }
 
     .fc {
 
-      @include bg('sec30/f3.jpg');
+      @include bg("sec30/f3.jpg");
     }
 
     .fd {
 
-      @include bg('sec30/f4.png');
+      @include bg("sec30/f4.png");
     }
   }
 
@@ -2143,7 +2143,7 @@ body {
       height: px-to-vw(909);
       margin: auto;
 
-      @include bg('sec31/bg.png');
+      @include bg("sec31/bg.png");
     }
 
     .mask {
@@ -2156,7 +2156,12 @@ body {
       height: px-to-vw(909);
       margin: auto;
       background: linear-gradient(0deg, #000 -4.35%, rgba(0, 0, 0, 0) 6.54%),
-        linear-gradient(180deg, #000 13.48%, #000 18.64%, rgba(0, 0, 0, 0) 50.06%);
+        linear-gradient(
+          180deg,
+          #000 13.48%,
+          #000 18.64%,
+          rgba(0, 0, 0, 0) 50.06%
+        );
     }
 
     .title {
@@ -2226,13 +2231,13 @@ body {
           width: px-to-vw(82);
           height: px-to-vw(82s);
 
-          @include bg('sec32/f1.png');
+          @include bg("sec32/f1.png");
         }
 
         @for $i from 1 through 8 {
           .img#{$i} {
 
-            @include bg('sec32/f#{$i}.png');
+            @include bg("sec32/f#{$i}.png");
           }
         }
       }
@@ -2246,7 +2251,7 @@ body {
     }
   }
 
-  @media  (max-width: 1081px) {
+  @media (max-width: 1081px) {
     .mob {
       display: block;
     }
@@ -2337,7 +2342,7 @@ body {
           width: 100%;
           height: pxm-to-vw(515);
 
-          @include bg('sec4m/f1.png');
+          @include bg("sec4m/f1.png");
         }
 
         .bot {
@@ -2347,7 +2352,7 @@ body {
           height: pxm-to-vw(510);
           margin-top: -9vw;
 
-          @include bg('sec4m/f2.png');
+          @include bg("sec4m/f2.png");
         }
       }
 
@@ -2357,7 +2362,7 @@ body {
         width: 100%;
         height: pxm-to-vw(677);
 
-        @include bg('sec4m/f3.png');
+        @include bg("sec4m/f3.png");
       }
 
       .bot {
@@ -2368,7 +2373,7 @@ body {
         height: pxm-to-vw(657);
         margin-top: -5vw;
 
-        @include bg('sec4m/f4.png');
+        @include bg("sec4m/f4.png");
       }
     }
 
@@ -2376,7 +2381,7 @@ body {
       height: pxm-to-vw(2100);
       margin-top: pxm-to-vw(160);
 
-      @include bg('sec1m/bg.png');
+      @include bg("sec1m/bg.png");
 
       .phone {
         top: pxm-to-vw(360);
@@ -2385,7 +2390,7 @@ body {
         width: pxm-to-vw(994);
         height: pxm-to-vw(1061);
 
-        @include bg('sec1m/phone.png');
+        @include bg("sec1m/phone.png");
       }
 
       .slogen {
@@ -2402,7 +2407,7 @@ body {
         .img {
           clip-path: inset(0 0 75% 0%);
 
-          @include bg('sec1m/logo02.png');
+          @include bg("sec1m/logo02.png");
         }
       }
 
@@ -2490,7 +2495,7 @@ body {
         height: pxm-to-vw(954);
         margin-top: pxm-to-vw(120);
 
-        @include bg('sec5m/bg.png');
+        @include bg("sec5m/bg.png");
 
         div {
           width: pxm-to-vw(726);
@@ -2499,12 +2504,12 @@ body {
 
         .light {
 
-          @include bg('sec5m/light.png');
+          @include bg("sec5m/light.png");
         }
 
         .dark {
 
-          @include bg('sec5m/dark.png');
+          @include bg("sec5m/dark.png");
         }
       }
 
@@ -2575,7 +2580,7 @@ body {
         .phone {
           bottom: .7291vw;
           left: 14.3125vw;
-          width: 18.520vw;
+          width: 18.52vw;
           height: 29.604vw;
         }
       }
@@ -2596,14 +2601,14 @@ body {
 
       .img {
 
-        @include bg('sec6m/f1.png',false);
+        @include bg("sec6m/f1.png", false);
 
         background-position: center;
       }
 
       .img2 {
 
-        @include bg('sec6m/f2.png',false);
+        @include bg("sec6m/f2.png", false);
 
         background-position: center;
       }
@@ -2682,19 +2687,19 @@ body {
       .box1 {
         background-position: center 88%;
 
-        @include bg('sec8m/f1.png');
+        @include bg("sec8m/f1.png");
       }
 
       .box2 {
         background-position: center 88%;
 
-        @include bg('sec8m/f2.png');
+        @include bg("sec8m/f2.png");
       }
 
       .box3 {
         background-position: center 88%;
 
-        @include bg('sec8m/f3.png');
+        @include bg("sec8m/f3.png");
 
         .right {
           box-sizing: border-box;
@@ -3056,7 +3061,7 @@ body {
 
       .icon {
         top: 16.843vw;
-        left: 33.260vw;
+        left: 33.26vw;
         width: pxm-to-vw(170);
         height: pxm-to-vw(170);
       }
@@ -3147,7 +3152,7 @@ body {
         height: pxm-to-vw(734);
         margin: pxm-to-vw(50) auto 0;
 
-        @include bg('sec17/f1.png');
+        @include bg("sec17/f1.png");
       }
     }
 
@@ -3159,7 +3164,7 @@ body {
           width: pxm-to-vw(985);
           height: pxm-to-vw(924);
 
-          @include bg('sec18m/f1.png');
+          @include bg("sec18m/f1.png");
         }
 
         padding-bottom: pxm-to-vw(80);
@@ -3170,7 +3175,7 @@ body {
           width: pxm-to-vw(985);
           height: pxm-to-vw(924);
 
-          @include bg('sec18m/f2.png');
+          @include bg("sec18m/f2.png");
         }
       }
 
@@ -3311,7 +3316,8 @@ body {
         margin-top: pxm-to-vw(155);
         padding: 0;
 
-        .left, .right {
+        .left,
+        .right {
           display: none;
         }
 
@@ -3344,12 +3350,18 @@ body {
     .sec24 {
       padding-top: pxm-to-vw(300);
 
-      .bigtitle,.smalltitle {
+      .bigtitle,
+      .smalltitle {
         width: fit-content;
         height: fit-content;
         color: transparent;
         line-height: 1.2;
-        background: linear-gradient(275.88deg, #9db7d4 10.18%, #7297c0 10.56%, #bed5ee 83.85%);
+        background: linear-gradient(
+          275.88deg,
+          #9db7d4 10.18%,
+          #7297c0 10.56%,
+          #bed5ee 83.85%
+        );
 
         /* stylelint-disable-next-line property-no-vendor-prefix */
         -webkit-background-clip: text;
@@ -3363,7 +3375,7 @@ body {
         margin-top: pxm-to-vw(300);
         overflow: hidden;
 
-        @include bg('sec24m/bg.png');
+        @include bg("sec24m/bg.png");
       }
 
       .up {
@@ -3460,7 +3472,8 @@ body {
         gap: pxm-to-vw(34);
       }
 
-      .up, .down {
+      .up,
+      .down {
         width: pxm-to-vw(69);
         height: pxm-to-vw(75);
       }
@@ -3478,7 +3491,7 @@ body {
         height: pxm-to-vw(1080);
         margin-top: pxm-to-vw(-150);
 
-        @include bg('sec25m/bg.png');
+        @include bg("sec25m/bg.png");
       }
     }
 
@@ -3503,12 +3516,18 @@ body {
     .sec27 {
       padding-top: pxm-to-vw(300);
 
-      .bigtitle,.smalltitle {
+      .bigtitle,
+      .smalltitle {
         width: fit-content;
         height: fit-content;
         color: transparent;
         line-height: 1.2;
-        background: linear-gradient(275.88deg, #9db7d4 10.18%, #7297c0 10.56%, #bed5ee 83.85%);
+        background: linear-gradient(
+          275.88deg,
+          #9db7d4 10.18%,
+          #7297c0 10.56%,
+          #bed5ee 83.85%
+        );
 
         /* stylelint-disable-next-line property-no-vendor-prefix */
         -webkit-background-clip: text;
