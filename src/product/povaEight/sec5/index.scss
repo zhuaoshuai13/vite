@@ -4,6 +4,12 @@
   padding-top: px-to-vw(100);
   background-color: #c9f556;
 
+  &.false {
+    .phone,.box1,.box2,.icon1,.icon2,.icon3,.icon4 {
+      background-image: unset !important;
+    }
+  }
+
   .icon_container {
     margin-left: px-to-vw(240);
 
@@ -44,7 +50,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      width: px-to-vw(948);
+      width: 50vw;
       height: px-to-vw(838);
       padding: px-to-vw(280) px-to-vw(230) 0;
       color: #fff;

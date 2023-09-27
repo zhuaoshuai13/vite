@@ -4,6 +4,12 @@
 .sec10.pop8 {
   overflow: unset;
 
+  &.false {
+    .content_box,.product,.icon1,.icon2,.icon3,.icon4 {
+      background-image: unset !important;
+    }
+  }
+
   .title_box {
     .icon1 {
       width: px-to-vw(218);

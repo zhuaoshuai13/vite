@@ -3,6 +3,12 @@
 .sec13 {
   padding-top: px-to-vw(328);
 
+  &.false {
+    .sec13_left,.sec13_right,.icon1,.icon2,.icon3 {
+      background-image: unset !important;
+    }
+  }
+
   .title_box {
     .icon1 {
       width: px-to-vw(209);

@@ -13,7 +13,7 @@ $mobwidth: 10.8;
 }
 
 @mixin bg($url, $size: true) {
-  background-image: url("../../../assets/img/#{$url}");
+  background-image: url("../../../assets/imgZip/#{$url}");
   background-repeat: no-repeat;
 
   @if $size == true {
@@ -51,6 +51,12 @@ $mobwidth: 10.8;
   width: 100%;
   overflow: hidden;
   font-family: "HurmeGeometricSans";
+  line-height: initial;
+  background-image: none !important;
+
+  &.false {
+    background-image: unset !important;
+  }
 
   section {
     box-sizing: border-box;

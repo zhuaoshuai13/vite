@@ -4,6 +4,12 @@
   position: relative;
   margin-top: px-to-vw(-86);
 
+  &.false {
+    .bar,.text,.icon1,.icon2,.icon3,.icon4,.box,.phone,.light,.param1,.param2,.param3,.param4 {
+      background-image: unset !important;
+    }
+  }
+
   .bg_wrapper {
     margin-top: -1px;
     padding: px-to-vw(160) 0 px-to-vw(200);
@@ -13,7 +19,7 @@
   .bar {
     height: px-to-vw(97);
 
-    @include bg('sec6PcBar.png');
+    @include bg('sec6PcBar.png',false);
   }
 
   .text {

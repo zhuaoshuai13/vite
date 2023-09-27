@@ -6,11 +6,15 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 
+import UseObservable from "../../../hooks/useObserve"
+
 const Sec8 = () => {
   const global = window as any
   // const [vPlay, setVPlay] = useState(2)
   const [realIndex, setRealIndex] = useState(0)
   const swiperRef = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
+  const IntersectionObserver = UseObservable(ref)
   const scrollPlay = (num: number) => {
     console.log(num)
     // const play = num + 2
@@ -34,7 +38,7 @@ const Sec8 = () => {
   }
 
   return (
-    <section className='pop8 sec8'>
+    <section className={`pop8 sec8 ${IntersectionObserver}`} ref={ref}>
       <div className='bg_wrapper'>
         <div className='icon_container'>
           <div
@@ -85,6 +89,7 @@ const Sec8 = () => {
                   <div
                     className={`pic_box ${realIndex === index ? "active" : ""}`}
                   >
+                    <div className='pic_border'></div>
                     <div className={`pic pic${index + 1}`}></div>
                   </div>
                 </SwiperSlide>
@@ -180,6 +185,7 @@ const Sec8 = () => {
           }}
         ></div>
       </div>
+      <div className='bot_img'></div>
     </section>
   )
 }

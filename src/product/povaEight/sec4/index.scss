@@ -4,6 +4,12 @@
   padding-top: px-to-vw(100);
   background-color: #c9f556;
 
+  &.false {
+    .left_box,.right_box,.pic,.icon1,.icon2,.icon3,.icon4 {
+      background-image: unset !important;
+    }
+  }
+
   .icon_container {
     max-width: px-to-vw(1000);
     margin-left: px-to-vw(240);

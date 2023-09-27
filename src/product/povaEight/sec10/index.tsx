@@ -1,9 +1,15 @@
+import { useRef } from "react"
+
+import UseObservable from "../../../hooks/useObserve"
+
 import "./index.scss"
 
 const Sec10 = () => {
   const global = window as any
+  const ref = useRef<HTMLDivElement>(null)
+  const IntersectionObserver = UseObservable(ref)
   return (
-    <div className='sec10 pop8'>
+    <div className={`sec10 pop8 ${IntersectionObserver}`} ref={ref}>
       <div className='title_box'>
         <div
           className='title'

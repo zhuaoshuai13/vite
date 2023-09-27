@@ -3,6 +3,12 @@
 .sec1.pop8 {
   position: relative;
 
+  &.false {
+    .bg_wrapper,.slogan,.icon1,.icon2,.icon3,.icon4,.icon5 {
+      background-image: unset !important;
+    }
+  }
+
   .bg_wrapper {
     height: px-to-vw(1013);
 
@@ -57,6 +63,7 @@
     margin-top: px-to-vw(120);
     color: #161616;
     font-size: px-to-vw(10);
+    opacity: .4;
   }
 
   .icon1 {

@@ -4,6 +4,12 @@
 .sec12.pop8 {
   padding-top: px-to-vw(308);
 
+  &.false {
+    .sec12_phone,.sec12_left,.sec12_right,.icon1,.icon2,.icon3 {
+      background-image: unset !important;
+    }
+  }
+
   .title_box {
     .icon1 {
       width: px-to-vw(213);

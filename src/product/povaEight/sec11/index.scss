@@ -4,6 +4,12 @@
   position: relative;
   padding-top: px-to-vw(308);
 
+  &.false {
+    .left_circle,.right_circle,.sec11_phone,.sec11_text,.icon1,.icon2,.icon3 {
+      background-image: unset !important;
+    }
+  }
+
   .title_box {
     .icon1 {
       width: px-to-vw(164);
@@ -99,6 +105,7 @@
 
     .big_text {
       color: rgba(250, 255, 0, 1);
+      font-size: px-to-vw(35);
     }
   }
 
