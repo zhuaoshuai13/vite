@@ -1,4 +1,11 @@
 // import "./index.scss"
+
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+
+import UseResponse from "../../hooks/useResponse"
+
 import Sec1 from "./sec1"
 import Sec2 from "./sec2"
 import Sec3 from "./sec3"
@@ -10,11 +17,17 @@ import Sec8 from "./sec8"
 import Sec9 from "./sec9"
 
 const PovaEight = () => {
+  const { responsive } = UseResponse()
   return (
     <div className='pop8'>
       <Sec1 />
       <Sec2 />
-      <Sec3 />
+      <Sec3
+        isPc={responsive?.md}
+        gsap={gsap}
+        ScrollTrigger={ScrollTrigger}
+        ScrollToPlugin={ScrollToPlugin}
+      />
       <Sec4 />
       <Sec5 />
       <Sec6 />

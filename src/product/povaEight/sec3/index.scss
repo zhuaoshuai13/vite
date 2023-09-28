@@ -1,6 +1,8 @@
 @import '../index';
 
 .sec3.pop8 {
+  position: relative;
+  overflow: unset;
   background-color: #c9f556;
 
   &.false {
@@ -10,11 +12,16 @@
   }
 
   .bar {
+    position: absolute;
+    top: px-to-vw(-55);
     width: 100%;
     height: px-to-vw(55);
-    background-color: #fff;
 
-    @include bg('sec3PcBar.png');
+    @include bg('sec3PcBar.png',false);
+  }
+
+  .content {
+    overflow: hidden;
   }
 
   .text {
@@ -116,7 +123,7 @@
 
     &:hover {
       .img {
-        background-size: 105% 105% !important;
+        background-size: 110% 110% !important;
       }
     }
 
@@ -133,7 +140,28 @@
       transition: all .3s;
     }
 
+    @keyframes change-bg {
+      0%, 40% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      /* stylelint-disable-next-line keyframe-block-no-duplicate-selectors */
+      50%, 90% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
     .img1 {
+      z-index: 2;
+      animation: change-bg 5s infinite linear;
 
       @include bg('sec3PcImg1.png');
     }

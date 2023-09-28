@@ -32,10 +32,10 @@ export default defineConfig({
               src: path.resolve(__dirname, "src/product/povaEight/config.js"),
               dest: "dist",
             },
-            // {
-            //   src: path.resolve(__dirname, "src/assets/video/*"),
-            //   dest: "dist/video",
-            // },
+            {
+              src: path.resolve(__dirname, "src/assets/video/*"),
+              dest: "dist/video",
+            },
           ],
           hook: "writeBundle",
         }),

@@ -1,12 +1,35 @@
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
+
+import { SecType } from "../type.ts/type"
 import UseObservable from "../../../hooks/useObserve"
 
 import "./index.scss"
 
-const Sec3 = () => {
+const Sec3 = (props: SecType) => {
+  const { isPc, gsap, ScrollTrigger, ScrollToPlugin } = props
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
   const IntersectionObserver = UseObservable(ref)
+
+  const sec3Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline().from(".sec3 .bar", 1, { top: 0 })
+      ScrollTrigger.create({
+        trigger: ".sec3",
+        start: `top 80%`,
+        end: "+=20%",
+        animation: tl,
+        scrub: true,
+      })
+    })
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+    sec3Ani()
+  }, [isPc])
 
   return (
     <section className={`pop8 sec3 ${IntersectionObserver}`} ref={ref}>

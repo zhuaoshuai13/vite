@@ -14,27 +14,54 @@ const Sec8 = () => {
   const [realIndex, setRealIndex] = useState(0)
   const swiperRef = useRef(null)
   const ref = useRef<HTMLDivElement>(null)
+  const v0 = useRef<HTMLVideoElement>(null)
+  const v1 = useRef<HTMLVideoElement>(null)
+  const v2 = useRef<HTMLVideoElement>(null)
+  const v3 = useRef<HTMLVideoElement>(null)
+  const v4 = useRef<HTMLVideoElement>(null)
+  const v5 = useRef<HTMLVideoElement>(null)
+  const v6 = useRef<HTMLVideoElement>(null)
+  const v7 = useRef<HTMLVideoElement>(null)
+
   const IntersectionObserver = UseObservable(ref)
   const scrollPlay = (num: number) => {
-    console.log(num)
-    // const play = num + 2
-    // const pause = vPlay
-    // eval(`v${pause}`).current?.pause()
-    // eval(`v${pause}`).current.currentTime = 0
-    // eval(`v${play}`).current?.play()
-    // setVPlay(play)
-  }
-
-  const slideChange = (activeIndex: number) => {
-    setRealIndex(activeIndex)
+    if (num > 5) {
+      setRealIndex(num - 6)
+    } else {
+      setRealIndex(num)
+    }
   }
 
   const buttonClick = (index: number) => {
     if (swiperRef) {
+      eval(`v${realIndex + 2}`).current?.pause()
+      eval(`v${realIndex + 2}`).current.currentTime = 0
+      eval(`v${index + 2}`).current?.play()
       // @ts-ignore
       swiperRef.current.swiper.slideTo(index)
       setRealIndex(index)
     }
+  }
+
+  const slideClick = (index: number) => {
+    const showIndex = realIndex + 2
+    const move = index - showIndex
+    let jumpIndex = realIndex + move
+
+    if (jumpIndex >= 6) {
+      jumpIndex -= 6
+    }
+
+    if (jumpIndex < 0) {
+      jumpIndex += 6
+    }
+
+    eval(`v${realIndex + 2}`).current?.pause()
+    eval(`v${realIndex + 2}`).current.currentTime = 0
+    eval(`v${jumpIndex + 2}`).current?.play()
+    // @ts-ignore
+    swiperRef.current.swiper.slideTo(jumpIndex)
+    setRealIndex(jumpIndex)
   }
 
   return (
@@ -72,8 +99,7 @@ const Sec8 = () => {
         <div className='sec8_swiper' data-current={realIndex}>
           <Swiper
             slidesPerView={5}
-            navigation
-            loop
+            allowTouchMove={false}
             spaceBetween={50}
             ref={swiperRef}
             onTransitionEnd={(e) => {
@@ -81,20 +107,278 @@ const Sec8 = () => {
             }}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-            onSlideChange={(swiper) => slideChange(swiper.realIndex)}
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, index) => {
+            {/* {videoMap.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
                   <div
                     className={`pic_box ${realIndex === index ? "active" : ""}`}
                   >
                     <div className='pic_border'></div>
-                    <div className={`pic pic${index + 1}`}></div>
+                    <div className={`pic pic${index + 1}`}>
+                      <video
+                        src={item}
+                        poster={global.pop8Config.sec8Video.v1Post}
+                        className='video'
+                        autoPlay={false}
+                        webkit-playsinline='true'
+                        preload='auto'
+                        muted
+                        loop
+                      ></video>
+                    </div>
                   </div>
                 </SwiperSlide>
               )
-            })}
+            })} */}
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 0 ? "active" : ""}`}
+                onClick={() => slideClick(0)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic1`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v1}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    ref={v0}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 1 ? "active" : ""}`}
+                onClick={() => slideClick(1)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic2`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v2}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    ref={v1}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 2 ? "active" : ""}`}
+                onClick={() => slideClick(2)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic3`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v3}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    ref={v2}
+                    className='video'
+                    autoPlay={true}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 3 ? "active" : ""}`}
+                onClick={() => slideClick(3)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic4`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v4}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    ref={v3}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 4 ? "active" : ""}`}
+                onClick={() => slideClick(4)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic5`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v5}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    ref={v4}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 5 ? "active" : ""}`}
+                onClick={() => slideClick(5)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic6`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v6}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    ref={v5}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 6 ? "active" : ""}`}
+                onClick={() => slideClick(6)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic5`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v1}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    ref={v6}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 7 ? "active" : ""}`}
+                onClick={() => slideClick(7)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic5`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v2}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    ref={v7}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 8 ? "active" : ""}`}
+                onClick={() => slideClick(8)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic5`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v3}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 9 ? "active" : ""}`}
+                onClick={() => slideClick(9)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic5`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v4}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 10 ? "active" : ""}`}
+                onClick={() => slideClick(10)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic5`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v5}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 11 ? "active" : ""}`}
+                onClick={() => slideClick(11)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic5`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v6}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide>
             {/* <SwiperSlide>
               <div className='pic_box'>
                 <div className='pic pic1'></div>
@@ -147,21 +431,24 @@ const Sec8 = () => {
             </SwiperSlide> */}
           </Swiper>
           <div className='button_box'>
-            {["button1", "button2", "button3", "button4", "button5"].map(
-              (_, index) => {
-                return (
-                  <div
-                    className={`button ${
-                      realIndex == index || realIndex - 5 == index
-                        ? "active"
-                        : ""
-                    }`}
-                    key={index}
-                    onClick={() => buttonClick(index)}
-                  ></div>
-                )
-              }
-            )}
+            {[
+              "button1",
+              "button2",
+              "button3",
+              "button4",
+              "button5",
+              "button6",
+            ].map((_, index) => {
+              return (
+                <div
+                  className={`button ${
+                    realIndex == index || realIndex - 6 == index ? "active" : ""
+                  }`}
+                  key={index}
+                  onClick={() => buttonClick(index)}
+                ></div>
+              )
+            })}
           </div>
           <div className='text_wrapper'>
             <div

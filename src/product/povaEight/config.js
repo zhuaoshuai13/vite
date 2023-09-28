@@ -249,4 +249,33 @@ window.pop8Config = {
     p2b: `Processor`,
     tips: `*Pictures are for illustration only, please refer to the actual product form.`,
   },
+  sec8Video: {
+    // 本地
+    // v1: "http://localhost:5173/src/assets/video/sec8V1.mp4",
+    // v1Post: "",
+    // v2: "http://localhost:5173/src/assets/video/sec8V2.mp4",
+    // v2Post: "",
+    // v3: "http://localhost:5173/src/assets/video/sec8V3.mp4",
+    // v3Post: "",
+    // v4: "http://localhost:5173/src/assets/video/sec8V4.mp4",
+    // v4Post: "",
+    // v5: "http://localhost:5173/src/assets/video/sec8V5.mp4",
+    // v5Post: "",
+    // v6: "http://localhost:5173/src/assets/video/sec8V6.mp4",
+    // v6Post: "",
+
+    // 线上
+    v1: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V1.mp4",
+    v1Post: "",
+    v2: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V2.mp4",
+    v2Post: "",
+    v3: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V3.mp4",
+    v3Post: "",
+    v4: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V4.mp4",
+    v4Post: "",
+    v5: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V5.mp4",
+    v5Post: "",
+    v6: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V6.mp4",
+    v6Post: "",
+  },
 }
