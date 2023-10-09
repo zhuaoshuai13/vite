@@ -26,8 +26,12 @@ const Sec1 = (props: SecType) => {
             <div
               className='icon icon1'
               style={{
-                top: isPc ? global.pop8Config.sec1.icon1Top : global.pop8Config.sec1.icon1MobTop,
-                left: isPc ? global.pop8Config.sec1.icon1Left : global.pop8Config.sec1.icon1MobLeft,
+                top: isPc
+                  ? global.pop8Config.sec1.icon1Top
+                  : global.pop8Config.sec1.icon1MobTop,
+                left: isPc
+                  ? global.pop8Config.sec1.icon1Left
+                  : global.pop8Config.sec1.icon1MobLeft,
               }}
             ></div>
           </div>

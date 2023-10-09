@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react"
+import { useRef } from "react"
 
 import { SecType } from "../type.ts/type"
 import UseObservable from "../../../hooks/useObserve"
@@ -6,31 +6,10 @@ import UseObservable from "../../../hooks/useObserve"
 import "./index.scss"
 
 const Sec3 = (props: SecType) => {
-  const { isPc, gsap, ScrollTrigger, ScrollToPlugin } = props
+  const { isPc } = props
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
   const IntersectionObserver = UseObservable(ref)
-
-  const sec3Ani = () => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline().from(".sec3 .bar", 1, { top: 0 })
-      ScrollTrigger.create({
-        trigger: ".sec3",
-        start: `top 80%`,
-        end: "+=20%",
-        animation: tl,
-        scrub: true,
-      })
-    })
-
-    return () => ctx.revert() // <- Cleanup!
-  }
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
-    sec3Ani()
-    console.log("🚀 ~ file: index.tsx:33 ~ Sec3 ~ isPc:", isPc)
-  }, [isPc])
 
   return (
     <section className={`pop8 sec3 ${IntersectionObserver}`} ref={ref}>
@@ -50,22 +29,34 @@ const Sec3 = (props: SecType) => {
           <div
             className='icon icon1'
             style={{
-              top: isPc ? global.pop8Config.sec3.icon1Top : global.pop8Config.sec3.icon1MobTop,
-              left: isPc ? global.pop8Config.sec3.icon1Left : global.pop8Config.sec3.icon1MobLeft,
+              top: isPc
+                ? global.pop8Config.sec3.icon1Top
+                : global.pop8Config.sec3.icon1MobTop,
+              left: isPc
+                ? global.pop8Config.sec3.icon1Left
+                : global.pop8Config.sec3.icon1MobLeft,
             }}
           ></div>
           <div
             className='icon icon2'
             style={{
-              top: isPc ? global.pop8Config.sec3.icon2Top : global.pop8Config.sec3.icon2MobTop,
-              left: isPc ? global.pop8Config.sec3.icon2Left : global.pop8Config.sec3.icon2MobLeft,
+              top: isPc
+                ? global.pop8Config.sec3.icon2Top
+                : global.pop8Config.sec3.icon2MobTop,
+              left: isPc
+                ? global.pop8Config.sec3.icon2Left
+                : global.pop8Config.sec3.icon2MobLeft,
             }}
           ></div>
           <div
             className='icon icon3'
             style={{
-              top: isPc ? global.pop8Config.sec3.icon3Top : global.pop8Config.sec3.icon3MobTop,
-              left: isPc ? global.pop8Config.sec3.icon3Left : global.pop8Config.sec3.icon3MobLeft,
+              top: isPc
+                ? global.pop8Config.sec3.icon3Top
+                : global.pop8Config.sec3.icon3MobTop,
+              left: isPc
+                ? global.pop8Config.sec3.icon3Left
+                : global.pop8Config.sec3.icon3MobLeft,
             }}
           ></div>
         </div>
@@ -91,7 +82,7 @@ const Sec3 = (props: SecType) => {
             </div>
           </div>
           <div className='box2'>
-            <div className='params'>
+            <div className='params paramsa'>
               <div className='param'>
                 <div
                   className='title'
@@ -131,6 +122,64 @@ const Sec3 = (props: SecType) => {
                   className='desc'
                   dangerouslySetInnerHTML={{
                     __html: global.pop8Config.sec3.param3d,
+                  }}
+                ></div>
+              </div>
+            </div>
+            <div className='params paramsb'>
+              <div className='param'>
+                <div
+                  className='title'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec3.param4t,
+                  }}
+                ></div>
+                <div
+                  className='desc'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec3.param4d,
+                  }}
+                ></div>
+              </div>
+              <div className='param'>
+                <div
+                  className='title'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec3.param5t,
+                  }}
+                ></div>
+                <div
+                  className='desc'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec3.param5d,
+                  }}
+                ></div>
+              </div>
+              <div className='param'>
+                <div
+                  className='title'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec3.param6t,
+                  }}
+                ></div>
+                <div
+                  className='desc'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec3.param6d,
+                  }}
+                ></div>
+              </div>
+              <div className='param'>
+                <div
+                  className='title'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec3.param7t,
+                  }}
+                ></div>
+                <div
+                  className='desc'
+                  dangerouslySetInnerHTML={{
+                    __html: global.pop8Config.sec3.param7d,
                   }}
                 ></div>
               </div>

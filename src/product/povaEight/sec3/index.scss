@@ -13,9 +13,10 @@
 
   .bar {
     position: absolute;
+    top: px-to-vw(-55);
     width: 100%;
     height: px-to-vw(55);
-    background-color: #fff;
+    background-color: transparent;
 
     @include bg('sec3PcBar.png',false);
   }
@@ -80,9 +81,21 @@
   }
 
   .box2 {
+    position: relative;
     padding: px-to-vw(40) 0 px-to-vw(40) px-to-vw(207) ;
 
     @include bg('sec3Pcbox2Bg.png', false);
+
+    .paramsb {
+      position: absolute;
+      top: px-to-vw(40);
+      left: px-to-vw(207);
+      opacity: 0;
+    }
+
+    .paramsa {
+      opacity: 1;
+    }
 
     .params {
       display: flex;
@@ -114,6 +127,7 @@
     position: absolute;
     top: 50%;
     right: px-to-vw(140);
+    z-index: 3;
     width: px-to-vw(866);
     height: px-to-vw(866);
     border-radius: 50%;
@@ -140,33 +154,14 @@
       transition: all .3s;
     }
 
-    @keyframes change-bg {
-      0%, 40% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
-
-      /* stylelint-disable-next-line keyframe-block-no-duplicate-selectors */
-      50%, 90% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
     .img1 {
       z-index: 2;
-      animation: change-bg 5s infinite linear;
 
       @include bg('sec3PcImg1.png');
     }
 
     .img2 {
+      opacity: 0;
 
       @include bg('sec3PcImg2.png');
     }
@@ -245,11 +240,11 @@
         .param {
           margin-right: px-to-vw-mb(80);
         }
-  
+
         .title {
           font-size: px-to-vw-mb(36);
         }
-  
+
         .desc {
           font-size: px-to-vw-mb(24);
         }
