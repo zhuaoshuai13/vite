@@ -311,6 +311,10 @@ window.pop8Config = {
     p2b: `Processor`,
     tips: `*Pictures are for illustration only, please refer to the actual product form.`,
   },
+  sec7Video: {
+    pc: "http://localhost:5173/src/assets/video/sec7Pc.mp4",
+    v1Post: "",
+  },
   sec8Video: {
     // 本地
     // v1: "http://localhost:5173/src/assets/video/sec8V1.mp4",

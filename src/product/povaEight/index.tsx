@@ -1,5 +1,4 @@
-import { useEffect, useLayoutEffect } from "react"
-// import "./index.scss"
+import { useEffect, useRef } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -19,6 +18,13 @@ import Sec9 from "./sec9"
 
 const PovaEight = () => {
   const { responsive } = UseResponse()
+  const screenAni = useRef<HTMLCanvasElement>(null)
+  const landAni = useRef<HTMLCanvasElement>(null)
+  const pxToVw = (num: number) => {
+    const res = (num * 1) / 25.6
+    return `${res}vw`
+  }
+
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const sec1Ani = () => {
     const tl = gsap
@@ -141,6 +147,53 @@ const PovaEight = () => {
   }
 
   const sec4Ani = () => {
+    const ctxs = (screenAni as any)?.current?.getContext("2d")
+    ctxs.globalCompositeOperation = "copy"
+    const imgs: HTMLImageElement[] = []
+    const images = []
+    const canvasWidth = 1920
+    const canvasHeight = 1080
+
+    const imgWidth = 1920
+    const imgHeight = 1080
+
+    const widthRatio = canvasWidth / imgWidth
+    const heightRatio = canvasHeight / imgHeight
+
+    let scaleRatio: number
+
+    if (widthRatio > heightRatio) {
+      scaleRatio = widthRatio
+    } else {
+      scaleRatio = heightRatio
+    }
+
+    for (let i = 0; i < 55; i++) {
+      images.push(`${import.meta.env.VITE_FRAMES_URL}/screenAni/0${i}.png`)
+    }
+
+    images.forEach((src) => {
+      const img = new Image()
+      img.src = src
+      imgs.push(img)
+    })
+    const ani = (type: number) => {
+      ctxs.drawImage(
+        imgs[type],
+        0,
+        0,
+        imgWidth,
+        imgHeight,
+        0,
+        0,
+        imgWidth * scaleRatio,
+        imgHeight * scaleRatio
+      )
+    }
+
+    setTimeout(() => {
+      ani(0)
+    }, 1000)
     const tl = gsap
       .timeline()
       .from(".sec4 .title_130", 1, { x: "-20%", opacity: 0 }, "a")
@@ -157,7 +210,7 @@ const PovaEight = () => {
 
     const tl2 = gsap
       .timeline()
-      .from(".sec4 .pic", 2, { scale: 1.1 }, "a")
+      .from(".sec4 .pic", 2, { scale: 1.5 }, "a")
       .from(".sec4 .left_box", 1.5, { x: "-40%", opacity: 0, delay: 0.25 }, "a")
       .from(".sec4 .right_box", 1.5, { x: "40%", opacity: 0, delay: 0.25 }, "a")
       .from(".sec4 .tips", 1.5, { x: "40%", opacity: 0, delay: 0.25 }, "a")
@@ -169,9 +222,61 @@ const PovaEight = () => {
       animation: tl2,
       pin: true,
       scrub: true,
+
+      onUpdate: ({ progress }) => {
+        const now = (progress * 54).toFixed(0)
+        ani(Number(now))
+      },
     })
   }
   const sec5Ani = () => {
+    const ctxs = (landAni as any)?.current?.getContext("2d")
+    ctxs.globalCompositeOperation = "copy"
+    const imgs: HTMLImageElement[] = []
+    const images = []
+    const canvasWidth = 1920
+    const canvasHeight = 1080
+
+    const imgWidth = 1920
+    const imgHeight = 1080
+
+    const widthRatio = canvasWidth / imgWidth
+    const heightRatio = canvasHeight / imgHeight
+
+    let scaleRatio: number
+
+    if (widthRatio > heightRatio) {
+      scaleRatio = widthRatio
+    } else {
+      scaleRatio = heightRatio
+    }
+
+    for (let i = 0; i < 225; i++) {
+      images.push(`${import.meta.env.VITE_FRAMES_URL}/landAni/0${i}.png`)
+    }
+
+    images.forEach((src) => {
+      const img = new Image()
+      img.src = src
+      imgs.push(img)
+    })
+    const ani = (type: number) => {
+      ctxs.drawImage(
+        imgs[type],
+        0,
+        0,
+        imgWidth,
+        imgHeight,
+        0,
+        0,
+        imgWidth * scaleRatio,
+        imgHeight * scaleRatio
+      )
+    }
+
+    setTimeout(() => {
+      ani(0)
+    }, 1000)
     const tl = gsap
       .timeline()
       .from(".sec5 .title_130", 1, { x: "-20%", opacity: 0 }, "a")
@@ -185,8 +290,34 @@ const PovaEight = () => {
       start: `top 65%`,
       animation: tl,
     })
+
+    const tl2 = gsap
+      .timeline()
+      .to(".sec5", 1, { opacity: 1 }, "a")
+      .to(
+        ".sec5 .phone",
+        1,
+        { width: pxToVw(720), height: pxToVw(960), left: pxToVw(750) },
+        "b"
+      )
+      .from(".sec5 .title_48", 1, { opacity: 0, y: "20%" }, "b")
+      .from(".sec5 .desc_18", 1, { opacity: 0, y: "20%", delay: 0.25 }, "b")
+
+    ScrollTrigger.create({
+      trigger: ".sec5 .content_wrapper",
+      start: `top 0%`,
+      end: `+=300%`,
+      scrub: true,
+      pin: true,
+      animation: tl2,
+
+      onUpdate: ({ progress }) => {
+        const now = (progress * 224).toFixed(0)
+        ani(Number(now))
+      },
+    })
   }
-  
+
   const sec9Ani = () => {
     const ctx = gsap.context(() => {
       const tl1 = gsap
@@ -266,14 +397,14 @@ const PovaEight = () => {
           { y: "20%", opacity: 0, delay: 0.75 },
           "a"
         )
-        .to(".sec10 .topLine", 0.1, { rotate: -20, },  "m")
-        .to(".sec10 .bottomLine", 0.1, { rotate: -20, },  "m")
-        .to(".sec10 .topLine", 0.1, { rotate: 0, },  "n")
-        .to(".sec10 .bottomLine", 0.1, { rotate: 0, },  "n")
-        .to(".sec10 .topLine", 0.1, { rotate: -20, },  "b")
-        .to(".sec10 .bottomLine", 0.1, { rotate: -20, },  "b")
-        .to(".sec10 .topLine", 0.1, { rotate: 0, },  "v")
-        .to(".sec10 .bottomLine", 0.1, { rotate: 0, },  "v")
+        .to(".sec10 .topLine", 0.1, { rotate: -20 }, "m")
+        .to(".sec10 .bottomLine", 0.1, { rotate: -20 }, "m")
+        .to(".sec10 .topLine", 0.1, { rotate: 0 }, "n")
+        .to(".sec10 .bottomLine", 0.1, { rotate: 0 }, "n")
+        .to(".sec10 .topLine", 0.1, { rotate: -20 }, "b")
+        .to(".sec10 .bottomLine", 0.1, { rotate: -20 }, "b")
+        .to(".sec10 .topLine", 0.1, { rotate: 0 }, "v")
+        .to(".sec10 .bottomLine", 0.1, { rotate: 0 }, "v")
 
       ScrollTrigger.create({
         trigger: ".sec10 .content_box",
@@ -341,14 +472,14 @@ const PovaEight = () => {
           { y: "20%", opacity: 0, delay: 0.75 },
           "a"
         )
-        .to(".sec11 .left_circle", 0.1, { rotate: 20, },   "m")
-        .to(".sec11 .right_circle", 0.1, { rotate: 20, },   "m")
-        .to(".sec11 .left_circle", 0.1, { rotate: 0, },   "n")
-        .to(".sec11 .right_circle", 0.1, { rotate: 0, },   "n")
-        .to(".sec11 .left_circle", 0.1, { rotate: 20, },   "b")
-        .to(".sec11 .right_circle", 0.1, { rotate: 20, },   "b")
-        .to(".sec11 .left_circle", 0.1, { rotate: 0, },   "v")
-        .to(".sec11 .right_circle", 0.1, { rotate: 0, },   "v")
+        .to(".sec11 .left_circle", 0.1, { rotate: 20 }, "m")
+        .to(".sec11 .right_circle", 0.1, { rotate: 20 }, "m")
+        .to(".sec11 .left_circle", 0.1, { rotate: 0 }, "n")
+        .to(".sec11 .right_circle", 0.1, { rotate: 0 }, "n")
+        .to(".sec11 .left_circle", 0.1, { rotate: 20 }, "b")
+        .to(".sec11 .right_circle", 0.1, { rotate: 20 }, "b")
+        .to(".sec11 .left_circle", 0.1, { rotate: 0 }, "v")
+        .to(".sec11 .right_circle", 0.1, { rotate: 0 }, "v")
 
       ScrollTrigger.create({
         trigger: ".sec11 .content_box",
@@ -456,14 +587,14 @@ const PovaEight = () => {
           { y: "20%", opacity: 0, delay: 0.75 },
           "a"
         )
-        .to(".sec13 .sec13_left", 0.1, { rotate: 20, },   "m")
-        .to(".sec13 .sec13_right", 0.1, { rotate: 20, },   "m")
-        .to(".sec13 .sec13_left", 0.1, { rotate: 0, },   "n")
-        .to(".sec13 .sec13_right", 0.1, { rotate: 0, },   "n")
-        .to(".sec13 .sec13_left", 0.1, { rotate: 20, },   "b")
-        .to(".sec13 .sec13_right", 0.1, { rotate: 20, },   "b")
-        .to(".sec13 .sec13_left", 0.1, { rotate: 0, },   "v")
-        .to(".sec13 .sec13_right", 0.1, { rotate: 0, },   "v")
+        .to(".sec13 .sec13_left", 0.1, { rotate: 20 }, "m")
+        .to(".sec13 .sec13_right", 0.1, { rotate: 20 }, "m")
+        .to(".sec13 .sec13_left", 0.1, { rotate: 0 }, "n")
+        .to(".sec13 .sec13_right", 0.1, { rotate: 0 }, "n")
+        .to(".sec13 .sec13_left", 0.1, { rotate: 20 }, "b")
+        .to(".sec13 .sec13_right", 0.1, { rotate: 20 }, "b")
+        .to(".sec13 .sec13_left", 0.1, { rotate: 0 }, "v")
+        .to(".sec13 .sec13_right", 0.1, { rotate: 0 }, "v")
 
       ScrollTrigger.create({
         trigger: ".sec13 .sec13_content",
@@ -543,14 +674,14 @@ const PovaEight = () => {
           { y: "20%", opacity: 0, delay: 1.25 },
           "a"
         )
-        .to(".sec14 .sec14_left", 0.1, { rotate: 20, },   "m")
-        .to(".sec14 .sec14_right", 0.1, { rotate: 20, },   "m")
-        .to(".sec14 .sec14_left", 0.1, { rotate: 0, },   "n")
-        .to(".sec14 .sec14_right", 0.1, { rotate: 0, },   "n")
-        .to(".sec14 .sec14_left", 0.1, { rotate: 20, },   "b")
-        .to(".sec14 .sec14_right", 0.1, { rotate: 20, },   "b")
-        .to(".sec14 .sec14_left", 0.1, { rotate: 0, },   "v")
-        .to(".sec14 .sec14_right", 0.1, { rotate: 0, },   "v")
+        .to(".sec14 .sec14_left", 0.1, { rotate: 20 }, "m")
+        .to(".sec14 .sec14_right", 0.1, { rotate: 20 }, "m")
+        .to(".sec14 .sec14_left", 0.1, { rotate: 0 }, "n")
+        .to(".sec14 .sec14_right", 0.1, { rotate: 0 }, "n")
+        .to(".sec14 .sec14_left", 0.1, { rotate: 20 }, "b")
+        .to(".sec14 .sec14_right", 0.1, { rotate: 20 }, "b")
+        .to(".sec14 .sec14_left", 0.1, { rotate: 0 }, "v")
+        .to(".sec14 .sec14_right", 0.1, { rotate: 0 }, "v")
 
       ScrollTrigger.create({
         trigger: ".sec14 .sec14_content",
@@ -562,7 +693,78 @@ const PovaEight = () => {
     return () => ctx.revert() // <- Cleanup!
   }
 
-  useLayoutEffect(() => {
+  const sec6Ani = () => {
+    const tl = gsap
+      .timeline()
+      .from(".sec6 .text", 1, { y: "20%", opacity: 0 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec6",
+      start: `top 70%`,
+      animation: tl,
+    })
+
+    const tl2 = gsap
+      .timeline()
+      .from(".sec6 .title_130", 1, { x: "-20%", opacity: 0 }, "a")
+      .from(".sec6 .icon1", 1, { x: "-40%", opacity: 0, delay: 0.25 }, "a")
+      .from(".sec6 .icon2", 1, { y: "-40%", opacity: 0, delay: 0.25 }, "a")
+      .from(".sec6 .icon3", 1, { y: "40%", opacity: 0, delay: 0.25 }, "a")
+      .from(".sec6 .icon4", 1, { x: "40%", opacity: 0, delay: 0.25 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec6",
+      start: `top -30%`,
+      animation: tl2,
+    })
+
+    const tl3 = gsap
+      .timeline()
+      .from(".sec6 .title_48", 1, { y: "20%", opacity: 0 }, "a")
+      .from(".sec6 .light", 1, { opacity: 0 }, "a")
+      .from(".sec6 .desc_18", 1, { y: "20%", opacity: 0, delay: 0.15 }, "a")
+      .from(".sec6 .param1", 1, { y: "20%", opacity: 0, delay: 0.25 }, "a")
+      .from(".sec6 .param2", 1, { y: "20%", opacity: 0, delay: 0.35 }, "a")
+      .from(".sec6 .param3", 1, { y: "20%", opacity: 0, delay: 0.45 }, "a")
+      .from(".sec6 .param4", 1, { y: "20%", opacity: 0, delay: 0.55 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec6",
+      start: `top -80%`,
+      animation: tl3,
+    })
+  }
+
+  const sec7Ani = () => {
+    const tl = gsap
+      .timeline()
+      .from(".sec7 .title_48", 1, { y: "20%", opacity: 0 }, "a")
+      .from(".sec7 .desc_18", 1, { y: "20%", opacity: 0, delay: 0.25 }, "a")
+      .from(".sec7 .params", 1, { y: "20%", opacity: 0, delay: 0.5 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec7",
+      start: `top 50%`,
+      animation: tl,
+    })
+  }
+
+  const sec8Ani = () => {
+    const tl = gsap
+      .timeline()
+      .from(".sec8 .title_130", 1, { y: "20%", opacity: 0 }, "a")
+      .from(".sec8 .icon1", 1, { x: "-40%", opacity: 0, delay: 0.25 }, "a")
+      .from(".sec8 .icon2", 1, { y: "-40%", opacity: 0, delay: 0.5 }, "a")
+      .from(".sec8 .icon3", 1, { x: "40%", opacity: 0, delay: 0.5 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec8",
+      start: `top 50%`,
+      animation: tl,
+    })
+  }
+
+  useEffect(() => {
     sec1Ani()
     sec3Ani()
     sec4Ani()
@@ -573,6 +775,9 @@ const PovaEight = () => {
     sec12Ani()
     sec13Ani()
     sec14Ani()
+    sec6Ani()
+    sec7Ani()
+    sec8Ani()
   }, [])
   return (
     <div className='pop8'>
@@ -589,12 +794,13 @@ const PovaEight = () => {
         ScrollTrigger={ScrollTrigger}
         ScrollToPlugin={ScrollToPlugin}
       />
-      <Sec4 />
+      <Sec4 refs={screenAni} />
       <Sec5
         isPc={responsive?.md}
         gsap={gsap}
         ScrollTrigger={ScrollTrigger}
         ScrollToPlugin={ScrollToPlugin}
+        refs={landAni}
       />
       <Sec6
         isPc={responsive?.md}

@@ -14,8 +14,9 @@
   }
 
   .content_wrapper {
+    position: relative;
+    z-index: 3;
     padding: px-to-vw(150) 0;
-    background-color: #f4c422;
     transform: skewY(-4deg);
   }
 
@@ -56,11 +57,14 @@
 
   .product {
     position: absolute;
-    top: 7.1%;
+    top: 2.1%;
     width: 100vw;
-    height: px-to-vw(994);
+    height: px-to-vw(1080);
 
-    @include bg('sec7Temp.png');
+    video {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .tips {
@@ -83,6 +87,7 @@
       height: px-to-vw-mb(1974);
       margin: 0 auto;
       padding: px-to-vw-mb(168) px-to-vw-mb(78) 0;
+      background-color: #f4c422;
       transform: unset;
     }
 

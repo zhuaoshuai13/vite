@@ -3,7 +3,7 @@ import UseObservable from "../../../hooks/useObserve"
 
 import "./index.scss"
 
-const Sec4 = () => {
+const Sec4 = (refs: any) => {
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
   const IntersectionObserver = UseObservable(ref)
@@ -116,7 +116,12 @@ const Sec4 = () => {
           ></div>
         </div>
         <div className='pic_container'>
-          <div className='pic'></div>
+          <canvas
+            className='pic canvas'
+            width={1920}
+            height={1080}
+            ref={refs.refs}
+          ></canvas>
         </div>
       </div>
     </section>

@@ -37,6 +37,14 @@ export default defineConfig({
               src: path.resolve(__dirname, "src/assets/video/*"),
               dest: "dist/video",
             },
+            {
+              src: path.resolve(__dirname, "src/assets/landAni/*"),
+              dest: "dist/landAni",
+            },
+            {
+              src: path.resolve(__dirname, "src/assets/screenAni/*"),
+              dest: "dist/screenAni",
+            },
           ],
           hook: "writeBundle",
         }),

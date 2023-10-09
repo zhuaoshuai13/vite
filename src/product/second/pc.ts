@@ -286,9 +286,6 @@ const Pc = (
     const imgWidth = 1280
     const imgHeight = 720
 
-    // const x = (canvasWidth - imgWidth) / 2
-    // const y = (canvasHeight - imgHeight) / 2
-
     const widthRatio = canvasWidth / imgWidth
     const heightRatio = canvasHeight / imgHeight
 

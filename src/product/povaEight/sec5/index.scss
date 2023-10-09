@@ -70,12 +70,14 @@
 
     .phone {
       position: absolute;
+      right: 0;
       bottom: 0;
-      left: px-to-vw(850);
-      width: px-to-vw(803);
-      height: px-to-vw(838);
 
-      @include bg('sec5PcF3.png');
+      // left: px-to-vw(850);
+      left: 0;
+      width: px-to-vw(1080);
+      height: px-to-vw(1440);
+      margin: auto;
     }
   }
 }

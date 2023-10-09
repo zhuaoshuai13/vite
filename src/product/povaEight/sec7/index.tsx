@@ -93,7 +93,18 @@ const Sec7 = () => {
           ></div>
           <div className='product mob'></div>
         </div>
-        <div className='product pc'></div>
+        <div className='product pc'>
+          <video
+            src={global.pop8Config.sec7Video.pc}
+            poster={global.pop8Config.sec8Video.v1Post}
+            className='video'
+            autoPlay
+            webkit-playsinline='true'
+            preload='auto'
+            muted
+            loop
+          ></video>
+        </div>
       </div>
     </section>
   )
