@@ -91,7 +91,10 @@ const Sec10 = (props: SecType) => {
             </div>
           </div>
         </div>
-        <div className='product'></div>
+        <div className='product'>
+          <div className="line topLine"></div>
+          <div className="line bottomLine"></div>
+        </div>
       </div>
       <div
         className='tips pc'

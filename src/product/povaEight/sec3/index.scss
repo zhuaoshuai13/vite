@@ -82,7 +82,7 @@
 
   .box2 {
     position: relative;
-    padding: px-to-vw(40) 0 px-to-vw(40) px-to-vw(207) ;
+    padding: px-to-vw(77) 0 px-to-vw(56) px-to-vw(207) ;
 
     @include bg('sec3Pcbox2Bg.png', false);
 
@@ -248,6 +248,10 @@
         .desc {
           font-size: px-to-vw-mb(24);
         }
+      }
+
+      .paramsb {
+        left: px-to-vw-mb(205);
       }
     }
 

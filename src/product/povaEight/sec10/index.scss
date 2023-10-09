@@ -83,6 +83,26 @@
       height: px-to-vw(962);
 
       @include bg('sec10Product.png');
+
+      .topLine {
+        position: absolute;
+        top: px-to-vw(10);
+        left: px-to-vw(650);
+        width: px-to-vw(181);
+        height: px-to-vw(179);
+
+        @include bg('sec10PcTopLine.png');
+      }
+
+      .bottomLine {
+        position: absolute;
+        top: px-to-vw(760);
+        left: px-to-vw(20);
+        width: px-to-vw(217);
+        height: px-to-vw(217);
+
+        @include bg('sec10PcBottomLine.png');
+      }
     }
   }
 
@@ -148,10 +168,28 @@
       .product {
         top: px-to-vw-mb(-405);
         left: 0;
-        width: 100%;
-        height: px-to-vw-mb(863);
+        width: px-to-vw-mb(1067);
+        height: px-to-vw-mb(877);
 
         @include bg('sec10Mobf3.png');
+
+        .topLine {
+          top: px-to-vw-mb(-10);
+          left: px-to-vw-mb(835);
+          width: px-to-vw-mb(229);
+          height: px-to-vw-mb(228);
+
+          @include bg('sec10MobTopLine.png');
+        }
+
+        .bottomLine {
+          top: px-to-vw-mb(580);
+          left: px-to-vw-mb(0);
+          width: px-to-vw-mb(226);
+          height: px-to-vw-mb(251);
+
+          @include bg('sec10MobBottomLine.png');
+        }
       }
     }
   }

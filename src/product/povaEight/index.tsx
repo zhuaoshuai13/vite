@@ -186,12 +186,393 @@ const PovaEight = () => {
       animation: tl,
     })
   }
+  
+  const sec9Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl1 = gsap
+        .timeline()
+        .from(".sec9 .sec9_text", 1, { y: "20%", opacity: 0 })
+
+      ScrollTrigger.create({
+        trigger: ".sec9",
+        start: `top 40%`,
+        end: "+=20%",
+        animation: tl1,
+      })
+    })
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  const sec10Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl3 = gsap
+        .timeline()
+        .from(
+          ".sec10 .title_box .title",
+          1,
+          { x: "-20%", opacity: 0, ease: "none" },
+          "a"
+        )
+        .from(
+          ".sec10 .icon1",
+          0.5,
+          { y: "-40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec10 .icon2",
+          0.5,
+          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec10 .icon3",
+          0.5,
+          { x: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec10 .icon4",
+          0.5,
+          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".sec10",
+        start: `top 70%`,
+        end: "+=20%",
+        animation: tl3,
+      })
+
+      const tl4 = gsap
+        .timeline()
+        .from(
+          ".sec10 .text_box .title",
+          1,
+          { y: "20%", opacity: 0, delay: 0.25 },
+          "a"
+        )
+        .from(
+          ".sec10 .text_box .desc_18",
+          1,
+          { y: "20%", opacity: 0, delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec10 .text_box .params",
+          1,
+          { y: "20%", opacity: 0, delay: 0.75 },
+          "a"
+        )
+        .to(".sec10 .topLine", 0.1, { rotate: -20, },  "m")
+        .to(".sec10 .bottomLine", 0.1, { rotate: -20, },  "m")
+        .to(".sec10 .topLine", 0.1, { rotate: 0, },  "n")
+        .to(".sec10 .bottomLine", 0.1, { rotate: 0, },  "n")
+        .to(".sec10 .topLine", 0.1, { rotate: -20, },  "b")
+        .to(".sec10 .bottomLine", 0.1, { rotate: -20, },  "b")
+        .to(".sec10 .topLine", 0.1, { rotate: 0, },  "v")
+        .to(".sec10 .bottomLine", 0.1, { rotate: 0, },  "v")
+
+      ScrollTrigger.create({
+        trigger: ".sec10 .content_box",
+        start: `top 70%`,
+        animation: tl4,
+      })
+    })
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  const sec11Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl3 = gsap
+        .timeline()
+        .from(
+          ".sec11 .title_box .title",
+          1,
+          { x: "-20%", opacity: 0, ease: "none" },
+          "a"
+        )
+        .from(
+          ".sec11 .icon1",
+          0.5,
+          { y: "-40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec11 .icon2",
+          0.5,
+          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec11 .icon3",
+          0.5,
+          { x: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".sec11",
+        start: `top 70%`,
+        end: "+=20%",
+        animation: tl3,
+      })
+
+      const tl4 = gsap
+        .timeline()
+        .from(
+          ".sec11 .text_box .title",
+          1,
+          { y: "20%", opacity: 0, delay: 0.25 },
+          "a"
+        )
+        .from(
+          ".sec11 .text_box .desc_18",
+          1,
+          { y: "20%", opacity: 0, delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec11 .text_box .params",
+          1,
+          { y: "20%", opacity: 0, delay: 0.75 },
+          "a"
+        )
+        .to(".sec11 .left_circle", 0.1, { rotate: 20, },   "m")
+        .to(".sec11 .right_circle", 0.1, { rotate: 20, },   "m")
+        .to(".sec11 .left_circle", 0.1, { rotate: 0, },   "n")
+        .to(".sec11 .right_circle", 0.1, { rotate: 0, },   "n")
+        .to(".sec11 .left_circle", 0.1, { rotate: 20, },   "b")
+        .to(".sec11 .right_circle", 0.1, { rotate: 20, },   "b")
+        .to(".sec11 .left_circle", 0.1, { rotate: 0, },   "v")
+        .to(".sec11 .right_circle", 0.1, { rotate: 0, },   "v")
+
+      ScrollTrigger.create({
+        trigger: ".sec11 .content_box",
+        start: `top 70%`,
+        animation: tl4,
+      })
+    })
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  const sec12Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl3 = gsap
+        .timeline()
+        .from(
+          ".sec12 .title_box .title",
+          1,
+          { x: "-20%", opacity: 0, ease: "none" },
+          "a"
+        )
+        .from(
+          ".sec12 .icon1",
+          0.5,
+          { y: "-40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec12 .icon2",
+          0.5,
+          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec12 .icon3",
+          0.5,
+          { x: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".sec12",
+        start: `top 70%`,
+        end: "+=20%",
+        animation: tl3,
+      })
+    })
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  const sec13Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl3 = gsap
+        .timeline()
+        .from(
+          ".sec13 .title_box .title",
+          1,
+          { x: "-20%", opacity: 0, ease: "none" },
+          "a"
+        )
+        .from(
+          ".sec13 .icon1",
+          0.5,
+          { y: "-40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec13 .icon2",
+          0.5,
+          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec13 .icon3",
+          0.5,
+          { x: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".sec13",
+        start: `top 70%`,
+        end: "+=20%",
+        animation: tl3,
+      })
+
+      const tl4 = gsap
+        .timeline()
+        .from(
+          ".sec13 .text_box .title",
+          1,
+          { y: "20%", opacity: 0, delay: 0.25 },
+          "a"
+        )
+        .from(
+          ".sec13 .text_box .desc_18",
+          1,
+          { y: "20%", opacity: 0, delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec13 .text_box .params",
+          1,
+          { y: "20%", opacity: 0, delay: 0.75 },
+          "a"
+        )
+        .to(".sec13 .sec13_left", 0.1, { rotate: 20, },   "m")
+        .to(".sec13 .sec13_right", 0.1, { rotate: 20, },   "m")
+        .to(".sec13 .sec13_left", 0.1, { rotate: 0, },   "n")
+        .to(".sec13 .sec13_right", 0.1, { rotate: 0, },   "n")
+        .to(".sec13 .sec13_left", 0.1, { rotate: 20, },   "b")
+        .to(".sec13 .sec13_right", 0.1, { rotate: 20, },   "b")
+        .to(".sec13 .sec13_left", 0.1, { rotate: 0, },   "v")
+        .to(".sec13 .sec13_right", 0.1, { rotate: 0, },   "v")
+
+      ScrollTrigger.create({
+        trigger: ".sec13 .sec13_content",
+        start: `top 70%`,
+        animation: tl4,
+      })
+    })
+
+    return () => ctx.revert() // <- Cleanup!
+  }
+
+  const sec14Ani = () => {
+    const ctx = gsap.context(() => {
+      const tl3 = gsap
+        .timeline()
+        .from(
+          ".sec14 .title_box .title",
+          1,
+          { x: "-20%", opacity: 0, ease: "none" },
+          "a"
+        )
+        .from(
+          ".sec14 .icon1",
+          0.5,
+          { y: "-40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec14 .icon2",
+          0.5,
+          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec14 .icon3",
+          0.5,
+          { x: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          "a"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".sec14",
+        start: `top 70%`,
+        end: "+=20%",
+        animation: tl3,
+      })
+
+      const tl4 = gsap
+        .timeline()
+        .from(
+          ".sec14 .sec14_left",
+          1,
+          { y: "20%", opacity: 0, delay: 0.25 },
+          "a"
+        )
+        .from(
+          ".sec14 .sec14_right",
+          1,
+          { y: "20%", opacity: 0, delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec14 .text_box .title",
+          1,
+          { y: "20%", opacity: 0, delay: 0.75 },
+          "a"
+        )
+        .from(
+          ".sec14 .text_box .desc_18",
+          1,
+          { y: "20%", opacity: 0, delay: 1 },
+          "a"
+        )
+        .from(
+          ".sec14 .text_box .params",
+          1,
+          { y: "20%", opacity: 0, delay: 1.25 },
+          "a"
+        )
+        .to(".sec14 .sec14_left", 0.1, { rotate: 20, },   "m")
+        .to(".sec14 .sec14_right", 0.1, { rotate: 20, },   "m")
+        .to(".sec14 .sec14_left", 0.1, { rotate: 0, },   "n")
+        .to(".sec14 .sec14_right", 0.1, { rotate: 0, },   "n")
+        .to(".sec14 .sec14_left", 0.1, { rotate: 20, },   "b")
+        .to(".sec14 .sec14_right", 0.1, { rotate: 20, },   "b")
+        .to(".sec14 .sec14_left", 0.1, { rotate: 0, },   "v")
+        .to(".sec14 .sec14_right", 0.1, { rotate: 0, },   "v")
+
+      ScrollTrigger.create({
+        trigger: ".sec14 .sec14_content",
+        start: `top 70%`,
+        animation: tl4,
+      })
+    })
+
+    return () => ctx.revert() // <- Cleanup!
+  }
 
   useLayoutEffect(() => {
     sec1Ani()
     sec3Ani()
     sec4Ani()
     sec5Ani()
+    sec9Ani()
+    sec10Ani()
+    sec11Ani()
+    sec12Ani()
+    sec13Ani()
+    sec14Ani()
   }, [])
   return (
     <div className='pop8'>
