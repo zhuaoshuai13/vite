@@ -96,3 +96,75 @@
     padding-left: px-to-vw(1276);
   }
 }
+
+@media (width < $mobwidthPx) {
+  .sec12.pop8 {
+    padding-top: px-to-vw-mb(300);
+
+    .title_box {
+      .icon1 {
+        width: px-to-vw-mb(173);
+        height: px-to-vw-mb(111);
+      }
+      
+      .icon2 {
+        width: px-to-vw-mb(163);
+        height: px-to-vw-mb(120);
+      }
+      
+      .icon3 {
+        width: px-to-vw-mb(140);
+        height: px-to-vw-mb(154);
+      }
+    }
+
+    .sec12_content {
+      display: block;
+      margin-top: px-to-vw-mb(525);
+      padding: px-to-vw-mb(554) px-to-vw-mb(237) px-to-vw-mb(190) px-to-vw-mb(109);
+      background: #6524fa;
+
+      .sec12_left {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        .sec12_title {
+          font-size: px-to-vw-mb(48);
+        }
+
+        .desc_18 {
+          width: 100%;
+        }
+      }
+
+      .sec12_right {
+        width: 100%;
+        height: auto;
+        margin-top: px-to-vw-mb(123);
+        padding: 0;
+
+        .params {
+          flex-direction: row;
+          gap: px-to-vw-mb(90);
+
+          .big_text {
+            font-size: px-to-vw-mb(48);
+          }
+          
+          .small_text {
+            font-size: px-to-vw-mb(18);
+          }
+        }
+      }
+
+      .sec12_phone {
+        top: px-to-vw-mb(-405);
+        width: px-to-vw-mb(1052);
+        height: px-to-vw-mb(877);
+
+        @include bg('sec12MobPhone.png');
+      }
+    }
+  }
+}

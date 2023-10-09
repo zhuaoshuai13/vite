@@ -75,38 +75,6 @@
         @include bg('sec8PcBorder2.png');
       }
 
-      // .pic {
-      //   width: 100%;
-      //   height: 100%;
-
-      //   @include bg('sec8PcF3.png');
-      // }
-
-      // .pic1 {
-
-      //   @include bg('sec8PcF3.png');
-      // }
-
-      // .pic2 {
-
-      //   @include bg('sec8PcF4.png');
-      // }
-
-      // .pic3 {
-
-      //   @include bg('sec8PcF3.png');
-      // }
-
-      // .pic4 {
-
-      //   @include bg('sec8PcF4.png');
-      // }
-
-      // .pic5 {
-
-      //   @include bg('sec8PcF3.png');
-      // }
-
       video {
         width: 100%;
         height: 100%;
@@ -170,5 +138,102 @@
     height: px-to-vw(84);
 
     @include bg('sec8PcCircle.png',false);
+  }
+}
+
+@media (width < $mobwidthPx) {
+  .sec8.pop8 {
+    .bg_wrapper {
+      padding-bottom: px-to-vw-mb(184);
+      background-position-y: px-to-vw-mb(-480);
+
+      @include bg('sec8MobF1.png', false);
+    }
+
+    .icon_container {
+      .icon1 {
+        width: px-to-vw-mb(118);
+        height: px-to-vw-mb(115);
+      }
+
+      .icon2 {
+        width: px-to-vw-mb(76);
+        height: px-to-vw-mb(76);
+      }
+
+      .icon3 {
+        width: px-to-vw-mb(156);
+        height: px-to-vw-mb(118);
+      }
+    }
+
+    .sec8_swiper {
+      width: 100%;
+      margin-top: px-to-vw-mb(250);
+
+      .swiper {
+        width: 150%;
+        height: px-to-vw-mb(1300);
+        padding-top: px-to-vw-mb(200);
+        transform: translateX(px-to-vw-mb(-230));
+      }
+
+      .text_wrapper {
+        position: unset;
+        max-width: 100%;
+        margin-top: px-to-vw-mb(116);
+        padding: 0 px-to-vw-mb(67);
+
+        .title_48 {
+          font-size: px-to-vw-mb(72);
+        }
+      }
+
+      .pic_box {
+        width: px-to-vw-mb(425);
+        height: px-to-vw-mb(917);
+
+        .pic_border {
+          width: px-to-vw-mb(445);
+          height: px-to-vw-mb(967);
+        }
+
+        video {
+          border-radius: px-to-vw-mb(30);
+        }
+      }
+
+      .swiper-slide-next {
+        transform: scale(1.2);
+  
+        .pic_border {
+          position: absolute;
+  
+          @include bg('sec8PcBorder1.png');
+        }
+      }
+
+      .swiper-slide-next + .swiper-slide {
+        .pic_box {
+          transform: unset;
+        }
+  
+        .pic_border {
+          background-image: unset;
+        }
+      }
+
+      .button_box {
+        .button {
+          width: px-to-vw-mb(29);
+          height: px-to-vw-mb(30);
+
+          &.active {
+            width: px-to-vw-mb(39);
+            height: px-to-vw-mb(37);
+          }
+        }
+      }
+    }
   }
 }

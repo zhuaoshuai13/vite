@@ -1,5 +1,4 @@
 import { useRef } from "react"
-
 import UseObservable from "../../../hooks/useObserve"
 
 import "./index.scss"

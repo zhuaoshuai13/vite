@@ -1,5 +1,7 @@
 $pcwidth: 19.2;
 $mobwidth: 10.8;
+/* stylelint-disable-next-line scss/dollar-variable-pattern */
+$mobwidthPx: 1080px;
 
 @mixin position {
   position: absolute;
@@ -13,7 +15,7 @@ $mobwidth: 10.8;
 }
 
 @mixin bg($url, $size: true) {
-  background-image: url("../../../assets/imgZip/#{$url}");
+  background-image: url("../../../assets/img/#{$url}");
   background-repeat: no-repeat;
 
   @if $size == true {
@@ -139,5 +141,41 @@ $mobwidth: 10.8;
 
   .sub {
     font-weight: 700;
+  }
+}
+
+@media (width < $mobwidthPx) {
+  .pop8 {
+    .pc {
+      display: none;
+    }
+
+    .mob {
+      display: block;
+    }
+
+    .title_130 {
+      font-size: px-to-vw-mb(97.5);
+    }
+
+    .title_48 {
+      font-size: px-to-vw-mb(48);
+    }
+
+    .desc_18 {
+      margin-top: px-to-vw-mb(32);
+      font-size: px-to-vw-mb(27);
+    }
+
+    .tips {
+      color: #adadad;
+      font-size: px-to-vw-mb(24);
+    }
+
+    .title_box {
+      .title {
+        font-size: px-to-vw-mb(97.5) !important;
+      }
+    }
   }
 }

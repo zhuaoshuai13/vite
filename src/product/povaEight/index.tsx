@@ -20,7 +20,12 @@ const PovaEight = () => {
   const { responsive } = UseResponse()
   return (
     <div className='pop8'>
-      <Sec1 />
+      <Sec1
+        isPc={responsive?.md}
+        gsap={gsap}
+        ScrollTrigger={ScrollTrigger}
+        ScrollToPlugin={ScrollToPlugin}
+      />
       <Sec2 />
       <Sec3
         isPc={responsive?.md}
@@ -29,10 +34,25 @@ const PovaEight = () => {
         ScrollToPlugin={ScrollToPlugin}
       />
       <Sec4 />
-      <Sec5 />
-      <Sec6 />
+      <Sec5
+        isPc={responsive?.md}
+        gsap={gsap}
+        ScrollTrigger={ScrollTrigger}
+        ScrollToPlugin={ScrollToPlugin}
+      />
+      <Sec6
+        isPc={responsive?.md}
+        gsap={gsap}
+        ScrollTrigger={ScrollTrigger}
+        ScrollToPlugin={ScrollToPlugin}
+      />
       <Sec7 />
-      <Sec8 />
+      <Sec8
+        isPc={responsive?.md}
+        gsap={gsap}
+        ScrollTrigger={ScrollTrigger}
+        ScrollToPlugin={ScrollToPlugin}
+      />
       <Sec9 />
     </div>
   )

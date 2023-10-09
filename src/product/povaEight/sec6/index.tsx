@@ -1,10 +1,12 @@
 import { useRef } from "react"
+import { SecType } from "../type.ts/type"
 
 import UseObservable from "../../../hooks/useObserve"
 
 import "./index.scss"
 
-const Sec6 = () => {
+const Sec6 = (props: SecType) => {
+  const { isPc } = props
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
   const IntersectionObserver = UseObservable(ref)
@@ -27,29 +29,29 @@ const Sec6 = () => {
           <div
             className='icon icon1'
             style={{
-              top: global.pop8Config.sec6.icon1Top,
-              left: global.pop8Config.sec6.icon1Left,
+              top: isPc ? global.pop8Config.sec6.icon1Top : global.pop8Config.sec6.icon1MobTop,
+              left: isPc ? global.pop8Config.sec6.icon1Left : global.pop8Config.sec6.icon1MobLeft,
             }}
           ></div>
           <div
             className='icon icon2'
             style={{
-              top: global.pop8Config.sec6.icon2Top,
-              left: global.pop8Config.sec6.icon2Left,
+              top: isPc ? global.pop8Config.sec6.icon2Top : global.pop8Config.sec6.icon2MobTop,
+              left: isPc ? global.pop8Config.sec6.icon2Left : global.pop8Config.sec6.icon2MobLeft,
             }}
           ></div>
           <div
             className='icon icon3'
             style={{
-              top: global.pop8Config.sec6.icon3Top,
-              left: global.pop8Config.sec6.icon3Left,
+              top: isPc ? global.pop8Config.sec6.icon3Top : global.pop8Config.sec6.icon3MobTop,
+              left: isPc ? global.pop8Config.sec6.icon3Left : global.pop8Config.sec6.icon3MobLeft,
             }}
           ></div>
           <div
             className='icon icon4'
             style={{
-              top: global.pop8Config.sec6.icon4Top,
-              left: global.pop8Config.sec6.icon4Left,
+              top: isPc ? global.pop8Config.sec6.icon4Top : global.pop8Config.sec6.icon4MobTop,
+              left: isPc ? global.pop8Config.sec6.icon4Left : global.pop8Config.sec6.icon4MobLeft,
             }}
           ></div>
         </div>
@@ -129,7 +131,7 @@ const Sec6 = () => {
                 ></div>
               </div>
               <div
-                className='tips'
+                className='tips pc'
                 dangerouslySetInnerHTML={{
                   __html: global.pop8Config.sec6.tips,
                 }}

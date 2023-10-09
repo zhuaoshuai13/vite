@@ -70,3 +70,66 @@
     transform: skewY(4deg);
   }
 }
+
+@media (width < $mobwidthPx) {
+  .sec7.pop8 {
+    .bg_wrapper {
+      padding: 0 0 px-to-vw-mb(300);
+    }
+
+    .content_wrapper {
+      position: relative;
+      width: px-to-vw-mb(826);
+      height: px-to-vw-mb(1974);
+      margin: 0 auto;
+      padding: px-to-vw-mb(168) px-to-vw-mb(78) 0;
+      transform: unset;
+    }
+
+    .text_wrapper {
+      max-width: 100%;
+      margin: 0;
+      transform: unset;
+    }
+
+    .params {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: px-to-vw-mb(62);
+      margin: px-to-vw-mb(148) 0 0;
+      padding: 0 0 0 px-to-vw-mb(40);
+      transform: unset;
+
+      .param {
+        margin: 0;
+
+        .title {
+          color: #571deb;
+          font-size: px-to-vw-mb(66);
+        }
+
+        .desc {
+          font-size: px-to-vw-mb(25);
+        }
+      }
+
+      .param1 {
+        order: 1;
+      }
+
+      .param2 {
+        order: 2;
+      }
+    }
+
+    .product {
+      top: unset;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: px-to-vw-mb(978);
+
+      @include bg('sec7MbF10.png');
+    }
+  }
+}

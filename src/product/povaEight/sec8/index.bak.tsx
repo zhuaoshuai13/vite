@@ -5,6 +5,7 @@ import "./index.scss"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay } from "swiper/modules"
 import "swiper/css"
+import "swiper/css/autoplay"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 
@@ -47,45 +48,24 @@ const Sec8 = (props: SecType) => {
   }
 
   const slideClick = (index: number) => {
-    if(isPc) {
-      const showIndex = realIndex + 2
-      const move = index - showIndex
-      let jumpIndex = realIndex + move
-  
-      if (jumpIndex >= 6) {
-        jumpIndex -= 6
-      }
-  
-      if (jumpIndex < 0) {
-        jumpIndex += 6
-      }
-  
-      eval(`v${realIndex + 2}`).current?.pause()
-      eval(`v${realIndex + 2}`).current.currentTime = 0
-      eval(`v${jumpIndex + 2}`).current?.play()
-      // @ts-ignore
-      swiperRef.current.swiper.slideTo(jumpIndex)
-      setRealIndex(jumpIndex)
-    }else {
-      const showIndex = realIndex + 1
-      const move = index - showIndex
-      let jumpIndex = realIndex + move
-  
-      if (jumpIndex >= 6) {
-        jumpIndex -= 6
-      }
-  
-      if (jumpIndex < 0) {
-        jumpIndex += 6
-      }
-  
-      eval(`v${realIndex + 1}`).current?.pause()
-      eval(`v${realIndex + 1}`).current.currentTime = 0
-      eval(`v${jumpIndex + 1}`).current?.play()
-      // @ts-ignore
-      swiperRef.current.swiper.slideTo(jumpIndex)
-      setRealIndex(jumpIndex)
+    const showIndex = realIndex + 2
+    const move = index - showIndex
+    let jumpIndex = realIndex + move
+
+    if (jumpIndex >= 6) {
+      jumpIndex -= 6
     }
+
+    if (jumpIndex < 0) {
+      jumpIndex += 6
+    }
+
+    eval(`v${realIndex + 2}`).current?.pause()
+    eval(`v${realIndex + 2}`).current.currentTime = 0
+    eval(`v${jumpIndex + 2}`).current?.play()
+    // @ts-ignore
+    swiperRef.current.swiper.slideTo(jumpIndex)
+    setRealIndex(jumpIndex)
   }
 
   return (
@@ -122,7 +102,7 @@ const Sec8 = (props: SecType) => {
         </div>
         <div className='sec8_swiper' data-current={realIndex}>
           <Swiper
-            modules={[Autoplay]}
+          modules={[Autoplay]}
             slidesPerView={isPc ? 5 : 3}
             allowTouchMove={false}
             spaceBetween={50}
@@ -132,10 +112,6 @@ const Sec8 = (props: SecType) => {
             }}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
           >
             <SwiperSlide>
               <div

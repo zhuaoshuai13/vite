@@ -1,10 +1,12 @@
 import { useRef } from "react"
+import { SecType } from "../type.ts/type"
 
 import UseObservable from "../../../hooks/useObserve"
 
 import "./index.scss"
 
-const Sec5 = () => {
+const Sec5 = (props: SecType) => {
+  const { isPc } = props
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
   const IntersectionObserver = UseObservable(ref)
@@ -21,29 +23,29 @@ const Sec5 = () => {
         <div
           className='icon icon1'
           style={{
-            top: global.pop8Config.sec5.icon1Top,
-            left: global.pop8Config.sec5.icon1Left,
+            top: isPc ? global.pop8Config.sec5.icon1Top : global.pop8Config.sec5.icon1MobTop,
+            left: isPc ? global.pop8Config.sec5.icon1Left : global.pop8Config.sec5.icon1MobLeft,
           }}
         ></div>
         <div
           className='icon icon2'
           style={{
-            top: global.pop8Config.sec5.icon2Top,
-            left: global.pop8Config.sec5.icon2Left,
+            top: isPc ? global.pop8Config.sec5.icon2Top : global.pop8Config.sec5.icon2MobTop,
+            left: isPc ? global.pop8Config.sec5.icon2Left : global.pop8Config.sec5.icon2MobLeft,
           }}
         ></div>
         <div
           className='icon icon3'
           style={{
-            top: global.pop8Config.sec5.icon3Top,
-            left: global.pop8Config.sec5.icon3Left,
+            top: isPc ? global.pop8Config.sec5.icon3Top : global.pop8Config.sec5.icon3MobTop,
+            left: isPc ? global.pop8Config.sec5.icon3Left : global.pop8Config.sec5.icon3MobLeft,
           }}
         ></div>
         <div
           className='icon icon4'
           style={{
-            top: global.pop8Config.sec5.icon4Top,
-            left: global.pop8Config.sec5.icon4Left,
+            top: isPc ? global.pop8Config.sec5.icon4Top : global.pop8Config.sec5.icon4MobTop,
+            left: isPc ? global.pop8Config.sec5.icon4Left : global.pop8Config.sec5.icon4MobLeft,
           }}
         ></div>
       </div>

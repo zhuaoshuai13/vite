@@ -86,13 +86,14 @@ const Sec7 = () => {
             </div>
           </div>
           <div
-            className='tips'
+            className='tips pc'
             dangerouslySetInnerHTML={{
               __html: global.pop8Config.sec7.tips,
             }}
           ></div>
+          <div className='product mob'></div>
         </div>
-        <div className='product'></div>
+        <div className='product pc'></div>
       </div>
     </section>
   )

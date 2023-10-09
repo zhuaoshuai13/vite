@@ -56,3 +56,28 @@
     }
   }
 }
+
+@media (width < $mobwidthPx) {
+  .sec9.pop8 {
+    .circle {
+      width: 100%;
+      height: px-to-vw-mb(68);
+      background-color: #571deb;
+
+      @include bg('sec9MobCircle.png');
+    }
+
+    .sec9_text {
+      width: px-to-vw-mb(637);
+      height: px-to-vw-mb(389);
+      margin: px-to-vw-mb(500) auto px-to-vw-mb(410);
+      padding: px-to-vw-mb(120) px-to-vw-mb(50);
+      font-size: px-to-vw-mb(96);
+    }
+
+    .title_box {
+      width: 100%;
+      padding: 0 px-to-vw-mb(100) 0 px-to-vw-mb(156);
+    }
+  }
+}
