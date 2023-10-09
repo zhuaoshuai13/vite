@@ -312,7 +312,9 @@ window.pop8Config = {
     tips: `*Pictures are for illustration only, please refer to the actual product form.`,
   },
   sec7Video: {
-    pc: "http://localhost:5173/src/assets/video/sec7Pc.mp4",
+    // pc: "http://localhost:5173/src/assets/video/sec7Pc.mp4",
+    // v1Post: "",
+    pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec7Pc.mp4",
     v1Post: "",
   },
   sec8Video: {
