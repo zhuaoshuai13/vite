@@ -122,7 +122,7 @@ const Sec8 = (props: SecType) => {
         </div>
         <div className='sec8_swiper' data-current={realIndex}>
           <Swiper
-            modules={[Autoplay]}
+            // modules={[Autoplay]}
             slidesPerView={isPc ? 5 : 3}
             allowTouchMove={false}
             spaceBetween={50}

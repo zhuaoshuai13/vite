@@ -319,7 +319,7 @@ const PovaEight = () => {
     const ctx = gsap.context(() => {
       const tl1 = gsap
         .timeline()
-        .from(".sec9 .sec9_text", 1, { y: "20%", opacity: 0 })
+        .from(".sec9 .sec9_text", 1, { y: "50%", opacity: 0 })
 
       ScrollTrigger.create({
         trigger: ".sec9",

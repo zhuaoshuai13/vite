@@ -175,6 +175,7 @@
 @media (width < $mobwidthPx) {
   .sec3.pop8 {
     .bar {
+      top: px-to-vw-mb(-68);
       height: px-to-vw-mb(68);
 
       @include bg('sec3MobBar.png');
