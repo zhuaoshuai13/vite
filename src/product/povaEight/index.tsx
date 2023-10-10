@@ -777,7 +777,7 @@ const PovaEight = () => {
     sec1Ani()
     sec3Ani()
     sec4Ani()
-    // sec5Ani()
+    sec5Ani()
     sec9Ani()
     sec10Ani()
     sec11Ani()
