@@ -5,8 +5,12 @@ import UseObservable from "../../../hooks/useObserve"
 
 import "./index.scss"
 
-const Sec6 = (props: SecType) => {
-  const { isPc } = props
+interface sec6Type extends SecType {
+  sec6Video: any
+}
+
+const Sec6 = (props: sec6Type) => {
+  const { isPc, sec6Video } = props
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
   const IntersectionObserver = UseObservable(ref)
@@ -29,34 +33,61 @@ const Sec6 = (props: SecType) => {
           <div
             className='icon icon1'
             style={{
-              top: isPc ? global.pop8Config.sec6.icon1Top : global.pop8Config.sec6.icon1MobTop,
-              left: isPc ? global.pop8Config.sec6.icon1Left : global.pop8Config.sec6.icon1MobLeft,
+              top: isPc
+                ? global.pop8Config.sec6.icon1Top
+                : global.pop8Config.sec6.icon1MobTop,
+              left: isPc
+                ? global.pop8Config.sec6.icon1Left
+                : global.pop8Config.sec6.icon1MobLeft,
             }}
           ></div>
           <div
             className='icon icon2'
             style={{
-              top: isPc ? global.pop8Config.sec6.icon2Top : global.pop8Config.sec6.icon2MobTop,
-              left: isPc ? global.pop8Config.sec6.icon2Left : global.pop8Config.sec6.icon2MobLeft,
+              top: isPc
+                ? global.pop8Config.sec6.icon2Top
+                : global.pop8Config.sec6.icon2MobTop,
+              left: isPc
+                ? global.pop8Config.sec6.icon2Left
+                : global.pop8Config.sec6.icon2MobLeft,
             }}
           ></div>
           <div
             className='icon icon3'
             style={{
-              top: isPc ? global.pop8Config.sec6.icon3Top : global.pop8Config.sec6.icon3MobTop,
-              left: isPc ? global.pop8Config.sec6.icon3Left : global.pop8Config.sec6.icon3MobLeft,
+              top: isPc
+                ? global.pop8Config.sec6.icon3Top
+                : global.pop8Config.sec6.icon3MobTop,
+              left: isPc
+                ? global.pop8Config.sec6.icon3Left
+                : global.pop8Config.sec6.icon3MobLeft,
             }}
           ></div>
           <div
             className='icon icon4'
             style={{
-              top: isPc ? global.pop8Config.sec6.icon4Top : global.pop8Config.sec6.icon4MobTop,
-              left: isPc ? global.pop8Config.sec6.icon4Left : global.pop8Config.sec6.icon4MobLeft,
+              top: isPc
+                ? global.pop8Config.sec6.icon4Top
+                : global.pop8Config.sec6.icon4MobTop,
+              left: isPc
+                ? global.pop8Config.sec6.icon4Left
+                : global.pop8Config.sec6.icon4MobLeft,
             }}
           ></div>
         </div>
         <div className='content_wrapper'>
           <div className='box'>
+            <video
+              src={global.pop8Config.sec6Video.pc}
+              ref={sec6Video}
+              poster={global.pop8Config.sec8Video.v1Post}
+              className='video'
+              autoPlay={false}
+              webkit-playsinline='true'
+              preload='auto'
+              muted
+              loop={false}
+            ></video>
             <div className='text_wrapper'>
               <div
                 className='title_48 HBfont'

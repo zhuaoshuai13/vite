@@ -13,7 +13,7 @@
   .bg_wrapper {
     margin-top: -1px;
     padding: px-to-vw(160) 0 px-to-vw(200);
-    background-color: #571deb;
+    background-color: #621fee;
   }
 
   .bar {
@@ -72,23 +72,34 @@
 
   .box {
     position: relative;
-    height: px-to-vw(929);
+    height: px-to-vw(1080);
     margin-top: px-to-vw(60);
 
     @include bg('sec7PcF1.png');
 
     .text_wrapper {
       position: absolute;
+      position: relative;
       top: px-to-vw(350);
       left: px-to-vw(1153);
+      z-index: 3;
       max-width: px-to-vw(553);
+    }
+
+    video {
+      position: absolute;
+      z-index: 2;
+      width: px-to-vw(1920);
+      height: px-to-vw(1080);
     }
   }
 
   .pic_box {
     position: absolute;
-    top: px-to-vw(184);
+    position: relative;
+    top: px-to-vw(-20);
     left: px-to-vw(404);
+    z-index: 3;
     width: px-to-vw(408);
     height: px-to-vw(877);
     color: #fff;
@@ -96,8 +107,6 @@
     .phone {
       width: 100%;
       height: 100%;
-
-      @include bg('sec7PcF3.png');
     }
 
     .light {
@@ -260,7 +269,7 @@
       transform: translateX(-50%);
 
       .phone {
-  
+
         @include bg('sec7MbF4.png');
       }
 
@@ -269,7 +278,7 @@
         right: px-to-vw-mb(15);
         width: px-to-vw-mb(245);
         height: px-to-vw-mb(136);
-  
+
         @include bg('sec7MbF3.png');
       }
 
@@ -279,7 +288,7 @@
         width: px-to-vw-mb(342);
         height: px-to-vw-mb(183);
         padding: px-to-vw-mb(40) px-to-vw-mb(50);
-  
+
         @include bg('sec7MbF6.png');
 
         .title {
@@ -298,7 +307,7 @@
         height: px-to-vw-mb(239);
         padding: px-to-vw-mb(40) px-to-vw-mb(45);
         text-align: center;
-  
+
         @include bg('sec7MbF7.png');
 
         .title {
@@ -316,7 +325,7 @@
         width: px-to-vw-mb(324);
         height: px-to-vw-mb(199);
         padding: px-to-vw-mb(40) px-to-vw-mb(70);
-  
+
         @include bg('sec7MbF8.png');
 
         .title {
@@ -334,7 +343,7 @@
         width: px-to-vw-mb(296);
         height: px-to-vw-mb(191);
         padding: px-to-vw-mb(25);
-  
+
         @include bg('sec7MbF9.png');
 
         .title {

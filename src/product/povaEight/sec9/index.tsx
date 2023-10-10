@@ -21,7 +21,6 @@ const Sec9 = () => {
   const { responsive } = UseResponse()
   return (
     <div className={`sec9 pop8 ${IntersectionObserver}`} ref={ref}>
-      <div className='circle'></div>
       <div
         className='sec9_text'
         dangerouslySetInnerHTML={{ __html: global.pop8Config.sec9.title }}

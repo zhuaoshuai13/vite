@@ -4,7 +4,8 @@ import UseObservable from "../../../hooks/useObserve"
 
 import "./index.scss"
 
-const Sec7 = () => {
+const Sec7 = (props: { sec7Video: any }) => {
+  const { sec7Video } = props
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
   const IntersectionObserver = UseObservable(ref)
@@ -96,13 +97,14 @@ const Sec7 = () => {
         <div className='product pc'>
           <video
             src={global.pop8Config.sec7Video.pc}
+            ref={sec7Video}
             poster={global.pop8Config.sec8Video.v1Post}
             className='video'
-            autoPlay
+            autoPlay={false}
             webkit-playsinline='true'
             preload='auto'
             muted
-            loop
+            loop={false}
           ></video>
         </div>
       </div>
