@@ -11,23 +11,9 @@
   }
 
   .title_box {
-    .icon1 {
-      width: px-to-vw(164);
-      height: px-to-vw(165);
-
-      @include bg('sec11PcIcon1.png');
-    }
-
-    .icon2 {
-      width: px-to-vw(175);
-      height: px-to-vw(137);
-
-      @include bg('sec11PcIcon2.png');
-    }
-
     .icon3 {
-      width: px-to-vw(221);
-      height: px-to-vw(157);
+      width: px-to-vw(177);
+      height: px-to-vw(125);
 
       @include bg('sec11PcIcon3.png');
     }
@@ -56,13 +42,28 @@
 
   .sec11_phone {
     position: absolute;
-    top: 46%;
-    left: 12%;
+    top: 42%;
+    left: 11%;
     z-index: 8;
-    width: px-to-vw(373);
-    height: px-to-vw(805);
+    width: px-to-vw(408);
+    height: px-to-vw(877);
 
-    @include bg('sec11Phone.png');
+    .pic1 {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      @include bg('sec11PcPhone.png');
+    }
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 93%;
+      border-radius: px-to-vw(20);
+      transform: translate(-50%, -50%);
+    }
   }
 
   .sec11_text {
@@ -112,7 +113,7 @@
   .tips {
     margin-top: px-to-vw(1100);
     padding-bottom: px-to-vw(40);
-    padding-left: px-to-vw(253);
+    padding-left: px-to-vw(186);
   }
 }
 

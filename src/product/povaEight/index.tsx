@@ -23,7 +23,7 @@ const PovaEight = () => {
   const sec6Video = useRef<HTMLVideoElement>(null)
   const sec7Video = useRef<HTMLVideoElement>(null)
   const pxToVw = (num: number) => {
-    const res = (num * 1) / 25.6
+    const res = (num * 1) / 19.2
     return `${res}vw`
   }
 
@@ -31,11 +31,11 @@ const PovaEight = () => {
   const sec1Ani = () => {
     const tl = gsap
       .timeline()
-      .from(".sec1 .slogan", 1, { x: "-20%", opacity: 0 }, "a")
-      .from(".sec1 .title_130", 1, { x: "-20%", opacity: 0 }, "a")
-      .from(".sec1 .icon1", 1, { x: "20%", opacity: 0, delay: 0.15 }, "a")
-      .from(".sec1 .params", 1, { x: "-20%", opacity: 0, delay: 0.25 }, "a")
-      .from(".sec1 .tips", 1, { x: "-20%", opacity: 0, delay: 0.35 }, "a")
+      .from(".sec1 .slogan", 0.5, { x: "-20%", opacity: 0 }, "a")
+      .from(".sec1 .title_130", 0.5, { x: "-20%", opacity: 0 }, "a")
+      .from(".sec1 .icon1", 0.5, { x: "-100%", opacity: 0, delay: 0.15 }, "a")
+      .from(".sec1 .params", 0.5, { x: "-20%", opacity: 0, delay: 0.25 }, "a")
+      .from(".sec1 .tips", 0.5, { x: "-20%", opacity: 0, delay: 0.35 }, "a")
 
     ScrollTrigger.create({
       trigger: ".sec1",
@@ -45,11 +45,60 @@ const PovaEight = () => {
     })
   }
 
+  const sec2Ani = () => {
+    if (responsive?.md) {
+      const tl = gsap
+        .timeline()
+        .from(".sec2 .item2", 0.5, { x: "-20%", opacity: 0 }, "a")
+        .from(".sec2 .item7", 0.5, { x: "-20%", opacity: 0, delay: 0.1 }, "a")
+        .from(".sec2 .item1", 0.5, { x: "-20%", opacity: 0, delay: 0.2 }, "a")
+        .from(".sec2 .item3", 0.5, { x: "-20%", opacity: 0, delay: 0.3 }, "a")
+        .from(".sec2 .item6", 0.5, { x: "-20%", opacity: 0, delay: 0.4 }, "a")
+        .from(".sec2 .item5", 0.5, { x: "-20%", opacity: 0, delay: 0.5 }, "a")
+        .from(".sec2 .item4", 0.5, { x: "-20%", opacity: 0, delay: 0.6 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec2 .items",
+        start: `top 50%`,
+        // end: "+=20%",
+        animation: tl,
+      })
+    } else {
+      const tl = gsap
+        .timeline()
+        .from(".sec2 .item2", 0.5, { y: "50%", opacity: 0 }, "a")
+        .from(".sec2 .item3", 0.5, { y: "50%", opacity: 0, delay: 0.1 }, "a")
+        .from(".sec2 .item1", 0.5, { y: "50%", opacity: 0, delay: 0.2 }, "a")
+        .from(".sec2 .item4", 0.5, { y: "50%", opacity: 0, delay: 0.3 }, "a")
+        .from(".sec2 .item5", 0.5, { y: "50%", opacity: 0, delay: 0.3 }, "a")
+        .from(".sec2 .item6", 0.5, { y: "50%", opacity: 0, delay: 0.4 }, "a")
+        .from(".sec2 .item7", 0.5, { y: "50%", opacity: 0, delay: 0.4 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec2 .items",
+        start: `top 50%`,
+        // end: "+=20%",
+        animation: tl,
+      })
+    }
+  }
+
   const sec3Ani = () => {
     const ctx = gsap.context(() => {
+      const tl1 = gsap
+        .timeline()
+        .from(".sec3 .bar", 1, { top: 0, })
+
+      ScrollTrigger.create({
+        trigger: ".sec3 .bar",
+        start: `top 90%`,
+        end: "+=50%",
+        animation: tl1,
+        scrub: true,
+      })
       const tl2 = gsap
         .timeline()
-        .from(".sec3 .text", 1, { y: "20%", opacity: 0 })
+        .from(".sec3 .text", 1, { y: "100%", opacity: 0 })
 
       ScrollTrigger.create({
         trigger: ".sec3",
@@ -69,19 +118,7 @@ const PovaEight = () => {
         .from(
           ".sec3 .icon1",
           0.5,
-          { y: "-40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
-          ".sec3 .icon2",
-          0.5,
-          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
-          ".sec3 .icon3",
-          0.5,
-          { x: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          { x: "-100%", opacity: 0, ease: "none", delay: 0.5 },
           "a"
         )
 
@@ -101,6 +138,8 @@ const PovaEight = () => {
           "a"
         )
         .from(".sec3 .circle", 1, { x: "20%", opacity: 0, delay: 0.25 }, "a")
+        .from(".sec3 .box1", 1, { x: "20%", opacity: 0, delay: 0.25 }, "a")
+        .from(".sec3 .box2", 1, { x: "20%", opacity: 0, delay: 0.25 }, "a")
         .from(
           ".sec3 .box1 .desc_18",
           1,
@@ -164,8 +203,8 @@ const PovaEight = () => {
       scaleRatio = heightRatio
     }
 
-    for (let i = 0; i < 55; i++) {
-      images.push(`${import.meta.env.VITE_FRAMES_URL}/screenAni/0${i}.png`)
+    for (let i = 0; i < 86; i++) {
+      images.push(`${import.meta.env.VITE_FRAMES_URL}/screenAni/90hz${i}.png`)
     }
 
     images.forEach((src) => {
@@ -193,10 +232,7 @@ const PovaEight = () => {
     const tl = gsap
       .timeline()
       .from(".sec4 .title_130", 1, { x: "-20%", opacity: 0 }, "a")
-      .from(".sec4 .icon1", 1, { x: "-40%", opacity: 0 }, "a")
-      .from(".sec4 .icon2", 1, { y: "-40%", opacity: 0 }, "a")
-      .from(".sec4 .icon3", 1, { x: "40%", opacity: 0 }, "a")
-      .from(".sec4 .icon4", 1, { y: "40%", opacity: 0 }, "a")
+      .from(".sec4 .icon3", 1, { x: "-100%", opacity: 0 }, "a")
 
     ScrollTrigger.create({
       trigger: ".sec4",
@@ -206,17 +242,17 @@ const PovaEight = () => {
 
     const tl2 = gsap
       .timeline()
-      .from(".sec4 .pic", 2, { scale: 1.5 }, "a")
-      .from(".sec4 .left_box", 1.5, { x: "-40%", opacity: 0, delay: 0.25 }, "a")
-      .from(".sec4 .right_box", 1.5, { x: "40%", opacity: 0, delay: 0.25 }, "a")
-      .from(".sec4 .tips", 1.5, { x: "40%", opacity: 0, delay: 0.25 }, "a")
+      .from(".sec4 .pic", 0.5, { y: "20%", opacity: 0 }, "a")
+      .from(".sec4 .left_box", 0.5, { x: "-40%", opacity: 0, delay: 0.25 }, "a")
+      .from(".sec4 .right_box", 0.5, { x: "40%", opacity: 0, delay: 0.25 }, "a")
+      .from(".sec4 .tips", 0.5, { x: "40%", opacity: 0, delay: 0.25 }, "a")
 
     ScrollTrigger.create({
-      trigger: ".sec4",
-      start: responsive?.md ? `top -50%` : `top 5%`,
+      trigger: ".sec4 .content_wrapper",
+      start: responsive?.md ? `top 50%` : `top 60%`,
+      end: "+=60%",
       anticipatePin: 0,
       animation: tl2,
-      pin: true,
       scrub: true,
 
       onUpdate: ({ progress }) => {
@@ -225,6 +261,7 @@ const PovaEight = () => {
       },
     })
   }
+
   const sec5Ani = () => {
     const ctxs = (landAni as any)?.current?.getContext("2d")
     ctxs.globalCompositeOperation = "copy"
@@ -276,10 +313,7 @@ const PovaEight = () => {
     const tl = gsap
       .timeline()
       .from(".sec5 .title_130", 1, { x: "-20%", opacity: 0 }, "a")
-      .from(".sec5 .icon1", 1, { x: "-40%", opacity: 0 }, "a")
-      .from(".sec5 .icon2", 1, { y: "-40%", opacity: 0 }, "a")
-      .from(".sec5 .icon3", 1, { y: "40%", opacity: 0 }, "a")
-      .from(".sec5 .icon4", 1, { x: "40%", opacity: 0 }, "a")
+      .from(".sec5 .icon1", 1, { x: "-100%", opacity: 0 }, "a")
 
     ScrollTrigger.create({
       trigger: ".sec5",
@@ -287,32 +321,61 @@ const PovaEight = () => {
       animation: tl,
     })
 
-    const tl2 = gsap
-      .timeline()
-      .to(".sec5", 1, { opacity: 1 }, "a")
-      .to(
-        ".sec5 .phone",
-        1,
-        { width: pxToVw(720), height: pxToVw(960), left: pxToVw(750) },
-        "b"
-      )
-      .from(".sec5 .title_48", 1, { opacity: 0, y: "20%" }, "b")
-      .from(".sec5 .desc_18", 1, { opacity: 0, y: "20%", delay: 0.25 }, "b")
+    if (responsive?.md) {
+      const tl2 = gsap
+        .timeline()
+        .to(".sec5", 1, { opacity: 1 }, "a")
+        .to(
+          ".sec5 .phone",
+          1,
+          { width: pxToVw(720), height: pxToVw(960), left: pxToVw(550) },
+          "b"
+        )
+        .from(".sec5 .title_48", 1, { opacity: 0, y: "20%" }, "b")
+        .from(".sec5 .desc_18", 1, { opacity: 0, y: "20%", delay: 0.25 }, "b")
 
-    ScrollTrigger.create({
-      trigger: ".sec5 .content_wrapper",
-      start: responsive?.md ? `top 0%` : `top 20%`,
+      ScrollTrigger.create({
+        trigger: ".sec5 .content_wrapper",
+        start: `top 0%`,
 
-      end: `+=300%`,
-      scrub: true,
-      pin: true,
-      animation: tl2,
+        end: `+=300%`,
+        scrub: true,
+        pin: true,
+        animation: tl2,
 
-      onUpdate: ({ progress }) => {
-        const now = (progress * 224).toFixed(0)
-        ani(Number(now))
-      },
-    })
+        onUpdate: ({ progress }) => {
+          const now = (progress * 224).toFixed(0)
+          ani(Number(now))
+        },
+      })
+    } else {
+      const tl2 = gsap
+        .timeline()
+        .to(".sec5", 1, { opacity: 1 }, "a")
+        // .to(
+        //   ".sec5 .phone",
+        //   1,
+        //   { width: pxToVw(720), height: pxToVw(960), left: pxToVw(550) },
+        //   "b"
+        // )
+        .from(".sec5 .title_48", 1, { opacity: 0, y: "20%" }, "b")
+        .from(".sec5 .desc_18", 1, { opacity: 0, y: "20%", delay: 0.25 }, "b")
+
+      ScrollTrigger.create({
+        trigger: ".sec5 .content_wrapper",
+        start: `bottom bottom`,
+
+        end: `+=300%`,
+        scrub: true,
+        pin: true,
+        animation: tl2,
+
+        onUpdate: ({ progress }) => {
+          const now = (progress * 224).toFixed(0)
+          ani(Number(now))
+        },
+      })
+    }
   }
 
   const sec9Ani = () => {
@@ -345,25 +408,13 @@ const PovaEight = () => {
         .from(
           ".sec10 .icon1",
           0.5,
-          { y: "-40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
-          ".sec10 .icon2",
-          0.5,
-          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
-          ".sec10 .icon3",
-          0.5,
-          { x: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          { x: "-100%", opacity: 0, ease: "none", delay: 0.5 },
           "a"
         )
         .from(
           ".sec10 .icon4",
           0.5,
-          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          { x: "-100%", opacity: 0, ease: "none", delay: 0.75 },
           "a"
         )
 
@@ -376,6 +427,7 @@ const PovaEight = () => {
 
       const tl4 = gsap
         .timeline()
+        .from(".sec10 .line", 1, { y: "20%", opacity: 0, delay: 0.25 }, "a")
         .from(
           ".sec10 .text_box .title",
           1,
@@ -424,21 +476,9 @@ const PovaEight = () => {
           "a"
         )
         .from(
-          ".sec11 .icon1",
-          0.5,
-          { y: "-40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
-          ".sec11 .icon2",
-          0.5,
-          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
           ".sec11 .icon3",
           0.5,
-          { x: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          { x: "-100%", opacity: 0, ease: "none", delay: 0.5 },
           "a"
         )
 
@@ -501,19 +541,7 @@ const PovaEight = () => {
         .from(
           ".sec12 .icon1",
           0.5,
-          { y: "-40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
-          ".sec12 .icon2",
-          0.5,
-          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
-          ".sec12 .icon3",
-          0.5,
-          { x: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          { x: "-100%", opacity: 0, ease: "none", delay: 0.5 },
           "a"
         )
 
@@ -523,6 +551,54 @@ const PovaEight = () => {
         end: "+=20%",
         animation: tl3,
       })
+
+      if (responsive?.md) {
+        const tl4 = gsap
+          .timeline()
+          .from(
+            ".sec12 .sec12_left",
+            1,
+            { x: "-100%", opacity: 0, ease: "none" },
+            "a"
+          )
+          .from(
+            ".sec12 .sec12_right",
+            1,
+            { x: "100%", opacity: 0, ease: "none" },
+            "a"
+          )
+          .from(".sec12 .line", 1, { y: "50%", opacity: 0, ease: "none" }, "a")
+
+        ScrollTrigger.create({
+          trigger: ".sec12 .sec12_content",
+          start: `top 50%`,
+          end: "+=20%",
+          animation: tl4,
+        })
+      } else {
+        const tl4 = gsap
+          .timeline()
+          .from(
+            ".sec12 .sec12_left",
+            1,
+            { y: "50%", opacity: 0, ease: "none" },
+            "a"
+          )
+          .from(
+            ".sec12 .sec12_right",
+            1,
+            { y: "50%", opacity: 0, ease: "none" },
+            "a"
+          )
+          .from(".sec12 .line", 1, { y: "50%", opacity: 0, ease: "none" }, "a")
+
+        ScrollTrigger.create({
+          trigger: ".sec12 .sec12_content",
+          start: `top 50%`,
+          end: "+=20%",
+          animation: tl4,
+        })
+      }
     })
 
     return () => ctx.revert() // <- Cleanup!
@@ -539,21 +615,9 @@ const PovaEight = () => {
           "a"
         )
         .from(
-          ".sec13 .icon1",
-          0.5,
-          { y: "-40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
-          ".sec13 .icon2",
-          0.5,
-          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
           ".sec13 .icon3",
           0.5,
-          { x: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          { x: "-100%", opacity: 0, ease: "none", delay: 0.5 },
           "a"
         )
 
@@ -568,19 +632,19 @@ const PovaEight = () => {
         .timeline()
         .from(
           ".sec13 .text_box .title",
-          1,
+          0.5,
           { y: "20%", opacity: 0, delay: 0.25 },
           "a"
         )
         .from(
           ".sec13 .text_box .desc_18",
-          1,
+          0.5,
           { y: "20%", opacity: 0, delay: 0.5 },
           "a"
         )
         .from(
           ".sec13 .text_box .params",
-          1,
+          0.5,
           { y: "20%", opacity: 0, delay: 0.75 },
           "a"
         )
@@ -616,19 +680,7 @@ const PovaEight = () => {
         .from(
           ".sec14 .icon1",
           0.5,
-          { y: "-40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
-          ".sec14 .icon2",
-          0.5,
-          { y: "40%", opacity: 0, ease: "none", delay: 0.5 },
-          "a"
-        )
-        .from(
-          ".sec14 .icon3",
-          0.5,
-          { x: "40%", opacity: 0, ease: "none", delay: 0.5 },
+          { x: "-100%", opacity: 0, ease: "none", delay: 0.5 },
           "a"
         )
 
@@ -643,31 +695,31 @@ const PovaEight = () => {
         .timeline()
         .from(
           ".sec14 .sec14_left",
-          1,
+          0.5,
           { y: "20%", opacity: 0, delay: 0.25 },
           "a"
         )
         .from(
           ".sec14 .sec14_right",
-          1,
+          0.5,
           { y: "20%", opacity: 0, delay: 0.5 },
           "a"
         )
         .from(
           ".sec14 .text_box .title",
-          1,
+          0.5,
           { y: "20%", opacity: 0, delay: 0.75 },
           "a"
         )
         .from(
           ".sec14 .text_box .desc_18",
-          1,
+          0.5,
           { y: "20%", opacity: 0, delay: 1 },
           "a"
         )
         .from(
           ".sec14 .text_box .params",
-          1,
+          0.5,
           { y: "20%", opacity: 0, delay: 1.25 },
           "a"
         )
@@ -693,7 +745,7 @@ const PovaEight = () => {
   const sec6Ani = () => {
     const tl = gsap
       .timeline()
-      .from(".sec6 .text", 1, { y: "20%", opacity: 0 }, "a")
+      .from(".sec6 .text", 1, { y: "100%", opacity: 0 }, "a")
 
     ScrollTrigger.create({
       trigger: ".sec6",
@@ -704,10 +756,7 @@ const PovaEight = () => {
     const tl2 = gsap
       .timeline()
       .from(".sec6 .title_130", 1, { x: "-20%", opacity: 0 }, "a")
-      .from(".sec6 .icon1", 1, { x: "-40%", opacity: 0, delay: 0.25 }, "a")
-      .from(".sec6 .icon2", 1, { y: "-40%", opacity: 0, delay: 0.25 }, "a")
-      .from(".sec6 .icon3", 1, { y: "40%", opacity: 0, delay: 0.25 }, "a")
-      .from(".sec6 .icon4", 1, { x: "40%", opacity: 0, delay: 0.25 }, "a")
+      .from(".sec6 .icon4", 1, { x: "-100%", opacity: 0, delay: 0.25 }, "a")
 
     ScrollTrigger.create({
       trigger: ".sec6",
@@ -762,9 +811,8 @@ const PovaEight = () => {
     const tl = gsap
       .timeline()
       .from(".sec8 .title_130", 1, { y: "20%", opacity: 0 }, "a")
-      .from(".sec8 .icon1", 1, { x: "-40%", opacity: 0, delay: 0.25 }, "a")
-      .from(".sec8 .icon2", 1, { y: "-40%", opacity: 0, delay: 0.5 }, "a")
-      .from(".sec8 .icon3", 1, { x: "40%", opacity: 0, delay: 0.5 }, "a")
+      .from(".sec8 .icon2", 1, { x: "-100%", opacity: 0, delay: 0.5 }, "a")
+      .from(".sec8 .icon3", 1, { x: "-100%", opacity: 0, delay: 0.5 }, "a")
 
     ScrollTrigger.create({
       trigger: ".sec8",
@@ -774,20 +822,23 @@ const PovaEight = () => {
   }
 
   useEffect(() => {
-    sec1Ani()
-    sec3Ani()
-    sec4Ani()
-    sec5Ani()
-    sec9Ani()
-    sec10Ani()
-    sec11Ani()
-    sec12Ani()
-    sec13Ani()
-    sec14Ani()
-    sec6Ani()
-    sec7Ani()
-    sec8Ani()
-  }, [])
+    if (responsive != undefined) {
+      sec1Ani()
+      sec2Ani()
+      sec3Ani()
+      sec4Ani()
+      sec5Ani()
+      sec9Ani()
+      sec10Ani()
+      sec11Ani()
+      sec12Ani()
+      sec13Ani()
+      sec14Ani()
+      sec6Ani()
+      sec7Ani()
+      sec8Ani()
+    }
+  }, [responsive])
   return (
     <div className='pop8'>
       <Sec1
@@ -803,7 +854,7 @@ const PovaEight = () => {
         ScrollTrigger={ScrollTrigger}
         ScrollToPlugin={ScrollToPlugin}
       />
-      <Sec4 refs={screenAni} />
+      <Sec4 refs={screenAni} isPc={responsive?.md} />
       <Sec5
         isPc={responsive?.md}
         gsap={gsap}
@@ -818,7 +869,7 @@ const PovaEight = () => {
         ScrollToPlugin={ScrollToPlugin}
         sec6Video={sec6Video}
       />
-      <Sec7 sec7Video={sec7Video} />
+      <Sec7 sec7Video={sec7Video} isPc={responsive?.md} />
       <Sec8
         isPc={responsive?.md}
         gsap={gsap}

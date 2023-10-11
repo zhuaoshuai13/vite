@@ -44,24 +44,10 @@
   }
 
   .icon1 {
-    width: px-to-vw(152);
-    height: px-to-vw(152);
+    width: px-to-vw(113);
+    height: px-to-vw(113);
 
     @include bg('sec3PcIcon1.png');
-  }
-
-  .icon2 {
-    width: px-to-vw(200);
-    height: px-to-vw(163);
-
-    @include bg('sec3PcIcon2.png');
-  }
-
-  .icon3 {
-    width: px-to-vw(147);
-    height: px-to-vw(147);
-
-    @include bg('sec3PcIcon3.png');
   }
 
   .box {
@@ -137,7 +123,8 @@
 
     &:hover {
       .img {
-        background-size: 110% 110% !important;
+        // background-size: 110% 110% !important;
+        transform: scale(1.1) translate(-50%, -50%);
       }
     }
 
@@ -145,22 +132,24 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: px-to-vw(762);
-      height: px-to-vw(762);
       background-position: center center;
       background-size: 100% 100% !important;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
+      transform: scale(1) translate(-50%, -50%);
+      transform-origin: left top;
       transition: all .3s;
     }
 
     .img1 {
       z-index: 2;
+      width: px-to-vw(813);
+      height: px-to-vw(585);
 
       @include bg('sec3PcImg1.png');
     }
 
     .img2 {
+      width: px-to-vw(820);
+      height: px-to-vw(899);
       opacity: 0;
 
       @include bg('sec3PcImg2.png');
@@ -187,7 +176,7 @@
     }
 
     .icon_container {
-      margin: 0 px-to-vw-mb(177) 0 px-to-vw-mb(230);
+      margin: 0 px-to-vw-mb(177) 0 px-to-vw-mb(180);
     }
 
     .icon1 {
@@ -218,9 +207,14 @@
       margin: 0 auto;
       transform: unset;
 
-      .img {
-        width: px-to-vw-mb(762);
-        height: px-to-vw-mb(762);
+      .img1 {
+        width: px-to-vw-mb(921);
+        height: px-to-vw-mb(663);
+      }
+
+      .img2 {
+        width: px-to-vw-mb(810);
+        height: px-to-vw-mb(889);
       }
     }
 

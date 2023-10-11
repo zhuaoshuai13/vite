@@ -24,7 +24,6 @@ const Sec8 = (props: SecType) => {
   const v4 = useRef<HTMLVideoElement>(null)
   const v5 = useRef<HTMLVideoElement>(null)
   const v6 = useRef<HTMLVideoElement>(null)
-  const v7 = useRef<HTMLVideoElement>(null)
 
   const IntersectionObserver = UseObservable(ref)
   const scrollPlay = (num: number) => {
@@ -52,12 +51,12 @@ const Sec8 = (props: SecType) => {
       const move = index - showIndex
       let jumpIndex = realIndex + move
   
-      if (jumpIndex >= 6) {
-        jumpIndex -= 6
+      if (jumpIndex >= 5) {
+        jumpIndex -= 5
       }
   
       if (jumpIndex < 0) {
-        jumpIndex += 6
+        jumpIndex += 5
       }
   
       eval(`v${realIndex + 2}`).current?.pause()
@@ -71,12 +70,12 @@ const Sec8 = (props: SecType) => {
       const move = index - showIndex
       let jumpIndex = realIndex + move
   
-      if (jumpIndex >= 6) {
-        jumpIndex -= 6
+      if (jumpIndex >= 5) {
+        jumpIndex -= 5
       }
   
       if (jumpIndex < 0) {
-        jumpIndex += 6
+        jumpIndex += 5
       }
   
       eval(`v${realIndex + 1}`).current?.pause()
@@ -99,13 +98,6 @@ const Sec8 = (props: SecType) => {
             }}
           ></div>
           <div
-            className='icon icon1'
-            style={{
-              top: isPc ? global.pop8Config.sec8.icon1Top : global.pop8Config.sec8.icon1MobTop,
-              left: isPc ? global.pop8Config.sec8.icon1Left : global.pop8Config.sec8.icon1MobLeft,
-            }}
-          ></div>
-          <div
             className='icon icon2'
             style={{
               top: isPc ? global.pop8Config.sec8.icon2Top : global.pop8Config.sec8.icon2MobTop,
@@ -122,7 +114,7 @@ const Sec8 = (props: SecType) => {
         </div>
         <div className='sec8_swiper' data-current={realIndex}>
           <Swiper
-            // modules={[Autoplay]}
+            modules={[Autoplay]}
             slidesPerView={isPc ? 5 : 3}
             allowTouchMove={false}
             spaceBetween={50}
@@ -187,7 +179,7 @@ const Sec8 = (props: SecType) => {
                 <div className='pic_border'></div>
                 <div className={`pic pic3`}>
                   <video
-                    src={global.pop8Config.sec8Video.v3}
+                    src={global.pop8Config.sec8Video.v4}
                     poster={global.pop8Config.sec8Video.v1Post}
                     ref={v2}
                     className='video'
@@ -208,7 +200,7 @@ const Sec8 = (props: SecType) => {
                 <div className='pic_border'></div>
                 <div className={`pic pic4`}>
                   <video
-                    src={global.pop8Config.sec8Video.v4}
+                    src={global.pop8Config.sec8Video.v5}
                     poster={global.pop8Config.sec8Video.v1Post}
                     ref={v3}
                     className='video'
@@ -229,7 +221,7 @@ const Sec8 = (props: SecType) => {
                 <div className='pic_border'></div>
                 <div className={`pic pic5`}>
                   <video
-                    src={global.pop8Config.sec8Video.v5}
+                    src={global.pop8Config.sec8Video.v6}
                     poster={global.pop8Config.sec8Video.v1Post}
                     ref={v4}
                     className='video'
@@ -242,7 +234,7 @@ const Sec8 = (props: SecType) => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div
                 className={`pic_box ${realIndex === 5 ? "active" : ""}`}
                 onClick={() => slideClick(5)}
@@ -251,6 +243,27 @@ const Sec8 = (props: SecType) => {
                 <div className={`pic pic6`}>
                   <video
                     src={global.pop8Config.sec8Video.v6}
+                    poster={global.pop8Config.sec8Video.v1Post}
+                    ref={v5}
+                    className='video'
+                    autoPlay={false}
+                    webkit-playsinline='true'
+                    preload='auto'
+                    muted
+                    loop
+                  ></video>
+                </div>
+              </div>
+            </SwiperSlide> */}
+            <SwiperSlide>
+              <div
+                className={`pic_box ${realIndex === 5 ? "active" : ""}`}
+                onClick={() => slideClick(5)}
+              >
+                <div className='pic_border'></div>
+                <div className={`pic pic5`}>
+                  <video
+                    src={global.pop8Config.sec8Video.v1}
                     poster={global.pop8Config.sec8Video.v1Post}
                     ref={v5}
                     className='video'
@@ -271,7 +284,7 @@ const Sec8 = (props: SecType) => {
                 <div className='pic_border'></div>
                 <div className={`pic pic5`}>
                   <video
-                    src={global.pop8Config.sec8Video.v1}
+                    src={global.pop8Config.sec8Video.v2}
                     poster={global.pop8Config.sec8Video.v1Post}
                     ref={v6}
                     className='video'
@@ -292,9 +305,8 @@ const Sec8 = (props: SecType) => {
                 <div className='pic_border'></div>
                 <div className={`pic pic5`}>
                   <video
-                    src={global.pop8Config.sec8Video.v2}
+                    src={global.pop8Config.sec8Video.v4}
                     poster={global.pop8Config.sec8Video.v1Post}
-                    ref={v7}
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
@@ -313,7 +325,7 @@ const Sec8 = (props: SecType) => {
                 <div className='pic_border'></div>
                 <div className={`pic pic5`}>
                   <video
-                    src={global.pop8Config.sec8Video.v3}
+                    src={global.pop8Config.sec8Video.v5}
                     poster={global.pop8Config.sec8Video.v1Post}
                     className='video'
                     autoPlay={false}
@@ -333,7 +345,7 @@ const Sec8 = (props: SecType) => {
                 <div className='pic_border'></div>
                 <div className={`pic pic5`}>
                   <video
-                    src={global.pop8Config.sec8Video.v4}
+                    src={global.pop8Config.sec8Video.v6}
                     poster={global.pop8Config.sec8Video.v1Post}
                     className='video'
                     autoPlay={false}
@@ -345,27 +357,7 @@ const Sec8 = (props: SecType) => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
-              <div
-                className={`pic_box ${realIndex === 10 ? "active" : ""}`}
-                onClick={() => slideClick(10)}
-              >
-                <div className='pic_border'></div>
-                <div className={`pic pic5`}>
-                  <video
-                    src={global.pop8Config.sec8Video.v5}
-                    poster={global.pop8Config.sec8Video.v1Post}
-                    className='video'
-                    autoPlay={false}
-                    webkit-playsinline='true'
-                    preload='auto'
-                    muted
-                    loop
-                  ></video>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div
                 className={`pic_box ${realIndex === 11 ? "active" : ""}`}
                 onClick={() => slideClick(11)}
@@ -384,7 +376,7 @@ const Sec8 = (props: SecType) => {
                   ></video>
                 </div>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
           <div className='button_box'>
             {[
@@ -393,12 +385,11 @@ const Sec8 = (props: SecType) => {
               "button3",
               "button4",
               "button5",
-              "button6",
             ].map((_, index) => {
               return (
                 <div
                   className={`button ${
-                    realIndex == index || realIndex - 6 == index ? "active" : ""
+                    realIndex == index || realIndex - 5 == index ? "active" : ""
                   }`}
                   key={index}
                   onClick={() => buttonClick(index)}

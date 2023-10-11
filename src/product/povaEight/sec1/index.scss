@@ -42,9 +42,19 @@
 
     .param {
       position: relative;
-      margin-right: px-to-vw(57);
+      margin-right: px-to-vw(75);
       color: #333;
       font-size: px-to-vw(25);
+
+      &:first-child {
+        span {
+          display: inline-block;
+          width: px-to-vw(55);
+          height: px-to-vw(23);
+
+          @include bg('sec1PcDts.png');
+        }
+      }
 
       &:last-child {
         margin-right: 0;
@@ -112,6 +122,14 @@
 
         span {
           font-size: px-to-vw-mb(12);
+        }
+
+        &:first-child {
+          span {
+            width: px-to-vw-mb(70);
+            height: px-to-vw-mb(28);
+            margin-top: px-to-vw-mb(8);
+          }
         }
       }
     }

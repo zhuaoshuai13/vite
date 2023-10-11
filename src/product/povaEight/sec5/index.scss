@@ -14,31 +14,10 @@
     margin-left: px-to-vw(240);
 
     .icon1 {
-      width: px-to-vw(280);
-      height: px-to-vw(280);
+      width: px-to-vw(219);
+      height: px-to-vw(219);
 
       @include bg('sec5PcIcon1.png');
-    }
-
-    .icon2 {
-      width: px-to-vw(227);
-      height: px-to-vw(227);
-
-      @include bg('sec5PcIcon2.png');
-    }
-
-    .icon3 {
-      width: px-to-vw(148);
-      height: px-to-vw(115);
-
-      @include bg('sec5PcIcon3.png');
-    }
-
-    .icon4 {
-      width: px-to-vw(283);
-      height: px-to-vw(188);
-
-      @include bg('sec5PcIcon4.png');
     }
   }
 
@@ -75,8 +54,8 @@
 
       // left: px-to-vw(850);
       left: 0;
-      width: px-to-vw(1080);
-      height: px-to-vw(1440);
+      width: px-to-vw(900);
+      height: px-to-vw(1200);
       margin: auto;
     }
   }
@@ -113,6 +92,7 @@
     .content_wrapper {
       height: auto;
       margin-top: px-to-vw-mb(100);
+      padding-bottom: px-to-vw-mb(550);
 
       .box1 {
         position: unset;
@@ -134,8 +114,8 @@
 
       .phone {
         // position: unset;
-        width: px-to-vw-mb(950);
-        height: px-to-vw-mb(991);
+        width: px-to-vw-mb(1000);
+        height: px-to-vw-mb(1333);
         margin: px-to-vw-mb(-430) auto 0;
       }
     }

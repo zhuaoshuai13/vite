@@ -19,20 +19,6 @@ const Sec13 = (props: SecType) => {
           dangerouslySetInnerHTML={{ __html: global.pop8Config.sec13.bigTitle }}
         ></div>
         <div
-          className='icon icon1'
-          style={{
-            top: isPc ? `${global.pop8Config.sec13.icon1.top}` : `${global.pop8Config.sec13.icon1.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec13.icon1.left}` : `${global.pop8Config.sec13.icon1.mobleft}`,
-          }}
-        ></div>
-        <div
-          className='icon icon2'
-          style={{
-            top: isPc ? `${global.pop8Config.sec13.icon2.top}` : `${global.pop8Config.sec13.icon2.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec13.icon2.left}` : `${global.pop8Config.sec13.icon2.mobleft}`,
-          }}
-        ></div>
-        <div
           className='icon icon3'
           style={{
             top: isPc ? `${global.pop8Config.sec13.icon3.top}` : `${global.pop8Config.sec13.icon3.mobtop}`,

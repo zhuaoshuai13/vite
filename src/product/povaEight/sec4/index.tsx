@@ -3,7 +3,8 @@ import UseObservable from "../../../hooks/useObserve"
 
 import "./index.scss"
 
-const Sec4 = (refs: any) => {
+const Sec4 = (props: any) => {
+  const { isPc, refs } = props
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
   const IntersectionObserver = UseObservable(ref)
@@ -18,31 +19,10 @@ const Sec4 = (refs: any) => {
           }}
         ></div>
         <div
-          className='icon icon1'
-          style={{
-            top: global.pop8Config.sec4.icon1Top,
-            left: global.pop8Config.sec4.icon1Left,
-          }}
-        ></div>
-        <div
-          className='icon icon2'
-          style={{
-            top: global.pop8Config.sec4.icon2Top,
-            left: global.pop8Config.sec4.icon2Left,
-          }}
-        ></div>
-        <div
           className='icon icon3'
           style={{
-            top: global.pop8Config.sec4.icon3Top,
-            left: global.pop8Config.sec4.icon3Left,
-          }}
-        ></div>
-        <div
-          className='icon icon4'
-          style={{
-            top: global.pop8Config.sec4.icon4Top,
-            left: global.pop8Config.sec4.icon4Left,
+            top: isPc ? global.pop8Config.sec4.icon3Top : global.pop8Config.sec4.icon3MobTop,
+            left: isPc ? global.pop8Config.sec4.icon3Left : global.pop8Config.sec4.icon3MobLeft,
           }}
         ></div>
       </div>
@@ -120,7 +100,7 @@ const Sec4 = (refs: any) => {
             className='pic canvas'
             width={1920}
             height={1080}
-            ref={refs.refs}
+            ref={refs}
           ></canvas>
         </div>
       </div>

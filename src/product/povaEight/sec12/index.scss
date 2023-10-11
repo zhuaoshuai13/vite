@@ -3,6 +3,7 @@
 
 .sec12.pop8 {
   padding-top: px-to-vw(308);
+  padding-bottom: px-to-vw(300);
 
   &.false {
     .sec12_phone,.sec12_left,.sec12_right,.icon1,.icon2,.icon3 {
@@ -12,24 +13,10 @@
 
   .title_box {
     .icon1 {
-      width: px-to-vw(213);
-      height: px-to-vw(138);
+      width: px-to-vw(166);
+      height: px-to-vw(107);
 
       @include bg('sec12PcIcon1.png');
-    }
-
-    .icon2 {
-      width: px-to-vw(201);
-      height: px-to-vw(147);
-
-      @include bg('sec12PcIcon2.png');
-    }
-
-    .icon3 {
-      width: px-to-vw(172);
-      height: px-to-vw(190);
-
-      @include bg('sec12PcIcon3.png');
     }
   }
 
@@ -37,17 +24,22 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin-top: px-to-vw(150);
+    margin-top: px-to-vw(250);
     color: #fff;
 
+    video {
+      position: absolute;
+      top: px-to-vw(-160);
+      width: 100%;
+    }
+
     .sec12_left {
+      position: relative;
       width: px-to-vw(910);
       height: px-to-vw(483);
       margin-top: px-to-vw(196);
       padding-top: px-to-vw(86);
       padding-left: px-to-vw(175);
-
-      @include bg('sec12PcRight.png');
 
       .sec12_title {
         font-size: px-to-vw(48);
@@ -61,12 +53,11 @@
     }
 
     .sec12_right {
+      position: relative;
       width: px-to-vw(913);
       height: px-to-vw(482);
       padding-top: px-to-vw(102);
       padding-left: px-to-vw(491);
-
-      @include bg('sec12PcLeft.png');
 
       .params {
         flex-direction: column;
@@ -89,10 +80,42 @@
 
       @include bg('sec12PcPhone.png');
     }
+
+    .line {
+      position: absolute;
+    }
+
+    .line1 {
+      top: px-to-vw(85);
+      left: px-to-vw(430);
+      width: px-to-vw(177);
+      height: px-to-vw(170);
+
+      @include bg('sec12PcLine1.png');
+    }
+
+    .line2 {
+      top: px-to-vw(-80);
+      left: px-to-vw(1300);
+      width: px-to-vw(144);
+      height: px-to-vw(258);
+
+      @include bg('sec12PcLine2.png');
+    }
+
+    .line3 {
+      top: px-to-vw(680);
+      left: px-to-vw(1100);
+      width: px-to-vw(417);
+      height: px-to-vw(77);
+
+      @include bg('sec12PcLine3.png');
+    }
   }
 
   .tips {
-    margin-top: px-to-vw(65);
+    position: relative;
+    margin-top: px-to-vw(90);
     padding-left: px-to-vw(1276);
   }
 }
@@ -102,9 +125,12 @@
     padding-top: px-to-vw-mb(300);
 
     .title_box {
+      z-index: 1;
+      padding-left: px-to-vw-mb(120);
+
       .icon1 {
-        width: px-to-vw-mb(173);
-        height: px-to-vw-mb(111);
+        width: px-to-vw-mb(134);
+        height: px-to-vw-mb(86);
       }
       
       .icon2 {
@@ -120,9 +146,13 @@
 
     .sec12_content {
       display: block;
-      margin-top: px-to-vw-mb(525);
-      padding: px-to-vw-mb(554) px-to-vw-mb(237) px-to-vw-mb(190) px-to-vw-mb(109);
-      background: #6524fa;
+      margin: 0;
+      padding: px-to-vw-mb(1200) px-to-vw-mb(237) px-to-vw-mb(190) px-to-vw-mb(109);
+      background-color: #6524fa;
+
+      video {
+        left: 0;
+      }
 
       .sec12_left {
         width: 100%;
@@ -164,6 +194,27 @@
         height: px-to-vw-mb(877);
 
         @include bg('sec12MobPhone.png');
+      }
+
+      .line1 {
+        top: px-to-vw-mb(380);
+        left: px-to-vw-mb(0);
+        width: px-to-vw-mb(191);
+        height: px-to-vw-mb(182);
+      }
+
+      .line2 {
+        top: px-to-vw-mb(190);
+        left: px-to-vw-mb(890);
+        width: px-to-vw-mb(155);
+        height: px-to-vw-mb(278);
+      }
+
+      .line3 {
+        top: px-to-vw-mb(1010);
+        left: px-to-vw-mb(620);
+        width: px-to-vw-mb(397);
+        height: px-to-vw-mb(76);
       }
     }
   }

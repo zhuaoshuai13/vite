@@ -21,27 +21,27 @@ const Sec12 = (props: SecType) => {
         <div
           className='icon icon1'
           style={{
-            top: isPc ? `${global.pop8Config.sec12.icon1.top}` : `${global.pop8Config.sec12.icon1.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec12.icon1.left}` : `${global.pop8Config.sec12.icon1.mobleft}`,
-          }}
-        ></div>
-        <div
-          className='icon icon2'
-          style={{
-            top: isPc ? `${global.pop8Config.sec12.icon2.top}` : `${global.pop8Config.sec12.icon2.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec12.icon2.left}` : `${global.pop8Config.sec12.icon2.mobleft}`,
-          }}
-        ></div>
-        <div
-          className='icon icon3'
-          style={{
-            top: isPc ? `${global.pop8Config.sec12.icon3.top}` : `${global.pop8Config.sec12.icon3.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec12.icon3.left}` : `${global.pop8Config.sec12.icon3.mobleft}`,
+            top: isPc
+              ? `${global.pop8Config.sec12.icon1.top}`
+              : `${global.pop8Config.sec12.icon1.mobtop}`,
+            left: isPc
+              ? `${global.pop8Config.sec12.icon1.left}`
+              : `${global.pop8Config.sec12.icon1.mobleft}`,
           }}
         ></div>
       </div>
 
       <div className='sec12_content'>
+        <video
+          src={isPc ? global.pop8Config.sec12Video.pc : global.pop8Config.sec12Video.mob}
+          poster={global.pop8Config.sec12Video.v1Post}
+          className='video'
+          autoPlay={true}
+          webkit-playsinline='true'
+          preload='auto'
+          muted
+          loop={true}
+        ></video>
         <div className='sec12_left'>
           <div
             className='sec12_title'
@@ -102,8 +102,9 @@ const Sec12 = (props: SecType) => {
             </div>
           </div>
         </div>
-
-        <div className='sec12_phone'></div>
+        <div className="line line1"></div>
+        <div className="line line2"></div>
+        <div className="line line3"></div>
       </div>
       <div
         className='tips pc'

@@ -18,32 +18,11 @@
     max-width: px-to-vw(1000);
     margin-left: px-to-vw(240);
 
-    .icon1 {
-      width: px-to-vw(188);
-      height: px-to-vw(188);
-
-      @include bg('sec4PcIcon1.png');
-    }
-
-    .icon2 {
-      width: px-to-vw(238);
-      height: px-to-vw(144);
-
-      @include bg('sec4PcIcon2.png');
-    }
-
     .icon3 {
-      width: px-to-vw(168);
-      height: px-to-vw(168);
+      width: px-to-vw(150);
+      height: px-to-vw(150);
 
       @include bg('sec4PcIcon3.png');
-    }
-
-    .icon4 {
-      width: px-to-vw(170);
-      height: px-to-vw(170);
-
-      @include bg('sec4PcIcon4.png');
     }
   }
 
@@ -113,11 +92,11 @@
 
   .pic_container {
     position: absolute;
-    top: 50%;
-    left: px-to-vw(600);
-    width: px-to-vw(877);
-    height: px-to-vw(593);
-    transform: translate(0, -50%);
+    top: 55%;
+    left: px-to-vw(500);
+    width: px-to-vw(1440);
+    height: px-to-vw(810);
+    transform: translate(0, -50%) scale(1.2);
 
     .pic {
       width: 100%;
@@ -132,7 +111,7 @@
 
     .icon_container {
       max-width: 100%;
-      margin: 0 px-to-vw-mb(100) 0 px-to-vw-mb(204);
+      margin: 0 px-to-vw-mb(140) 0 px-to-vw-mb(120);
 
       .icon1 {
         width: px-to-vw-mb(141);
@@ -206,9 +185,9 @@
       top: px-to-vw-mb(150);
       left: px-to-vw-mb(10);
       z-index: 2;
-      width: px-to-vw-mb(1080);
-      height: px-to-vw-mb(571);
-      transform: unset;
+      width: px-to-vw-mb(1440);
+      height: px-to-vw-mb(810);
+      transform: scale(1.25);
     }
   }
 }

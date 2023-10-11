@@ -10,7 +10,7 @@
   .bg_wrapper {
     position: relative;
     padding: px-to-vw(300) 0;
-    background-color: #621fee;
+    background-color: #571cec;
   }
 
   .content_wrapper {
@@ -87,7 +87,6 @@
       height: px-to-vw-mb(1974);
       margin: 0 auto;
       padding: px-to-vw-mb(168) px-to-vw-mb(78) 0;
-      background-color: #f4c422;
       transform: unset;
     }
 
@@ -128,13 +127,15 @@
     }
 
     .product {
-      top: unset;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: px-to-vw-mb(978);
+      top: 0;
+      left: 50%;
+      width: px-to-vw-mb(826);
+      height: px-to-vw-mb(1974);
+      transform: translateX(-50%);
 
-      @include bg('sec7MbF10.png');
+      video {
+        height: auto;
+      }
     }
   }
 }

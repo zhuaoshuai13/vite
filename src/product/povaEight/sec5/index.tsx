@@ -35,39 +35,6 @@ const Sec5 = (props: sec5Type) => {
               : global.pop8Config.sec5.icon1MobLeft,
           }}
         ></div>
-        <div
-          className='icon icon2'
-          style={{
-            top: isPc
-              ? global.pop8Config.sec5.icon2Top
-              : global.pop8Config.sec5.icon2MobTop,
-            left: isPc
-              ? global.pop8Config.sec5.icon2Left
-              : global.pop8Config.sec5.icon2MobLeft,
-          }}
-        ></div>
-        <div
-          className='icon icon3'
-          style={{
-            top: isPc
-              ? global.pop8Config.sec5.icon3Top
-              : global.pop8Config.sec5.icon3MobTop,
-            left: isPc
-              ? global.pop8Config.sec5.icon3Left
-              : global.pop8Config.sec5.icon3MobLeft,
-          }}
-        ></div>
-        <div
-          className='icon icon4'
-          style={{
-            top: isPc
-              ? global.pop8Config.sec5.icon4Top
-              : global.pop8Config.sec5.icon4MobTop,
-            left: isPc
-              ? global.pop8Config.sec5.icon4Left
-              : global.pop8Config.sec5.icon4MobLeft,
-          }}
-        ></div>
       </div>
       <div className='content_wrapper'>
         <div className='box1'>

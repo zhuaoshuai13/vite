@@ -4,8 +4,8 @@ import UseObservable from "../../../hooks/useObserve"
 
 import "./index.scss"
 
-const Sec7 = (props: { sec7Video: any }) => {
-  const { sec7Video } = props
+const Sec7 = (props: { sec7Video: any, isPc: any }) => {
+  const { sec7Video, isPc } = props
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
   const IntersectionObserver = UseObservable(ref)
@@ -92,11 +92,10 @@ const Sec7 = (props: { sec7Video: any }) => {
               __html: global.pop8Config.sec7.tips,
             }}
           ></div>
-          <div className='product mob'></div>
         </div>
-        <div className='product pc'>
+        <div className='product'>
           <video
-            src={global.pop8Config.sec7Video.pc}
+            src={isPc ? global.pop8Config.sec7Video.pc : global.pop8Config.sec7Video.mob}
             ref={sec7Video}
             poster={global.pop8Config.sec8Video.v1Post}
             className='video'

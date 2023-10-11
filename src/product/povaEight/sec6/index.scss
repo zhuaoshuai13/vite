@@ -13,7 +13,7 @@
   .bg_wrapper {
     margin-top: -1px;
     padding: px-to-vw(160) 0 px-to-vw(200);
-    background-color: #621fee;
+    background-color: #571cec;
   }
 
   .bar {
@@ -41,30 +41,9 @@
     margin-left: px-to-vw(240);
     color: #fff;
 
-    .icon1 {
-      width: px-to-vw(232);
-      height: px-to-vw(168);
-
-      @include bg('sec6PcIcon1.png');
-    }
-
-    .icon2 {
-      width: px-to-vw(177);
-      height: px-to-vw(145);
-
-      @include bg('sec6PcIcon2.png');
-    }
-
-    .icon3 {
-      width: px-to-vw(136);
-      height: px-to-vw(124);
-
-      @include bg('sec6PcIcon3.png');
-    }
-
     .icon4 {
-      width: px-to-vw(283);
-      height: px-to-vw(236);
+      width: px-to-vw(260);
+      height: px-to-vw(216);
 
       @include bg('sec6PcIcon4.png');
     }
@@ -95,7 +74,6 @@
   }
 
   .pic_box {
-    position: absolute;
     position: relative;
     top: px-to-vw(-20);
     left: px-to-vw(404);
@@ -221,7 +199,7 @@
     }
 
     .icon_container {
-      margin-left: px-to-vw-mb(200);
+      margin-left: px-to-vw-mb(125);
 
       .icon1 {
         width: px-to-vw-mb(163);
@@ -239,7 +217,7 @@
       }
 
       .icon4 {
-        width: px-to-vw-mb(227);
+        width: px-to-vw-mb(200);
         height: px-to-vw-mb(190);
       }
     }
@@ -259,9 +237,14 @@
         text-align: center;
         transform: translateX(-50%);
       }
+
+      video {
+        display: none;
+      }
     }
 
     .pic_box {
+      position: absolute;
       top: px-to-vw-mb(120);
       left: 50%;
       width: px-to-vw-mb(448);

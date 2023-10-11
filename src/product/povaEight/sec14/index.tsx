@@ -25,20 +25,6 @@ const Sec14 = (props: SecType) => {
             left: isPc ? `${global.pop8Config.sec14.icon1.left}` : `${global.pop8Config.sec14.icon1.mobleft}`,
           }}
         ></div>
-        <div
-          className='icon icon2'
-          style={{
-            top: isPc ? `${global.pop8Config.sec14.icon2.top}` : `${global.pop8Config.sec14.icon2.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec14.icon2.left}` : `${global.pop8Config.sec14.icon2.mobleft}`,
-          }}
-        ></div>
-        <div
-          className='icon icon3'
-          style={{
-            top: isPc ? `${global.pop8Config.sec14.icon3.top}` : `${global.pop8Config.sec14.icon3.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec14.icon3.left}` : `${global.pop8Config.sec14.icon3.mobleft}`,
-          }}
-        ></div>
       </div>
       <div className='sec14_content'>
         <div className='sec14_left'>

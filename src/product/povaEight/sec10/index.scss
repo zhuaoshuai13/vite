@@ -48,11 +48,26 @@
     padding-top: px-to-vw(144);
     color: #fff;
 
-    @include bg('sec10Bg.png');
+    // @include bg('sec10Bg.png');
+
+    video {
+      position: absolute;
+      top: px-to-vw(-160);
+      width: 100%;
+    }
 
     .text_box {
+      position: relative;
       width: 28vw;
       margin-left: px-to-vw(1174);
+
+      .dts {
+        width: px-to-vw(131);
+        height: px-to-vw(54);
+        margin-bottom: px-to-vw(20);
+
+        @include bg('sec10PcDts.png');
+      }
 
       .title {
         font-size: px-to-vw(48);
@@ -77,12 +92,12 @@
 
     .product {
       position: absolute;
-      top: px-to-vw(-191);
+      top: px-to-vw(-140);
       left: px-to-vw(151);
       width: px-to-vw(895);
       height: px-to-vw(962);
 
-      @include bg('sec10Product.png');
+      // @include bg('sec10Product.png');
 
       .topLine {
         position: absolute;
@@ -140,9 +155,16 @@
 
     .content_box {
       height: auto;
+      min-height: px-to-vw-mb(1920);
       margin-top: px-to-vw-mb(525);
-      padding: px-to-vw-mb(528) px-to-vw-mb(136) px-to-vw-mb(207);
+      margin-top: 0;
+      padding: px-to-vw-mb(950) px-to-vw-mb(136) px-to-vw-mb(207);
       background: #6524fa;
+
+      video {
+        top: 0;
+        left: 0;
+      }
 
       .text_box {
         width: 100%;
@@ -163,15 +185,21 @@
         .small_text {
           font-size: px-to-vw-mb(27);
         }
+
+        .dts {
+          width: px-to-vw-mb(131);
+          height: px-to-vw-mb(54);
+          margin: 0 px-to-vw-mb(-70) px-to-vw-mb(100) auto;
+        }
       }
 
       .product {
-        top: px-to-vw-mb(-405);
+        top: px-to-vw-mb(150);
         left: 0;
         width: px-to-vw-mb(1067);
         height: px-to-vw-mb(877);
 
-        @include bg('sec10Mobf3.png');
+        // @include bg('sec10Mobf3.png');
 
         .topLine {
           top: px-to-vw-mb(-10);

@@ -1,11 +1,8 @@
 import { useRef } from "react"
-import { SecType } from "../type.ts/type"
-
 import UseObservable from "../../../hooks/useObserve"
-
 import "./index.scss"
 
-const Sec10 = (props: SecType) => {
+const Sec10 = (props: any) => {
   const { isPc } = props
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
@@ -20,34 +17,39 @@ const Sec10 = (props: SecType) => {
         <div
           className='icon icon1'
           style={{
-            top: isPc ? `${global.pop8Config.sec10.icon1.top}` : `${global.pop8Config.sec10.icon1.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec10.icon1.left}` : `${global.pop8Config.sec10.icon1.mobleft}`,
-          }}
-        ></div>
-        <div
-          className='icon icon2'
-          style={{
-            top: isPc ? `${global.pop8Config.sec10.icon2.top}` : `${global.pop8Config.sec10.icon2.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec10.icon2.left}` : `${global.pop8Config.sec10.icon2.mobleft}`,
-          }}
-        ></div>
-        <div
-          className='icon icon3'
-          style={{
-            top: isPc ? `${global.pop8Config.sec10.icon3.top}` : `${global.pop8Config.sec10.icon3.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec10.icon3.left}` : `${global.pop8Config.sec10.icon3.mobleft}`,
+            top: isPc
+              ? `${global.pop8Config.sec10.icon1.top}`
+              : `${global.pop8Config.sec10.icon1.mobtop}`,
+            left: isPc
+              ? `${global.pop8Config.sec10.icon1.left}`
+              : `${global.pop8Config.sec10.icon1.mobleft}`,
           }}
         ></div>
         <div
           className='icon icon4'
           style={{
-            top: isPc ? `${global.pop8Config.sec10.icon4.top}` : `${global.pop8Config.sec10.icon4.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec10.icon4.left}` : `${global.pop8Config.sec10.icon4.mobleft}`,
+            top: isPc
+              ? `${global.pop8Config.sec10.icon4.top}`
+              : `${global.pop8Config.sec10.icon4.mobtop}`,
+            left: isPc
+              ? `${global.pop8Config.sec10.icon4.left}`
+              : `${global.pop8Config.sec10.icon4.mobleft}`,
           }}
         ></div>
       </div>
       <div className='content_box'>
+        <video
+          src={isPc ? global.pop8Config.sec10Video.pc : global.pop8Config.sec10Video.mob}
+          poster={global.pop8Config.sec12Video.v1Post}
+          className='video'
+          autoPlay={true}
+          webkit-playsinline='true'
+          preload='auto'
+          muted
+          loop={true}
+        ></video>
         <div className='text_box'>
+          <div className="dts"></div>
           <div
             className='title'
             dangerouslySetInnerHTML={{
@@ -92,8 +94,8 @@ const Sec10 = (props: SecType) => {
           </div>
         </div>
         <div className='product'>
-          <div className="line topLine"></div>
-          <div className="line bottomLine"></div>
+          <div className='line topLine'></div>
+          <div className='line bottomLine'></div>
         </div>
       </div>
       <div

@@ -19,28 +19,30 @@ const Sec11 = (props: SecType) => {
           dangerouslySetInnerHTML={{ __html: global.pop8Config.sec11.bigTitle }}
         ></div>
         <div
-          className='icon icon1'
-          style={{
-            top: isPc ? `${global.pop8Config.sec11.icon1.top}` : `${global.pop8Config.sec11.icon1.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec11.icon1.left}` : `${global.pop8Config.sec11.icon1.mobleft}`,
-          }}
-        ></div>
-        <div
-          className='icon icon2'
-          style={{
-            top: isPc ? `${global.pop8Config.sec11.icon2.top}` : `${global.pop8Config.sec11.icon2.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec11.icon2.left}` : `${global.pop8Config.sec11.icon2.mobleft}`,
-          }}
-        ></div>
-        <div
           className='icon icon3'
           style={{
-            top: isPc ? `${global.pop8Config.sec11.icon3.top}` : `${global.pop8Config.sec11.icon3.mobtop}`,
-            left: isPc ? `${global.pop8Config.sec11.icon3.left}` : `${global.pop8Config.sec11.icon3.mobleft}`,
+            top: isPc
+              ? `${global.pop8Config.sec11.icon3.top}`
+              : `${global.pop8Config.sec11.icon3.mobtop}`,
+            left: isPc
+              ? `${global.pop8Config.sec11.icon3.left}`
+              : `${global.pop8Config.sec11.icon3.mobleft}`,
           }}
         ></div>
       </div>
-      <div className='sec11_phone'></div>
+      <div className='sec11_phone'>
+        <video
+          src={global.pop8Config.sec11Video.pc}
+          poster={global.pop8Config.sec11Video.v1Post}
+          className='video'
+          autoPlay={true}
+          webkit-playsinline='true'
+          preload='auto'
+          muted
+          loop={true}
+        ></video>
+        <div className="pic1"></div>
+      </div>
       <div className='sec11_text'></div>
       <div className='left_circle'></div>
       <div className='right_circle'>

@@ -37,28 +37,6 @@ const Sec3 = (props: SecType) => {
                 : global.pop8Config.sec3.icon1MobLeft,
             }}
           ></div>
-          <div
-            className='icon icon2'
-            style={{
-              top: isPc
-                ? global.pop8Config.sec3.icon2Top
-                : global.pop8Config.sec3.icon2MobTop,
-              left: isPc
-                ? global.pop8Config.sec3.icon2Left
-                : global.pop8Config.sec3.icon2MobLeft,
-            }}
-          ></div>
-          <div
-            className='icon icon3'
-            style={{
-              top: isPc
-                ? global.pop8Config.sec3.icon3Top
-                : global.pop8Config.sec3.icon3MobTop,
-              left: isPc
-                ? global.pop8Config.sec3.icon3Left
-                : global.pop8Config.sec3.icon3MobLeft,
-            }}
-          ></div>
         </div>
         <div className='box'>
           <div className='circle'>
