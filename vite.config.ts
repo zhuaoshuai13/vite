@@ -30,19 +30,19 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: path.resolve(__dirname, "src/product/povaEight/config.js"),
+              src: "src/product/povaEight/config.js",
               dest: "dist",
             },
             {
-              src: path.resolve(__dirname, "src/assets/video/*"),
+              src: "src/assets/video/*",
               dest: "dist/video",
             },
             {
-              src: path.resolve(__dirname, "src/assets/landAni/*"),
+              src: "src/assets/landAni/*",
               dest: "dist/landAni",
             },
             {
-              src: path.resolve(__dirname, "src/assets/screenAni/*"),
+              src: "src/assets/screenAni/*",
               dest: "dist/screenAni",
             },
           ],
