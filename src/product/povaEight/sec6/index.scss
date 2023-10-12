@@ -13,13 +13,13 @@
   .bg_wrapper {
     margin-top: -1px;
     padding: px-to-vw(160) 0 px-to-vw(200);
-    background-color: #571cec;
+    background-color: #621eed;
   }
 
   .bar {
     height: px-to-vw(97);
 
-    @include bg('sec6PcBar.png',false);
+    @include bg('sec6PcBar.webp',false);
   }
 
   .text {
@@ -34,7 +34,7 @@
     font-size: px-to-vw(96);
     font-family: "HB";
 
-    @include bg('sec6PcTextBg.png');
+    @include bg('sec6PcTextBg.webp');
   }
 
   .icon_container {
@@ -45,7 +45,7 @@
       width: px-to-vw(260);
       height: px-to-vw(216);
 
-      @include bg('sec6PcIcon4.png');
+      @include bg('sec6PcIcon4.webp');
     }
   }
 
@@ -53,8 +53,6 @@
     position: relative;
     height: px-to-vw(1080);
     margin-top: px-to-vw(60);
-
-    @include bg('sec7PcF1.png');
 
     .text_wrapper {
       position: absolute;
@@ -94,7 +92,7 @@
       width: px-to-vw(206);
       height: px-to-vw(123);
 
-      @include bg('sec7PcF2.png');
+      @include bg('sec7PcF2.webp');
     }
 
     .desc {
@@ -109,7 +107,7 @@
       height: px-to-vw(188);
       padding: px-to-vw(35) px-to-vw(55) 0;
 
-      @include bg('sec7PcF4.png');
+      @include bg('sec7PcF4.webp');
 
       .title {
         font-size: px-to-vw(41);
@@ -129,7 +127,7 @@
       padding: px-to-vw(50) 0 0 px-to-vw(70);
       color: #571deb;
 
-      @include bg('sec7PcF5.png');
+      @include bg('sec7PcF5.webp');
 
       .title {
         font-size: px-to-vw(102);
@@ -148,7 +146,7 @@
       height: px-to-vw(194);
       padding: px-to-vw(45) px-to-vw(75) 0;
 
-      @include bg('sec7PcF6.png');
+      @include bg('sec7PcF6.webp');
 
       .title {
         font-size: px-to-vw(58);
@@ -167,7 +165,7 @@
       height: px-to-vw(162);
       padding: px-to-vw(22) px-to-vw(35) 0;
 
-      @include bg('sec7PcF7.png');
+      @include bg('sec7PcF7.webp');
 
       .title {
         font-size: px-to-vw(43);
@@ -227,7 +225,7 @@
       height: px-to-vw-mb(1678);
       margin: px-to-vw-mb(170) auto 0;
 
-      @include bg('sec7MbF5.png');
+      @include bg('sec7MbF5.webp');
 
       .text_wrapper {
         top: px-to-vw-mb(1180);
@@ -253,7 +251,7 @@
 
       .phone {
 
-        @include bg('sec7MbF4.png');
+        @include bg('sec7MbF4.webp');
       }
 
       .light {
@@ -262,7 +260,7 @@
         width: px-to-vw-mb(245);
         height: px-to-vw-mb(136);
 
-        @include bg('sec7MbF3.png');
+        @include bg('sec7MbF3.webp');
       }
 
       .param1 {
@@ -272,7 +270,7 @@
         height: px-to-vw-mb(183);
         padding: px-to-vw-mb(40) px-to-vw-mb(50);
 
-        @include bg('sec7MbF6.png');
+        @include bg('sec7MbF6.webp');
 
         .title {
           font-size: px-to-vw-mb(40);
@@ -291,7 +289,7 @@
         padding: px-to-vw-mb(40) px-to-vw-mb(45);
         text-align: center;
 
-        @include bg('sec7MbF7.png');
+        @include bg('sec7MbF7.webp');
 
         .title {
           font-size: px-to-vw-mb(92);
@@ -309,7 +307,7 @@
         height: px-to-vw-mb(199);
         padding: px-to-vw-mb(40) px-to-vw-mb(70);
 
-        @include bg('sec7MbF8.png');
+        @include bg('sec7MbF8.webp');
 
         .title {
           font-size: px-to-vw-mb(60);
@@ -327,7 +325,7 @@
         height: px-to-vw-mb(191);
         padding: px-to-vw-mb(25);
 
-        @include bg('sec7MbF9.png');
+        @include bg('sec7MbF9.webp');
 
         .title {
           font-size: px-to-vw-mb(40);

@@ -11,7 +11,7 @@
 
   .bg_wrapper {
     padding: px-to-vw(100) 0;
-    background-color: #571deb;
+    background-color: #621eed;
   }
 
   .icon_container {
@@ -21,14 +21,14 @@
       width: px-to-vw(92);
       height: px-to-vw(92);
 
-      @include bg('sec8PcIcon2.png');
+      @include bg('sec8PcIcon2.webp');
     }
 
     .icon3 {
       width: px-to-vw(156);
       height: px-to-vw(121);
 
-      @include bg('sec8PcIcon3.png');
+      @include bg('sec8PcIcon3.webp');
     }
   }
 
@@ -49,7 +49,7 @@
       .pic_border {
         position: absolute;
 
-        @include bg('sec8PcBorder1.png');
+        @include bg('sec8PcBorder1.webp');
       }
     }
 
@@ -65,7 +65,7 @@
         height: px-to-vw(480);
         transition: all .5s;
 
-        @include bg('sec8PcBorder2.png');
+        @include bg('sec8PcBorder2.webp');
       }
 
       video {
@@ -90,13 +90,13 @@
         margin-right: px-to-vw(26);
         cursor: pointer;
 
-        @include bg('sec8PcF8.png');
+        @include bg('sec8PcF8.webp');
 
         &.active {
           width: px-to-vw(40);
           height: px-to-vw(38);
 
-          @include bg('sec8PcF7.png');
+          @include bg('sec8PcF7.webp');
         }
 
         &:last-child {
@@ -130,7 +130,7 @@
     width: 100%;
     height: px-to-vw(84);
 
-    @include bg('sec8PcCircle.png',false);
+    @include bg('sec8PcCircle.webp',false);
   }
 }
 
@@ -140,7 +140,7 @@
       padding-bottom: px-to-vw-mb(184);
       background-position-y: px-to-vw-mb(-480);
 
-      @include bg('sec8MobF1.png', false);
+      @include bg('sec8MobF1.webp', false);
     }
 
     .icon_container {
@@ -206,7 +206,7 @@
         .pic_border {
           position: absolute;
   
-          @include bg('sec8PcBorder1.png');
+          @include bg('sec8PcBorder1.webp');
         }
       }
 
@@ -218,7 +218,7 @@
         .pic_border {
           background-size: 100% 100% !important;
   
-          @include bg('sec8PcBorder2.png');
+          @include bg('sec8PcBorder2.webp');
         }
       }
 

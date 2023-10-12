@@ -14,6 +14,7 @@ const Sec1 = (props: SecType) => {
   return (
     <section className={`pop8 sec1 ${IntersectionObserver}`} ref={ref}>
       <div className='bg_wrapper'>
+        <div className="bg_img"></div>
         <div className='content'>
           <div className='slogan'></div>
           <div className='icon_container'>

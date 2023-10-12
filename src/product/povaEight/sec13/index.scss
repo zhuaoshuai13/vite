@@ -14,7 +14,7 @@
       width: px-to-vw(179);
       height: px-to-vw(179);
 
-      @include bg('sec13PcIcon3.png');
+      @include bg('sec13PcIcon3.webp');
     }
   }
 
@@ -30,7 +30,7 @@
       padding-top: px-to-vw(180);
       padding-left: px-to-vw(150);
 
-      @include bg('sec13PcLeft.png');
+      @include bg('sec13PcLeft.webp');
     }
 
     .sec13_right {
@@ -38,7 +38,7 @@
       height: px-to-vw(776);
       margin-left: -20vw;
 
-      @include bg('sec13PcRight.png');
+      @include bg('sec13PcRight.webp');
     }
 
     .text_box {
@@ -110,7 +110,7 @@
         padding-top: px-to-vw-mb(280);
         padding-left: px-to-vw-mb(200);
 
-        @include bg('sec13MobF2.png');
+        @include bg('sec13MobF2.webp');
       }
 
       .sec13_right {
@@ -118,7 +118,7 @@
         width: px-to-vw-mb(1080);
         height: px-to-vw-mb(880);
 
-        @include bg('sec13MobF1.png');
+        @include bg('sec13MobF1.webp');
       }
 
       .text_box {

@@ -1,7 +1,7 @@
 @import '../index';
 
 .sec2.pop8 {
-  padding: px-to-vw(100) 0 px-to-vw(180) 0;
+  padding: px-to-vw(100) 0 px-to-vw(280) 0;
 
   .items {
     display: grid;
@@ -50,7 +50,7 @@
       height: px-to-vw(124);
       transform: translateX(-50%);
 
-      @include bg('sec2PcF1.png');
+      @include bg('sec2PcF1.webp');
     }
 
     .title {
@@ -76,7 +76,7 @@
       width: px-to-vw(362);
       height: px-to-vw(280);
 
-      @include bg('sec2PcF2.png');
+      @include bg('sec2PcF2.webp');
     }
 
     .title {
@@ -96,7 +96,7 @@
       width: 100%;
       height: 100%;
       
-      @include bg('sec2PcF3.png');
+      @include bg('sec2PcF3.webp');
 
       background-size: 100% 100%;
     }
@@ -126,7 +126,7 @@
       width: px-to-vw(240);
       height: px-to-vw(311);
 
-      @include bg('sec2PcF4.png');
+      @include bg('sec2PcF4.webp');
     }
 
     .title {
@@ -144,7 +144,7 @@
       width: 100%;
       height: 100%;
 
-      @include bg('sec2PcF5.png');
+      @include bg('sec2PcF5.webp');
     }
 
     .title {
@@ -162,7 +162,7 @@
       width: 100%;
       height: 100%;
 
-      @include bg('sec2PcF6.png');
+      @include bg('sec2PcF6.webp');
     }
 
     .title {
@@ -180,7 +180,7 @@
       width: 100%;
       height: 100%;
 
-      @include bg('sec2PcF7.png');
+      @include bg('sec2PcF7.webp');
     }
 
     .title {
@@ -214,7 +214,7 @@
         width: px-to-vw-mb(782);
         height: px-to-vw-mb(178);
   
-        @include bg('sec2MobF1.png');
+        @include bg('sec2MobF1.webp');
       }
   
       .title {
@@ -233,7 +233,7 @@
         width: px-to-vw-mb(491);
         height: px-to-vw-mb(382);
   
-        @include bg('sec2MobF2.png');
+        @include bg('sec2MobF2.webp');
       }
   
       .title {
@@ -246,7 +246,7 @@
   
       .img {
         
-        @include bg('sec2MobF3.png');
+        @include bg('sec2MobF3.webp');
 
         background-size: 100% 100%;
       }
@@ -270,7 +270,7 @@
         width: px-to-vw-mb(418);
         height: px-to-vw-mb(535);
   
-        @include bg('sec2MobF4.png');
+        @include bg('sec2MobF4.webp');
       }
   
       .title {
@@ -284,7 +284,7 @@
   
       .img {
   
-        @include bg('sec2MobF5.png');
+        @include bg('sec2MobF5.webp');
       }
   
       .title {
@@ -298,7 +298,7 @@
   
       .img {
         
-        @include bg('sec2MobF6.png');
+        @include bg('sec2MobF6.webp');
       }
   
       .title {
@@ -312,7 +312,7 @@
   
       .img {
   
-        @include bg('sec2MobF7.png');
+        @include bg('sec2MobF7.webp');
       }
   
       .title {

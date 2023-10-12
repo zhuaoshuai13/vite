@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { SecType } from "../type.ts/type"
 import "./index.scss"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -24,6 +24,9 @@ const Sec8 = (props: SecType) => {
   const v4 = useRef<HTMLVideoElement>(null)
   const v5 = useRef<HTMLVideoElement>(null)
   const v6 = useRef<HTMLVideoElement>(null)
+  const v7 = useRef<HTMLVideoElement>(null)
+  const v8 = useRef<HTMLVideoElement>(null)
+  const v9 = useRef<HTMLVideoElement>(null)
 
   const IntersectionObserver = UseObservable(ref)
   const scrollPlay = (num: number) => {
@@ -62,6 +65,7 @@ const Sec8 = (props: SecType) => {
       eval(`v${realIndex + 2}`).current?.pause()
       eval(`v${realIndex + 2}`).current.currentTime = 0
       eval(`v${jumpIndex + 2}`).current?.play()
+      console.log("🚀 ~ file: index.tsx:80 ~ slideClick ~ eval(`v${jumpIndex + 2}`).current:", eval(`v${jumpIndex + 2}`).current);
       // @ts-ignore
       swiperRef.current.swiper.slideTo(jumpIndex)
       setRealIndex(jumpIndex)
@@ -86,6 +90,19 @@ const Sec8 = (props: SecType) => {
       setRealIndex(jumpIndex)
     }
   }
+
+  useEffect(() => {
+    v0.current?.play()
+    v1.current?.play()
+    v2.current?.play()
+    v3.current?.play()
+    v4.current?.play()
+    v5.current?.play()
+    v6.current?.play()
+    v7.current?.play()
+    v8.current?.play()
+    v9.current?.play()
+  })
 
   return (
     <section className={`pop8 sec8 ${IntersectionObserver}`} ref={ref}>
@@ -159,7 +176,7 @@ const Sec8 = (props: SecType) => {
                 <div className={`pic pic2`}>
                   <video
                     src={global.pop8Config.sec8Video.v2}
-                    poster={global.pop8Config.sec8Video.v1Post}
+                    poster={global.pop8Config.sec8Video.v2Post}
                     ref={v1}
                     className='video'
                     autoPlay={false}
@@ -180,7 +197,7 @@ const Sec8 = (props: SecType) => {
                 <div className={`pic pic3`}>
                   <video
                     src={global.pop8Config.sec8Video.v4}
-                    poster={global.pop8Config.sec8Video.v1Post}
+                    poster={global.pop8Config.sec8Video.v4Post}
                     ref={v2}
                     className='video'
                     autoPlay={true}
@@ -201,7 +218,7 @@ const Sec8 = (props: SecType) => {
                 <div className={`pic pic4`}>
                   <video
                     src={global.pop8Config.sec8Video.v5}
-                    poster={global.pop8Config.sec8Video.v1Post}
+                    poster={global.pop8Config.sec8Video.v5Post}
                     ref={v3}
                     className='video'
                     autoPlay={false}
@@ -222,7 +239,7 @@ const Sec8 = (props: SecType) => {
                 <div className={`pic pic5`}>
                   <video
                     src={global.pop8Config.sec8Video.v6}
-                    poster={global.pop8Config.sec8Video.v1Post}
+                    poster={global.pop8Config.sec8Video.v6Post}
                     ref={v4}
                     className='video'
                     autoPlay={false}
@@ -234,27 +251,6 @@ const Sec8 = (props: SecType) => {
                 </div>
               </div>
             </SwiperSlide>
-            {/* <SwiperSlide>
-              <div
-                className={`pic_box ${realIndex === 5 ? "active" : ""}`}
-                onClick={() => slideClick(5)}
-              >
-                <div className='pic_border'></div>
-                <div className={`pic pic6`}>
-                  <video
-                    src={global.pop8Config.sec8Video.v6}
-                    poster={global.pop8Config.sec8Video.v1Post}
-                    ref={v5}
-                    className='video'
-                    autoPlay={false}
-                    webkit-playsinline='true'
-                    preload='auto'
-                    muted
-                    loop
-                  ></video>
-                </div>
-              </div>
-            </SwiperSlide> */}
             <SwiperSlide>
               <div
                 className={`pic_box ${realIndex === 5 ? "active" : ""}`}
@@ -285,7 +281,7 @@ const Sec8 = (props: SecType) => {
                 <div className={`pic pic5`}>
                   <video
                     src={global.pop8Config.sec8Video.v2}
-                    poster={global.pop8Config.sec8Video.v1Post}
+                    poster={global.pop8Config.sec8Video.v2Post}
                     ref={v6}
                     className='video'
                     autoPlay={false}
@@ -306,7 +302,8 @@ const Sec8 = (props: SecType) => {
                 <div className={`pic pic5`}>
                   <video
                     src={global.pop8Config.sec8Video.v4}
-                    poster={global.pop8Config.sec8Video.v1Post}
+                    poster={global.pop8Config.sec8Video.v4Post}
+                    ref={v7}
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
@@ -326,7 +323,8 @@ const Sec8 = (props: SecType) => {
                 <div className={`pic pic5`}>
                   <video
                     src={global.pop8Config.sec8Video.v5}
-                    poster={global.pop8Config.sec8Video.v1Post}
+                    poster={global.pop8Config.sec8Video.v5Post}
+                    ref={v8}
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
@@ -346,7 +344,8 @@ const Sec8 = (props: SecType) => {
                 <div className={`pic pic5`}>
                   <video
                     src={global.pop8Config.sec8Video.v6}
-                    poster={global.pop8Config.sec8Video.v1Post}
+                    poster={global.pop8Config.sec8Video.v6Post}
+                    ref={v9}
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
@@ -357,26 +356,6 @@ const Sec8 = (props: SecType) => {
                 </div>
               </div>
             </SwiperSlide>
-            {/* <SwiperSlide>
-              <div
-                className={`pic_box ${realIndex === 11 ? "active" : ""}`}
-                onClick={() => slideClick(11)}
-              >
-                <div className='pic_border'></div>
-                <div className={`pic pic5`}>
-                  <video
-                    src={global.pop8Config.sec8Video.v6}
-                    poster={global.pop8Config.sec8Video.v1Post}
-                    className='video'
-                    autoPlay={false}
-                    webkit-playsinline='true'
-                    preload='auto'
-                    muted
-                    loop
-                  ></video>
-                </div>
-              </div>
-            </SwiperSlide> */}
           </Swiper>
           <div className='button_box'>
             {[

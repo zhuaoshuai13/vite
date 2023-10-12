@@ -14,7 +14,7 @@
       width: px-to-vw(232);
       height: px-to-vw(233);
 
-      @include bg("sec14PcIcon1.png");
+      @include bg("sec14PcIcon1.webp");
     }
   }
 
@@ -28,7 +28,7 @@
       padding-top: px-to-vw(270);
       padding-left: px-to-vw(240);
 
-      @include bg("sec14PcLeft.png");
+      @include bg("sec14PcLeft.webp");
 
       .text_box {
         display: flex;
@@ -61,7 +61,7 @@
       height: px-to-vw(857);
       margin-left: px-to-vw(-265);
 
-      @include bg("sec14PcRight.png");
+      @include bg("sec14PcRight.webp");
     }
   }
 
@@ -102,7 +102,7 @@
         margin-top: px-to-vw-mb(-260);
         padding-top: px-to-vw-mb(300);
 
-        @include bg('sec14MobF2.png');
+        @include bg('sec14MobF2.webp');
 
         .text_box {
           gap: px-to-vw-mb(44);
@@ -136,7 +136,7 @@
         height: px-to-vw-mb(878);
         margin-left: 0;
 
-        @include bg('sec14MobF1.png');
+        @include bg('sec14MobF1.webp');
       }
     }
   }

@@ -15,28 +15,28 @@
       width: px-to-vw(164);
       height: px-to-vw(164);
 
-      @include bg('sec10Icon1.png');
+      @include bg('sec10Icon1.webp');
     }
 
     .icon2 {
       width: px-to-vw(169);
       height: px-to-vw(169);
 
-      @include bg('sec10Icon2.png');
+      @include bg('sec10Icon2.webp');
     }
 
     .icon3 {
       width: px-to-vw(132);
       height: px-to-vw(139);
 
-      @include bg('sec10Icon3.png');
+      @include bg('sec10Icon3.webp');
     }
 
     .icon4 {
       width: px-to-vw(164);
       height: px-to-vw(164);
 
-      @include bg('sec10Icon4.png');
+      @include bg('sec10Icon4.webp');
     }
   }
 
@@ -48,7 +48,7 @@
     padding-top: px-to-vw(144);
     color: #fff;
 
-    // @include bg('sec10Bg.png');
+    // @include bg('sec10Bg.webp');
 
     video {
       position: absolute;
@@ -66,7 +66,7 @@
         height: px-to-vw(54);
         margin-bottom: px-to-vw(20);
 
-        @include bg('sec10PcDts.png');
+        @include bg('sec10PcDts.webp');
       }
 
       .title {
@@ -97,7 +97,7 @@
       width: px-to-vw(895);
       height: px-to-vw(962);
 
-      // @include bg('sec10Product.png');
+      // @include bg('sec10Product.webp');
 
       .topLine {
         position: absolute;
@@ -106,7 +106,7 @@
         width: px-to-vw(181);
         height: px-to-vw(179);
 
-        @include bg('sec10PcTopLine.png');
+        @include bg('sec10PcTopLine.webp');
       }
 
       .bottomLine {
@@ -116,7 +116,7 @@
         width: px-to-vw(217);
         height: px-to-vw(217);
 
-        @include bg('sec10PcBottomLine.png');
+        @include bg('sec10PcBottomLine.webp');
       }
     }
   }
@@ -199,7 +199,7 @@
         width: px-to-vw-mb(1067);
         height: px-to-vw-mb(877);
 
-        // @include bg('sec10Mobf3.png');
+        // @include bg('sec10Mobf3.webp');
 
         .topLine {
           top: px-to-vw-mb(-10);
@@ -207,7 +207,7 @@
           width: px-to-vw-mb(229);
           height: px-to-vw-mb(228);
 
-          @include bg('sec10MobTopLine.png');
+          @include bg('sec10MobTopLine.webp');
         }
 
         .bottomLine {
@@ -216,7 +216,7 @@
           width: px-to-vw-mb(226);
           height: px-to-vw-mb(251);
 
-          @include bg('sec10MobBottomLine.png');
+          @include bg('sec10MobBottomLine.webp');
         }
       }
     }

@@ -16,7 +16,7 @@
       width: px-to-vw(166);
       height: px-to-vw(107);
 
-      @include bg('sec12PcIcon1.png');
+      @include bg('sec12PcIcon1.webp');
     }
   }
 
@@ -78,7 +78,7 @@
       height: px-to-vw(828);
       margin: auto;
 
-      @include bg('sec12PcPhone.png');
+      @include bg('sec12PcPhone.webp');
     }
 
     .line {
@@ -91,7 +91,7 @@
       width: px-to-vw(177);
       height: px-to-vw(170);
 
-      @include bg('sec12PcLine1.png');
+      @include bg('sec12PcLine1.webp');
     }
 
     .line2 {
@@ -100,7 +100,7 @@
       width: px-to-vw(144);
       height: px-to-vw(258);
 
-      @include bg('sec12PcLine2.png');
+      @include bg('sec12PcLine2.webp');
     }
 
     .line3 {
@@ -109,7 +109,7 @@
       width: px-to-vw(417);
       height: px-to-vw(77);
 
-      @include bg('sec12PcLine3.png');
+      @include bg('sec12PcLine3.webp');
     }
   }
 
@@ -193,7 +193,7 @@
         width: px-to-vw-mb(1052);
         height: px-to-vw-mb(877);
 
-        @include bg('sec12MobPhone.png');
+        @include bg('sec12MobPhone.webp');
       }
 
       .line1 {

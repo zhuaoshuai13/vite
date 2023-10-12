@@ -10,9 +10,18 @@
   }
 
   .bg_wrapper {
+    position: relative;
     height: px-to-vw(1013);
+  }
 
-    @include bg('sec1PcBg.png', false);
+  .bg_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @include bg('sec1PcBg.webp', false);
   }
 
   .content {
@@ -25,7 +34,7 @@
     height: px-to-vw(66);
     margin-bottom: px-to-vw(60);
 
-    @include bg('sec1PcSlogan.png', false);
+    @include bg('sec1PcSlogan.webp', false);
   }
 
   .icon_container {
@@ -33,6 +42,7 @@
   }
 
   .title_130 {
+    color: #000;
     font-size: px-to-vw(100);
   }
 
@@ -52,7 +62,7 @@
           width: px-to-vw(55);
           height: px-to-vw(23);
 
-          @include bg('sec1PcDts.png');
+          @include bg('sec1PcDts.webp');
         }
       }
 
@@ -80,7 +90,7 @@
     width: px-to-vw(76);
     height: px-to-vw(76);
 
-    @include bg('sec1PcIcon4.png');
+    @include bg('sec1PcIcon4.webp');
   }
 }
 
@@ -89,7 +99,7 @@
     .bg_wrapper {
       height: auto;
 
-      @include bg('sec1MobBg.png');
+      @include bg('sec1MobBg.webp');
     }
 
     .content {
