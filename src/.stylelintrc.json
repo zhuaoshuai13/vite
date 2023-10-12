@@ -22,6 +22,7 @@
       "block-closing-brace-empty-line-before": "never",
       "block-closing-brace-newline-after": "always-multi-line",
       "indentation": 2,
-      "color-function-notation": "legacy"
+      "color-function-notation": "legacy",
+      "media-feature-range-notation": null
     }
   }
