@@ -105,7 +105,7 @@
   }
 }
 
-@media (width < $mobwidthPx) {
+@media (max-width: $mobwidthPx) {
   .sec4.pop8 {
     padding-top: px-to-vw-mb(100);
 

@@ -129,7 +129,7 @@
   }
 }
 
-@media (width < $mobwidthPx) {
+@media (max-width: $mobwidthPx) {
   .sec10.pop8 {
     .title_box {
       .icon1 {

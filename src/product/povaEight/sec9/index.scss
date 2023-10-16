@@ -57,7 +57,7 @@
   }
 }
 
-@media (width < $mobwidthPx) {
+@media (max-width: $mobwidthPx) {
   .sec9.pop8 {
     .circle {
       width: 100%;

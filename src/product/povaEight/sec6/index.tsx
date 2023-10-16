@@ -47,7 +47,7 @@ const Sec6 = (props: sec6Type) => {
             <video
               src={global.pop8Config.sec6Video.pc}
               ref={sec6Video}
-              poster={global.pop8Config.sec8Video.v1Post}
+              poster={global.pop8Config.sec6Video.v1Post}
               className='video'
               autoPlay={false}
               webkit-playsinline='true'

@@ -133,7 +133,7 @@ const Sec8 = (props: SecType) => {
           <Swiper
             modules={[Autoplay]}
             slidesPerView={isPc ? 5 : 3}
-            allowTouchMove={false}
+            allowTouchMove={true}
             spaceBetween={50}
             ref={swiperRef}
             onTransitionEnd={(e) => {

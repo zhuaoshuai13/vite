@@ -3,7 +3,7 @@
 
 window.pop8Config = {
   sec1: {
-    title: `All You Want Just &nbspDoubled`,
+    title: `All You Want Just Doubled`,
     p1: "Double <span></span> <br/> Speakers",
     p2: "6.6'' 90Hz <br/> Hole Screen",
     p3: "Up to <span>4+4 GB <br/> Extended RAM</span><br/> 128GB+8GB* ",
@@ -12,7 +12,7 @@ window.pop8Config = {
     icon1Top: "52%",
     icon1Left: "88%",
     icon1MobTop: "52%",
-    icon1MobLeft: "81%",
+    icon1MobLeft: "83%",
   },
   sec2: {
     t1: "6.6'' 90Hz Hole Screen <br/> Self-developed Dynamic Port",
@@ -326,7 +326,7 @@ window.pop8Config = {
     // pc: "http://localhost:5173/src/assets/video/sec6Pc.mp4",
     // v1Post: "",
     pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec6Pc.mp4",
-    v1Post: "",
+    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec6PcPoster.jpg",
   },
   sec7Video: {
     // pc: "http://localhost:5173/src/assets/video/sec7Pc.mp4",
@@ -334,7 +334,8 @@ window.pop8Config = {
     // v1Post: "",
     pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec7Pc.mp4",
     mob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec7Mob.mp4",
-    v1Post: "",
+    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec7PcPoster.jpg",
+    v1PostMob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec7MobPoster.jpg",
   },
   sec8Video: {
     // 本地
@@ -353,35 +354,37 @@ window.pop8Config = {
 
     // 线上
     v1: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V1.mp4",
-    v1Post: "",
+    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V1Poster.jpg",
     v2: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V2.mp4",
-    v2Post: "",
+    v2Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V2Poster.jpg",
     v3: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V3.mp4",
-    v3Post: "",
+    v3Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V3Poster.jpg",
     v4: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V4.mp4",
-    v4Post: "",
+    v4Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V4Poster.jpg",
     v5: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V5.mp4",
-    v5Post: "",
+    v5Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V5Poster.jpg",
     v6: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V6.mp4",
-    v6Post: "",
+    v6Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V6Poster.jpg",
   },
   sec10Video: {
     // pc: "http://localhost:5173/src/assets/video/sec10Pc.mp4",
     // mob: "http://localhost:5173/src/assets/video/sec10Mob.mp4",
     pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec10Pc.mp4",
     mob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec10Mob.mp4",
-    v1Post: "",
+    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec10PcPoster.jpg",
+    v1PostMob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec10MobPoster.jpg",
   },
   sec11Video: {
     // pc: "http://localhost:5173/src/assets/video/sec11Pc.mp4",
     pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec11Pc.mp4",
-    v1Post: "",
+    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec11PcPoster.jpg",
   },
   sec12Video: {
     // pc: "http://localhost:5173/src/assets/video/sec12Pc.mp4",
     // mob: "http://localhost:5173/src/assets/video/sec12Mob.mp4",
     pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec12Pc.mp4",
     mob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec12Mob.mp4",
-    v1Post: "",
+    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec12PcPoster.jpg",
+    v1PostMob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec12MobPoster.jpg",
   },
 }

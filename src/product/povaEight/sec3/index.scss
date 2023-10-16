@@ -159,7 +159,7 @@
   }
 }
 
-@media (width < $mobwidthPx) {
+@media (max-width: $mobwidthPx) {
   .sec3.pop8 {
     .bar {
       top: px-to-vw-mb(-68);

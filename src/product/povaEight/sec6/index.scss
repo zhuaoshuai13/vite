@@ -149,6 +149,7 @@
       @include bg('sec7PcF6.webp');
 
       .title {
+        font-weight: 700;
         font-size: px-to-vw(58);
       }
 
@@ -183,7 +184,7 @@
   }
 }
 
-@media (width < $mobwidthPx) {
+@media (max-width: $mobwidthPx) {
   .sec6.pop8 {
     .bg_wrapper {
       padding: px-to-vw-mb(400) 0 px-to-vw-mb(120);

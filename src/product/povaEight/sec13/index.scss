@@ -70,7 +70,7 @@
   }
 }
 
-@media (width < $mobwidthPx) {
+@media (max-width: $mobwidthPx) {
   .sec13.pop8 {
     padding-top: px-to-vw-mb(350);
     padding-bottom: px-to-vw-mb(400);

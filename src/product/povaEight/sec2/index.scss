@@ -190,7 +190,7 @@
   }
 }
 
-@media (width < $mobwidthPx) {
+@media (max-width: $mobwidthPx) {
   .sec2.pop8 {
     padding: px-to-vw-mb(286) 0;
 
@@ -299,6 +299,8 @@
       .img {
         
         @include bg('sec2MobF6.webp');
+
+        background-size: 100% 100%;
       }
   
       .title {

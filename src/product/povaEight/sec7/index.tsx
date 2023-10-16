@@ -97,13 +97,13 @@ const Sec7 = (props: { sec7Video: any, isPc: any }) => {
           <video
             src={isPc ? global.pop8Config.sec7Video.pc : global.pop8Config.sec7Video.mob}
             ref={sec7Video}
-            poster={global.pop8Config.sec8Video.v1Post}
+            poster={isPc ? global.pop8Config.sec7Video.v1Post : global.pop8Config.sec7Video.v1PostMob}
             className='video'
             autoPlay={false}
             webkit-playsinline='true'
             preload='auto'
             muted
-            loop={false}
+            loop={true}
           ></video>
         </div>
       </div>

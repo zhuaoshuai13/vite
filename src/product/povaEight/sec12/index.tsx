@@ -34,7 +34,7 @@ const Sec12 = (props: SecType) => {
       <div className='sec12_content'>
         <video
           src={isPc ? global.pop8Config.sec12Video.pc : global.pop8Config.sec12Video.mob}
-          poster={global.pop8Config.sec12Video.v1Post}
+          poster={isPc ? global.pop8Config.sec12Video.v1Post : global.pop8Config.sec12Video.v1PostMob}
           className='video'
           autoPlay={true}
           webkit-playsinline='true'

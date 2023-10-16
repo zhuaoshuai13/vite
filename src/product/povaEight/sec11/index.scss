@@ -61,6 +61,8 @@
       top: 50%;
       left: 50%;
       width: 93%;
+      height: 95%;
+      object-fit: cover;
       border-radius: px-to-vw(20);
       transform: translate(-50%, -50%);
     }
@@ -117,7 +119,7 @@
   }
 }
 
-@media (width < $mobwidthPx) {
+@media (max-width: $mobwidthPx) {
   .sec11.pop8 {
     padding-top: px-to-vw-mb(375);
     padding-bottom: px-to-vw-mb(2200);

@@ -144,7 +144,7 @@ $mobwidthPx: 1080px;
   }
 }
 
-@media (width < $mobwidthPx) {
+@media (max-width: $mobwidthPx) {
   .pop8 {
     .pc {
       display: none;

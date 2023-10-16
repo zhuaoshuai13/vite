@@ -94,7 +94,7 @@
   }
 }
 
-@media (width < $mobwidthPx) {
+@media (max-width: $mobwidthPx) {
   .sec1.pop8 {
     .bg_wrapper {
       height: auto;
@@ -110,7 +110,7 @@
     .slogan {
       width: px-to-vw-mb(317);
       height: px-to-vw-mb(84);
-      margin-bottom: px-to-vw-mb(74);
+      margin-bottom: px-to-vw-mb(160);
     }
 
     .title_130 {
@@ -146,6 +146,7 @@
 
     .tips {
       margin-top: px-to-vw-mb(74);
+      font-size: px-to-vw-mb(21);
     }
   }
 }
