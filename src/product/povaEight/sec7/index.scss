@@ -10,7 +10,7 @@
   .bg_wrapper {
     position: relative;
     padding: px-to-vw(300) 0;
-    background-color: #621eed;
+    background-color: #571deb;
   }
 
   .content_wrapper {
@@ -44,7 +44,7 @@
       }
 
       .title {
-        color: #f25431;
+        color: #571deb;
         font-weight: 700;
         font-size: px-to-vw(44);
       }
@@ -66,6 +66,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      clip-path: inset(2px 0);
     }
   }
 

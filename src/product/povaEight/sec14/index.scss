@@ -61,7 +61,7 @@
       height: px-to-vw(857);
       margin-left: px-to-vw(-265);
 
-      @include bg("sec14PcRight.webp");
+      @include bg("sec14PcRight.png");
     }
   }
 
@@ -132,11 +132,11 @@
 
       .sec14_right {
         z-index: 1;
-        width: px-to-vw-mb(1080);
-        height: px-to-vw-mb(878);
-        margin-left: 0;
+        width: px-to-vw-mb(946);
+        height: px-to-vw-mb(860);
+        margin: 0 auto;
 
-        @include bg('sec14MobF1.webp');
+        @include bg('sec14MobF1.png');
       }
     }
   }

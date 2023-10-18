@@ -67,7 +67,7 @@ window.pop8Config = {
     icon4Top: "69%",
     icon4Left: "-15%",
     icon3MobTop: "5%",
-    icon3MobLeft: "85%",
+    icon3MobLeft: "95%",
     t1: `6.6'' 90Hz Hole Screen`,
     d1: `Explore a vast wonderland on a 6.6-inch<br /> ultra-wide display! At a whopping 90.5% <br />screen-to-body ratio - a rarity in its class,<br /> feel like floating on a boundless sea of<br /> visual feast! It's a seamless adventure, as <br />90Hz high-refresh rate guarantees ultra-<br />responsive interactions! <br />Surprises await between each tap.`,
     param1t: `6.6'' Hole`,
@@ -236,8 +236,8 @@ window.pop8Config = {
   sec12: {
     bigTitle: `Double Down <br /> On Power!`,
     icon1: {
-      top: "51%",
-      left: "62%",
+      top: "7%",
+      left: "63%",
       mobtop: "56%",
       mobleft: "67%",
     },

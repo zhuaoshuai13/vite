@@ -54,6 +54,7 @@
       position: absolute;
       top: px-to-vw(-160);
       width: 100%;
+      clip-path: inset(2px 0);
     }
 
     .text_box {
@@ -159,7 +160,6 @@
       margin-top: px-to-vw-mb(525);
       margin-top: 0;
       padding: px-to-vw-mb(950) px-to-vw-mb(136) px-to-vw-mb(207);
-      background: #6524fa;
 
       video {
         top: 0;

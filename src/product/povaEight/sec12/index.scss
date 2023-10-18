@@ -31,6 +31,7 @@
       position: absolute;
       top: px-to-vw(-160);
       width: 100%;
+      clip-path: inset(2px 0);
     }
 
     .sec12_left {
@@ -148,7 +149,6 @@
       display: block;
       margin: 0;
       padding: px-to-vw-mb(1200) px-to-vw-mb(237) px-to-vw-mb(190) px-to-vw-mb(109);
-      background-color: #6524fa;
 
       video {
         left: 0;

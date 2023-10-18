@@ -13,7 +13,7 @@
   }
 
   overflow: hidden;
-  background-color: #f96fc0;
+  background-color: #f964b8;
   background-repeat: repeat-y;
 
   .sec9_text {
@@ -28,7 +28,7 @@
     text-align: center;
     background-position: center;
 
-    @include bg('sec9PcBg.webp');
+    @include bg('sec9PcBg.png');
   }
 
   .text_box {

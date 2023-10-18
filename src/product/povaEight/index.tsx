@@ -562,14 +562,6 @@ const PovaEight = () => {
             { y: "20%", opacity: 0, delay: 0.75 },
             "a"
           )
-          .to(".sec11 .left_circle", 0.1, { rotate: 20 }, "m")
-          .to(".sec11 .right_circle", 0.1, { rotate: 20 }, "m")
-          .to(".sec11 .left_circle", 0.1, { rotate: 0 }, "n")
-          .to(".sec11 .right_circle", 0.1, { rotate: 0 }, "n")
-          .to(".sec11 .left_circle", 0.1, { rotate: 20 }, "b")
-          .to(".sec11 .right_circle", 0.1, { rotate: 20 }, "b")
-          .to(".sec11 .left_circle", 0.1, { rotate: 0 }, "v")
-          .to(".sec11 .right_circle", 0.1, { rotate: 0 }, "v")
 
         ScrollTrigger.create({
           trigger: ".sec11 .content_box",
@@ -805,14 +797,6 @@ const PovaEight = () => {
             { y: "20%", opacity: 0, delay: 1.25 },
             "a"
           )
-          .to(".sec14 .sec14_left", 0.1, { rotate: 20 }, "m")
-          .to(".sec14 .sec14_right", 0.1, { rotate: 20 }, "m")
-          .to(".sec14 .sec14_left", 0.1, { rotate: 0 }, "n")
-          .to(".sec14 .sec14_right", 0.1, { rotate: 0 }, "n")
-          .to(".sec14 .sec14_left", 0.1, { rotate: 20 }, "b")
-          .to(".sec14 .sec14_right", 0.1, { rotate: 20 }, "b")
-          .to(".sec14 .sec14_left", 0.1, { rotate: 0 }, "v")
-          .to(".sec14 .sec14_right", 0.1, { rotate: 0 }, "v")
 
         ScrollTrigger.create({
           trigger: ".sec14 .sec14_content",
