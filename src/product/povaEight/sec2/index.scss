@@ -162,7 +162,7 @@
       width: 100%;
       height: 100%;
 
-      @include bg('sec2PcF6.webp');
+      @include bg('sec2PcF6.png');
     }
 
     .title {
@@ -299,7 +299,7 @@
   
       .img {
         
-        @include bg('sec2MobF6.webp');
+        @include bg('sec2MobF6.png');
 
         background-size: 100% 100%;
       }

@@ -1,7 +1,7 @@
 @import "../index";
 
 .sec14.pop8 {
-  padding-top: px-to-vw(294);
+  padding-top: px-to-vw(50);
 
   &.false {
     .sec14_left,.sec14_right,.icon1,.icon2,.icon3 {
@@ -11,10 +11,10 @@
 
   .title_box {
     .icon1 {
-      width: px-to-vw(232);
-      height: px-to-vw(233);
+      width: px-to-vw(203);
+      height: px-to-vw(203);
 
-      @include bg("sec14PcIcon1.webp");
+      @include bg("sec14PcIcon1.png");
     }
   }
 
@@ -69,11 +69,13 @@
     margin-top: px-to-vw(20);
     margin-bottom: px-to-vw(140);
     padding-left: px-to-vw(1272);
+    text-align: right;
   }
 }
 
 @media (max-width: $mobwidthPx) {
   .sec14.pop8 {
+    padding-top: px-to-vw-mb(100);
     padding-bottom: px-to-vw-mb(300);
 
     .title_box {
@@ -138,6 +140,12 @@
 
         @include bg('sec14MobF1.png');
       }
+    }
+
+    .tips {
+      justify-content: end;
+      margin: px-to-vw-mb(33) px-to-vw-mb(60) 0;
+      padding-left: 0;
     }
   }
 }

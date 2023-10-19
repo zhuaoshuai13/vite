@@ -57,6 +57,15 @@
       clip-path: inset(2px 0);
     }
 
+    .pic {
+      position: absolute;
+      top: px-to-vw(-160);
+      width: 100%;
+      height: px-to-vw(1080);
+
+      @include bg('sec10PcF1.png');
+    }
+
     .text_box {
       position: relative;
       width: 28vw;
@@ -90,41 +99,11 @@
         margin-top: 5px;
       }
     }
-
-    .product {
-      position: absolute;
-      top: px-to-vw(-140);
-      left: px-to-vw(151);
-      width: px-to-vw(895);
-      height: px-to-vw(962);
-
-      // @include bg('sec10Product.webp');
-
-      .topLine {
-        position: absolute;
-        top: px-to-vw(10);
-        left: px-to-vw(650);
-        width: px-to-vw(181);
-        height: px-to-vw(179);
-
-        @include bg('sec10PcTopLine.webp');
-      }
-
-      .bottomLine {
-        position: absolute;
-        top: px-to-vw(760);
-        left: px-to-vw(20);
-        width: px-to-vw(217);
-        height: px-to-vw(217);
-
-        @include bg('sec10PcBottomLine.webp');
-      }
-    }
   }
 
   .tips {
     justify-content: flex-end;
-    margin-top: px-to-vw(26);
+    margin-top: px-to-vw(70);
     padding-right: px-to-vw(114);
     padding-bottom: px-to-vw(63);
   }
@@ -164,6 +143,15 @@
       video {
         top: 0;
         left: 0;
+      }
+
+      .pic {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: px-to-vw-mb(1920);
+
+        @include bg('sec10MobF1.png');
       }
 
       .text_box {
@@ -219,6 +207,11 @@
           @include bg('sec10MobBottomLine.webp');
         }
       }
+    }
+
+    .tips {
+      margin-top: px-to-vw-mb(10);
+      padding: 0 px-to-vw-mb(60);
     }
   }
 }

@@ -136,5 +136,13 @@
       height: px-to-vw-mb(1974);
       transform: translateX(-50%);
     }
+
+    .tips {
+      position: unset;
+      max-width: px-to-vw-mb(826);
+      margin: 0 auto;
+      text-align: center;
+      transform: unset;
+    }
   }
 }

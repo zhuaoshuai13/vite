@@ -24,6 +24,27 @@
     @include bg('sec1PcBg.webp', false);
   }
 
+  .video {
+    position: absolute;
+    top: px-to-vw(50);
+    right: px-to-vw(-100);
+    width: px-to-vw(1200);
+    clip-path: inset(2px);
+  }
+
+  .type2 {
+    padding-bottom: px-to-vw(160);
+  }
+
+  .type3 {
+    height: px-to-vw(960);
+  }
+
+  .fullVideo {
+    width: 100%;
+    clip-path: inset(2px 0);
+  }
+
   .content {
     max-width: px-to-vw(780);
     padding: px-to-vw(240) 0 0 px-to-vw(40);
@@ -147,6 +168,20 @@
     .tips {
       margin-top: px-to-vw-mb(74);
       font-size: px-to-vw-mb(21);
+    }
+
+    .video {
+      top: px-to-vw-mb(150);
+      right: 0;
+      width: 100%;
+    }
+
+    .type2 {
+      padding-bottom: 0;
+    }
+
+    .type3 {
+      height: px-to-vw-mb(1600);
     }
   }
 }

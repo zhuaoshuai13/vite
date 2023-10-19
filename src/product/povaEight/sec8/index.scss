@@ -137,7 +137,7 @@
 @media (max-width: $mobwidthPx) {
   .sec8.pop8 {
     .bg_wrapper {
-      padding-bottom: px-to-vw-mb(184);
+      padding-bottom: px-to-vw-mb(80);
       background-position-y: px-to-vw-mb(-480);
 
       @include bg('sec8MobF1.webp', false);
@@ -233,6 +233,10 @@
           }
         }
       }
+    }
+
+    .tips {
+      margin: px-to-vw-mb(112) px-to-vw-mb(60) 0 auto;
     }
   }
 }

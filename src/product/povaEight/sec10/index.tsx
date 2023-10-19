@@ -38,16 +38,7 @@ const Sec10 = (props: any) => {
         ></div>
       </div>
       <div className='content_box'>
-        <video
-          src={isPc ? global.pop8Config.sec10Video.pc : global.pop8Config.sec10Video.mob}
-          poster={isPc ? global.pop8Config.sec10Video.v1Post : global.pop8Config.sec10Video.v1PostMob}
-          className='video'
-          autoPlay={true}
-          webkit-playsinline='true'
-          preload='auto'
-          muted
-          loop={true}
-        ></video>
+        <div className="pic"></div>
         <div className='text_box'>
           <div className="dts"></div>
           <div
@@ -93,13 +84,9 @@ const Sec10 = (props: any) => {
             </div>
           </div>
         </div>
-        <div className='product'>
-          <div className='line topLine'></div>
-          <div className='line bottomLine'></div>
-        </div>
       </div>
       <div
-        className='tips pc'
+        className='tips'
         dangerouslySetInnerHTML={{
           __html: global.pop8Config.sec10.tips,
         }}

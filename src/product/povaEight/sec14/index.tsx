@@ -78,7 +78,7 @@ const Sec14 = (props: SecType) => {
         <div className='sec14_right'></div>
       </div>
       <div
-        className='tips pc'
+        className='tips'
         dangerouslySetInnerHTML={{ __html: global.pop8Config.sec14.tips }}
       ></div>
     </div>

@@ -84,6 +84,7 @@
     .phone {
       width: 100%;
       height: 100%;
+      visibility: hidden;
     }
 
     .light {
@@ -182,6 +183,10 @@
   .tips {
     max-width: px-to-vw(350);
     margin: px-to-vw(12) auto 0;
+
+    &.mob {
+      display: none;
+    }
   }
 }
 
@@ -252,8 +257,9 @@
       transform: translateX(-50%);
 
       .phone {
-
-        @include bg('sec7MbF4.webp');
+        background-repeat: no-repeat;
+        background-size: contain;
+        visibility: visible;
       }
 
       .light {
@@ -336,6 +342,15 @@
         .desc {
           font-size: px-to-vw-mb(22);
         }
+      }
+    }
+
+    .tips {
+      max-width: px-to-vw-mb(826);
+      text-align: center;
+
+      &.mob {
+        display: flex;
       }
     }
   }

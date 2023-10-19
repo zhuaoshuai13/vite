@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { SecType } from "../type.ts/type"
 
 import UseObservable from "../../../hooks/useObserve"
@@ -10,6 +10,11 @@ const Sec11 = (props: SecType) => {
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
   const IntersectionObserver = UseObservable(ref)
+  const [isOpen, setIsOpen] = useState(false)
+
+  const openMoreTips = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <div className={`sec11 pop8 ${IntersectionObserver}`} ref={ref}>
@@ -41,7 +46,7 @@ const Sec11 = (props: SecType) => {
           muted
           loop={true}
         ></video>
-        <div className="pic1"></div>
+        <div className='pic1'></div>
       </div>
       <div className='sec11_text'></div>
       <div className='left_circle'></div>
@@ -108,10 +113,27 @@ const Sec11 = (props: SecType) => {
           <div className='product'></div>
         </div>
       </div>
-      <div
-        className='tips pc'
-        dangerouslySetInnerHTML={{ __html: global.pop8Config.sec11.tips }}
-      ></div>
+      <div className={`tips`}>
+        <div className='tipContainer'>
+          <div
+            className='tip'
+            dangerouslySetInnerHTML={{ __html: global.pop8Config.sec11.tips1 }}
+          ></div>
+          <button className='mob' onClick={() => openMoreTips()}></button>
+        </div>
+        <div
+          className={`tip ${isOpen ? 'open' : ''}`}
+          dangerouslySetInnerHTML={{ __html: global.pop8Config.sec11.tips2 }}
+        ></div>
+        <div
+          className={`tip ${isOpen ? 'open' : ''}`}
+          dangerouslySetInnerHTML={{ __html: global.pop8Config.sec11.tips3 }}
+        ></div>
+        <div
+          className={`tip ${isOpen ? 'open' : ''}`}
+          dangerouslySetInnerHTML={{ __html: global.pop8Config.sec11.tips4 }}
+        ></div>
+      </div>
     </div>
   )
 }

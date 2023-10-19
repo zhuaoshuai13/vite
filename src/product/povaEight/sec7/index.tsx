@@ -4,7 +4,7 @@ import UseObservable from "../../../hooks/useObserve"
 
 import "./index.scss"
 
-const Sec7 = (props: { sec7Video: any, isPc: any }) => {
+const Sec7 = (props: { sec7Video: any; isPc: any }) => {
   const { sec7Video, isPc } = props
   const global = window as any
   const ref = useRef<HTMLDivElement>(null)
@@ -95,9 +95,17 @@ const Sec7 = (props: { sec7Video: any, isPc: any }) => {
         </div>
         <div className='product'>
           <video
-            src={isPc ? global.pop8Config.sec7Video.pc : global.pop8Config.sec7Video.mob}
+            src={
+              isPc
+                ? global.pop8Config.sec7Video.pc
+                : global.pop8Config.sec7Video.mob
+            }
             ref={sec7Video}
-            poster={isPc ? global.pop8Config.sec7Video.v1Post : global.pop8Config.sec7Video.v1PostMob}
+            poster={
+              isPc
+                ? global.pop8Config.sec7Video.v1Post
+                : global.pop8Config.sec7Video.v1PostMob
+            }
             className='video'
             autoPlay={false}
             webkit-playsinline='true'
@@ -106,6 +114,12 @@ const Sec7 = (props: { sec7Video: any, isPc: any }) => {
             loop={true}
           ></video>
         </div>
+        <div
+          className='tips mob'
+          dangerouslySetInnerHTML={{
+            __html: global.pop8Config.sec7.tips,
+          }}
+        ></div>
       </div>
     </section>
   )

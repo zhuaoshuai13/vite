@@ -8,7 +8,7 @@ window.pop8Config = {
     p2: "6.6'' 90Hz <br/> Hole Screen",
     p3: "Up to <span>4+4 GB <br/> Extended RAM</span><br/> 128GB+8GB* ",
     p4: "5000mAh <br/> with Type-C",
-    tips: "64GB ROM+6GB RAM*(3GB+3GB Extended); <br/> 64GB ROM+8GB RAM*(4GB+4GB Extended) <br/> 128GB ROM+8GB RAM*(4GB+4GB Extended)",
+    tips: "64GB ROM+6GB RAM*(3GB+3GB Extended) <br/> 64GB ROM+8GB RAM*(4GB+4GB Extended) <br/> 128GB ROM+8GB RAM*(4GB+4GB Extended)",
     icon1Top: "52%",
     icon1Left: "88%",
     icon1MobTop: "52%",
@@ -225,13 +225,13 @@ window.pop8Config = {
     p1a: `Up to 1TB`,
     p1b: `Extended Storage`,
     p2a: `Up to 8GB`,
-    p2b: `Fusion Memory`,
+    p2b: `Memory Fusion`,
     p3a: `System Slimming`,
     p3b: `Deep Cleanup`,
-    tips: `*Double RAM（Up to 8GB, 4GB+4GB Extended RAM）<br />
-    *The 1TB extended storage is only available on models with a 1TB MicroSD card. Actual storage available may vary depending on pre-installed software.<br />
-    *MicroSD card must be purchased separately and is not included in this product.<br />
-    *Pictures are for illustration only, please refer to the actual product form.`,
+    tips1: `*Double RAM（Up to 8GB, 4GB+4GB Extended RAM）`,
+    tips2: `*The 1TB extended storage is only available on models with a 1TB MicroSD card. Actual storage available may vary depending on pre-installed software.`,
+    tips3: `*MicroSD card must be purchased separately and is not included in this product.`,
+    tips4: `*Pictures are for illustration only, please refer to the actual product form.`,
   },
   sec12: {
     bigTitle: `Double Down <br /> On Power!`,
@@ -255,14 +255,15 @@ window.pop8Config = {
     },
 
     title: `5000mAh <br class='pc'/> Large Battery <br class='pc'/> with Type-C`,
-    desc: `Say goodbye to power anxiety with a mega,<br class='pc'/> marathon battery! Dive into non-stop videos<br class='pc'/> and music. The versatile Type-C port plays<br class='pc'/> along – up or down, plug it in any way you<br class='pc'/> want. A feature usually reserved for pricier<br class='pc'/> models - level up your experience, level down<br class='pc'/> your costs!`,
+    desc: `Say goodbye to power anxiety with a mega, marathon battery with over 900 hours of standby time! Dive into non-stop videos and music. The versatile Type-C port plays along – up or down, plug it in any way you want. A feature usually reserved for pricier models - level up your experience, level down your costs!`,
     p1a: `5000mAh`,
     p1b: `Large Battery`,
     p2a: `10W`,
     p2b: `Charge`,
     p3a: `Type-C`,
     p3b: `Interface`,
-    tips: `*Pictures are for illustration only, please refer to the actual product form.`,
+    tips: `*Pictures are for illustration only, please refer to the actual product form. <br />
+    *Evidenced by data from TRANSSION LAB`,
   },
   sec13: {
     bigTitle: `Half the Effort,<br />Tip Awake a Smart<br /> World`,
@@ -298,7 +299,7 @@ window.pop8Config = {
     icon1: {
       top: "0%",
       left: "-15%",
-      mobtop: "-9%",
+      mobtop: "0%",
       mobleft: "4%",
     },
     icon2: {
@@ -315,18 +316,43 @@ window.pop8Config = {
     },
 
     title: `Octa-core Processor`,
-    desc: `Powered by octa-core Arm<br /> Cortex-A53 processor, offering up<br /> to 2.2GHz peak frequency for<br /> lightning-fast mobile experience!<br /> While the self-developed Darwin<br /> Engine keeps your device cool so<br /> you chill in longer usage.<br /> Enjoy uninterrupted, silky-smoothn<br /> performance without a hitch!`,
+    desc: `Powered by octa-core Arm Cortex-A53 processor, offering up to 2.2GHz peak frequency for lightning-fast mobile experience! Over 170,000 total scores in AN TUTU test. While the self-developed Darwin Engine keeps your device cool so you chill in longer usage.
+    Enjoy uninterrupted, silky-smooth performance without a hitch!`,
     p1a: `2.2GHz`,
     p1b: `Peak Frequency`,
     p2a: `Octa-core Arm Cortex-A53`,
     p2b: `Processor`,
-    tips: `*Pictures are for illustration only, please refer to the actual product form.`,
+    tips: `*Pictures are for illustration only, please refer to the actual product form. <br />
+    *Evidenced by data from TRANSSION LAB`,
+  },
+
+
+
+  // type1: 文案+图片;  type2: 文案+小视频;  type3: 通屏大视频;
+  sec1Type: 'type3',
+  sec1Video: {
+    // pcType2: "http://localhost:5173/src/assets/video/sec1Pc.mp4",
+    // mobType2: "http://localhost:5173/src/assets/video/sec1Pc.mp4",
+    // pcType3: "http://localhost:5173/src/assets/video/sec1PcFull.mp4",
+    // mobType3: "http://localhost:5173/src/assets/video/sec1MobFull.mp4",
+    pcType2: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec1Pc.mp4",
+    mobType2: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec1Pc.mp4",
+    pcType3: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec1PcFull.mp4",
+    mobType3: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec1MobFull.mp4",
+    type2Post: "",
+    type2PostMob: "",
+    type3Post: "",
+    type3PostMob: "",
+  },
+  sec6Image: {
+    // pic1: 'http://localhost:5173/src/assets/imgZip/sec7MbF4.webp',
+    pic1: 'https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec7MbF4.webp',
   },
   sec6Video: {
     // pc: "http://localhost:5173/src/assets/video/sec6Pc.mp4",
     // v1Post: "",
     pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec6Pc.mp4",
-    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec6PcPoster.jpg",
+    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec6PcPoster.jpg",
   },
   sec7Video: {
     // pc: "http://localhost:5173/src/assets/video/sec7Pc.mp4",
@@ -334,8 +360,8 @@ window.pop8Config = {
     // v1Post: "",
     pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec7Pc.mp4",
     mob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec7Mob.mp4",
-    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec7PcPoster.jpg",
-    v1PostMob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec7MobPoster.jpg",
+    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec7PcPoster.jpg",
+    v1PostMob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec7MobPoster.jpg",
   },
   sec8Video: {
     // 本地
@@ -354,37 +380,29 @@ window.pop8Config = {
 
     // 线上
     v1: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V1.mp4",
-    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V1Poster.jpg",
+    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec8V1Poster.jpg",
     v2: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V2.mp4",
-    v2Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V2Poster.jpg",
+    v2Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec8V2Poster.jpg",
     v3: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V3.mp4",
-    v3Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V3Poster.jpg",
+    v3Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec8V3Poster.jpg",
     v4: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V4.mp4",
-    v4Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V4Poster.jpg",
+    v4Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec8V4Poster.jpg",
     v5: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V5.mp4",
-    v5Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V5Poster.jpg",
+    v5Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec8V5Poster.jpg",
     v6: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec8V6.mp4",
-    v6Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec8V6Poster.jpg",
-  },
-  sec10Video: {
-    // pc: "http://localhost:5173/src/assets/video/sec10Pc.mp4",
-    // mob: "http://localhost:5173/src/assets/video/sec10Mob.mp4",
-    pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec10Pc.mp4",
-    mob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec10Mob.mp4",
-    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec10PcPoster.jpg",
-    v1PostMob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec10MobPoster.jpg",
+    v6Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec8V6Poster.jpg",
   },
   sec11Video: {
     // pc: "http://localhost:5173/src/assets/video/sec11Pc.mp4",
     pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec11Pc.mp4",
-    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec11PcPoster.jpg",
+    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec11PcPoster.jpg",
   },
   sec12Video: {
     // pc: "http://localhost:5173/src/assets/video/sec12Pc.mp4",
     // mob: "http://localhost:5173/src/assets/video/sec12Mob.mp4",
     pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec12Pc.mp4",
     mob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/video/sec12Mob.mp4",
-    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec12PcPoster.jpg",
-    v1PostMob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/webp/sec12MobPoster.jpg",
+    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec12PcPoster.jpg",
+    v1PostMob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/pop-8/dist/jpg/sec12MobPoster.jpg",
   },
 }

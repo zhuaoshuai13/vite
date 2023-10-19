@@ -70,7 +70,7 @@ const Sec6 = (props: sec6Type) => {
               ></div>
             </div>
             <div className='pic_box'>
-              <div className='phone'></div>
+              <div className='phone' style={{backgroundImage: `url(${global.pop8Config.sec6Image.pic1})`}}></div>
               <div className='light'></div>
               <div className='param1'>
                 <div
@@ -137,6 +137,12 @@ const Sec6 = (props: sec6Type) => {
             </div>
           </div>
         </div>
+        <div
+          className='tips mob'
+          dangerouslySetInnerHTML={{
+            __html: global.pop8Config.sec6.tips,
+          }}
+        ></div>
       </div>
     </section>
   )
