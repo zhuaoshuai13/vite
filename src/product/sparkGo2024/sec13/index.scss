@@ -1,0 +1,158 @@
+@import '../index';
+
+.sec13.pop8 {
+  padding-bottom: px-to-vw(300);
+
+  &.false {
+    .sec13_left,.sec13_right,.icon1,.icon2,.icon3 {
+      background-image: unset !important;
+    }
+  }
+
+  .title_box {
+    .icon3 {
+      width: px-to-vw(179);
+      height: px-to-vw(179);
+
+      @include bg('sec13PcIcon3.webp');
+    }
+  }
+
+  .sec13_content {
+    position: relative;
+    margin-top: px-to-vw(355);
+
+    .sec13_left {
+      width: px-to-vw(1600);
+      padding: px-to-vw(60) px-to-vw(278) px-to-vw(77);
+      background-color: #6524fa;
+    }
+
+    .text_box {
+      width: 33vw;
+    }
+
+    .params {
+      flex-direction: column;
+      gap: px-to-vw(22);
+      margin-top: px-to-vw(60);
+
+      .big_text {
+        color: rgba(250, 255, 0, 1);
+      }
+    }
+
+    .sec13_f1 {
+      position: absolute;
+      top: px-to-vw(140);
+      right: px-to-vw(460);
+      width: px-to-vw(486);
+      height: px-to-vw(486);
+
+      @include bg('sec13PcF1.png');
+    }
+
+    .sec13_f2 {
+      position: absolute;
+      top: px-to-vw(-350);
+      right: 0;
+      width: px-to-vw(894);
+      height: px-to-vw(1195);
+
+      @include bg('sec13PcF2.png');
+    }
+  }
+
+  .tips {
+    margin: px-to-vw(27) px-to-vw(270) 0;
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .sec13.pop8 {
+    padding-top: px-to-vw-mb(260);
+    padding-bottom: px-to-vw-mb(200);
+
+    .title_box {
+      padding-left: px-to-vw-mb(137);
+
+      .title {
+        font-size: px-to-vw-mb(85) !important;
+      }
+
+      .icon1 {
+        width: px-to-vw-mb(156);
+        height: px-to-vw-mb(156);
+      }
+      
+      .icon2 {
+        width: px-to-vw-mb(177);
+        height: px-to-vw-mb(130);
+      }
+      
+      .icon3 {
+        width: px-to-vw-mb(134);
+        height: px-to-vw-mb(134);
+      }
+    }
+
+    .sec13_content {
+      flex-direction: column-reverse;
+      margin-top: px-to-vw-mb(588);
+
+      .sec13_left {
+        position: relative;
+        width: 100%;
+        padding: px-to-vw-mb(525) px-to-vw-mb(120) px-to-vw-mb(180) px-to-vw-mb(138);
+      }
+
+      .text_box {
+        width: 100%;
+
+        .title {
+          font-size: px-to-vw-mb(48);
+        }
+
+        .desc_18 {
+          width: 88%;
+          padding-left: 0;
+        }
+      }
+
+      .params {
+        flex-direction: row;
+        gap: px-to-vw-mb(90);
+
+        .big_text {
+          font-size: px-to-vw-mb(48);
+        }
+
+        .small_text {
+          font-size: px-to-vw-mb(18);
+        }
+      }
+
+      .sec13_f1 {
+        top: px-to-vw-mb(-150);
+        right: px-to-vw-mb(260);
+        width: px-to-vw-mb(580);
+        height: px-to-vw-mb(580);
+
+        @include bg('sec13MobF1.png');
+      }
+
+      .sec13_f2 {
+        top: px-to-vw-mb(-620);
+        width: px-to-vw-mb(641);
+        height: px-to-vw-mb(1322);
+
+        @include bg('sec13MobF2.png');
+      }
+    }
+
+    .tips {
+      justify-content: end;
+      margin: px-to-vw-mb(14) px-to-vw-mb(60);
+    }
+  }
+}

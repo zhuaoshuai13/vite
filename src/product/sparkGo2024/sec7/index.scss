@@ -1,0 +1,148 @@
+@import '../index';
+
+.sec7.pop8 {
+  &.false {
+    .product {
+      background-image: unset !important;
+    }
+  }
+
+  .bg_wrapper {
+    position: relative;
+    padding: px-to-vw(300) 0;
+    background-color: #571deb;
+  }
+
+  .content_wrapper {
+    position: relative;
+    z-index: 3;
+    padding: px-to-vw(150) 0;
+    transform: skewY(-4deg);
+  }
+
+  .text_wrapper {
+    position: relative;
+    z-index: 3;
+    max-width: px-to-vw(700);
+    margin-left: px-to-vw(240);
+    transform: skewY(4deg);
+  }
+
+  .params {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    margin-top: px-to-vw(150);
+    margin-left: px-to-vw(190);
+    transform: skewY(4deg);
+
+    .param {
+      margin-right: px-to-vw(54);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .title {
+        color: #571deb;
+        font-weight: 700;
+        font-size: px-to-vw(44);
+      }
+
+      .desc {
+        font-size: px-to-vw(16);
+        font-family: 'HB';
+      }
+    }
+  }
+
+  .product {
+    position: absolute;
+    top: 2.1%;
+    width: 100vw;
+    height: px-to-vw(1080);
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: inset(2px 0);
+    }
+  }
+
+  .tips {
+    position: absolute;
+    right: px-to-vw(117);
+    bottom: px-to-vw(-80);
+    transform: skewY(4deg);
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .sec7.pop8 {
+    .bg_wrapper {
+      padding: 0 0 px-to-vw-mb(300);
+    }
+
+    .content_wrapper {
+      position: relative;
+      width: px-to-vw-mb(826);
+      height: px-to-vw-mb(1974);
+      margin: 0 auto;
+      padding: px-to-vw-mb(168) px-to-vw-mb(78) 0;
+      transform: unset;
+    }
+
+    .text_wrapper {
+      max-width: 100%;
+      margin: 0;
+      transform: unset;
+    }
+
+    .params {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: px-to-vw-mb(62);
+      margin: px-to-vw-mb(148) 0 0;
+      padding: 0 0 0 px-to-vw-mb(40);
+      transform: unset;
+
+      .param {
+        margin: 0;
+
+        .title {
+          color: #571deb;
+          font-size: px-to-vw-mb(66);
+        }
+
+        .desc {
+          font-size: px-to-vw-mb(25);
+        }
+      }
+
+      .param1 {
+        order: 1;
+      }
+
+      .param2 {
+        order: 2;
+      }
+    }
+
+    .product {
+      top: 0;
+      left: 50%;
+      width: px-to-vw-mb(826);
+      height: px-to-vw-mb(1974);
+      transform: translateX(-50%);
+    }
+
+    .tips {
+      position: unset;
+      max-width: px-to-vw-mb(826);
+      margin: 0 auto;
+      text-align: center;
+      transform: unset;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import '../index';
+
+.sec9.pop8 {
+
+  @include bg('sec9PcText.webp');
+
+  &.false {
+    background-image: unset !important;
+
+    .sec9_text {
+      background-image: unset !important;
+    }
+  }
+
+  overflow: hidden;
+  background-color: #f964b8;
+  background-repeat: repeat-y;
+
+  .sec9_text {
+    width: fit-content;
+    margin: px-to-vw(316) auto px-to-vw(530);
+    padding: px-to-vw(110) px-to-vw(153) px-to-vw(150);
+    color: #fff;
+    font-weight: 700;
+    font-size: px-to-vw(96);
+    font-family: "HB";
+    line-height: 1.2;
+    text-align: center;
+    background-position: center;
+
+    @include bg('sec9PcBg.png');
+  }
+
+  .text_box {
+    color: #fff;
+
+    .title {
+      font-size: px-to-vw(48);
+      font-family: "HB";
+      line-height: 90%;
+    }
+  }
+
+  .params {
+    display: flex;
+
+    .big_text {
+      color: #fff;
+      font-size: px-to-vw(48);
+      font-family: "HB";
+    }
+
+    .small_text {
+      font-size: px-to-vw(18);
+      font-family: "HB";
+    }
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .sec9.pop8 {
+    .circle {
+      width: 100%;
+      height: px-to-vw-mb(68);
+      background-color: #571deb;
+
+      @include bg('sec9MobCircle.webp');
+    }
+
+    .sec9_text {
+      margin: px-to-vw-mb(500) auto px-to-vw-mb(410);
+      padding: px-to-vw-mb(160) px-to-vw-mb(90) px-to-vw-mb(180);
+      font-size: px-to-vw-mb(96);
+    }
+
+    .title_box {
+      width: 100%;
+      padding: 0 px-to-vw-mb(100) 0 px-to-vw-mb(156);
+    }
+  }
+}

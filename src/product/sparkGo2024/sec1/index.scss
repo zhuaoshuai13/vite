@@ -23,7 +23,7 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    // @include bg('sec1PcBg.webp', false);
+    // @include bg('sec1PcBg.png', false);
   }
 
   .video {
@@ -53,11 +53,11 @@
   }
 
   .slogan {
-    width: px-to-vw(249);
-    height: px-to-vw(66);
+    width: px-to-vw(349);
+    height: px-to-vw(53);
     margin-bottom: px-to-vw(60);
 
-    @include bg('sec1PcSlogan.webp', false);
+    @include bg('sec1PcSlogan.png', false);
   }
 
   .icon_container {
@@ -121,18 +121,19 @@
   .sec1.pop8 {
     .bg_wrapper {
       height: auto;
+      background-position-y: px-to-vw-mb(211);
 
-      // @include bg('sec1MobBg.webp');
+      // @include bg('sec1MobBg.png');
     }
 
     .content {
       max-width: 100%;
-      padding: px-to-vw-mb(850) 0 0 px-to-vw-mb(56);
+      padding: px-to-vw-mb(910) 0 0 px-to-vw-mb(56);
     }
 
     .slogan {
-      width: px-to-vw-mb(317);
-      height: px-to-vw-mb(84);
+      width: px-to-vw-mb(440);
+      height: px-to-vw-mb(64);
       margin-bottom: px-to-vw-mb(160);
     }
 

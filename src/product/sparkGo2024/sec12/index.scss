@@ -1,0 +1,229 @@
+
+@import '../index';
+
+.sec12.pop8 {
+  padding-top: px-to-vw(308);
+  padding-bottom: px-to-vw(300);
+
+  &.false {
+    .sec12_phone,.sec12_left,.sec12_right,.icon1,.icon2,.icon3 {
+      background-image: unset !important;
+    }
+  }
+
+  .title_box {
+    .icon1 {
+      width: px-to-vw(166);
+      height: px-to-vw(107);
+
+      @include bg('sec12PcIcon1.webp');
+    }
+  }
+
+  .sec12_content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: px-to-vw(250);
+    color: #fff;
+
+    video {
+      position: absolute;
+      top: px-to-vw(-160);
+      width: 100%;
+      clip-path: inset(2px 0);
+    }
+
+    .sec12_left {
+      position: relative;
+      width: px-to-vw(910);
+      height: px-to-vw(483);
+      margin-top: px-to-vw(196);
+      padding-top: px-to-vw(86);
+      padding-left: px-to-vw(175);
+
+      .sec12_title {
+        font-size: px-to-vw(48);
+        font-family: "HB";
+        line-height: 90%;
+      }
+
+      .desc_18 {
+        width: 18.8vw;
+      }
+    }
+
+    .sec12_right {
+      position: relative;
+      width: px-to-vw(913);
+      height: px-to-vw(482);
+      padding-top: px-to-vw(102);
+      padding-left: px-to-vw(491);
+
+      .params {
+        flex-direction: column;
+        gap: px-to-vw(30);
+
+        .big_text {
+          color: rgba(40, 255, 232, 1);
+        }
+      }
+    }
+
+    .sec12_phone {
+      position: absolute;
+      top: px-to-vw(-90);
+      right: 0;
+      left: 0;
+      width: px-to-vw(1069);
+      height: px-to-vw(828);
+      margin: auto;
+
+      @include bg('sec12PcPhone.webp');
+    }
+
+    .line {
+      position: absolute;
+    }
+
+    .line1 {
+      top: px-to-vw(85);
+      left: px-to-vw(430);
+      width: px-to-vw(177);
+      height: px-to-vw(170);
+
+      @include bg('sec12PcLine1.webp');
+    }
+
+    .line2 {
+      top: px-to-vw(-80);
+      left: px-to-vw(1300);
+      width: px-to-vw(144);
+      height: px-to-vw(258);
+
+      @include bg('sec12PcLine2.webp');
+    }
+
+    .line3 {
+      top: px-to-vw(680);
+      left: px-to-vw(1100);
+      width: px-to-vw(417);
+      height: px-to-vw(77);
+
+      @include bg('sec12PcLine3.webp');
+    }
+  }
+
+  .tips {
+    position: relative;
+    margin-top: px-to-vw(90);
+    padding-left: px-to-vw(1276);
+    text-align: right;
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .sec12.pop8 {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .title_box {
+      z-index: 1;
+      padding-left: px-to-vw-mb(120);
+
+      .icon1 {
+        width: px-to-vw-mb(134);
+        height: px-to-vw-mb(86);
+      }
+      
+      .icon2 {
+        width: px-to-vw-mb(163);
+        height: px-to-vw-mb(120);
+      }
+      
+      .icon3 {
+        width: px-to-vw-mb(140);
+        height: px-to-vw-mb(154);
+      }
+    }
+
+    .sec12_content {
+      display: block;
+      margin: 0;
+      padding: px-to-vw-mb(1200) px-to-vw-mb(237) px-to-vw-mb(190) px-to-vw-mb(109);
+
+      video {
+        left: 0;
+      }
+
+      .sec12_left {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        .sec12_title {
+          font-size: px-to-vw-mb(48);
+        }
+
+        .desc_18 {
+          width: 100%;
+        }
+      }
+
+      .sec12_right {
+        width: 100%;
+        height: auto;
+        margin-top: px-to-vw-mb(123);
+        padding: 0;
+
+        .params {
+          flex-direction: row;
+          gap: px-to-vw-mb(90);
+
+          .big_text {
+            font-size: px-to-vw-mb(48);
+          }
+          
+          .small_text {
+            font-size: px-to-vw-mb(18);
+          }
+        }
+      }
+
+      .sec12_phone {
+        top: px-to-vw-mb(-405);
+        width: px-to-vw-mb(1052);
+        height: px-to-vw-mb(877);
+
+        @include bg('sec12MobPhone.webp');
+      }
+
+      .line1 {
+        top: px-to-vw-mb(380);
+        left: px-to-vw-mb(0);
+        width: px-to-vw-mb(191);
+        height: px-to-vw-mb(182);
+      }
+
+      .line2 {
+        top: px-to-vw-mb(190);
+        left: px-to-vw-mb(890);
+        width: px-to-vw-mb(155);
+        height: px-to-vw-mb(278);
+      }
+
+      .line3 {
+        top: px-to-vw-mb(1010);
+        left: px-to-vw-mb(620);
+        width: px-to-vw-mb(397);
+        height: px-to-vw-mb(76);
+      }
+    }
+
+    .tips {
+      justify-content: end;
+      margin: 0 px-to-vw-mb(60);
+      padding-left: 0;
+    }
+  }
+}

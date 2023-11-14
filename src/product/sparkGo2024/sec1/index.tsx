@@ -14,7 +14,7 @@ const Sec1 = (props: SecType) => {
   const renderType1 = () => {
     return (
       <div className='bg_wrapper type1'>
-        <div className="bg_img" style={{backgroundImage: `url(${isPc ? global.pop8Config.sec1Type1ImagePc : global.pop8Config.sec1Type1ImageMob})`}}></div>
+       <div className="bg_img" style={{backgroundImage: `url(${isPc ? global.pop8Config.sec1Type1ImagePc : global.pop8Config.sec1Type1ImageMob})`}}></div>
         <div className='content'>
           <div className='slogan'></div>
           <div className='icon_container'>

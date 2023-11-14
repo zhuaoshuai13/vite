@@ -30,7 +30,7 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: "src/product/povaEight/config.js",
+              src: "src/product/sparkGo2024/config.js",
               dest: "dist",
             },
             {
