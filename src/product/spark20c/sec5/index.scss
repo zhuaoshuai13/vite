@@ -1,0 +1,123 @@
+@import '../index';
+
+.sec5.pop8 {
+  padding-top: 6vw;
+  background-color: #c9f556;
+
+  &.false {
+    .phone,.box1,.box2,.icon1,.icon2,.icon3,.icon4 {
+      background-image: unset !important;
+    }
+  }
+
+  .icon_container {
+    margin-left: px-to-vw(240);
+
+    .icon1 {
+      width: px-to-vw(219);
+      height: px-to-vw(219);
+
+      @include bg('sec5PcIcon1.webp');
+    }
+  }
+
+  .content_wrapper {
+    position: relative;
+    height: px-to-vw(1100);
+
+    .box1 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50vw;
+      height: px-to-vw(838);
+      padding: px-to-vw(280) px-to-vw(230) 0;
+      color: #fff;
+
+      @include bg('sec5PcF1.webp');
+    }
+
+    .box2 {
+      position: absolute;
+      right: 0;
+      bottom: px-to-vw(200);
+      width: px-to-vw(380);
+      height: px-to-vw(402);
+
+      @include bg('sec5PcF2.webp');
+    }
+
+    .phone {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      // left: px-to-vw(850);
+      left: 0;
+      width: px-to-vw(900);
+      height: px-to-vw(1200);
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .sec5.pop8 {
+    padding-top: px-to-vw-mb(100);
+
+    .icon_container {
+      margin-left: px-to-vw-mb(160);
+
+      .icon1 {
+        width: px-to-vw-mb(210);
+        height: px-to-vw-mb(210);
+      }
+
+      .icon2 {
+        width: px-to-vw-mb(150);
+        height: px-to-vw-mb(150);
+      }
+
+      .icon3 {
+        width: px-to-vw-mb(111);
+        height: px-to-vw-mb(86);
+      }
+
+      .icon4 {
+        width: px-to-vw-mb(187);
+        height: px-to-vw-mb(124);
+      }
+    }
+
+    .content_wrapper {
+      height: auto;
+      margin-top: px-to-vw-mb(100);
+      padding-bottom: px-to-vw-mb(550);
+
+      .box1 {
+        position: unset;
+        width: px-to-vw-mb(1080);
+        height: px-to-vw-mb(1162);
+        padding: px-to-vw-mb(340) px-to-vw-mb(400) 0 px-to-vw-mb(75) ;
+
+        @include bg('sec5MobF1.webp');
+      }
+
+      .box2 {
+        top: 0;
+        bottom: unset;
+        width: px-to-vw-mb(232);
+        height: px-to-vw-mb(410);
+
+        @include bg('sec5MobF2.webp');
+      }
+
+      .phone {
+        // position: unset;
+        width: px-to-vw-mb(1000);
+        height: px-to-vw-mb(1333);
+        margin: px-to-vw-mb(-430) auto 0;
+      }
+    }
+  }
+}

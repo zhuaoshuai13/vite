@@ -1,0 +1,218 @@
+
+@import '../index';
+
+.sec10.pop8 {
+  overflow: unset;
+
+  &.false {
+    .content_box,.product,.icon1,.icon2,.icon3,.icon4 {
+      background-image: unset !important;
+    }
+  }
+
+  .title_box {
+    .icon1 {
+      width: px-to-vw(164);
+      height: px-to-vw(164);
+
+      @include bg('sec10Icon1.webp');
+    }
+
+    .icon2 {
+      width: px-to-vw(169);
+      height: px-to-vw(169);
+
+      @include bg('sec10Icon2.webp');
+    }
+
+    .icon3 {
+      width: px-to-vw(132);
+      height: px-to-vw(139);
+
+      @include bg('sec10Icon3.webp');
+    }
+
+    .icon4 {
+      width: px-to-vw(164);
+      height: px-to-vw(164);
+
+      @include bg('sec10Icon4.webp');
+    }
+  }
+
+  .content_box {
+    position: relative;
+    width: 100%;
+    height: px-to-vw(661);
+    margin-top: px-to-vw(397);
+    padding-top: px-to-vw(144);
+    color: #fff;
+
+    // @include bg('sec10Bg.webp');
+
+    video {
+      position: absolute;
+      top: px-to-vw(-160);
+      width: 100%;
+      clip-path: inset(2px 0);
+    }
+
+    .pic {
+      position: absolute;
+      top: px-to-vw(-160);
+      width: 100%;
+      height: px-to-vw(1080);
+
+      @include bg('sec10PcF1.png');
+    }
+
+    .text_box {
+      position: relative;
+      width: 36vw;
+      margin-left: px-to-vw(1150);
+
+      .dts {
+        width: px-to-vw(131);
+        height: px-to-vw(54);
+        margin-bottom: px-to-vw(20);
+
+        @include bg('sec10PcDts.webp');
+      }
+
+      .title {
+        font-size: px-to-vw(48);
+        font-family: "HB";
+        line-height: 1.2;
+      }
+
+      .params {
+        justify-content: space-between;
+        margin-top: px-to-vw(75);
+      }
+
+      .big_text {
+        color: #faff00;
+        font-size: px-to-vw(36);
+        line-height: 90%;
+      }
+
+      .small_text {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .tips {
+    justify-content: flex-end;
+    margin-top: px-to-vw(70);
+    padding-right: px-to-vw(114);
+    padding-bottom: px-to-vw(63);
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .sec10.pop8 {
+    .title_box {
+      .icon1 {
+        width: px-to-vw-mb(163);
+        height: px-to-vw-mb(163);
+      }
+
+      .icon2 {
+        width: px-to-vw-mb(126);
+        height: px-to-vw-mb(126);
+      }
+
+      .icon3 {
+        width: px-to-vw-mb(99);
+        height: px-to-vw-mb(104);
+      }
+
+      .icon4 {
+        width: px-to-vw-mb(153);
+        height: px-to-vw-mb(153);
+      }
+    }
+
+    .content_box {
+      height: auto;
+      min-height: px-to-vw-mb(1920);
+      margin-top: px-to-vw-mb(525);
+      margin-top: 0;
+      padding: px-to-vw-mb(950) px-to-vw-mb(80) px-to-vw-mb(207);
+
+      video {
+        top: 0;
+        left: 0;
+      }
+
+      .pic {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: px-to-vw-mb(1920);
+
+        @include bg('sec10MobF1.png');
+      }
+
+      .text_box {
+        width: 100%;
+        margin-left: 0;
+
+        .title {
+          font-size: px-to-vw-mb(48);
+        }
+
+        .params {
+          margin-top: px-to-vw-mb(183);
+        }
+
+        .big_text {
+          font-size: px-to-vw-mb(48);
+        }
+
+        .small_text {
+          font-size: px-to-vw-mb(27);
+        }
+
+        .dts {
+          width: px-to-vw-mb(131);
+          height: px-to-vw-mb(54);
+          margin: 0 px-to-vw-mb(20) px-to-vw-mb(100) auto;
+        }
+      }
+
+      .product {
+        top: px-to-vw-mb(150);
+        left: 0;
+        width: px-to-vw-mb(1067);
+        height: px-to-vw-mb(877);
+
+        // @include bg('sec10Mobf3.webp');
+
+        .topLine {
+          top: px-to-vw-mb(-10);
+          left: px-to-vw-mb(835);
+          width: px-to-vw-mb(229);
+          height: px-to-vw-mb(228);
+
+          @include bg('sec10MobTopLine.webp');
+        }
+
+        .bottomLine {
+          top: px-to-vw-mb(580);
+          left: px-to-vw-mb(0);
+          width: px-to-vw-mb(226);
+          height: px-to-vw-mb(251);
+
+          @include bg('sec10MobBottomLine.webp');
+        }
+      }
+    }
+
+    .tips {
+      margin-top: px-to-vw-mb(10);
+      padding: 0 px-to-vw-mb(60);
+    }
+  }
+}
