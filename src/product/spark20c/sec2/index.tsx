@@ -90,6 +90,7 @@ const Sec2 = () => {
                 }}
               ></div>
             </div>
+            <div className="dts"></div>
           </div>
           <div className='item item7'>
             <div className='img_wrapper'>

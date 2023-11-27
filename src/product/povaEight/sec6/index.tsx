@@ -51,6 +51,7 @@ const Sec6 = (props: sec6Type) => {
               className='video'
               autoPlay={false}
               webkit-playsinline='true'
+              playsInline={true}
               preload='auto'
               muted
               loop={false}

@@ -137,10 +137,10 @@
 
     .img1 {
       z-index: 2;
-      width: px-to-vw(813);
-      height: px-to-vw(585);
+      width: px-to-vw(654);
+      height: px-to-vw(707);
 
-      @include bg('sec3PcImg1.png');
+      @include bg('sec3PcImg1_2.png');
     }
 
     .img2 {
@@ -206,8 +206,8 @@
       transform: unset;
 
       .img1 {
-        width: px-to-vw-mb(921);
-        height: px-to-vw-mb(663);
+        width: px-to-vw-mb(654);
+        height: px-to-vw-mb(707);
       }
 
       .img2 {

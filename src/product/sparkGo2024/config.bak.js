@@ -328,7 +328,7 @@ window.pop8Config = {
   // type2: 文案+小视频 (文案字段: 在sec1Text下面, 小视频字段: sec1Video.pcType2(pc端)、sec1Video.mobType2(移动端), 视频海报图: type2Post(pc端)、type2PostMob(移动端));  
   // type3: 通屏大视频  (大视频字段: sec1Video.pcType3(pc端)、sec1Video.mobType3(移动端), 视频海报图: type3Post(pc端)、type3PostMob(移动端));
   // type4: 通屏大图片(图片字段: sec1Type4ImagePc(pc端)、sec1Type4ImageMob(移动端))
-  sec1Type: 'type1',
+  sec1Type: 'type3',
   sec1Text: {
     title: `All You Want Just Doubled`,
     p1: "Double <span></span> <br/> Speakers",
@@ -337,8 +337,8 @@ window.pop8Config = {
     p4: "5000mAh <br/> with Type-C",
     tips: "64GB ROM+6GB RAM*(3GB+3GB Extended) <br/> 64GB ROM+8GB RAM*(4GB+4GB Extended) <br/> 128GB ROM+8GB RAM*(4GB+4GB Extended)",
   },
-  sec1Type1ImagePc: 'https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_Go_2024/dist/png/sec1PcBg_2.png',
-  sec1Type1ImageMob: 'https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_Go_2024/dist/png/sec1MobBg_2.png',
+  sec1Type1ImagePc: 'https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_Go_2024/dist/png/sec1PcBg.png',
+  sec1Type1ImageMob: 'https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_Go_2024/dist/png/sec1MobBg.png',
   sec1Video: {
     pcType2: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_Go_2024/dist/video/sec1PcSpark.mp4",
     mobType2: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_Go_2024/dist/video/sec1PcSpark.mp4",

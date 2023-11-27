@@ -160,6 +160,7 @@ const Sec8 = (props: SecType) => {
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
+                    playsInline={true}
                     preload='auto'
                     muted
                     loop
@@ -181,6 +182,7 @@ const Sec8 = (props: SecType) => {
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
+                    playsInline={true}
                     preload='auto'
                     muted
                     loop
@@ -202,6 +204,7 @@ const Sec8 = (props: SecType) => {
                     className='video'
                     autoPlay={true}
                     webkit-playsinline='true'
+                    playsInline={true}
                     preload='auto'
                     muted
                     loop
@@ -223,6 +226,7 @@ const Sec8 = (props: SecType) => {
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
+                    playsInline={true}
                     preload='auto'
                     muted
                     loop
@@ -244,6 +248,7 @@ const Sec8 = (props: SecType) => {
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
+                    playsInline={true}
                     preload='auto'
                     muted
                     loop
@@ -265,6 +270,7 @@ const Sec8 = (props: SecType) => {
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
+                    playsInline={true}
                     preload='auto'
                     muted
                     loop
@@ -286,6 +292,7 @@ const Sec8 = (props: SecType) => {
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
+                    playsInline={true}
                     preload='auto'
                     muted
                     loop
@@ -307,6 +314,7 @@ const Sec8 = (props: SecType) => {
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
+                    playsInline={true}
                     preload='auto'
                     muted
                     loop
@@ -328,6 +336,7 @@ const Sec8 = (props: SecType) => {
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
+                    playsInline={true}
                     preload='auto'
                     muted
                     loop
@@ -349,6 +358,7 @@ const Sec8 = (props: SecType) => {
                     className='video'
                     autoPlay={false}
                     webkit-playsinline='true'
+                    playsInline={true}
                     preload='auto'
                     muted
                     loop

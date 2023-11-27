@@ -71,12 +71,12 @@
 
     .img {
       position: absolute;
-      bottom: px-to-vw(-48);
-      left: px-to-vw(-53);
-      width: px-to-vw(593);
-      height: px-to-vw(395);
+      bottom: 0;
+      left: px-to-vw(21);
+      width: px-to-vw(362);
+      height: px-to-vw(280);
 
-      @include bg('sec2PcF2_2.png');
+      @include bg('sec2PcF2.png');
     }
 
     .title {
@@ -230,12 +230,11 @@
       padding: 0 px-to-vw-mb(40) 0 px-to-vw-mb(552);
   
       .img {
-        bottom: px-to-vw-mb(-77);
-        left: px-to-vw-mb(-66);
-        width: px-to-vw-mb(833);
-        height: px-to-vw-mb(555);
+        left: px-to-vw-mb(28);
+        width: px-to-vw-mb(491);
+        height: px-to-vw-mb(382);
   
-        @include bg('sec2MobF2_2.png');
+        @include bg('sec2MobF2.png');
       }
   
       .title {

@@ -82,6 +82,7 @@ const Sec1 = (props: SecType) => {
           className='video'
           autoPlay={true}
           webkit-playsinline='true'
+          playsInline={true}
           preload='auto'
           muted
           loop={true}
@@ -153,6 +154,7 @@ const Sec1 = (props: SecType) => {
           className='fullVideo'
           autoPlay={true}
           webkit-playsinline='true'
+          playsInline={true}
           preload='auto'
           muted
           loop={true}

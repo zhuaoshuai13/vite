@@ -189,6 +189,16 @@
       font-size: px-to-vw(53);
     }
   }
+
+  .dts {
+    position: absolute;
+    bottom: px-to-vw(10);
+    left: px-to-vw(12);
+    width: px-to-vw(52);
+    height: px-to-vw(22);
+
+    @include bg('sec1PcDts.webp');
+  }
 }
 
 @media (max-width: $mobwidthPx) {
@@ -322,6 +332,13 @@
         color: #fff;
         font-size: px-to-vw-mb(53);
       }
+    }
+
+    .dts {
+      bottom: px-to-vw-mb(22);
+      left: px-to-vw-mb(18);
+      width: px-to-vw-mb(84);
+      height: px-to-vw-mb(36);
     }
   }
 }

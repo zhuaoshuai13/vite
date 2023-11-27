@@ -109,6 +109,7 @@ const Sec7 = (props: { sec7Video: any; isPc: any }) => {
             className='video'
             autoPlay={false}
             webkit-playsinline='true'
+            playsInline={true}
             preload='auto'
             muted
             loop={true}

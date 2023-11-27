@@ -14,7 +14,7 @@ window.pop8Config = {
     t3: "Large Storage <span>1TB</span> Extended SD Card",
     t4: "5000mAh Large Battery with 18W Fast Charge",
     t5: "Side Edge Fingerprint Unlocking",
-    t6: "Stereo Dual Speaker Sound by DTS 400% Big Volume",
+    t6: "Stereo Dual Speaker Sound by DTS <br /> 400% Big Volume",
     t7: "Camera",
   },
   sec3: {
@@ -133,15 +133,15 @@ window.pop8Config = {
       mobleft: "83%",
     },
 
-    title: `Stereo Dual Speaker Sound by DTS 400% Big Volume`,
-    desc: `Up your mobile audio experience to theatre-level with dual speakers! DTS LISTEN envelops you in the stereo sound like melodies have come to life around you. Adaptive channels ensure clarity during flips, perfect for gaming. And enjoy crystal-clear calls even in noisy environments with double the enhanced volume.
+    title: `Stereo Dual Speaker <br /> Sound by DTS <br /> 400% Big Volume`,
+    desc: `Up your mobile audio experience to theatre-level with dual speakers! DTS LISTEN envelops you in the stereo sound like melodies have come to life around you. Adaptive channels ensure clarity during flips, perfect for gaming. And enjoy crystal-clear calls even in noisy environments with double the enhanced volume.<br />
     Elevate to the audio luxury you deserve today!`,
     p1a: `Stereo Dual <br /> Speakers`,
     p1b: `Loudness Enhancement`,
     p2a: `Audio <br />Booster`,
     p2b: `Calling Assistant`,
     p3a: `Binaural <br /> Tracing `,
-    p3b: `Technolo`,
+    p3b: `Technology`,
     p4a: `Volume <br /> Plus`,
     p4b: `loud sound`,
     tips: `*Pictures are for illustration only, please refer to the actual product form. <br /> *Some products require a system update to experience Volume Plus.`,
@@ -156,7 +156,7 @@ window.pop8Config = {
     },
 
     title: `Large Storage with <br class='pc'/> System Slimming`,
-    desc: `No more tradeoff! With spacious memory, keep all your loved music and cherished photos, tested to save nearly 10,000 pics. Up to 8GB extended memory enhances seamless operations, with System Slimming to keep it clean and clutter-free. Leave lag behind. Keep only speed, smoothness, and stability.`,
+    desc: `No more tradeoff! With spacious memory, keep all your loved music and cherished photos, tested to save nearly 10,000 pics. Up to 8GB extended memory enhances seamless operations, with System Slimming to keep it clean and clutter-free.<br /> Leave lag behind. Keep only speed, smoothness, and stability.`,
     p1a: `Up to 1TB`,
     p1b: `Extended Storage`,
     p2a: `Up to 16GB`,
@@ -190,12 +190,12 @@ window.pop8Config = {
       mobleft: "72%",
     },
 
-    title: `5000mAh <br class='pc'/> Large Battery <br class='pc'/> with Type-C`,
-    desc: `Say goodbye to power anxiety with a mega, marathon battery with over 900 hours of standby time! Dive into non-stop videos and music. The versatile Type-C port plays along – up or down, plug it in any way you want. A feature usually reserved for pricier models - level up your experience, level down your costs!`,
+    title: `5000mAh <br class='pc'/> Large Battery <br class='pc'/> with 18W Fast Charge <br class="pc"/>(Type-C)`,
+    desc: `Say goodbye to power anxiety with a mega, marathon battery with over 600 hours of standby time, which comes back quick with 18W fast charge. Dive into non-stop videos and music, which can play videos for 15.5 hours and music for 73.5 hours on a full charge. The versatile Type-C port plays along – up or down, plug it in any way you want. A feature usually reserved for pricier models - level up your experience, level down your costs!`,
     p1a: `5000mAh`,
     p1b: `Large Battery`,
-    p2a: `10W`,
-    p2b: `Charge`,
+    p2a: `18W`,
+    p2b: `Fast Charge`,
     p3a: `Type-C`,
     p3b: `Interface`,
     tips: `*Pictures are for illustration only, please refer to the actual product form. <br />
@@ -252,7 +252,7 @@ window.pop8Config = {
     },
 
     title: `Octa-core Processor`,
-    desc: `Powered by octa-core Arm Cortex-A53 processor, offering up to 2.2GHz peak frequency for lighteing-fast mobile experience! While the self-developed Darwin Engine keeps your device cool so you chill in longer usage. 
+    desc: `Powered by octa-core Arm Cortex-A53 processor, offering up to 2.2GHz peak frequency for lighteing-fast mobile experience! While the self-developed Darwin Engine keeps your device cool so you chill in longer usage.<br /> 
     Enjoy uninterrupted, silky-smooth performance without a hitch!`,
     p1a: `2.2GHz`,
     p1b: `Peak Frequency`,
