@@ -1,0 +1,20 @@
+@import '../vars';
+
+.sec2 {
+  padding: px-to-vw(240) 0;
+  text-align: center;
+
+  .item {
+    height: px-to-vw(840);
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .sec2 {
+    padding: px-to-vw-mb(93) 0 px-to-vw-mb(152);
+
+    .item {
+      height: px-to-vw-mb(1889);
+    }
+  }
+}

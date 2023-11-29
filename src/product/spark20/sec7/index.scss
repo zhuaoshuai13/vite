@@ -1,0 +1,97 @@
+@import '../vars';
+
+.spark20 .sec7 {
+  .title_96 {
+    font-size: px-to-vw(73);
+
+    p:after {
+      background: #8de4ff;
+    }
+
+    span {
+      background-image: linear-gradient(#000 0%, #000 100%);
+    }
+  }
+
+  .spark20_container {
+    position: relative;
+    padding-bottom: px-to-vw(240);
+  }
+  
+  .design_phone {
+    position: absolute;
+    right: px-to-vw(100);
+    bottom: 0;
+    height: px-to-vw(881);
+  }
+
+  .left {
+    position: relative;
+    z-index: 1;
+    width: px-to-vw(600);
+    margin: px-to-vw(500) 0 0 px-to-vw(240);
+  }
+
+  .datas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: px-to-vw(24);
+    justify-content: space-between;
+    width: 90%;
+    margin-top: px-to-vw(48);
+  }
+
+  .data_title {
+    color: #23cbff;
+    font-weight: 700;
+    font-size: px-to-vw(24);
+    font-family: "HB";
+  }
+
+  .data_desc {
+    font-size: px-to-vw(16);
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20 .sec7 {
+    .title_96 {
+      font-size: px-to-vw-mb(80);
+    }
+
+    .spark20_container {
+      margin-top: px-to-vw-mb(360);
+      padding: 0;
+    }
+
+    .left {
+      width: auto;
+      margin: 0 px-to-vw-mb(120);
+    }
+
+    .datas {
+      justify-content: unset;
+      width: 100%;
+    }
+
+    .data {
+      margin-right: px-to-vw-mb(80);
+    }
+
+    .data_title {
+      font-size: px-to-vw-mb(36);
+    }
+
+    .data_desc {
+      font-size: px-to-vw-mb(24);
+    }
+
+    .design_phone {
+      position: unset;
+      display: block;
+      width: 100%;
+      height: px-to-vw-mb(770);
+      margin-top: px-to-vw-mb(120);
+    }
+  }
+}

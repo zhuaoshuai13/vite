@@ -1,0 +1,212 @@
+@import '../vars';
+
+.sec4 {
+  .title_96 {
+    span {
+      background-image: linear-gradient(92.78deg, #7ad0e0 0%, #e5f5b6 80.41%);
+    }
+  }
+
+  .spark20_container {
+    position: relative;
+  }
+  
+  .camera {
+    position: absolute;
+    top: px-to-vw(-370);
+    left: 0;
+    height: px-to-vw(972);
+  }
+
+  .right1 {
+    position: relative;
+    width: px-to-vw(600);
+    margin: px-to-vw(473) 0 0 px-to-vw(1086);
+  }
+
+  .datas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: px-to-vw(24);
+    justify-content: space-between;
+    width: 90%;
+    margin-top: px-to-vw(48);
+  }
+
+  .data_title {
+    width: fit-content;
+    color: transparent;
+    font-weight: 700;
+    font-size: px-to-vw(32);
+    font-family: "HB";
+    background: linear-gradient(92.78deg, #7ad0e0 0%, #e5f5b6 80.41%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .data_desc {
+    font-size: px-to-vw(16);
+  }
+
+  .container2 {
+    display: flex;
+    justify-content: center;
+    margin-top: px-to-vw(360);
+
+    .left2, .right2 {
+      position: relative;
+      flex-shrink: 0;
+      width: px-to-vw(715);
+      height: px-to-vw(715);
+      overflow: hidden;
+      border-radius: px-to-vw(8);
+    }
+
+    .night_pic {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .right2 {
+      margin-left: px-to-vw(10);
+      padding: px-to-vw(70);
+      background: linear-gradient(158.66deg, #00132e 55.92%, #002251 89.43%);
+    }
+
+    .icon {
+      position: absolute;
+      right: px-to-vw(-122);
+      bottom: px-to-vw(-122);
+      height: px-to-vw(629);
+    }
+
+    .button_wrapper {
+      position: absolute;
+      bottom: px-to-vw(70);
+      left: 50%;
+      width: px-to-vw(336);
+      padding: px-to-vw(12) px-to-vw(20);
+      background: #ffffff1a;
+      border-radius: px-to-vw(46);
+      box-shadow: 0 2px 2px 0 #00000040;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+
+    .button_block {
+      position: relative;
+      width: px-to-vw(154);
+      height: px-to-vw(62);
+      background: #2e4769;
+      border-radius: px-to-vw(54);
+      box-shadow: 0 2px 3px 0 #0000001a;
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      color: transparent;
+      font-size: px-to-vw(32);
+      font-family: "HB";
+      background: linear-gradient(92.78deg, #7ad0e0 0%, #e5f5b6 80.41%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      transform: translateY(-50%);
+    }
+
+    .on {
+      left: px-to-vw(60);
+    }
+
+    .off {
+      right: px-to-vw(60);
+    }
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .sec4 {
+    .spark20_container {
+      margin-top: px-to-vw-mb(111);
+    }
+
+    .camera {
+      position: unset;
+      height: px-to-vw-mb(971);
+      margin-left: px-to-vw-mb(-30);
+    }
+
+    .right1 {
+      width: px-to-vw-mb(750);
+      margin: 0 0 0 px-to-vw-mb(120);
+    }
+
+    .datas {
+      gap: px-to-vw-mb(34);
+      width: 100%;
+      margin-top: px-to-vw-mb(36);
+
+      .data_title {
+        font-size: px-to-vw-mb(48);
+      }
+
+      .data_desc {
+        font-size: px-to-vw-mb(24);
+      }
+    }
+
+    .container2 {
+      flex-direction: column;
+      align-items: center;
+      margin-top: px-to-vw-mb(410);
+
+      .left2, .right2 {
+        width: px-to-vw-mb(960);
+        height: px-to-vw-mb(960);
+      }
+
+      .right2 {
+        margin: px-to-vw-mb(16) 0 0;
+        padding: px-to-vw-mb(111) px-to-vw-mb(98) px-to-vw-mb(98);
+
+        .datas {
+          width: 90%;
+          margin-top: px-to-vw-mb(64);
+        }
+      }
+
+      .icon {
+        right: px-to-vw-mb(-165);
+        bottom: px-to-vw-mb(-165);
+        height: px-to-vw-mb(844);
+      }
+
+      .button_wrapper {
+        bottom: px-to-vw-mb(98);
+        width: px-to-vw-mb(452);
+        padding: px-to-vw-mb(17) px-to-vw-mb(28);
+        border-radius: px-to-vw-mb(62);
+      }
+
+      .button_block {
+        width: px-to-vw-mb(207);
+        height: px-to-vw-mb(84);
+        border-radius: px-to-vw-mb(73);
+      }
+
+      .text {
+        font-size: px-to-vw-mb(43);
+      }
+
+      .on {
+        left: px-to-vw-mb(85);
+      }
+
+      .off {
+        right: px-to-vw-mb(85);
+      }
+    }
+  }
+}

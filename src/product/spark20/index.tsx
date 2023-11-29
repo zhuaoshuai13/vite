@@ -1,0 +1,46 @@
+import Sec1 from "./sec1"
+import Sec2 from "./sec2"
+import Sec3 from "./sec3"
+import Sec4 from "./sec4"
+import Sec5 from "./sec5"
+import Sec6 from "./sec6"
+import Sec7 from "./sec7"
+import Sec8 from "./sec8"
+import Sec9 from "./sec9"
+import Sec10 from "./sec10"
+import Sec11 from "./sec11"
+import Sec12 from "./sec12"
+import Sec13 from "./sec13"
+import Sec14 from "./sec14"
+import "./index.scss"
+
+const Spark20 = () => {
+  return (
+    <div className='spark20'>
+      <Sec1 />
+      <Sec2 />
+      <div className='bg_black'>
+        <Sec3 />
+        <Sec4 />
+        <Sec5 />
+      </div>
+      <div className='bg_white'>
+        <Sec6 />
+        <Sec7 />
+        <Sec8 />
+        <Sec9 />
+      </div>
+      <div className='bg_black'>
+        <Sec10 />
+        <Sec11 />
+        <Sec12 />
+        <Sec13 />
+      </div>
+      <div className='bg_white2'>
+        <Sec14 />
+      </div>
+    </div>
+  )
+}
+
+export default Spark20

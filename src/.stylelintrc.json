@@ -23,6 +23,7 @@
       "block-closing-brace-newline-after": "always-multi-line",
       "indentation": 2,
       "color-function-notation": "legacy",
-      "media-feature-range-notation": null
+      "media-feature-range-notation": null,
+      "property-no-vendor-prefix": null
     }
   }
