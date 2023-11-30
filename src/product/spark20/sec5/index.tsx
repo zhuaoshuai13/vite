@@ -1,22 +1,48 @@
-import { useEffect } from "react"
+import { useEffect, useRef, useState } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import UseResponse from "../../../hooks/useResponse"
 import "./index.scss"
-import sec4PcF2 from "../../../assets/spark20/sec4PcF2.jpg"
-import sec5PcF1 from "../../../assets/spark20/sec5PcF1.png"
+// import sec4PcF2 from "../../../assets/spark20/sec4PcF2.jpg"
+import sec5PcCamera from "../../../assets/spark20/sec5PcCamera.png"
+import sec5PcF1_cold from "../../../assets/spark20/sec5PcF1_cold.jpg"
+import sec5PcF1_default from "../../../assets/spark20/sec5PcF1_default.jpg"
+import sec5PcF1_warm from "../../../assets/spark20/sec5PcF1_warm.jpg"
 import sec5PcF2 from "../../../assets/spark20/sec5PcF2.jpg"
+import sec5PcF2_2 from "../../../assets/spark20/sec5PcF2_2.jpg"
 import sec5PcF3 from "../../../assets/spark20/sec5PcF3.jpg"
 import sec5PcIcon1 from "../../../assets/spark20/sec5PcIcon1.png"
 import sec5PcIcon2 from "../../../assets/spark20/sec5PcIcon2.png"
 import sec5PcIcon3 from "../../../assets/spark20/sec5PcIcon3.png"
+import sec5PcStep1 from "../../../assets/spark20/sec5PcStep1.png"
+import sec5PcStep2 from "../../../assets/spark20/sec5PcStep2.png"
+import sec5PcStep3 from "../../../assets/spark20/sec5PcStep3.png"
+import { useButton, Button } from "../components"
 
 const Sec5 = () => {
   const { responsive } = UseResponse()
+  const { isOpen, setIsOpen } = useButton()
+  const [isOpen2, setIsOpen2] = useState(false)
+  const [statusIndex, setStatusIndex] = useState(0)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const statusList = ["Cold", "Default", "Warm"]
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+
+  const customClickEvent = () => {
+    if (isOpen2) {
+      videoRef.current?.pause()
+    } else {
+      videoRef.current?.play()
+    }
+    setIsOpen2(!isOpen2)
+  }
+
+  const handleStatusClick = (index: number) => {
+    setStatusIndex(index)
+  }
 
   useEffect(() => {
     console.log(111)
@@ -34,7 +60,7 @@ const Sec5 = () => {
           </p>
         </h3>
         <div className='spark20_container'>
-          <img src={sec5PcF1} alt='camera' className='camera' />
+          <img src={sec5PcCamera} alt='camera' className='camera' />
           <div className='right1'>
             <div className='text_wrapper'>
               <h4 className='title_48'>32MP Glowing Selfie</h4>
@@ -71,18 +97,18 @@ const Sec5 = () => {
         <div>
           <div className='container2'>
             <div className='left2'>
-              {/* <img
-                src={sec4PcF2}
-                alt='Super Night Mode'
-                className='night_pic'
-              /> */}
-              <video
-                src='src/assets/video/sec5PcV1.mp4'
-                poster={sec5PcF1}
+              {statusIndex === 0 ? <img src={sec5PcF1_cold} /> : ""}
+              {statusIndex === 1 ? <img src={sec5PcF1_default} /> : ""}
+              {statusIndex === 2 ? <img src={sec5PcF1_warm} /> : ""}
+              {/* <video
+                src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec5PcV1.mp4'
+                poster={sec5PcF1_cold}
                 autoPlay
                 muted
                 loop
-              ></video>
+                webkit-playsinline='true'
+                playsInline={true}
+              ></video> */}
             </div>
             <div className='right2'>
               <img src={sec5PcIcon1} className='icon' />
@@ -98,9 +124,31 @@ const Sec5 = () => {
                 </p>
               </div>
               <div className='button_img'>
-                {/* <span className='text on'>ON</span>
-              <span className='text off'>OFF</span>
-              <div className='button_block'></div> */}
+                <div className='status'>
+                  {statusList.map((item, index) => {
+                    return (
+                      <div
+                        className={`statu ${
+                          statusIndex === index ? "active" : ""
+                        }`}
+                        key={index}
+                        onClick={() => {
+                          handleStatusClick(index)
+                        }}
+                      >
+                        <span>{item}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+                <div className="steps" data-index={statusIndex}>
+                  <div className="current_block"></div>
+                  <div className="step">
+                    <img src={sec5PcStep1} />
+                  </div>
+                  <div className="step"><img src={sec5PcStep2} /></div>
+                  <div className="step"><img src={sec5PcStep3} /></div>
+                </div>
               </div>
             </div>
           </div>
@@ -120,49 +168,43 @@ const Sec5 = () => {
                   brilliant present!
                 </p>
               </div>
-              <div className='button_wrapper'>
-                <span className='text on'>ON</span>
-                <span className='text off'>OFF</span>
-                <div className='button_block'></div>
-              </div>
+              <Button isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>
             <div className='left2'>
-              {/* <img
-                src={sec5PcF2}
-                alt='Super Night Mode'
-                className='night_pic'
-              /> */}
-              <video
-                src='src/assets/video/sec5PcV2.mp4'
+              {isOpen ? (
+                <img src={sec5PcF2_2} className='night_pic' />
+              ) : (
+                <img src={sec5PcF2} className='night_pic' />
+              )}
+              {/* <video
+                src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec5PcV2.mp4'
                 poster={sec5PcF2}
                 autoPlay
                 muted
                 loop
-              ></video>
+                webkit-playsinline="true"
+                playsInline={true}
+              ></video> */}
             </div>
           </div>
           <div className='container2'>
             <div className='left2'>
-              {/* <img
-                src={sec5PcF3}
-                alt='Super Night Mode'
-                className='night_pic'
-              /> */}
               <video
-                src='src/assets/video/sec5PcV3.mp4'
+                ref={videoRef}
+                src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec5PcV3.mp4'
                 poster={sec5PcF3}
-                autoPlay
+                // autoPlay
                 muted
                 loop
+                webkit-playsinline='true'
+                playsInline={true}
               ></video>
             </div>
             <div className='right2'>
               <img src={sec5PcIcon3} className='icon' />
               <div className='text_wrapper'>
                 <h4 className='title_48'>2K Video</h4>
-                <p className='subtitle_24'>
-                  SPAKR’s Video Quality at New Height
-                </p>
+                <p className='subtitle_24'>SPARK Video Quality at New Height</p>
                 <p className='desc_18'>
                   Relive your epic moments in 2K clarity- with new discoveries
                   in each playback! The background naturally blurs, so your hero
@@ -171,11 +213,11 @@ const Sec5 = () => {
                   details, inescapable from SPARK’s eagle eye!
                 </p>
               </div>
-              <div className='button_wrapper'>
-                <span className='text on'>ON</span>
-                <span className='text off'>OFF</span>
-                <div className='button_block'></div>
-              </div>
+              <Button
+                isOpen={isOpen2}
+                setIsOpen={setIsOpen2}
+                customClickEvent={() => customClickEvent()}
+              />
             </div>
           </div>
         </div>

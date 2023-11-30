@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -9,7 +9,7 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 
-import { EffectFade } from "swiper/modules"
+import { EffectFade, Autoplay } from "swiper/modules"
 import UseResponse from "../../../hooks/useResponse"
 import "./index.scss"
 import sec8PcF1 from "../../../assets/spark20/sec8PcF1.jpg"
@@ -23,8 +23,25 @@ import sec8MbF4 from "../../../assets/spark20/sec8MbF4.jpg"
 
 const Sec8 = () => {
   const { responsive } = UseResponse()
+  const [index, setIndex] = useState(0)
+  const [swiperInstance, setSwiperInstance] = useState<any>(null)
+  const colorList = [
+    "Magic Skin 2.0",
+    "Magic Skin 2.0",
+    "Magic Skin 2.0",
+    "Magic Skin 2.0",
+  ]
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+
+  const handleSwiperSlide = () => {
+    setIndex(swiperInstance.activeIndex)
+  }
+
+  const handleButtonClick = (index: number) => {
+    setIndex(index)
+    swiperInstance.slideTo(index)
+  }
 
   useEffect(() => {
     console.log(111)
@@ -35,13 +52,16 @@ const Sec8 = () => {
       <div className='content'>
         <Swiper
           // effect={"fade"}
-          pagination={{
-            clickable: true,
+          // pagination={{
+          //   clickable: true,
+          // }}
+          onSwiper={(swiper) => {
+            setSwiperInstance(swiper)
           }}
-          modules={[EffectFade]}
+          modules={[EffectFade, Autoplay]}
           className='sec8Swiper'
-          loop
           autoplay={{ delay: 2000 }}
+          onSlideChange={() => handleSwiperSlide()}
         >
           <SwiperSlide>
             <picture>
@@ -71,33 +91,23 @@ const Sec8 = () => {
               <img src={sec8PcF4} loading='lazy' />
             </picture>
           </SwiperSlide>
+          <div className='button_wrapper' data-index={index}>
+            {colorList.map((item, colorIndex) => {
+              return (
+                <button
+                  key={colorIndex}
+                  className={index === colorIndex ? "active" : ""}
+                  onClick={() => handleButtonClick(colorIndex)}
+                >
+                  {index === colorIndex ? <span>{item}</span> : ""}
+                  <div className='circle_big'>
+                    <div className='circle_small'></div>
+                  </div>
+                </button>
+              )
+            })}
+          </div>
         </Swiper>
-        <div className='button_wrapper'>
-          <button className='active'>
-            <span>Magic Skin 2.0</span>
-            <div className='circle_big'>
-              <div className='circle_small'></div>
-            </div>
-          </button>
-          <button>
-            {/* <span>Magic Skin 2.0</span> */}
-            <div className='circle_big'>
-              <div className='circle_small'></div>
-            </div>
-          </button>
-          <button>
-            {/* <span>Magic Skin 2.0</span> */}
-            <div className='circle_big'>
-              <div className='circle_small'></div>
-            </div>
-          </button>
-          <button>
-            {/* <span>Magic Skin 2.0</span> */}
-            <div className='circle_big'>
-              <div className='circle_small'></div>
-            </div>
-          </button>
-        </div>
       </div>
     </section>
   )

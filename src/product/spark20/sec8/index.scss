@@ -31,6 +31,7 @@
 
       span {
         margin-right: px-to-vw(32);
+        color: #000;
         font-size: px-to-vw(24);
         font-family: "HB";
       }
@@ -120,8 +121,8 @@
         }
 
         .circle_big {
-          width: px-to-vw-mb(46);
-          height: px-to-vw-mb(46);
+          width: px-to-vw-mb(50);
+          height: px-to-vw-mb(50);
         }
 
         .circle_small {

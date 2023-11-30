@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import UseResponse from "../../../hooks/useResponse"
 import "./index.scss"
-import sec11PcF1 from "../../../assets/spark20/sec11PcF1.png"
+// import sec11PcF1 from "../../../assets/spark20/sec11PcF1.png"
 import sec11PcF2 from "../../../assets/spark20/sec11PcF2.png"
 import sec11PcF3 from "../../../assets/spark20/sec11PcF3.png"
 import sec11MbF3 from "../../../assets/spark20/sec11MbF3.jpg"
@@ -41,23 +41,24 @@ const Sec11 = () => {
             loading='lazy'
           /> */}
           <video
-            src='src/assets/video/sec11PcV1.mp4'
-            poster={sec11PcF1}
+            src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec11PcV1.mp4'
+            // poster={sec11PcF1}
             autoPlay
             muted
             loop
+            webkit-playsinline='true'
+            playsInline={true}
           ></video>
           <div className='right1'>
             <div className='text_wrapper'>
               <h4 className='title_48'>G85 Gaming Processor</h4>
-              <p className='subtitle_24'>Clarity Beyond Compare</p>
+              <p className='subtitle_24'>
+                Unstoppable. Irresistible. Invincible!
+              </p>
               <p className='desc_18'>
-                Crystallize wonderful moments at a push of a button. 50MP
-                ultra-clear main camera and f/1.6 aperture deliver true-to-life
-                shots with enhanced depth. HDR algorithm magically balances
-                light and shadow, elevating photography into masterpiece. Ultra
-                Clarity Mode pushes it further, rendering photos bursting with
-                details. Every press yields endless surprises.
+                Experience the pinnacle of performance with MTK G85 processor,
+                the undisputed best in its class. Seamless and stable
+                operations, made your everyday reality.
               </p>
             </div>
             <div className='datas'>
@@ -90,11 +91,13 @@ const Sec11 = () => {
             <div className='pic_box'>
               {/* <img src={sec11PcF2} alt='Performance Upgrade' loading='lazy' /> */}
               <video
-                src='src/assets/video/sec11PcV2.mp4'
+                src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec11PcV2.mp4'
                 poster={sec11PcF2}
                 autoPlay
                 muted
                 loop
+                webkit-playsinline='true'
+                playsInline={true}
               ></video>
               <div className='text_wrapper text1'>
                 <div className='title'>Aurora Engine 2.0</div>
@@ -120,7 +123,7 @@ const Sec11 = () => {
                 <h4 className='title_48'>
                   Up to 256GB <br /> ROM+16GB RAM
                 </h4>
-                <p className='subtitle_24'>Bigger Potential</p>
+                <p className='subtitle_24'>Big Space. Bigger Potential</p>
                 <p className='desc_18'>
                   Capture all good memories in doubled memory capacity.
                   Turbocharge your system with up to 16GB RAM using Memory
@@ -168,7 +171,7 @@ const Sec11 = () => {
             <div className='left4'>
               <div className='text_wrapper'>
                 <h4 className='title_48'>
-                  5000mAh Super Battery18W Fast Charge (Type-C)
+                  5000mAh Super Battery 18W Fast Charge (Type-C)
                 </h4>
                 <p className='subtitle_24'>Epic Endurance, Rapid Revive</p>
                 <p className='desc_18'>

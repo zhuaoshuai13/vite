@@ -192,6 +192,12 @@
       .data {
         margin-top: px-to-vw-mb(24);
       }
+
+      video {
+        position: unset;
+        height: px-to-vw-mb(1000);
+        margin-left: px-to-vw-mb(-450);
+      }
     }
 
     .processor {

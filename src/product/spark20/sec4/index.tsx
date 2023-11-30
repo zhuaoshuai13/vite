@@ -7,10 +7,13 @@ import UseResponse from "../../../hooks/useResponse"
 import "./index.scss"
 import sec4PcF1 from "../../../assets/spark20/sec4PcF1.png"
 import sec4PcF2 from "../../../assets/spark20/sec4PcF2.jpg"
+import sec4PcF2_2 from "../../../assets/spark20/sec4PcF2_2.jpg"
 import sec4PcF3 from "../../../assets/spark20/sec4PcF3.png"
+import { Button, useButton } from "../components"
 
 const Sec4 = () => {
   const { responsive } = UseResponse()
+  const { isOpen, setIsOpen } = useButton()
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -23,10 +26,10 @@ const Sec4 = () => {
       <div className='content'>
         <h3 className='title_96'>
           <p>
-            <span>HOLD YOUR BEAUTY</span>
+            <span>HOLD YOUR BEAUTY TIGHT,</span>
           </p>
           <p>
-            <span>TIGHT, IN ANY LIGHT</span>
+            <span>IN ANY LIGHT</span>
           </p>
         </h3>
         <div className='spark20_container'>
@@ -70,7 +73,19 @@ const Sec4 = () => {
         </div>
         <div className='container2'>
           <div className='left2'>
-            <img src={sec4PcF2} alt='Super Night Mode' className='night_pic' />
+            {isOpen ? (
+              <img
+                src={sec4PcF2_2}
+                alt='Super Night Mode'
+                className='night_pic'
+              />
+            ) : (
+              <img
+                src={sec4PcF2}
+                alt='Super Night Mode'
+                className='night_pic'
+              />
+            )}
           </div>
           <div className='right2'>
             <img src={sec4PcF3} className='icon' />
@@ -78,7 +93,7 @@ const Sec4 = () => {
               <h4 className='title_48'>Super Night Mode</h4>
               <p className='subtitle_24'>400% More Light Sensitivity</p>
               <p className='desc_18'>
-                Night illumined; Darkness defied. From 0.64 to1.28μm, 4-in-1
+                Night illumined; Darkness defied. From 0.64 to 1.28μm, 4-in-1
                 technology packs 400% more brightness by seizing every ray of
                 light. Unleash your full radiance amidst darkness.
               </p>
@@ -93,11 +108,12 @@ const Sec4 = () => {
                 <p className='data_desc'>Ultra Large Fusion Pixel</p>
               </div>
             </div>
-            <div className='button_wrapper'>
+            {/* <div className='button_wrapper'>
               <span className='text on'>ON</span>
               <span className='text off'>OFF</span>
               <div className='button_block'></div>
-            </div>
+            </div> */}
+            <Button isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
         </div>
       </div>

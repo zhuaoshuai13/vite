@@ -62,7 +62,7 @@ const Sec7 = () => {
                 <div className='data_title'>
                   3-Ring <br /> Design
                 </div>
-                <p className='data_desc'>Minimalist</p>
+                <p className='data_desc'>Metallic</p>
               </div>
               <div className='data'>
                 <div className='data_title'>

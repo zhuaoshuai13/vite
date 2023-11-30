@@ -6,7 +6,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import UseResponse from "../../../hooks/useResponse"
 import "./index.scss"
 import sec13PcF1 from "../../../assets/spark20/sec13PcF1.png"
-import sec13MbF1 from "../../../assets/spark20/sec13MbF1.png"
+// import sec13MbF1 from "../../../assets/spark20/sec13MbF1.png"
 import sec13PcF2 from "../../../assets/spark20/sec13PcF2.png"
 import sec13MbF2 from "../../../assets/spark20/sec13MbF2.png"
 
@@ -38,7 +38,8 @@ const Sec13 = () => {
         <div className='spark20_container'>
           <div className='text_wrapper'>
             <h4 className='title_48'>
-              Stereo Dual Speaker Sound by DTS400% Big Volume
+              Stereo Dual Speaker Sound by DTS <br className='mob' /> 400% Big
+              Volume
             </h4>
             <p className='desc_18'>
               Feel the beat of superior sound on the go! Immerse in true stereo
@@ -59,12 +60,14 @@ const Sec13 = () => {
               <img src={sec13PcF1} className='sound' loading='lazy' />
             </picture> */}
             <video
-              src='src/assets/video/sec13PcV1.mp4'
+              src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec13PcV1.mp4'
               poster={sec13PcF1}
               autoPlay
               muted
               loop
-              className="sound"
+              className='sound'
+              webkit-playsinline='true'
+              playsInline={true}
             ></video>
           </div>
           <div className='box'>
@@ -119,8 +122,8 @@ const Sec13 = () => {
                 </p>
                 <p className='desc_18'>
                   Leading the pack with a cutting-edge hole screen, which
-                  transforms SPAKR's look for a sleeker appeal while delivering
-                  a 90% screen-to-body ratio for visual feast. This beauty also
+                  transforms SPARK look for a sleeker appeal while delivering a
+                  90% screen-to-body ratio for visual feast. This beauty also
                   comes with a brain: up to 90Hz adaptive refresh rates ensure
                   consistent smooth interactions; Smart Refresh 3.0 adjusts
                   seamlessly from static to gaming screens, intelligently

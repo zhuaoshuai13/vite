@@ -37,11 +37,13 @@ const Sec14 = () => {
             <div className='pic_box'>
               {/* <img src={sec14PcF1} loading='lazy' /> */}
               <video
-                src='src/assets/video/sec14PcV1.mp4'
+                src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec14PcV1.mp4'
                 poster={sec14PcF1}
                 autoPlay
                 muted
                 loop
+                webkit-playsinline='true'
+                playsInline={true}
               ></video>
               <div className='play'>
                 <svg
@@ -54,7 +56,7 @@ const Sec14 = () => {
                   <path
                     d='M43.9992 22.1741C46.8764 23.8353 46.8764 27.9881 43.9992 29.6493L6.606 51.2382C3.7288 52.8994 0.132306 50.8229 0.132307 47.5006L0.132308 4.32273C0.132309 1.00043 3.72881 -1.07601 6.60601 0.585147L43.9992 22.1741Z'
                     fill='black'
-                    fill-opacity='0.2'
+                    fillOpacity='0.2'
                   />
                 </svg>
               </div>
@@ -81,11 +83,13 @@ const Sec14 = () => {
             <div className='pic_box'>
               {/* <img src={sec14PcF2} loading='lazy' /> */}
               <video
-                src='src/assets/video/sec14PcV2.mp4'
+                src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec14PcV2.mp4'
                 poster={sec14PcF2}
                 autoPlay
                 muted
                 loop
+                webkit-playsinline='true'
+                playsInline={true}
               ></video>
               <div className='play'>
                 <svg
@@ -98,7 +102,7 @@ const Sec14 = () => {
                   <path
                     d='M43.9992 22.1741C46.8764 23.8353 46.8764 27.9881 43.9992 29.6493L6.606 51.2382C3.7288 52.8994 0.132306 50.8229 0.132307 47.5006L0.132308 4.32273C0.132309 1.00043 3.72881 -1.07601 6.60601 0.585147L43.9992 22.1741Z'
                     fill='black'
-                    fill-opacity='0.2'
+                    fillOpacity='0.2'
                   />
                 </svg>
               </div>
@@ -143,11 +147,13 @@ const Sec14 = () => {
             <div className='pic_box'>
               {/* <img src={sec14PcF3} loading='lazy' /> */}
               <video
-                src='src/assets/video/sec14PcV3.mp4'
+                src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec14PcV3.mp4'
                 poster={sec14PcF3}
                 autoPlay
                 muted
                 loop
+                webkit-playsinline='true'
+                playsInline={true}
               ></video>
               <div className='play'>
                 <svg
@@ -160,7 +166,7 @@ const Sec14 = () => {
                   <path
                     d='M43.9992 22.1741C46.8764 23.8353 46.8764 27.9881 43.9992 29.6493L6.606 51.2382C3.7288 52.8994 0.132306 50.8229 0.132307 47.5006L0.132308 4.32273C0.132309 1.00043 3.72881 -1.07601 6.60601 0.585147L43.9992 22.1741Z'
                     fill='black'
-                    fill-opacity='0.2'
+                    fillOpacity='0.2'
                   />
                 </svg>
               </div>
@@ -188,11 +194,13 @@ const Sec14 = () => {
             <div className='pic_box'>
               {/* <img src={sec14PcF4} loading='lazy' /> */}
               <video
-                src='src/assets/video/sec14PcV4.mp4'
+                src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec14PcV4.mp4'
                 poster={sec14PcF4}
                 autoPlay
                 muted
                 loop
+                webkit-playsinline='true'
+                playsInline={true}
               ></video>
               <div className='play'>
                 <svg
@@ -205,7 +213,7 @@ const Sec14 = () => {
                   <path
                     d='M43.9992 22.1741C46.8764 23.8353 46.8764 27.9881 43.9992 29.6493L6.606 51.2382C3.7288 52.8994 0.132306 50.8229 0.132307 47.5006L0.132308 4.32273C0.132309 1.00043 3.72881 -1.07601 6.60601 0.585147L43.9992 22.1741Z'
                     fill='black'
-                    fill-opacity='0.2'
+                    fillOpacity='0.2'
                   />
                 </svg>
               </div>
@@ -233,11 +241,13 @@ const Sec14 = () => {
             <div className='pic_box'>
               {/* <img src={sec14PcF5} loading='lazy' /> */}
               <video
-                src='src/assets/video/sec14PcV5.mp4'
+                src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec14PcV5.mp4'
                 poster={sec14PcF5}
                 autoPlay
                 muted
                 loop
+                webkit-playsinline='true'
+                playsInline={true}
               ></video>
               <div className='play'>
                 <svg
@@ -250,7 +260,7 @@ const Sec14 = () => {
                   <path
                     d='M43.9992 22.1741C46.8764 23.8353 46.8764 27.9881 43.9992 29.6493L6.606 51.2382C3.7288 52.8994 0.132306 50.8229 0.132307 47.5006L0.132308 4.32273C0.132309 1.00043 3.72881 -1.07601 6.60601 0.585147L43.9992 22.1741Z'
                     fill='black'
-                    fill-opacity='0.2'
+                    fillOpacity='0.2'
                   />
                 </svg>
               </div>

@@ -30,6 +30,7 @@
     }
 
     .box {
+      position: relative;
       display: flex;
       align-items: center;
       max-width: px-to-vw(1440);
@@ -164,7 +165,7 @@
       }
 
       .pic_box {
-        margin-top: 0;
+        margin-top: px-to-vw-mb(-100);
       }
 
       .sound {
@@ -175,7 +176,7 @@
       .box {
         display: block;
         max-width: unset;
-        margin: 0 px-to-vw-mb(120);
+        margin: px-to-vw-mb(-80) px-to-vw-mb(120) 0;
       }
 
       .left {
@@ -220,6 +221,8 @@
     }
 
     .container2 {
+      margin-top: px-to-vw-mb(300);
+
       .pic_box {
         margin: 0;
 

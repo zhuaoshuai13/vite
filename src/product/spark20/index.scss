@@ -19,6 +19,10 @@
     background-image: unset !important;
   }
 
+  video {
+    width: auto;
+  }
+
   section {
     box-sizing: border-box;
     width: 100%;
@@ -49,6 +53,7 @@
         color: transparent;
         font-size: inherit;
         font-family: inherit;
+        white-space: nowrap;
         -webkit-background-clip: text;
         background-clip: text;
       }
