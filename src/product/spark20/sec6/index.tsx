@@ -1,21 +1,33 @@
-import { useEffect } from "react"
+import { useEffect, useContext } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import UseResponse from "../../../hooks/useResponse"
 import "./index.scss"
 import sec6PcBg from "../../../assets/spark20/sec6PcBg.png"
 import sec6MbBg from "../../../assets/spark20/sec6MbBg.png"
+// import { ScreenContext } from "../../../provider"
 
 const Sec6 = () => {
-  const { responsive } = UseResponse()
+  // const { isPc } = useContext(ScreenContext)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
+  const sec6Ani = () => {
+    const tl = gsap
+      .timeline()
+      .from(".sec6 .bg_img", 1, { y: "30%", opacity: 0 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec6 .content",
+      start: `top 85%`,
+      animation: tl,
+    })
+  }
+
   useEffect(() => {
-    console.log(111)
-  }, [responsive])
+    sec6Ani()
+  })
 
   return (
     <section className='sec6 special_sec'>

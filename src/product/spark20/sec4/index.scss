@@ -1,7 +1,12 @@
 @import '../vars';
 
 .spark20 .sec4 {
+  padding-bottom: px-to-vw(360);
+
   .title_96 {
+    position: relative;
+    z-index: 1;
+
     span {
       background-image: linear-gradient(92.78deg, #7ad0e0 0%, #e5f5b6 80.41%);
     }
@@ -13,9 +18,10 @@
   
   .camera {
     position: absolute;
-    top: px-to-vw(-370);
-    left: 0;
-    height: px-to-vw(972);
+    top: px-to-vw(-90);
+    left: px-to-vw(50);
+    height: px-to-vw(420);
+    transform: rotate(-25deg);
   }
 
   .right1 {
@@ -67,6 +73,10 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+
+      &.off {
+        opacity: .5;
+      }
     }
 
     .right2 {
@@ -128,23 +138,25 @@
 
 @media (max-width: $mobwidthPx) {
   .spark20 .sec4 {
+    padding-bottom: px-to-vw-mb(360);
+
     .title_96 {
       font-size: px-to-vw-mb(66);
     }
 
     .spark20_container {
-      margin-top: px-to-vw-mb(111);
+      margin-top: px-to-vw-mb(360);
     }
 
     .camera {
       position: unset;
-      height: px-to-vw-mb(971);
-      margin-left: px-to-vw-mb(-30);
+      height: px-to-vw-mb(400);
+      margin-left: px-to-vw-mb(100);
     }
 
     .right1 {
       width: px-to-vw-mb(750);
-      margin: 0 0 0 px-to-vw-mb(120);
+      margin: px-to-vw-mb(200) 0 0 px-to-vw-mb(120);
     }
 
     .datas {

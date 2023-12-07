@@ -1,21 +1,47 @@
-import { useEffect } from "react"
+import { useEffect, useContext } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import UseResponse from "../../../hooks/useResponse"
 import "./index.scss"
 import sec7PcF1 from "../../../assets/spark20/sec7PcF1.png"
 import sec7MbF1 from "../../../assets/spark20/sec7MbF1.png"
+import { ScreenContext } from "../../../provider"
 
 const Sec7 = () => {
-  const { responsive } = UseResponse()
+  const { isPc } = useContext(ScreenContext)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
+  const sec7Ani = () => {
+    const tl = gsap
+      .timeline()
+      .from(".sec7 .title_96", 1, { y: "30%", opacity: 0 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec7",
+      start: `top 85%`,
+      animation: tl,
+    })
+
+    const t2 = gsap
+      .timeline()
+      .from(".sec7 .text_wrapper", 1, { y: "30%", opacity: 0 }, "a")
+      .from(".sec7 .datas", 1, { y: "30%", opacity: 0, delay: 0.5 }, "a")
+      .from(".sec7 .design_phone", 1, { y: "30%", scale: 1.2 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec7 .spark20_container",
+      start: `top 85%`,
+      end: "50%",
+      animation: t2,
+      scrub: true,
+    })
+  }
+
   useEffect(() => {
-    console.log(111)
-  }, [responsive])
+    sec7Ani()
+  })
 
   return (
     <section className='sec7'>

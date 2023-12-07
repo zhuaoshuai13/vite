@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext, useRef } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -10,7 +10,6 @@ import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 
 import { EffectFade, Autoplay } from "swiper/modules"
-import UseResponse from "../../../hooks/useResponse"
 import "./index.scss"
 import sec8PcF1 from "../../../assets/spark20/sec8PcF1.jpg"
 import sec8PcF2 from "../../../assets/spark20/sec8PcF2.jpg"
@@ -20,16 +19,18 @@ import sec8MbF1 from "../../../assets/spark20/sec8MbF1.jpg"
 import sec8MbF2 from "../../../assets/spark20/sec8MbF2.jpg"
 import sec8MbF3 from "../../../assets/spark20/sec8MbF3.jpg"
 import sec8MbF4 from "../../../assets/spark20/sec8MbF4.jpg"
+import { ScreenContext } from "../../../provider"
 
 const Sec8 = () => {
-  const { responsive } = UseResponse()
+  const { isPc } = useContext(ScreenContext)
   const [index, setIndex] = useState(0)
   const [swiperInstance, setSwiperInstance] = useState<any>(null)
+  const swiperRef = useRef<any>()
   const colorList = [
     "Magic Skin 2.0",
-    "Magic Skin 2.0",
-    "Magic Skin 2.0",
-    "Magic Skin 2.0",
+    "Gravity Black",
+    "Neon Gold",
+    "Cyber White",
   ]
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -43,9 +44,34 @@ const Sec8 = () => {
     swiperInstance.slideTo(index)
   }
 
+  const sec8Ani = () => {
+    const tl = gsap.timeline()
+
+    ScrollTrigger.create({
+      trigger: ".sec8",
+      start: isPc ? `top 0%` : 'top 20%',
+      end: "+=200%",
+      animation: tl,
+      pin: true,
+      scrub: true,
+      onUpdate: ({ progress }) => {
+        if (progress < 0.25) {
+          swiperRef.current.slideTo(0)
+        } else if (progress > 0.25 && progress < 0.5) {
+          swiperRef.current.slideTo(1)
+        } else if (progress > 0.5 && progress < 0.75) {
+          swiperRef.current.slideTo(2)
+        } else if (progress > 0.75 && progress < 1) {
+          swiperRef.current.slideTo(3)
+        }
+      },
+    })
+  }
+
   useEffect(() => {
-    console.log(111)
-  }, [responsive])
+    sec8Ani()
+    console.log("动画加载swiper")
+  }, [])
 
   return (
     <section className='sec8'>
@@ -57,8 +83,9 @@ const Sec8 = () => {
           // }}
           onSwiper={(swiper) => {
             setSwiperInstance(swiper)
+            swiperRef.current = swiper
           }}
-          modules={[EffectFade, Autoplay]}
+          modules={[EffectFade]}
           className='sec8Swiper'
           autoplay={{ delay: 2000 }}
           onSlideChange={() => handleSwiperSlide()}
@@ -91,21 +118,23 @@ const Sec8 = () => {
               <img src={sec8PcF4} loading='lazy' />
             </picture>
           </SwiperSlide>
-          <div className='button_wrapper' data-index={index}>
-            {colorList.map((item, colorIndex) => {
-              return (
-                <button
-                  key={colorIndex}
-                  className={index === colorIndex ? "active" : ""}
-                  onClick={() => handleButtonClick(colorIndex)}
-                >
-                  {index === colorIndex ? <span>{item}</span> : ""}
-                  <div className='circle_big'>
-                    <div className='circle_small'></div>
-                  </div>
-                </button>
-              )
-            })}
+          <div className='color_content'>
+            <div className='color_text'>{colorList[index]}</div>
+            <div className='button_wrapper' data-index={index}>
+              {colorList.map((item, colorIndex) => {
+                return (
+                  <button
+                    key={colorIndex}
+                    className={index === colorIndex ? "active" : ""}
+                    onClick={() => handleButtonClick(colorIndex)}
+                  >
+                    <div className='circle_big'>
+                      <div className='circle_small'></div>
+                    </div>
+                  </button>
+                )
+              })}
+            </div>
           </div>
         </Swiper>
       </div>

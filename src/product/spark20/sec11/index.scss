@@ -256,6 +256,7 @@
     .container3 {
       width: 100%;
       height: auto;
+      margin: px-to-vw-mb(270) auto 0;
 
       .box {
         position: unset;
@@ -293,6 +294,8 @@
     }
 
     .container4 {
+      margin-top: px-to-vw-mb(360);
+
       .battery {
         width: 100%;
         height: px-to-vw-mb(897);

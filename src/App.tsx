@@ -1,3 +1,4 @@
+import Providers from "./provider"
 // import FirstProduct from "./product/first/index.tsx"
 // import Product from "./product/second/index.tsx"
 // import Third from "./product/third"
@@ -9,7 +10,11 @@ import PovaEight from "./product/spark20"
 import "./App.scss"
 
 function App() {
-  return <PovaEight />
+  return (
+    <Providers>
+      <PovaEight />
+    </Providers>
+  )
 }
 
 export default App

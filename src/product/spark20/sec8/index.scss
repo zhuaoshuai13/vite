@@ -2,19 +2,34 @@
 
 .spark20 .sec8 {
   position: relative;
+  height: px-to-vw(1080);
+  margin-top: 0;
 
   .sec8Swiper {
     img {
       display: block;
       width: 100%;
+      height: px-to-vw(1080);
     }
   }
 
-  .button_wrapper {
+  .color_content {
     position: absolute;
     top: px-to-vw(554);
     left: px-to-vw(240);
     z-index: 2;
+    display: flex;
+    align-items: center;
+  }
+
+  .color_text {
+    margin-right: px-to-vw(32);
+    color: #000;
+    font-size: px-to-vw(24);
+    font-family: "HB";
+  }
+
+  .button_wrapper {
     display: flex;
 
     button {
@@ -27,13 +42,6 @@
 
       &:last-child {
         margin-right: 0;
-      }
-
-      span {
-        margin-right: px-to-vw(32);
-        color: #000;
-        font-size: px-to-vw(24);
-        font-family: "HB";
       }
 
       .circle_big {
@@ -107,18 +115,28 @@
 
 @media (max-width: $mobwidthPx) {
   .spark20 .sec8 {
-    .button_wrapper {
+    height: auto;
+
+    .sec8Swiper {
+      img {
+        height: px-to-vw-mb(1296);
+      }
+    }
+
+    .color_content {
       position: unset;
       justify-content: center;
       margin-top: px-to-vw-mb(47);
+    }
 
+    .color_text {
+      margin-right: px-to-vw-mb(47);
+      font-size: px-to-vw-mb(36);
+    }
+
+    .button_wrapper {
       button {
         margin-right: px-to-vw-mb(36);
-
-        span {
-          margin-right: px-to-vw-mb(47);
-          font-size: px-to-vw-mb(36);
-        }
 
         .circle_big {
           width: px-to-vw-mb(50);

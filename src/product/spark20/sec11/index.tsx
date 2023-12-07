@@ -1,25 +1,92 @@
-import { useEffect } from "react"
+import { useEffect, useContext } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import UseResponse from "../../../hooks/useResponse"
 import "./index.scss"
-// import sec11PcF1 from "../../../assets/spark20/sec11PcF1.png"
-import sec11PcF2 from "../../../assets/spark20/sec11PcF2.png"
 import sec11PcF3 from "../../../assets/spark20/sec11PcF3.png"
 import sec11MbF3 from "../../../assets/spark20/sec11MbF3.jpg"
 import sec11PcF4 from "../../../assets/spark20/sec11PcF4.png"
 import sec11MbF4 from "../../../assets/spark20/sec11MbF4.png"
+// import { ScreenContext } from "../../../provider"
 
 const Sec11 = () => {
-  const { responsive } = UseResponse()
+  // const { isPc } = useContext(ScreenContext)
+  const { spark20Config } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
+  const sec11Ani = () => {
+    const tl = gsap
+      .timeline()
+      .from(".sec11 .title_96", 1, { y: "30%", opacity: 0 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec11 .title_96",
+      start: `top 85%`,
+      animation: tl,
+    })
+
+    const t2 = gsap
+      .timeline()
+      .from(
+        ".sec11 .container1 .text_wrapper",
+        1,
+        { y: "30%", opacity: 0 },
+        "a"
+      )
+      .from(
+        ".sec11 .container1 .datas",
+        1,
+        { y: "30%", opacity: 0, delay: 0.5 },
+        "a"
+      )
+
+    ScrollTrigger.create({
+      trigger: ".sec11 .container1 .right1",
+      start: `top 85%`,
+      animation: t2,
+    })
+
+    const t3 = gsap
+      .timeline()
+      .from(
+        ".sec11 .container2 .left2 .text_wrapper",
+        1,
+        { y: "30%", opacity: 0 },
+        "a"
+      )
+
+    ScrollTrigger.create({
+      trigger: ".sec11 .container2 .left2 .text_wrapper",
+      start: `top 85%`,
+      animation: t3,
+    })
+
+    const t4 = gsap
+      .timeline()
+      .from(".sec11 .container3 .box", 1, { y: "30%", opacity: 0 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec11 .container3 .box",
+      start: `top 85%`,
+      animation: t4,
+    })
+
+    const t5 = gsap
+      .timeline()
+      .from(".sec11 .container4 .box", 1, { y: "30%", opacity: 0 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec11 .container4 .box",
+      start: `top 85%`,
+      animation: t5,
+    })
+  }
+
   useEffect(() => {
-    console.log(111)
-  }, [responsive])
+    sec11Ani()
+  })
 
   return (
     <section className='sec11'>
@@ -34,15 +101,9 @@ const Sec11 = () => {
         </h3>
 
         <div className='container1'>
-          {/* <img
-            src={sec11PcF1}
-            alt='G85 Gaming Processor'
-            className='processor'
-            loading='lazy'
-          /> */}
           <video
-            src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec11PcV1.mp4'
-            // poster={sec11PcF1}
+            src={spark20Config.sec11.processorVideo.src}
+            poster={spark20Config.sec11.processorVideo.poster}
             autoPlay
             muted
             loop
@@ -89,10 +150,9 @@ const Sec11 = () => {
           </div>
           <div className='right2'>
             <div className='pic_box'>
-              {/* <img src={sec11PcF2} alt='Performance Upgrade' loading='lazy' /> */}
               <video
-                src='https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec11PcV2.mp4'
-                poster={sec11PcF2}
+                src={spark20Config.sec11.engineVideo.src}
+                poster={spark20Config.sec11.engineVideo.poster}
                 autoPlay
                 muted
                 loop

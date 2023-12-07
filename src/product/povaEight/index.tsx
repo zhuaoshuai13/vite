@@ -40,7 +40,7 @@ const PovaEight = () => {
 
     ScrollTrigger.create({
       trigger: ".sec1",
-      start: `top 50%`,
+      start: `bottom 50%`,
       end: "+=20%",
       animation: tl,
     })

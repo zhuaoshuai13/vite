@@ -13,6 +13,7 @@
   overflow: hidden;
   font-family: "HurmeGeometricSans";
   line-height: initial;
+  background-color: #000;
   background-image: none !important;
 
   &.false {
@@ -24,6 +25,8 @@
   }
 
   section {
+    position: relative;
+    z-index: 1;
     box-sizing: border-box;
     width: 100%;
     margin-top: -1px;
@@ -75,6 +78,7 @@
   .title_48 {
     font-size: px-to-vw(48);
     font-family: "HB";
+    line-height: 1;
   }
 
   .subtitle_24 {
@@ -90,16 +94,19 @@
   }
 
   .bg_black {
+    position: relative;
     color: #fff;
     background-color: #000;
   }
 
   .bg_white {
+    position: relative;
     background: linear-gradient(169.41deg, #ccdcec 0%, #eaf0f6 17.01%, #deeefe 31.26%, #fffefe 44.59%, #deeefe 56.45%, #f8fbfe 75.85%, #deeefe 88.26%),
       linear-gradient(0deg, #fff, #fff);
   }
 
   .bg_white2 {
+    position: relative;
     background: linear-gradient(173.34deg, rgba(223, 213, 224, .5) 0%, rgba(202, 224, 255, .5) 22.92%, rgba(223, 213, 224, .5) 46.87%, rgba(202, 224, 255, .5) 73.44%, rgba(223, 213, 224, .5) 92.71%),
       linear-gradient(0deg, #fff, #fff);
   }

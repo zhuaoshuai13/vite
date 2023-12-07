@@ -1,23 +1,40 @@
-import { useEffect } from "react"
+import { useEffect, useContext } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import UseResponse from "../../../hooks/useResponse"
 import "./index.scss"
 import Sec1PcKv from "../../../assets/spark20/sec1PcKv.jpg"
 import sec1MbKv from "../../../assets/spark20/sec1MbKv.png"
 import sec1PcSlogn from "../../../assets/spark20/sec1PcSlogn.png"
 import sec1PcF2 from "../../../assets/spark20/sec1PcF2.png"
+import { ScreenContext } from "../../../provider"
 
 const Sec1 = () => {
-  const { responsive } = UseResponse()
+  const { isPc } = useContext(ScreenContext)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
+  const sec1Ani = () => {
+    if(isPc) {
+      const tl = gsap
+        .timeline()
+        .from(".sec1 .slogn", 0.5, { y: "20%", opacity: 0 }, 'a')
+        .from(".sec1 .title", 0.5, { y: "20%", opacity: 0, delay: 0.25 }, "a")
+        .from(".sec1 .items", 0.5, { y: "20%", opacity: 0, delay: 0.25 }, "a")
+        .from(".sec1 .pic2", 0.5, { y: "20%", opacity: 0 })
+  
+      ScrollTrigger.create({
+        trigger: ".sec1",
+        start: `top 10%`,
+        animation: tl,
+      })
+    }
+  }
+
   useEffect(() => {
-    console.log(111)
-  }, [responsive])
+    sec1Ani()
+  })
 
   return (
     <section className='sec1'>
