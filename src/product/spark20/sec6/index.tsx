@@ -12,6 +12,7 @@ const Sec6 = () => {
   // const { isPc } = useContext(ScreenContext)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+  const { spark20Config } = window as any
 
   const sec6Ani = () => {
     const tl = gsap
@@ -38,8 +39,14 @@ const Sec6 = () => {
           <img className='bg_img' src={sec6PcBg} loading='lazy' />
         </picture>
         <div className='special_text_container'>
-          <h3 className='special_title'>DESIGN</h3>
-          <p className='special_desc'>Designed for Trendsetters</p>
+          <h3
+            className='special_title'
+            dangerouslySetInnerHTML={{ __html: spark20Config.sec6.title }}
+          ></h3>
+          <p
+            className='special_desc'
+            dangerouslySetInnerHTML={{ __html: spark20Config.sec6.desc }}
+          ></p>
         </div>
       </div>
     </section>

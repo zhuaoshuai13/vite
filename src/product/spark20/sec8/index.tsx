@@ -9,7 +9,7 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 
-import { EffectFade, Autoplay } from "swiper/modules"
+import { EffectFade } from "swiper/modules"
 import "./index.scss"
 import sec8PcF1 from "../../../assets/spark20/sec8PcF1.jpg"
 import sec8PcF2 from "../../../assets/spark20/sec8PcF2.jpg"
@@ -23,15 +23,11 @@ import { ScreenContext } from "../../../provider"
 
 const Sec8 = () => {
   const { isPc } = useContext(ScreenContext)
+  const { spark20Config } = window as any
   const [index, setIndex] = useState(0)
   const [swiperInstance, setSwiperInstance] = useState<any>(null)
   const swiperRef = useRef<any>()
-  const colorList = [
-    "Magic Skin 2.0",
-    "Gravity Black",
-    "Neon Gold",
-    "Cyber White",
-  ]
+  const { colorList } = spark20Config.sec8
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -49,7 +45,7 @@ const Sec8 = () => {
 
     ScrollTrigger.create({
       trigger: ".sec8",
-      start: isPc ? `top 0%` : 'top 20%',
+      start: isPc ? `top 0%` : "top 20%",
       end: "+=200%",
       animation: tl,
       pin: true,
@@ -78,9 +74,6 @@ const Sec8 = () => {
       <div className='content'>
         <Swiper
           // effect={"fade"}
-          // pagination={{
-          //   clickable: true,
-          // }}
           onSwiper={(swiper) => {
             setSwiperInstance(swiper)
             swiperRef.current = swiper
@@ -121,7 +114,7 @@ const Sec8 = () => {
           <div className='color_content'>
             <div className='color_text'>{colorList[index]}</div>
             <div className='button_wrapper' data-index={index}>
-              {colorList.map((item, colorIndex) => {
+              {colorList.map((item: string, colorIndex: number) => {
                 return (
                   <button
                     key={colorIndex}

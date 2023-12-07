@@ -92,12 +92,13 @@ const Sec11 = () => {
     <section className='sec11'>
       <div className='content'>
         <h3 className='title_96'>
-          <p>
-            <span>Core + Code</span>
-          </p>
-          <p>
-            <span>Faster Than Fast</span>
-          </p>
+          {spark20Config.sec11.bigTitle.map((item: string, index: number) => {
+            return (
+              <p key={index}>
+                <span dangerouslySetInnerHTML={{ __html: item }}></span>
+              </p>
+            )
+          })}
         </h3>
 
         <div className='container1'>
@@ -112,23 +113,38 @@ const Sec11 = () => {
           ></video>
           <div className='right1'>
             <div className='text_wrapper'>
-              <h4 className='title_48'>G85 Gaming Processor</h4>
-              <p className='subtitle_24'>
-                Unstoppable. Irresistible. Invincible!
-              </p>
-              <p className='desc_18'>
-                Experience the pinnacle of performance with MTK G85 processor,
-                the undisputed best in its class. Seamless and stable
-                operations, made your everyday reality.
-              </p>
+              <h4
+                className='title_48'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec11.processor.title,
+                }}
+              ></h4>
+              <p
+                className='subtitle_24'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec11.processor.subtitle,
+                }}
+              ></p>
+              <p
+                className='desc_18'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec11.processor.desc,
+                }}
+              ></p>
             </div>
             <div className='datas'>
-              <div className='data'>
-                <div className='data_title'>2*Cortex-A75 @2000 MHz</div>
-              </div>
-              <div className='data'>
-                <div className='data_title'>6*Cortex-A55 @1800 MHz</div>
-              </div>
+              {spark20Config.sec11.processor.datas.map(
+                (item: string, index: number) => {
+                  return (
+                    <div className='data' key={index}>
+                      <div
+                        className='data_title'
+                        dangerouslySetInnerHTML={{ __html: item }}
+                      ></div>
+                    </div>
+                  )
+                }
+              )}
             </div>
           </div>
         </div>
@@ -136,16 +152,24 @@ const Sec11 = () => {
         <div className='container2'>
           <div className='left2'>
             <div className='text_wrapper'>
-              <h4 className='title_48'>Performance Upgrade</h4>
-              <p className='subtitle_24'>with Twin Engine Buff</p>
-              <p className='desc_18'>
-                ...And wait, there's also the software-level acceleration!
-                AI-powered Aurora Engine boosts launch rate for major games by
-                85%, and popular apps by 95%; Darwin Engine's deep optimization
-                enhances frame rates by 8x, minimum 4°C reduction in average
-                temperature rise, delivering an exceptional, lag-free gaming
-                experience with minimal heat.
-              </p>
+              <h4
+                className='title_48'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec11.engine.title,
+                }}
+              ></h4>
+              <p
+                className='subtitle_24'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec11.engine.subtitle,
+                }}
+              ></p>
+              <p
+                className='desc_18'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec11.engine.desc,
+                }}
+              ></p>
             </div>
           </div>
           <div className='right2'>
@@ -160,12 +184,32 @@ const Sec11 = () => {
                 playsInline={true}
               ></video>
               <div className='text_wrapper text1'>
-                <div className='title'>Aurora Engine 2.0</div>
-                <p className='desc'>Extreme Wake-Up</p>
+                <div
+                  className='title'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec11.engine_video_text1.title,
+                  }}
+                ></div>
+                <p
+                  className='desc'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec11.engine_video_text1.desc,
+                  }}
+                ></p>
               </div>
               <div className='text_wrapper text2'>
-                <div className='title'>Darwin Engine 2.0</div>
-                <p className='desc'>Game Optimisation</p>
+                <div
+                  className='title'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec11.engine_video_text2.title,
+                  }}
+                ></div>
+                <p
+                  className='desc'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec11.engine_video_text2.desc,
+                  }}
+                ></p>
               </div>
             </div>
           </div>
@@ -180,43 +224,53 @@ const Sec11 = () => {
           <div className='box'>
             <div className='left3'>
               <div className='text_wrapper'>
-                <h4 className='title_48'>
-                  Up to 256GB <br /> ROM+16GB RAM
-                </h4>
-                <p className='subtitle_24'>Big Space. Bigger Potential</p>
-                <p className='desc_18'>
-                  Capture all good memories in doubled memory capacity.
-                  Turbocharge your system with up to 16GB RAM using Memory
-                  Fusion. Run fast, carrying it all - the perfect blend of
-                  capacity and velocity.
-                </p>
+                <h4
+                  className='title_48'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec11.memory.title,
+                  }}
+                ></h4>
+                <p
+                  className='subtitle_24'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec11.memory.subtitle,
+                  }}
+                ></p>
+                <p
+                  className='desc_18'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec11.memory.desc,
+                  }}
+                ></p>
               </div>
             </div>
             <div className='right3'>
               <div className='datas'>
-                <div className='data'>
-                  <div className='data_title'>
-                    Up to <br className='mob' /> 256GB
-                  </div>
-                  <p className='data_desc'>Large Memory</p>
-                </div>
-                <div className='data'>
-                  <div className='data_title'>
-                    Up to <br className='mob' /> 16GB
-                  </div>
-                  <p className='data_desc'>Memory Fusion</p>
-                </div>
-                <div className='data'>
-                  <div className='data_title'>
-                    System <br className='mob' />
-                    Slimming
-                  </div>
-                  <p className='data_desc'>Deep Cleanup</p>
-                </div>
+                {spark20Config.sec11.memory.datas.map(
+                  (item: any, index: number) => {
+                    return (
+                      <div className='data' key={index}>
+                        <div
+                          className='data_title'
+                          dangerouslySetInnerHTML={{ __html: item.name }}
+                        ></div>
+                        <p
+                          className='data_desc'
+                          dangerouslySetInnerHTML={{ __html: item.desc }}
+                        ></p>
+                      </div>
+                    )
+                  }
+                )}
               </div>
             </div>
           </div>
-          <div className='tips'>* Up to 16GB, 8GB+8GB Extended RAM</div>
+          <div
+            className='tips'
+            dangerouslySetInnerHTML={{
+              __html: spark20Config.sec11.memory.tips,
+            }}
+          ></div>
         </div>
 
         <div className='container4'>
@@ -230,39 +284,44 @@ const Sec11 = () => {
           <div className='box'>
             <div className='left4'>
               <div className='text_wrapper'>
-                <h4 className='title_48'>
-                  5000mAh Super Battery 18W Fast Charge (Type-C)
-                </h4>
-                <p className='subtitle_24'>Epic Endurance, Rapid Revive</p>
-                <p className='desc_18'>
-                  Awaken your superpower with the 5000mAh super battery, fueled
-                  by 18W fast charging. Watch as it revives like Superman's
-                  energy bar fills up, fortified with an extended service life
-                  for prolonged usage.
-                </p>
+                <h4
+                  className='title_48'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec11.battery.title,
+                  }}
+                ></h4>
+                <p
+                  className='subtitle_24'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec11.battery.subtitle,
+                  }}
+                ></p>
+                <p
+                  className='desc_18'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec11.battery.desc,
+                  }}
+                ></p>
               </div>
             </div>
             <div className='right4'>
               <div className='datas'>
-                <div className='data'>
-                  <div className='data_title'>
-                    Up to <br className='mob' /> 256GB
-                  </div>
-                  <p className='data_desc'>Large Memory</p>
-                </div>
-                <div className='data'>
-                  <div className='data_title'>
-                    Up to <br className='mob' /> 16GB
-                  </div>
-                  <p className='data_desc'>Memory Fusion</p>
-                </div>
-                <div className='data'>
-                  <div className='data_title'>
-                    System <br className='mob' />
-                    Slimming
-                  </div>
-                  <p className='data_desc'>Deep Cleanup</p>
-                </div>
+                {spark20Config.sec11.battery.datas.map(
+                  (item: any, index: number) => {
+                    return (
+                      <div className='data' key={index}>
+                        <div
+                          className='data_title'
+                          dangerouslySetInnerHTML={{ __html: item.name }}
+                        ></div>
+                        <p
+                          className='data_desc'
+                          dangerouslySetInnerHTML={{ __html: item.desc }}
+                        ></p>
+                      </div>
+                    )
+                  }
+                )}
               </div>
             </div>
           </div>

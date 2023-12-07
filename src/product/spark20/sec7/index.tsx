@@ -10,6 +10,7 @@ import { ScreenContext } from "../../../provider"
 
 const Sec7 = () => {
   const { isPc } = useContext(ScreenContext)
+  const { spark20Config } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -47,55 +48,62 @@ const Sec7 = () => {
     <section className='sec7'>
       <div className='content'>
         <h3 className='title_96 pc'>
-          <p>
-            <span>Fineness in Finish & Feel Deceptively</span>
-          </p>
-          <p>
-            <span>Minimal, Infinitely Sophisticated</span>
-          </p>
+          {spark20Config.sec7.bigTitle.map((item: string, index: number) => {
+            return (
+              <p key={index}>
+                <span dangerouslySetInnerHTML={{ __html: item }}></span>
+              </p>
+            )
+          })}
         </h3>
         <h3 className='title_96 mob'>
-          <p>
-            <span>Fineness in Finish & Feel </span>
-          </p>
-          <p>
-            <span>Deceptively Minimal,</span>
-          </p>
-          <p>
-            <span>Infinitely Sophisticated</span>
-          </p>
+          {spark20Config.sec7.bigTitleMb.map((item: string, index: number) => {
+            return (
+              <p key={index}>
+                <span dangerouslySetInnerHTML={{ __html: item }}></span>
+              </p>
+            )
+          })}
         </h3>
         <div className='spark20_container'>
           <div className='left'>
             <div className='text_wrapper'>
-              <h4 className='title_48'>Euler's Deco Design</h4>
-              <p className='subtitle_24'>
-                Cosmic Experience, Available at Hand
-              </p>
-              <p className='desc_18'>
-                Minimalist aesthetics meets futuristic look in the three-ring
-                cosmic design of SPARK. Sleek metal edges blend with cosmic deco
-                inspired by stars. Subtle engravings and petal-shaped flash
-                evoke luxury watch quality. The slim, balanced rectangular form
-                feels impossibly thin yet ergonomic, combining refinement and
-                comfort. Advanced side edge fingerprint unlocking provides
-                instant access with a simple touch. State-of-the-art
-                engineering, crafted to captivate.
-              </p>
+              <h4
+                className='title_48'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec7.design.title,
+                }}
+              ></h4>
+              <p
+                className='subtitle_24'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec7.design.subtitle,
+                }}
+              ></p>
+              <p
+                className='desc_18'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec7.design.desc,
+                }}
+              ></p>
             </div>
             <div className='datas'>
-              <div className='data'>
-                <div className='data_title'>
-                  3-Ring <br /> Design
-                </div>
-                <p className='data_desc'>Metallic</p>
-              </div>
-              <div className='data'>
-                <div className='data_title'>
-                  Minimalist Square <br /> Shape
-                </div>
-                <p className='data_desc'>Enhanced Holding Comfort</p>
-              </div>
+              {spark20Config.sec7.design.datas.map(
+                (item: any, index: number) => {
+                  return (
+                    <div className='data' key={index}>
+                      <div
+                        className='data_title'
+                        dangerouslySetInnerHTML={{ __html: item.name }}
+                      ></div>
+                      <p
+                        className='data_desc'
+                        dangerouslySetInnerHTML={{ __html: item.desc }}
+                      ></p>
+                    </div>
+                  )
+                }
+              )}
             </div>
           </div>
           <picture>

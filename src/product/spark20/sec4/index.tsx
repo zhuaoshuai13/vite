@@ -68,12 +68,13 @@ const Sec4 = () => {
     <section className='sec4'>
       <div className='content'>
         <h3 className='title_96'>
-          <p>
-            <span>HOLD YOUR BEAUTY TIGHT,</span>
-          </p>
-          <p>
-            <span>IN ANY LIGHT</span>
-          </p>
+          {spark20Config.sec4.bigTitle.map((item: string, index: number) => {
+            return (
+              <p key={index}>
+                <span dangerouslySetInnerHTML={{ __html: item }}></span>
+              </p>
+            )
+          })}
         </h3>
         <div className='spark20_container'>
           <video
@@ -88,38 +89,42 @@ const Sec4 = () => {
           ></video>
           <div className='right1'>
             <div className='text_wrapper'>
-              <h4 className='title_48'>50MP Ultra Clear Camera</h4>
-              <p className='subtitle_24'>Clarity Beyond Compare</p>
-              <p className='desc_18'>
-                Crystallize wonderful moments at a push of a button. 50MP
-                ultra-clear main camera and f/1.6 aperture deliver true-to-life
-                shots with enhanced depth. HDR algorithm magically balances
-                light and shadow, elevating photography into masterpiece. Ultra
-                Clarity Mode pushes it further, rendering photos bursting with
-                details. Every press yields endless surprises.
-              </p>
+              <h4
+                className='title_48'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec4.camera.title,
+                }}
+              ></h4>
+              <p
+                className='subtitle_24'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec4.camera.subtitle,
+                }}
+              ></p>
+              <p
+                className='desc_18'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec4.camera.desc,
+                }}
+              ></p>
             </div>
             <div className='datas'>
-              <div className='data'>
-                <div className='data_title'>50M</div>
-                <p className='data_desc'>Ultra Clear</p>
-              </div>
-              <div className='data'>
-                <div className='data_title'>F/1.6</div>
-                <p className='data_desc'>Large Aperture</p>
-              </div>
-              <div className='data'>
-                <div className='data_title'>Dual Flash</div>
-                <p className='data_desc'>Enhance Brightness</p>
-              </div>
-              <div className='data'>
-                <div className='data_title'>HDR Algorithm</div>
-                <p className='data_desc'>Multi-frame Fusion</p>
-              </div>
-              <div className='data'>
-                <div className='data_title'>Super Flash</div>
-                <p className='data_desc'>Noise reduction</p>
-              </div>
+              {spark20Config.sec4.camera.datas.map(
+                (item: any, index: number) => {
+                  return (
+                    <div className='data' key={index}>
+                      <div
+                        className='data_title'
+                        dangerouslySetInnerHTML={{ __html: item.name }}
+                      ></div>
+                      <p
+                        className='data_desc'
+                        dangerouslySetInnerHTML={{ __html: item.desc }}
+                      ></p>
+                    </div>
+                  )
+                }
+              )}
             </div>
           </div>
         </div>
@@ -134,23 +139,42 @@ const Sec4 = () => {
           <div className='right2'>
             <img src={sec4PcF3} className='icon' />
             <div className='text_wrapper'>
-              <h4 className='title_48'>Super Night Mode</h4>
-              <p className='subtitle_24'>400% More Light Sensitivity</p>
-              <p className='desc_18'>
-                Night illumined; Darkness defied. From 0.64 to 1.28μm, 4-in-1
-                technology packs 400% more brightness by seizing every ray of
-                light. Unleash your full radiance amidst darkness.
-              </p>
+              <h4
+                className='title_48'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec4.night_mode.title,
+                }}
+              ></h4>
+              <p
+                className='subtitle_24'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec4.night_mode.subtitle,
+                }}
+              ></p>
+              <p
+                className='desc_18'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec4.night_mode.desc,
+                }}
+              ></p>
             </div>
             <div className='datas'>
-              <div className='data'>
-                <div className='data_title'>4 in 1</div>
-                <p className='data_desc'>Ultra Sensitive Adaptive Pixel</p>
-              </div>
-              <div className='data'>
-                <div className='data_title'>1.28μm</div>
-                <p className='data_desc'>Ultra Large Fusion Pixel</p>
-              </div>
+              {spark20Config.sec4.night_mode.datas.map(
+                (item: any, index: number) => {
+                  return (
+                    <div className='data' key={index}>
+                      <div
+                        className='data_title'
+                        dangerouslySetInnerHTML={{ __html: item.name }}
+                      ></div>
+                      <p
+                        className='data_desc'
+                        dangerouslySetInnerHTML={{ __html: item.desc }}
+                      ></p>
+                    </div>
+                  )
+                }
+              )}
             </div>
             <Button isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>

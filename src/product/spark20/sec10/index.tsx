@@ -10,6 +10,7 @@ import sec3MbBg from "../../../assets/spark20/sec3MbBg.png"
 
 const Sec10 = () => {
   // const { isPc } = useContext(ScreenContext)
+  const { spark20Config } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -38,8 +39,14 @@ const Sec10 = () => {
           <img className='bg_img' src={sec3PcBg} loading='lazy' />
         </picture>
         <div className='special_text_container'>
-          <h3 className='special_title'>PERFORMANCE</h3>
-          <p className='special_desc'>Created for Performance Freaks</p>
+          <h3
+            className='special_title'
+            dangerouslySetInnerHTML={{ __html: spark20Config.sec10.title }}
+          ></h3>
+          <p
+            className='special_desc'
+            dangerouslySetInnerHTML={{ __html: spark20Config.sec10.desc }}
+          ></p>
         </div>
       </div>
     </section>

@@ -26,8 +26,8 @@ const Sec5 = () => {
   const [isOpen2, setIsOpen2] = useState(false)
   const [statusIndex, setStatusIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
-  const statusList = ["Cold", "Default", "Warm"]
   const { spark20Config } = window as any
+  const { statusList } = spark20Config.sec5
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -128,15 +128,16 @@ const Sec5 = () => {
       <section className='sec5'>
         <div className='content'>
           <h3 className='title_96'>
-            <p>
-              <span>STRIKING CLARITY.</span>
-            </p>
-            <p>
-              <span>SPARKLING BEAUTY.</span>
-            </p>
+            {spark20Config.sec5.bigTitle.map((item: string, index: number) => {
+              return (
+                <p key={index}>
+                  <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                </p>
+              )
+            })}
           </h3>
           <div className='spark20_container'>
-            <img src={sec5PcCamera} alt='camera' className='camera' />
+            <img src={sec5PcCamera} className='camera' />
             <video
               className='camera_video'
               src={spark20Config.sec5.selfieVideo.src}
@@ -149,34 +150,42 @@ const Sec5 = () => {
             ></video>
             <div className='right1'>
               <div className='text_wrapper'>
-                <h4 className='title_48'>32MP Glowing Selfie</h4>
-                <p className='subtitle_24'>Own the Night. Glow Bright!</p>
-                <p className='desc_18'>
-                  Be there, and you’re the STAR! SPARK captures every of your
-                  shiny moment with a breathtaking 32MP selfie camera, powered
-                  by AI portrait restoration and expansive 88.9° golden lens.
-                  Solo or surrounded, every nuanced smile is preserved.
-                </p>
+                <h4
+                  className='title_48'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec5.selfie.title,
+                  }}
+                ></h4>
+                <p
+                  className='subtitle_24'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec5.selfie.subtitle,
+                  }}
+                ></p>
+                <p
+                  className='desc_18'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec5.selfie.desc,
+                  }}
+                ></p>
               </div>
               <div className='datas'>
-                <div className='data'>
-                  <div className='data_title'>F/2.2</div>
-                  <p className='data_desc'>
-                    Large <br /> Aperture
-                  </p>
-                </div>
-                <div className='data'>
-                  <div className='data_title'>40mm</div>
-                  <p className='data_desc'>
-                    Portrait Group Photo <br /> Focal Length
-                  </p>
-                </div>
-                <div className='data'>
-                  <div className='data_title'>5P</div>
-                  <p className='data_desc'>
-                    High light <br /> Transmission
-                  </p>
-                </div>
+                {spark20Config.sec5.selfie.datas.map(
+                  (item: any, index: number) => {
+                    return (
+                      <div className='data' key={index}>
+                        <div
+                          className='data_title'
+                          dangerouslySetInnerHTML={{ __html: item.name }}
+                        ></div>
+                        <p
+                          className='data_desc'
+                          dangerouslySetInnerHTML={{ __html: item.desc }}
+                        ></p>
+                      </div>
+                    )
+                  }
+                )}
               </div>
             </div>
           </div>
@@ -190,17 +199,24 @@ const Sec5 = () => {
               <div className='right2'>
                 <img src={sec5PcIcon1} className='icon' />
                 <div className='text_wrapper'>
-                  <h4 className='title_48'>Dual Colour Temperature Flash</h4>
-                  <p className='subtitle_24'>
-                    3 Modes, Limitless Portait Flairs
-                  </p>
-                  <p className='desc_18'>
-                    Light on. It’s show time! Flaunt your best self with the
-                    dual colour temperature flash. Effortlessly switch between 3
-                    modes: Soft Aurora for a tender glow; Icy Blue for a lively
-                    touch; and Soft Blend for your flawless natural beauty.
-                    Elevate your selfie game with the pro-grade fill light!
-                  </p>
+                  <h4
+                    className='title_48'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec5.dual_colour.title,
+                    }}
+                  ></h4>
+                  <p
+                    className='subtitle_24'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec5.dual_colour.subtitle,
+                    }}
+                  ></p>
+                  <p
+                    className='desc_18'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec5.dual_colour.desc,
+                    }}
+                  ></p>
                 </div>
                 <div className='button_img'>
                   <div className='all_status'>
@@ -208,7 +224,7 @@ const Sec5 = () => {
                       {statusList[statusIndex]}
                     </div>
                     <div className='status'>
-                      {statusList.map((item, index) => {
+                      {statusList.map((item: string, index: number) => {
                         return (
                           <div
                             className={`statu ${
@@ -244,17 +260,24 @@ const Sec5 = () => {
               <div className='right2'>
                 <img src={sec5PcIcon2} className='icon' />
                 <div className='text_wrapper'>
-                  <h4 className='title_48'>Super Flash Light</h4>
-                  <p className='subtitle_24'>Not just Light. It has a mind.</p>
-                  <p className='desc_18'>
-                    Selfies pop with ease, even in darkness! While the dual-tone
-                    flash brightens backgrounds, Super Flash Algorithm precisely
-                    layers 8 exposure frames to cast just-the-right spotlight
-                    you need! Physical fill light + AI fine-tuning, the result
-                    is your flattering photos with balanced brightness, anytime,
-                    anywhere. Wave goodbye to over- or under-exposure. Every
-                    shot is a brilliant present!
-                  </p>
+                  <h4
+                    className='title_48'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec5.super_flash_light.title,
+                    }}
+                  ></h4>
+                  <p
+                    className='subtitle_24'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec5.super_flash_light.subtitle,
+                    }}
+                  ></p>
+                  <p
+                    className='desc_18'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec5.super_flash_light.desc,
+                    }}
+                  ></p>
                 </div>
                 <Button isOpen={isOpen} setIsOpen={setIsOpen} />
               </div>
@@ -282,17 +305,24 @@ const Sec5 = () => {
               <div className='right2'>
                 <img src={sec5PcIcon3} className='icon' />
                 <div className='text_wrapper'>
-                  <h4 className='title_48'>2K Video</h4>
-                  <p className='subtitle_24'>
-                    SPARK Video Quality at New Height
-                  </p>
-                  <p className='desc_18'>
-                    Relive your epic moments in 2K clarity- with new discoveries
-                    in each playback! The background naturally blurs, so your
-                    hero stands out; Night algorithm maximizes noise reduction,
-                    turning dim scenes into vibrant tales. Spot the WOW moments
-                    in 2K details, inescapable from SPARK’s eagle eye!
-                  </p>
+                  <h4
+                    className='title_48'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec5.video_2k.title,
+                    }}
+                  ></h4>
+                  <p
+                    className='subtitle_24'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec5.video_2k.subtitle,
+                    }}
+                  ></p>
+                  <p
+                    className='desc_18'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec5.video_2k.desc,
+                    }}
+                  ></p>
                 </div>
                 <Button
                   isOpen={isOpen2}

@@ -12,18 +12,19 @@ import { ScreenContext } from "../../../provider"
 
 const Sec1 = () => {
   const { isPc } = useContext(ScreenContext)
+  const { spark20Config } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
   const sec1Ani = () => {
-    if(isPc) {
+    if (isPc) {
       const tl = gsap
         .timeline()
-        .from(".sec1 .slogn", 0.5, { y: "20%", opacity: 0 }, 'a')
+        .from(".sec1 .slogn", 0.5, { y: "20%", opacity: 0 }, "a")
         .from(".sec1 .title", 0.5, { y: "20%", opacity: 0, delay: 0.25 }, "a")
         .from(".sec1 .items", 0.5, { y: "20%", opacity: 0, delay: 0.25 }, "a")
         .from(".sec1 .pic2", 0.5, { y: "20%", opacity: 0 })
-  
+
       ScrollTrigger.create({
         trigger: ".sec1",
         start: `top 10%`,
@@ -52,25 +53,20 @@ const Sec1 = () => {
         />
         <div className='title'>50MP Expert</div>
         <div className='items'>
-          <div className='item'>
-            <div className='item_title'>50MP</div>
-            <div className='item_desc'>
-              Ultra Clear <br /> Camera
-            </div>
-          </div>
-          <div className='item'>
-            <div className='item_title'>G85</div>
-            <div className='item_desc'>
-              Gaming <br /> Processor
-            </div>
-          </div>
-          <div className='item'>
-            <div className='item_title'>400%</div>
-            <div className='item_desc'>
-              Stereo Dual Speaker <br /> Big Volume
-            </div>
-            <div className='dts_logo'></div>
-          </div>
+          {spark20Config.sec1.feature.map((item: any, index: number) => {
+            return (
+              <div className='item' key={index}>
+                <div
+                  className='item_title'
+                  dangerouslySetInnerHTML={{ __html: item.featureTitle }}
+                ></div>
+                <div
+                  className='item_desc'
+                  dangerouslySetInnerHTML={{ __html: item.featureDesc }}
+                ></div>
+              </div>
+            )
+          })}
         </div>
         <img className='pic2' src={sec1PcF2} alt='SPARK 20' loading='lazy' />
       </div>

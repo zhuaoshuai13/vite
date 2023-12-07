@@ -43,9 +43,8 @@ const Sec14 = () => {
       start: `top 85%`,
       animation: tl,
     })
-    
-    const video1 = gsap
-      .timeline()
+
+    const video1 = gsap.timeline()
 
     ScrollTrigger.create({
       trigger: ".sec14 .box:nth-child(1)",
@@ -55,9 +54,8 @@ const Sec14 = () => {
         videoClick1.current.videoEvent(videoRef1)
       },
     })
-    
-    const video2 = gsap
-      .timeline()
+
+    const video2 = gsap.timeline()
 
     ScrollTrigger.create({
       trigger: ".sec14 .box:nth-child(2)",
@@ -67,9 +65,8 @@ const Sec14 = () => {
         videoClick2.current.videoEvent(videoRef2)
       },
     })
-    
-    const video3 = gsap
-      .timeline()
+
+    const video3 = gsap.timeline()
 
     ScrollTrigger.create({
       trigger: ".sec14 .box:nth-child(3)",
@@ -79,9 +76,8 @@ const Sec14 = () => {
         videoClick3.current.videoEvent(videoRef3)
       },
     })
-    
-    const video4 = gsap
-      .timeline()
+
+    const video4 = gsap.timeline()
 
     ScrollTrigger.create({
       trigger: ".sec14 .box:nth-child(4)",
@@ -91,9 +87,8 @@ const Sec14 = () => {
         videoClick4.current.videoEvent(videoRef4)
       },
     })
-    
-    const video5 = gsap
-      .timeline()
+
+    const video5 = gsap.timeline()
 
     ScrollTrigger.create({
       trigger: ".sec14 .box:nth-child(5)",
@@ -128,16 +123,24 @@ const Sec14 = () => {
                   <img src={sec14PcIcon1} loading='lazy' />
                 </div>
                 <div className='text_wrapper'>
-                  <h4 className='title_48'>Dynamic Port</h4>
-                  <p className='subtitle_24'>Always-On, Never In the Way</p>
-                  <p className='desc_18'>
-                    Tecno's self-developed Dynamic Port cleverly merges with the
-                    hole screen, giving you early access to the leading-edge
-                    cool gadget! Futuristic design and intuitive integration
-                    breathe new life to the front camera hole - displaying
-                    messages, offering front-end services, while captivating
-                    onlookers with an envy-inducing allure.
-                  </p>
+                  <h4
+                    className='title_48'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.dynamicPort.title,
+                    }}
+                  ></h4>
+                  <p
+                    className='subtitle_24'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.dynamicPort.subtitle,
+                    }}
+                  ></p>
+                  <p
+                    className='desc_18'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.dynamicPort.desc,
+                    }}
+                  ></p>
                 </div>
               </div>
             }
@@ -154,34 +157,42 @@ const Sec14 = () => {
                   <img src={sec14PcIcon2} loading='lazy' />
                 </div>
                 <div className='text_wrapper'>
-                  <h4 className='title_48'>
-                    Intelligent Internet Speed Improvement
-                  </h4>
-                  <p className='subtitle_24'>
-                    Surfing the Internet, on Multi-Boost!
-                  </p>
-                  <p className='desc_18'>
-                    Boost on all fronts! Smart Dual Panel propels Wi-Fi and
-                    cellular in parallel, slashing app loading latency by 25%
-                    and ramping up download speed by 25%. Enjoy fast and stable
-                    network for utmost satisfaction. Smart Network Allocation
-                    places foreground tasks into 'fast lane,' up the priority
-                    for most essential apps.
-                  </p>
+                  <h4
+                    className='title_48'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.internet.title,
+                    }}
+                  ></h4>
+                  <p
+                    className='subtitle_24'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.internet.subtitle,
+                    }}
+                  ></p>
+                  <p
+                    className='desc_18'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.internet.desc,
+                    }}
+                  ></p>
                 </div>
                 <div className='datas datas1'>
-                  <div className='data'>
-                    <div className='data_title'>
-                      Smart Dual <br /> Panel
-                    </div>
-                    <p className='data_desc'>WIFI plus Cellular</p>
-                  </div>
-                  <div className='data'>
-                    <div className='data_title'>
-                      Smart Network <br /> Allocation
-                    </div>
-                    <p className='data_desc'>Full Scene Acceleration</p>
-                  </div>
+                  {spark20Config.sec14.internet.datas.map(
+                    (item: any, index: number) => {
+                      return (
+                        <div className='data' key={index}>
+                          <div
+                            className='data_title'
+                            dangerouslySetInnerHTML={{ __html: item.name }}
+                          ></div>
+                          <p
+                            className='data_desc'
+                            dangerouslySetInnerHTML={{ __html: item.desc }}
+                          ></p>
+                        </div>
+                      )
+                    }
+                  )}
                 </div>
               </div>
             }
@@ -198,18 +209,24 @@ const Sec14 = () => {
                   <img src={sec14PcIcon3} loading='lazy' />
                 </div>
                 <div className='text_wrapper'>
-                  <h4 className='title_48'>AI Tips</h4>
-                  <p className='subtitle_24'>
-                    Your Helpful Assistant in the AIGC Era
-                  </p>
-                  <p className='desc_18'>
-                    Meet your savvy AI buddy! It's like a personal assistant,
-                    but cooler and smarter - managing schedules, offering
-                    thoughtful suggestions, providing upfront services or
-                    reminders, and anticipating your needs when juggling
-                    multiple tasks. Get ready for its tips and prepare to be
-                    WOWed!
-                  </p>
+                  <h4
+                    className='title_48'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.aiTips.title,
+                    }}
+                  ></h4>
+                  <p
+                    className='subtitle_24'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.aiTips.subtitle,
+                    }}
+                  ></p>
+                  <p
+                    className='desc_18'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.aiTips.desc,
+                    }}
+                  ></p>
                 </div>
               </div>
             }
@@ -226,17 +243,24 @@ const Sec14 = () => {
                   <img src={sec14PcIcon4} loading='lazy' />
                 </div>
                 <div className='text_wrapper'>
-                  <h4 className='title_48'>APP Twins</h4>
-                  <p className='subtitle_24'>
-                    Mastering the Switch between Work & Life
-                  </p>
-                  <p className='desc_18'>
-                    Tired of managing multiple devices for different accounts?
-                    APP Twins have it simplified. By cloning apps, it enables
-                    simultaneous login to various accounts, effortlessly
-                    handling both personal and work profiles. Try it now on
-                    WhatsApp, Messenger, Snapchat, Instagram, and more.
-                  </p>
+                  <h4
+                    className='title_48'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.appTwins.title,
+                    }}
+                  ></h4>
+                  <p
+                    className='subtitle_24'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.appTwins.subtitle,
+                    }}
+                  ></p>
+                  <p
+                    className='desc_18'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.appTwins.desc,
+                    }}
+                  ></p>
                 </div>
               </div>
             }
@@ -253,39 +277,47 @@ const Sec14 = () => {
                   <img src={sec14PcIcon5} loading='lazy' />
                 </div>
                 <div className='text_wrapper'>
-                  <h4 className='title_48'>Social Turbo</h4>
-                  <p className='subtitle_24'>Turbocharge the FUN of Social</p>
-                  <p className='desc_18'>
-                    Up your social game with Social Turbo! Tailored for
-                    third-party social apps, this video call feature is a rare
-                    gem in any smart phone of the same class: In-call beauty &
-                    make-up filters, fill light, AR avatars, voice change, and
-                    more, spicing up everyday conversations.
-                  </p>
+                  <h4
+                    className='title_48'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.social.title,
+                    }}
+                  ></h4>
+                  <p
+                    className='subtitle_24'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.social.subtitle,
+                    }}
+                  ></p>
+                  <p
+                    className='desc_18'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec14.social.desc,
+                    }}
+                  ></p>
                 </div>
                 <div className='datas datas2'>
-                  <div className='data'>
-                    <div className='data_title'>Beauty and Make-up</div>
-                  </div>
-                  <div className='data'>
-                    <div className='data_title'>Fill Light</div>
-                  </div>
-                  <div className='data'>
-                    <div className='data_title'>AR Avatar</div>
-                  </div>
-                  <div className='data'>
-                    <div className='data_title'>Voice Change</div>
-                  </div>
+                  {spark20Config.sec14.social.datas.map(
+                    (item: any, index: number) => {
+                      return (
+                        <div className='data' key={index}>
+                          <div
+                            className='data_title'
+                            dangerouslySetInnerHTML={{ __html: item.name }}
+                          ></div>
+                        </div>
+                      )
+                    }
+                  )}
                 </div>
               </div>
             }
           />
         </div>
-        <div className='tips'>
-          * Evidenced by data from TECNO LAB. <br /> * Pictures, videos, and
-          texts of the aforementioned page are for reference only, which may
-          vary depending on the actual phone.
-        </div>
+        <div
+          className='tips'
+          dangerouslySetInnerHTML={{ __html: spark20Config.sec14.tips }}
+        ></div>
       </div>
     </section>
   )

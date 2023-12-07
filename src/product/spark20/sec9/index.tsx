@@ -13,6 +13,7 @@ import { ScreenContext } from "../../../provider"
 
 const Sec9 = () => {
   const { isPc } = useContext(ScreenContext)
+  const { spark20Config } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -120,70 +121,72 @@ const Sec9 = () => {
             </div>
             <div className='right1'>
               <div className='text_wrapper'>
-                <h4 className='title_48'>Texture Upgrade 2.0</h4>
-                <p className='subtitle_24'>
-                  Textured Outside, Tech-tured Inside
-                </p>
+                <h4
+                  className='title_48'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec9.texture.title,
+                  }}
+                ></h4>
+                <p
+                  className='subtitle_24'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec9.texture.subtitle,
+                  }}
+                ></p>
                 <div className='desc_18'>
-                  <p className='desc_other'>
-                    Find your Mr. Right among SPARK's trendy color options:{" "}
-                    <br />
-                    <span>Cyber White:</span> Dance in the tender interplay of
-                    light and shadow <br />
-                    <span>Gravity Black:</span> Exude timeless elegance of
-                    classic values <br />
-                    <span>Neon Gold:</span> Radiate nobility as sand glitters in
-                    starry brilliance
-                  </p>
-                  <p className='desc_magic'>
-                    <span>Magic Skin 2.0:</span> Beauty meets durability. 500%
-                    more durable. 25% more UV protection. Glossy matte leather
-                    feels like the touch of luxurious yacht.
-                  </p>
+                  <p
+                    className='desc_other'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec9.texture.desc,
+                    }}
+                  ></p>
+                  <p
+                    className='desc_magic'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20Config.sec9.texture.desc_magic_skin,
+                    }}
+                  ></p>
                 </div>
               </div>
               <div className='data_all'>
                 <div className='data_other'>
-                  <div className='dt t1'>Composite Material:</div>
                   <div className='datas'>
-                    <div className='data'>
-                      <div className='data_title'>Glass-Like</div>
-                      <p className='data_desc'>Matte and Delicate</p>
-                    </div>
-                    <div className='data'>
-                      <div className='data_title'>Glitter Sand 2.0</div>
-                      <p className='data_desc'>New Generation</p>
-                    </div>
-                    <div className='data'>
-                      <div className='data_title'>Fashion Color</div>
-                      <p className='data_desc'>Coating</p>
-                    </div>
+                    {spark20Config.sec9.texture.datas.map(
+                      (item: any, index: number) => {
+                        return (
+                          <div className='data' key={index}>
+                            <div
+                              className='data_title'
+                              dangerouslySetInnerHTML={{ __html: item.name }}
+                            ></div>
+                            <p
+                              className='data_desc'
+                              dangerouslySetInnerHTML={{ __html: item.desc }}
+                            ></p>
+                          </div>
+                        )
+                      }
+                    )}
                   </div>
                 </div>
                 <div className='data_magic'>
-                  <div className='dt t1'>Magic Skin 2.0:</div>
                   <div className='datas'>
-                    <div className='data'>
-                      <div className='data_title'>
-                        Glossy Matte <br /> Leather
-                      </div>
-                      <p className='data_desc'>Visual Upgrading</p>
-                    </div>
-                    <div className='data'>
-                      <div className='data_title'>
-                        100% <br /> Recyclable
-                      </div>
-                      <p className='data_desc'>Eco-friendy</p>
-                    </div>
-                    <div className='data'>
-                      <div className='data_title'>Zero</div>
-                      <p className='data_desc'>
-                        Harmful <br /> Substance
-                      </p>
-                    </div>
-                    <div className='data'>
-                      <div className='data_title'>Durability</div>
-                    </div>
+                    {spark20Config.sec9.texture.datas_magic_skin.map(
+                      (item: any, index: number) => {
+                        return (
+                          <div className='data' key={index}>
+                            <div
+                              className='data_title'
+                              dangerouslySetInnerHTML={{ __html: item.name }}
+                            ></div>
+                            <p
+                              className='data_desc'
+                              dangerouslySetInnerHTML={{ __html: item.desc }}
+                            ></p>
+                          </div>
+                        )
+                      }
+                    )}
                   </div>
                 </div>
               </div>
@@ -192,24 +195,35 @@ const Sec9 = () => {
           <div className='container2'>
             <div className='left2'>
               <div className='text_wrapper'>
-                <h4 className='title_48'>
-                  IP53-Grade Peace <br className='mob' /> of Mind{" "}
-                  <br className='pc' /> against <br className='mob' /> Water &
-                  Dust
-                </h4>
-                <p className='desc_18'>
-                  Offering IP53-certified protection against water and dust.{" "}
-                  <br className='mob' /> Fear no more over splashes or dust.
-                  Enjoy carefree, <br className='mob' /> comfortable use of
-                  SPARK.
-                </p>
+                <h4
+                  className='title_48'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec9.water.title,
+                  }}
+                ></h4>
+                <p
+                  className='desc_18'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec9.water.desc,
+                  }}
+                ></p>
               </div>
             </div>
             <div className='right2'>
               <img src={sec9PcF2} className='water' />
               <div className='text_wrapper'>
-                <div className='title'>IP53</div>
-                <p className='desc'>Water & Dust Proof</p>
+                <div
+                  className='title'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec9.water.pic_title,
+                  }}
+                ></div>
+                <p
+                  className='desc'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec9.water.pic_desc,
+                  }}
+                ></p>
               </div>
             </div>
           </div>

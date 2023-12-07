@@ -10,6 +10,7 @@ import { ScreenContext } from "../../../provider"
 
 const Sec3 = () => {
   const { isPc } = useContext(ScreenContext)
+  const { spark20Config } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -38,8 +39,8 @@ const Sec3 = () => {
           <img className='bg_img' src={sec3PcBg} loading='lazy' />
         </picture>
         <div className='special_text_container'>
-          <h3 className='special_title'>CAMERA</h3>
-          <p className='special_desc'>High Resolution Photography System</p>
+          <h3 className='special_title' dangerouslySetInnerHTML={{__html: spark20Config.sec3.title}}></h3>
+          <p className='special_desc' dangerouslySetInnerHTML={{__html: spark20Config.sec3.desc}}></p>
         </div>
       </div>
     </section>
