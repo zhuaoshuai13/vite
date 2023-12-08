@@ -19,24 +19,24 @@ const Spark20 = () => {
     <div className='spark20'>
       <Sec1 />
       <Sec2 />
-      <div className='bg_black sec_container1'>
-        <Sec3 />
-        <Sec4 />
-        <Sec5 />
-      </div>
       <div className='bg_white sec_container2'>
+        <div className='bg_black sec_container1'>
+          <Sec3 />
+          <Sec4 />
+          <Sec5 />
+        </div>
         <Sec6 />
         <Sec7 />
         <Sec8 />
         <Sec9 />
       </div>
-      <div className='bg_black sec_container3'>
-        <Sec10 />
-        <Sec11 />
-        <Sec12 />
-        <Sec13 />
-      </div>
       <div className='bg_white2'>
+        <div className='bg_black sec_container3'>
+          <Sec10 />
+          <Sec11 />
+          <Sec12 />
+          <Sec13 />
+        </div>
         <Sec14 />
       </div>
     </div>

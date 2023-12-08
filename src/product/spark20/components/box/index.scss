@@ -1,6 +1,6 @@
 @import '../../vars';
 
-.box {
+.sec14_box {
   display: flex;
   gap: px-to-vw(10);
   justify-content: center;
@@ -96,7 +96,7 @@
 }
 
 @media (max-width: $mobwidthPx) {
-  .box {
+  .sec14_box {
     flex-direction: column;
     gap: px-to-vw-mb(20);
     align-items: center;

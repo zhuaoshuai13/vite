@@ -1,11 +1,10 @@
 @import '../vars';
 
 .sec2 {
-  background-color: #fff;
-  
   .content {
     position: relative;
     padding: px-to-vw(240) 0;
+    background-color: #fff;
   }
 
   .items {
@@ -18,12 +17,22 @@
   }
 
   .item {
+    position: relative;
     border-radius: px-to-vw(36);
 
     .img_wrapper {
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
     }
 
     .text_wrapper {
@@ -108,8 +117,10 @@
 
     &:nth-child(3) {
       grid-area: 3 / 2 / 4 / 3;
+      padding: px-to-vw(25) px-to-vw(10);
 
       .title {
+        margin: 0 auto;
         color: #000;
         font-size: px-to-vw(17);
       }
@@ -117,7 +128,18 @@
 
     &:nth-child(4) {
       grid-area: 4 / 1 / 5 / 3;
+      padding: px-to-vw(36) px-to-vw(10) px-to-vw(10) px-to-vw(212);
       background-color: #000;
+
+      .mah {
+        position: absolute;
+        top: px-to-vw(50);
+        left: px-to-vw(176);
+        color: #929ba1;
+        font-weight: 700;
+        font-size: px-to-vw(12);
+        font-family: "HB";
+      }
 
       .title {
         font-size: px-to-vw(31);
@@ -293,7 +315,7 @@
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -352,6 +374,7 @@
 
       &:nth-child(3) {
         grid-area: 5 / 2 / 6 / 3;
+        padding: px-to-vw-mb(24) px-to-vw-mb(10);
 
         .title {
           font-size: px-to-vw-mb(17);
@@ -360,6 +383,13 @@
 
       &:nth-child(4) {
         grid-area: 6 / 1 / 7 / 3;
+        padding: px-to-vw-mb(45) px-to-vw-mb(10) px-to-vw-mb(10) px-to-vw-mb(220);
+
+        .mah {
+          top: px-to-vw-mb(50);
+          left: px-to-vw-mb(184);
+          font-size: px-to-vw-mb(12);
+        }
 
         .title {
           font-size: px-to-vw-mb(33);
@@ -371,7 +401,10 @@
       }
 
       &:nth-child(5) {
+        display: flex;
         grid-area: 1 / 1 / 2 / 4;
+        align-items: center;
+        padding: px-to-vw-mb(30) px-to-vw-mb(440) px-to-vw-mb(30) px-to-vw-mb(60);
 
         .title {
           font-size: px-to-vw-mb(72);
@@ -402,7 +435,7 @@
 
       &:nth-child(7) {
         grid-area: 3 / 3 / 4 / 4;
-        padding: px-to-vw-mb(22);
+        padding: px-to-vw-mb(24);
 
         .title {
           font-size: px-to-vw-mb(28);

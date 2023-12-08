@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react"
+import { useEffect } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -6,10 +6,8 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
 import sec3PcBg from "../../../assets/spark20/sec3PcBg.png"
 import sec3MbBg from "../../../assets/spark20/sec3MbBg.png"
-// import { ScreenContext } from "../../../provider"
 
 const Sec10 = () => {
-  // const { isPc } = useContext(ScreenContext)
   const { spark20Config } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)

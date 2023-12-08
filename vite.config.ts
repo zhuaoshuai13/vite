@@ -29,10 +29,10 @@ export default defineConfig({
       plugins: [
         copy({
           targets: [
-            // {
-            //   src: "src/product/sparkGo2024/config.js",
-            //   dest: "dist",
-            // },
+            {
+              src: "src/product/spark20/config.js",
+              dest: "dist",
+            },
             {
               src: "src/assets/video/*",
               dest: "dist/video",

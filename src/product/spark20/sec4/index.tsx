@@ -1,17 +1,15 @@
-import { useEffect, useContext } from "react"
+import { useEffect } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import LazyLoad from "react-lazyload"
 import "./index.scss"
-import sec4PcF2_2 from "../../../assets/spark20/sec4PcF2_2.jpg"
 import sec4PcF3 from "../../../assets/spark20/sec4PcF3.png"
 import { Button, useButton } from "../components"
-import { ScreenContext } from "../../../provider"
 
 const Sec4 = () => {
   const { isOpen, setIsOpen } = useButton()
-  const { isPc } = useContext(ScreenContext)
   const { spark20Config } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -77,16 +75,20 @@ const Sec4 = () => {
           })}
         </h3>
         <div className='spark20_container'>
-          <video
-            className='camera'
-            src={spark20Config.sec4.cameraVideo.src}
-            poster={spark20Config.sec4.cameraVideo.poster}
-            muted
-            autoPlay
-            loop
-            webkit-playsinline='true'
-            playsInline={true}
-          ></video>
+          <div className='video_box'>
+            <LazyLoad offset={1000}>
+              <video
+                className='camera'
+                src={spark20Config.sec4.cameraVideo.src}
+                poster={spark20Config.sec4.cameraVideo.poster}
+                muted
+                autoPlay
+                loop
+                webkit-playsinline='true'
+                playsInline={true}
+              ></video>
+            </LazyLoad>
+          </div>
           <div className='right1'>
             <div className='text_wrapper'>
               <h4
@@ -131,13 +133,14 @@ const Sec4 = () => {
         <div className='container2'>
           <div className='left2'>
             <img
-              src={sec4PcF2_2}
+              src={spark20Config.image.sec4.super_night_mode}
               alt='Super Night Mode'
               className={isOpen ? "night_pic" : "night_pic off"}
+              loading='lazy'
             />
           </div>
           <div className='right2'>
-            <img src={sec4PcF3} className='icon' />
+            <img src={sec4PcF3} className='icon' loading='lazy' />
             <div className='text_wrapper'>
               <h4
                 className='title_48'

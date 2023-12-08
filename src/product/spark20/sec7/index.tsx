@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react"
+import { useEffect } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -6,10 +6,8 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
 import sec7PcF1 from "../../../assets/spark20/sec7PcF1.png"
 import sec7MbF1 from "../../../assets/spark20/sec7MbF1.png"
-import { ScreenContext } from "../../../provider"
 
 const Sec7 = () => {
-  const { isPc } = useContext(ScreenContext)
   const { spark20Config } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -29,7 +27,7 @@ const Sec7 = () => {
       .timeline()
       .from(".sec7 .text_wrapper", 1, { y: "30%", opacity: 0 }, "a")
       .from(".sec7 .datas", 1, { y: "30%", opacity: 0, delay: 0.5 }, "a")
-      .from(".sec7 .design_phone", 1, { y: "30%", scale: 1.2 }, "a")
+      .from(".sec7 .design_phone", 1, { y: "0%", scale: 1.2 }, "a")
 
     ScrollTrigger.create({
       trigger: ".sec7 .spark20_container",
@@ -113,6 +111,7 @@ const Sec7 = () => {
               src={sec7PcF1}
               alt='Eulers Deco Design'
               className='design_phone'
+              loading='lazy'
             />
           </picture>
         </div>

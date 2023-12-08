@@ -1,16 +1,10 @@
-import { useEffect, useRef, useState, useContext } from "react"
+import { useEffect, useRef, useState } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import LazyLoad from "react-lazyload"
 import "./index.scss"
-// import sec4PcF2 from "../../../assets/spark20/sec4PcF2.jpg"
-import sec5PcCamera from "../../../assets/spark20/sec5PcCamera.png"
-import sec5PcF1_cold from "../../../assets/spark20/sec5PcF1_cold.jpg"
-import sec5PcF1_default from "../../../assets/spark20/sec5PcF1_default.jpg"
-import sec5PcF1_warm from "../../../assets/spark20/sec5PcF1_warm.jpg"
-import sec5PcF2_2 from "../../../assets/spark20/sec5PcF2_2.jpg"
-import sec5PcF3 from "../../../assets/spark20/sec5PcF3.jpg"
 import sec5PcIcon1 from "../../../assets/spark20/sec5PcIcon1.png"
 import sec5PcIcon2 from "../../../assets/spark20/sec5PcIcon2.png"
 import sec5PcIcon3 from "../../../assets/spark20/sec5PcIcon3.png"
@@ -18,10 +12,8 @@ import sec5PcStep1 from "../../../assets/spark20/sec5PcStep1.png"
 import sec5PcStep2 from "../../../assets/spark20/sec5PcStep2.png"
 import sec5PcStep3 from "../../../assets/spark20/sec5PcStep3.png"
 import { useButton, Button } from "../components"
-import { ScreenContext } from "../../../provider"
 
 const Sec5 = () => {
-  const { isPc } = useContext(ScreenContext)
   const { isOpen, setIsOpen } = useButton()
   const [isOpen2, setIsOpen2] = useState(false)
   const [statusIndex, setStatusIndex] = useState(0)
@@ -100,21 +92,39 @@ const Sec5 = () => {
       },
     })
 
-    const t5 = gsap
-      .timeline()
-      .to(".sec_container1", 1, { scale: 0.9 }, "a")
-      .to(
-        ".sec5_bottom_mask",
-        1,
-        { opacity: 0.7, clipPath: "inset(0px round 14px)" },
-        "a"
-      )
+    const t5 = gsap.timeline().to(
+      ".sec_container1",
+      1,
+      {
+        scale: 0.9,
+        clipPath: "inset(0px round 14px)",
+        backgroundColor: "rgba(0, 0, 0, 0.7)",
+      },
+      "a"
+    )
 
     ScrollTrigger.create({
       trigger: ".sec5_bottom_mask",
       start: `bottom 85%`,
       animation: t5,
       scrub: 0.25,
+    })
+
+    const t6 = gsap.timeline()
+
+    ScrollTrigger.create({
+      trigger: ".sec5 #dual-colour",
+      start: `top 50%`,
+      animation: t6,
+      onEnter: () => {
+        handleStatusClick(0)
+        setTimeout(() => {
+          handleStatusClick(1)
+          setTimeout(() => {
+            handleStatusClick(2)
+          }, 1000)
+        }, 1000)
+      },
     })
   }
 
@@ -137,17 +147,20 @@ const Sec5 = () => {
             })}
           </h3>
           <div className='spark20_container'>
-            <img src={sec5PcCamera} className='camera' />
-            <video
-              className='camera_video'
-              src={spark20Config.sec5.selfieVideo.src}
-              poster={spark20Config.sec5.selfieVideo.poster}
-              muted
-              autoPlay
-              loop
-              webkit-playsinline='true'
-              playsInline={true}
-            ></video>
+            <div className='video_box'>
+              <LazyLoad offset={1000}>
+                <video
+                  className='camera_video'
+                  src={spark20Config.sec5.selfieVideo.src}
+                  poster={spark20Config.sec5.selfieVideo.poster}
+                  muted
+                  autoPlay
+                  loop
+                  webkit-playsinline='true'
+                  playsInline={true}
+                ></video>
+              </LazyLoad>
+            </div>
             <div className='right1'>
               <div className='text_wrapper'>
                 <h4
@@ -190,14 +203,26 @@ const Sec5 = () => {
             </div>
           </div>
           <div>
-            <div className='container2'>
+            <div className='container2' id='dual-colour'>
               <div className='left2'>
-                {statusIndex === 0 ? <img src={sec5PcF1_cold} /> : ""}
-                {statusIndex === 1 ? <img src={sec5PcF1_default} /> : ""}
-                {statusIndex === 2 ? <img src={sec5PcF1_warm} /> : ""}
+                <img
+                  src={spark20Config.image.sec5.cold}
+                  loading='lazy'
+                  className={statusIndex === 0 ? "active" : ""}
+                />
+                <img
+                  src={spark20Config.image.sec5.default}
+                  loading='lazy'
+                  className={statusIndex === 1 ? "active" : ""}
+                />
+                <img
+                  src={spark20Config.image.sec5.warm}
+                  loading='lazy'
+                  className={statusIndex === 2 ? "active" : ""}
+                />
               </div>
               <div className='right2'>
-                <img src={sec5PcIcon1} className='icon' />
+                <img src={sec5PcIcon1} className='icon' loading='lazy' />
                 <div className='text_wrapper'>
                   <h4
                     className='title_48'
@@ -231,9 +256,6 @@ const Sec5 = () => {
                               statusIndex === index ? "active" : ""
                             }`}
                             key={index}
-                            onClick={() => {
-                              handleStatusClick(index)
-                            }}
                           >
                             <span>{item}</span>
                           </div>
@@ -244,21 +266,34 @@ const Sec5 = () => {
                   <div className='steps' data-index={statusIndex}>
                     <div className='current_block'></div>
                     <div className='step'>
-                      <img src={sec5PcStep1} />
+                      <img src={sec5PcStep1} loading='lazy' />
                     </div>
                     <div className='step'>
-                      <img src={sec5PcStep2} />
+                      <img src={sec5PcStep2} loading='lazy' />
                     </div>
                     <div className='step'>
-                      <img src={sec5PcStep3} />
+                      <img src={sec5PcStep3} loading='lazy' />
                     </div>
+                  </div>
+                  <div className='click_block'>
+                    {statusList.map((_: string, index: number) => {
+                      return (
+                        <div
+                          className='click_item'
+                          key={index}
+                          onClick={() => {
+                            handleStatusClick(index)
+                          }}
+                        ></div>
+                      )
+                    })}
                   </div>
                 </div>
               </div>
             </div>
             <div className='container2' id='Flash_Light'>
               <div className='right2'>
-                <img src={sec5PcIcon2} className='icon' />
+                <img src={sec5PcIcon2} className='icon' loading='lazy' />
                 <div className='text_wrapper'>
                   <h4
                     className='title_48'
@@ -283,27 +318,30 @@ const Sec5 = () => {
               </div>
               <div className='left2'>
                 <img
-                  src={sec5PcF2_2}
+                  src={spark20Config.image.sec5.super_flash_light}
                   className={
                     isOpen ? "Super_Flash_Light" : "Super_Flash_Light off"
                   }
+                  loading='lazy'
                 />
               </div>
             </div>
             <div className='container2' id='height_quality_Video'>
               <div className='left2'>
-                <video
-                  ref={videoRef}
-                  src={spark20Config.sec5.heightQualityVideo.src}
-                  poster={spark20Config.sec5.heightQualityVideo.poster}
-                  muted
-                  loop
-                  webkit-playsinline='true'
-                  playsInline={true}
-                ></video>
+                <LazyLoad offset={1000}>
+                  <video
+                    ref={videoRef}
+                    src={spark20Config.sec5.heightQualityVideo.src}
+                    poster={spark20Config.sec5.heightQualityVideo.poster}
+                    muted
+                    loop
+                    webkit-playsinline='true'
+                    playsInline={true}
+                  ></video>
+                </LazyLoad>
               </div>
               <div className='right2'>
-                <img src={sec5PcIcon3} className='icon' />
+                <img src={sec5PcIcon3} className='icon' loading='lazy' />
                 <div className='text_wrapper'>
                   <h4
                     className='title_48'

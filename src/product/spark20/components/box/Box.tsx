@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useCallback, useImperativeHandle } from "react"
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useImperativeHandle,
+} from "react"
+import LazyLoad from "react-lazyload"
 import "./index.scss"
 
 interface BoxPropsType {
@@ -26,40 +32,45 @@ export const Box = ({
     })
   }, [video_ref])
 
-  const handleVideoClick = useCallback((ref: React.RefObject<HTMLVideoElement>) => {
-    if (isPlay) {
-      ref.current?.pause()
-    } else {
-      ref.current?.play()
-    }
-    setIsPlay(!isPlay)
-  }, [isPlay])
+  const handleVideoClick = useCallback(
+    (ref: React.RefObject<HTMLVideoElement>) => {
+      if (isPlay) {
+        ref.current?.pause()
+      } else {
+        ref.current?.play()
+      }
+      setIsPlay(!isPlay)
+    },
+    [isPlay]
+  )
 
   useImperativeHandle(videoClick, () => ({
-    videoEvent: (ref: React.RefObject<HTMLVideoElement>) => handleVideoClick(ref)
+    videoEvent: (ref: React.RefObject<HTMLVideoElement>) =>
+      handleVideoClick(ref),
   }))
-
 
   useEffect(() => {
     listenVideoEnd()
   })
 
   return (
-    <div className='box'>
+    <div className='sec14_box'>
       <div
         className='pic_box'
         onClick={() => {
           handleVideoClick(video_ref)
         }}
       >
-        <video
-          ref={video_ref}
-          src={video_src}
-          poster={video_poster}
-          muted
-          webkit-playsinline='true'
-          playsInline={true}
-        ></video>
+        <LazyLoad offset={1000}>
+          <video
+            ref={video_ref}
+            src={video_src}
+            poster={video_poster}
+            muted
+            webkit-playsinline='true'
+            playsInline={true}
+          ></video>
+        </LazyLoad>
         <div className='play'>
           {pause_color === "black" ? (
             isPlay ? (

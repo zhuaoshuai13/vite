@@ -1,6 +1,16 @@
 window.spark20Config = {
+  button_text: {
+    on: "ON",
+    off: "OFF",
+  },
   sec1: {
+    // type1: 文案+图片; type2: 图片
+    type: "type1",
     title: "50MP Expert",
+    kv: {
+      pc: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec1PcKv.jpg",
+      mob: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec1MbKv.jpg",
+    },
     feature: [
       {
         featureTitle: "50MP",
@@ -72,13 +82,14 @@ window.spark20Config = {
       ],
     },
     cameraVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec4PcV1.mp4",
-      poster: "",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec4PcV1.mp4",
+      poster:
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec4PcV1.jpg",
     },
     engineVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec11PcV2.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec11PcV2.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/png/sec11PcF2.png",
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec11PcF2.jpg",
     },
   },
   sec5: {
@@ -136,13 +147,14 @@ window.spark20Config = {
       in 2K details, inescapable from SPARK’s eagle eye!`,
     },
     selfieVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec5PcSelfie.mp4",
-      poster: "",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec5PcSelfie.mp4",
+      poster:
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcSelfie.jpg",
     },
     heightQualityVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec5PcV3.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec5PcV3.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/jpg/sec5PcF3.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF3.jpg",
     },
   },
   sec6: {
@@ -260,8 +272,9 @@ window.spark20Config = {
       datas: ["2*Cortex-A75 @2000 MHz", "6*Cortex-A55 @1800 MHz"],
     },
     processorVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec11PcV1.mp4",
-      poster: "",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec11PcV1.mp4",
+      poster:
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec11PcV1.jpg",
     },
     engine: {
       title: "Performance Upgrade",
@@ -282,9 +295,9 @@ window.spark20Config = {
       desc: "Game Optimisation",
     },
     engineVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec11PcV2.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec11PcV2.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/png/sec11PcF2.png",
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec11PcF2.jpg",
     },
     memory: {
       title: "Up to 256GB <br /> ROM+16GB RAM",
@@ -399,9 +412,9 @@ window.spark20Config = {
       ],
     },
     speakerVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec13PcV1.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec13PcV1.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/png/sec13PcF1.png",
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec13PcV1.jpg",
     },
   },
   sec14: {
@@ -426,14 +439,14 @@ window.spark20Config = {
       for most essential apps.`,
       datas: [
         {
-          name: 'Smart Dual <br /> Panel',
-          desc: 'WIFI plus Cellular',
+          name: "Smart Dual <br /> Panel",
+          desc: "WIFI plus Cellular",
         },
         {
-          name: 'Smart Network <br /> Allocation',
-          desc: 'Full Scene Acceleration',
+          name: "Smart Network <br /> Allocation",
+          desc: "Full Scene Acceleration",
         },
-      ]
+      ],
     },
     aiTips: {
       title: "AI Tips",
@@ -464,46 +477,73 @@ window.spark20Config = {
       more, spicing up everyday conversations.`,
       datas: [
         {
-          name: 'Beauty and Make-up',
+          name: "Beauty and Make-up",
         },
         {
-          name: 'Fill Light',
+          name: "Fill Light",
         },
         {
-          name: 'AR Avatar',
+          name: "AR Avatar",
         },
         {
-          name: 'Voice Change',
+          name: "Voice Change",
         },
-      ]
+      ],
     },
     tips: `* Evidenced by data from TECNO LAB. <br /> * Pictures, videos, and
     texts of the aforementioned page are for reference only, which may
     vary depending on the actual phone.`,
     dynamicPortVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec14PcV1.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV1.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/png/sec14PcF1.png",
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF1.jpg",
     },
     internetVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec14PcV2.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV2.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/png/sec14PcF2.png",
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF2.jpg",
     },
     aiTipsVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec14PcV3.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV3.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/png/sec14PcF3.png",
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF3.jpg",
     },
     appTwinsVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec14PcV4.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV4.mp4", //黑人版本
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/png/sec14PcF4.png",
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF4.jpg", //黑人版本
+      // src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV4_2.mp4", //白人版本
+      // poster:
+      //   "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF4_2.jpg", //白人版本
     },
     socialVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/video/sec14PcV5.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV5.mp4", //黑人版本
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20/dist/png/sec14PcF5.png",
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF5.jpg", //黑人版本
+      // src: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV5_2.mp4", //白人版本
+      // poster:
+      //   "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF5_2.jpg", //白人版本
+    },
+  },
+  image: {
+    sec4: {
+      super_night_mode:
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec4PcF2_2.jpg", //黑人版本
+      // super_night_mode: '/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec4PcF2_3.jpg',//白人版本
+    },
+    sec5: {
+      cold: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_cold.jpg", //黑人版本
+      default:
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_default.jpg", //黑人版本
+      warm: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_warm.jpg", //黑人版本
+      super_flash_light:
+        "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF2_2.jpg", //黑人版本
+      // cold: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_2_cold.jpg", //白人版本
+      // default:
+      //   "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_2_default.jpg", //白人版本
+      // warm: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_2_warm.jpg", //白人版本
+      // super_flash_light:
+      //   "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF2_3.jpg", //白人版本
     },
   },
 }

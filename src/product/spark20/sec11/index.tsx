@@ -1,17 +1,16 @@
-import { useEffect, useContext } from "react"
+import { useEffect } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import LazyLoad from "react-lazyload"
 import "./index.scss"
 import sec11PcF3 from "../../../assets/spark20/sec11PcF3.png"
 import sec11MbF3 from "../../../assets/spark20/sec11MbF3.jpg"
 import sec11PcF4 from "../../../assets/spark20/sec11PcF4.png"
 import sec11MbF4 from "../../../assets/spark20/sec11MbF4.png"
-// import { ScreenContext } from "../../../provider"
 
 const Sec11 = () => {
-  // const { isPc } = useContext(ScreenContext)
   const { spark20Config } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -102,15 +101,19 @@ const Sec11 = () => {
         </h3>
 
         <div className='container1'>
-          <video
-            src={spark20Config.sec11.processorVideo.src}
-            poster={spark20Config.sec11.processorVideo.poster}
-            autoPlay
-            muted
-            loop
-            webkit-playsinline='true'
-            playsInline={true}
-          ></video>
+          <div className='video_box'>
+            <LazyLoad offset={1000}>
+              <video
+                src={spark20Config.sec11.processorVideo.src}
+                poster={spark20Config.sec11.processorVideo.poster}
+                autoPlay
+                muted
+                loop
+                webkit-playsinline='true'
+                playsInline={true}
+              ></video>
+            </LazyLoad>
+          </div>
           <div className='right1'>
             <div className='text_wrapper'>
               <h4
@@ -174,15 +177,17 @@ const Sec11 = () => {
           </div>
           <div className='right2'>
             <div className='pic_box'>
-              <video
-                src={spark20Config.sec11.engineVideo.src}
-                poster={spark20Config.sec11.engineVideo.poster}
-                autoPlay
-                muted
-                loop
-                webkit-playsinline='true'
-                playsInline={true}
-              ></video>
+              <LazyLoad offset={1000}>
+                <video
+                  src={spark20Config.sec11.engineVideo.src}
+                  poster={spark20Config.sec11.engineVideo.poster}
+                  autoPlay
+                  muted
+                  loop
+                  webkit-playsinline='true'
+                  playsInline={true}
+                ></video>
+              </LazyLoad>
               <div className='text_wrapper text1'>
                 <div
                   className='title'

@@ -1,4 +1,4 @@
-import { useEffect, useContext, useRef } from "react"
+import { useEffect, useRef } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -10,7 +10,6 @@ import sec14PcIcon2 from "../../../assets/spark20/sec14PcIcon2.png"
 import sec14PcIcon3 from "../../../assets/spark20/sec14PcIcon3.png"
 import sec14PcIcon4 from "../../../assets/spark20/sec14PcIcon4.png"
 import sec14PcIcon5 from "../../../assets/spark20/sec14PcIcon5.png"
-import { ScreenContext } from "../../../provider"
 import { Box } from "../components"
 
 type VideoEvent = {
@@ -18,7 +17,6 @@ type VideoEvent = {
 }
 
 const Sec14 = () => {
-  const { isPc } = useContext(ScreenContext)
   const { spark20Config } = window as any
   const videoRef1 = useRef<HTMLVideoElement>(null)
   const videoRef2 = useRef<HTMLVideoElement>(null)
@@ -47,7 +45,7 @@ const Sec14 = () => {
     const video1 = gsap.timeline()
 
     ScrollTrigger.create({
-      trigger: ".sec14 .box:nth-child(1)",
+      trigger: ".sec14 .sec14_box:nth-child(1)",
       start: `top 85%`,
       animation: video1,
       onEnter: () => {
@@ -58,7 +56,7 @@ const Sec14 = () => {
     const video2 = gsap.timeline()
 
     ScrollTrigger.create({
-      trigger: ".sec14 .box:nth-child(2)",
+      trigger: ".sec14 .sec14_box:nth-child(2)",
       start: `top 85%`,
       animation: video2,
       onEnter: () => {
@@ -69,7 +67,7 @@ const Sec14 = () => {
     const video3 = gsap.timeline()
 
     ScrollTrigger.create({
-      trigger: ".sec14 .box:nth-child(3)",
+      trigger: ".sec14 .sec14_box:nth-child(3)",
       start: `top 85%`,
       animation: video3,
       onEnter: () => {
@@ -80,7 +78,7 @@ const Sec14 = () => {
     const video4 = gsap.timeline()
 
     ScrollTrigger.create({
-      trigger: ".sec14 .box:nth-child(4)",
+      trigger: ".sec14 .sec14_box:nth-child(4)",
       start: `top 85%`,
       animation: video4,
       onEnter: () => {
@@ -91,7 +89,7 @@ const Sec14 = () => {
     const video5 = gsap.timeline()
 
     ScrollTrigger.create({
-      trigger: ".sec14 .box:nth-child(5)",
+      trigger: ".sec14 .sec14_box:nth-child(5)",
       start: `top 85%`,
       animation: video5,
       onEnter: () => {

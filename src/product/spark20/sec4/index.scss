@@ -15,13 +15,17 @@
   .spark20_container {
     position: relative;
   }
-  
-  .camera {
+
+  .video_box {
     position: absolute;
     top: px-to-vw(-90);
     left: px-to-vw(50);
     height: px-to-vw(420);
     transform: rotate(-25deg);
+  }
+  
+  .camera {
+    height: px-to-vw(420);
   }
 
   .right1 {
@@ -148,10 +152,14 @@
       margin-top: px-to-vw-mb(360);
     }
 
-    .camera {
+    .video_box {
       position: unset;
       height: px-to-vw-mb(400);
       margin-left: px-to-vw-mb(100);
+    }
+
+    .camera {
+      height: px-to-vw-mb(400);
     }
 
     .right1 {

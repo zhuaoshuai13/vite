@@ -11,6 +11,7 @@ export const Button = ({
   setIsOpen,
   customClickEvent,
 }: ButtonProps) => {
+  const { spark20Config } = window as any
   const handleButtonClick = () => {
     if(customClickEvent) {
       customClickEvent()
@@ -25,9 +26,9 @@ export const Button = ({
       onClick={() => handleButtonClick()}
     >
       {isOpen ? (
-        <span className='text on'>ON</span>
+        <span className='text on'>{spark20Config.button_text.on}</span>
       ) : (
-        <span className='text off'>OFF</span>
+        <span className='text off'>{spark20Config.button_text.off}</span>
       )}
       <div className='button_block'></div>
     </div>

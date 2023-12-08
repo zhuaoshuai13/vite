@@ -4,8 +4,6 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
-import Sec1PcKv from "../../../assets/spark20/sec1PcKv.jpg"
-import sec1MbKv from "../../../assets/spark20/sec1MbKv.png"
 import sec1PcSlogn from "../../../assets/spark20/sec1PcSlogn.png"
 import sec1PcF2 from "../../../assets/spark20/sec1PcF2.png"
 import { ScreenContext } from "../../../provider"
@@ -27,7 +25,7 @@ const Sec1 = () => {
 
       ScrollTrigger.create({
         trigger: ".sec1",
-        start: `top 10%`,
+        start: `top 50%`,
         animation: tl,
       })
     }
@@ -40,36 +38,40 @@ const Sec1 = () => {
   return (
     <section className='sec1'>
       <picture>
-        <source media='(min-width: 1081px)' srcSet={Sec1PcKv} />
-        <source media='(max-width: 1080px)' srcSet={sec1MbKv} />
-        <img className='kv' src={Sec1PcKv} alt='kv' loading='lazy' />
+        <source media='(min-width: 1081px)' srcSet={spark20Config.sec1.kv.pc} />
+        <source media='(max-width: 1080px)' srcSet={spark20Config.sec1.kv.mob} />
+        <img className='kv' src={spark20Config.sec1.kv.pc} alt='kv' loading='lazy' />
       </picture>
-      <div className='content'>
-        <img
-          className='slogn'
-          src={sec1PcSlogn}
-          alt='SPARK 20'
-          loading='lazy'
-        />
-        <div className='title'>50MP Expert</div>
-        <div className='items'>
-          {spark20Config.sec1.feature.map((item: any, index: number) => {
-            return (
-              <div className='item' key={index}>
-                <div
-                  className='item_title'
-                  dangerouslySetInnerHTML={{ __html: item.featureTitle }}
-                ></div>
-                <div
-                  className='item_desc'
-                  dangerouslySetInnerHTML={{ __html: item.featureDesc }}
-                ></div>
-              </div>
-            )
-          })}
+      {spark20Config.sec1.type === "type1" ? (
+        <div className='content'>
+          <img
+            className='slogn'
+            src={sec1PcSlogn}
+            alt='SPARK 20'
+            loading='lazy'
+          />
+          <div className='title' dangerouslySetInnerHTML={{__html: spark20Config.sec1.title}}></div>
+          <div className='items'>
+            {spark20Config.sec1.feature.map((item: any, index: number) => {
+              return (
+                <div className='item' key={index}>
+                  <div
+                    className='item_title'
+                    dangerouslySetInnerHTML={{ __html: item.featureTitle }}
+                  ></div>
+                  <div
+                    className='item_desc'
+                    dangerouslySetInnerHTML={{ __html: item.featureDesc }}
+                  ></div>
+                </div>
+              )
+            })}
+          </div>
+          <img className='pic2' src={sec1PcF2} alt='SPARK 20' loading='lazy' />
         </div>
-        <img className='pic2' src={sec1PcF2} alt='SPARK 20' loading='lazy' />
-      </div>
+      ) : (
+        ""
+      )}
     </section>
   )
 }

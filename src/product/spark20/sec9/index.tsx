@@ -18,52 +18,29 @@ const Sec9 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
   const sec9Ani = () => {
-    const tl = gsap
-      .timeline()
-      .from(".sec9 .phone:nth-child(1)", 1, { y: "30%", opacity: 0 }, "a")
-      .from(
-        ".sec9 .phone:nth-child(2)",
-        1,
-        { y: "30%", opacity: 0, delay: 0.25 },
-        "a"
-      )
-      .from(
-        ".sec9 .phone:nth-child(3)",
-        1,
-        { y: "30%", opacity: 0, delay: 0.5 },
-        "a"
-      )
-      .from(
-        ".sec9 .phone:nth-child(4)",
-        1,
-        { y: "30%", opacity: 0, delay: 0.75 },
-        "a"
-      )
-
-    ScrollTrigger.create({
-      trigger: ".sec9 .spark20_container",
-      start: `top 85%`,
-      animation: tl,
-    })
-
-    const t3 = gsap
-      .timeline()
-      .from(".sec9 .left2", 1, { y: "30%", opacity: 0 })
-      .from(".sec9 .right2", 1, { y: "30%", opacity: 0 })
-
-    ScrollTrigger.create({
-      trigger: ".sec9 .container2",
-      start: `top 75%`,
-      animation: t3,
-    })
-
     if (isPc) {
       const t2 = gsap
         .timeline()
-        .to(".sec9 .desc_other", 1, { opacity: 0 }, "a")
-        .to(".sec9 .data_other", 1, { opacity: 0 }, "a")
-        .to(".sec9 .desc_magic", 1, { opacity: 1 }, "a")
-        .to(".sec9 .data_magic", 1, { opacity: 1 }, "a")
+        .from(".sec9 .phone:nth-child(1)", { y: "30%", opacity: 0 }, "a")
+        .from(
+          ".sec9 .phone:nth-child(2)",
+          { y: "30%", opacity: 0, delay: 0.25 },
+          "a"
+        )
+        .from(
+          ".sec9 .phone:nth-child(3)",
+          { y: "30%", opacity: 0, delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec9 .phone:nth-child(4)",
+          { y: "30%", opacity: 0, delay: 0.75 },
+          "a"
+        )
+        .to(".sec9 .desc_other", 0.25, { opacity: 0, delay: 1.5 }, "a")
+        .to(".sec9 .data_other", 0.25, { opacity: 0, delay: 1.5 }, "a")
+        .to(".sec9 .desc_magic", 0.25, { opacity: 1, delay: 1.5 }, "a")
+        .to(".sec9 .data_magic", 0.25, { opacity: 1, delay: 1.5 }, "a")
 
       ScrollTrigger.create({
         trigger: ".sec9",
@@ -74,22 +51,60 @@ const Sec9 = () => {
         scrub: true,
       })
     } else {
+      const tl = gsap
+        .timeline()
+        .from(".sec9 .phone:nth-child(1)", 1, { y: "30%", opacity: 0 }, "a")
+        .from(
+          ".sec9 .phone:nth-child(2)",
+          1,
+          { y: "30%", opacity: 0, delay: 0.25 },
+          "a"
+        )
+        .from(
+          ".sec9 .phone:nth-child(3)",
+          1,
+          { y: "30%", opacity: 0, delay: 0.5 },
+          "a"
+        )
+        .from(
+          ".sec9 .phone:nth-child(4)",
+          1,
+          { y: "30%", opacity: 0, delay: 0.75 },
+          "a"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".sec9 .spark20_container",
+        start: `top 85%`,
+        animation: tl,
+      })
+
       const t2 = gsap
         .timeline()
-        .to(".sec9 .desc_other", 1, { opacity: 0 }, "a")
-        .to(".sec9 .data_other", 1, { opacity: 0 }, "a")
-        .to(".sec9 .desc_magic", 1, { opacity: 1 }, "a")
-        .to(".sec9 .data_magic", 1, { opacity: 1 }, "a")
+        .to(".sec9 .desc_other", 0.25, { opacity: 0 }, "a")
+        .to(".sec9 .data_other", 0.25, { opacity: 0 }, "a")
+        .to(".sec9 .desc_magic", 0.25, { opacity: 1 }, "a")
+        .to(".sec9 .data_magic", 0.25, { opacity: 1 }, "a")
 
       ScrollTrigger.create({
         trigger: ".sec9",
         start: `top 0%`,
-        end: "+=150%",
+        end: "+=10%",
         animation: t2,
-        pin: true,
-        scrub: true,
+        scrub: 0.25,
       })
     }
+
+    const t3 = gsap
+      .timeline()
+      .from(".sec9 .left2", 1, { y: "30%", opacity: 0 }, "a")
+      .from(".sec9 .right2", 1, { y: "30%", opacity: 0 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec9",
+      start: `bottom 130%`,
+      animation: t3,
+    })
 
     const t4 = gsap
       .timeline()
@@ -210,7 +225,7 @@ const Sec9 = () => {
               </div>
             </div>
             <div className='right2'>
-              <img src={sec9PcF2} className='water' />
+              <img src={sec9PcF2} className='water' loading='lazy' />
               <div className='text_wrapper'>
                 <div
                   className='title'

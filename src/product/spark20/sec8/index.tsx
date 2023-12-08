@@ -9,7 +9,7 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 
-import { EffectFade } from "swiper/modules"
+import { EffectFade, Autoplay } from "swiper/modules"
 import "./index.scss"
 import sec8PcF1 from "../../../assets/spark20/sec8PcF1.jpg"
 import sec8PcF2 from "../../../assets/spark20/sec8PcF2.jpg"
@@ -43,25 +43,27 @@ const Sec8 = () => {
   const sec8Ani = () => {
     const tl = gsap.timeline()
 
-    ScrollTrigger.create({
-      trigger: ".sec8",
-      start: isPc ? `top 0%` : "top 20%",
-      end: "+=200%",
-      animation: tl,
-      pin: true,
-      scrub: true,
-      onUpdate: ({ progress }) => {
-        if (progress < 0.25) {
-          swiperRef.current.slideTo(0)
-        } else if (progress > 0.25 && progress < 0.5) {
-          swiperRef.current.slideTo(1)
-        } else if (progress > 0.5 && progress < 0.75) {
-          swiperRef.current.slideTo(2)
-        } else if (progress > 0.75 && progress < 1) {
-          swiperRef.current.slideTo(3)
-        }
-      },
-    })
+    if (isPc) {
+      ScrollTrigger.create({
+        trigger: ".sec8",
+        start: `top 0%`,
+        end: "+=200%",
+        animation: tl,
+        pin: true,
+        scrub: true,
+        onUpdate: ({ progress }) => {
+          if (progress < 0.25) {
+            swiperRef.current.slideTo(0)
+          } else if (progress > 0.25 && progress < 0.5) {
+            swiperRef.current.slideTo(1)
+          } else if (progress > 0.5 && progress < 0.75) {
+            swiperRef.current.slideTo(2)
+          } else if (progress > 0.75 && progress < 1) {
+            swiperRef.current.slideTo(3)
+          }
+        },
+      })
+    }
   }
 
   useEffect(() => {
@@ -78,7 +80,7 @@ const Sec8 = () => {
             setSwiperInstance(swiper)
             swiperRef.current = swiper
           }}
-          modules={[EffectFade]}
+          modules={isPc ? [EffectFade] : [EffectFade, Autoplay]}
           className='sec8Swiper'
           autoplay={{ delay: 2000 }}
           onSlideChange={() => handleSwiperSlide()}
@@ -121,7 +123,7 @@ const Sec8 = () => {
                     className={index === colorIndex ? "active" : ""}
                     onClick={() => handleButtonClick(colorIndex)}
                   >
-                    <div className='circle_big'>
+                    <div className={`circle_big ${item}`}>
                       <div className='circle_small'></div>
                     </div>
                   </button>

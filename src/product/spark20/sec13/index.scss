@@ -22,12 +22,14 @@
     }
 
     .pic_box {
+      height: px-to-vw(800);
       margin-top: px-to-vw(-200);
       text-align: center;
     }
 
     .sound {
       height: px-to-vw(800);
+      clip-path: inset(2px);
     }
 
     .box {
@@ -123,11 +125,9 @@
     margin-top: px-to-vw(280);
 
     .pic_box {
-      margin-right: px-to-vw(80);
-      text-align: right;
-
       img {
-        width: 100%;
+        height: px-to-vw(890);
+        margin-left: px-to-vw(200);
       }
     }
 
@@ -180,6 +180,7 @@
       }
 
       .pic_box {
+        height: px-to-vw-mb(525);
         margin-top: px-to-vw-mb(-100);
       }
 
@@ -243,6 +244,7 @@
 
         img {
           height: px-to-vw-mb(823);
+          margin-left: 0;
         }
       }
 

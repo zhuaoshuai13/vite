@@ -1,15 +1,14 @@
-import { useEffect, useContext } from "react"
+import { useEffect } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import LazyLoad from "react-lazyload"
 import "./index.scss"
 import sec13PcF2 from "../../../assets/spark20/sec13PcF2.png"
 import sec13MbF2 from "../../../assets/spark20/sec13MbF2.png"
-import { ScreenContext } from "../../../provider"
 
 const Sec13 = () => {
-  const { isPc } = useContext(ScreenContext)
   const { spark20Config } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -78,6 +77,35 @@ const Sec13 = () => {
       start: `top 85%`,
       animation: t4,
     })
+
+    const t5 = gsap
+      .timeline()
+      .from(".sec13 .pic_box img", 1, { scale: 1.2 }, "a")
+
+    ScrollTrigger.create({
+      trigger: ".sec13 .container2 .pic_box",
+      start: `top 85%`,
+      animation: t5,
+      scrub: 0.25,
+    })
+
+    const t6 = gsap.timeline().to(
+      ".sec_container3",
+      1,
+      {
+        scale: 0.9,
+        clipPath: "inset(0px round 14px)",
+        // backgroundColor: "rgba(255, 255, 255, 0.7)",
+      },
+      "a"
+    )
+
+    ScrollTrigger.create({
+      trigger: ".sec_container3",
+      start: `bottom 85%`,
+      animation: t6,
+      scrub: 0.25,
+    })
   }
 
   useEffect(() => {
@@ -121,16 +149,18 @@ const Sec13 = () => {
             ></p>
           </div>
           <div className='pic_box'>
-            <video
-              src={spark20Config.sec13.speakerVideo.src}
-              poster={spark20Config.sec13.speakerVideo.poster}
-              autoPlay
-              muted
-              loop
-              className='sound'
-              webkit-playsinline='true'
-              playsInline={true}
-            ></video>
+            <LazyLoad offset={1000}>
+              <video
+                src={spark20Config.sec13.speakerVideo.src}
+                poster={spark20Config.sec13.speakerVideo.poster}
+                autoPlay
+                muted
+                loop
+                className='sound'
+                webkit-playsinline='true'
+                playsInline={true}
+              ></video>
+            </LazyLoad>
           </div>
           <div className='box'>
             <div className='left'>
