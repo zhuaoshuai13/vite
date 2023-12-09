@@ -16,9 +16,13 @@
     .text_wrapper {
       position: relative;
       z-index: 1;
-      width: px-to-vw(790);
+      width: px-to-vw(850);
       margin: 0 auto;
       text-align: center;
+
+      .desc_18 {
+        width: 93%;
+      }
     }
 
     .pic_box {
@@ -176,7 +180,13 @@
     .spark20_container {
       .text_wrapper {
         width: auto;
-        margin: 0 px-to-vw-mb(150);
+        margin: 0 px-to-vw-mb(120);
+
+        .desc_18 {
+          width: 95%;
+          margin-right: auto;
+          margin-left: auto;
+        }
       }
 
       .pic_box {
@@ -192,7 +202,7 @@
       .box {
         display: block;
         max-width: unset;
-        margin: px-to-vw-mb(-80) px-to-vw-mb(120) 0;
+        margin: px-to-vw-mb(-80) px-to-vw-mb(80) 0;
       }
 
       .left {
@@ -224,7 +234,18 @@
 
       .datas {
         gap: px-to-vw-mb(40);
-        margin: px-to-vw-mb(88) px-to-vw-mb(55) 0;
+        margin: px-to-vw-mb(88) px-to-vw-mb(40) 0;
+      }
+
+      .data {
+        &:nth-child(1), &:nth-child(3) {
+          width: 62%;
+        }
+      }
+
+      .dts {
+        width: px-to-vw-mb(93);
+        height: px-to-vw-mb(40);
       }
     }
 

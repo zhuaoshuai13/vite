@@ -267,6 +267,23 @@
       padding: px-to-vw(22);
       background-color: #000;
 
+      .desc {
+        margin-top: px-to-vw(12);
+        color: transparent;
+        font-weight: 700;
+        font-size: px-to-vw(15);
+        font-family: "HB";
+        background-image: linear-gradient(90deg, #bdf0ff 0%, #d6dbf2 58%, #eccae7 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        p {
+          width: fit-content;
+          margin-top: px-to-vw(5);
+          background: inherit;
+        }
+      }
+
       .title {
         position: relative;
         font-size: px-to-vw(46);
@@ -301,7 +318,9 @@
       }
 
       .tips {
-        margin-top: px-to-vw(10);
+        position: absolute;
+        bottom: px-to-vw(7);
+        left: px-to-vw(23);
         color: #b0b0b0;
         font-size: px-to-vw(13);
       }
@@ -471,6 +490,11 @@
         grid-area: 5 / 3 / 7 / 4;
         padding: px-to-vw-mb(36);
 
+        .desc {
+          margin-top: px-to-vw-mb(12);
+          font-size: px-to-vw-mb(15);
+        }
+
         .title {
           font-size: px-to-vw-mb(43);
 
@@ -489,7 +513,8 @@
         }
 
         .tips {
-          margin-top: px-to-vw-mb(10);
+          bottom: px-to-vw-mb(23);
+          left: px-to-vw-mb(36);
           font-size: px-to-vw-mb(12);
         }
       }

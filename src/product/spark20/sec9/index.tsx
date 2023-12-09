@@ -19,7 +19,7 @@ const Sec9 = () => {
 
   const sec9Ani = () => {
     if (isPc) {
-      const t2 = gsap
+      const t1 = gsap
         .timeline()
         .from(".sec9 .phone:nth-child(1)", { y: "30%", opacity: 0 }, "a")
         .from(
@@ -37,6 +37,31 @@ const Sec9 = () => {
           { y: "30%", opacity: 0, delay: 0.75 },
           "a"
         )
+
+      ScrollTrigger.create({
+        trigger: ".sec9",
+        start: `top 20%`,
+        end: "+=150%",
+        animation: t1,
+      })
+      const t2 = gsap
+        .timeline()
+        // .from(".sec9 .phone:nth-child(1)", { y: "30%", opacity: 0 }, "a")
+        // .from(
+        //   ".sec9 .phone:nth-child(2)",
+        //   { y: "30%", opacity: 0, delay: 0.25 },
+        //   "a"
+        // )
+        // .from(
+        //   ".sec9 .phone:nth-child(3)",
+        //   { y: "30%", opacity: 0, delay: 0.5 },
+        //   "a"
+        // )
+        // .from(
+        //   ".sec9 .phone:nth-child(4)",
+        //   { y: "30%", opacity: 0, delay: 0.75 },
+        //   "a"
+        // )
         .to(".sec9 .desc_other", 0.25, { opacity: 0, delay: 1.5 }, "a")
         .to(".sec9 .data_other", 0.25, { opacity: 0, delay: 1.5 }, "a")
         .to(".sec9 .desc_magic", 0.25, { opacity: 1, delay: 1.5 }, "a")
@@ -44,7 +69,7 @@ const Sec9 = () => {
 
       ScrollTrigger.create({
         trigger: ".sec9",
-        start: `top -20%`,
+        start: `top -10%`,
         end: "+=150%",
         animation: t2,
         pin: true,
@@ -108,11 +133,15 @@ const Sec9 = () => {
 
     const t4 = gsap
       .timeline()
-      .to(".sec9", 1, { scale: 0.9, clipPath: "inset(0px round 14px)" }, "a")
-      .to(".sec9_bottom_mask", 1, { opacity: 0.3 }, "a")
+      .to(
+        [".sec9", ".sec_container4"],
+        1,
+        { scaleX: 0.93, scaleY: 0.98, clipPath: "inset(0px round 14px)" },
+        "a"
+      )
 
     ScrollTrigger.create({
-      trigger: ".sec_container2",
+      trigger: ".sec_container4",
       start: `bottom 85%`,
       animation: t4,
       scrub: 0.25,

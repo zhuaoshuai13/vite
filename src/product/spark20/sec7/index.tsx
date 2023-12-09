@@ -27,7 +27,7 @@ const Sec7 = () => {
       .timeline()
       .from(".sec7 .text_wrapper", 1, { y: "30%", opacity: 0 }, "a")
       .from(".sec7 .datas", 1, { y: "30%", opacity: 0, delay: 0.5 }, "a")
-      .from(".sec7 .design_phone", 1, { y: "0%", scale: 1.2 }, "a")
+      .from(".sec7 .design_phone", 1, { y: "30%", scale: 1.2 }, "a")
 
     ScrollTrigger.create({
       trigger: ".sec7 .spark20_container",

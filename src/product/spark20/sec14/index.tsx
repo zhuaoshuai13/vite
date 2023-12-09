@@ -34,11 +34,11 @@ const Sec14 = () => {
   const sec14Ani = () => {
     const tl = gsap
       .timeline()
-      .from(".sec14 .hios", 1, { y: "30%", opacity: 0 }, "a")
+      .from(".sec14 .hios", 1, { y: "50%", opacity: 0 }, "a")
 
     ScrollTrigger.create({
       trigger: ".sec14 .content",
-      start: `top 85%`,
+      start: `top 80%`,
       animation: tl,
     })
 

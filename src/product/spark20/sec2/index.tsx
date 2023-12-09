@@ -27,6 +27,7 @@ import sec2MbF10 from "../../../assets/spark20/sec2MbF10.png"
 const Sec2 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { isPc } = useContext(ScreenContext)
+  const { spark20Config } = window as any
 
   const sec2Ani = () => {
     const tl = gsap
@@ -35,7 +36,7 @@ const Sec2 = () => {
         ".sec2 .content",
         1,
         {
-          scale: 0.9,
+          scale: 0.93,
           clipPath: "inset(0px round 14px)",
           backgroundColor: "rgba(255, 255, 255, 0.7)",
         },
@@ -177,12 +178,15 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                <div>
-                  <span>400% Big Volume</span>
-                </div>
-                <div>
-                  <span>Stereo Dual Speaker</span>
-                </div>
+                {spark20Config.sec2.item1.title.map(
+                  (item: string, index: number) => {
+                    return (
+                      <div key={index}>
+                        <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                      </div>
+                    )
+                  }
+                )}
               </div>
             </div>
           </div>
@@ -190,8 +194,16 @@ const Sec2 = () => {
             <div className='img_wrapper'></div>
             <div className='text_wrapper'>
               <div className='title'>
-                <div>6.56’’ 90HZ</div>
-                <div>Hole Screen</div>
+                {spark20Config.sec2.item2.title.map(
+                  (item: string, index: number) => {
+                    return (
+                      <div
+                        key={index}
+                        dangerouslySetInnerHTML={{ __html: item }}
+                      ></div>
+                    )
+                  }
+                )}
               </div>
             </div>
           </div>
@@ -205,7 +217,16 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                <div>Dynamic Port</div>
+                {spark20Config.sec2.item3.title.map(
+                  (item: string, index: number) => {
+                    return (
+                      <div
+                        key={index}
+                        dangerouslySetInnerHTML={{ __html: item }}
+                      ></div>
+                    )
+                  }
+                )}
               </div>
             </div>
           </div>
@@ -217,15 +238,21 @@ const Sec2 = () => {
                 <img src={sec2PcF4} loading='lazy' />
               </picture>
             </div>
-            <div className='mah'>mAh</div>
+            <div
+              className='mah'
+              dangerouslySetInnerHTML={{ __html: spark20Config.sec2.item4.mah }}
+            ></div>
             <div className='text_wrapper'>
               <div className='title'>
-                <div>
-                  <span>5000mAh</span>
-                </div>
-                <div>
-                  <span>18w Fast Charge</span>
-                </div>
+                {spark20Config.sec2.item4.title.map(
+                  (item: string, index: number) => {
+                    return (
+                      <div key={index}>
+                        <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                      </div>
+                    )
+                  }
+                )}
               </div>
             </div>
           </div>
@@ -239,14 +266,22 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                <div>
-                  <span>32MP</span>
-                </div>
-                <div>
-                  <span>Front Camera</span>
-                </div>
+                {spark20Config.sec2.item5.title.map(
+                  (item: string, index: number) => {
+                    return (
+                      <div key={index}>
+                        <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                      </div>
+                    )
+                  }
+                )}
               </div>
-              <div className='desc'>with 3 Light Modes</div>
+              <div
+                className='desc'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec2.item5.desc,
+                }}
+              ></div>
             </div>
           </div>
           <div className='item'>
@@ -259,12 +294,15 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                <div>
-                  <span>50MP Ultra</span>
-                </div>
-                <div>
-                  <span>Clear Camera</span>
-                </div>
+                {spark20Config.sec2.item6.title.map(
+                  (item: string, index: number) => {
+                    return (
+                      <div key={index}>
+                        <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                      </div>
+                    )
+                  }
+                )}
               </div>
             </div>
           </div>
@@ -277,7 +315,12 @@ const Sec2 = () => {
               </picture>
             </div>
             <div className='text_wrapper'>
-              <div className='title'>Magic skin 2.0</div>
+              <div
+                className='title'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec2.item7.title,
+                }}
+              ></div>
             </div>
           </div>
           <div className='item'>
@@ -289,8 +332,18 @@ const Sec2 = () => {
               </picture>
             </div>
             <div className='text_wrapper'>
-              <div className='title'>IP53</div>
-              <div className='desc'>Water & Dust Proof</div>
+              <div
+                className='title'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec2.item8.title,
+                }}
+              ></div>
+              <div
+                className='desc'
+                dangerouslySetInnerHTML={{
+                  __html: spark20Config.sec2.item8.desc,
+                }}
+              ></div>
             </div>
           </div>
           <div className='item'>
@@ -303,12 +356,15 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                <div>
-                  <span>G85Gaming</span>
-                </div>
-                <div>
-                  <span>Processor</span>
-                </div>
+                {spark20Config.sec2.item9.title.map(
+                  (item: string, index: number) => {
+                    return (
+                      <div key={index}>
+                        <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                      </div>
+                    )
+                  }
+                )}
               </div>
             </div>
           </div>
@@ -322,19 +378,37 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                <div>
-                  <span>BIG RAM+BIG ROM</span>
-                </div>
-                <div>
-                  <span>BIG WIN</span>
-                </div>
-                <span className='data1'>UP TO 16GB*</span>
-                <span className='data2'>UP TO 256GB*</span>
+                {spark20Config.sec2.item10.title.map(
+                  (item: string, index: number) => {
+                    return (
+                      <div key={index}>
+                        <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                      </div>
+                    )
+                  }
+                )}
               </div>
-              <div className='tips'>
-                * Up to 16GB, 8GB+8GB <br /> Extended RAM
+              <div className='desc'>
+                <p
+                  className='data1'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec2.item10.data1,
+                  }}
+                ></p>
+                <p
+                  className='data2'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20Config.sec2.item10.data2,
+                  }}
+                ></p>
               </div>
             </div>
+            <div
+              className='tips'
+              dangerouslySetInnerHTML={{
+                __html: spark20Config.sec2.item10.tips,
+              }}
+            ></div>
           </div>
         </div>
       </div>

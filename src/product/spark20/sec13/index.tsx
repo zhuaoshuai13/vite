@@ -80,11 +80,12 @@ const Sec13 = () => {
 
     const t5 = gsap
       .timeline()
-      .from(".sec13 .pic_box img", 1, { scale: 1.2 }, "a")
+      .fromTo(".sec13 .pic_box img", { scale: 1.2 }, { scale: 0.9 })
 
     ScrollTrigger.create({
       trigger: ".sec13 .container2 .pic_box",
-      start: `top 85%`,
+      start: `top 65%`,
+      end: '+=50%',
       animation: t5,
       scrub: 0.25,
     })
@@ -178,7 +179,7 @@ const Sec13 = () => {
                   <div
                     className='title'
                     dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec13.speaker.small_volume,
+                      __html: spark20Config.sec13.speaker.big_volume,
                     }}
                   ></div>
                   <div className='line line2'></div>

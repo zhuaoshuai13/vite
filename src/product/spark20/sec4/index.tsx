@@ -53,6 +53,7 @@ const Sec4 = () => {
       start: `top 30%`,
       animation: t3,
       onEnter: () => {
+        console.log(isOpen)
         setIsOpen(true)
       },
     })
@@ -60,7 +61,7 @@ const Sec4 = () => {
 
   useEffect(() => {
     sec4Ani()
-  })
+  }, [])
 
   return (
     <section className='sec4'>

@@ -26,6 +26,44 @@ window.spark20Config = {
       },
     ],
   },
+  sec2: {
+    item1: {
+      title: ["400% Big Volume", "Stereo Dual Speaker"],
+    },
+    item2: {
+      title: ["6.56’’ 90HZ", "Hole Screen"],
+    },
+    item3: {
+      title: ["Dynamic Port"],
+    },
+    item4: {
+      title: ["5000mAh", "18w Fast Charge"],
+      mah: "mAh",
+    },
+    item5: {
+      title: ["32MP", "Front Camera"],
+      desc: "with 3 Light Modes",
+    },
+    item6: {
+      title: ["50MP Ultra", "Clear Camera"],
+    },
+    item7: {
+      title: "Magic skin 2.0",
+    },
+    item8: {
+      title: "IP53",
+      desc: "Water & Dust Proof",
+    },
+    item9: {
+      title: ["G85 Gaming", "Processor"],
+    },
+    item10: {
+      title: ["BIG RAM+BIG ROM", "BIG WIN"],
+      data1: "UP TO 16GB* RAM",
+      data2: "UP TO 256GB* ROM",
+      tips: "* Up to 16GB, 8GB+8GB Extended RAM",
+    },
+  },
   sec3: {
     title: "CAMERA",
     desc: "High Resolution Photography System",
@@ -139,7 +177,7 @@ window.spark20Config = {
     },
     video_2k: {
       title: "2K Video",
-      subtitle: "SPARK Video Quality at New Height",
+      subtitle: `SPARK's Video Quality at New Height`,
       desc: `Relive your epic moments in 2K clarity- with new discoveries
       in each playback! The background naturally blurs, so your
       hero stands out; Night algorithm maximizes noise reduction,
@@ -163,8 +201,8 @@ window.spark20Config = {
   },
   sec7: {
     bigTitle: [
-      "Fineness in Finish & Feel Deceptively",
-      "Minimal, Infinitely Sophisticated",
+      "Fineness in Finish & Feel",
+      "Deceptively Minimal, Infinitely Sophisticated",
     ],
     bigTitleMb: [
       "Fineness in Finish & Feel",
@@ -172,7 +210,7 @@ window.spark20Config = {
       "Infinitely Sophisticated",
     ],
     design: {
-      titel: `Euler's Deco Design`,
+      title: `Euler's Deco Design`,
       subtitle: "Cosmic Experience, Available at Hand",
       desc: `Minimalist aesthetics meets futuristic look in the three-ring
       cosmic design of SPARK. Sleek metal edges blend with cosmic deco
@@ -199,7 +237,7 @@ window.spark20Config = {
   },
   sec9: {
     texture: {
-      titel: `Texture Upgrade 2.0`,
+      title: `Texture Upgrade 2.0`,
       subtitle: "Textured Outside, Tech-tured Inside",
       desc: `Find your Mr. Right among SPARK's trendy color options:
       <br />
@@ -300,11 +338,11 @@ window.spark20Config = {
         "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec11PcF2.jpg",
     },
     memory: {
-      title: "Up to 256GB <br /> ROM+16GB RAM",
+      title: "Up to 256GB ROM <br /> +16GB RAM",
       subtitle: "Big Space. Bigger Potential",
       desc: `Capture all good memories in doubled memory capacity.
       Turbocharge your system with up to 16GB RAM using Memory
-      Fusion. Run fast, carrying it all - the perfect blend of
+      Fusion. <br /> Run fast, carrying it all - the perfect blend of
       capacity and velocity.`,
       datas: [
         {
@@ -331,16 +369,16 @@ window.spark20Config = {
       for prolonged usage.`,
       datas: [
         {
-          name: `Up to <br class='mob' /> 256GB`,
-          desc: "Large Memory",
+          name: `5000mAh`,
+          desc: "Super Battery",
         },
         {
-          name: `Up to <br class='mob' /> 16GB`,
-          desc: "Memory Fusion",
+          name: `18W`,
+          desc: "Fast Charge",
         },
         {
-          name: `System <br class='mob' /> Slimming`,
-          desc: "Deep Cleanup",
+          name: `Type-C`,
+          desc: "Interface",
         },
       ],
     },
