@@ -1,0 +1,223 @@
+@import "./vars";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "HR";
+}
+
+.spark20 {
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  font-family: "HurmeGeometricSans";
+  line-height: initial;
+  background-color: #000;
+  background-image: none !important;
+
+  &.false {
+    background-image: unset !important;
+  }
+
+  video {
+    width: auto;
+  }
+
+  section {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: -1px;
+    overflow: hidden;
+  }
+
+  .mob {
+    display: none;
+  }
+
+  .title_96 {
+    max-width: px-to-vw(1400);
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: px-to-vw(96);
+    text-align: center;
+
+    p {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
+      font-size: inherit;
+
+      span {
+        position: relative;
+        z-index: 1;
+        color: transparent;
+        font-size: inherit;
+        font-family: inherit;
+        white-space: nowrap;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: px-to-vw(20);
+        left: 50%;
+        display: block;
+        width: 110%;
+        height: px-to-vw(21);
+        background-color: #353535;
+        transform: translateX(-50%);
+        content: '';
+      }
+    }
+  }
+
+  .title_48 {
+    font-size: px-to-vw(48);
+    font-family: "HB";
+    line-height: 1;
+  }
+
+  .subtitle_24 {
+    margin-top: px-to-vw(24);
+    font-size: px-to-vw(24);
+    font-family: "HB";
+  }
+
+  .desc_18 {
+    margin-top: px-to-vw(24);
+    font-size: px-to-vw(18);
+    line-height: 1.2;
+  }
+
+  .bg_black {
+    position: relative;
+    color: #fff;
+    background-color: #000;
+  }
+
+  .bg_white {
+    position: relative;
+    background: linear-gradient(169.41deg, #ccdcec 0%, #eaf0f6 17.01%, #deeefe 31.26%, #fffefe 44.59%, #deeefe 56.45%, #f8fbfe 75.85%, #deeefe 88.26%),
+      linear-gradient(0deg, #fff, #fff);
+  }
+
+  .bg_white2 {
+    position: relative;
+    background: linear-gradient(173.34deg, rgba(223, 213, 224, .5) 0%, rgba(202, 224, 255, .5) 22.92%, rgba(223, 213, 224, .5) 46.87%, rgba(202, 224, 255, .5) 73.44%, rgba(223, 213, 224, .5) 92.71%),
+      linear-gradient(0deg, #fff, #fff);
+  }
+
+  .special_sec {
+    padding: px-to-vw(360) 0;
+    text-align: center;
+
+    .content {
+      position: relative;
+      width: px-to-vw(1486);
+      height: px-to-vw(1082);
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .special_text_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: translate(-50%, -50%);
+
+    .special_title {
+      color: transparent;
+      font-size: px-to-vw(96);
+      font-family: 'HB';
+    }
+
+    .special_desc {
+      color: transparent;
+      font-size: px-to-vw(24);
+      font-family: 'HB';
+    }
+  }
+
+  .sec_container2 {
+    position: relative;
+  }
+
+  .sec_container4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20 {
+    .pc {
+      display: none;
+    }
+
+    .mob {
+      display: block;
+    }
+
+    .title_96 {
+      max-width: px-to-vw-mb(1000);
+      font-size: px-to-vw-mb(88);
+  
+      p {
+        &:after {
+          bottom: px-to-vw-mb(12);
+          height: px-to-vw-mb(20);
+        }
+      }
+    }
+  
+    .title_48 {
+      font-size: px-to-vw-mb(72);
+    }
+  
+    .subtitle_24 {
+      margin-top: px-to-vw-mb(36);
+      font-size: px-to-vw-mb(36);
+    }
+  
+    .desc_18 {
+      margin-top: px-to-vw-mb(36);
+      font-size: px-to-vw-mb(27);
+    }
+
+    .special_sec {
+      padding: px-to-vw-mb(360) 0;
+  
+      .content {
+        width: px-to-vw-mb(1080);
+        height: px-to-vw-mb(1252);
+      }
+    }
+  
+    .special_text_container {
+      width: 88%;
+
+      .special_title {
+        font-size: px-to-vw-mb(136);
+        line-height: 1;
+      }
+  
+      .special_desc {
+        font-size: px-to-vw-mb(34);
+      }
+    }
+  }
+}

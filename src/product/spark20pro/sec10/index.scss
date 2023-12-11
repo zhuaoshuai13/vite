@@ -1,0 +1,17 @@
+@import '../vars';
+
+.spark20 .sec10 {
+  .special_text_container {
+    background-image: linear-gradient(282.39deg, #9febff 31.05%, #ffd1f9 111.41%);
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20 .sec10 {
+    .special_text_container {
+      .special_title {
+        font-size: px-to-vw-mb(110);
+      }
+    }
+  }
+}

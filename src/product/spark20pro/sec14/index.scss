@@ -1,0 +1,48 @@
+@import '../vars';
+
+.sec14 {
+  padding: px-to-vw(240) 0 px-to-vw(120);
+
+  .hios {
+    width: px-to-vw(652);
+    height: px-to-vw(652);
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .box_container {
+    margin-top: px-to-vw(428);
+  }
+
+  .tips {
+    max-width: px-to-vw(1440);
+    margin: px-to-vw(305) auto 0;
+    color: #00000080;
+    font-size: px-to-vw(21);
+    text-align: center;
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .sec14 {
+    padding: px-to-vw-mb(360) 0 px-to-vw-mb(60);
+
+    .hios {
+      width: px-to-vw-mb(652);
+      height: px-to-vw-mb(652);
+    }
+
+    .box_container {
+      margin-top: px-to-vw-mb(300);
+    }
+
+    .tips {
+      max-width: px-to-vw-mb(950);
+      margin: px-to-vw-mb(330) auto 0;
+      font-size: px-to-vw-mb(21);
+    }
+  }
+}

@@ -1,0 +1,258 @@
+@import '../vars';
+
+.spark20 .sec9 {
+  padding-bottom: px-to-vw(360);
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .title_96 {
+    font-size: px-to-vw(73);
+
+    p:after {
+      background: #8de4ff;
+    }
+
+    span {
+      background-image: linear-gradient(#000 0%, #000 100%);
+    }
+  }
+
+  .desc_18 {
+    position: relative;
+
+    span {
+      font-weight: 700;
+      font-family: "HB";
+    }
+
+    .desc_magic {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+  }
+
+  .spark20_container {
+    position: relative;
+  }
+
+  .phone_container {
+    position: absolute;
+    top: px-to-vw(-300);
+    left: px-to-vw(120);
+    display: flex;
+
+    .phone {
+      height: px-to-vw(551);
+      margin-right: px-to-vw(24);
+
+      &:nth-child(2) {
+        margin-top: px-to-vw(70);
+      }
+
+      &:nth-child(3) {
+        margin-top: px-to-vw(140);
+      }
+
+      &:nth-child(4) {
+        margin-top: px-to-vw(210);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .right1 {
+    position: relative;
+    width: px-to-vw(570);
+    margin: px-to-vw(607) 0 0 px-to-vw(1107);
+  }
+
+  .data_all {
+    position: relative;
+    margin-top: px-to-vw(48);
+
+    .dt {
+      font-size: px-to-vw(24);
+      font-family: "HB";
+    }
+
+    .data_magic {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+  }
+
+  .datas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: px-to-vw(24);
+    justify-content: space-between;
+    margin-top: px-to-vw(12);
+  }
+
+  .data_title {
+    width: fit-content;
+    color: transparent;
+    font-weight: 700;
+    font-size: px-to-vw(24);
+    font-family: "HB";
+    background: linear-gradient(282.39deg, #6fe0ff 31.05%, #ff7cef 111.41%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .data_desc {
+    font-size: px-to-vw(16);
+  }
+
+  .container2 {
+    display: flex;
+    align-items: center;
+    max-width: px-to-vw(1440);
+    margin: px-to-vw(600) auto 0;
+
+    .right2 {
+      position: relative;
+      flex-shrink: 0;
+      width: px-to-vw(654);
+      margin-left: px-to-vw(160);
+      padding: px-to-vw(100);
+      text-align: center;
+      background: #001738;
+      border-radius: px-to-vw(80);
+    }
+
+    .text_wrapper {
+      position: relative;
+    }
+
+    .title {
+      color: transparent;
+      font-size: px-to-vw(172);
+      line-height: 1;
+      background: linear-gradient(92.78deg, #7ad0e0 0%, #e5f5b6 80.41%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .desc {
+      margin-top: px-to-vw(-16);
+      color: #fff;
+      font-size: px-to-vw(35);
+    }
+
+    .water {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: px-to-vw(335);
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.sec9_bottom_mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20 .sec9 {
+    padding-bottom: px-to-vw-mb(360);
+
+    .spark20_container {
+      margin-top: px-to-vw-mb(360);
+    }
+
+    .phone_container {
+      position: unset;
+      margin-left: px-to-vw-mb(120);
+
+      .phone {
+        height: px-to-vw-mb(521);
+        margin-right: px-to-vw-mb(23);
+
+        &:nth-child(2) {
+          margin-top: px-to-vw-mb(66);
+        }
+
+        &:nth-child(3) {
+          margin-top: px-to-vw-mb(132);
+        }
+
+        &:nth-child(4) {
+          margin-top: px-to-vw-mb(198);
+        }
+      }
+    }
+
+    .right1 {
+      width: auto;
+      margin: px-to-vw-mb(118) px-to-vw-mb(110) 0;
+    }
+
+    .data_all {
+      margin-top: px-to-vw-mb(36);
+
+      .dt {
+        font-size: px-to-vw-mb(36);
+      }
+    }
+
+    .datas {
+      margin-top: px-to-vw-mb(12);
+    }
+
+    .data_title {
+      font-size: px-to-vw-mb(36);
+    }
+
+    .data_desc {
+      font-size: px-to-vw-mb(24);
+    }
+
+    .container2 {
+      flex-direction: column;
+      margin: px-to-vw-mb(460) auto 0;
+      
+      .right2 {
+        order: -1;
+        width: px-to-vw-mb(838);
+        margin: 0;
+        padding: px-to-vw-mb(120);
+        border-radius: px-to-vw-mb(100);
+      }
+
+      .title {
+        font-size: px-to-vw-mb(220);
+      }
+
+      .desc {
+        font-size: px-to-vw-mb(45);
+      }
+
+      .water {
+        height: px-to-vw-mb(428);
+      }
+
+      .left2 {
+        margin-top: px-to-vw-mb(104);
+        text-align: center;
+      }
+    }
+  }
+}
