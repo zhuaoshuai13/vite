@@ -15,7 +15,7 @@ $mobwidthPx: 1080px;
 }
 
 @mixin bg($url, $size: true) {
-  background-image: url("../../../assets/spark20/#{$url}");
+  background-image: url("../../../assets/spark20pro/#{$url}");
   background-repeat: no-repeat;
 
   @if $size == true {

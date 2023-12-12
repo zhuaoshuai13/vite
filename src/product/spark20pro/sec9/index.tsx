@@ -4,16 +4,16 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
-import sec9PcF2 from "../../../assets/spark20/sec9PcF2.png"
-import sec9PcMagicSkin from "../../../assets/spark20/sec9PcMagicSkin.png"
-import sec9PcBlack from "../../../assets/spark20/sec9PcBlack.png"
-import sec9PcGold from "../../../assets/spark20/sec9PcGold.png"
-import sec9PcWhite from "../../../assets/spark20/sec9PcWhite.png"
+import sec9PcF2 from "../../../assets/spark20pro/sec9PcF2.png"
+import sec9PcMagicSkin from "../../../assets/spark20pro/sec9PcMagicSkin.png"
+import sec9PcBlack from "../../../assets/spark20pro/sec9PcBlack.png"
+import sec9PcGold from "../../../assets/spark20pro/sec9PcGold.png"
+import sec9PcWhite from "../../../assets/spark20pro/sec9PcWhite.png"
 import { ScreenContext } from "../../../provider"
 
 const Sec9 = () => {
   const { isPc } = useContext(ScreenContext)
-  const { spark20Config } = window as any
+  const { spark20proConfig } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -168,26 +168,26 @@ const Sec9 = () => {
                 <h4
                   className='title_48'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec9.texture.title,
+                    __html: spark20proConfig.sec9.texture.title,
                   }}
                 ></h4>
                 <p
                   className='subtitle_24'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec9.texture.subtitle,
+                    __html: spark20proConfig.sec9.texture.subtitle,
                   }}
                 ></p>
                 <div className='desc_18'>
                   <p
                     className='desc_other'
                     dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec9.texture.desc,
+                      __html: spark20proConfig.sec9.texture.desc,
                     }}
                   ></p>
                   <p
                     className='desc_magic'
                     dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec9.texture.desc_magic_skin,
+                      __html: spark20proConfig.sec9.texture.desc_magic_skin,
                     }}
                   ></p>
                 </div>
@@ -195,7 +195,7 @@ const Sec9 = () => {
               <div className='data_all'>
                 <div className='data_other'>
                   <div className='datas'>
-                    {spark20Config.sec9.texture.datas.map(
+                    {spark20proConfig.sec9.texture.datas.map(
                       (item: any, index: number) => {
                         return (
                           <div className='data' key={index}>
@@ -215,7 +215,7 @@ const Sec9 = () => {
                 </div>
                 <div className='data_magic'>
                   <div className='datas'>
-                    {spark20Config.sec9.texture.datas_magic_skin.map(
+                    {spark20proConfig.sec9.texture.datas_magic_skin.map(
                       (item: any, index: number) => {
                         return (
                           <div className='data' key={index}>
@@ -242,13 +242,13 @@ const Sec9 = () => {
                 <h4
                   className='title_48'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec9.water.title,
+                    __html: spark20proConfig.sec9.water.title,
                   }}
                 ></h4>
                 <p
                   className='desc_18'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec9.water.desc,
+                    __html: spark20proConfig.sec9.water.desc,
                   }}
                 ></p>
               </div>
@@ -259,13 +259,13 @@ const Sec9 = () => {
                 <div
                   className='title'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec9.water.pic_title,
+                    __html: spark20proConfig.sec9.water.pic_title,
                   }}
                 ></div>
                 <p
                   className='desc'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec9.water.pic_desc,
+                    __html: spark20proConfig.sec9.water.pic_desc,
                   }}
                 ></p>
               </div>

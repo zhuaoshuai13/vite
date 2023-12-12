@@ -5,29 +5,29 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { ScreenContext } from "../../../provider"
 import "./index.scss"
-import sec2PcF1 from "../../../assets/spark20/sec2PcF1.png"
-import sec2PcF3 from "../../../assets/spark20/sec2PcF3.png"
-import sec2PcF4 from "../../../assets/spark20/sec2PcF4.png"
-import sec2PcF5 from "../../../assets/spark20/sec2PcF5.png"
-import sec2PcF6 from "../../../assets/spark20/sec2PcF6.png"
-import sec2PcF7 from "../../../assets/spark20/sec2PcF7.png"
-import sec2PcF8 from "../../../assets/spark20/sec2PcF8.png"
-import sec2PcF9 from "../../../assets/spark20/sec2PcF9.png"
-import sec2PcF10 from "../../../assets/spark20/sec2PcF10.png"
-import sec2MbF1 from "../../../assets/spark20/sec2MbF1.png"
-import sec2MbF3 from "../../../assets/spark20/sec2MbF3.png"
-import sec2MbF4 from "../../../assets/spark20/sec2MbF4.png"
-import sec2MbF5 from "../../../assets/spark20/sec2MbF5.png"
-import sec2MbF6 from "../../../assets/spark20/sec2MbF6.png"
-import sec2MbF7 from "../../../assets/spark20/sec2MbF7.png"
-import sec2MbF8 from "../../../assets/spark20/sec2MbF8.png"
-import sec2MbF9 from "../../../assets/spark20/sec2MbF9.png"
-import sec2MbF10 from "../../../assets/spark20/sec2MbF10.png"
+import sec2PcF1 from "../../../assets/spark20pro/sec2PcF1.png"
+import sec2PcF3 from "../../../assets/spark20pro/sec2PcF3.png"
+import sec2PcF4 from "../../../assets/spark20pro/sec2PcF4.png"
+import sec2PcF5 from "../../../assets/spark20pro/sec2PcF5.png"
+import sec2PcF6 from "../../../assets/spark20pro/sec2PcF6.png"
+import sec2PcF7 from "../../../assets/spark20pro/sec2PcF7.png"
+import sec2PcF8 from "../../../assets/spark20pro/sec2PcF8.png"
+import sec2PcF9 from "../../../assets/spark20pro/sec2PcF9.png"
+import sec2PcF10 from "../../../assets/spark20pro/sec2PcF10.png"
+import sec2MbF1 from "../../../assets/spark20pro/sec2MbF1.png"
+import sec2MbF3 from "../../../assets/spark20pro/sec2MbF3.png"
+import sec2MbF4 from "../../../assets/spark20pro/sec2MbF4.png"
+import sec2MbF5 from "../../../assets/spark20pro/sec2MbF5.png"
+import sec2MbF6 from "../../../assets/spark20pro/sec2MbF6.png"
+import sec2MbF7 from "../../../assets/spark20pro/sec2MbF7.png"
+import sec2MbF8 from "../../../assets/spark20pro/sec2MbF8.png"
+import sec2MbF9 from "../../../assets/spark20pro/sec2MbF9.png"
+import sec2MbF10 from "../../../assets/spark20pro/sec2MbF10.png"
 
 const Sec2 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { isPc } = useContext(ScreenContext)
-  const { spark20Config } = window as any
+  const { spark20proConfig } = window as any
 
   const sec2Ani = () => {
     const tl = gsap
@@ -178,7 +178,7 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                {spark20Config.sec2.item1.title.map(
+                {spark20proConfig.sec2.item1.title.map(
                   (item: string, index: number) => {
                     return (
                       <div key={index}>
@@ -194,7 +194,7 @@ const Sec2 = () => {
             <div className='img_wrapper'></div>
             <div className='text_wrapper'>
               <div className='title'>
-                {spark20Config.sec2.item2.title.map(
+                {spark20proConfig.sec2.item2.title.map(
                   (item: string, index: number) => {
                     return (
                       <div
@@ -217,7 +217,7 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                {spark20Config.sec2.item3.title.map(
+                {spark20proConfig.sec2.item3.title.map(
                   (item: string, index: number) => {
                     return (
                       <div
@@ -240,11 +240,13 @@ const Sec2 = () => {
             </div>
             <div
               className='mah'
-              dangerouslySetInnerHTML={{ __html: spark20Config.sec2.item4.mah }}
+              dangerouslySetInnerHTML={{
+                __html: spark20proConfig.sec2.item4.mah,
+              }}
             ></div>
             <div className='text_wrapper'>
               <div className='title'>
-                {spark20Config.sec2.item4.title.map(
+                {spark20proConfig.sec2.item4.title.map(
                   (item: string, index: number) => {
                     return (
                       <div key={index}>
@@ -266,7 +268,7 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                {spark20Config.sec2.item5.title.map(
+                {spark20proConfig.sec2.item5.title.map(
                   (item: string, index: number) => {
                     return (
                       <div key={index}>
@@ -279,7 +281,7 @@ const Sec2 = () => {
               <div
                 className='desc'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec2.item5.desc,
+                  __html: spark20proConfig.sec2.item5.desc,
                 }}
               ></div>
             </div>
@@ -294,7 +296,7 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                {spark20Config.sec2.item6.title.map(
+                {spark20proConfig.sec2.item6.title.map(
                   (item: string, index: number) => {
                     return (
                       <div key={index}>
@@ -318,7 +320,7 @@ const Sec2 = () => {
               <div
                 className='title'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec2.item7.title,
+                  __html: spark20proConfig.sec2.item7.title,
                 }}
               ></div>
             </div>
@@ -335,13 +337,13 @@ const Sec2 = () => {
               <div
                 className='title'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec2.item8.title,
+                  __html: spark20proConfig.sec2.item8.title,
                 }}
               ></div>
               <div
                 className='desc'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec2.item8.desc,
+                  __html: spark20proConfig.sec2.item8.desc,
                 }}
               ></div>
             </div>
@@ -356,7 +358,7 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                {spark20Config.sec2.item9.title.map(
+                {spark20proConfig.sec2.item9.title.map(
                   (item: string, index: number) => {
                     return (
                       <div key={index}>
@@ -378,7 +380,7 @@ const Sec2 = () => {
             </div>
             <div className='text_wrapper'>
               <div className='title'>
-                {spark20Config.sec2.item10.title.map(
+                {spark20proConfig.sec2.item10.title.map(
                   (item: string, index: number) => {
                     return (
                       <div key={index}>
@@ -392,13 +394,13 @@ const Sec2 = () => {
                 <p
                   className='data1'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec2.item10.data1,
+                    __html: spark20proConfig.sec2.item10.data1,
                   }}
                 ></p>
                 <p
                   className='data2'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec2.item10.data2,
+                    __html: spark20proConfig.sec2.item10.data2,
                   }}
                 ></p>
               </div>
@@ -406,7 +408,7 @@ const Sec2 = () => {
             <div
               className='tips'
               dangerouslySetInnerHTML={{
-                __html: spark20Config.sec2.item10.tips,
+                __html: spark20proConfig.sec2.item10.tips,
               }}
             ></div>
           </div>

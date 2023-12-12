@@ -4,11 +4,11 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
-import sec7PcF1 from "../../../assets/spark20/sec7PcF1.png"
-import sec7MbF1 from "../../../assets/spark20/sec7MbF1.png"
+import sec7PcF1 from "../../../assets/spark20pro/sec7PcF1.png"
+import sec7MbF1 from "../../../assets/spark20pro/sec7MbF1.png"
 
 const Sec7 = () => {
-  const { spark20Config } = window as any
+  const { spark20proConfig } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -46,7 +46,7 @@ const Sec7 = () => {
     <section className='sec7'>
       <div className='content'>
         <h3 className='title_96 pc'>
-          {spark20Config.sec7.bigTitle.map((item: string, index: number) => {
+          {spark20proConfig.sec7.bigTitle.map((item: string, index: number) => {
             return (
               <p key={index}>
                 <span dangerouslySetInnerHTML={{ __html: item }}></span>
@@ -55,13 +55,15 @@ const Sec7 = () => {
           })}
         </h3>
         <h3 className='title_96 mob'>
-          {spark20Config.sec7.bigTitleMb.map((item: string, index: number) => {
-            return (
-              <p key={index}>
-                <span dangerouslySetInnerHTML={{ __html: item }}></span>
-              </p>
-            )
-          })}
+          {spark20proConfig.sec7.bigTitleMb.map(
+            (item: string, index: number) => {
+              return (
+                <p key={index}>
+                  <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                </p>
+              )
+            }
+          )}
         </h3>
         <div className='spark20_container'>
           <div className='left'>
@@ -69,24 +71,24 @@ const Sec7 = () => {
               <h4
                 className='title_48'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec7.design.title,
+                  __html: spark20proConfig.sec7.design.title,
                 }}
               ></h4>
               <p
                 className='subtitle_24'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec7.design.subtitle,
+                  __html: spark20proConfig.sec7.design.subtitle,
                 }}
               ></p>
               <p
                 className='desc_18'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec7.design.desc,
+                  __html: spark20proConfig.sec7.design.desc,
                 }}
               ></p>
             </div>
             <div className='datas'>
-              {spark20Config.sec7.design.datas.map(
+              {spark20proConfig.sec7.design.datas.map(
                 (item: any, index: number) => {
                   return (
                     <div className='data' key={index}>

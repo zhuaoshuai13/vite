@@ -4,13 +4,13 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
-import sec1PcSlogn from "../../../assets/spark20/sec1PcSlogn.png"
-import sec1PcF2 from "../../../assets/spark20/sec1PcF2.png"
+import sec1PcSlogn from "../../../assets/spark20pro/sec1PcSlogn.png"
+import sec1PcF2 from "../../../assets/spark20pro/sec1PcF2.png"
 import { ScreenContext } from "../../../provider"
 
 const Sec1 = () => {
   const { isPc } = useContext(ScreenContext)
-  const { spark20Config } = window as any
+  const { spark20proConfig } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -38,11 +38,22 @@ const Sec1 = () => {
   return (
     <section className='sec1'>
       <picture>
-        <source media='(min-width: 1081px)' srcSet={spark20Config.sec1.kv.pc} />
-        <source media='(max-width: 1080px)' srcSet={spark20Config.sec1.kv.mob} />
-        <img className='kv' src={spark20Config.sec1.kv.pc} alt='kv' loading='lazy' />
+        <source
+          media='(min-width: 1081px)'
+          srcSet={spark20proConfig.sec1.kv.pc}
+        />
+        <source
+          media='(max-width: 1080px)'
+          srcSet={spark20proConfig.sec1.kv.mob}
+        />
+        <img
+          className='kv'
+          src={spark20proConfig.sec1.kv.pc}
+          alt='kv'
+          loading='lazy'
+        />
       </picture>
-      {spark20Config.sec1.type === "type1" ? (
+      {spark20proConfig.sec1.type === "type1" ? (
         <div className='content'>
           <img
             className='slogn'
@@ -50,9 +61,12 @@ const Sec1 = () => {
             alt='SPARK 20'
             loading='lazy'
           />
-          <div className='title' dangerouslySetInnerHTML={{__html: spark20Config.sec1.title}}></div>
+          <div
+            className='title'
+            dangerouslySetInnerHTML={{ __html: spark20proConfig.sec1.title }}
+          ></div>
           <div className='items'>
-            {spark20Config.sec1.feature.map((item: any, index: number) => {
+            {spark20proConfig.sec1.feature.map((item: any, index: number) => {
               return (
                 <div className='item' key={index}>
                   <div

@@ -11,23 +11,23 @@ import "swiper/css/pagination"
 
 import { EffectFade, Autoplay } from "swiper/modules"
 import "./index.scss"
-import sec8PcF1 from "../../../assets/spark20/sec8PcF1.jpg"
-import sec8PcF2 from "../../../assets/spark20/sec8PcF2.jpg"
-import sec8PcF3 from "../../../assets/spark20/sec8PcF3.jpg"
-import sec8PcF4 from "../../../assets/spark20/sec8PcF4.jpg"
-import sec8MbF1 from "../../../assets/spark20/sec8MbF1.jpg"
-import sec8MbF2 from "../../../assets/spark20/sec8MbF2.jpg"
-import sec8MbF3 from "../../../assets/spark20/sec8MbF3.jpg"
-import sec8MbF4 from "../../../assets/spark20/sec8MbF4.jpg"
+import sec8PcF1 from "../../../assets/spark20pro/sec8PcF1.jpg"
+import sec8PcF2 from "../../../assets/spark20pro/sec8PcF2.jpg"
+import sec8PcF3 from "../../../assets/spark20pro/sec8PcF3.jpg"
+import sec8PcF4 from "../../../assets/spark20pro/sec8PcF4.jpg"
+import sec8MbF1 from "../../../assets/spark20pro/sec8MbF1.jpg"
+import sec8MbF2 from "../../../assets/spark20pro/sec8MbF2.jpg"
+import sec8MbF3 from "../../../assets/spark20pro/sec8MbF3.jpg"
+import sec8MbF4 from "../../../assets/spark20pro/sec8MbF4.jpg"
 import { ScreenContext } from "../../../provider"
 
 const Sec8 = () => {
   const { isPc } = useContext(ScreenContext)
-  const { spark20Config } = window as any
+  const { spark20proConfig } = window as any
   const [index, setIndex] = useState(0)
   const [swiperInstance, setSwiperInstance] = useState<any>(null)
   const swiperRef = useRef<any>()
-  const { colorList } = spark20Config.sec8
+  const { colorList } = spark20proConfig.sec8
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 

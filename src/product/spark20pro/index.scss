@@ -101,14 +101,14 @@
 
   .bg_white {
     position: relative;
-    background: linear-gradient(169.41deg, #ccdcec 0%, #eaf0f6 17.01%, #deeefe 31.26%, #fffefe 44.59%, #deeefe 56.45%, #f8fbfe 75.85%, #deeefe 88.26%),
-      linear-gradient(0deg, #fff, #fff);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .02), rgba(0, 0, 0, .02)),
+      linear-gradient(176.11deg, #eeffea -1.73%, #f6fff3 -1.72%, #eef3e0 14.95%, #edffe9 27.99%, #fcfff2 41.09%, #e4fedd 56.05%, #fcfff2 71.39%, #efffeb 86.81%, #fdfff9 100%);
   }
 
   .bg_white2 {
     position: relative;
-    background: linear-gradient(173.34deg, rgba(223, 213, 224, .5) 0%, rgba(202, 224, 255, .5) 22.92%, rgba(223, 213, 224, .5) 46.87%, rgba(202, 224, 255, .5) 73.44%, rgba(223, 213, 224, .5) 92.71%),
-      linear-gradient(0deg, #fff, #fff);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .02), rgba(0, 0, 0, .02)),
+      linear-gradient(176.11deg, #eeffea -1.73%, #f6fff3 -1.72%, #eef3e0 14.95%, #edffe9 27.99%, #fcfff2 41.09%, #e4fedd 56.05%, #fcfff2 71.39%, #efffeb 86.81%, #fdfff9 100%);
   }
 
   .special_sec {

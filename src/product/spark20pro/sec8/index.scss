@@ -65,48 +65,48 @@
       &:nth-child(1) {
         &.active {
           .circle_big {
-            border-color: #8ec3e2;
+            border-color: #2e313a;
           }
         }
 
         .circle_small {
-          background-color: #8ec3e2;
+          background-color: #2e313a;
         }
       }
 
       &:nth-child(2) {
         &.active {
           .circle_big {
-            border-color: #383b3f;
+            border-color: #edf6f8;
           }
         }
 
         .circle_small {
-          background-color: #383b3f;
+          background-color: #edf6f8;
         }
       }
 
       &:nth-child(3) {
         &.active {
           .circle_big {
-            border-color: #ffebc6;
+            border-color: #fcedd1;
           }
         }
 
         .circle_small {
-          background-color: #ffebc6;
+          background-color: #fcedd1;
         }
       }
 
       &:nth-child(4) {
         &.active {
           .circle_big {
-            border-color: #e5f6f3;
+            border-color: #82bb78;
           }
         }
 
         .circle_small {
-          background-color: #e5f6f3;
+          background-color: #82bb78;
         }
       }
     }

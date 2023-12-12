@@ -80,13 +80,10 @@
 
   .data_title {
     width: fit-content;
-    color: transparent;
+    color: #93cd84;
     font-size: px-to-vw(32);
     font-family: "HB";
     line-height: 1;
-    background: linear-gradient(96.25deg, #ffc2e1 0%, #edd29a 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
   }
 
   .data_desc {

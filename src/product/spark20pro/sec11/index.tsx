@@ -5,13 +5,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import LazyLoad from "react-lazyload"
 import "./index.scss"
-import sec11PcF3 from "../../../assets/spark20/sec11PcF3.png"
-import sec11MbF3 from "../../../assets/spark20/sec11MbF3.jpg"
-import sec11PcF4 from "../../../assets/spark20/sec11PcF4.png"
-import sec11MbF4 from "../../../assets/spark20/sec11MbF4.png"
+import sec11PcF3 from "../../../assets/spark20pro/sec11PcF3.png"
+import sec11MbF3 from "../../../assets/spark20pro/sec11MbF3.jpg"
+import sec11PcF4 from "../../../assets/spark20pro/sec11PcF4.png"
+import sec11MbF4 from "../../../assets/spark20pro/sec11MbF4.png"
 
 const Sec11 = () => {
-  const { spark20Config } = window as any
+  const { spark20proConfig } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -91,21 +91,23 @@ const Sec11 = () => {
     <section className='sec11'>
       <div className='content'>
         <h3 className='title_96'>
-          {spark20Config.sec11.bigTitle.map((item: string, index: number) => {
-            return (
-              <p key={index}>
-                <span dangerouslySetInnerHTML={{ __html: item }}></span>
-              </p>
-            )
-          })}
+          {spark20proConfig.sec11.bigTitle.map(
+            (item: string, index: number) => {
+              return (
+                <p key={index}>
+                  <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                </p>
+              )
+            }
+          )}
         </h3>
 
         <div className='container1'>
           <div className='video_box'>
             <LazyLoad offset={1000}>
               <video
-                src={spark20Config.sec11.processorVideo.src}
-                poster={spark20Config.sec11.processorVideo.poster}
+                src={spark20proConfig.sec11.processorVideo.src}
+                poster={spark20proConfig.sec11.processorVideo.poster}
                 autoPlay
                 muted
                 loop
@@ -119,24 +121,24 @@ const Sec11 = () => {
               <h4
                 className='title_48'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec11.processor.title,
+                  __html: spark20proConfig.sec11.processor.title,
                 }}
               ></h4>
               <p
                 className='subtitle_24'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec11.processor.subtitle,
+                  __html: spark20proConfig.sec11.processor.subtitle,
                 }}
               ></p>
               <p
                 className='desc_18'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec11.processor.desc,
+                  __html: spark20proConfig.sec11.processor.desc,
                 }}
               ></p>
             </div>
             <div className='datas'>
-              {spark20Config.sec11.processor.datas.map(
+              {spark20proConfig.sec11.processor.datas.map(
                 (item: string, index: number) => {
                   return (
                     <div className='data' key={index}>
@@ -158,19 +160,19 @@ const Sec11 = () => {
               <h4
                 className='title_48'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec11.engine.title,
+                  __html: spark20proConfig.sec11.engine.title,
                 }}
               ></h4>
               <p
                 className='subtitle_24'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec11.engine.subtitle,
+                  __html: spark20proConfig.sec11.engine.subtitle,
                 }}
               ></p>
               <p
                 className='desc_18'
                 dangerouslySetInnerHTML={{
-                  __html: spark20Config.sec11.engine.desc,
+                  __html: spark20proConfig.sec11.engine.desc,
                 }}
               ></p>
             </div>
@@ -179,8 +181,8 @@ const Sec11 = () => {
             <div className='pic_box'>
               <LazyLoad offset={1000}>
                 <video
-                  src={spark20Config.sec11.engineVideo.src}
-                  poster={spark20Config.sec11.engineVideo.poster}
+                  src={spark20proConfig.sec11.engineVideo.src}
+                  poster={spark20proConfig.sec11.engineVideo.poster}
                   autoPlay
                   muted
                   loop
@@ -192,13 +194,13 @@ const Sec11 = () => {
                 <div
                   className='title'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec11.engine_video_text1.title,
+                    __html: spark20proConfig.sec11.engine_video_text1.title,
                   }}
                 ></div>
                 <p
                   className='desc'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec11.engine_video_text1.desc,
+                    __html: spark20proConfig.sec11.engine_video_text1.desc,
                   }}
                 ></p>
               </div>
@@ -206,13 +208,13 @@ const Sec11 = () => {
                 <div
                   className='title'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec11.engine_video_text2.title,
+                    __html: spark20proConfig.sec11.engine_video_text2.title,
                   }}
                 ></div>
                 <p
                   className='desc'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec11.engine_video_text2.desc,
+                    __html: spark20proConfig.sec11.engine_video_text2.desc,
                   }}
                 ></p>
               </div>
@@ -232,26 +234,26 @@ const Sec11 = () => {
                 <h4
                   className='title_48'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec11.memory.title,
+                    __html: spark20proConfig.sec11.memory.title,
                   }}
                 ></h4>
                 <p
                   className='subtitle_24'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec11.memory.subtitle,
+                    __html: spark20proConfig.sec11.memory.subtitle,
                   }}
                 ></p>
                 <p
                   className='desc_18'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec11.memory.desc,
+                    __html: spark20proConfig.sec11.memory.desc,
                   }}
                 ></p>
               </div>
             </div>
             <div className='right3'>
               <div className='datas'>
-                {spark20Config.sec11.memory.datas.map(
+                {spark20proConfig.sec11.memory.datas.map(
                   (item: any, index: number) => {
                     return (
                       <div className='data' key={index}>
@@ -273,7 +275,7 @@ const Sec11 = () => {
           <div
             className='tips'
             dangerouslySetInnerHTML={{
-              __html: spark20Config.sec11.memory.tips,
+              __html: spark20proConfig.sec11.memory.tips,
             }}
           ></div>
         </div>
@@ -292,26 +294,26 @@ const Sec11 = () => {
                 <h4
                   className='title_48'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec11.battery.title,
+                    __html: spark20proConfig.sec11.battery.title,
                   }}
                 ></h4>
                 <p
                   className='subtitle_24'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec11.battery.subtitle,
+                    __html: spark20proConfig.sec11.battery.subtitle,
                   }}
                 ></p>
                 <p
                   className='desc_18'
                   dangerouslySetInnerHTML={{
-                    __html: spark20Config.sec11.battery.desc,
+                    __html: spark20proConfig.sec11.battery.desc,
                   }}
                 ></p>
               </div>
             </div>
             <div className='right4'>
               <div className='datas'>
-                {spark20Config.sec11.battery.datas.map(
+                {spark20proConfig.sec11.battery.datas.map(
                   (item: any, index: number) => {
                     return (
                       <div className='data' key={index}>

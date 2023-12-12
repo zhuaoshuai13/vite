@@ -101,13 +101,10 @@
 
   .data_title {
     width: fit-content;
-    color: transparent;
+    color: #75e458;
     font-weight: 700;
     font-size: px-to-vw(24);
     font-family: "HB";
-    background: linear-gradient(282.39deg, #6fe0ff 31.05%, #ff7cef 111.41%);
-    -webkit-background-clip: text;
-    background-clip: text;
   }
 
   .data_desc {

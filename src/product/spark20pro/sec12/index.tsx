@@ -4,11 +4,11 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
-import sec3PcBg from "../../../assets/spark20/sec3PcBg.png"
-import sec3MbBg from "../../../assets/spark20/sec3MbBg.png"
+import sec3PcBg from "../../../assets/spark20pro/sec3PcBg.png"
+import sec3MbBg from "../../../assets/spark20pro/sec3MbBg.png"
 
 const Sec12 = () => {
-  const { spark20Config } = window as any
+  const { spark20proConfig } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -39,11 +39,11 @@ const Sec12 = () => {
         <div className='special_text_container'>
           <h3
             className='special_title'
-            dangerouslySetInnerHTML={{ __html: spark20Config.sec12.title }}
+            dangerouslySetInnerHTML={{ __html: spark20proConfig.sec12.title }}
           ></h3>
           <p
             className='special_desc'
-            dangerouslySetInnerHTML={{ __html: spark20Config.sec12.desc }}
+            dangerouslySetInnerHTML={{ __html: spark20proConfig.sec12.desc }}
           ></p>
         </div>
       </div>
