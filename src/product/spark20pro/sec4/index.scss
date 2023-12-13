@@ -14,6 +14,17 @@
 
   .spark20_container {
     position: relative;
+
+    .datas {
+      display: flex;
+      gap: px-to-vw(52);
+      justify-content: center;
+      width: px-to-vw(1440);
+      margin: px-to-vw(120) auto 0;
+      padding: px-to-vw(61);
+      background: linear-gradient(158.66deg, #00132e 55.92%, #002251 89.43%);
+      border-radius: px-to-vw(60);
+    }
   }
 
   .video_box {
@@ -32,15 +43,6 @@
     position: relative;
     width: px-to-vw(600);
     margin: px-to-vw(473) 0 0 px-to-vw(1086);
-  }
-
-  .datas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: px-to-vw(24);
-    justify-content: space-between;
-    width: 90%;
-    margin-top: px-to-vw(48);
   }
 
   .data_title {
@@ -87,6 +89,15 @@
       margin-left: px-to-vw(10);
       padding: px-to-vw(70);
       background: linear-gradient(158.66deg, #00132e 55.92%, #002251 89.43%);
+    }
+
+    .datas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: px-to-vw(24);
+      justify-content: space-between;
+      width: 90%;
+      margin-top: px-to-vw(48);
     }
 
     .icon {

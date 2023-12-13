@@ -7,8 +7,8 @@ import "./index.scss"
 import sec9PcF2 from "../../../assets/spark20pro/sec9PcF2.png"
 import sec9PcMagicSkin from "../../../assets/spark20pro/sec9PcMagicSkin.png"
 import sec9PcBlack from "../../../assets/spark20pro/sec9PcBlack.png"
-import sec9PcGold from "../../../assets/spark20pro/sec9PcGold.png"
-import sec9PcWhite from "../../../assets/spark20pro/sec9PcWhite.png"
+import sec9PcBlush from "../../../assets/spark20pro/sec9PcBlush.png"
+import sec9PcIvory from "../../../assets/spark20pro/sec9PcIvory.png"
 import { ScreenContext } from "../../../provider"
 
 const Sec9 = () => {
@@ -158,10 +158,10 @@ const Sec9 = () => {
         <div className='content'>
           <div className='spark20_container'>
             <div className='phone_container'>
-              <img src={sec9PcMagicSkin} className='phone' loading='lazy' />
               <img src={sec9PcBlack} className='phone' loading='lazy' />
-              <img src={sec9PcGold} className='phone' loading='lazy' />
-              <img src={sec9PcWhite} className='phone' loading='lazy' />
+              <img src={sec9PcIvory} className='phone' loading='lazy' />
+              <img src={sec9PcBlush} className='phone' loading='lazy' />
+              <img src={sec9PcMagicSkin} className='phone' loading='lazy' />
             </div>
             <div className='right1'>
               <div className='text_wrapper'>

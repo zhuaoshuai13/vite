@@ -12,11 +12,14 @@ import sec5PcIcon4 from "../../../assets/spark20pro/sec5PcIcon4.png"
 import sec5PcStep1 from "../../../assets/spark20pro/sec5PcStep1.png"
 import sec5PcStep2 from "../../../assets/spark20pro/sec5PcStep2.png"
 import sec5PcStep3 from "../../../assets/spark20pro/sec5PcStep3.png"
+import sec5PcArrowTop from "../../../assets/spark20pro/sec5PcArrowTop.png"
+import sec5PcF4 from "../../../assets/spark20pro/sec5PcF4.jpg"
 import { useButton, Button } from "../components"
 
 const Sec5 = () => {
   const { isOpen, setIsOpen } = useButton()
   const [isOpen2, setIsOpen2] = useState(false)
+  const [slide, setSlide] = useState("")
   const [statusIndex, setStatusIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
   const { spark20proConfig } = window as any
@@ -125,6 +128,17 @@ const Sec5 = () => {
             handleStatusClick(2)
           }, 1000)
         }, 1000)
+      },
+    })
+
+    const t7 = gsap.timeline()
+
+    ScrollTrigger.create({
+      trigger: ".sec5 #dual-video",
+      start: `top 50%`,
+      animation: t7,
+      onEnter: () => {
+        setSlide("bottom")
       },
     })
   }
@@ -329,13 +343,11 @@ const Sec5 = () => {
                 <Button isOpen={isOpen} setIsOpen={setIsOpen} />
               </div>
             </div>
-            <div className='container2' id='dual_video'>
+            <div className='container2' id='dual-video'>
               <div className='left2'>
                 <img
-                  src={spark20proConfig.image.sec5.super_flash_light}
-                  className={
-                    isOpen ? "Super_Flash_Light" : "Super_Flash_Light off"
-                  }
+                  src={sec5PcF4}
+                  className={slide + " Super_Flash_Light"}
                   loading='lazy'
                 />
               </div>
@@ -360,6 +372,20 @@ const Sec5 = () => {
                       __html: spark20proConfig.sec5.dual_video.desc,
                     }}
                   ></p>
+                </div>
+                <div className='slide_button'>
+                  <div
+                    className='arrow_wrapper arrow_top'
+                    onClick={() => setSlide("top")}
+                  >
+                    <img src={sec5PcArrowTop} loading='lazy' />
+                  </div>
+                  <div
+                    className='arrow_wrapper arrow_bottom'
+                    onClick={() => setSlide("bottom")}
+                  >
+                    <img src={sec5PcArrowTop} loading='lazy' />
+                  </div>
                 </div>
               </div>
             </div>

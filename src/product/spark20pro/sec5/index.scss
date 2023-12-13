@@ -74,6 +74,26 @@
     }
   }
 
+  #dual-video {
+    .left2 {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: px-to-vw(832);
+        transition: all .5s;
+
+        &.top {
+          transform: translateY(6%);
+        }
+
+        &.bottom {
+          transform: translateY(-6%);
+        }
+      }
+    }
+  }
+
   .container2 {
     display: flex;
     gap: px-to-vw(10);
@@ -123,8 +143,6 @@
       bottom: px-to-vw(70);
       width: px-to-vw(550);
       height: px-to-vw(141);
-
-      // @include bg('sec5PcButton1.png');
 
       .all_status {
         position: relative;
@@ -188,14 +206,6 @@
         &:nth-child(3) {
           background: linear-gradient(90deg, #eeecb6 0%, #ffd18c 100%);
         }
-
-        // &.active {
-        //   padding: px-to-vw(10) 0;
-
-        //   span {
-        //     display: block;
-        //   }
-        // }
 
         span {
           display: none;
@@ -263,6 +273,35 @@
         .click_item {
           width: 32%;
           cursor: pointer;
+        }
+      }
+    }
+
+    .slide_button {
+      position: absolute;
+      bottom: px-to-vw(71);
+      left: 50%;
+      padding: px-to-vw(26) px-to-vw(20);
+      background: #ffffff1a;
+      border-radius: px-to-vw(46);
+      box-shadow: 0 2px 2px 0 #00000040;
+      transform: translateX(-50%);
+
+      .arrow_wrapper {
+        width: px-to-vw(46);
+        font-size: 0;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .arrow_bottom {
+        margin-top: px-to-vw(45);
+
+        img {
+          transform: rotate(180deg);
         }
       }
     }

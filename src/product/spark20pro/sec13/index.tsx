@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import LazyLoad from "react-lazyload"
 import "./index.scss"
-import sec13PcF2 from "../../../assets/spark20pro/sec13PcF2.png"
+import sec13PcF2 from "../../../assets/spark20pro/sec13PcF2.jpg"
 import sec13MbF2 from "../../../assets/spark20pro/sec13MbF2.png"
 
 const Sec13 = () => {

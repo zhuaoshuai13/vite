@@ -22,7 +22,7 @@
     position: absolute;
     right: px-to-vw(100);
     bottom: 0;
-    height: px-to-vw(881);
+    height: px-to-vw(692);
   }
 
   .left {
@@ -36,9 +36,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: px-to-vw(24);
-    justify-content: space-between;
     width: 90%;
     margin-top: px-to-vw(48);
+  }
+
+  .data {
+    margin-right: px-to-vw(48);
   }
 
   .data_title {

@@ -53,7 +53,6 @@ const Sec4 = () => {
       start: `top 30%`,
       animation: t3,
       onEnter: () => {
-        console.log(isOpen)
         setIsOpen(true)
       },
     })
@@ -111,7 +110,26 @@ const Sec4 = () => {
                 }}
               ></p>
             </div>
-            <div className='datas'>
+            {/* <div className='datas'>
+              {spark20proConfig.sec4.camera.datas.map(
+                (item: any, index: number) => {
+                  return (
+                    <div className='data' key={index}>
+                      <div
+                        className='data_title'
+                        dangerouslySetInnerHTML={{ __html: item.name }}
+                      ></div>
+                      <p
+                        className='data_desc'
+                        dangerouslySetInnerHTML={{ __html: item.desc }}
+                      ></p>
+                    </div>
+                  )
+                }
+              )}
+            </div> */}
+          </div>
+          <div className='datas'>
               {spark20proConfig.sec4.camera.datas.map(
                 (item: any, index: number) => {
                   return (
@@ -129,7 +147,6 @@ const Sec4 = () => {
                 }
               )}
             </div>
-          </div>
         </div>
         <div className='container2'>
           <div className='left2'>

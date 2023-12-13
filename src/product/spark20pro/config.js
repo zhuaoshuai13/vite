@@ -31,36 +31,40 @@ window.spark20proConfig = {
       title: ["400% Big Volume", "Stereo Dual Speaker"],
     },
     item2: {
-      title: ["6.56’’ 90HZ", "Hole Screen"],
+      title: "Magic Skin 2.0",
     },
-    item3: {
-      title: ["Dynamic Port"],
-    },
+    item3: {},
     item4: {
-      title: ["5000mAh", "18w Fast Charge"],
-      mah: "mAh",
+      title: "6.78’’ 120HZ Hole Screen",
     },
     item5: {
-      title: ["32MP", "Front Camera"],
-      desc: "with 3 Light Modes",
+      title: "Dynamic Port",
     },
     item6: {
-      title: ["50MP Ultra", "Clear Camera"],
+      title: ["5000 mAh", "+33W Super Charge"],
     },
     item7: {
-      title: "Magic skin 2.0",
+      title: ["108MP", "Ultra Sensing Camera"],
     },
     item8: {
-      title: "IP53",
-      desc: "Water & Dust Proof",
+      title: "32MP Selfie",
     },
     item9: {
-      title: ["G85 Gaming", "Processor"],
+      title: "Dual View Video",
     },
     item10: {
+      title: "AI",
+    },
+    item11: {
+      title: "IP53",
+    },
+    item12: {
+      title: ["G99 Ultra", "Boost Processor"],
+    },
+    item13: {
       title: ["BIG RAM+BIG ROM", "BIG WIN"],
-      data1: "UP TO 16GB* RAM",
-      data2: "UP TO 256GB* ROM",
+      data1: "UP TO 16GB RAM",
+      data2: "UP TO 256GB ROM",
       tips: "* Up to 16GB, 8GB+8GB Extended RAM",
     },
   },

@@ -68,7 +68,6 @@ const Sec8 = () => {
 
   useEffect(() => {
     sec8Ani()
-    console.log("动画加载swiper")
   }, [])
 
   return (

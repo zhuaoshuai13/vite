@@ -75,6 +75,7 @@ const Sec11 = () => {
     const t5 = gsap
       .timeline()
       .from(".sec11 .container4 .box", 1, { y: "30%", opacity: 0 }, "a")
+      .from(".sec11 .container4 .pic_box", 1, { x: "50%", opacity: 0 }, "a")
 
     ScrollTrigger.create({
       trigger: ".sec11 .container4 .box",

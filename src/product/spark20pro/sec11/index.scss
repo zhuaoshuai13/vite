@@ -153,26 +153,38 @@
   }
 
   .container4 {
-    margin-top: px-to-vw(100);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: px-to-vw(330);
+    padding-left: px-to-vw(240);
 
     .pic_box {
+      flex-shrink: 0;
       text-align: center;
     }
 
     .battery {
-      height: px-to-vw(845);
+      height: px-to-vw(504);
     }
 
     .box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: px-to-vw(-100);
+      order: -1;
+      width: px-to-vw(580);
     }
 
     .left4 {
-      width: px-to-vw(650);
-      margin-right: px-to-vw(175);
+      // width: px-to-vw(650);
+      // margin-right: px-to-vw(175);
+    }
+
+    .right4 {
+      margin-top: px-to-vw(42);
+    }
+
+    .datas {
+      display: flex;
+      gap: px-to-vw(24);
     }
 
     .data {
