@@ -2,6 +2,7 @@
 // @ts-ignore
 
 window.pop8Config = {
+  VITE_FRAMES_URL: '/fileadmin/sitedesign/product/SPARK_20C/dist',
   sec1: {
     icon1Top: "52%",
     icon1Left: "55%",
@@ -289,13 +290,13 @@ window.pop8Config = {
     p4: "18W <br/> Fast Charge",
     tips: "128GB ROM+8GB RAM*(4GB+4GB Extended) <br/> 128GB ROM+16GB RAM*(8GB+8GB Extended)",
   },
-  sec1Type1ImagePc: 'https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/png/sec1PcBg.png',
-  sec1Type1ImageMob: 'https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/png/sec1MobBg.png',
+  sec1Type1ImagePc: '/fileadmin/sitedesign/product/SPARK_20C/dist/png/sec1PcBg.png',
+  sec1Type1ImageMob: '/fileadmin/sitedesign/product/SPARK_20C/dist/png/sec1MobBg.png',
   sec1Video: {
-    pcType2: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec1PcType2.mp4",
-    mobType2: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec1PcType2.mp4",
-    pcType3: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec1PcFull.mp4",
-    mobType3: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec1MobFull.mp4",
+    pcType2: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec1PcType2.mp4",
+    mobType2: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec1PcType2.mp4",
+    pcType3: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec1PcFull.mp4",
+    mobType3: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec1MobFull.mp4",
     type2Post: "",
     type2PostMob: "",
     type3Post: "",
@@ -303,37 +304,39 @@ window.pop8Config = {
   },
   sec1Type4ImagePc: '',
   sec1Type4ImageMob: '',
+  //type1 有两屏切换, type2 只有一屏
+  sec3Type: 'type2',
   sec6Image: {
-    pic1: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/png/sec7MbF4.png"
+    pic1: "/fileadmin/sitedesign/product/SPARK_20C/dist/png/sec7MbF4.png"
   },
   sec6Video: {
-    pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec6Pc.mp4",//白人
+    pc: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec6Pc.mp4",//白人
   },
   sec7Video: {
-    pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec7Pc.mp4",
-    mob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec7Mob.mp4",
-    v1PostMob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec7MobPoster.jpg",
+    pc: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec7Pc.mp4",
+    mob: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec7Mob.mp4",
+    v1PostMob: "/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec7MobPoster.jpg",
   },
   sec8Video: {
     // 线上
-    v1: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V1.mp4",
-    v1Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V1Poster.jpg",
-    v2: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V2.mp4",
-    v2Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V2Poster.jpg",
-    v3: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V3.mp4",
-    v3Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V3Poster.jpg",
-    v4: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V4.mp4",
-    v4Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V4Poster.jpg",
-    v5: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V5.mp4",
-    v5Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V5Poster.jpg",
-    v6: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V6.mp4",
-    v6Post: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V6Poster.jpg",
+    v1: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V1.mp4",
+    v1Post: "/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V1Poster.jpg",
+    v2: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V2.mp4",
+    v2Post: "/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V2Poster.jpg",
+    v3: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V3.mp4",
+    v3Post: "/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V3Poster.jpg",
+    v4: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V4.mp4",
+    v4Post: "/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V4Poster.jpg",
+    v5: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V5.mp4",
+    v5Post: "/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V5Poster.jpg",
+    v6: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec8V6.mp4",
+    v6Post: "/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec8V6Poster.jpg",
   },
   sec11Video: {
-    pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec11Pc.mp4",
+    pc: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec11Pc.mp4",
   },
   sec12Video: {
-    pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec12Pc.mp4",
-    mob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec12Mob.mp4",
+    pc: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec12Pc.mp4",
+    mob: "/fileadmin/sitedesign/product/SPARK_20C/dist/video/sec12Mob.mp4",
   },
 }

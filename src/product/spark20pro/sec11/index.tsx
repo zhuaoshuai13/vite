@@ -1,17 +1,18 @@
-import { useEffect } from "react"
+import { useEffect, useContext } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import LazyLoad from "react-lazyload"
 import "./index.scss"
-import sec11PcF3 from "../../../assets/spark20pro/sec11PcF3.png"
-import sec11MbF3 from "../../../assets/spark20pro/sec11MbF3.jpg"
 import sec11PcF4 from "../../../assets/spark20pro/sec11PcF4.png"
 import sec11MbF4 from "../../../assets/spark20pro/sec11MbF4.png"
+import sec11PcF1 from "../../../assets/spark20pro/sec11PcF1.jpg"
+import { ScreenContext } from "../../../provider"
 
 const Sec11 = () => {
   const { spark20proConfig } = window as any
+  const { isPc } = useContext(ScreenContext)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -26,26 +27,64 @@ const Sec11 = () => {
       animation: tl,
     })
 
-    const t2 = gsap
-      .timeline()
-      .from(
-        ".sec11 .container1 .text_wrapper",
-        1,
-        { y: "30%", opacity: 0 },
-        "a"
-      )
-      .from(
-        ".sec11 .container1 .datas",
-        1,
-        { y: "30%", opacity: 0, delay: 0.5 },
-        "a"
-      )
+    if (isPc) {
+      const t2 = gsap
+        .timeline()
+        .from(
+          ".sec11 .container1 .video_box",
+          0.4,
+          { clipPath: "inset(0px 0px 0px)", transform: 'translate(0, -50%) scale(1)' },
+          "a"
+        )
+        .from(
+          ".sec11 .container1 .text_wrapper",
+          0.4,
+          { y: "30%", opacity: 0, delay: 0.25 },
+          "a"
+        )
+        .from(
+          ".sec11 .container1 .datas",
+          0.4,
+          { y: "30%", opacity: 0, delay: 0.3 },
+          "a"
+        )
 
-    ScrollTrigger.create({
-      trigger: ".sec11 .container1 .right1",
-      start: `top 85%`,
-      animation: t2,
-    })
+      ScrollTrigger.create({
+        trigger: ".sec11 .container1",
+        start: `top 30%`,
+        end: "+=100%",
+        animation: t2,
+        scrub: 0.25,
+        pin: true,
+      })
+    } else {
+      const t2 = gsap
+        .timeline()
+        .from(
+          ".sec11 .container1 .video_box",
+          1,
+          { y: "30%", opacity: 0 },
+          "a"
+        )
+        .from(
+          ".sec11 .container1 .text_wrapper",
+          1,
+          { y: "30%", opacity: 0, delay: 0.25 },
+          "a"
+        )
+        .from(
+          ".sec11 .container1 .datas",
+          1,
+          { y: "30%", opacity: 0, delay: 0.5 },
+          "a"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".sec11 .container1",
+        start: `top 85%`,
+        animation: t2,
+      })
+    }
 
     const t3 = gsap
       .timeline()
@@ -107,8 +146,9 @@ const Sec11 = () => {
           <div className='video_box'>
             <LazyLoad offset={1000}>
               <video
-                src={spark20proConfig.sec11.processorVideo.src}
-                poster={spark20proConfig.sec11.processorVideo.poster}
+                // src={spark20proConfig.sec11.processorVideo.src}
+                // poster={spark20proConfig.sec11.processorVideo.poster}
+                poster={sec11PcF1}
                 autoPlay
                 muted
                 loop
@@ -225,9 +265,9 @@ const Sec11 = () => {
 
         <div className='container3'>
           <picture>
-            <source media='(min-width: 1081px)' srcSet={sec11PcF3} />
-            <source media='(max-width: 1080px)' srcSet={sec11MbF3} />
-            <img src={sec11PcF3} className='memory' loading='lazy' />
+            <source media='(min-width: 1081px)' srcSet={spark20proConfig.sec11.memory.imgPc} />
+            <source media='(max-width: 1080px)' srcSet={spark20proConfig.sec11.memory.imgMb} />
+            <img src={spark20proConfig.sec11.memory.imgPc} className='memory' loading='lazy' />
           </picture>
           <div className='box'>
             <div className='left3'>
@@ -286,7 +326,7 @@ const Sec11 = () => {
             <picture>
               <source media='(min-width: 1081px)' srcSet={sec11PcF4} />
               <source media='(max-width: 1080px)' srcSet={sec11MbF4} />
-              <img src={sec11PcF4} className='battery' loading='lazy' />
+              <img src={sec11PcF4} className='battery' />
             </picture>
           </div>
           <div className='box'>

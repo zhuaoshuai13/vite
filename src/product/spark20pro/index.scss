@@ -153,12 +153,25 @@
     position: relative;
   }
 
+  .sec_container3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .sec_container4 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .sec_container5 {
+    position: relative;
+    color: #fff;
   }
 }
 
@@ -216,7 +229,8 @@
       }
   
       .special_desc {
-        font-size: px-to-vw-mb(34);
+        // font-size: px-to-vw-mb(34);
+        font-size: 3.1vw;
       }
     }
   }

@@ -32,7 +32,8 @@ const Spark20 = () => {
         <Sec9 />
       </div>
       <div className='bg_white2'>
-        <div className='bg_black sec_container3'>
+        <div className="sec_container5">
+          <div className='bg_black sec_container3'></div>
           <Sec10 />
           <Sec11 />
           <Sec12 />

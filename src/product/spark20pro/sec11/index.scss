@@ -11,6 +11,7 @@
 
   .container1 {
     position: relative;
+    margin-top: px-to-vw(580);
 
     .datas {
       margin-top: px-to-vw(36);
@@ -22,13 +23,18 @@
 
     .video_box {
       position: absolute;
-      top: px-to-vw-mb(-230);
-      left: px-to-vw-mb(-300);
+      top: 50%;
+      left: 0;
+      width: px-to-vw(1920);
       height: px-to-vw(1080);
+      transform: scale(.7) translate(-25%,-55%);
+      transform-origin: center top;
+      clip-path: inset(10vw 20vw 1vw);
     }
 
     video {
-      height: px-to-vw(1080);
+      // height: px-to-vw(591);
+      width: 100%;
     }
   }
   
@@ -42,7 +48,7 @@
   .right1 {
     position: relative;
     width: px-to-vw(600);
-    margin: px-to-vw(580) 0 0 px-to-vw(1129);
+    margin: px-to-vw(0) 0 0 px-to-vw(1166);
   }
 
   .data_title {
@@ -202,7 +208,7 @@
     padding-bottom: px-to-vw-mb(360);
 
     .container1 {
-      margin-top: px-to-vw-mb(200);
+      margin-top: px-to-vw-mb(360);
 
       .datas {
         margin-top: px-to-vw-mb(36);
@@ -214,12 +220,17 @@
 
       .video_box {
         position: unset;
-        height: px-to-vw-mb(1000);
-        margin-left: px-to-vw-mb(-450);
+        width: px-to-vw-mb(872);
+        height: px-to-vw-mb(615);
+        margin: 0 auto;
+        transform: unset;
+        clip-path: unset;
       }
 
       video {
-        height: px-to-vw-mb(1000);
+        height: px-to-vw-mb(615);
+        object-fit: cover;
+        object-position: center;
       }
     }
 
@@ -232,7 +243,7 @@
 
     .right1 {
       width: auto;
-      margin: px-to-vw-mb(50) px-to-vw-mb(120) 0;
+      margin: px-to-vw-mb(137) px-to-vw-mb(120) 0;
     }
 
     .data_title {
@@ -323,16 +334,22 @@
     }
 
     .container4 {
+      display: block;
       margin-top: px-to-vw-mb(360);
+      padding-left: 0;
+
+      .pic_box {
+        text-align: right;
+      }
 
       .battery {
-        width: 100%;
-        height: px-to-vw-mb(897);
+        height: px-to-vw-mb(544);
       }
 
       .box {
         display: block;
-        margin: 0 px-to-vw-mb(108) 0 px-to-vw-mb(150);
+        width: auto;
+        margin: px-to-vw-mb(100) px-to-vw-mb(108) 0 px-to-vw-mb(150);
       }
 
       .left4 {

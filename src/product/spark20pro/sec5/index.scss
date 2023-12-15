@@ -305,6 +305,15 @@
         }
       }
     }
+
+    .tips {
+      position: absolute;
+      right: px-to-vw(8);
+      bottom: px-to-vw(5);
+      color: #ffffff80;
+      font-size: px-to-vw(12);
+      text-align: right;
+    }
   }
 }
 
@@ -430,6 +439,34 @@
 
       .icon {
         height: px-to-vw-mb(533);
+      }
+
+      .slide_button {
+        bottom: px-to-vw-mb(95);
+        padding: px-to-vw-mb(40) px-to-vw-mb(28);
+        border-radius: px-to-vw-mb(62);
+
+        .arrow_wrapper {
+          width: px-to-vw-mb(60);
+        }
+
+        .arrow_bottom {
+          margin-top: px-to-vw-mb(60);
+        }
+      }
+
+      .tips {
+        right: px-to-vw-mb(6);
+        bottom: 0;
+        font-size: px-to-vw-mb(25);
+      }
+    }
+
+    #dual-video {
+      .left2 {
+        img {
+          height: px-to-vw-mb(1117);
+        }
       }
     }
   }

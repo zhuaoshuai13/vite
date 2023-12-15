@@ -2,6 +2,7 @@
 // @ts-ignore
 
 window.pop8Config = {
+  VITE_FRAMES_URL: 'https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_Go_2024/dist',//序列帧地址
   sec1: {
     icon1Top: "52%",
     icon1Left: "88%",

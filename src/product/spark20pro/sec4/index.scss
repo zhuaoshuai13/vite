@@ -29,20 +29,19 @@
 
   .video_box {
     position: absolute;
-    top: px-to-vw(-90);
-    left: px-to-vw(50);
-    height: px-to-vw(420);
-    transform: rotate(-25deg);
+    bottom: px-to-vw(191);
+    left: px-to-vw(-43);
+    height: px-to-vw(700);
   }
   
   .camera {
-    height: px-to-vw(420);
+    height: px-to-vw(700);
   }
 
   .right1 {
     position: relative;
     width: px-to-vw(600);
-    margin: px-to-vw(473) 0 0 px-to-vw(1086);
+    margin: px-to-vw(450) 0 0 px-to-vw(1130);
   }
 
   .data_title {
@@ -119,27 +118,36 @@
 
     .spark20_container {
       margin-top: px-to-vw-mb(360);
+
+      .datas {
+        flex-wrap: wrap;
+        gap: px-to-vw-mb(78);
+        justify-content: space-between;
+        width: px-to-vw-mb(960);
+        margin-top: 0;
+        padding: px-to-vw-mb(80);
+      }
     }
 
     .video_box {
       position: unset;
-      height: px-to-vw-mb(400);
-      margin-left: px-to-vw-mb(100);
+      height: px-to-vw-mb(596);
+      margin-left: px-to-vw-mb(-44);
     }
 
     .camera {
-      height: px-to-vw-mb(400);
+      height: px-to-vw-mb(596);
     }
 
     .right1 {
-      width: px-to-vw-mb(750);
-      margin: px-to-vw-mb(200) 0 0 px-to-vw-mb(120);
+      width: px-to-vw-mb(880);
+      margin: px-to-vw-mb(86) 0 0 px-to-vw-mb(120);
     }
 
     .datas {
       gap: px-to-vw-mb(34);
       width: 100%;
-      margin-top: px-to-vw-mb(36);
+      margin-top: 0;
 
       .data_title {
         font-size: px-to-vw-mb(48);
@@ -162,11 +170,24 @@
 
       .right2 {
         margin: px-to-vw-mb(16) 0 0;
-        padding: px-to-vw-mb(111) px-to-vw-mb(98) px-to-vw-mb(98);
+        padding: px-to-vw-mb(100) px-to-vw-mb(88) px-to-vw-mb(98);
 
         .datas {
           width: 90%;
-          margin-top: px-to-vw-mb(64);
+          margin-top: px-to-vw-mb(50);
+        }
+
+        .title_48 {
+          font-size: px-to-vw-mb(50);
+        }
+
+        .subtitle_24 {
+          margin-top: px-to-vw-mb(32);
+          font-size: px-to-vw-mb(32);
+        }
+
+        .desc_18 {
+          margin-top: px-to-vw-mb(32);
         }
       }
 

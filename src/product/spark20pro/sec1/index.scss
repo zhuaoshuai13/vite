@@ -12,7 +12,10 @@
   }
 
   .kv {
+    width: 100%;
     height: px-to-vw(960);
+    object-fit: contain;
+    object-position: center;
   }
 
   .slogn {
@@ -94,6 +97,8 @@
     }
 
     .items {
+      justify-content: center;
+
       .item {
         &:after {
           height: 80%;
@@ -102,11 +107,11 @@
       }
 
       .item_title {
-        font-size: px-to-vw-mb(56);
+        font-size: px-to-vw-mb(44);
       }
 
       .item_desc {
-        font-size: px-to-vw-mb(21);
+        font-size: px-to-vw-mb(16);
       }
 
       .dts_logo {

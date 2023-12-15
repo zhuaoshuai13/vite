@@ -12,7 +12,10 @@
   }
 
   .kv {
+    width: 100%;
     height: px-to-vw(961);
+    object-fit: contain;
+    object-position: center top;
   }
 
   .slogn {

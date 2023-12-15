@@ -102,6 +102,28 @@ const Sec14 = () => {
         videoClick5.current.videoEvent(videoRef5)
       },
     })
+
+    const video6 = gsap.timeline()
+
+    ScrollTrigger.create({
+      trigger: ".sec14 .sec14_box:nth-child(6)",
+      start: `top 85%`,
+      animation: video6,
+      onEnter: () => {
+        videoClick6.current.videoEvent(videoRef6)
+      },
+    })
+
+    const video7 = gsap.timeline()
+
+    ScrollTrigger.create({
+      trigger: ".sec14 .sec14_box:nth-child(7)",
+      start: `top 85%`,
+      animation: video7,
+      onEnter: () => {
+        videoClick7.current.videoEvent(videoRef7)
+      },
+    })
   }
 
   useEffect(() => {
@@ -150,10 +172,10 @@ const Sec14 = () => {
             }
           />
           <Box
-            videoClick={videoClick6}
-            video_ref={videoRef6}
-            video_src={spark20proConfig.sec14.ca2.src}
-            video_poster={spark20proConfig.sec14.ca2.poster}
+            videoClick={videoClick2}
+            video_ref={videoRef2}
+            video_src={spark20proConfig.sec14.ca2Video.src}
+            video_poster={spark20proConfig.sec14.ca2Video.poster}
             pause_color='black'
             text_box={
               <div className='text_box'>
@@ -184,8 +206,8 @@ const Sec14 = () => {
             }
           />
           <Box
-            videoClick={videoClick2}
-            video_ref={videoRef2}
+            videoClick={videoClick3}
+            video_ref={videoRef3}
             video_src={spark20proConfig.sec14.internetVideo.src}
             video_poster={spark20proConfig.sec14.internetVideo.poster}
             pause_color='white'
@@ -236,10 +258,10 @@ const Sec14 = () => {
             }
           />
           <Box
-            videoClick={videoClick7}
-            video_ref={videoRef7}
-            video_src={spark20proConfig.sec14.aiWallpaper.src}
-            video_poster={spark20proConfig.sec14.aiWallpaper.poster}
+            videoClick={videoClick4}
+            video_ref={videoRef4}
+            video_src={spark20proConfig.sec14.aiWallpaperVideo.src}
+            video_poster={spark20proConfig.sec14.aiWallpaperVideo.poster}
             pause_color='black'
             text_box={
               <div className='text_box'>
@@ -270,8 +292,8 @@ const Sec14 = () => {
             }
           />
           <Box
-            videoClick={videoClick3}
-            video_ref={videoRef3}
+            videoClick={videoClick5}
+            video_ref={videoRef5}
             video_src={spark20proConfig.sec14.aiTipsVideo.src}
             video_poster={spark20proConfig.sec14.aiTipsVideo.poster}
             pause_color='black'
@@ -304,8 +326,8 @@ const Sec14 = () => {
             }
           />
           <Box
-            videoClick={videoClick4}
-            video_ref={videoRef4}
+            videoClick={videoClick6}
+            video_ref={videoRef6}
             video_src={spark20proConfig.sec14.appTwinsVideo.src}
             video_poster={spark20proConfig.sec14.appTwinsVideo.poster}
             pause_color='black'
@@ -338,8 +360,8 @@ const Sec14 = () => {
             }
           />
           <Box
-            videoClick={videoClick5}
-            video_ref={videoRef5}
+            videoClick={videoClick7}
+            video_ref={videoRef7}
             video_src={spark20proConfig.sec14.socialVideo.src}
             video_poster={spark20proConfig.sec14.socialVideo.poster}
             pause_color='black'

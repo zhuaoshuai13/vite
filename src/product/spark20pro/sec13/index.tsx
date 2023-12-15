@@ -6,7 +6,6 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import LazyLoad from "react-lazyload"
 import "./index.scss"
 import sec13PcF2 from "../../../assets/spark20pro/sec13PcF2.jpg"
-import sec13MbF2 from "../../../assets/spark20pro/sec13MbF2.png"
 
 const Sec13 = () => {
   const { spark20proConfig } = window as any
@@ -94,9 +93,18 @@ const Sec13 = () => {
       ".sec_container3",
       1,
       {
+        scaleX: 0.93,
+        scaleY: 0.96,
+        clipPath: "inset(0px round 14px)",
+      },
+      "a"
+    )
+    .to(
+      ".sec13",
+      1,
+      {
         scale: 0.9,
         clipPath: "inset(0px round 14px)",
-        // backgroundColor: "rgba(255, 255, 255, 0.7)",
       },
       "a"
     )
@@ -218,7 +226,7 @@ const Sec13 = () => {
           <div className='pic_box'>
             <picture>
               <source media='(min-width: 1081px)' srcSet={sec13PcF2} />
-              <source media='(max-width: 1080px)' srcSet={sec13MbF2} />
+              <source media='(max-width: 1080px)' srcSet={sec13PcF2} />
               <img src={sec13PcF2} className='screen' loading='lazy' />
             </picture>
           </div>

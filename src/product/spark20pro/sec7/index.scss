@@ -21,7 +21,7 @@
   .design_phone {
     position: absolute;
     right: px-to-vw(100);
-    bottom: 0;
+    bottom: px-to-vw(-10);
     height: px-to-vw(692);
   }
 
@@ -92,9 +92,10 @@
     .design_phone {
       position: unset;
       display: block;
-      width: 100%;
-      height: px-to-vw-mb(770);
+      width: auto;
+      height: px-to-vw-mb(780);
       margin-top: px-to-vw-mb(120);
+      margin-left: px-to-vw-mb(36);
     }
   }
 }

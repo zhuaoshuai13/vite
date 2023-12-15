@@ -26,6 +26,7 @@ const PovaEight = () => {
     const res = (num * 1) / 19.2
     return `${res}vw`
   }
+  const global = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const sec1Ani = () => {
@@ -203,7 +204,7 @@ const PovaEight = () => {
     }
 
     for (let i = 0; i < 86; i++) {
-      images.push(`${import.meta.env.VITE_FRAMES_URL}/screenAni/90hz${i}.webp`)
+      images.push(`${global.pop8Config.VITE_FRAMES_URL}/screenAni/90hz${i}.webp`)
     }
 
     images.forEach((src) => {
@@ -284,7 +285,7 @@ const PovaEight = () => {
     }
 
     for (let i = 0; i < 225; i++) {
-      images.push(`${import.meta.env.VITE_FRAMES_URL}/landAni/0${i}.webp`)
+      images.push(`${global.pop8Config.VITE_FRAMES_URL}/landAni/0${i}.webp`)
     }
 
     images.forEach((src) => {

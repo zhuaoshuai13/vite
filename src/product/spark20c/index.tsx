@@ -26,6 +26,7 @@ const PovaEight = () => {
     const res = (num * 1) / 19.2
     return `${res}vw`
   }
+  const global = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const sec1Ani = () => {
@@ -167,23 +168,25 @@ const PovaEight = () => {
         animation: tl4,
       })
 
-      const tl5 = gsap
-        .timeline()
-        .to(".sec3 .box", 1, { opacity: 1 }, "m")
-        .to(".sec3 .img1", 1, { opacity: 0 }, "a")
-        .to(".sec3 .paramsa", 1, { opacity: 0 }, "a")
-        .to(".sec3 .img2", 1, { opacity: 1 }, "b")
-        .to(".sec3 .paramsb", 1, { opacity: 1 }, "b")
-
-      ScrollTrigger.create({
-        trigger: ".sec3 .box",
-        start: responsive?.md ? `top 20%` : `top 10%`,
-        end: "+=100%",
-        anticipatePin: 0,
-        animation: tl5,
-        scrub: 0.5,
-        pin: true,
-      })
+      if(global.pop8Config.sec3Type==='type1') {
+        const tl5 = gsap
+          .timeline()
+          .to(".sec3 .box", 1, { opacity: 1 }, "m")
+          .to(".sec3 .img1", 1, { opacity: 0 }, "a")
+          .to(".sec3 .paramsa", 1, { opacity: 0 }, "a")
+          .to(".sec3 .img2", 1, { opacity: 1 }, "b")
+          .to(".sec3 .paramsb", 1, { opacity: 1 }, "b")
+  
+        ScrollTrigger.create({
+          trigger: ".sec3 .box",
+          start: responsive?.md ? `top 20%` : `top 10%`,
+          end: "+=100%",
+          anticipatePin: 0,
+          animation: tl5,
+          scrub: 0.5,
+          pin: true,
+        })
+      }
     })
 
     return () => ctx.revert() // <- Cleanup!
@@ -212,7 +215,7 @@ const PovaEight = () => {
     }
 
     for (let i = 0; i < 33; i++) {
-      images.push(`${import.meta.env.VITE_FRAMES_URL}/webp/screenAni/phone${i}.webp`)
+      images.push(`${global.pop8Config.VITE_FRAMES_URL}/webp/screenAni/phone${i}.webp`)
     }
 
     images.forEach((src) => {
@@ -293,7 +296,7 @@ const PovaEight = () => {
     }
 
     for (let i = 1; i < 108; i++) {
-      images.push(`${import.meta.env.VITE_FRAMES_URL}/webp/landAni/dynamic${i}.webp`)
+      images.push(`${global.pop8Config.VITE_FRAMES_URL}/webp/landAni/dynamic${i}.webp`)
     }
 
     images.forEach((src) => {

@@ -4,7 +4,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
-import sec7PcF1 from "../../../assets/spark20pro/sec7PcF1.png"
+import sec7PcF1 from "../../../assets/spark20pro/sec7PcF1.webp"
 import sec7MbF1 from "../../../assets/spark20pro/sec7MbF1.png"
 
 const Sec7 = () => {

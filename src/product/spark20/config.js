@@ -5,7 +5,7 @@ window.spark20Config = {
   },
   sec1: {
     // type1: 文案+图片; type2: 图片
-    type: "type1",
+    type: "type2",
     title: "50MP Expert",
     kv: {
       pc: "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec1PcKv.jpg",
@@ -27,6 +27,12 @@ window.spark20Config = {
     ],
   },
   sec2: {
+    //type1: 只配置文案; type2: 只配置图片--type2.imgPc(pc端图片), type2.imgMb(移动端图片)
+    type: 'type1',
+    type2: {
+      imgPc: "",
+      imgMb: "",
+    },
     item1: {
       title: ["400% Big Volume", "Stereo Dual Speaker"],
     },
@@ -564,6 +570,14 @@ window.spark20Config = {
     },
   },
   image: {
+    sec2: {
+      item5: {
+        imgPc: '/fileadmin/sitedesign/product/SPARK_20_1208/dist/png/sec2PcF5.png',//黑人版本
+        imgMb: '/fileadmin/sitedesign/product/SPARK_20_1208/dist/png/sec2MbF5.png',//黑人版本
+        // imgPc: '/fileadmin/sitedesign/product/SPARK_20_1208/dist/png/sec2PcF5_2.png',//白人版本
+        // imgMb: '/fileadmin/sitedesign/product/SPARK_20_1208/dist/png/sec2MbF5_2.png',//白人版本
+      },
+    },
     sec4: {
       super_night_mode:
         "/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec4PcF2_2.jpg", //黑人版本

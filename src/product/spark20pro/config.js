@@ -8,8 +8,8 @@ window.spark20proConfig = {
     type: "type1",
     title: "108MP Champion",
     kv: {
-      pc: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec1PcKv.jpg",
-      mob: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec1MbKv.jpg",
+      pc: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec1PcKv.jpg",
+      mob: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec1MbKv.jpg",
     },
     feature: [
       {
@@ -21,12 +21,18 @@ window.spark20proConfig = {
         featureDesc: "Ultra Boost <br /> Processor",
       },
       {
-        featureTitle: "16GBRAM",
-        featureDesc: "+256GB ROM <br /> (8GB+8GBExtended)",
+        featureTitle: "16GB RAM",
+        featureDesc: "+256GB ROM <br /> (8GB+8GB Extended)",
       },
     ],
   },
   sec2: {
+    //type1: 只配置文案; type2: 只配置图片--type2.imgPc(pc端图片), type2.imgMb(移动端图片)
+    type: 'type1',
+    type2: {
+      imgPc: "",
+      imgMb: "",
+    },
     item1: {
       title: ["400% Big Volume", "Stereo Dual Speaker"],
     },
@@ -35,7 +41,7 @@ window.spark20proConfig = {
     },
     item3: {},
     item4: {
-      title: "6.78’’ 120HZ Hole Screen",
+      title: "6.78’’ 120Hz Hole Screen",
     },
     item5: {
       title: "Dynamic Port",
@@ -54,6 +60,7 @@ window.spark20proConfig = {
     },
     item10: {
       title: "AI",
+      desc: "Wallpaper",
     },
     item11: {
       title: "IP53",
@@ -66,6 +73,11 @@ window.spark20proConfig = {
       data1: "UP TO 16GB RAM",
       data2: "UP TO 256GB ROM",
       tips: "* Up to 16GB, 8GB+8GB Extended RAM",
+      imgPc: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/png/sec2PcF13.png",//16GB版本
+      imgMb: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/png/sec2MbF13.png",//16GB版本
+      // imgPc: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/png/sec2PcF13_2.png",//21GB版本
+      // imgMb: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/png/sec2PcF13_2.png",//21GB版本
+      
     },
   },
   sec3: {
@@ -127,14 +139,14 @@ window.spark20proConfig = {
       ],
     },
     cameraVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec4PcV1.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec4PcV1.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec4PcV1.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec4PcV1.jpg",
     },
     engineVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec11PcV2.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec11PcV2.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec11PcF2.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec11PcF2.jpg",
     },
   },
   sec5: {
@@ -186,6 +198,7 @@ window.spark20proConfig = {
       title: "Dual Video",
       subtitle: "Front and Back, Inspirations Never Lack!",
       desc: `Fire up both front and rear cameras; Expand your creative playground! This exciting interactive feature empowers you with a world of possibilities to ignite your video ideas!`,
+      tips: "* Some products require a system update to experience Dual View.",
     },
     video_2k: {
       title: "2K Video",
@@ -197,14 +210,14 @@ window.spark20proConfig = {
       in 2K details, inescapable from SPARK’s eagle eye!`,
     },
     selfieVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec5PcSelfie.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec5PcSelfie.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcSelfie.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcSelfie.jpg",
     },
     heightQualityVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec5PcV3.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec5PcV3.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF3.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF3.jpg",
     },
   },
   sec6: {
@@ -311,12 +324,16 @@ window.spark20proConfig = {
       title: "G99 Ultra Boost Processor",
       subtitle: "The Mightiest 4G Processor!",
       desc: `Unleash power beyond limit with the mighty and robust MTK G99 processor, the undisputed champion in its class. Set new standards for seamless and stable operations, experienced every day.`,
-      datas: ["2*Cortex-A75 @2000 MHz", "6*Cortex-A55 @1800 MHz"],
+      datas: [
+        "2*Cortex-A76 @2.2GHz",
+        "6*Cortex-A55 @2.0GHz",
+        "Mali-G57 MC2",
+      ],
     },
     processorVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec11PcV1.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec11PcV1.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec11PcV1.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec11PcV1.jpg",
     },
     engine: {
       title: "Performance Upgrade",
@@ -337,14 +354,14 @@ window.spark20proConfig = {
       desc: "Game Optimisation",
     },
     engineVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec11PcV2.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec11PcV2.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec11PcF2.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec11PcF2.jpg",
     },
     memory: {
-      title: "Up to 256GB ROM <br /> +21GB RAM",
+      title: "Up to 256GB ROM <br /> +16GB RAM",
       subtitle: "Big Space. Bigger Potential",
-      desc: `Capture all good memories in doubled memory capacity. Turbocharge your system with up to 21GB RAM using Memory Fusion. <br />
+      desc: `Capture all good memories in doubled memory capacity. Turbocharge your system with up to 16GB RAM using Memory Fusion. <br />
       Run fast, carrying it all - the perfect blend of capacity and velocity.`,
       datas: [
         {
@@ -352,7 +369,7 @@ window.spark20proConfig = {
           desc: "Large Memory",
         },
         {
-          name: `Up to <br class='mob' /> 21GB`,
+          name: `Up to <br class='mob' /> 16GB`,
           desc: "Memory Fusion",
         },
         {
@@ -360,16 +377,20 @@ window.spark20proConfig = {
           desc: "Deep Cleanup",
         },
       ],
-      tips: "* Up to 21GB, 12GB+9GB Extended RAM",
+      tips: "* Up to 16GB RAM, 8GB+8GB Extended RAM",
+      imgPc: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec11PcF3.jpg",//16GB版本
+      imgMb: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec11MbF3.jpg",//16GB版本
+      // imgPc: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec11PcF3_2.jpg",//12GB+9GB版本
+      // imgMb: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec11MbF3_2.jpg",//12GB+9GB版本
     },
     battery: {
       title: "5000mAh Large Battery 33W Super Charge (Type-C)",
       subtitle: "Epic Endurance, Rapid Revive",
-      desc: `Awaken your superpower with the 5000mAh super battery, fueled by 18W fast charging. Watch as it revives like Superman's energy bar fills up, fortified with an extended service life for prolonged usage.`,
+      desc: `Awaken your superpower with the 5000mAh super battery, fueled by 33W fast charging. Watch as it revives like Superman's energy bar fills up, fortified with an extended service life for prolonged usage.`,
       datas: [
         {
           name: `5000mAh`,
-          desc: "Large Battery",
+          desc: "Super Battery",
         },
         {
           name: `33W`,
@@ -427,7 +448,7 @@ window.spark20proConfig = {
         },
         {
           name: `Hole Screen`,
-          desc: "6.56'' LCD",
+          desc: "6.78'' LCD",
         },
         {
           name: `Smart Refresh 3.1`,
@@ -436,9 +457,9 @@ window.spark20proConfig = {
       ],
     },
     speakerVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec13PcV1.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec13PcV1.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec13PcV1.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec13PcV1.jpg",
     },
   },
   sec14: {
@@ -528,56 +549,66 @@ window.spark20proConfig = {
     texts of the aforementioned page are for reference only, which may
     vary depending on the actual phone.`,
     dynamicPortVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV1.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV1.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF1.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF1.jpg",
+    },
+    ca2Video: {
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV2.mp4",
+      poster:
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF2.jpg",
     },
     internetVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV2.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV3.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF2.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF3.jpg",
+    },
+    aiWallpaperVideo: {
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV4.mp4",
+      poster:
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF4.jpg",
     },
     aiTipsVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV3.mp4",
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV5.mp4",
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF3.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF5.jpg",
     },
     appTwinsVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV4.mp4", //黑人版本
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV6.mp4", //黑人版本
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF4.jpg", //黑人版本
-      // src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV4_2.mp4", //白人版本
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF6.jpg", //黑人版本
+      // src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV6_2.mp4", //白人版本
       // poster:
-      //   "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF4_2.jpg", //白人版本
+      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF6_2.jpg", //白人版本
     },
     socialVideo: {
-      src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV5.mp4", //黑人版本
+      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV7.mp4", //黑人版本
       poster:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF5.jpg", //黑人版本
-      // src: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/video/sec14PcV5_2.mp4", //白人版本
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF7.jpg", //黑人版本
+      // src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV7_2.mp4", //白人版本
       // poster:
-      //   "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec14PcF5_2.jpg", //白人版本
+      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF7_2.jpg", //白人版本
     },
   },
   image: {
     sec4: {
       super_night_mode:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec4PcF2_2.jpg", //黑人版本
-      // super_night_mode: 'https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec4PcF2_3.jpg',//白人版本
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec4PcF2_2.jpg", //黑人版本
+      // super_night_mode: '/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec4PcF2_3.jpg',//白人版本
     },
     sec5: {
-      cold: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_cold.jpg", //黑人版本
+      cold: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_cold.jpg", //黑人版本
       default:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_default.jpg", //黑人版本
-      warm: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_warm.jpg", //黑人版本
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_default.jpg", //黑人版本
+      warm: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_warm.jpg", //黑人版本
       super_flash_light:
-        "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF2_2.jpg", //黑人版本
-      // cold: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_2_cold.jpg", //白人版本
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF2_2.jpg", //黑人版本
+      // cold: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_2_cold.jpg", //白人版本
       // default:
-      //   "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_2_default.jpg", //白人版本
-      // warm: "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF1_2_warm.jpg", //白人版本
+      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_2_default.jpg", //白人版本
+      // warm: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_2_warm.jpg", //白人版本
       // super_flash_light:
-      //   "https://www.tecno.mez100.com.cn/fileadmin/sitedesign/product/SPARK_20_1208/dist/jpg/sec5PcF2_3.jpg", //白人版本
+      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF2_3.jpg", //白人版本
     },
   },
 }

@@ -350,6 +350,7 @@ const Sec5 = () => {
                   className={slide + " Super_Flash_Light"}
                   loading='lazy'
                 />
+                <div className="tips" dangerouslySetInnerHTML={{__html: spark20proConfig.sec5.dual_video.tips}}></div>
               </div>
               <div className='right2'>
                 <img src={sec5PcIcon4} className='icon' loading='lazy' />

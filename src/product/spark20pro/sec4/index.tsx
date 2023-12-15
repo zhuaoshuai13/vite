@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useContext } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -7,10 +7,12 @@ import LazyLoad from "react-lazyload"
 import "./index.scss"
 import sec4PcF3 from "../../../assets/spark20pro/sec4PcF3.png"
 import { Button, useButton } from "../components"
+import { ScreenContext } from "../../../provider"
 
 const Sec4 = () => {
   const { isOpen, setIsOpen } = useButton()
   const { spark20proConfig } = window as any
+  const { isPc } = useContext(ScreenContext)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -25,26 +27,49 @@ const Sec4 = () => {
       animation: tl,
     })
 
-    const t2 = gsap
-      .timeline()
-      .from(
-        ".sec4 .spark20_container .text_wrapper",
-        1,
-        { y: "30%", opacity: 0 },
-        "a"
-      )
-      .from(
-        ".sec4 .spark20_container .datas",
-        1,
-        { y: "30%", opacity: 0, delay: 0.5 },
-        "a"
-      )
+    if (isPc) {
+      const t2 = gsap
+        .timeline()
+        .from(
+          ".sec4 .spark20_container .text_wrapper",
+          1,
+          { y: "30%", opacity: 0 },
+          "a"
+        )
+        .from(
+          ".sec4 .spark20_container .datas",
+          1,
+          { y: "30%", opacity: 0, delay: 0.5 },
+          "a"
+        )
 
-    ScrollTrigger.create({
-      trigger: ".sec4 .right1",
-      start: `top 85%`,
-      animation: t2,
-    })
+      ScrollTrigger.create({
+        trigger: ".sec4 .right1",
+        start: `top 85%`,
+        animation: t2,
+      })
+    } else {
+      const t2 = gsap
+        .timeline()
+        .from(
+          ".sec4 .spark20_container .datas",
+          1,
+          { y: "30%", opacity: 0 },
+          "a"
+        )
+        .from(
+          ".sec4 .spark20_container .text_wrapper",
+          1,
+          { y: "30%", opacity: 0, delay: 0.5 },
+          "a"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".sec4 .spark20_container .datas",
+        start: `top 85%`,
+        animation: t2,
+      })
+    }
 
     const t3 = gsap.timeline()
 
@@ -89,6 +114,26 @@ const Sec4 = () => {
               ></video>
             </LazyLoad>
           </div>
+          {!isPc ? (
+            <div className='datas'>
+              {spark20proConfig.sec4.camera.datas.map(
+                (item: any, index: number) => {
+                  return (
+                    <div className='data' key={index}>
+                      <div
+                        className='data_title'
+                        dangerouslySetInnerHTML={{ __html: item.name }}
+                      ></div>
+                      <p
+                        className='data_desc'
+                        dangerouslySetInnerHTML={{ __html: item.desc }}
+                      ></p>
+                    </div>
+                  )
+                }
+              )}
+            </div>
+          ) : null}
           <div className='right1'>
             <div className='text_wrapper'>
               <h4
@@ -110,26 +155,9 @@ const Sec4 = () => {
                 }}
               ></p>
             </div>
-            {/* <div className='datas'>
-              {spark20proConfig.sec4.camera.datas.map(
-                (item: any, index: number) => {
-                  return (
-                    <div className='data' key={index}>
-                      <div
-                        className='data_title'
-                        dangerouslySetInnerHTML={{ __html: item.name }}
-                      ></div>
-                      <p
-                        className='data_desc'
-                        dangerouslySetInnerHTML={{ __html: item.desc }}
-                      ></p>
-                    </div>
-                  )
-                }
-              )}
-            </div> */}
           </div>
-          <div className='datas'>
+          {isPc ? (
+            <div className='datas'>
               {spark20proConfig.sec4.camera.datas.map(
                 (item: any, index: number) => {
                   return (
@@ -147,6 +175,7 @@ const Sec4 = () => {
                 }
               )}
             </div>
+          ) : null}
         </div>
         <div className='container2'>
           <div className='left2'>

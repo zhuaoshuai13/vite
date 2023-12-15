@@ -41,7 +41,9 @@ const Sec3 = (props: SecType) => {
         <div className='box'>
           <div className='circle'>
             <div className='img img1'></div>
-            <div className='img img2'></div>
+            {global.pop8Config.sec3Type === "type1" ? (
+              <div className='img img2'></div>
+            ) : null}
           </div>
           <div className='box1'>
             <div className='text_wrapper'>
@@ -104,64 +106,66 @@ const Sec3 = (props: SecType) => {
                 ></div>
               </div>
             </div>
-            <div className='params paramsb'>
-              <div className='param'>
-                <div
-                  className='title'
-                  dangerouslySetInnerHTML={{
-                    __html: global.pop8Config.sec3.param4t,
-                  }}
-                ></div>
-                <div
-                  className='desc'
-                  dangerouslySetInnerHTML={{
-                    __html: global.pop8Config.sec3.param4d,
-                  }}
-                ></div>
+            {global.pop8Config.sec3Type === "type1" ? (
+              <div className='params paramsb'>
+                <div className='param'>
+                  <div
+                    className='title'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pop8Config.sec3.param4t,
+                    }}
+                  ></div>
+                  <div
+                    className='desc'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pop8Config.sec3.param4d,
+                    }}
+                  ></div>
+                </div>
+                <div className='param'>
+                  <div
+                    className='title'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pop8Config.sec3.param5t,
+                    }}
+                  ></div>
+                  <div
+                    className='desc'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pop8Config.sec3.param5d,
+                    }}
+                  ></div>
+                </div>
+                <div className='param'>
+                  <div
+                    className='title'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pop8Config.sec3.param6t,
+                    }}
+                  ></div>
+                  <div
+                    className='desc'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pop8Config.sec3.param6d,
+                    }}
+                  ></div>
+                </div>
+                <div className='param'>
+                  <div
+                    className='title'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pop8Config.sec3.param7t,
+                    }}
+                  ></div>
+                  <div
+                    className='desc'
+                    dangerouslySetInnerHTML={{
+                      __html: global.pop8Config.sec3.param7d,
+                    }}
+                  ></div>
+                </div>
               </div>
-              <div className='param'>
-                <div
-                  className='title'
-                  dangerouslySetInnerHTML={{
-                    __html: global.pop8Config.sec3.param5t,
-                  }}
-                ></div>
-                <div
-                  className='desc'
-                  dangerouslySetInnerHTML={{
-                    __html: global.pop8Config.sec3.param5d,
-                  }}
-                ></div>
-              </div>
-              <div className='param'>
-                <div
-                  className='title'
-                  dangerouslySetInnerHTML={{
-                    __html: global.pop8Config.sec3.param6t,
-                  }}
-                ></div>
-                <div
-                  className='desc'
-                  dangerouslySetInnerHTML={{
-                    __html: global.pop8Config.sec3.param6d,
-                  }}
-                ></div>
-              </div>
-              <div className='param'>
-                <div
-                  className='title'
-                  dangerouslySetInnerHTML={{
-                    __html: global.pop8Config.sec3.param7t,
-                  }}
-                ></div>
-                <div
-                  className='desc'
-                  dangerouslySetInnerHTML={{
-                    __html: global.pop8Config.sec3.param7d,
-                  }}
-                ></div>
-              </div>
-            </div>
+            ) : null}
           </div>
           <div
             className='tips'
