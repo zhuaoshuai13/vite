@@ -121,7 +121,7 @@
 
       .datas {
         flex-wrap: wrap;
-        gap: px-to-vw-mb(78);
+        gap: px-to-vw-mb(78) px-to-vw-mb(30);
         justify-content: space-between;
         width: px-to-vw-mb(960);
         margin-top: 0;
