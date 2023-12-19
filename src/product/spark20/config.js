@@ -502,15 +502,15 @@ window.spark20Config = {
       multiple tasks. Get ready for its tips and prepare to be
       WOWed!`,
     },
-    appTwins: {
-      title: "APP Twins",
-      subtitle: "Mastering the Switch between Work & Life",
-      desc: `Tired of managing multiple devices for different accounts?
-      APP Twins have it simplified. By cloning apps, it enables
-      simultaneous login to various accounts, effortlessly
-      handling both personal and work profiles. Try it now on
-      WhatsApp, Messenger, Snapchat, Instagram, and more.`,
-    },
+    // appTwins: {
+    //   title: "APP Twins",
+    //   subtitle: "Mastering the Switch between Work & Life",
+    //   desc: `Tired of managing multiple devices for different accounts?
+    //   APP Twins have it simplified. By cloning apps, it enables
+    //   simultaneous login to various accounts, effortlessly
+    //   handling both personal and work profiles. Try it now on
+    //   WhatsApp, Messenger, Snapchat, Instagram, and more.`,
+    // },
     social: {
       title: "Social Turbo",
       subtitle: "Turbocharge the FUN of Social",

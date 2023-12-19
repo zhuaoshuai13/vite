@@ -109,208 +109,218 @@ const Sec14 = () => {
           <img src={sec14PcHios} alt='hios' loading='lazy' />
         </div>
         <div className='box_container'>
-          <Box
-            videoClick={videoClick1}
-            video_ref={videoRef1}
-            video_src={spark20Config.sec14.dynamicPortVideo.src}
-            video_poster={spark20Config.sec14.dynamicPortVideo.poster}
-            pause_color='black'
-            text_box={
-              <div className='text_box'>
-                <div className='icon icon1'>
-                  <img src={sec14PcIcon1} loading='lazy' />
+          {spark20Config.sec14.dynamicPort && (
+            <Box
+              videoClick={videoClick1}
+              video_ref={videoRef1}
+              video_src={spark20Config.sec14.dynamicPortVideo.src}
+              video_poster={spark20Config.sec14.dynamicPortVideo.poster}
+              pause_color='black'
+              text_box={
+                <div className='text_box'>
+                  <div className='icon icon1'>
+                    <img src={sec14PcIcon1} loading='lazy' />
+                  </div>
+                  <div className='text_wrapper'>
+                    <h4
+                      className='title_48'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.dynamicPort.title,
+                      }}
+                    ></h4>
+                    <p
+                      className='subtitle_24'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.dynamicPort.subtitle,
+                      }}
+                    ></p>
+                    <p
+                      className='desc_18'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.dynamicPort.desc,
+                      }}
+                    ></p>
+                  </div>
                 </div>
-                <div className='text_wrapper'>
-                  <h4
-                    className='title_48'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.dynamicPort.title,
-                    }}
-                  ></h4>
-                  <p
-                    className='subtitle_24'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.dynamicPort.subtitle,
-                    }}
-                  ></p>
-                  <p
-                    className='desc_18'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.dynamicPort.desc,
-                    }}
-                  ></p>
+              }
+            />
+          )}
+          {spark20Config.sec14.internet && (
+            <Box
+              videoClick={videoClick2}
+              video_ref={videoRef2}
+              video_src={spark20Config.sec14.internetVideo.src}
+              video_poster={spark20Config.sec14.internetVideo.poster}
+              pause_color='white'
+              text_box={
+                <div className='text_box'>
+                  <div className='icon icon2'>
+                    <img src={sec14PcIcon2} loading='lazy' />
+                  </div>
+                  <div className='text_wrapper'>
+                    <h4
+                      className='title_48'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.internet.title,
+                      }}
+                    ></h4>
+                    <p
+                      className='subtitle_24'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.internet.subtitle,
+                      }}
+                    ></p>
+                    <p
+                      className='desc_18'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.internet.desc,
+                      }}
+                    ></p>
+                  </div>
+                  <div className='datas datas1'>
+                    {spark20Config.sec14.internet.datas.map(
+                      (item: any, index: number) => {
+                        return (
+                          <div className='data' key={index}>
+                            <div
+                              className='data_title'
+                              dangerouslySetInnerHTML={{ __html: item.name }}
+                            ></div>
+                            <p
+                              className='data_desc'
+                              dangerouslySetInnerHTML={{ __html: item.desc }}
+                            ></p>
+                          </div>
+                        )
+                      }
+                    )}
+                  </div>
                 </div>
-              </div>
-            }
-          />
-          <Box
-            videoClick={videoClick2}
-            video_ref={videoRef2}
-            video_src={spark20Config.sec14.internetVideo.src}
-            video_poster={spark20Config.sec14.internetVideo.poster}
-            pause_color='white'
-            text_box={
-              <div className='text_box'>
-                <div className='icon icon2'>
-                  <img src={sec14PcIcon2} loading='lazy' />
+              }
+            />
+          )}
+          {spark20Config.sec14.aiTips && (
+            <Box
+              videoClick={videoClick3}
+              video_ref={videoRef3}
+              video_src={spark20Config.sec14.aiTipsVideo.src}
+              video_poster={spark20Config.sec14.aiTipsVideo.poster}
+              pause_color='black'
+              text_box={
+                <div className='text_box'>
+                  <div className='icon icon3'>
+                    <img src={sec14PcIcon3} loading='lazy' />
+                  </div>
+                  <div className='text_wrapper'>
+                    <h4
+                      className='title_48'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.aiTips.title,
+                      }}
+                    ></h4>
+                    <p
+                      className='subtitle_24'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.aiTips.subtitle,
+                      }}
+                    ></p>
+                    <p
+                      className='desc_18'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.aiTips.desc,
+                      }}
+                    ></p>
+                  </div>
                 </div>
-                <div className='text_wrapper'>
-                  <h4
-                    className='title_48'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.internet.title,
-                    }}
-                  ></h4>
-                  <p
-                    className='subtitle_24'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.internet.subtitle,
-                    }}
-                  ></p>
-                  <p
-                    className='desc_18'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.internet.desc,
-                    }}
-                  ></p>
+              }
+            />
+          )}
+          {spark20Config.sec14.appTwins && (
+            <Box
+              videoClick={videoClick4}
+              video_ref={videoRef4}
+              video_src={spark20Config.sec14.appTwinsVideo.src}
+              video_poster={spark20Config.sec14.appTwinsVideo.poster}
+              pause_color='black'
+              text_box={
+                <div className='text_box'>
+                  <div className='icon icon4'>
+                    <img src={sec14PcIcon4} loading='lazy' />
+                  </div>
+                  <div className='text_wrapper'>
+                    <h4
+                      className='title_48'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.appTwins.title,
+                      }}
+                    ></h4>
+                    <p
+                      className='subtitle_24'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.appTwins.subtitle,
+                      }}
+                    ></p>
+                    <p
+                      className='desc_18'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.appTwins.desc,
+                      }}
+                    ></p>
+                  </div>
                 </div>
-                <div className='datas datas1'>
-                  {spark20Config.sec14.internet.datas.map(
-                    (item: any, index: number) => {
-                      return (
-                        <div className='data' key={index}>
-                          <div
-                            className='data_title'
-                            dangerouslySetInnerHTML={{ __html: item.name }}
-                          ></div>
-                          <p
-                            className='data_desc'
-                            dangerouslySetInnerHTML={{ __html: item.desc }}
-                          ></p>
-                        </div>
-                      )
-                    }
-                  )}
+              }
+            />
+          )}
+          {spark20Config.sec14.social && (
+            <Box
+              videoClick={videoClick5}
+              video_ref={videoRef5}
+              video_src={spark20Config.sec14.socialVideo.src}
+              video_poster={spark20Config.sec14.socialVideo.poster}
+              pause_color='black'
+              text_box={
+                <div className='text_box'>
+                  <div className='icon icon5'>
+                    <img src={sec14PcIcon5} loading='lazy' />
+                  </div>
+                  <div className='text_wrapper'>
+                    <h4
+                      className='title_48'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.social.title,
+                      }}
+                    ></h4>
+                    <p
+                      className='subtitle_24'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.social.subtitle,
+                      }}
+                    ></p>
+                    <p
+                      className='desc_18'
+                      dangerouslySetInnerHTML={{
+                        __html: spark20Config.sec14.social.desc,
+                      }}
+                    ></p>
+                  </div>
+                  <div className='datas datas2'>
+                    {spark20Config.sec14.social.datas.map(
+                      (item: any, index: number) => {
+                        return (
+                          <div className='data' key={index}>
+                            <div
+                              className='data_title'
+                              dangerouslySetInnerHTML={{ __html: item.name }}
+                            ></div>
+                          </div>
+                        )
+                      }
+                    )}
+                  </div>
                 </div>
-              </div>
-            }
-          />
-          <Box
-            videoClick={videoClick3}
-            video_ref={videoRef3}
-            video_src={spark20Config.sec14.aiTipsVideo.src}
-            video_poster={spark20Config.sec14.aiTipsVideo.poster}
-            pause_color='black'
-            text_box={
-              <div className='text_box'>
-                <div className='icon icon3'>
-                  <img src={sec14PcIcon3} loading='lazy' />
-                </div>
-                <div className='text_wrapper'>
-                  <h4
-                    className='title_48'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.aiTips.title,
-                    }}
-                  ></h4>
-                  <p
-                    className='subtitle_24'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.aiTips.subtitle,
-                    }}
-                  ></p>
-                  <p
-                    className='desc_18'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.aiTips.desc,
-                    }}
-                  ></p>
-                </div>
-              </div>
-            }
-          />
-          <Box
-            videoClick={videoClick4}
-            video_ref={videoRef4}
-            video_src={spark20Config.sec14.appTwinsVideo.src}
-            video_poster={spark20Config.sec14.appTwinsVideo.poster}
-            pause_color='black'
-            text_box={
-              <div className='text_box'>
-                <div className='icon icon4'>
-                  <img src={sec14PcIcon4} loading='lazy' />
-                </div>
-                <div className='text_wrapper'>
-                  <h4
-                    className='title_48'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.appTwins.title,
-                    }}
-                  ></h4>
-                  <p
-                    className='subtitle_24'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.appTwins.subtitle,
-                    }}
-                  ></p>
-                  <p
-                    className='desc_18'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.appTwins.desc,
-                    }}
-                  ></p>
-                </div>
-              </div>
-            }
-          />
-          <Box
-            videoClick={videoClick5}
-            video_ref={videoRef5}
-            video_src={spark20Config.sec14.socialVideo.src}
-            video_poster={spark20Config.sec14.socialVideo.poster}
-            pause_color='black'
-            text_box={
-              <div className='text_box'>
-                <div className='icon icon5'>
-                  <img src={sec14PcIcon5} loading='lazy' />
-                </div>
-                <div className='text_wrapper'>
-                  <h4
-                    className='title_48'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.social.title,
-                    }}
-                  ></h4>
-                  <p
-                    className='subtitle_24'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.social.subtitle,
-                    }}
-                  ></p>
-                  <p
-                    className='desc_18'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20Config.sec14.social.desc,
-                    }}
-                  ></p>
-                </div>
-                <div className='datas datas2'>
-                  {spark20Config.sec14.social.datas.map(
-                    (item: any, index: number) => {
-                      return (
-                        <div className='data' key={index}>
-                          <div
-                            className='data_title'
-                            dangerouslySetInnerHTML={{ __html: item.name }}
-                          ></div>
-                        </div>
-                      )
-                    }
-                  )}
-                </div>
-              </div>
-            }
-          />
+              }
+            />
+          )}
         </div>
         <div
           className='tips'
