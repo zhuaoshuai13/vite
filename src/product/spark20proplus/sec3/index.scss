@@ -1,0 +1,8 @@
+@import '../vars';
+
+.sec3 {
+  .special_text_container {
+
+    @include multcolortext;
+  }
+}

@@ -1,0 +1,84 @@
+$pcwidth: 19.2;
+$mobwidth: 10.8;
+/* stylelint-disable-next-line scss/dollar-variable-pattern */
+$mobwidthPx: 1080px;
+
+@mixin position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin fontsize($fontSize) {
+  font-size: calc(#{$fontSize} * (1 / $pcwidth) * 1vw);
+}
+
+@mixin bg($url, $size: true) {
+  background-image: url("../../../assets/spark20proplus/#{$url}");
+  background-repeat: no-repeat;
+
+  @if $size == true {
+    background-size: contain;
+  }
+
+  @if $size == false {
+    background-size: cover;
+  }
+}
+
+@function px-to-vw($value) {
+
+  @return #{$value * calc(1 / $pcwidth)}vw;
+}
+
+@function px-to-vw-mb($value) {
+
+  @return #{$value * calc(1 / $mobwidth)}vw;
+}
+
+@function px-to-vh($value) {
+
+  @return #{$value * calc(1 / 14.4)}vh;
+}
+
+@mixin font {
+  font: {
+    size: 10px;
+  }
+}
+
+@mixin multcolortext {
+  color: transparent;
+  background: linear-gradient(90deg, #a8ccff 0%, #f0c6e5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@mixin multcolortext2 {
+  color: transparent;
+  background: linear-gradient(158.66deg, #00132e 55.92%, #002251 89.43%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@mixin multcolortext3 {
+  color: transparent;
+  background: linear-gradient(90deg, #48baf6 0%, #ebe7ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@mixin multcolortext4 {
+  color: transparent;
+  background: linear-gradient(90deg, #ffd67c 0%, #ffd987 10%, #ffe1a6 27%, #fff0d8 50%, #feecd1 55%, #fde2be 62%, #fcd29f 70%, #fabc73 80%, #f8a03d 90%, #f68100 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@mixin multcolortext5 {
+  color: transparent;
+  background: linear-gradient(91deg, #70d7ff .31%, #0051c8 100.88%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}

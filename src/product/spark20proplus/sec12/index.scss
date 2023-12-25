@@ -1,0 +1,19 @@
+@import '../vars';
+
+.spark20proplus .sec12 {
+  .special_text_container {
+    width: 90%;
+
+    @include multcolortext4;
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20proplus .sec12 {
+    .special_text_container {
+      .special_title {
+        font-size: 10.6vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,389 @@
+@import '../vars';
+
+.sec11 {
+  padding-bottom: px-to-vw(360);
+  
+  .title_96 {
+    span {
+
+      @include multcolortext3;
+    }
+  }
+
+  .container1 {
+    position: relative;
+    margin-top: px-to-vw(580);
+
+    .datas {
+      margin-top: px-to-vw(36);
+    }
+
+    .data {
+      margin-top: px-to-vw(18);
+    }
+
+    .video_box {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: px-to-vw(1920);
+      height: px-to-vw(1080);
+      overflow: hidden;
+      transform: translateY(-50%);
+
+      & * {
+        height: 100%;
+      }
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  
+  .processor {
+    position: absolute;
+    top: px-to-vw(-286);
+    left: px-to-vw(200);
+    height: px-to-vw(759);
+  }
+
+  .right1 {
+    position: relative;
+    width: px-to-vw(600);
+    margin: px-to-vw(0) 0 0 px-to-vw(1166);
+  }
+
+  .data_title {
+    width: fit-content;
+    font-weight: 700;
+    font-size: px-to-vw(32);
+    font-family: "HB";
+
+    @include multcolortext3;
+  }
+
+  .data_desc {
+    font-size: px-to-vw(16);
+  }
+
+  .container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: px-to-vw(360);
+
+    .left2 {
+      width: px-to-vw(520);
+    }
+
+    .right2 {
+      position: relative;
+      width: px-to-vw(478);
+      height: px-to-vw(764);
+      margin-left: px-to-vw(240);
+
+      img, video {
+        height: px-to-vw(764);
+      }
+
+      .text_wrapper {
+        position: absolute;
+        left: 50%;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        transform: translateX(-50%);
+
+        .title {
+          width: fit-content;
+          margin: 0 auto;
+          font-size: px-to-vw(32);
+          font-family: "HB";
+
+          @include multcolortext3;
+        }
+
+        .desc {
+          margin-top: px-to-vw(8);
+          font-size: px-to-vw(16);
+        }
+      }
+
+      .text1 {
+        top: px-to-vw(270);
+      }
+
+      .text2 {
+        top: px-to-vw(625);
+      }
+    }
+  }
+
+  .container3 {
+    position: relative;
+    width: px-to-vw(1440);
+    height: px-to-vw(810);
+    margin: px-to-vw(235) auto 0;
+
+    .memory {
+      width: 100%;
+    }
+
+    .box {
+      position: absolute;
+      top: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      transform: translateY(-50%);
+    }
+
+    .left3 {
+      width: px-to-vw(430);
+    }
+
+    .data {
+      margin-bottom: px-to-vw(24);
+    }
+
+    .tips {
+      position: absolute;
+      bottom: px-to-vw(80);
+      left: px-to-vw(853);
+      color: #ffffff80;
+      font-size: px-to-vw(12);
+    }
+  }
+
+  .container4 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: px-to-vw(330);
+    padding-left: px-to-vw(240);
+
+    .video_box {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: px-to-vw(1920);
+      height: px-to-vw(1080);
+      overflow: hidden;
+      transform: translateY(-50%);
+
+      & * {
+        height: 100%;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .battery {
+      height: px-to-vw(504);
+    }
+
+    .box {
+      order: -1;
+      width: px-to-vw(580);
+    }
+
+    .left4 {
+      // width: px-to-vw(650);
+      // margin-right: px-to-vw(175);
+    }
+
+    .right4 {
+      margin-top: px-to-vw(42);
+    }
+
+    .datas {
+      display: flex;
+      gap: px-to-vw(24);
+    }
+
+    .data {
+      margin-bottom: px-to-vw(24);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .sec11 {
+    padding-bottom: px-to-vw-mb(360);
+
+    .container1 {
+      margin-top: px-to-vw-mb(360);
+
+      .datas {
+        margin-top: px-to-vw-mb(36);
+      }
+  
+      .data {
+        margin-top: px-to-vw-mb(24);
+      }
+
+      .video_box {
+        position: unset;
+        width: px-to-vw-mb(872);
+        height: px-to-vw-mb(615);
+        margin: 0 auto;
+        transform: unset;
+        clip-path: unset;
+      }
+
+      video {
+        height: px-to-vw-mb(615);
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .processor {
+      position: unset;
+      display: block;
+      height: px-to-vw-mb(797);
+      margin: 0 auto; 
+    }
+
+    .right1 {
+      width: auto;
+      margin: px-to-vw-mb(137) px-to-vw-mb(120) 0;
+    }
+
+    .data_title {
+      font-size: px-to-vw-mb(48);
+    }
+
+    .data_desc {
+      font-size: px-to-vw-mb(24);
+    }
+
+    .container2 {
+      flex-direction: column;
+      margin-top: px-to-vw-mb(360);
+
+      .right2 {
+        order: -1;
+        width: px-to-vw-mb(750);
+        height: px-to-vw-mb(1200);
+        margin: 0;
+
+        img, video {
+          height: px-to-vw-mb(1200);
+        }
+
+        .text_wrapper {
+          .title {
+            font-size: px-to-vw-mb(50);
+          }
+
+          .desc {
+            font-size: px-to-vw-mb(25);
+          }
+        }
+
+        .text1 {
+          top: px-to-vw-mb(430);
+        }
+
+        .text2 {
+          top: px-to-vw-mb(990);
+        }
+      }
+
+      .left2 {
+        width: auto;
+        margin: px-to-vw-mb(55) px-to-vw-mb(120) 0;
+      }
+    }
+
+    .container3 {
+      width: 100%;
+      height: auto;
+      margin: px-to-vw-mb(360) auto 0;
+
+      .box {
+        position: unset;
+        display: block;
+        width: auto;
+        margin: px-to-vw-mb(100) px-to-vw-mb(100) 0;
+        transform: unset;
+      }
+
+      .memory {
+        height: px-to-vw-mb(897);
+      }
+
+      .left3 {
+        width: auto;
+      }
+
+      .right3 {
+        margin-top: px-to-vw-mb(48);
+      }
+
+      .datas {
+        display: flex;
+        gap: px-to-vw-mb(64);
+      }
+
+      .tips {
+        top: px-to-vw-mb(780);
+        right: px-to-vw-mb(60);
+        bottom: unset;
+        left: px-to-vw-mb(60);
+        font-size: px-to-vw-mb(24);
+        text-align: right;
+      }
+    }
+
+    .container4 {
+      display: block;
+      margin-top: px-to-vw-mb(360);
+      padding-left: 0;
+
+      .pic_box {
+        text-align: right;
+      }
+
+      .battery {
+        height: px-to-vw-mb(544);
+      }
+
+      .box {
+        display: block;
+        width: auto;
+        margin: px-to-vw-mb(100) px-to-vw-mb(108) 0 px-to-vw-mb(150);
+      }
+
+      .left4 {
+        width: 100%;
+        margin: 0;
+      }
+
+      .right4 {
+        margin-top: px-to-vw-mb(36);
+      }
+
+      .datas {
+        display: flex;
+        gap: px-to-vw-mb(64);
+      }
+    }
+  }
+}

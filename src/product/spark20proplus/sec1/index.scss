@@ -1,0 +1,150 @@
+@import '../vars';
+
+.sec1 {
+  position: relative;
+  background-color: #fff;
+
+  .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: px-to-vw(50) 0;
+    text-align: center;
+    column-gap: px-to-vw(108);
+  }
+
+  .right {
+    flex-shrink: 0;
+  }
+
+  .tecno_icon {
+    position: absolute;
+    top: px-to-vw(22);
+    left: px-to-vw(18);
+    height: px-to-vw(117);
+  }
+
+  .product {
+    height: px-to-vw(63);
+  }
+
+  .slogn {
+    height: px-to-vw(60);
+  }
+
+  .title {
+    margin: px-to-vw(8) 0 px-to-vw(14);
+    font-size: px-to-vw(52);
+    font-family: "HR";
+  }
+
+  .items {
+    display: flex;
+    margin-bottom: px-to-vw(66);
+    text-align: left;
+
+    .item {
+      display: flex;
+      align-items: center;
+
+      &:after {
+        display: inline-block;
+        width: 1px;
+        height: 100%;
+        margin: 0 px-to-vw(16);
+        background-color: #959595;
+        content: '';
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+
+    .item_title {
+      margin-right: px-to-vw(7);
+      font-size: px-to-vw(32);
+    }
+
+    .item_desc {
+      font-size: px-to-vw(12);
+    }
+
+    .dts_logo {
+      align-self: flex-start;
+      width: px-to-vw(16);
+      height: px-to-vw(7);
+      margin: px-to-vw(10) 0 0 px-to-vw(2);
+
+      @include bg('sec1PcDts.png'); }
+  }
+
+  .pic2 {
+    height: px-to-vw(73);
+  }
+
+  .phone {
+    height: px-to-vw(676);
+  }
+
+  .kv {
+    width: 100%;
+    height: px-to-vw(960);
+    object-fit: contain;
+    object-position: center top;
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .sec1 {
+    .content {
+      top: px-to-vw-mb(250);
+      left: 50%;
+      width: 88%;
+      transform: translateX(-50%);
+    }
+
+    .kv {
+      height: px-to-vw-mb(2367);
+    }
+
+    .slogn {
+      height: px-to-vw-mb(108);
+    }
+
+    .title {
+      margin: px-to-vw-mb(14) 0 px-to-vw-mb(22);
+      font-size: px-to-vw-mb(90);
+    }
+
+    .items {
+      justify-content: center;
+
+      .item {
+        &:after {
+          height: 80%;
+          margin: 0 px-to-vw-mb(25);
+        }
+      }
+
+      .item_title {
+        font-size: px-to-vw-mb(44);
+      }
+
+      .item_desc {
+        font-size: px-to-vw-mb(16);
+      }
+
+      .dts_logo {
+        width: px-to-vw-mb(26);
+        height: px-to-vw-mb(10);
+        margin: px-to-vw-mb(18) 0 0 px-to-vw-mb(10);
+      }
+    }
+
+    .pic2 {
+      height: px-to-vw-mb(122);
+    }
+  }
+}
