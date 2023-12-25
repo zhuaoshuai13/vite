@@ -1,5 +1,5 @@
 import Providers from "./provider"
-import PovaEight from "./product/spark20pro"
+import PovaEight from "./product/spark20proplus"
 
 import "./App.scss"
 

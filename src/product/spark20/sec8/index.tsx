@@ -11,13 +11,9 @@ import "swiper/css/pagination"
 
 import { EffectFade, Autoplay } from "swiper/modules"
 import "./index.scss"
-import sec8PcF1 from "../../../assets/spark20/sec8PcF1.jpg"
 import sec8PcF2 from "../../../assets/spark20/sec8PcF2.jpg"
-import sec8PcF3 from "../../../assets/spark20/sec8PcF3.jpg"
 import sec8PcF4 from "../../../assets/spark20/sec8PcF4.jpg"
-import sec8MbF1 from "../../../assets/spark20/sec8MbF1.jpg"
 import sec8MbF2 from "../../../assets/spark20/sec8MbF2.jpg"
-import sec8MbF3 from "../../../assets/spark20/sec8MbF3.jpg"
 import sec8MbF4 from "../../../assets/spark20/sec8MbF4.jpg"
 import { ScreenContext } from "../../../provider"
 
@@ -52,14 +48,10 @@ const Sec8 = () => {
         pin: true,
         scrub: true,
         onUpdate: ({ progress }) => {
-          if (progress < 0.25) {
+          if (progress < 0.5) {
             swiperRef.current.slideTo(0)
-          } else if (progress > 0.25 && progress < 0.5) {
+          } else if (progress > 0.5 && progress < 1) {
             swiperRef.current.slideTo(1)
-          } else if (progress > 0.5 && progress < 0.75) {
-            swiperRef.current.slideTo(2)
-          } else if (progress > 0.75 && progress < 1) {
-            swiperRef.current.slideTo(3)
           }
         },
       })
@@ -87,23 +79,9 @@ const Sec8 = () => {
         >
           <SwiperSlide>
             <picture>
-              <source media='(min-width: 1081px)' srcSet={sec8PcF1} />
-              <source media='(max-width: 1080px)' srcSet={sec8MbF1} />
-              <img src={sec8PcF1} loading='lazy' />
-            </picture>
-          </SwiperSlide>
-          <SwiperSlide>
-            <picture>
               <source media='(min-width: 1081px)' srcSet={sec8PcF2} />
               <source media='(max-width: 1080px)' srcSet={sec8MbF2} />
               <img src={sec8PcF2} loading='lazy' />
-            </picture>
-          </SwiperSlide>
-          <SwiperSlide>
-            <picture>
-              <source media='(min-width: 1081px)' srcSet={sec8PcF3} />
-              <source media='(max-width: 1080px)' srcSet={sec8MbF3} />
-              <img src={sec8PcF3} loading='lazy' />
             </picture>
           </SwiperSlide>
           <SwiperSlide>

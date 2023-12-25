@@ -497,6 +497,10 @@ const Sec2 = () => {
                   </div>
                 </div>
               </div>
+              <div
+                className='sec2_tips'
+                dangerouslySetInnerHTML={{ __html: spark20proConfig.sec2.tips }}
+              ></div>
             </div>
           ) : (
             <div className='items'>
@@ -802,6 +806,10 @@ const Sec2 = () => {
                   </div>
                 </div>
               </div>
+              <div
+                className='sec2_tips'
+                dangerouslySetInnerHTML={{ __html: spark20proConfig.sec2.tips }}
+              ></div>
             </div>
           )
         ) : (

@@ -79,6 +79,7 @@ window.spark20proConfig = {
       // imgMb: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/png/sec2PcF13_2.png",//21GB版本
       
     },
+    tips: '*В сравнении с моделями SPARK предыдущего поколения',
   },
   sec3: {
     title: "CAMERA",

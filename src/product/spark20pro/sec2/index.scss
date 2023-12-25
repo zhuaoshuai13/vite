@@ -12,6 +12,16 @@
     display: flex;
     gap: px-to-vw(25);
     justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+
+    .sec2_tips {
+      position: absolute;
+      bottom: px-to-vw(-30);
+      left: 0;
+      color: #adadad;
+      font-size: px-to-vw(15);
+    }
   }
 
   .sec2_col {
@@ -370,6 +380,11 @@
       gap: px-to-vw-mb(30);
       width: px-to-vw-mb(943);
       margin: 0 auto;
+
+      .sec2_tips {
+        bottom: px-to-vw-mb(-30);
+        font-size: px-to-vw-mb(16);
+      }
     }
 
     .sec2_col {
