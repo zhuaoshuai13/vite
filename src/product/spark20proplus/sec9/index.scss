@@ -27,13 +27,6 @@
       font-weight: 700;
       font-family: "HB";
     }
-
-    .desc_magic {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-    }
   }
 
   .spark20_container {
@@ -62,6 +55,13 @@
     margin: px-to-vw(553) 0 0 px-to-vw(1145);
   }
 
+  .magic_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
   .data_all {
     position: relative;
     margin-top: px-to-vw(48);
@@ -69,14 +69,6 @@
     .dt {
       font-size: px-to-vw(24);
       font-family: "HB";
-    }
-
-    .data_magic {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0;
     }
   }
 
@@ -169,20 +161,8 @@
       margin-left: px-to-vw-mb(120);
 
       .phone {
-        height: px-to-vw-mb(521);
-        margin-right: px-to-vw-mb(23);
-
-        &:nth-child(2) {
-          margin-top: px-to-vw-mb(66);
-        }
-
-        &:nth-child(3) {
-          margin-top: px-to-vw-mb(132);
-        }
-
-        &:nth-child(4) {
-          margin-top: px-to-vw-mb(198);
-        }
+        height: px-to-vw-mb(603);
+        margin-right: px-to-vw-mb(25);
       }
     }
 

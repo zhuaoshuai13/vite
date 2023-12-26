@@ -1,17 +1,101 @@
-import { useEffect } from "react"
+import { useEffect, useContext } from "react"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { ScreenContext } from "../../../provider"
 import LazyLoad from "react-lazyload"
 import "./index.scss"
 
 const Sec13 = () => {
   const { spark20proplusConfig } = window as any
+  const { isPc } = useContext(ScreenContext)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
   const sec13Ani = () => {
+    if (isPc) {
+      const t4 = gsap
+        .timeline()
+        .to(".sec13 .container2 .pic_box", {
+          x: "34%",
+          y: "-20%",
+          maskPosition: "43% 0",
+          ease: "power1.inOut",
+        })
+        .from(".sec13 .container2 .left", { y: "30%", opacity: 0 }, "a")
+        .from(".sec13 .container2 .datas", { y: "30%", opacity: 0 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec13 .container2",
+        start: `top 0`,
+        end: "+=150%",
+        animation: t4,
+        pin: true,
+        scrub: 0.25,
+      })
+
+      const t7 = gsap
+        .timeline()
+        .to(".sec13 .container3 .pic_box", {
+          width: "62.5vw",
+          x: "5%",
+          ease: "power1.inOut",
+        })
+        .from(".sec13 .container3 .left", { y: "30%", opacity: 0 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec13 .container3",
+        start: `top 0`,
+        end: "+=150%",
+        animation: t7,
+        pin: true,
+        scrub: 0.25,
+      })
+    } else {
+      const t4 = gsap
+        .timeline()
+        .from(".sec13 .container2 .left", { y: "30%", opacity: 0 })
+        .fromTo(
+          ".sec13 .container2 .pic_box",
+          {
+            x: "34%",
+            y: "-20%",
+            maskPosition: "0 0",
+            ease: "power1.inOut",
+            duration: 2,
+          },
+          {
+            x: "0%",
+            y: "0%",
+            maskPosition: "43% 0",
+            ease: "power1.inOut",
+            duration: 2,
+          }
+        )
+        .from(".sec13 .container2 .datas", { y: "30%", opacity: 0 })
+
+      ScrollTrigger.create({
+        trigger: ".sec13 .container2",
+        start: `top 85%`,
+        animation: t4,
+      })
+
+      const t7 = gsap
+        .timeline()
+        .from(".sec13 .container3 .pic_box", {
+          y: "30%",
+          opacity: 0,
+        })
+        .from(".sec13 .container3 .left", { y: "30%", opacity: 0 }, "a")
+
+      ScrollTrigger.create({
+        trigger: ".sec13 .container3",
+        start: `top 85%`,
+        animation: t7,
+      })
+    }
+
     const tl = gsap
       .timeline()
       .from(".sec13 .title_96", 1, { y: "30%", opacity: 0 }, "a")
@@ -65,17 +149,15 @@ const Sec13 = () => {
       animation: t3,
     })
 
-    const t4 = gsap
-      .timeline()
-      .from(".sec13 .container2 .left", 1, { y: "30%", opacity: 0 }, "a")
-      .from(".sec13 .container2 .datas", 1, { y: "30%", opacity: 0 }, "a")
+    const mic = gsap.timeline().from(".sec13 .mic_box", {
+      y: "30%",
+      opacity: 0,
+    })
 
     ScrollTrigger.create({
-      trigger: ".sec13 .container2",
-      start: `top 0`,
-      animation: t4,
-      pin: true,
-      scrub: 0.25,
+      trigger: ".sec13 .mic_box",
+      start: `top 85%`,
+      animation: mic,
     })
 
     // const t5 = gsap
@@ -207,7 +289,9 @@ const Sec13 = () => {
                   return (
                     <div className='data' key={index}>
                       {item.name === "dts" ? (
-                        <div className='dts'></div>
+                        <div className='dts'>
+                          <img src={item.dts_icon} />
+                        </div>
                       ) : (
                         <div
                           className='data_title'
@@ -246,20 +330,39 @@ const Sec13 = () => {
               }}
             ></p>
           </div>
-          <div className="img_box">
-            <img className="mic_icon" src={spark20proplusConfig.sec13.mic.img.mic_icon} />
-            <img className="voice_red" src={spark20proplusConfig.sec13.mic.img.voice_red} />
-            <img className="voice_blue" src={spark20proplusConfig.sec13.mic.img.voice_blue} />
+          <div className='img_box'>
+            <img
+              className='mic_icon'
+              src={spark20proplusConfig.sec13.mic.img.mic_icon}
+            />
+            <div className='voice_red'>
+              <img src={spark20proplusConfig.sec13.mic.img.voice_red} />
+            </div>
+            <div className='voice_blue'>
+              <img src={spark20proplusConfig.sec13.mic.img.voice_blue} />
+            </div>
           </div>
         </div>
         <div className='container2'>
-          <div className='pic_box'>
-            <picture>
-              <source media='(min-width: 1081px)' srcSet={spark20proplusConfig.sec13.screen.phone.img_pc} />
-              <source media='(max-width: 1080px)' srcSet={spark20proplusConfig.sec13.screen.phone.img_mb} />
-              <img src={spark20proplusConfig.sec13.screen.phone.img_pc} className='screen' loading='lazy' />
-            </picture>
-          </div>
+          {isPc ? (
+            <div className='pic_box'>
+              <picture>
+                <source
+                  media='(min-width: 1081px)'
+                  srcSet={spark20proplusConfig.sec13.screen.phone.img_pc}
+                />
+                <source
+                  media='(max-width: 1080px)'
+                  srcSet={spark20proplusConfig.sec13.screen.phone.img_mb}
+                />
+                <img
+                  src={spark20proplusConfig.sec13.screen.phone.img_pc}
+                  className='screen'
+                  loading='lazy'
+                />
+              </picture>
+            </div>
+          ) : null}
           <div className='box'>
             <div className='left'>
               <div className='text_wrapper'>
@@ -283,6 +386,25 @@ const Sec13 = () => {
                 ></p>
               </div>
             </div>
+            {!isPc ? (
+              <div className='pic_box'>
+                <picture>
+                  <source
+                    media='(min-width: 1081px)'
+                    srcSet={spark20proplusConfig.sec13.screen.phone.img_pc}
+                  />
+                  <source
+                    media='(max-width: 1080px)'
+                    srcSet={spark20proplusConfig.sec13.screen.phone.img_mb}
+                  />
+                  <img
+                    src={spark20proplusConfig.sec13.screen.phone.img_pc}
+                    className='screen'
+                    loading='lazy'
+                  />
+                </picture>
+              </div>
+            ) : null}
             <div className='datas'>
               {spark20proplusConfig.sec13.screen.datas.map(
                 (item: any, index: number) => {
@@ -304,11 +426,21 @@ const Sec13 = () => {
           </div>
         </div>
         <div className='container3'>
-        <div className='pic_box'>
+          <div className='pic_box'>
             <picture>
-              <source media='(min-width: 1081px)' srcSet={spark20proplusConfig.sec13.fod.phone.img_pc} />
-              <source media='(max-width: 1080px)' srcSet={spark20proplusConfig.sec13.fod.phone.img_mb} />
-              <img src={spark20proplusConfig.sec13.fod.phone.img_pc} className='screen' loading='lazy' />
+              <source
+                media='(min-width: 1081px)'
+                srcSet={spark20proplusConfig.sec13.fod.phone.img_pc}
+              />
+              <source
+                media='(max-width: 1080px)'
+                srcSet={spark20proplusConfig.sec13.fod.phone.img_mb}
+              />
+              <img
+                src={spark20proplusConfig.sec13.fod.phone.img_pc}
+                className='screen'
+                loading='lazy'
+              />
             </picture>
           </div>
           <div className='box'>

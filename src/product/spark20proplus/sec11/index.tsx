@@ -54,7 +54,7 @@ const Sec11 = () => {
       ScrollTrigger.create({
         trigger: ".sec11 .container1",
         start: `top 30%`,
-        end: "+=100%",
+        end: "+=150%",
         animation: t2,
         scrub: 0.25,
         pin: true,
@@ -89,7 +89,7 @@ const Sec11 = () => {
       ScrollTrigger.create({
         trigger: ".sec11 .container4",
         start: `top 30%`,
-        end: "+=100%",
+        end: "+=150%",
         animation: t3,
         scrub: 0.25,
         pin: true,

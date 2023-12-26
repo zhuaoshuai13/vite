@@ -87,7 +87,7 @@ const Sec7 = () => {
                 }}
               ></p>
             </div>
-            <div className='datas'>
+            {/* <div className='datas'>
               {spark20proplusConfig.sec7.design.datas.map(
                 (item: any, index: number) => {
                   return (
@@ -104,7 +104,7 @@ const Sec7 = () => {
                   )
                 }
               )}
-            </div>
+            </div> */}
           </div>
           <picture>
             <source media='(min-width: 1081px)' srcSet={spark20proplusConfig.sec7.phone.img_pc} />

@@ -4,6 +4,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { Swiper, SwiperSlide } from "swiper/react"
+import LazyLoad from "react-lazyload"
 
 import "swiper/css"
 import "swiper/css/effect-fade"
@@ -34,14 +35,28 @@ const Sec8 = () => {
 
   const sec8Ani = () => {
     if (isPc) {
-      const tl = gsap.timeline().to(".sec8 .double_curved", { y: "-100%", ease: "power1.in" })
+      const tl = gsap
+        .timeline()
+        .to(".sec8 .double_curved", { y: "-100%", ease: "power1.in" })
+        .to(".sec8 .sec8Swiper", {})
       ScrollTrigger.create({
         trigger: ".sec8",
         start: "top 0",
-        end: "+=100%",
+        end: "+=200%",
         animation: tl,
         pin: true,
         scrub: 0.25,
+        onUpdate: ({ progress }) => {
+          if (progress > 0.5 && progress < 0.625) {
+            swiperRef.current.slideTo(0)
+          } else if (progress > 0.625 && progress < 0.75) {
+            swiperRef.current.slideTo(1)
+          } else if (progress > 0.75 && progress < 0.875) {
+            swiperRef.current.slideTo(2)
+          } else if (progress > 0.875 && progress < 1) {
+            swiperRef.current.slideTo(3)
+          }
+        },
       })
 
       // const t2 = gsap.timeline()
@@ -78,20 +93,20 @@ const Sec8 = () => {
     <section className='sec8'>
       <div className='content'>
         <div className='double_curved'>
-          <picture>
-            <source
-              media='(min-width: 1081px)'
-              srcSet={spark20proplusConfig.sec8.double_curved.bg.img_pc}
-            />
-            <source
-              media='(max-width: 1080px)'
-              srcSet={spark20proplusConfig.sec8.double_curved.bg.img_mb}
-            />
-            <img
-              src={spark20proplusConfig.sec8.double_curved.bg.img_pc}
-              loading='lazy'
-            />
-          </picture>
+          <div className='video_box'>
+            <LazyLoad offset={1000}>
+              <video
+                src={spark20proplusConfig.sec8.double_curved.bg.src}
+                poster={spark20proplusConfig.sec8.double_curved.bg.img_pc}
+                autoPlay
+                muted
+                loop
+                className='sound'
+                webkit-playsinline='true'
+                playsInline={true}
+              ></video>
+            </LazyLoad>
+          </div>
           <div className='content_wrapper'>
             <div className='text_wrapper'>
               <h4

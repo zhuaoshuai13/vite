@@ -41,26 +41,9 @@ const Sec9 = () => {
       })
       const t2 = gsap
         .timeline()
-        // .from(".sec9 .phone:nth-child(1)", { y: "30%", opacity: 0 }, "a")
-        // .from(
-        //   ".sec9 .phone:nth-child(2)",
-        //   { y: "30%", opacity: 0, delay: 0.25 },
-        //   "a"
-        // )
-        // .from(
-        //   ".sec9 .phone:nth-child(3)",
-        //   { y: "30%", opacity: 0, delay: 0.5 },
-        //   "a"
-        // )
-        // .from(
-        //   ".sec9 .phone:nth-child(4)",
-        //   { y: "30%", opacity: 0, delay: 0.75 },
-        //   "a"
-        // )
-        .to(".sec9 .desc_other", 0.25, { opacity: 0, delay: 1.5 }, "a")
-        .to(".sec9 .data_other", 0.25, { opacity: 0, delay: 1.5 }, "a")
-        .to(".sec9 .desc_magic", 0.25, { opacity: 1, delay: 1.5 }, "a")
-        .to(".sec9 .data_magic", 0.25, { opacity: 1, delay: 1.5 }, "a")
+        .to(".sec9 .spark20_container .text_wrapper", 0.25, { opacity: 0, delay: 1.5 }, "a")
+        .to(".sec9 .data_all", 0.25, { opacity: 0, delay: 1.5 }, "a")
+        .to(".sec9 .magic_container", 0.25, { opacity: 1, delay: 1.5 }, "a")
 
       ScrollTrigger.create({
         trigger: ".sec9",
@@ -101,10 +84,9 @@ const Sec9 = () => {
 
       const t2 = gsap
         .timeline()
-        .to(".sec9 .desc_other", 0.25, { opacity: 0 }, "a")
-        .to(".sec9 .data_other", 0.25, { opacity: 0 }, "a")
-        .to(".sec9 .desc_magic", 0.25, { opacity: 1 }, "a")
-        .to(".sec9 .data_magic", 0.25, { opacity: 1 }, "a")
+        .to(".sec9 .spark20_container .text_wrapper", 0.25, { opacity: 0 }, "a")
+        .to(".sec9 .data_all", 0.25, { opacity: 0 }, "a")
+        .to(".sec9 .magic_container", 0.25, { opacity: 1 }, "a")
 
       ScrollTrigger.create({
         trigger: ".sec9",
@@ -187,12 +169,6 @@ const Sec9 = () => {
                       __html: spark20proplusConfig.sec9.texture.desc,
                     }}
                   ></p>
-                  <p
-                    className='desc_magic'
-                    dangerouslySetInnerHTML={{
-                      __html: spark20proplusConfig.sec9.texture.desc_magic_skin,
-                    }}
-                  ></p>
                 </div>
               </div>
               <div className='data_all'>
@@ -216,6 +192,26 @@ const Sec9 = () => {
                     )}
                   </div>
                 </div>
+              </div>
+              <div className='magic_container'>
+                <h4
+                  className='title_48'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20proplusConfig.sec9.texture.title,
+                  }}
+                ></h4>
+                <p
+                  className='subtitle_24'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20proplusConfig.sec9.texture.subtitle,
+                  }}
+                ></p>
+                <p
+                  className='desc_18'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20proplusConfig.sec9.texture.desc_magic_skin,
+                  }}
+                ></p>
                 <div className='data_magic'>
                   <div className='datas'>
                     {spark20proplusConfig.sec9.texture.datas_magic_skin.map(
@@ -257,7 +253,11 @@ const Sec9 = () => {
               </div>
             </div>
             <div className='right2'>
-              <img src={spark20proplusConfig.sec9.water.pic_bg} className='water' loading='lazy' />
+              <img
+                src={spark20proplusConfig.sec9.water.pic_bg}
+                className='water'
+                loading='lazy'
+              />
               <div className='text_wrapper'>
                 <div
                   className='title'

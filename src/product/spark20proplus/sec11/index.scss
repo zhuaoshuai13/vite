@@ -242,8 +242,8 @@
         width: px-to-vw-mb(872);
         height: px-to-vw-mb(615);
         margin: 0 auto;
+        border-radius: px-to-vw-mb(38);
         transform: unset;
-        clip-path: unset;
       }
 
       video {
@@ -357,18 +357,19 @@
       margin-top: px-to-vw-mb(360);
       padding-left: 0;
 
-      .pic_box {
-        text-align: right;
-      }
-
-      .battery {
-        height: px-to-vw-mb(544);
+      .video_box {
+        position: unset;
+        width: px-to-vw-mb(840);
+        height: px-to-vw-mb(600);
+        margin: 0 auto;
+        border-radius: px-to-vw-mb(38);
+        transform: unset;
       }
 
       .box {
         display: block;
-        width: auto;
-        margin: px-to-vw-mb(100) px-to-vw-mb(108) 0 px-to-vw-mb(150);
+        width: px-to-vw-mb(840);
+        margin: px-to-vw-mb(72) auto 0;
       }
 
       .left4 {

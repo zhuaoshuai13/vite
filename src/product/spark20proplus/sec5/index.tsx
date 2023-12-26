@@ -10,11 +10,22 @@ import { useButton, Button } from "../components"
 const Sec5 = () => {
   const { isOpen, setIsOpen } = useButton()
   const [isOpen2, setIsOpen2] = useState(false)
+  const [isOpen3, setIsOpen3] = useState(false)
   const [slide, setSlide] = useState("")
   const videoRef = useRef<HTMLVideoElement>(null)
+  const slowMotionVideoRef = useRef<HTMLVideoElement>(null)
   const { spark20proplusConfig } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+
+  const slowMotionVideo = () => {
+    if (isOpen3) {
+      slowMotionVideoRef.current?.pause()
+    } else {
+      slowMotionVideoRef.current?.play()
+    }
+    setIsOpen3(!isOpen3)
+  }
 
   const customClickEvent = () => {
     if (isOpen2) {
@@ -105,7 +116,9 @@ const Sec5 = () => {
       trigger: ".sec5 #slow-motion",
       start: `top 50%`,
       animation: t6,
-      // onEnter: () => {},
+      onEnter: () => {
+        slowMotionVideo()
+      },
     })
 
     const t7 = gsap.timeline()
@@ -301,13 +314,17 @@ const Sec5 = () => {
             </div>
             <div className='container2' id='slow-motion'>
               <div className='left2'>
-                <img
-                  src={spark20proplusConfig.sec5.slow_motion.image}
-                  className={
-                    isOpen ? "Super_Flash_Light" : "Super_Flash_Light off"
-                  }
-                  loading='lazy'
-                />
+                <LazyLoad offset={1000}>
+                  <video
+                    ref={slowMotionVideoRef}
+                    src={spark20proplusConfig.sec5.slow_motion.video.src}
+                    poster={spark20proplusConfig.sec5.slow_motion.video.poster}
+                    muted
+                    loop
+                    webkit-playsinline='true'
+                    playsInline={true}
+                  ></video>
+                </LazyLoad>
               </div>
               <div className='right2'>
                 <img
@@ -335,7 +352,7 @@ const Sec5 = () => {
                     }}
                   ></p>
                 </div>
-                <Button isOpen={isOpen} setIsOpen={setIsOpen} />
+                <Button isOpen={isOpen3} setIsOpen={setIsOpen3} customClickEvent={() => slowMotionVideo()} />
               </div>
             </div>
             <div className='container2' id='height_quality_Video'>

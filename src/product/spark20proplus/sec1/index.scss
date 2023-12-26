@@ -99,10 +99,18 @@
 @media (max-width: $mobwidthPx) {
   .sec1 {
     .content {
-      top: px-to-vw-mb(250);
-      left: 50%;
-      width: 88%;
-      transform: translateX(-50%);
+      flex-direction: column;
+      padding: px-to-vw-mb(320) 0 px-to-vw-mb(186);
+    }
+
+    .tecno_icon {
+      top: px-to-vw-mb(33);
+      left: px-to-vw-mb(33);
+      height: px-to-vw-mb(175);
+    }
+
+    .product {
+      height: px-to-vw-mb(94);
     }
 
     .kv {
@@ -120,6 +128,7 @@
 
     .items {
       justify-content: center;
+      margin-bottom: px-to-vw-mb(102);
 
       .item {
         &:after {
@@ -144,7 +153,20 @@
     }
 
     .pic2 {
-      height: px-to-vw-mb(122);
+      height: px-to-vw-mb(106);
+    }
+
+    .right {
+      width: 100%;
+      height: px-to-vw-mb(1809);
+      margin-top: px-to-vw-mb(90);
+    }
+    
+    .phone {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
     }
   }
 }

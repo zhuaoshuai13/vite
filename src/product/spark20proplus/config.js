@@ -104,8 +104,8 @@ window.spark20proplusConfig = {
     camera: {
       title: "108MP Ultra Sensing Main Camera",
       subtitle: "Unprecedented Imaging Clarity in SPARK's History",
-      desc: `Capture your world in epic details with SPARK's highest-definition 108MP ultra-sensing camera - all-round lens with flagship-level specs that take photography to the next level. Near or far, clarity stays on par. 
-      3X in-sensor and 10X digital zoom work in combo, delivering seamless clarity no matter the distance. Ultra-large 1/1.67" sensor and F/1.75 aperture effortlessly adapt to any lighting. Bright, backlit, or low-light, every sight is your highlight. HDR multi-frame fusion balances light and shadow, crafting compositions of ordinary beauty into extraordinary shots! `,
+      desc: `Capture your world in epic details with SPARK's highest-definition 108MP ultra-sensing camera - all-round lens with flagship-level specs that take photography to the next level. Near or far, clarity stays on par.
+      3X in-sensor, 10X digital zoom, and superior video stabilization, plus dual focus technology that intelligently adapts to diverse scenarios, safeguarding clarity for your photographic artistry no matter the distance. Ultra-large 1/1.67" sensor and F/1.75 aperture effortlessly adapt to any lighting. Bright, backlit, or low-light, every sight is your highlight. HDR multi-frame fusion balances light and shadow, crafting compositions of ordinary beauty into extraordinary shots!`,
       cameraVideo: {
         src: url + "/videos/sec4PcCamera.mp4",
         poster: url + "/images/sec4PcCameraPoster.png",
@@ -205,7 +205,7 @@ window.spark20proplusConfig = {
       title: "Dual Video",
       subtitle: "Front and Back, Inspirations Never Lack!",
       desc: `Fire up both front and rear cameras; Expand your creative playground! This exciting interactive feature empowers you with a world of possibilities to ignite your video ideas!`,
-      tips: "* Some products require a system update to experience Dual View.",
+      // tips: "* Some products require a system update to experience Dual View.",
       image: url + "/images/sec5PcDualVideo.jpg",
       bg_icon: url + "/images/sec5PcIcon4.png",
       arrow: url + "/images/sec5PcArrowTop.png",
@@ -214,7 +214,12 @@ window.spark20proplusConfig = {
       title: "Slow Motion",
       subtitle: "Extend Fleeting Moments, Frame by Frame",
       desc: `Eternaltize every wonderful instant, no matter how instant, with the Slow Motion wonder! Find new surprises with every replay.`,
-      image: url + "/images/sec5PcSlowMotion.png",
+      video: {
+        src: url + "/videos/sec5PcSlowMotion.mp4", //黑人版本
+        poster: url + "/images/sec5PcSlowMotion.png", //黑人版本
+        // src: url + "/videos/sec5PcSlowMotion_white.mp4",//白人版本
+        // poster: url + "/images/sec5PcSlowMotion_white.png",//白人版本
+      },
     },
     video_2k: {
       title: "2K Video",
@@ -227,7 +232,7 @@ window.spark20proplusConfig = {
       bg_icon: url + "/images/sec5PcIcon3.png",
       heightQualityVideo: {
         src: url + "/videos/sec5PcVideo2k.mp4",
-        poster: url + "/images/sec5PcVideo2k.jpg",
+        poster: url + "/images/sec5PcVideo2kPoster.jpg",
       },
     },
   },
@@ -250,20 +255,11 @@ window.spark20proplusConfig = {
       "Infinitely Sophisticated",
     ],
     design: {
-      title: `Euler's Deco Design`,
-      subtitle: "Cosmic Experience, Available at Hand",
-      desc: `Minimalist aesthetics meets futuristic look in the three-ring cosmic design of SPARK. Sleek metal edges blend with cosmic deco inspired by stars. Subtle engravings and petal-shaped flash evoke luxury watch quality. The slim, balanced rectangular form feels impossibly thin yet ergonomic, combining refinement and comfort. Advanced side edge fingerprint unlocking provides instant access with a simple touch.
-      State-of-the-art engineering, crafted to captivate.`,
-      datas: [
-        {
-          name: "3-Ring <br /> Design",
-          desc: "Metallic",
-        },
-        {
-          name: "Minimalist Square <br /> Shape",
-          desc: "Enhanced Holding Comfort",
-        },
-      ],
+      title: `Quadrant Star Array`,
+      subtitle: "A Touch of Celestial Luxury",
+      desc: `Meet SPARk's Quadrant Star Array Module design like no others, using the iconic symbol of DSLR for a powerful camera visual narrative.
+      Crafted with nanoscale photolithographic technique from luxury watch, it for the first time introduces 3D design into the realm of smartphones, pushing the boundaries of craftsmanship further.
+      Immerse yourself in this celestial sophistication.`,
     },
     phone: {
       img_pc: url + "/images/sec7PcPhone.png",
@@ -290,8 +286,8 @@ window.spark20proplusConfig = {
         },
       ],
       bg: {
-        img_pc: url + "/images/sec7PcDoubleCurved.png",
-        img_mb: url + "/images/sec7MbDoubleCurved.png",
+        src: url + "/videos/sec7PcDoubleCurved.mp4",
+        poster: url + "/images/sec7PcDoubleCurved.png",
       },
     },
     colorList: [
@@ -333,14 +329,14 @@ window.spark20proplusConfig = {
         url + "/images/sec9PcF3.png",
         url + "/images/sec9PcF4.png",
       ],
-      title: `Texture Upgrade 2.0`,
-      subtitle: "Textured Outside, Tech-tured Inside",
-      desc: `Find your Mr. Right among SPARK's trendy color options:
-      <br />
-      <span>Frosty Ivory:</span> Dance in the tender interplay of light and shadow <br />
-      <span>Moonlit Black:</span> Exude timeless elegance of classic values <br />
-      <span>Sunset Blush:</span> Radiate nobility as sand glitters in starry brilliance`,
-      desc_magic_skin: `<span>Magic Skin 2.0:</span> Beauty meets durability. 500% more durable. 25% more UV protection. Glossy matte leather feels like the touch of luxurious yacht.`,
+      title: `Sparkle Sand Pattern`,
+      subtitle: "Textured Outside, Tech-tured Inside.",
+      desc: `Art and technology collides into breathtaking aesthetics. Million-color coatings create delicately nuanced gradients. Inspired by the infinite universe, nano-scale photolithography conjures dreamy textures. With on-trend colors for every taste, your Mr. Right awaits. <br />
+      <span>Lunar Frost:</span> Dance in the tender interplay of light and shadow <br />
+      <span>Temporal Orbits:</span> Exude timeless elegance of classic values <br />
+      <span>Radiant Starstream:</span> Radiate nobility as sand glitters in starry brilliance`,
+      desc_magic_skin: `<span>Magic Skin 2.0:</span>
+      Beauty meets durability. 500% more durable. 25% more UV protection.Glossy matte leather feels like the touch of luxurious yacht.`,
       datas: [
         {
           name: "Glass-Like",
@@ -398,13 +394,13 @@ window.spark20proplusConfig = {
   sec11: {
     bigTitle: ["Core + Code", "Faster Than Fast"],
     processor: {
-      title: "G99 Ultra Boost Processor",
+      title: "G99 Ultimate Processor",
       subtitle: "The Mightiest 4G Processor!",
-      desc: `Unleash power beyond limit with the mighty and robust MTK G99 processor, the undisputed champion in its class. Set new standards for seamless and stable operations, experienced every day.`,
+      desc: `Experience unparalleled performance with the ultimate powerhouse MTK G99 processor, the undisputed champion in its class! Daily use, audio-visual, or gaming, it masters effortlessly. Seamless and stable operations become your new normal!`,
       datas: ["2*Cortex-A76 @2.2GHz", "6*Cortex-A55 @2.0GHz", "Mali-G57 MC2"],
       processorVideo: {
         src: url + "/videos/sec11PcProcessor.mp4",
-        poster: url + "/images/sec11PcV1.jpg",
+        poster: url + "/images/sec11PcProcessorPoster.jpg",
       },
     },
     engine: {
@@ -426,7 +422,7 @@ window.spark20proplusConfig = {
       },
       engineVideo: {
         src: url + "/videos/sec11PcEngine.mp4",
-        poster: url + "/images/sec11PcEngine.jpg",
+        poster: url + "/images/sec11PcEnginePoster.jpg",
       },
     },
     memory: {
@@ -457,7 +453,7 @@ window.spark20proplusConfig = {
     battery: {
       title: "5000mAh Large Battery 33W Super Charge (Type-C)",
       subtitle: "Epic Endurance, Rapid Revive",
-      desc: `Awaken your superpower with the 5000mAh super battery, fueled by 33W fast charging. Watch as it revives like Superman's energy bar fills up, fortified with an extended service life for prolonged usage.`,
+      desc: `Awaken your superpower with the 5000mAh super battery, fueled by 18W fast charging. Watch as it revives like Superman's energy bar fills up, fortified with an extended service life for prolonged usage.`,
       datas: [
         {
           name: `5000mAh`,
@@ -474,7 +470,7 @@ window.spark20proplusConfig = {
       ],
       batteryVideo: {
         src: url + "/videos/sec11PcBattery.mp4",
-        poster: url + "/images/sec11PcBattery.jpg",
+        poster: url + "/images/sec11PcBatteryPoster.jpg",
       },
     },
   },
@@ -511,15 +507,20 @@ window.spark20proplusConfig = {
           desc: "Technology",
         },
         {
+          name: `Hi-Res`,
+          desc: "Audio",
+        },
+        {
           name: `dts`,
           desc: "Audio Processing",
+          dts_icon: url + "/images/sec13PcDts.png",
         },
       ],
     },
     mic: {
       title: "Dual-Mic Noise-Cancelled Calls",
       subtitle: "Hear and Get Heard. Chat Noise-free!",
-      desc: `Dual microphones empower crisp clear sound: Primary mic captures your voice while secondary targets background noise for removal, with AI noise cancellation joining forces for seamless communication!
+      desc: `Dual microphones empower crisp clear sound: Primary mic captures your voice while secondary targets background noise for removal, with AI noise cancellation joining forces for seamless communication! <br />
       Crystal-clear conversations flow freely.`,
       img: {
         mic_icon: url + "/images/sec13PcMic.png",
@@ -528,36 +529,48 @@ window.spark20proplusConfig = {
       },
     },
     screen: {
-      title: `120Hz LCD Hole Screen`,
-      subtitle: "Raising the Bar in its Class",
-      desc: `Revolutionize your view with a cutting-edge hole screen, optimizing SPARK's aesthetics while expanding visibility to an impressive 91% screen-to-body ratio. Paired with cinema-grade wide color gamut, it delivers a superior visual extravaganza. Up to 120Hz adaptive refresh rate outpaces its peers, ensuring a consistently silky-smooth screen. Intelligent Refresh 3.1 dynamically adjusts to scenarios, reducing unnecessary refresh for 3-5% higher energy efficiency.`,
+      title: `120Hz Curved <br /> AMOLED Screen`,
+      subtitle: "See Sharp. See Vivid.",
+      desc: `Leading the class with AMOLED curved screen: 93% screen-to-body ratio for maximally expansive views; P3 color gamut for cinema-grade color presentation; 1000-nit peak brightness for visibility even in glaring sunlight; Adaptive refresh with 1500Hz instant touch sampling rate for ultra smoothness and responsiveness; Smart Refresh 3.1 for self-adaptation & up to 5% power saving; And flagship-grade glass material for double the scratch resistance and damage protection for flawless durability.`,
       datas: [
         {
+          name: `Curved <br /> Screen`,
+          desc: "6.78'' AMOLED",
+        },
+        {
+          name: `Up to <br /> 1000nit`,
+          desc: "Brightness",
+        },
+        {
+          name: `2160Hz PWM <br /> Dimming`,
+          desc: "Eye Friendly",
+        },
+        {
           name: `120Hz`,
-          desc: "Adaptive Refresh Rates",
+          desc: "Adaptive <br class='mob'/> Refresh Rates",
         },
         {
-          name: `Hole Screen`,
-          desc: "6.78'' LCD",
+          name: `1.07 <br class='mob'/> Billion`,
+          desc: "Color Display",
         },
         {
-          name: `Smart Refresh 3.1`,
-          desc: "Balanced Power Consumption",
+          name: `Smart <br class='mob'/> Refresh 3.1`,
+          desc: "Balanced Power <br class='mob'/> Consumption",
         },
       ],
       phone: {
         img_pc: url + "/images/sec13PcScreen.png",
-        img_mb: url + "/images/sec13MbScreen.png",
+        img_mb: url + "/images/sec13PcScreen.png",
       },
     },
     fod: {
       title: "Millisecond Level FOD",
       subtitle: "Touch Unlock. Future At Work.",
-      desc: "Hassle-free security, instantly at fingertips. Unlock in milliseconds with in-screen fingerprint verification: No more password; No extra actions. One touch, and your smart world is elegantly awakened.",
+      desc: "Hassle-free security, instantly at fingertips. Unlock in <br /> milliseconds with in-screen fingerprint verification: No more <br class='pc'/> password; No extra actions. One touch, and your smart world is elegantly awakened.",
       phone: {
         img_pc: url + "/images/sec13PcFod.png",
-        img_mb: url + "/images/sec13MbFod.png",
-      }
+        img_mb: url + "/images/sec13PcFod.png",
+      },
     },
     speakerVideo: {
       src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec13PcV1.mp4",
