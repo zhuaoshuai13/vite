@@ -11,14 +11,14 @@ import Sec10 from "./sec10"
 import Sec11 from "./sec11"
 import Sec12 from "./sec12"
 import Sec13 from "./sec13"
-import Sec14 from "./sec14"
+// import Sec14 from "./sec14"
 import "./index.scss"
 
 const Spark20proplus = () => {
   return (
     <div className='spark20proplus'>
       <Sec1 />
-      {/* <Sec2 /> */}
+      <Sec2 />
       <div className='sec_container2'>
         <div className='bg_white sec_container4'></div>
         <div className='bg_black sec_container1'>

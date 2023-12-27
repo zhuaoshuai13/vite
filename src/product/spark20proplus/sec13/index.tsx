@@ -249,8 +249,8 @@ const Sec13 = () => {
           <div className='pic_box'>
             <LazyLoad offset={1000}>
               <video
-                src={spark20proplusConfig.sec13.speakerVideo.src}
-                poster={spark20proplusConfig.sec13.speakerVideo.poster}
+                src={spark20proplusConfig.sec13.speaker.speakerVideo.src}
+                poster={spark20proplusConfig.sec13.speaker.speakerVideo.poster}
                 autoPlay
                 muted
                 loop

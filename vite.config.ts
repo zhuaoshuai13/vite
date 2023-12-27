@@ -42,8 +42,12 @@ export default defineConfig({
               dest: "dist/js",
             },
             {
-              src: "src/assets/video/*",
-              dest: "dist/video",
+              src: "src/assets/spark20proplus/images/*",
+              dest: "dist/images",
+            },
+            {
+              src: "src/assets/spark20proplus/videos/*",
+              dest: "dist/videos",
             },
           ],
           hook: "writeBundle",

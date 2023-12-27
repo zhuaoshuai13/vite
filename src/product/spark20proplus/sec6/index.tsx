@@ -4,8 +4,6 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
-import sec6PcBg from "../../../assets/spark20proplus/sec6PcBg.png"
-import sec6MbBg from "../../../assets/spark20proplus/sec6MbBg.png"
 
 const Sec6 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)

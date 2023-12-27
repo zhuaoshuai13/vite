@@ -9,12 +9,12 @@ window.spark20proplusConfig = {
     // type1: 文案+图片; type2: 图片
     type: "type1",
     title: "108MP Champion",
-    tecno_logo: url + "/images/sec1PcF1.png",
-    product: url + "/images/sec1PcProduct.png",
-    slogn: url + "/images/sec1PcSlogn.png",
+    tecno_logo: url + "/images/sec1PcF1.webp",
+    product: url + "/images/sec1PcProduct.webp",
+    slogn: url + "/images/sec1PcSlogn.webp",
     phone: {
-      img_pc: url + "/images/sec1PcPhone.png",
-      img_mb: url + "/images/sec1MbPhone.png",
+      img_pc: url + "/images/sec1PcPhone.webp",
+      img_mb: url + "/images/sec1MbPhone.webp",
     },
     feature: [
       {
@@ -31,8 +31,8 @@ window.spark20proplusConfig = {
       },
     ],
     type2: {
-      kv_pc: url + "/images/sec1PcKv.jpg",
-      kv_mb: url + "/images/sec1Pcmb.jpg",
+      kv_pc: url + "/images/sec1PcKv.webp",
+      kv_mb: url + "/images/sec1Pcmb.webp",
     },
   },
   sec2: {
@@ -44,59 +44,96 @@ window.spark20proplusConfig = {
     },
     item1: {
       title: ["400% Big Volume", "Stereo Dual Speaker"],
+      bg: {
+        img_pc: url + "/images/sec2PcF1.webp",
+        img_mb: url + "/images/sec2MbF1.webp",
+      },
     },
     item2: {
       title: "Magic Skin 2.0",
+      bg: {
+        img_pc: url + "/images/sec2PcF2.webp",
+        img_mb: url + "/images/sec2MbF2.webp",
+      },
     },
-    item3: {},
+    item3: {
+      title: "Ultra Tough Glass Screen",
+    },
     item4: {
-      title: "6.78’’ 120Hz Hole Screen",
+      title: "6.78’’ 120Hz",
+      desc: "AMOLED Screen",
     },
     item5: {
-      title: "Dynamic Port",
+      title: ["Android 14"],
+      bg: {
+        img_pc: url + "/images/sec2PcF5.webp",
+        img_mb: url + "/images/sec2MbF5.webp",
+      },
     },
     item6: {
-      title: ["5000 mAh", "+33W Super Charge"],
+      title: ["108MP", "Ultra Clear Camera "],
+      bg: {
+        img_pc: url + "/images/sec2PcF6.webp",
+        img_mb: url + "/images/sec2MbF6.webp",
+      },
     },
     item7: {
-      title: ["108MP", "Ultra Sensing Camera"],
+      title: ["Double Curved Design", "7.55mm Ultra Slim Body"],
+      bg: {
+        img_pc: url + "/images/sec2PcF7.webp",
+        img_mb: url + "/images/sec2MbF7.webp",
+      },
     },
     item8: {
       title: "32MP Selfie",
+      bg: {
+        img_pc: url + "/images/sec2PcF8.webp",
+        img_mb: url + "/images/sec2MbF8.webp",
+      },
     },
     item9: {
-      title: "Dual View Video",
+      title: "IP53",
+      desc: "Water & Dust Resistant",
+      bg: {
+        img_pc: url + "/images/sec2PcF9.webp",
+        img_mb: url + "/images/sec2MbF9.webp",
+      },
     },
     item10: {
-      title: "AI",
-      desc: "Wallpaper",
+      title: ["5000 mAh", "+33W Super Charge"],
+      bg: {
+        img_pc: url + "/images/sec2PcF10.webp",
+        img_mb: url + "/images/sec2MbF10.webp",
+      },
     },
     item11: {
-      title: "IP53",
+      title: ["G99 Ultimate", "Processor"],
+      bg: {
+        img_pc: url + "/images/sec2PcF11.webp",
+        img_mb: url + "/images/sec2MbF11.webp",
+      },
     },
     item12: {
-      title: ["G99 Ultra", "Boost Processor"],
-    },
-    item13: {
       title: ["BIG RAM+BIG ROM", "BIG WIN"],
+      title_mob: ["BIG RAM+BIG ROM BIG WIN"],
       data1: "UP TO 16GB RAM",
       data2: "UP TO 256GB ROM",
       tips: "* Up to 16GB, 8GB+8GB Extended RAM",
-      imgPc:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/png/sec2PcF13.png", //16GB版本
-      imgMb:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/png/sec2MbF13.png", //16GB版本
-      // imgPc: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/png/sec2PcF13_2.png",//21GB版本
-      // imgMb: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/png/sec2PcF13_2.png",//21GB版本
+      bg: {
+        img_pc: url + "/images/sec2PcF12.webp", //16GB版本
+        img_mb: url + "/images/sec2MbF12.webp", //16GB版本
+        // img_pc: url + "/images/sec2PcF12_2.webp",//21GB版本
+        // img_mb: url + "/images/sec2MbF12_2.webp",//21GB版本
+      },
     },
-    tips: "*В сравнении с моделями SPARK предыдущего поколения",
+    tips: "",
   },
   sec3: {
     title: "CAMERA",
     desc: "High Resolution Photography System",
     bg: {
-      img_pc: url + "/images/sec3PcBg.png",
-      img_mb: url + "/images/sec3MbBg.png",
+      img_pc: url + "/images/sec3PcBg.webp",
+      img_mb: url + "/images/sec3MbBg.webp",
     },
   },
   sec4: {
@@ -108,7 +145,7 @@ window.spark20proplusConfig = {
       3X in-sensor, 10X digital zoom, and superior video stabilization, plus dual focus technology that intelligently adapts to diverse scenarios, safeguarding clarity for your photographic artistry no matter the distance. Ultra-large 1/1.67" sensor and F/1.75 aperture effortlessly adapt to any lighting. Bright, backlit, or low-light, every sight is your highlight. HDR multi-frame fusion balances light and shadow, crafting compositions of ordinary beauty into extraordinary shots!`,
       cameraVideo: {
         src: url + "/videos/sec4PcCamera.mp4",
-        poster: url + "/images/sec4PcCameraPoster.png",
+        poster: url + "/images/sec4PcCameraPoster.webp",
       },
       datas: [
         {
@@ -156,8 +193,9 @@ window.spark20proplusConfig = {
           desc: "Ultra Large Fusion Pixel",
         },
       ],
-      night_mode_img: url + "/images/sec4PcNightMode.png",
-      bg: url + "/images/sec4PcMoon.png",
+      night_mode_img: url + "/images/sec4PcNightMode.webp", //黑人版本
+      // night_mode_img: url + "/images/sec4PcNightMode_white.webp",//白人版本
+      bg: url + "/images/sec4PcMoon.webp",
     },
   },
   sec5: {
@@ -185,7 +223,7 @@ window.spark20proplusConfig = {
       ],
       selfieVideo: {
         src: url + "/videos/sec5PcSelfie.mp4",
-        poster: url + "/images/sec5PcSelfiePoster.jpg",
+        poster: url + "/images/sec5PcSelfiePoster.webp",
       },
     },
     super_flash_light: {
@@ -198,17 +236,18 @@ window.spark20proplusConfig = {
       is your flattering photos with balanced brightness, anytime,
       anywhere. Wave goodbye to over- or under-exposure. Every
       shot is a brilliant present!`,
-      image: url + "/images/sec5PcSuperFlashLight.png",
-      bg_icon: url + "/images/sec5PcIcon2.png",
+      image: url + "/images/sec5PcSuperFlashLight.webp", //黑人版本
+      // image: url + "/images/sec5PcSuperFlashLight_white.webp",//白人版本
+      bg_icon: url + "/images/sec5PcIcon2.webp",
     },
     dual_video: {
       title: "Dual Video",
       subtitle: "Front and Back, Inspirations Never Lack!",
       desc: `Fire up both front and rear cameras; Expand your creative playground! This exciting interactive feature empowers you with a world of possibilities to ignite your video ideas!`,
       // tips: "* Some products require a system update to experience Dual View.",
-      image: url + "/images/sec5PcDualVideo.jpg",
-      bg_icon: url + "/images/sec5PcIcon4.png",
-      arrow: url + "/images/sec5PcArrowTop.png",
+      image: url + "/images/sec5PcDualVideo.webp",
+      bg_icon: url + "/images/sec5PcIcon4.webp",
+      arrow: url + "/images/sec5PcArrowTop.webp",
     },
     slow_motion: {
       title: "Slow Motion",
@@ -216,9 +255,9 @@ window.spark20proplusConfig = {
       desc: `Eternaltize every wonderful instant, no matter how instant, with the Slow Motion wonder! Find new surprises with every replay.`,
       video: {
         src: url + "/videos/sec5PcSlowMotion.mp4", //黑人版本
-        poster: url + "/images/sec5PcSlowMotion.png", //黑人版本
+        poster: url + "/images/sec5PcSlowMotion.webp", //黑人版本
         // src: url + "/videos/sec5PcSlowMotion_white.mp4",//白人版本
-        // poster: url + "/images/sec5PcSlowMotion_white.png",//白人版本
+        // poster: url + "/images/sec5PcSlowMotion_white.webp",//白人版本
       },
     },
     video_2k: {
@@ -229,10 +268,10 @@ window.spark20proplusConfig = {
       hero stands out; Night algorithm maximizes noise reduction,
       turning dim scenes into vibrant tales. Spot the WOW moments
       in 2K details, inescapable from SPARK’s eagle eye!`,
-      bg_icon: url + "/images/sec5PcIcon3.png",
+      bg_icon: url + "/images/sec5PcIcon3.webp",
       heightQualityVideo: {
         src: url + "/videos/sec5PcVideo2k.mp4",
-        poster: url + "/images/sec5PcVideo2kPoster.jpg",
+        poster: url + "/images/sec5PcVideo2kPoster.webp",
       },
     },
   },
@@ -240,8 +279,8 @@ window.spark20proplusConfig = {
     title: "DESIGN",
     desc: "Designed for Trendsetters",
     bg: {
-      img_pc: url + "/images/sec6PcBg.png",
-      img_mb: url + "/images/sec6MbBg.png",
+      img_pc: url + "/images/sec6PcBg.webp",
+      img_mb: url + "/images/sec6MbBg.webp",
     },
   },
   sec7: {
@@ -262,8 +301,8 @@ window.spark20proplusConfig = {
       Immerse yourself in this celestial sophistication.`,
     },
     phone: {
-      img_pc: url + "/images/sec7PcPhone.png",
-      img_mb: url + "/images/sec7PcPhone.png",
+      img_pc: url + "/images/sec7PcPhone.webp",
+      img_mb: url + "/images/sec7PcPhone.webp",
     },
   },
   sec8: {
@@ -287,36 +326,36 @@ window.spark20proplusConfig = {
       ],
       bg: {
         src: url + "/videos/sec7PcDoubleCurved.mp4",
-        poster: url + "/images/sec7PcDoubleCurved.png",
+        poster: url + "/images/sec7PcDoubleCurved.webp",
       },
     },
     colorList: [
       {
         color: "Temporal Orbits",
         image: {
-          pc: url + "/images/sec8PcColorTemporalOrbits.png",
-          mb: url + "/images/sec8MbColorTemporalOrbits.png",
+          pc: url + "/images/sec8PcColorTemporalOrbits.webp",
+          mb: url + "/images/sec8MbColorTemporalOrbits.webp",
         },
       },
       {
         color: "Lunar Frost",
         image: {
-          pc: url + "/images/sec8PcColorLunarFrost.png",
-          mb: url + "/images/sec8MbColorLunarFrost.png",
+          pc: url + "/images/sec8PcColorLunarFrost.webp",
+          mb: url + "/images/sec8MbColorLunarFrost.webp",
         },
       },
       {
         color: "Radiant Starstream",
         image: {
-          pc: url + "/images/sec8PcColorRadiantStarstream.png",
-          mb: url + "/images/sec8MbColorRadiantStarstream.png",
+          pc: url + "/images/sec8PcColorRadiantStarstream.webp",
+          mb: url + "/images/sec8MbColorRadiantStarstream.webp",
         },
       },
       {
         color: "Magic Skin 2.0 Green",
         image: {
-          pc: url + "/images/sec8PcColorMagicGreen.png",
-          mb: url + "/images/sec8MbColorMagicGreen.png",
+          pc: url + "/images/sec8PcColorMagicGreen.webp",
+          mb: url + "/images/sec8MbColorMagicGreen.webp",
         },
       },
     ],
@@ -324,10 +363,10 @@ window.spark20proplusConfig = {
   sec9: {
     texture: {
       phone: [
-        url + "/images/sec9PcF1.png",
-        url + "/images/sec9PcF2.png",
-        url + "/images/sec9PcF3.png",
-        url + "/images/sec9PcF4.png",
+        url + "/images/sec9PcF1.webp",
+        url + "/images/sec9PcF2.webp",
+        url + "/images/sec9PcF3.webp",
+        url + "/images/sec9PcF4.webp",
       ],
       title: `Sparkle Sand Pattern`,
       subtitle: "Textured Outside, Tech-tured Inside.",
@@ -380,15 +419,15 @@ window.spark20proplusConfig = {
       SPARK.`,
       pic_title: "IP53",
       pic_desc: "Water & Dust Proof",
-      pic_bg: url + "/images/sec9PcWater.png",
+      pic_bg: url + "/images/sec9PcWater.webp",
     },
   },
   sec10: {
     title: "PERFORMANCE",
     desc: "Created for Performance Freaks",
     bg: {
-      img_pc: url + "/images/sec3PcBg.png",
-      img_mb: url + "/images/sec3MbBg.png",
+      img_pc: url + "/images/sec3PcBg.webp",
+      img_mb: url + "/images/sec3MbBg.webp",
     },
   },
   sec11: {
@@ -400,7 +439,7 @@ window.spark20proplusConfig = {
       datas: ["2*Cortex-A76 @2.2GHz", "6*Cortex-A55 @2.0GHz", "Mali-G57 MC2"],
       processorVideo: {
         src: url + "/videos/sec11PcProcessor.mp4",
-        poster: url + "/images/sec11PcProcessorPoster.jpg",
+        poster: url + "/images/sec11PcProcessorPoster.webp",
       },
     },
     engine: {
@@ -422,7 +461,7 @@ window.spark20proplusConfig = {
       },
       engineVideo: {
         src: url + "/videos/sec11PcEngine.mp4",
-        poster: url + "/images/sec11PcEnginePoster.jpg",
+        poster: url + "/images/sec11PcEnginePoster.webp",
       },
     },
     memory: {
@@ -445,10 +484,10 @@ window.spark20proplusConfig = {
         },
       ],
       tips: "* Up to 16GB RAM, 8GB+8GB Extended RAM",
-      img_pc: url + "/images/sec11PcF3.jpg", //16GB版本
-      img_mb: url + "/images/sec11MbF3.jpg", //16GB版本
-      // img_pc: url + "/images/sec11PcF3_2.jpg",//12GB+9GB版本
-      // img_mb: url + "/images/sec11MbF3_2.jpg",//12GB+9GB版本
+      img_pc: url + "/images/sec11PcF3.webp", //16GB版本
+      img_mb: url + "/images/sec11MbF3.webp", //16GB版本
+      // img_pc: url + "/images/sec11PcF3_2.webp",//12GB+9GB版本
+      // img_mb: url + "/images/sec11MbF3_2.webp",//12GB+9GB版本
     },
     battery: {
       title: "5000mAh Large Battery 33W Super Charge (Type-C)",
@@ -470,7 +509,7 @@ window.spark20proplusConfig = {
       ],
       batteryVideo: {
         src: url + "/videos/sec11PcBattery.mp4",
-        poster: url + "/images/sec11PcBatteryPoster.jpg",
+        poster: url + "/images/sec11PcBatteryPoster.webp",
       },
     },
   },
@@ -478,8 +517,8 @@ window.spark20proplusConfig = {
     title: "ULTIMATE <br class='mob' /> AUDIO & VIDEO",
     desc: "A Full Sensory Experience",
     bg: {
-      img_pc: url + "/images/sec3PcBg.png",
-      img_mb: url + "/images/sec3MbBg.png",
+      img_pc: url + "/images/sec3PcBg.webp",
+      img_mb: url + "/images/sec3MbBg.webp",
     },
   },
   sec13: {
@@ -513,9 +552,13 @@ window.spark20proplusConfig = {
         {
           name: `dts`,
           desc: "Audio Processing",
-          dts_icon: url + "/images/sec13PcDts.png",
+          dts_icon: url + "/images/sec13PcDts.webp",
         },
       ],
+      speakerVideo: {
+        src: url + "/videos/sec13PcSpeaker.mp4",
+        poster: url + "/images/sec13PcSpeakerPoster.webp",
+      },
     },
     mic: {
       title: "Dual-Mic Noise-Cancelled Calls",
@@ -523,9 +566,9 @@ window.spark20proplusConfig = {
       desc: `Dual microphones empower crisp clear sound: Primary mic captures your voice while secondary targets background noise for removal, with AI noise cancellation joining forces for seamless communication! <br />
       Crystal-clear conversations flow freely.`,
       img: {
-        mic_icon: url + "/images/sec13PcMic.png",
-        voice_red: url + "/images/sec13PcVoiceRed.png",
-        voice_blue: url + "/images/sec13PcVoiceBlue.png",
+        mic_icon: url + "/images/sec13PcMic.webp",
+        voice_red: url + "/images/sec13PcVoiceRed.webp",
+        voice_blue: url + "/images/sec13PcVoiceBlue.webp",
       },
     },
     screen: {
@@ -559,8 +602,8 @@ window.spark20proplusConfig = {
         },
       ],
       phone: {
-        img_pc: url + "/images/sec13PcScreen.png",
-        img_mb: url + "/images/sec13PcScreen.png",
+        img_pc: url + "/images/sec13PcScreen.webp",
+        img_mb: url + "/images/sec13PcScreen.webp",
       },
     },
     fod: {
@@ -568,14 +611,9 @@ window.spark20proplusConfig = {
       subtitle: "Touch Unlock. Future At Work.",
       desc: "Hassle-free security, instantly at fingertips. Unlock in <br /> milliseconds with in-screen fingerprint verification: No more <br class='pc'/> password; No extra actions. One touch, and your smart world is elegantly awakened.",
       phone: {
-        img_pc: url + "/images/sec13PcFod.png",
-        img_mb: url + "/images/sec13PcFod.png",
+        img_pc: url + "/images/sec13PcFod.webp",
+        img_mb: url + "/images/sec13PcFod.webp",
       },
-    },
-    speakerVideo: {
-      src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec13PcV1.mp4",
-      poster:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec13PcV1.jpg",
     },
   },
   sec14: {
@@ -667,64 +705,64 @@ window.spark20proplusConfig = {
     dynamicPortVideo: {
       src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV1.mp4",
       poster:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF1.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF1.webp",
     },
     ca2Video: {
       src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV2.mp4",
       poster:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF2.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF2.webp",
     },
     internetVideo: {
       src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV3.mp4",
       poster:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF3.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF3.webp",
     },
     aiWallpaperVideo: {
       src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV4.mp4",
       poster:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF4.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF4.webp",
     },
     aiTipsVideo: {
       src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV5.mp4",
       poster:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF5.jpg",
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF5.webp",
     },
     appTwinsVideo: {
       src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV6.mp4", //黑人版本
       poster:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF6.jpg", //黑人版本
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF6.webp", //黑人版本
       // src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV6_2.mp4", //白人版本
       // poster:
-      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF6_2.jpg", //白人版本
+      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF6_2.webp", //白人版本
     },
     socialVideo: {
       src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV7.mp4", //黑人版本
       poster:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF7.jpg", //黑人版本
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF7.webp", //黑人版本
       // src: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/video/sec14PcV7_2.mp4", //白人版本
       // poster:
-      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF7_2.jpg", //白人版本
+      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec14PcF7_2.webp", //白人版本
     },
   },
   image: {
     sec4: {
       super_night_mode:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec4PcF2_2.jpg", //黑人版本
-      // super_night_mode: '/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec4PcF2_3.jpg',//白人版本
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec4PcF2_2.webp", //黑人版本
+      // super_night_mode: '/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec4PcF2_3.webp',//白人版本
     },
     sec5: {
-      cold: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_cold.jpg", //黑人版本
+      cold: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_cold.webp", //黑人版本
       default:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_default.jpg", //黑人版本
-      warm: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_warm.jpg", //黑人版本
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_default.webp", //黑人版本
+      warm: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_warm.webp", //黑人版本
       super_flash_light:
-        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF2_2.jpg", //黑人版本
-      // cold: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_2_cold.jpg", //白人版本
+        "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF2_2.webp", //黑人版本
+      // cold: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_2_cold.webp", //白人版本
       // default:
-      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_2_default.jpg", //白人版本
-      // warm: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_2_warm.jpg", //白人版本
+      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_2_default.webp", //白人版本
+      // warm: "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF1_2_warm.webp", //白人版本
       // super_flash_light:
-      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF2_3.jpg", //白人版本
+      //   "/fileadmin/sitedesign/product/SPARK_20_Pro/dist/jpg/sec5PcF2_3.webp", //白人版本
     },
   },
 }
