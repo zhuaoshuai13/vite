@@ -11,7 +11,7 @@ import Sec10 from "./sec10"
 import Sec11 from "./sec11"
 import Sec12 from "./sec12"
 import Sec13 from "./sec13"
-// import Sec14 from "./sec14"
+import Sec14 from "./sec14"
 import "./index.scss"
 
 const Spark20proplus = () => {
@@ -39,7 +39,7 @@ const Spark20proplus = () => {
           <Sec12 />
           <Sec13 />
         </div>
-        {/* <Sec14 /> */}
+        <Sec14 />
       </div>
     </div>
   )

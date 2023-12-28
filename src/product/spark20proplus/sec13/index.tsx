@@ -49,7 +49,7 @@ const Sec13 = () => {
         start: `top 0`,
         end: "+=150%",
         animation: t7,
-        pin: true,
+        // pin: true,
         scrub: 0.25,
       })
     } else {
@@ -160,46 +160,22 @@ const Sec13 = () => {
       animation: mic,
     })
 
-    // const t5 = gsap
-    //   .timeline()
-    //   .fromTo(".sec13 .pic_box img", { scale: 1.2 }, { scale: 0.9 })
+    const mask = gsap
+      .timeline()
+      .to(".sec13 .container3", {
+        scaleX: 0.93,
+      }, 'a')
+      .to(".sec_container3", {
+        scaleX: 0.93,
+        clipPath: "inset(0px round 14px)"
+      }, 'a')
 
-    // ScrollTrigger.create({
-    //   trigger: ".sec13 .container2 .pic_box",
-    //   start: `top 65%`,
-    //   end: "+=50%",
-    //   animation: t5,
-    //   scrub: 0.25,
-    // })
-
-    // const t6 = gsap
-    //   .timeline()
-    //   .to(
-    //     ".sec_container3",
-    //     1,
-    //     {
-    //       scaleX: 0.93,
-    //       scaleY: 0.96,
-    //       clipPath: "inset(0px round 14px)",
-    //     },
-    //     "a"
-    //   )
-    //   .to(
-    //     ".sec13",
-    //     1,
-    //     {
-    //       scale: 0.9,
-    //       clipPath: "inset(0px round 14px)",
-    //     },
-    //     "a"
-    //   )
-
-    // ScrollTrigger.create({
-    //   trigger: ".sec_container3",
-    //   start: `bottom 85%`,
-    //   animation: t6,
-    //   scrub: 0.25,
-    // })
+    ScrollTrigger.create({
+      trigger: ".sec_container3",
+      start: `bottom 85%`,
+      animation: mask,
+      scrub: 0.25
+    })
   }
 
   useEffect(() => {
@@ -288,8 +264,8 @@ const Sec13 = () => {
                 (item: any, index: number) => {
                   return (
                     <div className='data' key={index}>
-                      {item.name === "dts" ? (
-                        <div className='dts'>
+                      {item.type === "img" ? (
+                        <div className={item.name}>
                           <img src={item.dts_icon} />
                         </div>
                       ) : (
@@ -426,44 +402,46 @@ const Sec13 = () => {
           </div>
         </div>
         <div className='container3'>
-          <div className='pic_box'>
-            <picture>
-              <source
-                media='(min-width: 1081px)'
-                srcSet={spark20proplusConfig.sec13.fod.phone.img_pc}
-              />
-              <source
-                media='(max-width: 1080px)'
-                srcSet={spark20proplusConfig.sec13.fod.phone.img_mb}
-              />
-              <img
-                src={spark20proplusConfig.sec13.fod.phone.img_pc}
-                className='screen'
-                loading='lazy'
-              />
-            </picture>
-          </div>
-          <div className='box'>
-            <div className='left'>
-              <div className='text_wrapper'>
-                <h4
-                  className='title_48'
-                  dangerouslySetInnerHTML={{
-                    __html: spark20proplusConfig.sec13.fod.title,
-                  }}
-                ></h4>
-                <p
-                  className='subtitle_24'
-                  dangerouslySetInnerHTML={{
-                    __html: spark20proplusConfig.sec13.fod.subtitle,
-                  }}
-                ></p>
-                <p
-                  className='desc_18'
-                  dangerouslySetInnerHTML={{
-                    __html: spark20proplusConfig.sec13.fod.desc,
-                  }}
-                ></p>
+          <div className='sticky_wrapper'>
+            <div className='pic_box'>
+              <picture>
+                <source
+                  media='(min-width: 1081px)'
+                  srcSet={spark20proplusConfig.sec13.fod.phone.img_pc}
+                />
+                <source
+                  media='(max-width: 1080px)'
+                  srcSet={spark20proplusConfig.sec13.fod.phone.img_mb}
+                />
+                <img
+                  src={spark20proplusConfig.sec13.fod.phone.img_pc}
+                  className='screen'
+                  loading='lazy'
+                />
+              </picture>
+            </div>
+            <div className='box'>
+              <div className='left'>
+                <div className='text_wrapper'>
+                  <h4
+                    className='title_48'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20proplusConfig.sec13.fod.title,
+                    }}
+                  ></h4>
+                  <p
+                    className='subtitle_24'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20proplusConfig.sec13.fod.subtitle,
+                    }}
+                  ></p>
+                  <p
+                    className='desc_18'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20proplusConfig.sec13.fod.desc,
+                    }}
+                  ></p>
+                </div>
               </div>
             </div>
           </div>

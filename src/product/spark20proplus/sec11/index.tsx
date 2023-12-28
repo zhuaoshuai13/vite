@@ -14,15 +14,15 @@ const Sec11 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
   const sec11Ani = () => {
-    const tl = gsap
-      .timeline()
-      .from(".sec11 .title_96", 1, { y: "30%", opacity: 0 }, "a")
+    // const tl = gsap
+    //   .timeline()
+    //   .from(".sec11 .title_96", 1, { y: "30%", opacity: 0 }, "a")
 
-    ScrollTrigger.create({
-      trigger: ".sec11 .title_96",
-      start: `top 85%`,
-      animation: tl,
-    })
+    // ScrollTrigger.create({
+    //   trigger: ".sec11 .title_96",
+    //   start: `top 95%`,
+    //   animation: tl,
+    // })
 
     if (isPc) {
       const t2 = gsap
@@ -50,16 +50,17 @@ const Sec11 = () => {
           { y: "30%", opacity: 0, delay: 0.3 },
           "a"
         )
+        .from(".sec11 .container1 .datas", 0.4, {})
 
       ScrollTrigger.create({
         trigger: ".sec11 .container1",
-        start: `top 30%`,
+        start: `top -50%`,
         end: "+=150%",
         animation: t2,
         scrub: 0.25,
-        pin: true,
+        // pin: true,
       })
-      
+
       const t3 = gsap
         .timeline()
         .to(
@@ -88,11 +89,54 @@ const Sec11 = () => {
 
       ScrollTrigger.create({
         trigger: ".sec11 .container4",
-        start: `top 30%`,
+        start: `top 0%`,
         end: "+=150%",
         animation: t3,
         scrub: 0.25,
-        pin: true,
+        // pin: true,
+      })
+
+      const t4 = gsap
+        .timeline()
+        .to(
+          ".sec11 .title_96",
+          {
+            y: "-23vw",
+          },
+          "a"
+        )
+        .to(
+          ".sec11 .container1",
+          {
+            y: "-23vw",
+          },
+          "a"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".sec11",
+        start: `top 90%`,
+        end: "+=100%",
+        animation: t4,
+        scrub: 0.25,
+      })
+
+      const t5 = gsap
+        .timeline()
+        .from(
+          ".sec11 .container4",
+          {
+            y: "16vw",
+          },
+          "a"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".sec11 .container4",
+        start: `top 90%`,
+        end: "+=100%",
+        animation: t5,
+        scrub: 0.25,
       })
     } else {
       const t2 = gsap
@@ -115,6 +159,27 @@ const Sec11 = () => {
         trigger: ".sec11 .container1",
         start: `top 85%`,
         animation: t2,
+      })
+      const t3 = gsap
+        .timeline()
+        .from(".sec11 .container4 .video_box", 1, { y: "30%", opacity: 0 }, "a")
+        .from(
+          ".sec11 .container4 .text_wrapper",
+          1,
+          { y: "30%", opacity: 0, delay: 0.25 },
+          "a"
+        )
+        .from(
+          ".sec11 .container4 .datas",
+          1,
+          { y: "30%", opacity: 0, delay: 0.5 },
+          "a"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".sec11 .container4",
+        start: `top 85%`,
+        animation: t3,
       })
     }
 
@@ -142,17 +207,6 @@ const Sec11 = () => {
       start: `top 85%`,
       animation: t4,
     })
-
-    const t5 = gsap
-      .timeline()
-      .from(".sec11 .container4 .box", 1, { y: "30%", opacity: 0 }, "a")
-      .from(".sec11 .container4 .pic_box", 1, { x: "50%", opacity: 0 }, "a")
-
-    ScrollTrigger.create({
-      trigger: ".sec11 .container4 .box",
-      start: `top 85%`,
-      animation: t5,
-    })
   }
 
   useEffect(() => {
@@ -175,55 +229,57 @@ const Sec11 = () => {
         </h3>
 
         <div className='container1'>
-          <div className='video_box'>
-            <LazyLoad offset={1000}>
-              <video
-                src={spark20proplusConfig.sec11.processor.processorVideo.src}
-                poster={
-                  spark20proplusConfig.sec11.processor.processorVideo.poster
-                }
-                autoPlay
-                muted
-                loop
-                webkit-playsinline='true'
-                playsInline={true}
-              ></video>
-            </LazyLoad>
-          </div>
-          <div className='right1'>
-            <div className='text_wrapper'>
-              <h4
-                className='title_48'
-                dangerouslySetInnerHTML={{
-                  __html: spark20proplusConfig.sec11.processor.title,
-                }}
-              ></h4>
-              <p
-                className='subtitle_24'
-                dangerouslySetInnerHTML={{
-                  __html: spark20proplusConfig.sec11.processor.subtitle,
-                }}
-              ></p>
-              <p
-                className='desc_18'
-                dangerouslySetInnerHTML={{
-                  __html: spark20proplusConfig.sec11.processor.desc,
-                }}
-              ></p>
+          <div className='sticky_wrapper'>
+            <div className='video_box'>
+              <LazyLoad offset={1000}>
+                <video
+                  src={spark20proplusConfig.sec11.processor.processorVideo.src}
+                  poster={
+                    spark20proplusConfig.sec11.processor.processorVideo.poster
+                  }
+                  autoPlay
+                  muted
+                  loop
+                  webkit-playsinline='true'
+                  playsInline={true}
+                ></video>
+              </LazyLoad>
             </div>
-            <div className='datas'>
-              {spark20proplusConfig.sec11.processor.datas.map(
-                (item: string, index: number) => {
-                  return (
-                    <div className='data' key={index}>
-                      <div
-                        className='data_title'
-                        dangerouslySetInnerHTML={{ __html: item }}
-                      ></div>
-                    </div>
-                  )
-                }
-              )}
+            <div className='right1'>
+              <div className='text_wrapper'>
+                <h4
+                  className='title_48'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20proplusConfig.sec11.processor.title,
+                  }}
+                ></h4>
+                <p
+                  className='subtitle_24'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20proplusConfig.sec11.processor.subtitle,
+                  }}
+                ></p>
+                <p
+                  className='desc_18'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20proplusConfig.sec11.processor.desc,
+                  }}
+                ></p>
+              </div>
+              <div className='datas'>
+                {spark20proplusConfig.sec11.processor.datas.map(
+                  (item: string, index: number) => {
+                    return (
+                      <div className='data' key={index}>
+                        <div
+                          className='data_title'
+                          dangerouslySetInnerHTML={{ __html: item }}
+                        ></div>
+                      </div>
+                    )
+                  }
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -371,62 +427,64 @@ const Sec11 = () => {
         </div>
 
         <div className='container4'>
-          <div className='video_box'>
-            <LazyLoad offset={1000}>
-              <video
-                src={spark20proplusConfig.sec11.battery.batteryVideo.src}
-                poster={
-                  spark20proplusConfig.sec11.battery.batteryVideo.poster
-                }
-                autoPlay
-                muted
-                loop
-                webkit-playsinline='true'
-                playsInline={true}
-              ></video>
-            </LazyLoad>
-          </div>
-          <div className='box'>
-            <div className='left4'>
-              <div className='text_wrapper'>
-                <h4
-                  className='title_48'
-                  dangerouslySetInnerHTML={{
-                    __html: spark20proplusConfig.sec11.battery.title,
-                  }}
-                ></h4>
-                <p
-                  className='subtitle_24'
-                  dangerouslySetInnerHTML={{
-                    __html: spark20proplusConfig.sec11.battery.subtitle,
-                  }}
-                ></p>
-                <p
-                  className='desc_18'
-                  dangerouslySetInnerHTML={{
-                    __html: spark20proplusConfig.sec11.battery.desc,
-                  }}
-                ></p>
-              </div>
-            </div>
-            <div className='right4'>
-              <div className='datas'>
-                {spark20proplusConfig.sec11.battery.datas.map(
-                  (item: any, index: number) => {
-                    return (
-                      <div className='data' key={index}>
-                        <div
-                          className='data_title'
-                          dangerouslySetInnerHTML={{ __html: item.name }}
-                        ></div>
-                        <p
-                          className='data_desc'
-                          dangerouslySetInnerHTML={{ __html: item.desc }}
-                        ></p>
-                      </div>
-                    )
+          <div className='sticky_wrapper'>
+            <div className='video_box'>
+              <LazyLoad offset={1000}>
+                <video
+                  src={spark20proplusConfig.sec11.battery.batteryVideo.src}
+                  poster={
+                    spark20proplusConfig.sec11.battery.batteryVideo.poster
                   }
-                )}
+                  autoPlay
+                  muted
+                  loop
+                  webkit-playsinline='true'
+                  playsInline={true}
+                ></video>
+              </LazyLoad>
+            </div>
+            <div className='box'>
+              <div className='left4'>
+                <div className='text_wrapper'>
+                  <h4
+                    className='title_48'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20proplusConfig.sec11.battery.title,
+                    }}
+                  ></h4>
+                  <p
+                    className='subtitle_24'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20proplusConfig.sec11.battery.subtitle,
+                    }}
+                  ></p>
+                  <p
+                    className='desc_18'
+                    dangerouslySetInnerHTML={{
+                      __html: spark20proplusConfig.sec11.battery.desc,
+                    }}
+                  ></p>
+                </div>
+              </div>
+              <div className='right4'>
+                <div className='datas'>
+                  {spark20proplusConfig.sec11.battery.datas.map(
+                    (item: any, index: number) => {
+                      return (
+                        <div className='data' key={index}>
+                          <div
+                            className='data_title'
+                            dangerouslySetInnerHTML={{ __html: item.name }}
+                          ></div>
+                          <p
+                            className='data_desc'
+                            dangerouslySetInnerHTML={{ __html: item.desc }}
+                          ></p>
+                        </div>
+                      )
+                    }
+                  )}
+                </div>
               </div>
             </div>
           </div>

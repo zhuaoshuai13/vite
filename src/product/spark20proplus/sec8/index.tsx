@@ -37,51 +37,27 @@ const Sec8 = () => {
     if (isPc) {
       const tl = gsap
         .timeline()
-        .to(".sec8 .double_curved", { y: "-100%", ease: "power1.in" })
-        .to(".sec8 .sec8Swiper", {})
+        .to(".sec8 .double_curved", 1, { y: "-100%", ease: "power1.in" })
+        .to(".sec8 .sec8Swiper", 4, {})
       ScrollTrigger.create({
         trigger: ".sec8",
         start: "top 0",
-        end: "+=200%",
+        end: "+=700%",
         animation: tl,
         pin: true,
         scrub: 0.25,
         onUpdate: ({ progress }) => {
-          if (progress > 0.5 && progress < 0.625) {
+          if (progress > 0.2 && progress < 0.3) {
             swiperRef.current.slideTo(0)
-          } else if (progress > 0.625 && progress < 0.75) {
+          } else if (progress > 0.3 && progress < 0.53) {
             swiperRef.current.slideTo(1)
-          } else if (progress > 0.75 && progress < 0.875) {
+          } else if (progress > 0.53 && progress < 0.76) {
             swiperRef.current.slideTo(2)
-          } else if (progress > 0.875 && progress < 1) {
+          } else if (progress > 0.76 && progress < 1) {
             swiperRef.current.slideTo(3)
           }
         },
       })
-
-      // const t2 = gsap.timeline()
-      // ScrollTrigger.create({
-      //   trigger: ".sec8",
-      //   start: (e) => {
-      //     console.log(e)
-      //     return tl.endTime()
-      //   },
-      //   end: "+=200%",
-      //   animation: t2,
-      //   pin: true,
-      //   scrub: true,
-      //   onUpdate: ({ progress }) => {
-      //     if (progress < 0.25) {
-      //       swiperRef.current.slideTo(0)
-      //     } else if (progress > 0.25 && progress < 0.5) {
-      //       swiperRef.current.slideTo(1)
-      //     } else if (progress > 0.5 && progress < 0.75) {
-      //       swiperRef.current.slideTo(2)
-      //     } else if (progress > 0.75 && progress < 1) {
-      //       swiperRef.current.slideTo(3)
-      //     }
-      //   },
-      // })
     }
   }
 
@@ -97,7 +73,7 @@ const Sec8 = () => {
             <LazyLoad offset={1000}>
               <video
                 src={spark20proplusConfig.sec8.double_curved.bg.src}
-                poster={spark20proplusConfig.sec8.double_curved.bg.img_pc}
+                poster={spark20proplusConfig.sec8.double_curved.bg.poster}
                 autoPlay
                 muted
                 loop
@@ -171,7 +147,12 @@ const Sec8 = () => {
             )
           })}
           <div className='color_content'>
-            <div className='color_text'>{colorList[index].color}</div>
+            <div
+              className='color_text'
+              style={{ color: colorList[index].text_color }}
+            >
+              {colorList[index].color}
+            </div>
             <div className='button_wrapper' data-index={index}>
               {colorList.map((item: any, colorIndex: number) => {
                 return (

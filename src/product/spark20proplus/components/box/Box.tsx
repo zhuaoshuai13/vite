@@ -14,6 +14,7 @@ interface BoxPropsType {
   pause_color: "white" | "black"
   text_box: React.ReactElement
   videoClick: any
+  className?: string
 }
 
 export const Box = ({
@@ -23,6 +24,7 @@ export const Box = ({
   pause_color,
   text_box,
   videoClick,
+  className
 }: BoxPropsType) => {
   const [isPlay, setIsPlay] = useState(false)
 
@@ -54,7 +56,7 @@ export const Box = ({
   })
 
   return (
-    <div className='sec14_box'>
+    <div className={`sec14_box ${className}`}>
       <div
         className='pic_box'
         onClick={() => {

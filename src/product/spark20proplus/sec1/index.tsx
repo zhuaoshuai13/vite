@@ -16,7 +16,7 @@ const Sec1 = () => {
     if (isPc) {
       const tl = gsap
         .timeline()
-        .from(".sec1 .slogn", 0.5, { y: "20%", opacity: 0 }, "a")
+        .from(".sec1 .product", 0.5, { y: "20%", opacity: 0 }, "a")
         .from(".sec1 .title", 0.5, { y: "20%", opacity: 0, delay: 0.25 }, "a")
         .from(".sec1 .items", 0.5, { y: "20%", opacity: 0, delay: 0.25 }, "a")
         .from(".sec1 .pic2", 0.5, { y: "20%", opacity: 0 })

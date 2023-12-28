@@ -466,7 +466,7 @@
         }
 
         div:after {
-          height: px-to-vw-mb(10);
+          height: px-to-vw-mb(13);
         }
 
         div:last-child {
@@ -523,7 +523,7 @@
         font-size: px-to-vw-mb(52);
         
         div:after {
-          height: px-to-vw-mb(10);
+          height: px-to-vw-mb(13);
         }
       }
     }
@@ -543,7 +543,7 @@
         font-size: px-to-vw-mb(44);
         
         div:after {
-          height: px-to-vw-mb(10);
+          height: px-to-vw-mb(13);
         }
 
         div:first-child {
@@ -561,7 +561,7 @@
         font-size: px-to-vw-mb(35);
 
         div:after {
-          height: px-to-vw-mb(10);
+          height: px-to-vw-mb(13);
         }
       }
     }
@@ -597,6 +597,10 @@
 
       .title {
         font-size: px-to-vw-mb(46);
+
+        div:after {
+          height: px-to-vw-mb(13);
+        }
       }
     }
 
@@ -607,6 +611,10 @@
 
       .title {
         font-size: px-to-vw-mb(95);
+
+        div:after {
+          height: px-to-vw-mb(13);
+        }
       }
     }
 
@@ -619,7 +627,7 @@
         font-size: px-to-vw-mb(59);
 
         div:after {
-          height: px-to-vw-mb(10);
+          height: px-to-vw-mb(13);
         }
       }
 

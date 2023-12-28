@@ -4,7 +4,7 @@
   display: flex;
   gap: px-to-vw(10);
   justify-content: center;
-  margin-top: px-to-vw(10);
+  margin-bottom: px-to-vw(10);
 
   &:nth-child(even) {
     .text_box {
@@ -97,7 +97,7 @@
     flex-direction: column;
     gap: px-to-vw-mb(20);
     align-items: center;
-    margin-top: px-to-vw-mb(120);
+    margin-bottom: px-to-vw-mb(120);
 
     &:nth-child(even) {
       .text_box {

@@ -41,9 +41,20 @@ const Sec9 = () => {
       })
       const t2 = gsap
         .timeline()
-        .to(".sec9 .spark20_container .text_wrapper", 0.25, { opacity: 0, delay: 1.5 }, "a")
-        .to(".sec9 .data_all", 0.25, { opacity: 0, delay: 1.5 }, "a")
-        .to(".sec9 .magic_container", 0.25, { opacity: 1, delay: 1.5 }, "a")
+        .to(
+          ".sec9 .spark20_container .text_wrapper",
+          0.25,
+          { opacity: 0, delay: 0.5 },
+          "a"
+        )
+        .to(".sec9 .data_all", 0.25, { opacity: 0, delay: 0.5 }, "a")
+        .to(".sec9 .magic_container", 0.25, { opacity: 1, delay: 0.5 }, "a")
+        .to(
+          ".sec9 .phone:nth-child(4)",
+          { scale: 1.15, delay: 0.5 },
+          "a"
+        )
+        .to(".sec9 .phone:nth-child(4)", 1, {})
 
       ScrollTrigger.create({
         trigger: ".sec9",
@@ -87,10 +98,11 @@ const Sec9 = () => {
         .to(".sec9 .spark20_container .text_wrapper", 0.25, { opacity: 0 }, "a")
         .to(".sec9 .data_all", 0.25, { opacity: 0 }, "a")
         .to(".sec9 .magic_container", 0.25, { opacity: 1 }, "a")
+        .to(".sec9 .phone:nth-child(4)", 0.5, { scale: 1.15 }, "a")
 
       ScrollTrigger.create({
         trigger: ".sec9",
-        start: `top 0%`,
+        start: `top 2%`,
         end: "+=10%",
         animation: t2,
         scrub: 0.25,

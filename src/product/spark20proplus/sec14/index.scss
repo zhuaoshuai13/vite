@@ -1,11 +1,20 @@
 @import '../vars';
 
 .sec14 {
-  padding: px-to-vw(240) 0 px-to-vw(120);
+  padding: px-to-vw(400) 0 px-to-vw(120);
+
+  .hios_title {
+    max-width: 80%;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: px-to-vw(96);
+    font-family: 'HB';
+    text-align: center; 
+  }
 
   .hios {
-    width: px-to-vw(652);
-    height: px-to-vw(652);
+    width: px-to-vw(936);
+    height: px-to-vw(1326);
     margin: 0 auto;
 
     img {
@@ -14,7 +23,7 @@
   }
 
   .box_container {
-    margin-top: px-to-vw(428);
+    margin-top: px-to-vw(-200);
   }
 
   .tips {
@@ -28,15 +37,21 @@
 
 @media (max-width: $mobwidthPx) {
   .sec14 {
-    padding: px-to-vw-mb(360) 0 px-to-vw-mb(60);
+    padding: px-to-vw-mb(400) 0 px-to-vw-mb(60);
+
+    .hios_title {
+      max-width: 90%;
+      font-size: px-to-vw-mb(114);
+    }
 
     .hios {
-      width: px-to-vw-mb(652);
-      height: px-to-vw-mb(652);
+      width: px-to-vw-mb(936);
+      height: px-to-vw-mb(1326);
+      margin-top: px-to-vw-mb(60);
     }
 
     .box_container {
-      margin-top: px-to-vw-mb(300);
+      margin-top: px-to-vw-mb(-50);
     }
 
     .tips {
