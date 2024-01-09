@@ -476,23 +476,23 @@ window.spark20proplusConfig = {
       Run fast, carrying it all - the perfect blend of capacity and velocity.`,
       datas: [
         {
-          name: `Up to <br class='mob' /> 256GB`,
+          name: `Up to <br /> 256GB`,
           desc: "Large Memory",
         },
         {
-          name: `Up to <br class='mob' /> 16GB`,
+          name: `Up to <br /> 16GB`,
           desc: "Memory Fusion",
         },
         {
-          name: `System <br class='mob' /> Slimming`,
+          name: `System <br /> Slimming`,
           desc: "Deep Cleanup",
         },
       ],
       tips: "* Up to 16GB RAM, 8GB+8GB Extended RAM",
-      img_pc: url + "/images/sec11PcF3.webp", //16GB版本
-      img_mb: url + "/images/sec11MbF3.webp", //16GB版本
-      // img_pc: url + "/images/sec11PcF3_2.webp",//12GB+9GB版本
-      // img_mb: url + "/images/sec11MbF3_2.webp",//12GB+9GB版本
+      memoryVideo: {
+        src: url + "/videos/sec11PcMemory.mp4",
+        poster: url + "/images/sec11PcMemoryPoster.webp",
+      },
     },
     battery: {
       title: "5000mAh Large Battery 33W Super Charge (Type-C)",
@@ -731,8 +731,8 @@ window.spark20proplusConfig = {
       WhatsApp, Messenger, Snapchat, Instagram, and more.`,
       icon: url + "/images/sec14PcAppTwinsIcon.webp",
       video: {
-        src: url + "/videos/sec14PcAppTwins.mp4",//黑人版本
-        poster: url + "/images/sec14PcAppTwinsPoster.webp",//黑人版本
+        src: url + "/videos/sec14PcAppTwins.mp4", //黑人版本
+        poster: url + "/images/sec14PcAppTwinsPoster.webp", //黑人版本
         // src: url + "/videos/sec14PcAppTwins_white.mp4",//白人版本
         // poster: url + "/images/sec14PcAppTwinsPoster_white.webp",//白人版本
       },
@@ -761,8 +761,8 @@ window.spark20proplusConfig = {
       ],
       icon: url + "/images/sec14PcSocialIcon.webp",
       video: {
-        src: url + "/videos/sec14PcSocial.mp4",//黑人版本
-        poster: url + "/images/sec14PcSocialPoster.webp",//黑人版本
+        src: url + "/videos/sec14PcSocial.mp4", //黑人版本
+        poster: url + "/images/sec14PcSocialPoster.webp", //黑人版本
         // src: url + "/videos/sec14PcSocial_white.mp4",//白人版本
         // poster: url + "/images/sec14PcSocialPoster_white.webp",//白人版本
       },

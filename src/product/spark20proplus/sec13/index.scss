@@ -373,9 +373,10 @@
         }
       }
 
-      .dts {
+      .dts-img {
         width: px-to-vw-mb(93);
         height: px-to-vw-mb(40);
+        font-size: 0;
       }
 
       .Hi-Res-img {
@@ -481,8 +482,9 @@
       .datas {
         position: relative;
         z-index: 2;
-        display: flex;
+        display: grid;
         flex-wrap: wrap;
+        grid-template-columns: 20% 20% 40%;
         gap: px-to-vw-mb(80);
         order: -1;
         margin-top: px-to-vw-mb(-100);

@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@gsap/react':
+    specifier: ^2.0.2
+    version: registry.npmmirror.com/@gsap/react@2.0.2(react@16.14.0)
   gsap:
     specifier: ^3.12.1
     version: registry.npmmirror.com/gsap@3.12.1
@@ -673,6 +676,17 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  registry.npmmirror.com/@gsap/react@2.0.2(react@16.14.0):
+    resolution: {integrity: sha512-Uo2lOBlGcwmkIE9EcPdsyDfg+DRAoboVvuWgvVIrsJ2tIZHcpFab82YNV0iWj9CNfTzIqGP44ziXqsCMkc8OEw==, tarball: https://registry.npmmirror.com/@gsap/react/-/react-2.0.2.tgz}
+    id: registry.npmmirror.com/@gsap/react/2.0.2
+    name: '@gsap/react'
+    version: 2.0.2
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: registry.npmmirror.com/react@16.14.0
+    dev: false
 
   registry.npmmirror.com/@humanwhocodes/config-array@0.5.0:
     resolution: {integrity: sha512-FagtKFz74XrTl7y6HCzQpwDfXP0yhxe9lHLD1UZxjvZIcbyRz8zTFF/yYNfSfzU414eDwZ1SrO0Qvtyf+wFMQg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz}

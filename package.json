@@ -12,6 +12,7 @@
     "dimg": "node ./img.js"
   },
   "dependencies": {
+    "@gsap/react": "^2.0.2",
     "gsap": "^3.12.1",
     "gsap-trial": "^3.12.1",
     "postcss-plugin": "^1.0.0",
