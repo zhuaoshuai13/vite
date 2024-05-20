@@ -49,17 +49,17 @@
       width: px-to-vw(486);
       height: px-to-vw(486);
 
-      @include bg('sec13PcF1.png');
+      @include bg('sec13PcF1_2.png');
     }
 
     .sec13_f2 {
       position: absolute;
-      top: px-to-vw(-350);
-      right: 0;
-      width: px-to-vw(894);
+      top: px-to-vw(-280);
+      right: px-to-vw(-200);
+      width: px-to-vw(1000);
       height: px-to-vw(1195);
 
-      @include bg('sec13PcF2.png');
+      @include bg('sec13PcF2_2.png');
     }
   }
 
@@ -134,19 +134,20 @@
 
       .sec13_f1 {
         top: px-to-vw-mb(-150);
-        right: px-to-vw-mb(260);
+        right: px-to-vw-mb(400);
         width: px-to-vw-mb(580);
         height: px-to-vw-mb(580);
 
-        @include bg('sec13MobF1.png');
+        @include bg('sec13PcF1_2.png');
       }
 
       .sec13_f2 {
         top: px-to-vw-mb(-620);
-        width: px-to-vw-mb(641);
+        right: px-to-vw-mb(-300);
+        width: px-to-vw-mb(1100);
         height: px-to-vw-mb(1322);
 
-        @include bg('sec13MobF2.png');
+        @include bg('sec13PcF2_2.png');
       }
     }
 

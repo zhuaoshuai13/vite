@@ -45,7 +45,7 @@
     width: px-to-vw(975);
     height: px-to-vw(482);
     margin-top: px-to-vw(150);
-    padding-left: px-to-vw(240);
+    padding-left: px-to-vw(180);
 
     @include bg('sec4PcLeft.webp');
 
@@ -60,7 +60,7 @@
     align-items: center;
     width: px-to-vw(848);
     height: px-to-vw(482);
-    padding-left: px-to-vw(450);
+    padding-left: px-to-vw(400);
 
     @include bg('sec4PcRight.webp');
 

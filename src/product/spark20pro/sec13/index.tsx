@@ -89,25 +89,27 @@ const Sec13 = () => {
       scrub: 0.25,
     })
 
-    const t6 = gsap.timeline().to(
-      ".sec_container3",
-      1,
-      {
-        scaleX: 0.93,
-        scaleY: 0.96,
-        clipPath: "inset(0px round 14px)",
-      },
-      "a"
-    )
-    .to(
-      ".sec13",
-      1,
-      {
-        scale: 0.9,
-        clipPath: "inset(0px round 14px)",
-      },
-      "a"
-    )
+    const t6 = gsap
+      .timeline()
+      .to(
+        ".sec_container3",
+        1,
+        {
+          scaleX: 0.93,
+          scaleY: 0.96,
+          clipPath: "inset(0px round 14px)",
+        },
+        "a"
+      )
+      .to(
+        ".sec13",
+        1,
+        {
+          scale: 0.9,
+          clipPath: "inset(0px round 14px)",
+        },
+        "a"
+      )
 
     ScrollTrigger.create({
       trigger: ".sec_container3",
@@ -122,7 +124,7 @@ const Sec13 = () => {
   })
 
   return (
-    <section className='sec13'>
+    <section className='sec13' id='dual_speaker'>
       <div className='content'>
         <h3 className='title_96 pc'>
           {spark20proConfig.sec13.bigTitle.map(
@@ -222,7 +224,7 @@ const Sec13 = () => {
             </div>
           </div>
         </div>
-        <div className='container2'>
+        <div className='container2' id='120hz_screen'>
           <div className='pic_box'>
             <picture>
               <source media='(min-width: 1081px)' srcSet={sec13PcF2} />

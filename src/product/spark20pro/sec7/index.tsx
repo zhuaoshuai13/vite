@@ -4,8 +4,8 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
-import sec7PcF1 from "../../../assets/spark20pro/sec7PcF1.webp"
-import sec7MbF1 from "../../../assets/spark20pro/sec7MbF1.png"
+import sec7PcF1 from "../../../assets/spark20pro/sec7PcF1_bd.png"
+// import sec7MbF1 from "../../../assets/spark20pro/sec7MbF1.png"
 
 const Sec7 = () => {
   const { spark20proConfig } = window as any
@@ -108,7 +108,7 @@ const Sec7 = () => {
           </div>
           <picture>
             <source media='(min-width: 1081px)' srcSet={sec7PcF1} />
-            <source media='(max-width: 1080px)' srcSet={sec7MbF1} />
+            <source media='(max-width: 1080px)' srcSet={sec7PcF1} />
             <img
               src={sec7PcF1}
               alt='Eulers Deco Design'

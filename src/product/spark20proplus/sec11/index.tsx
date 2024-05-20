@@ -198,8 +198,18 @@ const Sec11 = () => {
 
     const t4 = gsap
       .timeline()
-      .from(".sec11 .container3 .text_wrapper", 1, { y: "30%", opacity: 0 }, "a")
-      .from(".sec11 .container3 .datas", 1, { y: "30%", opacity: 0, delay: 0.25 }, "a")
+      .from(
+        ".sec11 .container3 .text_wrapper",
+        1,
+        { y: "30%", opacity: 0 },
+        "a"
+      )
+      .from(
+        ".sec11 .container3 .datas",
+        1,
+        { y: "30%", opacity: 0, delay: 0.25 },
+        "a"
+      )
 
     ScrollTrigger.create({
       trigger: ".sec11 .container3",
@@ -213,7 +223,7 @@ const Sec11 = () => {
   })
 
   return (
-    <section className='sec11'>
+    <section className='sec11' id='ultimate_processor'>
       <div className='content'>
         <h3 className='title_96'>
           {spark20proplusConfig.sec11.bigTitle.map(
@@ -357,7 +367,7 @@ const Sec11 = () => {
           </div>
         </div>
 
-        <div className='container3'>
+        <div className='container3' id='big_memory'>
           <div className='left3'>
             <div className='video_box'>
               <LazyLoad offset={1000}>
@@ -420,7 +430,7 @@ const Sec11 = () => {
           </div>
         </div>
 
-        <div className='container4'>
+        <div className='container4' id='super_charge'>
           <div className='sticky_wrapper'>
             <div className='video_box'>
               <LazyLoad offset={1000}>

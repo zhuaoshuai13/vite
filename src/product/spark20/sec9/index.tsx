@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
 import sec9PcF2 from "../../../assets/spark20/sec9PcF2.png"
-import sec9PcMagicSkin from "../../../assets/spark20/sec9PcMagicSkin.png"
+// import sec9PcMagicSkin from "../../../assets/spark20/sec9PcMagicSkin.png"
 import sec9PcBlack from "../../../assets/spark20/sec9PcBlack.png"
 import sec9PcGold from "../../../assets/spark20/sec9PcGold.png"
 import sec9PcWhite from "../../../assets/spark20/sec9PcWhite.png"
@@ -158,7 +158,7 @@ const Sec9 = () => {
         <div className='content'>
           <div className='spark20_container'>
             <div className='phone_container'>
-              <img src={sec9PcMagicSkin} className='phone' loading='lazy' />
+              {/* <img src={sec9PcMagicSkin} className='phone' loading='lazy' /> */}
               <img src={sec9PcBlack} className='phone' loading='lazy' />
               <img src={sec9PcGold} className='phone' loading='lazy' />
               <img src={sec9PcWhite} className='phone' loading='lazy' />
@@ -236,7 +236,7 @@ const Sec9 = () => {
               </div>
             </div>
           </div>
-          <div className='container2'>
+          <div className='container2' id='water_dust_proof'>
             <div className='left2'>
               <div className='text_wrapper'>
                 <h4

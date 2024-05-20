@@ -150,7 +150,7 @@ const Sec5 = () => {
 
   return (
     <>
-      <section className='sec5'>
+      <section className='sec5' id='32mp_selfie'>
         <div className='content'>
           <h3 className='title_96'>
             {spark20proConfig.sec5.bigTitle.map(
@@ -350,7 +350,12 @@ const Sec5 = () => {
                   className={slide + " Super_Flash_Light"}
                   loading='lazy'
                 />
-                <div className="tips" dangerouslySetInnerHTML={{__html: spark20proConfig.sec5.dual_video.tips}}></div>
+                <div
+                  className='tips'
+                  dangerouslySetInnerHTML={{
+                    __html: spark20proConfig.sec5.dual_video.tips,
+                  }}
+                ></div>
               </div>
               <div className='right2'>
                 <img src={sec5PcIcon4} className='icon' loading='lazy' />

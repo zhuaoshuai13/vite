@@ -20,11 +20,9 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           if (assetInfo.name.endsWith(".css")) {
             return `css/[name][extname]`
-          } 
-          else if (assetInfo.name.endsWith(".otf")) {
+          } else if (assetInfo.name.endsWith(".otf")) {
             return "fonts/[name].[ext]"
-          } 
-          else if (
+          } else if (
             assetInfo.name.endsWith(".jpg") ||
             assetInfo.name.endsWith(".png") ||
             assetInfo.name.endsWith(".webp")
@@ -38,7 +36,7 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: "src/product/spark20proplus/config.js",
+              src: "src/product/spark20proplus/config_nogold.js",
               dest: "dist/js",
             },
             {
@@ -63,7 +61,6 @@ export default defineConfig({
     },
   },
 })
-
 
 // import path from "path"
 // import { defineConfig } from "vite"
@@ -96,7 +93,7 @@ export default defineConfig({
 //         copy({
 //           targets: [
 //             {
-//               src: "src/product/spark20proplus/config.js",
+//               src: "src/product/spark20/config_tr.js",
 //               dest: "dist",
 //             },
 //             {

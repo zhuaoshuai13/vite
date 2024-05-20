@@ -55,8 +55,8 @@
     .sec13_f2 {
       position: absolute;
       top: px-to-vw(-350);
-      right: 0;
-      width: px-to-vw(894);
+      right: px-to-vw(-280);
+      width: px-to-vw(1139);
       height: px-to-vw(1229);
 
       @include bg('sec13PcF2.png');
@@ -138,15 +138,16 @@
         width: px-to-vw-mb(580);
         height: px-to-vw-mb(580);
 
-        @include bg('sec13MobF1.png');
+        @include bg('sec13PcF1.png');
       }
 
       .sec13_f2 {
         top: px-to-vw-mb(-650);
-        width: px-to-vw-mb(641);
+        right: px-to-vw-mb(-300);
+        width: px-to-vw-mb(1025);
         height: px-to-vw-mb(1353);
 
-        @include bg('sec13MobF2.png');
+        @include bg('sec13PcF2.png');
       }
     }
 

@@ -98,17 +98,17 @@
         }
       }
 
-      &:nth-child(4) {
-        &.active {
-          .circle_big {
-            border-color: #82bb78;
-          }
-        }
+      // &:nth-child(4) {
+      //   &.active {
+      //     .circle_big {
+      //       border-color: #82bb78;
+      //     }
+      //   }
 
-        .circle_small {
-          background-color: #82bb78;
-        }
-      }
+      //   .circle_small {
+      //     background-color: #82bb78;
+      //   }
+      // }
     }
   }
 }

@@ -18,6 +18,8 @@
 
   .item {
     position: relative;
+    color: unset;
+    text-decoration: unset;
     border-radius: px-to-vw(36);
 
     .img_wrapper {

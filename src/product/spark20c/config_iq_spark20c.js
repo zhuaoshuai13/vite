@@ -1,0 +1,340 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+var element = document.getElementById('.poop8 .type4 img');  
+  
+// 添加样式  
+element.style.width = '100%';
+window.pop8Config = {
+  sec1: {
+    icon1Top: "52%",
+    icon1Left: "55%",
+    icon1MobTop: "52%",
+    icon1MobLeft: "83%",
+  },
+  sec2: {
+    t1: `شاشة 6.6 بوصات بمعدل <br/> تحديث 90 هرتز مع فتحة <br/> Dynamic Port مطور ذاتيًا`,
+    t2: "شكل مربع بسيط خالٍ من <br/>التفاصيل الزائدة",
+    t3: "بطاقة SD موسّعة بسعة تخزين كبيرة تبلغ 1 تيرابايت",
+    t4: "بطارية ذات سعة كبيرة تبلغ 5000 مللي أمبير في الساعة مع شحن سريع بقدرة 18 واط (Type-C)",
+    t5: "فتح قفل ببصمة الإصبع على الحافة الجانبية",
+    t6: "مكبرات صوت ستيريو<br /> مزدوجة مع تقنية DTS LISTEN",
+    t7: "الكاميرا",
+  },
+  sec3: {
+    text: "عالم الجمال",
+    title: "قوام مزدوج،<br/> ومستوى عالٍ من<br/> الجاذبية",
+    icon1Top: "-7%",
+    icon1Left: "-8%",
+    icon1MobTop: "-7%",
+    icon1MobLeft: "-16%",
+    t1: "شكل مربع بسيط خالٍ من التفاصيل الزائدة",
+    d1: "تمهيد لتجديد الملمس وإصلاح التصميم! يأتي الجسم النحيف بنمطين: Rainbow Ring للحصول على مجموعة من الألوان المتألقة؛ وMagic Skin 2.0 لإحساس فاخر بجودة الجلد المتميزة - مصنوع من السيليكون عالي المحتوى البوليمري الخالي من المخاطر بنسبة 100%! <br /> انتقِ الشكل والمظهر المناسبين لك. ارتقِ بأسلوبك!",
+    param1t: "8.55 ملم",
+    param1d: "نحيف للغاية",
+    param2t: "Sparkle Sand",
+    param2d: "جيل جديد ",
+    param3t: "مليون لون ",
+    param3d: "غلاف",
+    param4t: "8.75 ملم",
+    param4d: "نحيف للغاية",
+    param5t: `Magic<br /> Skin 2.0`,
+    param5d: "جلد",
+    param6t: `قابل لإعادة التدوير<br />  بنسبة 100%`,
+    param6d: `غطاء خلفي`,
+    param7t: `صفر`,
+    param7d: `​مواد ضارة`,
+    tips: "*تثبت ذلك البيانات القادمة من مخبر TECNO LAB",
+  },
+  sec4: {
+    title: "أبحر بسلاسة في عالم رحب من العجائب.",
+    icon3Top: "17%",
+    icon3Left: "92%",
+    icon3MobTop: "5%",
+    icon3MobLeft: "95%",
+    t1: `شاشة 6.6 بوصات بمعدل تحديث 90 هرتز مع فتحة`,
+    d1: `استكشف عالمًا رحبًا من العجائب على شاشة فائقة الاتساع مقاسها 6.6 بوصات! مع نسبة هائلة للشاشة إلى الجسم تبلغ 90.5% - وهي نسبة نادرة في هذه الفئة، تشعر وكأنك تطفو في بحر لا حدود له من العروض المرئية! استمتع بخوض مغامرة سلسة، حيث يضمن معدل التحديث العالي البالغ 90 هرتز تفاعلات فائقة الاستجابة!
+    <br />مفاجآت تنتظرك بين كل نقرة وأخرى.`,
+    param1t: `فتحة 6.6 بوصات `,
+    param1d: "شاشة كبيرة",
+    param2t: "90 هرتز",
+    param2d: "معدل التحديث",
+    param3t: "8H",
+    param3d: "صلابة السطح",
+    tips: "*تثبت ذلك البيانات القادمة من مخبر TECNO LAB",
+  },
+  sec5: {
+    title: "المنظر الجمالي + الاستخدام <br/>الأفضل في كلتا الناحيتين",
+    icon1Top: "14%",
+    icon1Left: "-12%",
+    icon1MobTop: "-23%",
+    icon1MobLeft: "-21%",
+    t1: "Dynamic Port مطور ذاتيًا",
+    d1: `مرحبًا بك في Dynamic Port المبتكر من شركة TECNO، الذي يندمج بسلاسة في شاشة العرض. توفر واجهة المستخدم سهلة الاستخدام إشعارات فعالة - ابق على اطلاع دون الحاجة إلى فتح القفل أو التحقق أو التبديل بين التطبيقات بصورة متكررة. الوضع التقليدي متاح أيضًا لتوفير المرونة لك. 
+    <br/>تجربة مبسطة، ولكن دون أي تنازلات!`,
+  },
+  sec6: {
+    text: "صورة",
+    title: "الأمام + الخلف<br/>الوضوح على كلا الطرفين",
+    icon4Top: "-2%",
+    icon4Left: "62%",
+    icon4MobTop: "-14%",
+    icon4MobLeft: "85%",
+    t1: "كاميرا سيلفي بدقة 8 ميجابكسل مع فلاش مزدوج",
+    d1: "من الغسق حتى الفجر، في الداخل أو الخارج، تبقى أفضل كاميرات السيلفي في الجانب الأمامي جاهزة لالتقاط أجول الصور! كاميرا بدقة 8 ميجابكسل للحصول على وضوح حاد، مع بكسل حساس للضوء، وفلاش مزدوج، وإضاءة ملء الشاشة لتوهج مشع. إضافة إلى تحسينات جمالية مختبرة في تجارب حقيقية لتناسب كل ألوان البشرة!  <br/> ادخل إلى دائرة الضوء ودع نجمك الداخلي يتألق بصورة مضاعفة.",
+    param1t: "إضاءة ليلية فائقة ",
+    param1d: "خوارزمية",
+    param2t: "8 ميجابكسل",
+    param2d: "صورة سيلفي فائقة الوضوح",
+    param3t: "1.12ميكرومتر",
+    param3d: "وحدة بكسل كبيرة جدًا",
+    param4t: "ضوء فلاش مزدوج",
+    param4d: "إضاءة طبيعية",
+    tips: "*الصور لأغراض توضيحية فقط، يُرجى الرجوع إلى نموذج المنتج الفعلي.",
+  },
+  sec7: {
+    t1: "كاميرا 50 ميجابكسل بتقنية النطاق الديناميكي العالي فائقة الحساسية",
+    d1: "التقط اللحظات العجيبة العابرة في أي وقت باستخدام الكاميرا الرئيسية بدقة 50 ميجابكسل. من مغامرات ضوء النهار إلى جمال الإضاءة الخلفية، تمنحك التفوق دائمًا. تدمج تقنية النطاق الديناميكي العالي الإطارات لتحقيق الوضوح الذي يفوق التألق، بينما تكشف وحدة البكسل الكبيرة جدًا الحساسة للضوء وعدسة 6P المحسنة بصريًا عن تفاصيل آسرة وسط الضوء أو الظل في الليل. وبفضل تقنية التركيز التلقائي باكتشاف المرحلة التي تضمن التركيز السريع، لن تفوتك أي لحظة استثنائية!",
+    param1t: "50 ميجابكسل",
+    param1d: "وضوح فائق",
+    param2t: `1/2.8 بوصة "`,
+    param2d: "مستشعر كبير للغاية",
+    param3t: "6P",
+    param3d: "نقل عالٍ للضوء",
+    param4t: "PDAF",
+    param4d: "التركيز التلقائي<br /> باكتشاف المرحلة",
+    param5t: "تأثير تقنية النطاق الديناميكي العالي",
+    param5d: "دمج متعدد الإطارات",
+    tips: "*الصور لأغراض توضيحية فقط، يُرجى الرجوع إلى نموذج المنتج الفعلي.",
+  },
+  sec8: {
+    title: "التركيز عليك!",
+    icon2Top: "-41%",
+    icon2Left: "23%",
+    icon3Top: "2%",
+    icon3Left: "-8%",
+    icon2MobTop: "-41%",
+    icon2MobLeft: "34%",
+    icon3MobTop: "-21%",
+    icon3MobLeft: "-21%",
+    t1: "لقطة الواقع المعزز",
+    d1: "عبر عن روحك النابضة بالحياة من خلال الصور الرمزية الكرتونية المرحة والخلفيات المفعمة بالحيوية ومجموعة متنوعة من عناصر الواقع المعزز.  <br /> تميز واخطف الأنظار!",
+    tips: "*مقاطع الفيديو لأغراض توضيحية فقط، يُرجى الرجوع إلى نموذج المنتج الفعلي.",
+  },
+  sec9: {
+    title: "الأداء",
+  },
+  sec10: {
+    bigTitle: `قيمة أفضل مما تتوقع!`,
+    icon1: {
+      top: "-26%",
+      left: "-9%",
+      mobtop: "-34%",
+      mobleft: "3%",
+    },
+    icon4: {
+      top: "-9%",
+      left: "86%",
+      mobtop: "-2%",
+      mobleft: "83%",
+    },
+
+    title: `مكبر صوت ستيريو مزدوج<br /> مستوى صوت كبير 400%`,
+    desc: `ارتقِ ب​تجربتك الصوتية على الهاتف المحمول إلى مستوى المسرح باستخدام مكبرات الصوت المزدوجة! تغمرك خاصية DTS LISTEN بصوت الاستريو وكأن الألحان تنبض بالحياة من حولك. تضمن القنوات التكيفية الوضوح أثناء التقلبات، ما يجعلها مثالية للألعاب. استمتع بمكالمات واضحة تمامًا حتى في البيئات الصاخبة مع مضاعفة مستوى الصوت المحسن.
+    <br />ارتق إلى مستوى الرفاهية الصوتية التي تستحقها اليوم!`,
+    p1a: `مكبرات صوت <br />ستيريو مزدوجة`,
+    p1b: `تعزيز جهارة الصوت`,
+    p2a: `الداعم <br />الصوتي`,
+    p2b: `مساعد الاتصال`,
+    p3a: `التتبع بكلتا<br /> الأذنين`,
+    p3b: `تقنية`,
+    p4a: `مستو<br /> صوت فائق`,
+    p4b: `صوت عالٍ`,
+    tips: `*الصور لأغراض توضيحية فقط، يُرجى الرجوع إلى نموذج المنتج الفعلي.
+    <br />*تتطلب بعض المنتجات تحديث النظام لتجربة مستوى صوت فائق.`,
+  },
+  sec11: {
+    bigTitle: `لا متاعب، بل<br />  قيم مضاعفة!`,
+    icon3: {
+      top: "56%",
+      left: "57%",
+      mobtop: "41%",
+      mobleft: "64%",
+    },
+
+    title: `مساحة تخزين كبيرة مع تقليل حجم النظام`,
+    desc: `لا مزيد من المقايضة! مع الذاكرة الواسعة، احتفظ بمقاطعك الموسيقية المفضلة وصورك المحببة، تم اختبارها لحفظ ما يقرب من 10000 صورة. تعمل الذاكرة الموسعة البالغ حجمها 8 جيجابايت على تعزيز العمليات السلسة، مع نظام Slimming لإبقائها نظيفة وخالية من الفوضى. <br />تخلص من التأخير. احتفظ فقط بالسرعة والنعومة والاستقرار.`,
+    p1a: `ما يصل إلى 1 تيرابايت`,
+    p1b: `تخزين موسّع`,
+    p2a: `حتى 16 جيجابكسل`,
+    p2b: `اندماج الذاكرة `,
+    p3a: `تقليل حجم النظام`,
+    p3b: `تنظيف عميق`,
+    tips1: `*ما يصل إلى 16 جيجابايت، 8 جيجابايت + 8 جيجابايت ذاكرة وصول عشوائي موسّعة`,
+    tips2: `*سعة تخزين موسّعة 1 تيرابايت متاحة فقط في الطرز التي تحتوي على بطاقة MicroSD سعة 1 تيرابايت. قد تختلف مساحة التخزين الفعلية المتوفرة وفقًا للبرامج المثبتة مسبقًا.`,
+    tips3: `*يجب شراء بطاقة MicroSD منفصلة وهي غير متضمنة في هذا المنتج.`,
+    tips4: `*الصور لأغراض توضيحية فقط، يُرجى الرجوع إلى نموذج المنتج الفعلي.`,
+    tips5: `*تثبت ذلك البيانات القادمة من مخبر TECNO LAB`,
+  },
+  sec12: {
+    bigTitle: `تركيز مضا<br />عف على القوة!`,
+    icon1: {
+      top: "7%",
+      left: "63%",
+      mobtop: "56%",
+      mobleft: "67%",
+    },
+    icon2: {
+      top: "-35%",
+      left: "27%",
+      mobtop: "-55%",
+      mobleft: "38%",
+    },
+    icon3: {
+      top: "7%",
+      left: "63%",
+      mobtop: "-1%",
+      mobleft: "72%",
+    },
+
+    title: `بطارية ذات سعة كبيرة تبلغ 5000 مللي أمبير في الساعة مع شحن سريع بقدرة 18 واط (Type-C)`,
+    desc: `لا داعي للقلق بشأن الطاقة مع بطارية ماراثونية ضخمة مع أكثر من 600 ساعة من زمن الانتظار؛ تعود بسرعة مع شحن سريع بقدرة 18 واط. انغمس في مقاطع الفيديو والموسيقى من دون توقف؛ فيمكن تشغيل مقاطع الفيديو لمدة 15.5 ساعة والموسيقى لمدة 73.5 ساعة من شحنة كاملة. يتوافق منفذ Type-C متعدد الاستخدامات مع اتجاهك - وصّله باتجاه الأعلى أو الأسفل بأي طريقة تريدها. ميزة مخصصة عادةً للطرز الأعلى تكلفة - ارفع مستوى تجربتك، واخفض تكاليفك!`,
+    p1a: `سعة 5000 مللي أمبير/ساعة`,
+    p1b: `بطارية كبيرة`,
+    p2a: `18 واط`,
+    p2b: `شحن سريع`,
+    p3a: `Type-C`,
+    p3b: `واجهة`,
+    tips: `*الصور لأغراض توضيحية فقط، يُرجى الرجوع إلى نموذج المنتج الفعلي. <br />
+    *تثبت ذلك البيانات القادمة من مخبر TECNO LAB`,
+  },
+  sec13: {
+    bigTitle: `بنصف الجهد،<br />إيقاظ عالم ذكي`,
+    icon1: {
+      top: "-15%",
+      left: "-14%",
+      mobtop: "-15%",
+      mobleft: "1%",
+    },
+    icon2: {
+      top: "-3%",
+      left: "85%",
+      mobtop: "-8%",
+      mobleft: "82%",
+    },
+    icon3: {
+      top: "-2%",
+      left: "-12%",
+      mobtop: "-9%",
+      mobleft: "1%",
+    },
+
+    title: `فتح قفل ببصمة الإصبع على الحافة الجانبية`,
+    desc: `تكنولوجيا رائدة في هذا النطاق بفضل مستشعر بصمة الإصبع المثبت على الجانب. فتح القفل بشكل حدسي وأنيق. بلا رفع أو عبس. لمسة لطيفة بأطراف أصابعك - ها هو جهازك جاهز لخدمتك. `,
+    p1a: `بدرجة ميللي ثانية`,
+    p1b: `سرعة فتح`,
+    p2a: `10 ملم² تقريبًا`,
+    p2b: `مساحة استشعار كبيرة`,
+    tips: `*تثبت ذلك البيانات القادمة من مخبر TECNO LAB`,
+  },
+  sec14: {
+    bigTitle: `خض سباق الألف من<br /> الثانية على <br />Duo Drive.`,
+    icon1: {
+      top: "0%",
+      left: "-15%",
+      mobtop: "0%",
+      mobleft: "4%",
+    },
+    icon2: {
+      top: "-17%",
+      left: "40.5%",
+      mobtop: "-17%",
+      mobleft: "51.5%",
+    },
+    icon3: {
+      top: "35%",
+      left: "70%",
+      mobtop: "35%",
+      mobleft: "80%",
+    },
+
+    title: `معالج ثماني النوى`,
+    desc: `يُشغّل بواسطة معالج Arm Cortex-A53 ثماني النوى الذي يوفر ترددًا يصل إلى 2.2 جيجاهرتز لاستخدام الهاتف المحمول بسرعة البرق! يحافظ محرك Darwin المطور ذاتيًا على برودة جهازك حتى تتمكن من الاسترخاء أثناء الاستخدام لمدة أطول. 
+    <br />استمتع بأداء متواصل وسلس كالحرير دون أي عوائق!`,
+    p1a: `2.2 جيجاهرتز`,
+    p1b: `تردد الذروة`,
+    p2a: `معالج Cortex-A53`,
+    p2b: `معالج`,
+    tips: `*الصور لأغراض توضيحية فقط، يُرجى الرجوع إلى نموذج المنتج الفعلي.`,
+  },
+  sec15: {
+    bigTitle: `المساعدة الصوتية بالذكاء الاصطناعي<br /> - رفيقك المفضل<br /> في أي شيء`,
+    icon1: {
+      top: "-30%",
+      left: "-12%",
+      mobtop: "0%",
+      mobleft: "4%",
+    },
+
+    title: `مساعدة صوتية مدعومة بالذكاء الاصطناعي مزودة بروبوت ChatGPT`,
+    desc: `تعرّف على مساعدتك الذكية الموثوقة والمزودة بذكاء ChatGPT المذهل! ابقَ في المقدمة من خلال الوصول إلى أحدث عجائب التكنولوجيا معه. من الدردشة إلى الشعر أو الموسيقى، ينقلك المساعد الصوتي هذا إلى إمكانات الذكاء الاصطناعي اللامحدودة.`,
+    tips: `*الصور لأغراض توضيحية فقط، يُرجى الرجوع إلى نموذج المنتج الفعلي.`,
+  },
+
+
+
+   // type1: 文案+图片   (文案字段: 在sec1Text下面, 图片字段: sec1Type1ImagePc(pc端)、sec1Type1ImageMob(移动端));
+  // type2: 文案+小视频 (文案字段: 在sec1Text下面, 小视频字段: sec1Video.pcType2(pc端)、sec1Video.mobType2(移动端), 视频海报图: type2Post(pc端)、type2PostMob(移动端));  
+  // type3: 通屏大视频  (大视频字段: sec1Video.pcType3(pc端)、sec1Video.mobType3(移动端), 视频海报图: type3Post(pc端)、type3PostMob(移动端));
+  // type4: 通屏大图片(图片字段: sec1Type4ImagePc(pc端)、sec1Type4ImageMob(移动端))
+  sec1Type: 'type4',
+  sec1Text: {
+   
+  },
+  sec1Type1ImagePc: 'https://d3fyizz0b46qgr.cloudfront.net/global/iq/homepage/banner/spark%2020c/pc.jpg',
+  sec1Type1ImageMob: 'https://d3fyizz0b46qgr.cloudfront.net/global/iq/homepage/banner/spark%2020c/m.jpg',
+  sec1Video: {
+    pcType2: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec1PcType2.mp4",
+    mobType2: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec1PcType2.mp4",
+    pcType3: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec1PcFull.mp4",
+    mobType3: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec1MobFull.mp4",
+    type2Post: "",
+    type2PostMob: "",
+    type3Post: "",
+    type3PostMob: "",
+  },
+  sec1Type4ImagePc: 'https://d3fyizz0b46qgr.cloudfront.net/global/iq/homepage/banner/spark%2020c/pc.jpg',
+  sec1Type4ImageMob: 'https://d3fyizz0b46qgr.cloudfront.net/global/iq/homepage/banner/spark%2020c/m.jpg',
+  sec6Image: {
+    pic1: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/png/sec7MbF4.png"
+  },
+  sec6Video: {
+    pc: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec6Pc.mp4",//白人
+  },
+  sec7Video: {
+    pc: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec7Pc.mp4",
+    mob: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec7Mob.mp4",
+    v1PostMob: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/jpg/sec7MobPoster.jpg",
+  },
+  sec8Video: {
+    // 线上
+    v1: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec8V1.mp4",
+    v1Post: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/jpg/sec8V1Poster.jpg",
+    v2: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec8V2.mp4",
+    v2Post: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/jpg/sec8V2Poster.jpg",
+    v3: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec8V3.mp4",
+    v3Post: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/jpg/sec8V3Poster.jpg",
+    v4: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec8V4.mp4",
+    v4Post: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/jpg/sec8V4Poster.jpg",
+    v5: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec8V5.mp4",
+    v5Post: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/jpg/sec8V5Poster.jpg",
+    v6: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec8V6.mp4",
+    v6Post: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/jpg/sec8V6Poster.jpg",
+  },
+  sec11Video: {
+    pc: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec11Pc.mp4",
+  },
+  sec12Video: {
+    pc: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec12Pc.mp4",
+    mob: "https://d3fyizz0b46qgr.cloudfront.net/global/phones/SPARK_20C/new/dist/video/sec12Mob.mp4",
+  },
+}

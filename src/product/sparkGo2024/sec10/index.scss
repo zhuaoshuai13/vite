@@ -92,6 +92,7 @@
 
       .big_text {
         color: #faff00;
+        font-size: px-to-vw(32);
         line-height: 90%;
       }
 
@@ -167,7 +168,7 @@
         }
 
         .big_text {
-          font-size: px-to-vw-mb(64);
+          font-size: px-to-vw-mb(50);
         }
 
         .small_text {

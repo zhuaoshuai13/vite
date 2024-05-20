@@ -42,6 +42,12 @@
     height: px-to-vw(960);
   }
 
+  .type4 {
+    img {
+      width: 100%;
+    }
+  }
+
   .fullVideo {
     width: 100%;
     clip-path: inset(2px 0);

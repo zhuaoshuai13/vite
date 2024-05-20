@@ -239,7 +239,7 @@ window.spark20Config = {
     },
   },
   sec8: {
-    colorList: ["Gravity Black", "Cyber White"],
+    colorList: ["Magic Skin 2.0", "Gravity Black", "Neon Gold", "Cyber White"],
   },
   sec9: {
     texture: {

@@ -14,11 +14,11 @@ import "./index.scss"
 import sec8PcF1 from "../../../assets/spark20pro/sec8PcF1.jpg"
 import sec8PcF2 from "../../../assets/spark20pro/sec8PcF2.jpg"
 import sec8PcF3 from "../../../assets/spark20pro/sec8PcF3.jpg"
-import sec8PcF4 from "../../../assets/spark20pro/sec8PcF4.jpg"
+// import sec8PcF4 from "../../../assets/spark20pro/sec8PcF4.jpg"
 import sec8MbF1 from "../../../assets/spark20pro/sec8MbF1.jpg"
 import sec8MbF2 from "../../../assets/spark20pro/sec8MbF2.jpg"
 import sec8MbF3 from "../../../assets/spark20pro/sec8MbF3.jpg"
-import sec8MbF4 from "../../../assets/spark20pro/sec8MbF4.jpg"
+// import sec8MbF4 from "../../../assets/spark20pro/sec8MbF4.jpg"
 import { ScreenContext } from "../../../provider"
 
 const Sec8 = () => {
@@ -71,7 +71,7 @@ const Sec8 = () => {
   }, [])
 
   return (
-    <section className='sec8'>
+    <section className='sec8' id='magic_skin'>
       <div className='content'>
         <Swiper
           // effect={"fade"}
@@ -105,13 +105,13 @@ const Sec8 = () => {
               <img src={sec8PcF3} loading='lazy' />
             </picture>
           </SwiperSlide>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <picture>
               <source media='(min-width: 1081px)' srcSet={sec8PcF4} />
               <source media='(max-width: 1080px)' srcSet={sec8MbF4} />
               <img src={sec8PcF4} loading='lazy' />
             </picture>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <div className='color_content'>
             <div className='color_text'>{colorList[index]}</div>
             <div className='button_wrapper' data-index={index}>

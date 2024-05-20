@@ -175,7 +175,7 @@ const Sec2 = () => {
             <div className='items'>
               <div className='sec2_col'>
                 <div className='sec2_row'>
-                  <div className='item item1'>
+                  <a className='item item1' href='#dual_speaker'>
                     <div className='img_wrapper'>
                       <picture>
                         <source
@@ -207,10 +207,10 @@ const Sec2 = () => {
                         )}
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div className='sec2_row'>
-                  <div className='item item2'>
+                  <a className='item item2' href='#magic_skin'>
                     <div className='img_wrapper'>
                       <picture>
                         <source
@@ -235,8 +235,8 @@ const Sec2 = () => {
                         }}
                       ></div>
                     </div>
-                  </div>
-                  <div className='item item3'>
+                  </a>
+                  <a className='item item3' href='#ultra_tough'>
                     <div className='img_wrapper'></div>
                     <div className='text_wrapper'>
                       <div
@@ -246,10 +246,10 @@ const Sec2 = () => {
                         }}
                       ></div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div className='sec2_row'>
-                  <div className='item item4'>
+                  <a className='item item4' href='#120hz_screen'>
                     <div className='img_wrapper'></div>
                     <div className='text_wrapper'>
                       <div
@@ -265,8 +265,8 @@ const Sec2 = () => {
                         }}
                       ></div>
                     </div>
-                  </div>
-                  <div className='item item5'>
+                  </a>
+                  <a className='item item5' href='#android_14'>
                     <div className='img_wrapper'>
                       <picture>
                         <source
@@ -298,12 +298,12 @@ const Sec2 = () => {
                         )}
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
               <div className='sec2_col'>
                 <div className='sec2_row'>
-                  <div className='item item6'>
+                  <a className='item item6' href='#ultra_clear_camera'>
                     <div className='img_wrapper'>
                       <picture>
                         <source
@@ -335,11 +335,11 @@ const Sec2 = () => {
                         )}
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div className='sec2_row'>
                   <div className='sec2_col'>
-                    <div className='item item7'>
+                    <a className='item item7' href='#magic_skin'>
                       <div className='img_wrapper'>
                         <picture>
                           <source
@@ -371,10 +371,10 @@ const Sec2 = () => {
                           )}
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div className='sec2_col'>
-                    <div className='item item8'>
+                    <a className='item item8' href='#32mp_selfie'>
                       <div className='img_wrapper'>
                         <picture>
                           <source
@@ -399,8 +399,8 @@ const Sec2 = () => {
                           }}
                         ></div>
                       </div>
-                    </div>
-                    <div className='item item9'>
+                    </a>
+                    <a className='item item9' href='#water_dust_proof'>
                       <div className='img_wrapper'>
                         <picture>
                           <source
@@ -431,11 +431,11 @@ const Sec2 = () => {
                           }}
                         ></div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div className='sec2_row'>
-                  <div className='item item10'>
+                  <a className='item item10' href='#super_charge'>
                     <div className='img_wrapper'>
                       <picture>
                         <source
@@ -467,12 +467,12 @@ const Sec2 = () => {
                         )}
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
               <div className='sec2_col'>
                 <div className='sec2_row'>
-                  <div className='item item11'>
+                  <a className='item item11' href='#ultimate_processor'>
                     <div className='img_wrapper'>
                       <picture>
                         <source
@@ -504,10 +504,10 @@ const Sec2 = () => {
                         )}
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div className='sec2_row'>
-                  <div className='item item12'>
+                  <a className='item item12' href='#big_memory'>
                     <div className='img_wrapper'>
                       <picture>
                         <source
@@ -559,7 +559,7 @@ const Sec2 = () => {
                         __html: spark20proplusConfig.sec2.item12.tips,
                       }}
                     ></div>
-                  </div>
+                  </a>
                 </div>
               </div>
               <div
@@ -572,7 +572,7 @@ const Sec2 = () => {
           ) : (
             <div className='items'>
               <div className='sec2_row'>
-                <div className='item item6'>
+                <a className='item item6' href='#ultra_clear_camera'>
                   <div className='img_wrapper'>
                     <picture>
                       <source
@@ -604,11 +604,11 @@ const Sec2 = () => {
                       )}
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div className='sec2_row'>
                 <div className='sec2_col'>
-                  <div className='item item7'>
+                  <a className='item item7' href='#magic_skin'>
                     <div className='img_wrapper'>
                       <picture>
                         <source
@@ -640,10 +640,10 @@ const Sec2 = () => {
                         )}
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div className='sec2_col'>
-                  <div className='item item8'>
+                  <a className='item item8' href='#32mp_selfie'>
                     <div className='img_wrapper'>
                       <picture>
                         <source
@@ -668,8 +668,8 @@ const Sec2 = () => {
                         }}
                       ></div>
                     </div>
-                  </div>
-                  <div className='item item9'>
+                  </a>
+                  <a className='item item9' href='#water_dust_proof'>
                     <div className='img_wrapper'>
                       <picture>
                         <source
@@ -700,11 +700,11 @@ const Sec2 = () => {
                         }}
                       ></div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
               <div className='sec2_row'>
-                <div className='item item10'>
+                <a className='item item10' href='#super_charge'>
                   <div className='img_wrapper'>
                     <picture>
                       <source
@@ -736,10 +736,10 @@ const Sec2 = () => {
                       )}
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div className='sec2_row'>
-                <div className='item item11'>
+                <a className='item item11' href='#ultimate_processor'>
                   <div className='img_wrapper'>
                     <picture>
                       <source
@@ -771,10 +771,10 @@ const Sec2 = () => {
                       )}
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div className='sec2_row'>
-                <div className='item item12'>
+                <a className='item item12' href='#big_memory'>
                   <div className='img_wrapper'>
                     <picture>
                       <source
@@ -826,10 +826,10 @@ const Sec2 = () => {
                       __html: spark20proplusConfig.sec2.item12.tips,
                     }}
                   ></div>
-                </div>
+                </a>
               </div>
               <div className='sec2_row'>
-                <div className='item item1'>
+                <a className='item item1' href='#dual_speaker'>
                   <div className='img_wrapper'>
                     <picture>
                       <source
@@ -861,10 +861,10 @@ const Sec2 = () => {
                       )}
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div className='sec2_row'>
-                <div className='item item2'>
+                <a className='item item2' href='#magic_skin'>
                   <div className='img_wrapper'>
                     <picture>
                       <source
@@ -889,8 +889,8 @@ const Sec2 = () => {
                       }}
                     ></div>
                   </div>
-                </div>
-                <div className='item item3'>
+                </a>
+                <a className='item item3'>
                   <div className='img_wrapper'></div>
                   <div className='text_wrapper'>
                     <div
@@ -900,10 +900,10 @@ const Sec2 = () => {
                       }}
                     ></div>
                   </div>
-                </div>
+                </a>
               </div>
               <div className='sec2_row'>
-                <div className='item item4'>
+                <a className='item item4' href='#120hz_screen'>
                   <div className='img_wrapper'></div>
                   <div className='text_wrapper'>
                     <div
@@ -919,8 +919,8 @@ const Sec2 = () => {
                       }}
                     ></div>
                   </div>
-                </div>
-                <div className='item item5'>
+                </a>
+                <a className='item item5' href='#android_14'>
                   <div className='img_wrapper'>
                     <picture>
                       <source
@@ -952,7 +952,7 @@ const Sec2 = () => {
                       )}
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div
                 className='sec2_tips'

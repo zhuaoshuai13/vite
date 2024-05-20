@@ -62,6 +62,18 @@
         transform: translate(-50%, -50%);
       }
 
+      // &:nth-child(1) {
+      //   &.active {
+      //     .circle_big {
+      //       border-color: #8ec3e2;
+      //     }
+      //   }
+
+      //   .circle_small {
+      //     background-color: #8ec3e2;
+      //   }
+      // }
+
       &:nth-child(1) {
         &.active {
           .circle_big {
@@ -75,6 +87,18 @@
       }
 
       &:nth-child(2) {
+        &.active {
+          .circle_big {
+            border-color: #ffebc6;
+          }
+        }
+
+        .circle_small {
+          background-color: #ffebc6;
+        }
+      }
+
+      &:nth-child(3) {
         &.active {
           .circle_big {
             border-color: #e5f6f3;

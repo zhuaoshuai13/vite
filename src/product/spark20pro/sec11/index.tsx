@@ -33,7 +33,10 @@ const Sec11 = () => {
         .from(
           ".sec11 .container1 .video_box",
           0.4,
-          { clipPath: "inset(0px 0px 0px)", transform: 'translate(0, -50%) scale(1)' },
+          {
+            clipPath: "inset(0px 0px 0px)",
+            transform: "translate(0, -50%) scale(1)",
+          },
           "a"
         )
         .from(
@@ -60,12 +63,7 @@ const Sec11 = () => {
     } else {
       const t2 = gsap
         .timeline()
-        .from(
-          ".sec11 .container1 .video_box",
-          1,
-          { y: "30%", opacity: 0 },
-          "a"
-        )
+        .from(".sec11 .container1 .video_box", 1, { y: "30%", opacity: 0 }, "a")
         .from(
           ".sec11 .container1 .text_wrapper",
           1,
@@ -128,7 +126,7 @@ const Sec11 = () => {
   })
 
   return (
-    <section className='sec11'>
+    <section className='sec11' id='ultra_boost_processor'>
       <div className='content'>
         <h3 className='title_96'>
           {spark20proConfig.sec11.bigTitle.map(
@@ -263,11 +261,21 @@ const Sec11 = () => {
           </div>
         </div>
 
-        <div className='container3'>
+        <div className='container3' id='big_memory'>
           <picture>
-            <source media='(min-width: 1081px)' srcSet={spark20proConfig.sec11.memory.imgPc} />
-            <source media='(max-width: 1080px)' srcSet={spark20proConfig.sec11.memory.imgMb} />
-            <img src={spark20proConfig.sec11.memory.imgPc} className='memory' loading='lazy' />
+            <source
+              media='(min-width: 1081px)'
+              srcSet={spark20proConfig.sec11.memory.imgPc}
+            />
+            <source
+              media='(max-width: 1080px)'
+              srcSet={spark20proConfig.sec11.memory.imgMb}
+            />
+            <img
+              src={spark20proConfig.sec11.memory.imgPc}
+              className='memory'
+              loading='lazy'
+            />
           </picture>
           <div className='box'>
             <div className='left3'>
@@ -321,7 +329,7 @@ const Sec11 = () => {
           ></div>
         </div>
 
-        <div className='container4'>
+        <div className='container4' id='super_charge'>
           <div className='pic_box'>
             <picture>
               <source media='(min-width: 1081px)' srcSet={sec11PcF4} />

@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./index.scss"
 import sec9PcF2 from "../../../assets/spark20pro/sec9PcF2.png"
-import sec9PcMagicSkin from "../../../assets/spark20pro/sec9PcMagicSkin.png"
+// import sec9PcMagicSkin from "../../../assets/spark20pro/sec9PcMagicSkin.png"
 import sec9PcBlack from "../../../assets/spark20pro/sec9PcBlack.png"
 import sec9PcBlush from "../../../assets/spark20pro/sec9PcBlush.png"
 import sec9PcIvory from "../../../assets/spark20pro/sec9PcIvory.png"
@@ -44,37 +44,37 @@ const Sec9 = () => {
         end: "+=150%",
         animation: t1,
       })
-      const t2 = gsap
-        .timeline()
-        // .from(".sec9 .phone:nth-child(1)", { y: "30%", opacity: 0 }, "a")
-        // .from(
-        //   ".sec9 .phone:nth-child(2)",
-        //   { y: "30%", opacity: 0, delay: 0.25 },
-        //   "a"
-        // )
-        // .from(
-        //   ".sec9 .phone:nth-child(3)",
-        //   { y: "30%", opacity: 0, delay: 0.5 },
-        //   "a"
-        // )
-        // .from(
-        //   ".sec9 .phone:nth-child(4)",
-        //   { y: "30%", opacity: 0, delay: 0.75 },
-        //   "a"
-        // )
-        .to(".sec9 .desc_other", 0.25, { opacity: 0, delay: 1.5 }, "a")
-        .to(".sec9 .data_other", 0.25, { opacity: 0, delay: 1.5 }, "a")
-        .to(".sec9 .desc_magic", 0.25, { opacity: 1, delay: 1.5 }, "a")
-        .to(".sec9 .data_magic", 0.25, { opacity: 1, delay: 1.5 }, "a")
+      // const t2 = gsap
+      //   .timeline()
+      //   // .from(".sec9 .phone:nth-child(1)", { y: "30%", opacity: 0 }, "a")
+      //   // .from(
+      //   //   ".sec9 .phone:nth-child(2)",
+      //   //   { y: "30%", opacity: 0, delay: 0.25 },
+      //   //   "a"
+      //   // )
+      //   // .from(
+      //   //   ".sec9 .phone:nth-child(3)",
+      //   //   { y: "30%", opacity: 0, delay: 0.5 },
+      //   //   "a"
+      //   // )
+      //   // .from(
+      //   //   ".sec9 .phone:nth-child(4)",
+      //   //   { y: "30%", opacity: 0, delay: 0.75 },
+      //   //   "a"
+      //   // )
+      //   .to(".sec9 .desc_other", 0.25, { opacity: 0, delay: 1.5 }, "a")
+      //   .to(".sec9 .data_other", 0.25, { opacity: 0, delay: 1.5 }, "a")
+      //   .to(".sec9 .desc_magic", 0.25, { opacity: 1, delay: 1.5 }, "a")
+      //   .to(".sec9 .data_magic", 0.25, { opacity: 1, delay: 1.5 }, "a")
 
-      ScrollTrigger.create({
-        trigger: ".sec9",
-        start: `top -10%`,
-        end: "+=150%",
-        animation: t2,
-        pin: true,
-        scrub: true,
-      })
+      // ScrollTrigger.create({
+      //   trigger: ".sec9",
+      //   start: `top -10%`,
+      //   end: "+=150%",
+      //   animation: t2,
+      //   pin: true,
+      //   scrub: true,
+      // })
     } else {
       const tl = gsap
         .timeline()
@@ -104,20 +104,20 @@ const Sec9 = () => {
         animation: tl,
       })
 
-      const t2 = gsap
-        .timeline()
-        .to(".sec9 .desc_other", 0.25, { opacity: 0 }, "a")
-        .to(".sec9 .data_other", 0.25, { opacity: 0 }, "a")
-        .to(".sec9 .desc_magic", 0.25, { opacity: 1 }, "a")
-        .to(".sec9 .data_magic", 0.25, { opacity: 1 }, "a")
+      // const t2 = gsap
+      //   .timeline()
+      //   .to(".sec9 .desc_other", 0.25, { opacity: 0 }, "a")
+      //   .to(".sec9 .data_other", 0.25, { opacity: 0 }, "a")
+      //   .to(".sec9 .desc_magic", 0.25, { opacity: 1 }, "a")
+      //   .to(".sec9 .data_magic", 0.25, { opacity: 1 }, "a")
 
-      ScrollTrigger.create({
-        trigger: ".sec9",
-        start: `top 0%`,
-        end: "+=10%",
-        animation: t2,
-        scrub: 0.25,
-      })
+      // ScrollTrigger.create({
+      //   trigger: ".sec9",
+      //   start: `top 0%`,
+      //   end: "+=10%",
+      //   animation: t2,
+      //   scrub: 0.25,
+      // })
     }
 
     const t3 = gsap
@@ -161,7 +161,7 @@ const Sec9 = () => {
               <img src={sec9PcBlack} className='phone' loading='lazy' />
               <img src={sec9PcIvory} className='phone' loading='lazy' />
               <img src={sec9PcBlush} className='phone' loading='lazy' />
-              <img src={sec9PcMagicSkin} className='phone' loading='lazy' />
+              {/* <img src={sec9PcMagicSkin} className='phone' loading='lazy' /> */}
             </div>
             <div className='right1'>
               <div className='text_wrapper'>
@@ -236,7 +236,7 @@ const Sec9 = () => {
               </div>
             </div>
           </div>
-          <div className='container2'>
+          <div className='container2' id='water_dust_proof'>
             <div className='left2'>
               <div className='text_wrapper'>
                 <h4

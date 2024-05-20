@@ -138,7 +138,7 @@ const Sec14 = () => {
   })
 
   return (
-    <section className='sec14'>
+    <section className='sec14' id='android_14'>
       <div className='content'>
         <div
           className='hios_title'

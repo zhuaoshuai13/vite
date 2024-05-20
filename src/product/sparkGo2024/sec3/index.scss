@@ -39,7 +39,7 @@
     font-size: px-to-vw(96);
     font-family: "HB";
 
-    @include bg('sec3PcTextBg.webp',false);
+    @include bg('sec3PcTextBg.webp');
   }
 
   .icon_container {

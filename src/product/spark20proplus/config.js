@@ -1,5 +1,4 @@
 const url = window.basic_assets_href
-console.log("🚀 ~ file: config.js:2 ~ url:", url)
 window.spark20proplusConfig = {
   button_text: {
     on: "ON",
@@ -355,14 +354,14 @@ window.spark20proplusConfig = {
           mb: url + "/images/sec8MbColorRadiantStarstream.webp",
         },
       },
-      {
-        color: "Magic Skin 2.0 Green",
-        text_color: "#000000",
-        image: {
-          pc: url + "/images/sec8PcColorMagicGreen.webp",
-          mb: url + "/images/sec8MbColorMagicGreen.webp",
-        },
-      },
+      // {
+      //   color: "Magic Skin 2.0 Green",
+      //   text_color: "#000000",
+      //   image: {
+      //     pc: url + "/images/sec8PcColorMagicGreen.webp",
+      //     mb: url + "/images/sec8MbColorMagicGreen.webp",
+      //   },
+      // },
     ],
   },
   sec9: {
@@ -371,7 +370,7 @@ window.spark20proplusConfig = {
         url + "/images/sec9PcF1.webp",
         url + "/images/sec9PcF2.webp",
         url + "/images/sec9PcF3.webp",
-        url + "/images/sec9PcF4.webp",
+        // url + "/images/sec9PcF4.webp",
       ],
       title: `Sparkle Sand Pattern`,
       subtitle: "Textured Outside, Tech-tured Inside.",

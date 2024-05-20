@@ -66,7 +66,7 @@ const Sec8 = () => {
   }, [])
 
   return (
-    <section className='sec8'>
+    <section className='sec8' id="magic_skin">
       <div className='content'>
         <div className='double_curved'>
           <div className='video_box'>

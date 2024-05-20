@@ -281,7 +281,7 @@ window.pop8Config = {
   // type2: 文案+小视频 (文案字段: 在sec1Text下面, 小视频字段: sec1Video.pcType2(pc端)、sec1Video.mobType2(移动端), 视频海报图: type2Post(pc端)、type2PostMob(移动端));  
   // type3: 通屏大视频  (大视频字段: sec1Video.pcType3(pc端)、sec1Video.mobType3(移动端), 视频海报图: type3Post(pc端)、type3PostMob(移动端));
   // type4: 通屏大图片(图片字段: sec1Type4ImagePc(pc端)、sec1Type4ImageMob(移动端))
-  sec1Type: 'type2',
+  sec1Type: 'type4',
   sec1Text: {
     title: `Double Up,<br /> Level Up`,
     p1: "Double <span></span> <br/> Speakers",
@@ -302,8 +302,8 @@ window.pop8Config = {
     type3Post: "",
     type3PostMob: "",
   },
-  sec1Type4ImagePc: '',
-  sec1Type4ImageMob: '',
+  sec1Type4ImagePc: '/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec1PcKv_my.jpg',
+  sec1Type4ImageMob: '/fileadmin/sitedesign/product/SPARK_20C/dist/jpg/sec1PcMb_my.jpg',
   //type1 有两屏切换, type2 只有一屏
   sec3Type: 'type2',
   sec6Image: {

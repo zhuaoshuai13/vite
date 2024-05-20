@@ -87,7 +87,7 @@ const Sec4 = () => {
   }, [])
 
   return (
-    <section className='sec4'>
+    <section className='sec4' id='ultra_clear_camera'>
       <div className='content'>
         <h3 className='title_96'>
           {spark20proplusConfig.sec4.bigTitle.map(
@@ -188,7 +188,11 @@ const Sec4 = () => {
             />
           </div>
           <div className='right2'>
-            <img src={spark20proplusConfig.sec4.night_mode.bg} className='icon' loading='lazy' />
+            <img
+              src={spark20proplusConfig.sec4.night_mode.bg}
+              className='icon'
+              loading='lazy'
+            />
             <div className='text_wrapper'>
               <h4
                 className='title_48'

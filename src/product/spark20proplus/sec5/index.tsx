@@ -140,7 +140,7 @@ const Sec5 = () => {
 
   return (
     <>
-      <section className='sec5'>
+      <section className='sec5' id='32mp_selfie'>
         <div className='content'>
           <h3 className='title_96'>
             {spark20proplusConfig.sec5.bigTitle.map(
@@ -352,7 +352,11 @@ const Sec5 = () => {
                     }}
                   ></p>
                 </div>
-                <Button isOpen={isOpen3} setIsOpen={setIsOpen3} customClickEvent={() => slowMotionVideo()} />
+                <Button
+                  isOpen={isOpen3}
+                  setIsOpen={setIsOpen3}
+                  customClickEvent={() => slowMotionVideo()}
+                />
               </div>
             </div>
             <div className='container2' id='height_quality_Video'>

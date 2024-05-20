@@ -8,16 +8,18 @@ import "./index.scss"
 import sec2PcF1 from "../../../assets/spark20/sec2PcF1.png"
 import sec2PcF3 from "../../../assets/spark20/sec2PcF3.png"
 import sec2PcF4 from "../../../assets/spark20/sec2PcF4.png"
+import sec2PcF5 from "../../../assets/spark20/sec2PcF5.png"
 import sec2PcF6 from "../../../assets/spark20/sec2PcF6.png"
-import sec2PcF7 from "../../../assets/spark20/sec2PcF7.png"
+import sec2PcF7 from "../../../assets/spark20/sec2PcF7_bd.png"
 import sec2PcF8 from "../../../assets/spark20/sec2PcF8.png"
 import sec2PcF9 from "../../../assets/spark20/sec2PcF9.png"
 import sec2PcF10 from "../../../assets/spark20/sec2PcF10.png"
 import sec2MbF1 from "../../../assets/spark20/sec2MbF1.png"
 import sec2MbF3 from "../../../assets/spark20/sec2MbF3.png"
 import sec2MbF4 from "../../../assets/spark20/sec2MbF4.png"
+import sec2MbF5 from "../../../assets/spark20/sec2MbF5.png"
 import sec2MbF6 from "../../../assets/spark20/sec2MbF6.png"
-import sec2MbF7 from "../../../assets/spark20/sec2MbF7.png"
+import sec2MbF7 from "../../../assets/spark20/sec2MbF7_bd.png"
 import sec2MbF8 from "../../../assets/spark20/sec2MbF8.png"
 import sec2MbF9 from "../../../assets/spark20/sec2MbF9.png"
 import sec2MbF10 from "../../../assets/spark20/sec2MbF10.png"
@@ -167,7 +169,7 @@ const Sec2 = () => {
       <div className='content'>
         {spark20Config.sec2.type === "type1" ? (
           <div className='items'>
-            <div className='item'>
+            <a className='item' href='#dual_speaker'>
               <div className='img_wrapper'>
                 <picture>
                   <source media='(max-width: 1080px)' srcSet={sec2MbF1} />
@@ -190,8 +192,8 @@ const Sec2 = () => {
                   )}
                 </div>
               </div>
-            </div>
-            <div className='item'>
+            </a>
+            <a className='item' href='#90hz_screen'>
               <div className='img_wrapper'></div>
               <div className='text_wrapper'>
                 <div className='title'>
@@ -207,8 +209,8 @@ const Sec2 = () => {
                   )}
                 </div>
               </div>
-            </div>
-            <div className='item'>
+            </a>
+            <a className='item' href='#dynamic_port'>
               <div className='img_wrapper'>
                 <picture>
                   <source media='(max-width: 1080px)' srcSet={sec2MbF3} />
@@ -230,8 +232,8 @@ const Sec2 = () => {
                   )}
                 </div>
               </div>
-            </div>
-            <div className='item'>
+            </a>
+            <a className='item' href='#fast_charge'>
               <div className='img_wrapper'>
                 <picture>
                   <source media='(max-width: 1080px)' srcSet={sec2MbF4} />
@@ -260,13 +262,13 @@ const Sec2 = () => {
                   )}
                 </div>
               </div>
-            </div>
-            <div className='item'>
+            </a>
+            <a className='item' href='#front_camera'>
               <div className='img_wrapper'>
                 <picture>
-                  <source media='(max-width: 1080px)' srcSet={spark20Config.image.sec2.item5.imgMb} />
-                  <source media='(min-width: 1081px)' srcSet={spark20Config.image.sec2.item5.imgPc} />
-                  <img src={spark20Config.image.sec2.item5.imgPc} loading='lazy' />
+                  <source media='(max-width: 1080px)' srcSet={sec2MbF5} />
+                  <source media='(min-width: 1081px)' srcSet={sec2PcF5} />
+                  <img src={sec2PcF5} loading='lazy' />
                 </picture>
               </div>
               <div className='text_wrapper'>
@@ -290,8 +292,8 @@ const Sec2 = () => {
                   }}
                 ></div>
               </div>
-            </div>
-            <div className='item'>
+            </a>
+            <a className='item' href='#ultra_clear_camera'>
               <div className='img_wrapper'>
                 <picture>
                   <source media='(max-width: 1080px)' srcSet={sec2MbF6} />
@@ -314,8 +316,8 @@ const Sec2 = () => {
                   )}
                 </div>
               </div>
-            </div>
-            <div className='item'>
+            </a>
+            <a className='item' href='#magic_skin'>
               <div className='img_wrapper'>
                 <picture>
                   <source media='(max-width: 1080px)' srcSet={sec2MbF7} />
@@ -331,8 +333,8 @@ const Sec2 = () => {
                   }}
                 ></div>
               </div>
-            </div>
-            <div className='item'>
+            </a>
+            <a className='item' href='#water_dust_proof'>
               <div className='img_wrapper'>
                 <picture>
                   <source media='(max-width: 1080px)' srcSet={sec2MbF8} />
@@ -354,8 +356,8 @@ const Sec2 = () => {
                   }}
                 ></div>
               </div>
-            </div>
-            <div className='item'>
+            </a>
+            <a className='item' href='#gaming_processor'>
               <div className='img_wrapper'>
                 <picture>
                   <source media='(max-width: 1080px)' srcSet={sec2MbF9} />
@@ -378,8 +380,8 @@ const Sec2 = () => {
                   )}
                 </div>
               </div>
-            </div>
-            <div className='item'>
+            </a>
+            <a className='item' href='#big_memory'>
               <div className='img_wrapper'>
                 <picture>
                   <source media='(max-width: 1080px)' srcSet={sec2MbF10} />
@@ -422,7 +424,7 @@ const Sec2 = () => {
                   __html: spark20Config.sec2.item10.tips,
                 }}
               ></div>
-            </div>
+            </a>
           </div>
         ) : (
           <picture>
@@ -434,7 +436,11 @@ const Sec2 = () => {
               media='(min-width: 1081px)'
               srcSet={spark20Config.sec2.type2.imgPc}
             />
-            <img src={spark20Config.sec2.type2.imgPc} loading='lazy' className="type2_img"/>
+            <img
+              src={spark20Config.sec2.type2.imgPc}
+              loading='lazy'
+              className='type2_img'
+            />
           </picture>
         )}
       </div>

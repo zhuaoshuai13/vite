@@ -85,7 +85,7 @@ const Sec13 = () => {
     ScrollTrigger.create({
       trigger: ".sec13 .container2 .pic_box",
       start: `top 65%`,
-      end: '+=50%',
+      end: "+=50%",
       animation: t5,
       scrub: 0.25,
     })
@@ -114,7 +114,7 @@ const Sec13 = () => {
   })
 
   return (
-    <section className='sec13'>
+    <section className='sec13' id='dual_speaker'>
       <div className='content'>
         <h3 className='title_96 pc'>
           {spark20Config.sec13.bigTitle.map((item: string, index: number) => {
@@ -210,7 +210,7 @@ const Sec13 = () => {
             </div>
           </div>
         </div>
-        <div className='container2'>
+        <div className='container2' id='90hz_screen'>
           <div className='pic_box'>
             <picture>
               <source media='(min-width: 1081px)' srcSet={sec13PcF2} />

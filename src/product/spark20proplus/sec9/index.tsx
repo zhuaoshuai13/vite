@@ -49,12 +49,8 @@ const Sec9 = () => {
         )
         .to(".sec9 .data_all", 0.25, { opacity: 0, delay: 0.5 }, "a")
         .to(".sec9 .magic_container", 0.25, { opacity: 1, delay: 0.5 }, "a")
-        .to(
-          ".sec9 .phone:nth-child(4)",
-          { scale: 1.15, delay: 0.5 },
-          "a"
-        )
-        .to(".sec9 .phone:nth-child(4)", 1, {})
+        .to(".sec9 .phone:nth-child(3)", { scale: 1.15, delay: 0.5 }, "a")
+        .to(".sec9 .phone:nth-child(3)", 1, {})
 
       ScrollTrigger.create({
         trigger: ".sec9",
@@ -247,7 +243,7 @@ const Sec9 = () => {
               </div>
             </div>
           </div>
-          <div className='container2'>
+          <div className='container2' id='water_dust_proof'>
             <div className='left2'>
               <div className='text_wrapper'>
                 <h4

@@ -89,7 +89,7 @@
 
     .light {
       position: absolute;
-      top: px-to-vw(-56);
+      top: px-to-vw(-150);
       right: px-to-vw(8);
       width: px-to-vw(206);
       height: px-to-vw(123);
@@ -112,7 +112,7 @@
       @include bg('sec7PcF4.webp');
 
       .title {
-        font-size: px-to-vw(41);
+        font-size: px-to-vw(24);
       }
 
       .desc {
@@ -152,7 +152,7 @@
 
       .title {
         font-weight: 700;
-        font-size: px-to-vw(58);
+        font-size: px-to-vw(40);
       }
 
       .desc {
@@ -281,7 +281,7 @@
         @include bg('sec7MbF6.webp');
 
         .title {
-          font-size: px-to-vw-mb(40);
+          font-size: px-to-vw-mb(30);
         }
 
         .desc {

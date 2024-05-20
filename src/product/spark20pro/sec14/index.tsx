@@ -144,7 +144,7 @@ const Sec14 = () => {
             video_poster={spark20proConfig.sec14.dynamicPortVideo.poster}
             pause_color='black'
             text_box={
-              <div className='text_box'>
+              <div className='text_box' id='dynamic_port'>
                 <div className='icon icon1'>
                   <img src={sec14PcIcon1} loading='lazy' />
                 </div>
@@ -264,7 +264,7 @@ const Sec14 = () => {
             video_poster={spark20proConfig.sec14.aiWallpaperVideo.poster}
             pause_color='black'
             text_box={
-              <div className='text_box'>
+              <div className='text_box' id='ai_wallpaper'>
                 <div className='icon icon7'>
                   <img src={sec14PcIcon7} loading='lazy' />
                 </div>

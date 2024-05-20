@@ -45,7 +45,7 @@
     width: px-to-vw(975);
     height: px-to-vw(482);
     margin-top: px-to-vw(150);
-    padding-left: px-to-vw(240);
+    padding-left: px-to-vw(160);
 
     @include bg('sec4PcLeft.webp');
 
@@ -60,7 +60,7 @@
     align-items: center;
     width: px-to-vw(848);
     height: px-to-vw(482);
-    padding-left: px-to-vw(450);
+    padding-left: px-to-vw(320);
 
     @include bg('sec4PcRight.webp');
 
@@ -159,6 +159,7 @@
       right: 0;
       width: px-to-vw-mb(602);
       height: px-to-vw-mb(667);
+      padding-left: px-to-vw-mb(200);
 
       @include bg('sec4MobRight.webp');
 

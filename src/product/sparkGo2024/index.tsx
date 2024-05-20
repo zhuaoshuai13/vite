@@ -159,23 +159,23 @@ const PovaEight = () => {
         animation: tl4,
       })
 
-      const tl5 = gsap
-        .timeline()
-        .to(".sec3 .box", 1, { opacity: 1 }, "m")
-        .to(".sec3 .img1", 1, { opacity: 0 }, "a")
-        .to(".sec3 .paramsa", 1, { opacity: 0 }, "a")
-        .to(".sec3 .img2", 1, { opacity: 1 }, "b")
-        .to(".sec3 .paramsb", 1, { opacity: 1 }, "b")
+      // const tl5 = gsap
+      //   .timeline()
+      //   .to(".sec3 .box", 1, { opacity: 1 }, "m")
+      //   .to(".sec3 .img1", 1, { opacity: 0 }, "a")
+      //   .to(".sec3 .paramsa", 1, { opacity: 0 }, "a")
+      //   .to(".sec3 .img2", 1, { opacity: 1 }, "b")
+      //   .to(".sec3 .paramsb", 1, { opacity: 1 }, "b")
 
-      ScrollTrigger.create({
-        trigger: ".sec3 .box",
-        start: responsive?.md ? `top 20%` : `top 10%`,
-        end: "+=100%",
-        anticipatePin: 0,
-        animation: tl5,
-        scrub: 0.5,
-        pin: true,
-      })
+      // ScrollTrigger.create({
+      //   trigger: ".sec3 .box",
+      //   start: responsive?.md ? `top 20%` : `top 10%`,
+      //   end: "+=100%",
+      //   anticipatePin: 0,
+      //   animation: tl5,
+      //   scrub: 0.5,
+      //   pin: true,
+      // })
     })
 
     return () => ctx.revert() // <- Cleanup!

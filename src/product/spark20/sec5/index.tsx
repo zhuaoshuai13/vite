@@ -135,7 +135,7 @@ const Sec5 = () => {
 
   return (
     <>
-      <section className='sec5'>
+      <section className='sec5' id='front_camera'>
         <div className='content'>
           <h3 className='title_96'>
             {spark20Config.sec5.bigTitle.map((item: string, index: number) => {

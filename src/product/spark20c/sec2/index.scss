@@ -1,7 +1,7 @@
 @import '../index';
 
 .sec2.pop8 {
-  padding: px-to-vw(100) 0 px-to-vw(280) 0;
+  padding: px-to-vw(150) 0 px-to-vw(280) 0;
 
   .items {
     display: grid;
@@ -71,12 +71,12 @@
 
     .img {
       position: absolute;
-      bottom: px-to-vw(-54);
-      left: 0;
-      width: px-to-vw(418);
-      height: px-to-vw(418);
+      bottom: px-to-vw(23);
+      left: px-to-vw(77);
+      width: px-to-vw(220);
+      height: px-to-vw(304);
 
-      @include bg('sec2PcF2.png');
+      @include bg('sec2PcF2_np.png');
     }
 
     .title {
@@ -240,11 +240,12 @@
       padding: 0 px-to-vw-mb(40) 0 px-to-vw-mb(552);
   
       .img {
-        left: px-to-vw-mb(28);
+        bottom: px-to-vw-mb(40);
+        left: px-to-vw-mb(50);
         width: px-to-vw-mb(491);
         height: px-to-vw-mb(382);
   
-        @include bg('sec2MobF2.png');
+        @include bg('sec2PcF2_np.png');
       }
   
       .title {

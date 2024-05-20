@@ -1,5 +1,5 @@
 import styles from "./index.module.scss"
-import { useContext, useRef, useEffect } from "react"
+import { useContext, useRef } from "react"
 
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"

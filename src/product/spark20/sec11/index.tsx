@@ -88,7 +88,7 @@ const Sec11 = () => {
   })
 
   return (
-    <section className='sec11'>
+    <section className='sec11' id='gaming_processor'>
       <div className='content'>
         <h3 className='title_96'>
           {spark20Config.sec11.bigTitle.map((item: string, index: number) => {
@@ -220,7 +220,7 @@ const Sec11 = () => {
           </div>
         </div>
 
-        <div className='container3'>
+        <div className='container3' id="big_memory">
           <picture>
             <source media='(min-width: 1081px)' srcSet={sec11PcF3} />
             <source media='(max-width: 1080px)' srcSet={sec11MbF3} />
@@ -278,7 +278,7 @@ const Sec11 = () => {
           ></div>
         </div>
 
-        <div className='container4'>
+        <div className='container4' id='fast_charge'>
           <div className='pic_box'>
             <picture>
               <source media='(min-width: 1081px)' srcSet={sec11PcF4} />
