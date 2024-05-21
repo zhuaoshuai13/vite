@@ -1,0 +1,25 @@
+@import '../vars';
+
+.sec17 {
+  .hios_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left {
+    width: px-to-vw(500);
+    padding: px-to-vw(50) px-to-vw(50) 0;
+    overflow: hidden;
+    background-color: #1d1d1d;
+    transform: skewX(-20deg);
+
+    .img_wrap {
+      transform: skewX(20deg);
+    }
+  }
+
+  .right {
+    width: px-to-vw(500);
+  }
+}

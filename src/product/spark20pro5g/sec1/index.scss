@@ -1,0 +1,72 @@
+@import '../vars';
+
+.sec1 {
+  height: 100vh;
+
+  .ctt {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .left {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: px-to-vw(113);
+  }
+
+  .product_logo {
+    width: px-to-vw(447);
+  }
+
+  .items {
+    display: flex;
+    align-items: center;
+    margin-top: px-to-vw(58);
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      &:after {
+        width: px-to-vw(1);
+        height: px-to-vw(25);
+        margin: 0 px-to-vw(16);
+        background: #fff;
+        content: '';
+      }
+    }
+  }
+
+  .item_title {
+    font-size: px-to-vw(30);
+  }
+
+  .item_desc {
+    margin-left: px-to-vw(8);
+    font-size: px-to-vw(12);
+  }
+
+  .slogn {
+    width: px-to-vw(645);
+    margin-top: px-to-vw(64);
+  }
+
+  .phone_img_wapper {
+    position: absolute;
+    top: px-to-vw(20);
+    right: px-to-vw(20);
+    width: px-to-vw(1238);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

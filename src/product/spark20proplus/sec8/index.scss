@@ -131,29 +131,29 @@
         transform: translate(-50%, -50%);
       }
 
-      &:nth-child(1) {
-        &.active {
-          .circle_big {
-            border-color: #2e313a;
-          }
-        }
+      // &:nth-child(1) {
+      //   &.active {
+      //     .circle_big {
+      //       border-color: #2e313a;
+      //     }
+      //   }
 
-        .circle_small {
-          background-color: #2e313a;
-        }
-      }
+      //   .circle_small {
+      //     background-color: #2e313a;
+      //   }
+      // }
 
-      &:nth-child(2) {
-        &.active {
-          .circle_big {
-            border-color: #edf6f8;
-          }
-        }
+      // &:nth-child(2) {
+      //   &.active {
+      //     .circle_big {
+      //       border-color: #edf6f8;
+      //     }
+      //   }
 
-        .circle_small {
-          background-color: #edf6f8;
-        }
-      }
+      //   .circle_small {
+      //     background-color: #edf6f8;
+      //   }
+      // }
 
       // &:nth-child(3) {
       //   &.active {
@@ -167,7 +167,7 @@
       //   }
       // }
 
-      &:nth-child(3) {
+      &:nth-child(1) {
         &.active {
           .circle_big {
             border-color: #82bb78;

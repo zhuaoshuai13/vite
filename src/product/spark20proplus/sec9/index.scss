@@ -36,7 +36,7 @@
   .phone_container {
     position: absolute;
     top: px-to-vw(-110);
-    left: px-to-vw(175);
+    left: px-to-vw(500);
     display: flex;
 
     .phone {
@@ -158,7 +158,7 @@
 
     .phone_container {
       position: unset;
-      margin-left: px-to-vw-mb(120);
+      justify-content: center;
 
       .phone {
         height: px-to-vw-mb(603);

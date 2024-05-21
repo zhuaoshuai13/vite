@@ -14,43 +14,43 @@ const Sec9 = () => {
 
   const sec9Ani = () => {
     if (isPc) {
-      const t1 = gsap
-        .timeline()
-        .from(".sec9 .phone:nth-child(1)", { y: "30%", opacity: 0 }, "a")
-        .from(
-          ".sec9 .phone:nth-child(2)",
-          { y: "30%", opacity: 0, delay: 0.25 },
-          "a"
-        )
-        .from(
-          ".sec9 .phone:nth-child(3)",
-          { y: "30%", opacity: 0, delay: 0.5 },
-          "a"
-        )
-        .from(
-          ".sec9 .phone:nth-child(4)",
-          { y: "30%", opacity: 0, delay: 0.75 },
-          "a"
-        )
+      // const t1 = gsap
+      //   .timeline()
+      //   .from(".sec9 .phone:nth-child(1)", { y: "30%", opacity: 0 }, "a")
+      //   .from(
+      //     ".sec9 .phone:nth-child(2)",
+      //     { y: "30%", opacity: 0, delay: 0.25 },
+      //     "a"
+      //   )
+      //   .from(
+      //     ".sec9 .phone:nth-child(3)",
+      //     { y: "30%", opacity: 0, delay: 0.5 },
+      //     "a"
+      //   )
+      //   .from(
+      //     ".sec9 .phone:nth-child(4)",
+      //     { y: "30%", opacity: 0, delay: 0.75 },
+      //     "a"
+      //   )
 
-      ScrollTrigger.create({
-        trigger: ".sec9",
-        start: `top 20%`,
-        end: "+=150%",
-        animation: t1,
-      })
+      // ScrollTrigger.create({
+      //   trigger: ".sec9",
+      //   start: `top 20%`,
+      //   end: "+=150%",
+      //   animation: t1,
+      // })
       const t2 = gsap
         .timeline()
-        .to(
-          ".sec9 .spark20_container .text_wrapper",
-          0.25,
-          { opacity: 0, delay: 0.5 },
-          "a"
-        )
-        .to(".sec9 .data_all", 0.25, { opacity: 0, delay: 0.5 }, "a")
-        .to(".sec9 .magic_container", 0.25, { opacity: 1, delay: 0.5 }, "a")
-        .to(".sec9 .phone:nth-child(3)", { scale: 1.15, delay: 0.5 }, "a")
-        .to(".sec9 .phone:nth-child(3)", 1, {})
+        // .to(
+        //   ".sec9 .spark20_container .text_wrapper",
+        //   0.25,
+        //   { opacity: 0, delay: 0.5 },
+        //   "a"
+        // )
+        // .to(".sec9 .data_all", 0.25, { opacity: 0, delay: 0.5 }, "a")
+        // .to(".sec9 .magic_container", 0.25, { opacity: 1, delay: 0.5 }, "a")
+        .to(".sec9 .phone:nth-child(1)", { scale: 1.15, delay: 0.5 }, "a")
+        .to(".sec9 .phone:nth-child(1)", 1, {})
 
       ScrollTrigger.create({
         trigger: ".sec9",
@@ -91,10 +91,10 @@ const Sec9 = () => {
 
       const t2 = gsap
         .timeline()
-        .to(".sec9 .spark20_container .text_wrapper", 0.25, { opacity: 0 }, "a")
-        .to(".sec9 .data_all", 0.25, { opacity: 0 }, "a")
-        .to(".sec9 .magic_container", 0.25, { opacity: 1 }, "a")
-        .to(".sec9 .phone:nth-child(4)", 0.5, { scale: 1.15 }, "a")
+        // .to(".sec9 .spark20_container .text_wrapper", 0.25, { opacity: 0 }, "a")
+        // .to(".sec9 .data_all", 0.25, { opacity: 0 }, "a")
+        // .to(".sec9 .magic_container", 0.25, { opacity: 1 }, "a")
+        .to(".sec9 .phone:nth-child(1)", 0.5, { scale: 1.15 }, "a")
 
       ScrollTrigger.create({
         trigger: ".sec9",
@@ -174,7 +174,7 @@ const Sec9 = () => {
                   <p
                     className='desc_other'
                     dangerouslySetInnerHTML={{
-                      __html: spark20proplusConfig.sec9.texture.desc,
+                      __html: spark20proplusConfig.sec9.texture.desc_magic_skin,
                     }}
                   ></p>
                 </div>
@@ -182,7 +182,7 @@ const Sec9 = () => {
               <div className='data_all'>
                 <div className='data_other'>
                   <div className='datas'>
-                    {spark20proplusConfig.sec9.texture.datas.map(
+                    {spark20proplusConfig.sec9.texture.datas_magic_skin.map(
                       (item: any, index: number) => {
                         return (
                           <div className='data' key={index}>
@@ -201,7 +201,7 @@ const Sec9 = () => {
                   </div>
                 </div>
               </div>
-              <div className='magic_container'>
+              {/* <div className='magic_container'>
                 <h4
                   className='title_48'
                   dangerouslySetInnerHTML={{
@@ -240,7 +240,7 @@ const Sec9 = () => {
                     )}
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className='container2' id='water_dust_proof'>

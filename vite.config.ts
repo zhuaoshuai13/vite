@@ -36,7 +36,7 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: "src/product/spark20proplus/config_nogold.js",
+              src: "src/product/spark20proplus/config_onlygreen.js",
               dest: "dist/js",
             },
             {

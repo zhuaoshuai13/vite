@@ -1,0 +1,52 @@
+@import '../vars';
+
+.sec5 {
+  position: relative;
+  height: 100vh;
+
+  .bg_wrap {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .ctt {
+    position: absolute;
+    top: 50%;
+    left: px-to-vw(240);
+    display: flex;
+    align-items: center;
+    transform: translateY(-50%);
+  }
+
+  .img_wrap {
+    width: px-to-vw(1143);
+    margin-left: px-to-vw(-50);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .text_wrap {
+    width: px-to-vw(550);
+    margin-top: px-to-vw(100);
+  }
+
+  .datas {
+    margin-top: px-to-vw(110);
+
+    .data {
+      &:not(:first-child) {
+        margin-top: px-to-vw(28);
+      }
+    }
+  }
+}

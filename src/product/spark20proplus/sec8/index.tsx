@@ -37,26 +37,26 @@ const Sec8 = () => {
     if (isPc) {
       const tl = gsap
         .timeline()
-        .to(".sec8 .double_curved", 1, { y: "-100%", ease: "power1.in" })
-        .to(".sec8 .sec8Swiper", 4, {})
+        .to(".sec8 .double_curved", 2, { y: "-100%", ease: "power1.in" })
+        .to(".sec8 .sec8Swiper", 2, {})
       ScrollTrigger.create({
         trigger: ".sec8",
         start: "top 0",
-        end: "+=700%",
+        end: "+=200%",
         animation: tl,
         pin: true,
         scrub: 0.25,
-        onUpdate: ({ progress }) => {
-          if (progress > 0.2 && progress < 0.3) {
-            swiperRef.current.slideTo(0)
-          } else if (progress > 0.3 && progress < 0.53) {
-            swiperRef.current.slideTo(1)
-          } else if (progress > 0.53 && progress < 0.76) {
-            swiperRef.current.slideTo(2)
-          } else if (progress > 0.76 && progress < 1) {
-            swiperRef.current.slideTo(3)
-          }
-        },
+        // onUpdate: ({ progress }) => {
+        //   if (progress > 0.2 && progress < 0.3) {
+        //     swiperRef.current.slideTo(0)
+        //   } else if (progress > 0.3 && progress < 0.53) {
+        //     swiperRef.current.slideTo(1)
+        //   } else if (progress > 0.53 && progress < 0.76) {
+        //     swiperRef.current.slideTo(2)
+        //   } else if (progress > 0.76 && progress < 1) {
+        //     swiperRef.current.slideTo(3)
+        //   }
+        // },
       })
     }
   }

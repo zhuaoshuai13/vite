@@ -1,0 +1,41 @@
+@import '../vars';
+
+.sec13 {
+  position: relative;
+  height: 100vh;
+
+  .bg_wrap {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .ctt {
+    position: absolute;
+    top: 50%;
+    left: px-to-vw(56);
+    display: flex;
+    gap: px-to-vw(60);
+    align-items: center;
+    transform: translateY(-50%);
+  }
+
+  .img_wrap {
+    width: px-to-vw(961);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .text_wrap {
+    width: px-to-vw(700);
+  }
+}

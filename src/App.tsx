@@ -1,12 +1,12 @@
 import Providers from "./provider"
-import PovaEight from "./product/my_phone"
+import Proudct from "./product/spark20pro5g"
 
 import "./App.scss"
 
 function App() {
   return (
     <Providers>
-      <PovaEight />
+      <Proudct />
     </Providers>
   )
 }
