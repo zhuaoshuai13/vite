@@ -1,1 +1,23 @@
 @import '../vars';
+
+@media (max-width: $mobwidthPx) {
+  .spark20pro5g .sec10.spec_sec {
+    .ctt {
+      .a_title {
+        span {
+          font-size: px-to-vw-mb(75);
+        }
+
+        img {
+          width: px-to-vw-mb(175);
+        }
+      }
+
+      .a_subtitle {
+        span {
+          font-size: px-to-vw-mb(30);
+        }
+      }
+    }
+  }
+}

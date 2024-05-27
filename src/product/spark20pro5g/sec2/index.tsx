@@ -1,51 +1,32 @@
+import { useContext } from "react"
+import { ScreenContext } from "../../../provider"
+
 import "./index.scss"
 
 const Sec2 = () => {
   const { spark20pro5gConfig: config } = window as any
+  const { isPc } = useContext(ScreenContext)
 
   return (
     <section className='sec2'>
-      <div className='ctt'>
-        <div className='items'>
-          <div className='item camera'>
-            <div className='img_wrap'>
-              <img src={config.sec2.highlight.camera.img} />
-            </div>
-            <div className='text_wrap'>
-              <div className='highlight_title'>
-                {config.sec2.highlight.camera.title}
-              </div>
-            </div>
-          </div>
-          <div className='item design'>
-            <div className='img_wrap'>
-              <img src={config.sec2.highlight.design.img} />
-            </div>
-            <div className='text_wrap'>
-              <div className='highlight_title'>
-                {config.sec2.highlight.design.title}
-              </div>
-            </div>
-          </div>
-          <div className='item performance'>
-            <div className='img_wrap'>
-              <img src={config.sec2.highlight.performance.img} />
-            </div>
-            <div className='text_wrap'>
-              <div className='highlight_title'>
-                {config.sec2.highlight.performance.title}
-              </div>
-            </div>
-          </div>
-          <div className='item hios'>
-            <div className='img_wrap'>
-              <img src={config.sec2.highlight.hios.img} />
-            </div>
-            <div className='text_wrap'>
-              <div className='highlight_title'>
-                {config.sec2.highlight.hios.title}
-              </div>
-            </div>
+      <div className='h_full'>
+        <div className='ctt'>
+          <div className='items'>
+            {isPc
+              ? config.sec2.pc.map((item: any, index: number) => {
+                  return (
+                    <div className='item' key={index}>
+                      <img src={item} loading='lazy' />
+                    </div>
+                  )
+                })
+              : config.sec2.mb.map((item: any, index: number) => {
+                  return (
+                    <div className='item' key={index}>
+                      <img src={item} loading='lazy' />
+                    </div>
+                  )
+                })}
           </div>
         </div>
       </div>

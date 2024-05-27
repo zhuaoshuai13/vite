@@ -1,0 +1,34 @@
+@import '../vars';
+
+.spark20pro5g .sec12 {
+  .a_cont {
+    position: relative;
+  }
+
+  .bg_wrap {
+    width: 100%;
+    height: px-to-vw(1080);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .img_wrap {
+    position: absolute;
+    top: px-to-vw(200);
+    left: px-to-vw(1016);
+    width: px-to-vw(699);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text_wrap {
+    position: absolute;
+    top: px-to-vw(500);
+    left: px-to-vw(240);
+    max-width: px-to-vw(650);
+  }
+}

@@ -1,13 +1,11 @@
 @import '../vars';
 
-.sec1 {
-  height: 100vh;
-
+.spark20pro5g .sec1 {
   .ctt {
     position: relative;
     display: flex;
     align-items: center;
-    height: 100%;
+    padding-top: px-to-vw(100);
   }
 
   .left {
@@ -59,14 +57,60 @@
   }
 
   .phone_img_wapper {
-    position: absolute;
-    top: px-to-vw(20);
-    right: px-to-vw(20);
+    flex-shrink: 0;
     width: px-to-vw(1238);
+    margin-left: px-to-vw(-100);
 
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20pro5g .sec1 {
+    .ctt {
+      flex-direction: column;
+      padding-top: px-to-vw-mb(240);
+    }
+
+    .left {
+      margin-left: 0;
+    }
+
+    .product_logo {
+      width: px-to-vw-mb(605);
+    }
+
+    .items {
+      margin-top: px-to-vw-mb(80);
+    }
+
+    .item {
+      &:not(:last-child) {
+        &:after {
+          height: px-to-vw-mb(35);
+          margin: 0 px-to-vw-mb(25);
+        }
+      }
+    }
+
+    .item_title {
+      font-size: px-to-vw-mb(41);
+    }
+
+    .item_desc {
+      font-size: px-to-vw-mb(16);
+    }
+
+    .slogn {
+      width: px-to-vw-mb(873);
+      margin-top: px-to-vw-mb(86);
+    }
+
+    .phone_img_wapper {
+      width: 100%;
     }
   }
 }

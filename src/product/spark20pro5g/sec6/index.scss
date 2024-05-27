@@ -1,8 +1,11 @@
 @import '../vars';
 
-.sec6 {
-  position: relative;
-  height: 100vh;
+.spark20pro5g .sec6 {
+  padding: 0 0 px-to-vw(100);
+
+  .a_cont {
+    height: px-to-vw(1080);
+  }
 
   .bg_wrap {
     width: 100%;
@@ -19,14 +22,14 @@
   .ctt {
     position: absolute;
     top: 50%;
-    left: px-to-vw(95);
     display: flex;
+    gap: px-to-vw(40);
     align-items: center;
     transform: translateY(-50%);
   }
 
   .img_wrap {
-    width: px-to-vw(1004);
+    width: px-to-vw(1099);
 
     img {
       width: 100%;
@@ -43,5 +46,40 @@
     flex-wrap: wrap;
     gap: px-to-vw(100);
     margin-top: px-to-vw(148);
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20pro5g .sec6 {
+    .a_cont {
+      height: auto;
+    }
+
+    .bg_wrap {
+      position: absolute;
+    }
+
+    .ctt {
+      position: relative;
+      top: unset;
+      flex-direction: column-reverse;
+      transform: unset;
+    }
+
+    .text_wrap {
+      width: auto;
+      margin: 0 px-to-vw-mb(124);
+    }
+
+    .datas {
+      gap: px-to-vw-mb(126);
+      margin-top: px-to-vw-mb(48);
+    }
+
+    .img_wrap {
+      width: px-to-vw-mb(1006);
+      height: px-to-vw-mb(1018);
+      margin-top: px-to-vw-mb(157);
+    }
   }
 }

@@ -1,8 +1,11 @@
 @import '../vars';
 
-.sec11 {
-  position: relative;
-  height: 100vh;
+.spark20pro5g .sec11 {
+  padding: px-to-vw(300) 0 0;
+
+  .a_cont {
+    height: px-to-vw(1080);
+  }
 
   .bg_wrap {
     width: 100%;
@@ -37,5 +40,17 @@
 
   .text_wrap {
     width: px-to-vw(600);
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20pro5g .sec11 {
+    .a_cont {
+      height: auto;
+    }
+
+    .ctt {
+      flex-direction: column-reverse;
+    }
   }
 }

@@ -1,0 +1,54 @@
+@import '../vars';
+
+.spark20pro5g .sec14 {
+  padding: px-to-vw(100) 0;
+  
+  .a_cont {
+    position: relative;
+  }
+
+  .bg_wrap {
+    width: 100%;
+    height: px-to-vw(1004);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .img_wrap {
+    position: absolute;
+    top: px-to-vw(20);
+    left: px-to-vw(-160);
+    width: px-to-vw(1653);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .img_wrap2 {
+    position: absolute;
+    top: px-to-vw(150);
+    left: px-to-vw(106);
+    width: px-to-vw(1603);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text_wrap {
+    position: absolute;
+    top: px-to-vw(765);
+    left: px-to-vw(827);
+    max-width: px-to-vw(800);
+
+    .desc_18 {
+      margin-top: px-to-vw(30);
+    }
+  }
+}

@@ -5,14 +5,14 @@ import Sec4 from "./sec4"
 import Sec5 from "./sec5"
 import Sec6 from "./sec6"
 import Sec7 from "./sec7"
-// import Sec8 from "./sec8"
-// import Sec9 from "./sec9"
+import Sec8 from "./sec8"
+import Sec9 from "./sec9"
 import Sec10 from "./sec10"
 import Sec11 from "./sec11"
-// import Sec12 from "./sec12"
+import Sec12 from "./sec12"
 import Sec13 from "./sec13"
-// import Sec14 from "./sec14"
-// import Sec15 from "./sec15"
+import Sec14 from "./sec14"
+import Sec15 from "./sec15"
 import Sec16 from "./sec16"
 import Sec17 from "./sec17"
 import "./index.scss"
@@ -27,9 +27,14 @@ const Spark20 = () => {
       <Sec5 />
       <Sec6 />
       <Sec7 />
+      <Sec8 />
+      <Sec9 />
       <Sec10 />
       <Sec11 />
+      <Sec12 />
       <Sec13 />
+      <Sec14 />
+      <Sec15 />
       <Sec16 />
       <Sec17 />
     </div>

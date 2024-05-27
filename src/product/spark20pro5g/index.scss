@@ -44,8 +44,17 @@
     font-family: inherit;
   }
 
+  img {
+    vertical-align: baseline;
+  }
+
   .mob {
     display: none;
+  }
+
+  .h_full {
+    position: relative;
+    height: 100vh;
   }
 
   .title_icon_white {
@@ -103,7 +112,10 @@
 
   .spec_sec {
     position: relative;
-    height: 100vh;
+
+    .a_cont {
+      height: px-to-vw(1080);
+    }
   
     .img_wrap {
       width: 100%;
@@ -120,6 +132,7 @@
     .ctt {
       position: absolute;
       top: 50%;
+      right: px-to-vw(250);
       left: px-to-vw(250);
       transform: translateY(-50%);
   
@@ -154,7 +167,7 @@
 }
 
 @media (max-width: $mobwidthPx) {
-  .spark20 {
+  .spark20pro5g {
     .pc {
       display: none;
     }
@@ -162,53 +175,69 @@
     .mob {
       display: block;
     }
+    
 
-    .title_96 {
-      max-width: px-to-vw-mb(1000);
-      font-size: px-to-vw-mb(88);
-  
-      p {
-        &:after {
-          bottom: px-to-vw-mb(12);
-          height: px-to-vw-mb(20);
-        }
-      }
+    .title_icon_white {
+      display: inline-block;
+      width: px-to-vw-mb(130);
+      height: px-to-vw-mb(31);
+      margin-left: px-to-vw-mb(24);
     }
-  
+
     .title_48 {
-      font-size: px-to-vw-mb(72);
-    }
-  
-    .subtitle_24 {
-      margin-top: px-to-vw-mb(36);
-      font-size: px-to-vw-mb(36);
+      font-size: px-to-vw-mb(60);
     }
   
     .desc_18 {
-      margin-top: px-to-vw-mb(36);
-      font-size: px-to-vw-mb(27);
+      margin-top: px-to-vw-mb(48);
+      font-size: px-to-vw-mb(22.5);
     }
 
-    .special_sec {
+    .data {
+      padding-left: px-to-vw-mb(32);
+  
+      &:before {
+        top: px-to-vw-mb(30);
+        width: px-to-vw-mb(16);
+        height: px-to-vw-mb(16);
+      }
+    }
+  
+    .data_title {
+      font-size: px-to-vw-mb(32);
+    }
+  
+    .data_desc {
+      font-size: px-to-vw-mb(18);
+    }
+
+    .spec_sec {
       padding: px-to-vw-mb(360) 0;
   
-      .content {
-        width: px-to-vw-mb(1080);
-        height: px-to-vw-mb(1252);
+      .a_cont {
+        height: px-to-vw-mb(1080);
       }
-    }
-  
-    .special_text_container {
-      width: 88%;
 
-      .special_title {
-        font-size: px-to-vw-mb(136);
-        line-height: 1;
-      }
-  
-      .special_desc {
-        // font-size: px-to-vw-mb(34);
-        font-size: 3.1vw;
+      .ctt {
+        right: px-to-vw-mb(118);
+        left: px-to-vw-mb(118);
+    
+        .a_title {
+          span {
+            padding-right: px-to-vw-mb(20);
+            font-size: px-to-vw-mb(102);
+          }
+    
+          img {
+            width: px-to-vw-mb(241);
+          }
+        }
+    
+        .a_subtitle {
+          span {
+            font-size: px-to-vw-mb(35);
+          }
+        }
       }
     }
   }

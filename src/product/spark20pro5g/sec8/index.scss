@@ -1,0 +1,65 @@
+@import '../vars';
+
+.spark20pro5g .sec8 {
+  position: relative;
+  padding: px-to-vw(400) 0 0 0;
+
+  .bg_wrap {
+    // position: absolute;
+    // right: 0;
+    // bottom: 0;
+    width: 100%;
+    height: px-to-vw(663);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .img_wrap {
+    position: absolute;
+    right: 0;
+    bottom: px-to-vw(66);
+    width: px-to-vw(960);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text_wrap {
+    position: absolute;
+    bottom: px-to-vw(70);
+    left: px-to-vw(413);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: px-to-vw(500);
+    height: px-to-vw(595);
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20pro5g .sec8 {
+    padding: 0;
+
+    .text_wrap {
+      position: unset;
+      display: block;
+      width: auto;
+      height: auto;
+      margin: 0 px-to-vw-mb(120);
+    }
+
+    .bg_wrap {
+      height: px-to-vw-mb(709);
+      margin-top: px-to-vw-mb(400);
+    }
+
+    .img_wrap {
+      bottom: px-to-vw-mb(135);
+      width: px-to-vw-mb(965);
+      height: px-to-vw-mb(983);
+    }
+  }
+}
