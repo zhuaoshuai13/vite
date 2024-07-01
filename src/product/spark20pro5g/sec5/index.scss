@@ -57,7 +57,14 @@
     left: px-to-vw(575);
     z-index: 1;
     width: px-to-vw(946);
+    font-size: 0;
 
+    .on_img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all .5s ease-in-out;
+    }
     
     img {
       width: 100%;
@@ -70,6 +77,7 @@
     top: px-to-vw(100);
     right: px-to-vw(-100);
     width: px-to-vw(1000);
+    height: px-to-vw(370);
     padding: px-to-vw(123) px-to-vw(170) px-to-vw(123) px-to-vw(450);
     background-image: linear-gradient(105.25deg, #cf0d00 -27.89%, rgba(207, 13, 0, 0) 82.61%);
     transform: skewX(-25deg);
@@ -140,7 +148,9 @@
     }
 
     .button_wrap {
-      position: unset;
+      position: relative;
+      top: unset;
+      left: unset;
       padding-right: px-to-vw-mb(55);
       text-align: right;
 

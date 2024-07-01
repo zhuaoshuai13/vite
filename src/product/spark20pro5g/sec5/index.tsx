@@ -1,49 +1,78 @@
-import { useState, useContext } from "react"
-import { ScreenContext } from "../../../provider"
+import { useState, useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
 
 const Sec5 = () => {
   const { spark20pro5gConfig: config } = window as any
-  const { isPc } = useContext(ScreenContext)
   const [isActive, setIsActive] = useState(true)
 
+  const wrap = useRef(null)
+
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+
+  const sec5Ani = () => {
+    const tl1 = gsap
+      .timeline()
+      .from(
+        ".left",
+        1,
+        {
+          x: -200,
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "same1"
+      )
+      .from(
+        ".right",
+        1,
+        {
+          x: 200,
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "same1"
+      )
+      .from(
+        [".center", ".button_wrap"],
+        1,
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "-=0.5"
+      )
+
+    ScrollTrigger.create({
+      trigger: ".ctt",
+      start: `top 75%`,
+      animation: tl1,
+    })
+  }
+
+  useGSAP(
+    () => {
+      sec5Ani()
+    },
+    { scope: wrap }
+  )
+
   return (
-    <section className='sec5'>
+    <section className='sec5' ref={wrap}>
       <div className='a_cont'>
         <div className='bg_wrap'>
           <picture>
-            <source
-              media='(max-width: 1080px)'
-              srcSet={config.sec5.bg.mb}
-            />
-            <source
-              media='(min-width: 1081px)'
-              srcSet={config.sec5.bg.pc}
-            />
+            <source media='(max-width: 1080px)' srcSet={config.sec5.bg.mb} />
+            <source media='(min-width: 1081px)' srcSet={config.sec5.bg.pc} />
             <img src={config.sec5.bg.pc} loading='lazy' />
           </picture>
         </div>
         <div className='ctt'>
           <div className='right'>
-            {isPc ? (
-              <div className='datas'>
-                {config.sec5.datas.map((item: any, index: number) => {
-                  return (
-                    <div className='data' key={index}>
-                      <div
-                        className='data_title'
-                        dangerouslySetInnerHTML={{ __html: item.title }}
-                      ></div>
-                      <div
-                        className='data_desc'
-                        dangerouslySetInnerHTML={{ __html: item.desc }}
-                      ></div>
-                    </div>
-                  )
-                })}
-              </div>
-            ) : null}
           </div>
           <div className='button_wrap'>
             <span
@@ -92,31 +121,35 @@ const Sec5 = () => {
                   dangerouslySetInnerHTML={{ __html: config.sec5.desc }}
                 ></p>
               </div>
-              {!isPc ? (
-                <div className='datas'>
-                  {config.sec5.datas.map((item: any, index: number) => {
-                    return (
-                      <div className='data' key={index}>
-                        <div
-                          className='data_title'
-                          dangerouslySetInnerHTML={{ __html: item.title }}
-                        ></div>
-                        <div
-                          className='data_desc'
-                          dangerouslySetInnerHTML={{ __html: item.desc }}
-                        ></div>
-                      </div>
-                    )
-                  })}
-                </div>
-              ) : null}
             </div>
           </div>
           <div className='center'>
             <picture>
-              <source media='(max-width: 1080px)' srcSet={config.sec5.img.mb} />
-              <source media='(min-width: 1081px)' srcSet={config.sec5.img.pc} />
-              <img src={config.sec5.img.pc} loading='lazy' />
+              <source
+                media='(max-width: 1080px)'
+                srcSet={config.sec5.img.off.mb}
+              />
+              <source
+                media='(min-width: 1081px)'
+                srcSet={config.sec5.img.off.pc}
+              />
+              <img src={config.sec5.img.off.pc} loading='lazy' />
+            </picture>
+            <picture>
+              <source
+                media='(max-width: 1080px)'
+                srcSet={config.sec5.img.on.mb}
+              />
+              <source
+                media='(min-width: 1081px)'
+                srcSet={config.sec5.img.on.pc}
+              />
+              <img
+                className='on_img'
+                src={config.sec5.img.on.pc}
+                loading='lazy'
+                style={{ opacity: isActive ? 1 : 0 }}
+              />
             </picture>
           </div>
         </div>

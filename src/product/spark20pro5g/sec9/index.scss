@@ -5,6 +5,20 @@
 
   .sec9_swiper {
     position: relative;
+
+    .swiper-slide {
+      transition: all 2s !important;
+
+      .color_item {
+        opacity: 0;
+      }
+      
+      &.swiper-slide-active {
+        .color_item {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   .color_item {
@@ -12,6 +26,7 @@
     width: 100%;
     height: 100vh;
     background-color: #000;
+    transition: all 2s;
   }
 
   .img_wrap {
@@ -61,15 +76,15 @@
   }
 
   .swiper_btn {
-    width: px-to-vw(21);
-    height: px-to-vw(21);
+    width: px-to-vw(16);
+    height: px-to-vw(16);
     background-color: #2b4031;
     transform: skewY(25deg);
     cursor: pointer;
 
     &.active {
-      width: px-to-vw(25);
-      height: px-to-vw(25);
+      width: px-to-vw(19);
+      height: px-to-vw(19);
       background-color: #ff1400;
     }
   }
@@ -79,11 +94,9 @@
     bottom: 0;
     z-index: 2;
     display: flex;
-    display: none;
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    opacity: 0;
 
     .left {
       position: relative;
@@ -160,6 +173,7 @@
       top: unset;
       right: px-to-vw-mb(65);
       bottom: px-to-vw-mb(80);
+      gap: px-to-vw-mb(16);
     }
 
     .swiper_btn {
@@ -173,9 +187,11 @@
     }
 
     .content_wrap {
+      width: px-to-vw-mb(1244);
       height: px-to-vw-mb(1004);
 
       .left {
+        width: 100;
         margin-left: 0;
 
         .text_bg {
@@ -183,8 +199,8 @@
         }
 
         .text_wrap {
-          right: px-to-vw-mb(123);
           left: px-to-vw-mb(123);
+          width: px-to-vw-mb(800);
         }
 
         .title {

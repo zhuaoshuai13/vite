@@ -1,11 +1,19 @@
 @import '../vars';
 
 .spark20pro5g .sec1 {
-  .ctt {
+  .ctt.type1 {
     position: relative;
     display: flex;
     align-items: center;
-    padding-top: px-to-vw(100);
+    padding: px-to-vw(100) 0 0;
+  }
+
+  .ctt.type2 {
+    .kv_wrap {
+      img {
+        width: 100%;
+      }
+    }
   }
 
   .left {
@@ -15,6 +23,8 @@
     flex-direction: column;
     align-items: center;
     margin-left: px-to-vw(113);
+    transform: translateY(60px);
+    opacity: 0;
   }
 
   .product_logo {
@@ -59,6 +69,7 @@
   .phone_img_wapper {
     flex-shrink: 0;
     width: px-to-vw(1238);
+    height: px-to-vw(793);
     margin-left: px-to-vw(-100);
 
     img {
@@ -66,13 +77,22 @@
       height: 100%;
     }
   }
+
+  .dolby_logo {
+    position: absolute;
+    top: px-to-vw(60);
+    left: px-to-vw(60);
+    width: px-to-vw(192);
+    transform: translateY(60px);
+    opacity: 0;
+  }
 }
 
 @media (max-width: $mobwidthPx) {
   .spark20pro5g .sec1 {
-    .ctt {
+    .ctt.type1 {
       flex-direction: column;
-      padding-top: px-to-vw-mb(240);
+      padding: px-to-vw-mb(240) 0 0;
     }
 
     .left {
@@ -111,6 +131,14 @@
 
     .phone_img_wapper {
       width: 100%;
+      height: px-to-vw-mb(1470);
+    }
+
+    .dolby_logo {
+      top: px-to-vw-mb(60);
+      right: px-to-vw-mb(60);
+      left: unset;
+      width: px-to-vw-mb(220);
     }
   }
 }

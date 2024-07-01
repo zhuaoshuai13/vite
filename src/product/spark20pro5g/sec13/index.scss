@@ -3,6 +3,10 @@
 .spark20pro5g .sec13 {
   position: relative;
 
+  .a_cont {
+    position: relative;
+  }
+
   .bg_wrap {
     width: 100%;
     height: px-to-vw(1080);
@@ -36,5 +40,35 @@
 
   .text_wrap {
     width: px-to-vw(700);
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20pro5g .sec13 {
+    padding: 0 0 px-to-vw-mb(100);
+
+    .bg_wrap {
+      position: absolute;
+      height: 100%;
+    }
+
+    .ctt {
+      position: relative;
+      top: unset;
+      left: unset;
+      flex-direction: column-reverse;
+      transform: unset;
+    }
+
+    .text_wrap {
+      width: auto;
+      margin: 0 px-to-vw-mb(120);
+    }
+
+    .img_wrap {
+      width: px-to-vw-mb(1027);
+      height: px-to-vw-mb(1506);
+      margin-top: px-to-vw-mb(-350);
+    }
   }
 }

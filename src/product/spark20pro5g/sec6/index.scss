@@ -29,11 +29,20 @@
   }
 
   .img_wrap {
+    position: relative;
     width: px-to-vw(1099);
 
     img {
       width: 100%;
       height: 100%;
+
+      &.phone_8mp {
+        position: absolute;
+        bottom: px-to-vw(100);
+        left: px-to-vw-mb(240);
+        width: px-to-vw(320);
+        height: px-to-vw(702);
+      }
     }
   }
 
@@ -63,6 +72,7 @@
       position: relative;
       top: unset;
       flex-direction: column-reverse;
+      gap: 0;
       transform: unset;
     }
 
@@ -77,9 +87,18 @@
     }
 
     .img_wrap {
-      width: px-to-vw-mb(1006);
-      height: px-to-vw-mb(1018);
-      margin-top: px-to-vw-mb(157);
+      width: px-to-vw-mb(1138);
+      height: px-to-vw-mb(783);
+      margin: px-to-vw-mb(390) 0 0 px-to-vw-mb(-100);
+
+      img {
+        &.phone_8mp {
+          bottom: px-to-vw-mb(51);
+          left: px-to-vw-mb(402);
+          width: px-to-vw-mb(440);
+          height: px-to-vw-mb(966);
+        }
+      }
     }
   }
 }

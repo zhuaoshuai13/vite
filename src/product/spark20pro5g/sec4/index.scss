@@ -1,6 +1,8 @@
 @import '../vars';
 
 .spark20pro5g .sec4 {
+  padding-top: px-to-vw(100);
+
   .a_cont {
     position: relative;
     height: px-to-vw(941);
@@ -20,14 +22,13 @@
 
   .ctt {
     position: absolute;
-    top: 50%;
-    left: px-to-vw(60);
+    top: px-to-vw(-60);
+    left: px-to-vw(100);
     display: flex;
-    transform: translateY(-50%);
   }
 
   .img_wrap {
-    width: px-to-vw(996);
+    width: px-to-vw(905);
 
     img {
       width: 100%;
@@ -37,7 +38,7 @@
 
   .text_wrap {
     width: px-to-vw(660);
-    margin-top: px-to-vw(440);
+    margin-top: px-to-vw(400);
   }
 
   .datas {

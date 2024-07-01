@@ -1,6 +1,6 @@
 import { useState, useRef, useContext } from "react"
-import { Swiper, SwiperClass, SwiperSlide } from "swiper/react"
-import { EffectFade, Autoplay } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { EffectFade } from "swiper/modules"
 import { ScreenContext } from "../../../provider"
 
 import { gsap } from "gsap"
@@ -32,7 +32,7 @@ const Sec9 = () => {
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
-  const sec1Ani = () => {
+  const sec9Ani = () => {
     if (isPc) {
       const tl = gsap
         .timeline()
@@ -51,7 +51,7 @@ const Sec9 = () => {
           ".left",
           1,
           {
-            x: -100,
+            x: "-100%",
             ease: "power4.out",
           },
           "same1"
@@ -60,7 +60,7 @@ const Sec9 = () => {
           ".right",
           1,
           {
-            x: 100,
+            x: "100%",
             ease: "power4.out",
           },
           "same1"
@@ -72,7 +72,7 @@ const Sec9 = () => {
             width: "73%",
             ease: "power4.out",
           },
-          "same1"
+          "same1+=0.25"
         )
         .to(
           ".button_wrap",
@@ -87,7 +87,7 @@ const Sec9 = () => {
       ScrollTrigger.create({
         trigger: ".ani",
         start: `top 0%`,
-        end: `+=400%`,
+        end: `+=500%`,
         animation: tl,
         pin: true,
         scrub: 0.25,
@@ -121,16 +121,7 @@ const Sec9 = () => {
           ".left",
           1,
           {
-            x: -100,
-            ease: "power4.out",
-          },
-          "same1"
-        )
-        .from(
-          ".right",
-          1,
-          {
-            x: 100,
+            x: "-100%",
             ease: "power4.out",
           },
           "same1"
@@ -160,7 +151,7 @@ const Sec9 = () => {
 
   useGSAP(
     () => {
-      sec1Ani()
+      sec9Ani()
     },
     { scope: wrap }
   )

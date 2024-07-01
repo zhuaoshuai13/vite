@@ -7,7 +7,11 @@ const Sec16 = () => {
     <section className='sec16 spec_sec'>
       <div className='a_cont'>
         <div className='img_wrap'>
-          <img src={config.sec16.bg} loading='lazy' />
+          <picture>
+            <source media='(max-width: 1080px)' srcSet={config.sec16.bg.mb} />
+            <source media='(min-width: 1081px)' srcSet={config.sec16.bg.pc} />
+            <img src={config.sec16.bg.pc} loading='lazy' />
+          </picture>
         </div>
         <div className='ctt'>
           <div className='a_title'>

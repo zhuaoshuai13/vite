@@ -1,10 +1,81 @@
+import { useRef, useContext } from "react"
+import { ScreenContext } from "../../../provider"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { useGSAP } from "@gsap/react"
+
 import "./index.scss"
 
 const Sec15 = () => {
   const { spark20pro5gConfig: config } = window as any
+  const wrap = useRef(null)
+  const { isPc } = useContext(ScreenContext)
+
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+
+  const sec15Ani = () => {
+    if (isPc) {
+      const tl1 = gsap
+        .timeline()
+        .from(
+          ".bg_wrap",
+          1,
+          {
+            y: 60,
+            opacity: 0,
+          },
+          "same1"
+        )
+        .from(
+          ".text_wrap",
+          1,
+          {
+            y: 60,
+            opacity: 0,
+          },
+          "-=0.5"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".bg_wrap",
+        start: `top 75%`,
+        animation: tl1,
+      })
+    } else {
+      const tl1 = gsap
+        .timeline()
+        .from(".text_wrap", 1, {
+          y: 60,
+          opacity: 0,
+        })
+        .from(
+          ".bg_wrap img",
+          1,
+          {
+            y: 60,
+            opacity: 0,
+          },
+          "-=0.5"
+        )
+
+      ScrollTrigger.create({
+        trigger: ".bg_wrap",
+        start: `top 75%`,
+        animation: tl1,
+      })
+    }
+  }
+
+  useGSAP(
+    () => {
+      sec15Ani()
+    },
+    { scope: wrap }
+  )
 
   return (
-    <section className='sec15'>
+    <section className='sec15' ref={wrap}>
       <div className='volume_wrap'>
         <div className='volume_icon'></div>
         <div className='volume_title'>
@@ -24,7 +95,11 @@ const Sec15 = () => {
         <div className='volume_icon'></div>
       </div>
       <div className='bg_wrap'>
-        <img src={config.sec15.bg} loading='lazy' />
+        <picture>
+          <source media='(max-width: 1080px)' srcSet={config.sec15.bg.mb} />
+          <source media='(min-width: 1081px)' srcSet={config.sec15.bg.pc} />
+          <img src={config.sec15.bg.pc} loading='lazy' />
+        </picture>
         <div className='ctt'>
           <div className='text_wrap'>
             <div className='title_wrap'>

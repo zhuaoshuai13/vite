@@ -14,6 +14,18 @@
     }
   }
 
+  .light_wrap {
+    position: absolute;
+    top: px-to-vw-mb(130);
+    left: 0;
+    width: 100%;
+    mix-blend-mode: screen;
+
+    img {
+      width: 100%;
+    }
+  }
+
   .img_wrap {
     position: absolute;
     top: px-to-vw(200);
@@ -30,5 +42,43 @@
     top: px-to-vw(500);
     left: px-to-vw(240);
     max-width: px-to-vw(650);
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20pro5g .sec12 {
+    padding: 0 0 px-to-vw-mb(300);
+
+    .bg_wrap {
+      position: absolute;
+      top: px-to-vw-mb(-200);
+      height: px-to-vw-mb(1578);
+    }
+
+    .text_wrap {
+      position: relative;
+      top: unset;
+      left: unset;
+      max-width: 100%;
+      margin: 0 px-to-vw-mb(100);
+
+      .title_48 {
+        font-size: px-to-vw-mb(60);
+      }
+    }
+
+    .img_wrap {
+      position: relative;
+      top: unset;
+      left: unset;
+      width: px-to-vw-mb(874);
+      height: px-to-vw-mb(1085);
+      margin: px-to-vw-mb(120) auto 0;
+    }
+
+    .light_wrap {
+      top: unset;
+      bottom: px-to-vw-mb(140);
+    }
   }
 }

@@ -1,3 +1,9 @@
+import { useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { useGSAP } from "@gsap/react"
+
 import Sec1 from "./sec1"
 import Sec2 from "./sec2"
 import Sec3 from "./sec3"
@@ -17,9 +23,44 @@ import Sec16 from "./sec16"
 import Sec17 from "./sec17"
 import "./index.scss"
 
-const Spark20 = () => {
+const Spark20Pro5G = () => {
+  const wrap = useRef(null)
+
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+
+  const specSecAni = () => {
+    const animateFrom = (ele: any) => {
+      return gsap.timeline().from(
+        ele,
+        1,
+        {
+          x: 100,
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+      )
+    }
+
+    gsap.utils.toArray(".spec_sec .ctt").forEach((item: any) => {
+      ScrollTrigger.create({
+        trigger: item,
+        start: `top 85%`,
+        animation: animateFrom(item),
+      })
+
+    })
+
+  }
+
+  useGSAP(
+    () => {
+      specSecAni()
+    },
+    { scope: wrap }
+  )
+
   return (
-    <div className='spark20pro5g'>
+    <div className='spark20pro5g' ref={wrap}>
       <Sec1 />
       <Sec2 />
       <Sec3 />
@@ -41,4 +82,4 @@ const Spark20 = () => {
   )
 }
 
-export default Spark20
+export default Spark20Pro5G

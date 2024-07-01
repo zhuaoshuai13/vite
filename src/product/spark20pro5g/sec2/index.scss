@@ -1,17 +1,10 @@
 @import '../vars';
 
 .spark20pro5g .sec2 {
-  padding: 0 0 px-to-vw(200);
-
-  .h_full {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  padding: px-to-vw(260) 0 px-to-vw(200);
 
   .ctt {
-    // width: 100%;
-    // height: px-to-vw(626);
+    min-height: px-to-vw(940);
   }
 
   .items {
@@ -25,7 +18,7 @@
   }
 
   .item {
-    width: px-to-vw(1686);
+    width: px-to-vw(1500);
 
     img {
       width: 100%;
@@ -50,4 +43,18 @@
   //   font-size: px-to-vw(32);
   //   font-style: italic;
   // }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20pro5g .sec2 {
+    padding: px-to-vw-mb(200) 0 0;
+
+    .ctt {
+      min-height: px-to-vw-mb(1400);
+    }
+
+    .item {
+      width: px-to-vw-mb(986);
+    }
+  }
 }

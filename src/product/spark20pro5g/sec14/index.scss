@@ -9,7 +9,7 @@
 
   .bg_wrap {
     width: 100%;
-    height: px-to-vw(1004);
+    height: px-to-vw(1007);
 
     img {
       width: 100%;
@@ -21,9 +21,9 @@
 
   .img_wrap {
     position: absolute;
-    top: px-to-vw(20);
-    left: px-to-vw(-160);
-    width: px-to-vw(1653);
+    top: px-to-vw(240);
+    left: px-to-vw(400);
+    width: px-to-vw(1300);
 
     img {
       width: 100%;
@@ -32,9 +32,10 @@
 
   .img_wrap2 {
     position: absolute;
-    top: px-to-vw(150);
-    left: px-to-vw(106);
-    width: px-to-vw(1603);
+    top: px-to-vw(390);
+    left: px-to-vw(44);
+    width: px-to-vw(1888);
+    opacity: .5;
 
     img {
       width: 100%;
@@ -43,12 +44,44 @@
 
   .text_wrap {
     position: absolute;
-    top: px-to-vw(765);
-    left: px-to-vw(827);
+    top: px-to-vw(220);
+    left: px-to-vw(280);
+    z-index: 1;
     max-width: px-to-vw(800);
 
     .desc_18 {
       margin-top: px-to-vw(30);
+    }
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .spark20pro5g .sec14 {
+    padding: 0 0 px-to-vw-mb(200);
+
+    .bg_wrap {
+      height: px-to-vw-mb(1531);
+    }
+
+    .text_wrap {
+      top: px-to-vw-mb(300);
+      left: 0;
+      max-width: unset;
+      margin: 0 px-to-vw-mb(120);
+    }
+
+    .img_wrap {
+      top: px-to-vw-mb(380);
+      left: 0;
+      width: px-to-vw-mb(1296);
+      height: px-to-vw-mb(1047);
+      margin: px-to-vw-mb(80) 0 0 px-to-vw-mb(-300);
+    }
+
+    .img_wrap2 {
+      top: px-to-vw-mb(780);
+      left: 0;
+      width: 100%;
     }
   }
 }
