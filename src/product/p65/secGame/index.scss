@@ -1,0 +1,433 @@
+@import "../var";
+
+.secGame {
+  position: relative;
+  margin-top: -3px;
+  background-color: #080b0f;
+
+  .secGameWrapper {
+    padding-top: px-to-vw(160);
+    padding-bottom: px-to-vw(357);
+    padding-left: px-to-vw(300);
+  }
+
+  .gameTitle {
+    position: relative;
+    z-index: 3;
+  }
+
+  .secGameText {
+    position: relative;
+    z-index: 3;
+    width: px-to-vw(654);
+    height: px-to-vw(221);
+    margin-top: px-to-vw(70);
+    background: url("../../../assets/images/secGameText.png") no-repeat center /
+      contain;
+
+    .game-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      padding-top: px-to-vw(40);
+      padding-left: px-to-vw(40);
+    }
+
+    .game-title {
+      max-width: 90%;
+      color: #fff;
+      font-size: px-to-vw(30);
+      font-family: "Bold";
+    }
+
+    .game-info {
+      max-width: 90%;
+      margin-top: px-to-vw(20);
+      color: #ffffff80;
+      font-size: px-to-vw(16);
+      font-family: "Light";
+
+      div {
+        line-height: calc(25 / 16);
+      }
+    }
+  }
+
+  .LightingBox {
+    margin-top: px-to-vw(30);
+
+    // .mask {
+    //   background: linear-gradient(to right, #090b0f, #181a1f);
+    // }
+  }
+
+  .game {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: px-to-vw(1242);
+
+    .in {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/secGameBg.png") no-repeat center /
+        cover;
+    }
+
+    .hand {
+      position: absolute;
+      top: px-to-vw(290);
+      left: px-to-vw(685);
+      width: px-to-vw(1051);
+      height: px-to-vw(838);
+      background: url("../../../assets/images/secGameHand.png") no-repeat center /
+        cover;
+    }
+
+    .circleBox {
+      position: absolute;
+      top: px-to-vw(620);
+      left: px-to-vw(850);
+      width: px-to-vw(300);
+      height: px-to-vw(300);
+      border-radius: 50%;
+    }
+
+    .circleBoxB {
+      top: px-to-vw(420);
+      left: px-to-vw(1150);
+    }
+
+    .circleIn {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+
+    @keyframes circle-wave {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      80% {
+        transform: scale(1);
+        opacity: 0.2;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 0;
+      }
+    }
+
+    .f1 {
+      width: px-to-vw(90);
+      height: px-to-vw(90);
+      background: url("../../../assets/images/secGameA.png") no-repeat center /
+        contain;
+      animation: circle-wave 1s cubic-bezier(0.42, 0.005, 0.07, 1) infinite;
+    }
+
+    .f2 {
+      width: px-to-vw(120);
+      height: px-to-vw(120);
+      background: url("../../../assets/images/secGameB.png") no-repeat center /
+        contain;
+      animation: circle-wave 1s cubic-bezier(0.42, 0.005, 0.07, 1) infinite;
+    }
+
+    .f3 {
+      width: px-to-vw(180);
+      height: px-to-vw(180);
+      background: url("../../../assets/images/secGameC.png") no-repeat center /
+        contain;
+      animation: circle-wave 1s cubic-bezier(0.42, 0.005, 0.07, 1) infinite;
+    }
+  }
+
+  .BoxA {
+    position: relative;
+    z-index: 9;
+    width: px-to-vw(319);
+    height: px-to-vw(112);
+
+    .newLight {
+      .btn {
+        opacity: 1;
+      }
+
+      .btnLight {
+        opacity: 1;
+      }
+
+      .mask {
+        opacity: 0;
+        filter: blur(10px);
+      }
+
+      .btnText {
+        opacity: 1;
+      }
+    }
+  }
+
+  .BoxB {
+    position: relative;
+    z-index: 9;
+    width: px-to-vw(319);
+    height: px-to-vw(112);
+  }
+
+  .BoxC {
+    position: relative;
+    z-index: 9;
+    width: px-to-vw(319);
+    height: px-to-vw(112);
+  }
+
+  .newLight {
+    width: px-to-vw(319);
+    height: px-to-vw(112);
+
+    div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .mask {
+      position: absolute;
+      top: 0;
+      z-index: 7;
+      background: url("../../../assets/images/mask.png") no-repeat center /
+        contain;
+    }
+
+    .btnLight {
+      z-index: 6;
+      background: url("../../../assets/images/btnLight.png") no-repeat center /
+        contain;
+      opacity: 0;
+    }
+
+    .btn {
+      z-index: 1;
+      background: url("../../../assets/images/btn.png") no-repeat center /
+        contain;
+      opacity: 0;
+    }
+
+    .btnText {
+      z-index: 10;
+      font-size: px-to-vw(25);
+      font-family: "Book";
+      line-height: px-to-vw(112);
+      text-align: center;
+      opacity: 0;
+    }
+  }
+
+  .linea {
+    position: absolute;
+    top: px-to-vw(75);
+    left: px-to-vw(295);
+    z-index: 9;
+    width: px-to-vw(228) !important;
+    height: px-to-vw(67) !important;
+    background: url("../../../assets/images/secGameLinea.png") no-repeat center /
+      contain;
+  }
+
+  .lineb {
+    position: absolute;
+    top: px-to-vw(20);
+    left: px-to-vw(295);
+    width: px-to-vw(228) !important;
+    height: px-to-vw(34) !important;
+    background: url("../../../assets/images/secGameLineb.png") no-repeat center /
+      contain;
+  }
+
+  .linec {
+    position: absolute;
+    top: px-to-vw(-90);
+    left: px-to-vw(295);
+    width: px-to-vw(228) !important;
+    height: px-to-vw(127) !important;
+    background: url("../../../assets/images/secGameLinec.png") no-repeat center /
+      contain;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .secGame {
+    .secGameWrapper {
+      height: mvw(1460);
+      padding-top: mvw(150);
+      padding-left: mvw(28);
+      background: url("../../../assets/images/secGameMobWrapperBg.png")
+        no-repeat center / contain;
+    }
+
+    .secGameText {
+      width: mvw(684);
+      height: mvw(311);
+      margin-top: mvw(20);
+      background: url("../../../assets/images/secGameMobText.png") no-repeat
+        center / contain;
+
+      .game-title {
+        font-size: mvw(30);
+      }
+
+      .game-info {
+        margin-top: mvw(20);
+        font-size: mvw(20);
+
+        div {
+          line-height: 2;
+        }
+      }
+
+      .game-text {
+        padding-top: mvw(50);
+        padding-left: mvw(50);
+      }
+    }
+
+    .BoxA {
+      width: mvw(319);
+      height: mvw(112);
+    }
+
+    .BoxB {
+      width: mvw(319);
+      height: mvw(112);
+    }
+
+    .BoxC {
+      width: mvw(319);
+      height: mvw(112);
+    }
+
+    .newLight {
+      .btnText {
+        font-size: mvw(25);
+        line-height: mvw(112);
+      }
+    }
+
+    .game {
+      top: mvw(865);
+      right: 0;
+      bottom: unset;
+      left: 0;
+      width: mvw(669);
+      height: mvw(526);
+      margin: auto;
+      overflow: hidden;
+
+      .in {
+        width: mvw(669);
+        height: mvw(526);
+        background: url("../../../assets/images/secGameMobBg.png") no-repeat
+          center / contain;
+      }
+
+      .out {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/secGameMobBg.png") no-repeat
+          center / contain;
+        clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+      }
+
+      .hand {
+        top: mvw(-16);
+        left: mvw(0);
+        width: mvw(659);
+        height: mvw(556);
+        background: url("../../../assets/images/secGameMobHand.png") no-repeat
+          center / contain;
+      }
+
+      .circleBox {
+        top: mvw(234);
+        left: mvw(130);
+        width: mvw(180);
+        height: mvw(180);
+      }
+
+      .circleBoxB {
+        top: mvw(93);
+        left: mvw(348);
+      }
+
+      .f1 {
+        width: mvw(90);
+        height: mvw(90);
+      }
+
+      .f2 {
+        width: mvw(120);
+        height: mvw(120);
+      }
+
+      .f3 {
+        width: mvw(180);
+        height: mvw(180);
+      }
+    }
+
+    .linea {
+      top: mvw(93);
+      left: mvw(277);
+      width: mvw(153) !important;
+      height: mvw(156) !important;
+      background: url("../../../assets/images/secGameLineMoba.png") no-repeat
+        center / contain;
+    }
+
+    .lineb {
+      top: mvw(75);
+      left: mvw(277);
+      width: mvw(153) !important;
+      height: mvw(62) !important;
+      background: url("../../../assets/images/secGameLineMobb.png") no-repeat
+        center / contain;
+    }
+
+    .linec {
+      top: mvw(17);
+      left: mvw(277);
+      width: mvw(154) !important;
+      height: mvw(39) !important;
+      background: url("../../../assets/images/secGameLineMobc.png") no-repeat
+        center / contain;
+    }
+  }
+}

@@ -1,0 +1,315 @@
+@import "../var";
+
+.secMode {
+  position: relative;
+  z-index: -1;
+  margin-top: px-to-vw(-46);
+  overflow: hidden;
+
+  .secModeWrapper {
+    position: relative;
+    width: 100%;
+    height: px-to-vw(1060);
+    min-height: 100vh;
+    background: url("../../../assets/images/secModeBg.png") no-repeat center /
+      cover;
+  }
+
+  .secModeWrapper.active {
+    background: url("../../../assets/images/secModeBg2.png") no-repeat center /
+      cover;
+  }
+
+  .open {
+    position: absolute;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+    height: px-to-vw(415);
+    background: url("../../../assets/images/secModeOpen.png") no-repeat center /
+      contain;
+  }
+
+  .down {
+    position: absolute;
+    bottom: 0;
+    z-index: 4;
+    width: 100%;
+    height: px-to-vw(411);
+    background: url("../../../assets/images/secModeDown.png") no-repeat center /
+      contain;
+  }
+
+  .texta-box {
+    position: absolute;
+    top: px-to-vw(440);
+    left: px-to-vw(350);
+    z-index: 3;
+    width: px-to-vw(884);
+    height: px-to-vw(58);
+  }
+
+  .texta {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/images/secModeTexta.png") no-repeat center /
+      contain;
+
+    &.title-active {
+      animation: flash-ant 0.3s;
+      animation-fill-mode: forwards;
+    }
+
+    &:after {
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    &:before {
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    &.title-active:before {
+      position: absolute;
+      left: 4px;
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/secModeTexta.png") no-repeat
+        center / contain;
+      animation: noise-anim-2 0.5s 1 linear alternate-reverse,
+        disappear-ant 0.1s 0.5s forwards;
+      content: "";
+    }
+
+    &.title-active:after {
+      position: absolute;
+      left: -4px;
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/secModeTexta.png") no-repeat
+        center / contain;
+      animation: noise-anim 0.5s 1 linear alternate-reverse,
+        disappear-ant 0.1s 0.5s forwards;
+      content: "";
+    }
+  }
+
+  .textb-box {
+    position: absolute;
+    top: px-to-vw(520);
+    left: px-to-vw(350);
+    z-index: 3;
+    width: px-to-vw(993);
+    height: px-to-vw(58);
+  }
+
+  .textb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/images/secModeTextb.png") no-repeat center /
+      contain;
+
+    &.title-active {
+      animation: flash-ant 0.3s;
+      animation-fill-mode: forwards;
+    }
+
+    &:after {
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    &:before {
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    &.title-active:before {
+      position: absolute;
+      left: 4px;
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/secModeTextb.png") no-repeat
+        center / contain;
+      animation: noise-anim-2 0.5s 1 linear alternate-reverse,
+        disappear-ant 0.1s 0.5s forwards;
+      content: "";
+    }
+
+    &.title-active:after {
+      position: absolute;
+      left: -4px;
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/secModeTextb.png") no-repeat
+        center / contain;
+      animation: noise-anim 0.5s 1 linear alternate-reverse,
+        disappear-ant 0.1s 0.5s forwards;
+      content: "";
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: px-to-vw(660);
+    left: px-to-vw(350);
+    z-index: 3;
+    width: px-to-vw(127);
+    height: px-to-vw(53);
+    background: url("../../../assets/images/sec5Icon.png") no-repeat center /
+      contain;
+  }
+
+  .phone {
+    position: absolute;
+    top: px-to-vw(-90);
+    left: px-to-vw(560);
+    z-index: 5;
+    width: px-to-vw(2284);
+    height: px-to-vw(1230);
+    background: url("../../../assets/images/secModePhone.png") no-repeat center /
+      contain;
+    transform: rotate3d(103, -22, 40, 25deg);
+  }
+
+  .line {
+    position: absolute;
+    top: px-to-vw(330);
+    left: px-to-vw(610);
+    z-index: 6;
+    width: px-to-vw(657);
+    height: px-to-vw(408);
+    background: url("../../../assets/images/secModeLine.png") no-repeat center /
+      contain;
+  }
+
+  .titlebox-active.titlebox {
+    left: px-to-vw(600);
+    transform: translateX(0);
+    opacity: 1;
+
+    .title-line {
+      animation: test 0.2s linear 3;
+    }
+  }
+
+  .titlebox {
+    position: absolute;
+    top: px-to-vw(270);
+    left: px-to-vw(500);
+    z-index: 7;
+    display: flex;
+    gap: px-to-vw(20);
+    align-items: flex-start;
+    opacity: 0;
+    transition: all 0.5s;
+
+    .title-line {
+      width: px-to-vw(6);
+      height: px-to-vw(40);
+      margin-top: px-to-vw(10);
+      background-color: #02f8f6;
+    }
+
+    .title {
+      color: #000;
+      font-size: px-to-vw(50);
+      font-family: "Bold";
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .secMode {
+    margin-top: mvw(-15);
+
+    .secModeWrapper {
+      height: mvw(800);
+      min-height: unset;
+      background: url("../../../assets/images/secModeMobBg.png") no-repeat
+        center / cover;
+    }
+
+    .down {
+      height: mvw(306);
+      background: url("../../../assets/images/secModeMobDown.png") no-repeat
+        center / cover;
+    }
+
+    .open {
+      height: mvw(317);
+      background: url("../../../assets/images/secModeMobOpen.png") no-repeat
+        center / cover;
+    }
+
+    .texta {
+      width: mvw(557);
+      height: mvw(37);
+      background: url("../../../assets/images/secModeMobTexta.png") no-repeat
+        center / contain;
+    }
+
+    .texta-box {
+      top: mvw(350);
+      left: mvw(60);
+    }
+
+    .textb-box {
+      top: mvw(400);
+      left: mvw(60);
+    }
+
+    .textb {
+      width: mvw(626);
+      height: mvw(37);
+      background: url("../../../assets/images/secModeTextb.png") no-repeat
+        center / contain;
+    }
+
+    .logo {
+      top: mvw(450);
+      left: mvw(60);
+      width: mvw(74);
+      height: mvw(31);
+    }
+
+    .titlebox-active.titlebox {
+      left: mvw(28);
+    }
+
+    .titlebox {
+      top: mvw(170);
+      left: mvw(0);
+      gap: mvw(16);
+
+      .title {
+        font-size: mvw(54);
+      }
+
+      .title-line {
+        width: mvw(6);
+        height: mvw(40);
+        margin-top: mvw(15);
+      }
+    }
+
+    .phone {
+      top: mvw(200);
+      right: 0;
+      left: unset;
+      width: mvw(683);
+      height: mvw(509);
+      background: url("../../../assets/images/secModeMobPhone.png") no-repeat
+        center / contain;
+      transform: unset;
+    }
+
+    .line {
+      top: mvw(240);
+      left: mvw(29);
+      width: mvw(472);
+      height: mvw(250);
+      background: url("../../../assets/images/secModeMobLine.png") no-repeat
+        center / contain;
+    }
+  }
+}

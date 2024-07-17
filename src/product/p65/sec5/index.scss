@@ -1,0 +1,449 @@
+@import "../var";
+
+.sec5 {
+  background-color: #080b0f;
+
+  .sec5-wrapper {
+    position: relative;
+    padding-top: px-to-vw(234);
+    padding-bottom: px-to-vw(320);
+    padding-left: px-to-vw(1268);
+  }
+
+  .lightBox {
+    position: absolute;
+    top: px-to-vw(45);
+    left: px-to-vw(250);
+    width: px-to-vw(872);
+    height: px-to-vw(910);
+
+    div {
+      width: 100%;
+      height: 100%;
+    }
+
+    .lightBoxIn {
+      position: relative;
+
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .blue {
+      background: url("../../../assets/images/sec4Blue.png") no-repeat center /
+        contain;
+    }
+
+    .green {
+      background: url("../../../assets/images/sec4Green.png") no-repeat center /
+        contain;
+    }
+
+    .purple {
+      background: url("../../../assets/images/sec4Purple.png") no-repeat center /
+        contain;
+    }
+  }
+
+  .phoneBox {
+    position: absolute;
+    top: px-to-vw(220);
+    left: px-to-vw(900);
+    z-index: 4;
+    width: px-to-vw(249);
+    height: px-to-vw(742);
+
+    .phone {
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/sec4Phone.png") no-repeat center /
+        contain;
+    }
+  }
+
+  .shineBox {
+    position: absolute;
+    top: px-to-vw(395);
+    left: px-to-vw(1034);
+    z-index: 5;
+    width: px-to-vw(52);
+    height: px-to-vw(79);
+
+    div {
+      width: 100%;
+      height: 100%;
+    }
+
+    .shineIn {
+      position: relative;
+
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .active {
+      animation: test 0.2s linear 6 forwards;
+    }
+
+    .shineBlue {
+      background: url("../../../assets/images/sec4LightBlue.png") no-repeat
+        center / contain;
+    }
+
+    .shineGreen {
+      background: url("../../../assets/images/sec4LightGreen.png") no-repeat
+        center / contain;
+      opacity: 0;
+    }
+
+    .shinePurple {
+      background: url("../../../assets/images/sec4LightPurple.png") no-repeat
+        center / contain;
+      opacity: 0;
+    }
+  }
+
+  .line-blue {
+    position: absolute;
+    top: px-to-vw(430);
+    left: px-to-vw(1078);
+    z-index: 8;
+    width: px-to-vw(209);
+    height: px-to-vw(77);
+
+    div {
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/sec4LineBlue.png") no-repeat
+        center / contain;
+    }
+  }
+
+  .line-green {
+    position: absolute;
+    top: px-to-vw(430);
+    left: px-to-vw(1078);
+    z-index: 8;
+    width: px-to-vw(209);
+    height: px-to-vw(169);
+
+    div {
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/sec4LineGreen.png") no-repeat
+        center / contain;
+    }
+  }
+
+  .line-purple {
+    position: absolute;
+    top: px-to-vw(430);
+    left: px-to-vw(1078);
+    z-index: 8;
+    width: px-to-vw(209);
+    height: px-to-vw(262);
+
+    div {
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/sec4LinePurple.png") no-repeat
+        center / contain;
+    }
+  }
+
+  .textBox {
+    position: absolute;
+    top: px-to-vw(612);
+    left: px-to-vw(320);
+    z-index: 3;
+    width: px-to-vw(684);
+    height: px-to-vw(275);
+    opacity: 0.5;
+
+    div {
+      width: 100%;
+      height: 100%;
+    }
+
+    .textIn {
+      position: relative;
+
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .textBlue {
+      background: url("../../../assets/images/sec4textBlue.png") no-repeat
+        center / contain;
+    }
+
+    .textGreen {
+      background: url("../../../assets/images/sec4textGreen.png") no-repeat
+        center / contain;
+    }
+
+    .textPurple {
+      background: url("../../../assets/images/sec4textPurple.png") no-repeat
+        center / contain;
+    }
+  }
+
+  .titleBox {
+    padding-top: px-to-vw(40);
+    padding-left: px-to-vw(54);
+
+    .titlea {
+      color: #fff;
+      font-size: px-to-vw(28);
+      font-family: "Bold";
+    }
+
+    .titleb {
+      max-width: 75%;
+      margin-top: px-to-vw(25);
+      color: rgba(255, 255, 255);
+      font-size: px-to-vw(16);
+      font-family: "Light";
+
+      div {
+        line-height: calc(25 / 16);
+      }
+    }
+
+    div {
+      position: relative !important;
+      width: unset;
+      height: unset;
+    }
+  }
+
+  .btnBoxA {
+    margin-top: px-to-vw(55);
+
+    .mask {
+      opacity: 0;
+      filter: blur(10px);
+    }
+  }
+
+  .btnBox {
+    position: relative;
+    width: px-to-vw(319);
+    height: px-to-vw(112);
+
+    div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .btn {
+      z-index: 1;
+      background: url("../../../assets/images/btn.png") no-repeat center /
+        contain;
+    }
+
+    .mask {
+      z-index: 7;
+      background: url("../../../assets/images/mask.png") no-repeat center /
+        contain;
+      background-color: #080b0f;
+    }
+
+    .btnLight {
+      z-index: 2;
+      background: url("../../../assets/images/btnLight.png") no-repeat center /
+        contain;
+      animation: test 2s linear infinite;
+    }
+
+    .btnText {
+      z-index: 5;
+      font-size: px-to-vw(25);
+      line-height: px-to-vw(112);
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec5 {
+    .sec5-wrapper {
+      padding: 0;
+      padding-top: mvw(25);
+      padding-bottom: mvw(100);
+    }
+
+    .title-box {
+      padding-left: mvw(28);
+    }
+
+    .title {
+      max-width: 90%;
+      font-size: mvw(54);
+    }
+
+    .line {
+      width: mvw(6);
+      height: mvw(40);
+      margin-top: mvw(15);
+    }
+
+    .btnGroup {
+      display: flex;
+      max-width: mvw(680);
+      margin: 0 auto;
+    }
+
+    .btnBox {
+      width: mvw(319);
+      height: mvw(112);
+
+      .btnText {
+        font-size: mvw(25);
+        line-height: mvw(112);
+      }
+    }
+
+    .titleBox {
+      padding-top: mvw(40);
+      padding-left: mvw(40);
+    }
+
+    .textBox {
+      position: relative;
+      top: unset;
+      left: unset;
+      z-index: 9;
+      width: mvw(694);
+      height: mvw(353);
+      margin: mvw(530) auto 0;
+
+      .titlea {
+        font-size: mvw(33);
+      }
+
+      .titleb {
+        max-width: 92%;
+        font-size: mvw(20);
+
+        div {
+          line-height: 2;
+        }
+      }
+
+      .textBlue {
+        background: url("../../../assets/images/sec4MobtextBlue.png") no-repeat
+          center / contain;
+      }
+
+      .textGreen {
+        background: url("../../../assets/images/sec4mobtextGreen.png") no-repeat
+          center / contain;
+      }
+
+      .textPurple {
+        background: url("../../../assets/images/sec4MobtextPurple.png")
+          no-repeat center / contain;
+      }
+    }
+
+    .btnBoxA {
+      margin-top: 0;
+    }
+
+    .lightBox {
+      top: mvw(242);
+      left: mvw(-70);
+      width: mvw(665);
+      height: mvw(662);
+
+      .blue {
+        background: url("../../../assets/images/sec4MobBlue.png") no-repeat
+          center / contain;
+      }
+
+      .green {
+        background: url("../../../assets/images/sec4MobGreen.png") no-repeat
+          center / contain;
+      }
+
+      .purple {
+        background: url("../../../assets/images/sec4MobPurple.png") no-repeat
+          center / contain;
+      }
+    }
+
+    .phoneBox {
+      top: mvw(300);
+      left: mvw(450);
+      width: mvw(218);
+      height: mvw(650);
+
+      .phone {
+        background: url("../../../assets/images/sec4MobPhone.png") no-repeat
+          center / contain;
+      }
+    }
+
+    .shineBox {
+      top: mvw(455);
+      left: mvw(565);
+      z-index: 10;
+      width: mvw(48);
+      height: mvw(62);
+
+      .shineBlue {
+        background: url("../../../assets/images/sec4MobLightBlue.png") no-repeat
+          center / contain;
+      }
+    }
+
+    .line-blue {
+      top: mvw(150);
+      left: mvw(250);
+      width: mvw(324);
+      height: mvw(301);
+
+      div {
+        background: url("../../../assets/images/sec4MobLineBlue.png") no-repeat
+          center / contain;
+      }
+    }
+
+    .line-green {
+      top: mvw(149);
+      left: mvw(480);
+      width: mvw(94);
+      height: mvw(302);
+
+      div {
+        background: url("../../../assets/images/sec4MobLineGreen.png") no-repeat
+          center / contain;
+      }
+    }
+
+    .line-purple {
+      top: mvw(146);
+      left: mvw(566);
+      width: mvw(7);
+      height: mvw(305);
+
+      div {
+        background: url("../../../assets/images/sec4MobLinePurple.png")
+          no-repeat center / contain;
+      }
+    }
+  }
+}

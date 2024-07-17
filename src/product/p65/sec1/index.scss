@@ -1,0 +1,433 @@
+@import "../var";
+
+.sec1 {
+  overflow: hidden;
+
+  .wrapper {
+    overflow: hidden;
+    background-color: black;
+  }
+
+  .sec1Bg {
+    height: px-to-vw(960);
+    background: url("../../../assets/images/sec1Bg.png") no-repeat center /
+      cover;
+  }
+
+  .sec1Bg2 {
+    position: relative;
+    height: px-to-vw(1082);
+    padding-top: px-to-vw(90);
+    background: url("../../../assets/images/sec1Bg2.png") no-repeat center /
+      cover;
+  }
+
+  .phoneBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    div {
+      position: absolute;
+    }
+  }
+
+  .leftHand {
+    top: px-to-vw(-380);
+    left: px-to-vw(190);
+    z-index: 3;
+    width: px-to-vw(578);
+    height: px-to-vw(839);
+    background: url("../../../assets/images/sec1LeftHand.png") no-repeat center /
+      contain;
+  }
+
+  .leftPhone {
+    top: px-to-vw(112);
+    left: px-to-vw(640);
+    z-index: 2;
+    width: px-to-vw(388);
+    height: px-to-vw(642);
+    background: url("../../../assets/images/sec1LeftPhone.png") no-repeat center /
+      contain;
+  }
+
+  .leftMask {
+    top: px-to-vw(-130);
+    left: px-to-vw(260);
+    z-index: 1;
+    width: px-to-vw(941);
+    height: px-to-vw(1017);
+    background: url("../../../assets/images/sec1LeftMask.png") no-repeat center /
+      contain;
+  }
+
+  .rightHand {
+    top: px-to-vw(320);
+    left: px-to-vw(1140);
+    z-index: 3;
+    width: px-to-vw(587);
+    height: px-to-vw(758);
+    background: url("../../../assets/images/sec1RightHand.png") no-repeat center /
+      contain;
+  }
+
+  .rightPhone {
+    top: px-to-vw(162);
+    left: px-to-vw(888);
+    z-index: 2;
+    width: px-to-vw(410);
+    height: px-to-vw(695);
+    background: url("../../../assets/images/sec1RightPhone.png") no-repeat
+      center / contain;
+  }
+
+  .rightMask {
+    top: px-to-vw(140);
+    left: px-to-vw(890);
+    z-index: 1;
+    width: px-to-vw(865);
+    height: px-to-vw(959);
+    background: url("../../../assets/images/sec1RightMask.png") no-repeat center /
+      contain;
+  }
+
+  .sec1-box {
+    position: relative;
+    z-index: 3;
+    width: px-to-vw(1656);
+    height: px-to-vw(823);
+    margin: auto;
+    padding-top: px-to-vw(190);
+    padding-bottom: px-to-vw(200);
+    text-align: center;
+    background: url("../../../assets/images/sec1-box.png") no-repeat center /
+      contain;
+
+    &:before {
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    &:after {
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    .sec1-text-wrapper {
+      position: relative;
+      z-index: 3;
+      width: 80%;
+      margin: auto;
+
+      .title {
+        color: #fff;
+        font-size: px-to-vw(50);
+        font-family: "Bold";
+        opacity: 0;
+      }
+
+      .spana,
+      .spanb,
+      .spanc {
+        line-height: 2;
+        opacity: 0;
+      }
+
+      .description {
+        max-width: 85%;
+        margin: 60px auto 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: px-to-vw(25);
+        line-height: 2;
+      }
+    }
+  }
+
+  .sec1-box.sec1-box-active {
+    // animation: flash-ant 0.3s;
+    // animation-fill-mode: forwards;
+  }
+
+  .sec1-box.sec1-box-active:before {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: calc(1665 / 1920) * 100%;
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/images/sec1-box.png") no-repeat center /
+      contain;
+    animation: noise-anim-img-2 1s 1 linear alternate-reverse,
+      disappear-ant 0.1s 1.5s forwards;
+    content: "";
+  }
+
+  .sec1-box.sec1-box-active:after {
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/images/sec1-box.png") no-repeat center /
+      contain;
+    animation: noise-anim-img 1s 1.5 linear alternate-reverse,
+      disappear-ant 0.1s 1.5s forwards;
+    content: "";
+  }
+
+  .info {
+    width: px-to-vw(504);
+    height: px-to-vw(93);
+    margin: 70px auto 0;
+    font-size: px-to-vw(33);
+    font-family: "Medium";
+    background: url("../../../assets/images/sec1Btn.png") no-repeat center /
+      contain;
+  }
+
+  span {
+    margin-left: px-to-vw(24);
+    line-height: px-to-vw(88);
+  }
+
+  .kvText {
+    position: absolute;
+    top: px-to-vw(683);
+    right: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: px-to-vw(1740);
+    margin: auto;
+    padding-left: px-to-vw(10);
+    font-size: px-to-vw(25);
+    font-family: "Medium";
+
+    div {
+      position: relative;
+    }
+  }
+
+  .sec1Logo {
+    width: px-to-vw(261);
+    height: px-to-vw(141);
+    padding-top: px-to-vw(40);
+    padding-left: px-to-vw(25);
+    background: url("../../../assets/images/sec1logo.png") no-repeat center /
+      contain;
+
+    .logoWrapper {
+      width: fit-content;
+      text-align: right;
+    }
+
+    .sec1Logoa {
+      font-size: px-to-vw(30);
+      font-family: "Bold";
+    }
+
+    .sec1Logob {
+      font-size: px-to-vw(20);
+      font-family: "Medium";
+    }
+  }
+
+  .textGroup {
+    display: flex;
+    gap: px-to-vw(24);
+    align-items: center;
+    margin-top: px-to-vw(30);
+    color: #000;
+
+    .line {
+      width: px-to-vw(3);
+      height: px-to-vw(20);
+      background-color: #000;
+    }
+  }
+
+  .sec1Text {
+    width: px-to-vw(569);
+    height: px-to-vw(109);
+    background: url("../../../assets/images/sec1Text.png") no-repeat center /
+      contain;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec1 {
+    .sec1Bg {
+      height: mvw(1060);
+      background: url("../../../assets/images/sec1MobBg.png") no-repeat center /
+        cover;
+    }
+
+    .leftHand {
+      top: mvw(0);
+      left: mvw(0);
+      z-index: 3;
+      width: mvw(178);
+      height: mvw(386);
+      background: url("../../../assets/images/sec1MobLeftHand.png") no-repeat
+        center / contain;
+    }
+
+    .leftPhone {
+      top: mvw(150);
+      left: mvw(84);
+      width: mvw(284);
+      height: mvw(408);
+      background: url("../../../assets/images/sec1MobLeftPhone.png") no-repeat
+        center / contain;
+    }
+
+    .leftMask {
+      top: mvw(0);
+      left: mvw(0);
+      z-index: 1;
+      width: mvw(509);
+      height: mvw(622);
+      background: url("../../../assets/images/sec1MobLeftMask.png") no-repeat
+        center / contain;
+    }
+
+    .rightHand {
+      top: mvw(340);
+      right: mvw(0);
+      left: unset;
+      z-index: 3;
+      width: mvw(291);
+      height: mvw(656);
+      background: url("../../../assets/images/sec1MobRightHand.png") no-repeat
+        center / contain;
+    }
+
+    .rightPhone {
+      top: mvw(230);
+      right: mvw(180);
+      left: unset;
+      z-index: 2;
+      width: mvw(299);
+      height: mvw(441);
+      background: url("../../../assets/images/sec1MobRightPhone.png") no-repeat
+        center / contain;
+    }
+
+    .rightMask {
+      top: mvw(240);
+      left: mvw(250);
+      z-index: 1;
+      width: mvw(490);
+      height: mvw(643);
+      background: url("../../../assets/images/sec1MobRightMask.png") no-repeat
+        center / contain;
+    }
+
+    .sec1Text {
+      width: mvw(352);
+      height: mvw(67);
+      background: url("../../../assets/images/sec1MobText.png") no-repeat center /
+        contain;
+    }
+
+    .kvText {
+      top: mvw(800);
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      padding-right: mvw(40);
+      padding-left: mvw(40);
+    }
+
+    .textGroup {
+      flex-wrap: wrap;
+      width: 80%;
+      margin-top: mvw(20);
+      font-size: mvw(25);
+      font-family: "Medium";
+
+      .line {
+        width: mvw(3);
+        height: mvw(20);
+      }
+    }
+
+    .text1 {
+      width: 100%;
+    }
+
+    .sec1Logo {
+      flex-shrink: 0;
+      width: mvw(191);
+      height: mvw(103);
+      padding-top: mvw(30);
+      padding-left: mvw(50);
+      background: url("../../../assets/images/sec1MobLogo.png") no-repeat center /
+        contain;
+
+      .logoWrapper {
+        text-align: left;
+      }
+
+      .sec1Logoa {
+        font-size: mvw(20);
+      }
+
+      .sec1Logob {
+        font-size: mvw(12);
+      }
+    }
+
+    .sec1Bg2 {
+      height: mvw(690);
+      background: url("../../../assets/images/sec1MobBg2.png") no-repeat center /
+        contain;
+    }
+
+    .sec1-box {
+      width: mvw(692);
+      height: mvw(554);
+      background: url("../../../assets/images/sec1-mob-box.png") no-repeat
+        center / contain;
+
+      .sec1-text-wrapper {
+        .title {
+          font-size: mvw(33);
+        }
+
+        .description {
+          margin-top: mvw(40);
+          font-size: mvw(20);
+
+          div {
+            line-height: 2;
+          }
+        }
+      }
+    }
+
+    .sec1-box.sec1-box-active:before {
+      background: url("../../../assets/images/sec1-mob-box.png") no-repeat
+        center / contain;
+    }
+
+    .sec1-box.sec1-box-active:after {
+      background: url("../../../assets/images/sec1-mob-box.png") no-repeat
+        center / contain;
+    }
+
+    .info {
+      width: mvw(318);
+      height: mvw(63);
+      margin-top: mvw(35);
+      background: url("../../../assets/images/sec1MobBtn.png") no-repeat center /
+        contain;
+
+      span {
+        font-size: mvw(20);
+        line-height: mvw(63);
+      }
+    }
+  }
+}

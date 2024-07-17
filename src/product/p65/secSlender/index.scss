@@ -1,0 +1,98 @@
+@import "../var";
+
+.secSlender {
+  position: relative;
+  z-index: 6;
+  margin-top: -5px;
+  overflow: hidden;
+  background: url("../../../assets/images/secSlenderBg.png") no-repeat top /
+    contain;
+  background-color: #080b0f;
+
+  .top {
+    padding-left: px-to-vw(330);
+  }
+
+  .secSlenderText {
+    width: px-to-vw(401);
+    height: px-to-vw(110);
+    margin-top: px-to-vw(60);
+    padding-top: px-to-vw(40);
+    padding-left: px-to-vw(40);
+    background: url("../../../assets/images/secSlender.png") no-repeat center /
+      contain;
+  }
+
+  .secSlenderTitle {
+    max-width: 90%;
+    color: #ffffff80;
+    font-size: px-to-vw(16);
+    font-family: "Light";
+    line-height: calc(25 / 16);
+  }
+
+  .text {
+    width: px-to-vw(599);
+    height: px-to-vw(75);
+    margin-top: px-to-vw(120);
+    margin-left: px-to-vw(700);
+    background: url("../../../assets/images/secSlenderText.png") no-repeat
+      center / contain;
+  }
+
+  .hand {
+    width: px-to-vw(1496);
+    height: px-to-vw(557);
+    margin-left: px-to-vw(-55);
+
+    div {
+      background: url("../../../assets/images/secSlenderHand.png") no-repeat
+        center / contain;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .secSlender {
+    .wrapper {
+      padding-top: mvw(100);
+    }
+
+    .hand {
+      width: mvw(750);
+      height: mvw(231);
+
+      div {
+        background: url("../../../assets/images/secSlenderMobHand.png")
+          no-repeat top / contain;
+      }
+    }
+
+    .top {
+      padding-left: px-to-vw(28);
+    }
+
+    .secSlenderText {
+      width: mvw(504);
+      height: mvw(124);
+      margin-top: mvw(20);
+      padding-top: mvw(50);
+      padding-left: mvw(50);
+      background: url("../../../assets/images/secSlenderMob.png") no-repeat top /
+        contain;
+    }
+
+    .secSlenderTitle {
+      font-size: mvw(20);
+    }
+
+    .text {
+      width: mvw(384);
+      height: mvw(47);
+      margin-top: mvw(120);
+      margin-left: mvw(235);
+      background: url("../../../assets/images/secSlenderMobText.png") no-repeat
+        top / contain;
+    }
+  }
+}

@@ -1,0 +1,279 @@
+@import "../var";
+
+.secAutomatic {
+  margin-top: px-to-vw(-10);
+  overflow: hidden;
+
+  .secAutomaticWrapper {
+    width: 100%;
+    height: px-to-vw(1188);
+    padding-top: px-to-vw(140);
+    overflow: hidden;
+    background: url("../../../assets/images/secAutomaticBg.png") no-repeat
+      center / contain;
+
+    .content {
+      display: flex;
+      gap: px-to-vw(70);
+
+      .title {
+        width: px-to-vw(500);
+        color: #000;
+      }
+    }
+
+    .left {
+      position: relative;
+      padding-left: px-to-vw(580);
+
+      .photoBox {
+        position: absolute;
+        top: px-to-vw(125);
+        left: px-to-vw(675);
+        width: px-to-vw(338);
+        height: px-to-vw(1935);
+      }
+
+      .photoWrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .photoa {
+        background: url("../../../assets/images/secAutomatica.png") no-repeat
+          top center / contain;
+        transition: all 0.5s;
+      }
+
+      .photob {
+        background: url("../../../assets/images/secAutomaticb.png") no-repeat
+          top center / contain;
+        transform: rotate(-37deg);
+        transition: all 0.5s;
+      }
+
+      .photoc {
+        background: url("../../../assets/images/secAutomaticc.png") no-repeat
+          top center / contain;
+        transform: rotate(-74deg);
+        transition: all 0.5s;
+      }
+
+      .photoWrapper.activea {
+        .photoa {
+          transform: rotate(0deg);
+        }
+
+        .photob {
+          transform: rotate(-37deg);
+        }
+
+        .photoc {
+          transform: rotate(-74deg);
+        }
+      }
+
+      .photoWrapper.activeb {
+        .photoa {
+          transform: rotate(0deg);
+        }
+
+        .photob {
+          transform: rotate(0deg);
+        }
+
+        .photoc {
+          transform: rotate(-37deg);
+        }
+      }
+
+      .photoWrapper.activec {
+        .photoa {
+          transform: rotate(0deg);
+        }
+
+        .photob {
+          transform: rotate(0deg);
+        }
+
+        .photoc {
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .right {
+      margin-top: px-to-vw(230);
+    }
+
+    .phone {
+      position: relative;
+      z-index: 6;
+      width: px-to-vw(454);
+      height: px-to-vw(890);
+      background: url("../../../assets/images/secAutomaticPhone.png") no-repeat
+        center / contain;
+    }
+
+    .secAutomaticText {
+      width: px-to-vw(513);
+      height: px-to-vw(221);
+      margin-top: px-to-vw(15);
+      padding-top: px-to-vw(60);
+      padding-left: px-to-vw(50);
+      background: url("../../../assets/images/secAutomaticText.png") no-repeat
+        center / contain;
+    }
+
+    .shrink {
+      display: block;
+      margin-top: px-to-vw(10);
+      margin-left: 0;
+    }
+
+    .text {
+      max-width: 90%;
+      color: #00000080;
+      font-size: px-to-vw(16);
+      font-family: "Light";
+      line-height: calc(25 / 16);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .secAutomatic {
+    .secAutomaticWrapper {
+      height: mvw(1320);
+      padding-top: mvw(150);
+      background: url("../../../assets/images/secAutomaticMobBg.png") no-repeat
+        center / contain;
+
+      .secAutomaticText {
+        width: mvw(693);
+        height: mvw(248);
+        margin: mvw(30) auto 0;
+        padding-top: mvw(50);
+        padding-left: mvw(50);
+        background: url("../../../assets/images/secAutomaticMobText.png")
+          no-repeat center / contain;
+      }
+
+      .shrink {
+        display: inline-block;
+        margin-left: mvw(10);
+      }
+
+      .text {
+        max-width: 89%;
+        font-size: mvw(20);
+        line-height: 2;
+      }
+
+      .content {
+        flex-direction: column;
+        gap: mvw(50);
+
+        .title {
+          width: 65%;
+          line-height: 1.2;
+        }
+      }
+
+      .right {
+        order: -1;
+        margin-top: mvw(0);
+        padding-left: mvw(28);
+      }
+
+      .left {
+        padding-left: mvw(330);
+
+        .photoWrapper {
+          width: mvw(256);
+        }
+
+        .photoBox {
+          top: mvw(86);
+          left: mvw(398);
+          height: mvw(1905);
+        }
+
+        .photoa {
+          background: url("../../../assets/images/secAutomaticMoba.png")
+            no-repeat top / contain;
+        }
+
+        .photob {
+          background: url("../../../assets/images/secAutomaticMobb.png")
+            no-repeat top / contain;
+          transform: rotate(-25deg);
+        }
+
+        .photoc {
+          background: url("../../../assets/images/secAutomaticMobc.png")
+            no-repeat top / contain;
+          transform: rotate(-50deg);
+        }
+
+        .photoWrapper.activea {
+          .photoa {
+            transform: rotate(0deg);
+          }
+
+          .photob {
+            transform: rotate(-25deg);
+          }
+
+          .photoc {
+            transform: rotate(-50deg);
+          }
+        }
+
+        .photoWrapper.activeb {
+          .photoa {
+            transform: rotate(0deg);
+          }
+
+          .photob {
+            transform: rotate(0deg);
+          }
+
+          .photoc {
+            transform: rotate(-25deg);
+          }
+        }
+
+        .photoWrapper.activec {
+          .photoa {
+            transform: rotate(0deg);
+          }
+
+          .photob {
+            transform: rotate(0deg);
+          }
+
+          .photoc {
+            transform: rotate(0deg);
+          }
+        }
+      }
+
+      .phone {
+        width: mvw(336);
+        height: mvw(661);
+        background: url("../../../assets/images/secAutomaticMobPhone.png")
+          no-repeat center / contain;
+      }
+    }
+  }
+}

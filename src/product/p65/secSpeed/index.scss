@@ -1,0 +1,105 @@
+@import "../var";
+
+.secSpeed {
+  position: relative;
+  z-index: -1;
+  margin-top: -3px;
+  background-color: #080b0f;
+
+  .secSpeed-wrapper {
+    position: relative;
+    width: 100%;
+    height: px-to-vw(1060);
+    padding-top: px-to-vw(160);
+    padding-left: px-to-vw(300);
+    overflow: hidden;
+    background: url("../../../assets/images/secEnduringBg.png") no-repeat center /
+      contain;
+  }
+
+  .top {
+    display: flex;
+    align-items: center;
+  }
+
+  .secSpeed-T {
+    position: relative;
+    z-index: 6;
+    width: fit-content;
+
+    .title {
+      width: px-to-vw(500);
+    }
+  }
+
+  .secSpeed-text {
+    position: relative;
+    z-index: 6;
+    width: px-to-vw(514);
+    height: px-to-vw(196);
+    margin-top: px-to-vw(0);
+    padding-top: px-to-vw(40);
+    padding-left: px-to-vw(40);
+    background: url("../../../assets/images/secSpeedText.png") no-repeat center /
+      contain;
+  }
+
+  .speed-title {
+    max-width: 80%;
+    color: #fff;
+    font-size: px-to-vw(29);
+    font-family: "Bold";
+  }
+
+  .info {
+    max-width: 90%;
+    margin-top: px-to-vw(20);
+    color: #ffffff80;
+    font-size: px-to-vw(16);
+    font-family: "Light";
+    line-height: calc(25 / 16);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .secSpeed {
+    .secSpeed-wrapper {
+      height: mvw(1020);
+      padding-top: mvw(70);
+      padding-left: mvw(28);
+      background-position: bottom;
+      background-size: 166% mvw(720);
+    }
+
+    .secSpeed-text {
+      width: mvw(558);
+      height: mvw(226);
+      padding-top: mvw(50);
+      padding-left: mvw(50);
+      background: url("../../../assets/images/secSpeedMobText.png") no-repeat
+        center / contain;
+    }
+
+    .speed-title {
+      font-size: mvw(33);
+    }
+
+    .info {
+      margin-top: mvw(30);
+      font-size: mvw(16);
+      line-height: 2;
+    }
+
+    .secSpeed-T {
+      .title {
+        width: 65%;
+      }
+    }
+
+    .top {
+      flex-direction: column;
+      gap: mvw(30);
+      align-items: flex-start;
+    }
+  }
+}

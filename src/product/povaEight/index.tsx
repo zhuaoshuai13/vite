@@ -704,19 +704,14 @@ const PovaEight = () => {
 
       const tl4 = gsap
         .timeline()
+        .from(".sec13 .sec13_f2", 1, { y: "20%", opacity: 0 }, "a")
+        .from(".sec13 .sec13_f1", 1, { y: "20%", opacity: 0, delay: 0.25 }, "a")
         .from(
-          ".sec13 .sec13_f2",
+          ".sec13 .sec13_left",
           1,
-          { y: "20%", opacity: 0, },
+          { x: "-20%", opacity: 0, delay: 0.5 },
           "a"
         )
-        .from(
-          ".sec13 .sec13_f1",
-          1,
-          { y: "20%", opacity: 0, delay: 0.25},
-          "a"
-        )
-        .from(".sec13 .sec13_left", 1, { x: "-20%", opacity: 0, delay: 0.5 }, "a")
         .from(
           ".sec13 .text_box .title",
           1,

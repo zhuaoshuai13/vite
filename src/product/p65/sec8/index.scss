@@ -1,0 +1,491 @@
+@import "../var";
+
+.sec8 {
+  position: relative;
+  z-index: -1;
+  margin-top: px-to-vw(-185);
+  overflow: hidden;
+
+  .sec8Wrapper {
+    .top {
+      position: relative;
+      width: 100%;
+      height: px-to-vw(480);
+      background: url("../../../assets/images/sec7Top.png") no-repeat center /
+        contain;
+    }
+
+    .texta {
+      position: absolute;
+      top: px-to-vw(200);
+      left: px-to-vw(460);
+      z-index: 3;
+      width: px-to-vw(996);
+      height: px-to-vw(59);
+      background: url("../../../assets/images/sec7Texta.png") no-repeat center /
+        contain;
+
+      &.title-active {
+        animation: flash-ant 0.3s;
+        animation-fill-mode: forwards;
+      }
+
+      &:after {
+        clip: rect(0, 900px, 0, 0);
+      }
+
+      &:before {
+        clip: rect(0, 900px, 0, 0);
+      }
+
+      &.title-active:before {
+        position: absolute;
+        left: 4px;
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/sec7Texta.png") no-repeat center /
+          contain;
+        animation: noise-anim-2 0.5s 1 linear alternate-reverse,
+          disappear-ant 0.1s 0.5s forwards;
+        content: "";
+      }
+
+      &.title-active:after {
+        position: absolute;
+        left: -4px;
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/sec7Texta.png") no-repeat center /
+          contain;
+        animation: noise-anim 0.5s 1 linear alternate-reverse,
+          disappear-ant 0.1s 0.5s forwards;
+        content: "";
+      }
+    }
+
+    .textb {
+      position: absolute;
+      top: px-to-vw(280);
+      left: px-to-vw(460);
+      z-index: 3;
+      width: px-to-vw(655);
+      height: px-to-vw(59);
+      background: url("../../../assets/images/sec7Textb.png") no-repeat center /
+        contain;
+
+      &.title-active {
+        animation: flash-ant 0.3s;
+        animation-fill-mode: forwards;
+      }
+
+      &:after {
+        clip: rect(0, 900px, 0, 0);
+      }
+
+      &:before {
+        clip: rect(0, 900px, 0, 0);
+      }
+
+      &.title-active:before {
+        position: absolute;
+        left: 4px;
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/sec7Textb.png") no-repeat center /
+          contain;
+        animation: noise-anim-2 0.5s 1 linear alternate-reverse,
+          disappear-ant 0.1s 0.5s forwards;
+        content: "";
+      }
+
+      &.title-active:after {
+        position: absolute;
+        left: -4px;
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/sec7Textb.png") no-repeat center /
+          contain;
+        animation: noise-anim 0.5s 1 linear alternate-reverse,
+          disappear-ant 0.1s 0.5s forwards;
+        content: "";
+      }
+    }
+
+    .textbg {
+      position: absolute;
+      top: px-to-vw(190);
+      left: px-to-vw(680);
+      width: px-to-vw(962);
+      height: px-to-vw(233);
+      background: url("../../../assets/images/sec7TextBg.png") no-repeat center /
+        contain;
+    }
+
+    .icon {
+      position: absolute;
+      top: px-to-vw(280);
+      left: px-to-vw(1150);
+      width: px-to-vw(127);
+      height: px-to-vw(53);
+      background: url("../../../assets/images/sec5Icon.png") no-repeat center /
+        contain;
+    }
+  }
+
+  .content {
+    position: relative;
+    height: px-to-vw(1185);
+    margin-top: px-to-vw(-5);
+    background: url("../../../assets/images/sec7Bg.png") no-repeat center /
+      cover;
+  }
+
+  .out {
+    position: absolute;
+    top: px-to-vw(280);
+    right: 0;
+    width: px-to-vw(1708);
+    height: px-to-vw(770);
+    background: url("../../../assets/images/sec7Out.png") no-repeat center /
+      cover;
+  }
+
+  .out.active {
+    background: url("../../../assets/images/sec7Outb.png") no-repeat center /
+      cover;
+  }
+
+  .in {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bigTitle {
+    position: absolute;
+    top: px-to-vw(240);
+    left: px-to-vw(112);
+  }
+
+  .bigTitleb {
+    position: absolute;
+    top: px-to-vw(100);
+    left: px-to-vw(860);
+  }
+
+  .infoBoxb {
+    position: absolute;
+    top: px-to-vw(200);
+    left: px-to-vw(860);
+    width: px-to-vw(530);
+    height: px-to-vw(291);
+    padding-top: px-to-vw(40);
+    padding-left: px-to-vw(40);
+    background: url("../../../assets/images/sec7TextBgb.png") no-repeat center /
+      cover;
+
+    .desc {
+      max-width: 85%;
+    }
+
+    .shrink {
+      margin-left: 0;
+    }
+  }
+
+  .infoBox {
+    position: absolute;
+    top: px-to-vw(360);
+    left: px-to-vw(112);
+    width: px-to-vw(753);
+    height: px-to-vw(235);
+    padding-top: px-to-vw(40);
+    padding-left: px-to-vw(40);
+    background: url("../../../assets/images/sec7TextBga.png") no-repeat center /
+      cover;
+  }
+
+  .subTitle {
+    color: #fff;
+    font-size: px-to-vw(30);
+    font-family: "Bold";
+  }
+
+  .desc {
+    max-width: 90%;
+    margin-top: px-to-vw(20);
+    color: #ffffff80;
+    font-size: px-to-vw(16);
+    font-family: "Light";
+    line-height: calc(25 / 16);
+  }
+
+  .opneWrapper {
+    position: absolute;
+    top: px-to-vw(-242);
+    left: px-to-vw(500);
+    width: px-to-vw(947);
+    height: px-to-vw(941);
+
+    div {
+      width: 100%;
+      height: 100%;
+    }
+
+    .open {
+      position: relative;
+
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .f1 {
+      background: url("../../../assets/images/sec7F1.png") no-repeat center /
+        contain;
+    }
+
+    .f2 {
+      background: url("../../../assets/images/sec7F2.png") no-repeat center /
+        contain;
+    }
+
+    .f3 {
+      background: url("../../../assets/images/sec7F3.png") no-repeat center /
+        contain;
+    }
+
+    .f4 {
+      background: url("../../../assets/images/sec7F4.png") no-repeat center /
+        contain;
+    }
+
+    .f5 {
+      background: url("../../../assets/images/sec7F5.png") no-repeat center /
+        contain;
+    }
+
+    .f6 {
+      background: url("../../../assets/images/sec7F6.png") no-repeat center /
+        contain;
+    }
+
+    .f7 {
+      background: url("../../../assets/images/sec7F7.png") no-repeat center /
+        contain;
+    }
+  }
+
+  .phone {
+    position: absolute;
+    top: px-to-vw(-183);
+    left: px-to-vw(-223);
+    width: px-to-vw(1120);
+    height: px-to-vw(882);
+    background: url("../../../assets/images/sec7Phone.png") no-repeat center /
+      contain;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec8 {
+    margin-top: mvw(-40);
+
+    .sec8Wrapper {
+      height: mvw(1640);
+      background: url("../../../assets/images/sec8Bg.jpg") no-repeat center /
+        contain;
+
+      .top {
+        z-index: 2;
+        height: fit-content;
+        padding-top: mvw(198);
+        background: unset;
+      }
+
+      .texta {
+        position: relative;
+        top: mvw(0);
+        left: mvw(0);
+        width: mvw(617);
+        height: mvw(36);
+        margin-left: mvw(55);
+        background: url("../../../assets/images/sec7MobTexta.png") no-repeat
+          center / contain;
+      }
+
+      .textb {
+        position: relative;
+        top: mvw(0);
+        left: mvw(0);
+        width: mvw(406);
+        height: mvw(36);
+        margin-top: mvw(25);
+        margin-left: mvw(55);
+        background: url("../../../assets/images/sec7MobTextb.png") no-repeat
+          center / contain;
+      }
+
+      .icon {
+        top: mvw(149);
+        left: mvw(492);
+        display: none;
+        width: mvw(79);
+        height: mvw(33);
+      }
+
+      .textbg {
+        top: mvw(190);
+        left: mvw(147);
+        width: mvw(570);
+        height: mvw(153);
+        background: url("../../../assets/images/sec7TextMobBg.png") no-repeat
+          center / contain;
+      }
+    }
+
+    .phoneGroup {
+      position: relative;
+      height: mvw(770);
+
+      .bg {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: mvw(717);
+        height: mvw(361);
+        background: url("../../../assets/images/sec7MobOut.png") no-repeat
+          center / contain;
+      }
+
+      .phoneOut {
+        position: absolute;
+        top: mvw(94);
+        width: mvw(656);
+        height: mvw(657);
+      }
+
+      .phoneIn {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .f1 {
+          background: url("../../../assets/images/sec7MobF1.png") no-repeat
+            center / contain;
+        }
+
+        .f2 {
+          background: url("../../../assets/images/sec7MobF2.png") no-repeat
+            center / contain;
+        }
+
+        .f3 {
+          background: url("../../../assets/images/sec7MobF3.png") no-repeat
+            center / contain;
+        }
+
+        .f4 {
+          background: url("../../../assets/images/sec7MobF4.png") no-repeat
+            center / contain;
+        }
+
+        .f5 {
+          background: url("../../../assets/images/sec7MobF5.png") no-repeat
+            center / contain;
+        }
+
+        .f6 {
+          background: url("../../../assets/images/sec7MobF6.png") no-repeat
+            center / contain;
+        }
+
+        .f7 {
+          background: url("../../../assets/images/sec7MobF7.png") no-repeat
+            center / contain;
+        }
+
+        .f8 {
+          background: url("../../../assets/images/sec7MobF8.png") no-repeat
+            center / contain;
+        }
+      }
+
+      .phoneB {
+        position: absolute;
+        top: mvw(196);
+        width: mvw(662);
+        height: mvw(556);
+        background: url("../../../assets/images/sec7MobPhoneb.png") no-repeat
+          center / contain;
+      }
+    }
+
+    .titleBox {
+      position: relative;
+      margin-top: mvw(50);
+      padding-left: mvw(28);
+
+      .mobTitleb {
+        position: absolute;
+        top: 0;
+        left: mvw(28);
+      }
+
+      .title {
+        color: #000;
+      }
+    }
+
+    .textBox {
+      position: relative;
+      width: mvw(694);
+      height: mvw(350);
+      margin: mvw(25) auto 0;
+      padding-top: mvw(50);
+      padding-left: mvw(50);
+      background: url("../../../assets/images/sec7MobText.png") no-repeat center /
+        contain;
+    }
+
+    .subTitle {
+      color: #000;
+      font-size: mvw(33);
+    }
+
+    .desc {
+      max-width: 91%;
+      color: #00000080;
+      font-size: mvw(20);
+      line-height: 2;
+    }
+
+    .infoBoxa {
+      position: relative;
+    }
+
+    .infoBoxb {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: mvw(50);
+      padding-left: mvw(50);
+      background: unset;
+
+      .desc {
+        max-width: 94%;
+      }
+    }
+  }
+}

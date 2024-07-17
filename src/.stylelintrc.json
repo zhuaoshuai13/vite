@@ -18,7 +18,7 @@
       "max-empty-lines": 1,
       "declaration-block-trailing-semicolon": "always",
       "length-zero-no-unit": true,
-      "number-leading-zero": "never",
+      "number-leading-zero": null,
       "block-closing-brace-empty-line-before": "never",
       "block-closing-brace-newline-after": "always-multi-line",
       "indentation": 2,

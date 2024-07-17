@@ -1,0 +1,185 @@
+@import "../var";
+
+.sec4 {
+  position: relative;
+  margin-top: px-to-vw(-900);
+  padding-top: px-to-vw(250);
+  padding-bottom: px-to-vw(290);
+  padding-left: px-to-vw(330);
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0) 50%, #080b0f 50%);
+
+  .sec4-title-box {
+    display: flex;
+    gap: px-to-vw(20);
+  }
+
+  .sec4-line {
+    width: px-to-vw(8);
+    height: px-to-vw(40);
+    margin-top: px-to-vw(8);
+    background-color: #02f8f6;
+  }
+
+  .sec4-title {
+    color: #fff;
+    font-size: px-to-vw(50);
+    font-family: "Bold";
+  }
+
+  .sec4-desc-box {
+    width: px-to-vw(599);
+    height: px-to-vw(204);
+    margin-top: px-to-vw(55);
+    padding-top: px-to-vw(50);
+    padding-left: px-to-vw(50);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: px-to-vw(16);
+    font-family: "Light";
+    background: url("../../../assets/images/sec3Bg.png") no-repeat center /
+      contain;
+
+    div {
+      max-width: px-to-vw(480);
+      line-height: calc(25 / 16);
+    }
+  }
+
+  .phone {
+    position: absolute;
+    top: px-to-vw(-40);
+    left: px-to-vw(750);
+    width: px-to-vw(780);
+    height: px-to-vw(866);
+
+    .phoneBox {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .phone-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/sec3Phone.png") no-repeat center /
+        contain;
+    }
+  }
+
+  .phoneLight {
+    position: absolute;
+    top: px-to-vw(298);
+    left: px-to-vw(322);
+    z-index: 5;
+    width: px-to-vw(286);
+    height: px-to-vw(513);
+    background: url("../../../assets/images/sec3PhoneLight.png") no-repeat
+      center / contain;
+    opacity: 0.5;
+    clip-path: circle(25% at 50% 50%);
+  }
+
+  .phoneGai {
+    position: absolute;
+    top: px-to-vw(50);
+    left: px-to-vw(-28);
+    z-index: 4;
+    width: px-to-vw(780);
+    height: px-to-vw(866);
+    background: url("../../../assets/images/sec3PhoneGai.png") no-repeat center /
+      contain;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec4 {
+    margin-top: -1px;
+    padding: 0;
+    padding-top: 0;
+    overflow: hidden;
+
+    .sec4Wrapper {
+      height: mvw(940);
+      overflow: hidden;
+      background: url("../../../assets/images/sec4MobBg.png") no-repeat center /
+        cover;
+    }
+
+    .phone {
+      position: relative;
+      top: unset;
+      left: unset;
+      width: mvw(558);
+      height: mvw(491);
+      margin-top: mvw(110);
+      margin-left: mvw(152);
+
+      .phone-inner {
+        background: url("../../../assets/images/sec3MobPhone.png") no-repeat
+          center / contain;
+      }
+
+      .phoneGai {
+        top: mvw(9);
+        left: mvw(13);
+        width: mvw(546);
+        height: mvw(459);
+        background: url("../../../assets/images/sec3MobPhoneGai.png") no-repeat
+          center / contain;
+      }
+
+      .phoneMask {
+        position: absolute;
+        top: mvw(1);
+        z-index: 3;
+        width: mvw(565);
+        height: mvw(469);
+        background: url("../../../assets/images/sec3MobPhoneMask.png") no-repeat
+          center / contain;
+      }
+
+      .phoneLight {
+        top: mvw(128);
+        left: mvw(261);
+        width: mvw(221);
+        height: mvw(352);
+        background: url("../../../assets/images/sec3MobPhoneLight.png")
+          no-repeat center / contain;
+      }
+    }
+
+    .sec4-title-box {
+      margin-top: mvw(-130);
+      padding-left: mvw(28);
+    }
+
+    .sec4-line {
+      width: mvw(6);
+      height: mvw(40);
+      margin-top: mvw(15);
+    }
+
+    .sec4-title {
+      font-size: mvw(54);
+    }
+
+    .sec4-desc-box {
+      width: mvw(694);
+      height: mvw(259);
+      margin-top: mvw(30);
+      margin-left: mvw(28);
+      padding-top: mvw(50);
+      padding-left: mvw(40);
+      font-size: mvw(20);
+      background: url("../../../assets/images/sec3MobBg.png") no-repeat center /
+        contain;
+
+      div {
+        max-width: 95%;
+        line-height: 2;
+      }
+    }
+  }
+}

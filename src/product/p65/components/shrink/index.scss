@@ -1,0 +1,122 @@
+@import "../../var";
+
+@keyframes disappear-ant1 {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes disappear-ant2 {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes disappear-ant3 {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes disappear-ant4 {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.shrink {
+  display: inline-block;
+  margin-left: px-to-vw(15);
+
+  div {
+    display: flex;
+    gap: px-to-vw(8);
+    padding-top: 1px;
+
+    span {
+      width: px-to-vw(10);
+      height: px-to-vw(10);
+    }
+
+    .shrinka {
+      background-color: #ff6400;
+      animation: disappear-ant1 2s 0s infinite;
+    }
+
+    .shrinkb {
+      background-color: #ff640075;
+      animation: disappear-ant2 2s 0s infinite;
+    }
+
+    .shrinkc {
+      background-color: #ff640050;
+      animation: disappear-ant3 2s 0s infinite;
+    }
+
+    .shrinkd {
+      background-color: #ff640025;
+      animation: disappear-ant4 2s 0s infinite;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shrink {
+    gap: mvw(7);
+
+    div {
+      span {
+        width: mvw(10);
+        height: mvw(10);
+      }
+    }
+  }
+}

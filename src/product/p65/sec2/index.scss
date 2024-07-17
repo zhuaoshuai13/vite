@@ -1,0 +1,521 @@
+@import "../var";
+
+.a {
+  height: calc(100vh);
+  padding-top: 25vh;
+  overflow: hidden;
+  background-color: blue;
+}
+
+.b {
+  width: 3920px;
+  height: 50vh;
+  background: linear-gradient(to left, red, purple);
+}
+
+.sec2 {
+  position: relative;
+  z-index: 2;
+  margin-top: px-to-vw(-50);
+  overflow: hidden;
+
+  .sec2Wrapper {
+    width: 100%;
+    height: px-to-vw(1651);
+    padding-top: px-to-vw(50);
+    background: url("../../../assets/images/secKvBg.png") no-repeat center /
+      cover;
+  }
+
+  .content {
+    position: relative;
+    width: px-to-vw(1270);
+    height: px-to-vw(1378);
+    margin: auto;
+  }
+
+  .text {
+    position: absolute;
+    bottom: px-to-vw(50);
+    left: px-to-vw(50);
+    z-index: 12;
+    width: fit-content;
+    height: fit-content;
+    color: #fff;
+    font-size: px-to-vw(38);
+    font-family: "Bold";
+
+    .small {
+      font-size: px-to-vw(25);
+      font-family: "Book";
+      line-height: 1;
+    }
+
+    .f1 {
+      margin-bottom: px-to-vw(20);
+
+      span {
+        font-size: px-to-vw(25);
+      }
+    }
+  }
+
+  .img {
+    transition: all 0.5s;
+  }
+
+  .out {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+  }
+
+  .wrapper {
+    position: absolute;
+    overflow: hidden;
+
+    &:hover {
+      .img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .box {
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    mask-size: cover;
+  }
+
+  .faWrapper {
+    top: 0;
+    left: 0;
+    width: px-to-vw(688);
+    height: px-to-vw(610);
+    overflow: unset;
+    overflow: hidden;
+
+    .box {
+      background: url("../../../assets/images/secKvBg1.png") no-repeat bottom /
+        contain;
+    }
+
+    .out {
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/secBg1K.png") no-repeat bottom /
+        contain;
+      clip-path: inset(50% 0 0 0);
+    }
+
+    .img {
+      position: absolute;
+      top: px-to-vw(100);
+      left: px-to-vw(100);
+      z-index: 8;
+      width: px-to-vw(557);
+      height: px-to-vw(615);
+      background: url("../../../assets/images/secKv1Img.png") no-repeat bottom /
+        contain;
+    }
+  }
+
+  .fbWrapper {
+    top: 0;
+    right: 0;
+    width: px-to-vw(638);
+    height: px-to-vw(610);
+
+    .box {
+      position: absolute;
+      bottom: 0;
+      width: px-to-vw(638);
+      height: px-to-vw(420);
+      mask-image: url("../../../assets/images/secKvBg2.png");
+    }
+
+    .img {
+      width: px-to-vw(638);
+      height: px-to-vw(420);
+      background: url("../../../assets/images/secKvImg2.png") no-repeat bottom /
+        contain;
+    }
+
+    .out {
+      background: url("../../../assets/images/secKvBg2K.png") no-repeat bottom /
+        contain;
+    }
+
+    .text {
+      left: px-to-vw(120);
+    }
+  }
+
+  .fcWrapper {
+    top: px-to-vw(620);
+    left: 0;
+    width: px-to-vw(437);
+    height: px-to-vw(439);
+
+    .box {
+      mask-image: url("../../../assets/images/secKvBg3.png");
+    }
+
+    .img {
+      width: px-to-vw(421);
+      height: px-to-vw(439);
+      background: url("../../../assets/images/secKvImg3.png") no-repeat bottom /
+        contain;
+    }
+
+    .out {
+      background: url("../../../assets/images/secKvBg3K.png") no-repeat center /
+        contain;
+    }
+  }
+
+  .fdWrapper {
+    top: px-to-vw(620);
+    right: 0;
+    left: px-to-vw(42);
+    width: px-to-vw(555);
+    height: px-to-vw(445);
+    margin: 0 auto;
+
+    .box {
+      mask-image: url("../../../assets/images/secKvBg4.png");
+    }
+
+    .img {
+      width: px-to-vw(547);
+      height: px-to-vw(434);
+      background: url("../../../assets/images/secKvImg4.png") no-repeat center /
+        cover;
+    }
+
+    .out {
+      background: url("../../../assets/images/secKvBg4K.png") no-repeat center /
+        contain;
+    }
+
+    .text {
+      left: px-to-vw(110);
+    }
+  }
+
+  .feWrapper {
+    top: px-to-vw(620);
+    right: 0;
+    width: px-to-vw(403);
+    height: px-to-vw(439);
+    margin: 0 auto;
+
+    .box {
+      mask-image: url("../../../assets/images/secKvBg5.png");
+    }
+
+    .img {
+      width: px-to-vw(128);
+      height: px-to-vw(307);
+      margin-top: px-to-vw(40);
+      margin-left: px-to-vw(170);
+      background: url("../../../assets/images/secKvImg5.png") no-repeat center /
+        cover;
+    }
+
+    .out {
+      background: url("../../../assets/images/secKvBg5K.png") no-repeat center /
+        contain;
+    }
+  }
+
+  .ffWrapper {
+    bottom: px-to-vw(-7);
+    left: 0;
+    width: px-to-vw(616);
+    height: px-to-vw(310);
+    margin: 0 auto;
+
+    .box {
+      mask-image: url("../../../assets/images/secKvBg6.png");
+    }
+
+    .img {
+      width: px-to-vw(616);
+      height: px-to-vw(310);
+      background: url("../../../assets/images/secKvImg6.png") no-repeat top /
+        contain;
+    }
+
+    .out {
+      background: url("../../../assets/images/secKvBg6K.png") no-repeat center /
+        contain;
+    }
+  }
+
+  .fgWrapper {
+    right: 0;
+    bottom: 0;
+    width: px-to-vw(706);
+    height: px-to-vw(310);
+    margin: 0 auto;
+
+    .box {
+      mask-image: url("../../../assets/images/secKvBg7.png");
+    }
+
+    .img {
+      width: px-to-vw(694);
+      height: px-to-vw(296);
+      background: url("../../../assets/images/secKvImg7.png") no-repeat center /
+        cover;
+    }
+
+    .out {
+      background: url("../../../assets/images/secKvBg7K.png") no-repeat center /
+        contain;
+    }
+
+    .text {
+      left: px-to-vw(435);
+
+      span {
+        font-family: "Book";
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec2 {
+    .sec2Wrapper {
+      height: mvw(1808);
+      background: url("../../../assets/images/secKvMobBg.png") no-repeat center /
+        cover;
+    }
+
+    .content {
+      width: mvw(670);
+      height: 100%;
+    }
+
+    .faWrapper {
+      width: 100%;
+      height: mvw(461);
+      clip-path: polygon(0% 0%, 0% 100%, 95% 100%, 100% 93%, 100% 0%);
+
+      .out {
+        background: url("../../../assets/images/secBgMob1K.png") no-repeat
+          bottom / contain;
+        background-color: unset;
+        clip-path: inset(60% 0 0 0);
+      }
+
+      .box {
+        background: url("../../../assets/images/secKvMobBg1.png") no-repeat
+          bottom / contain;
+      }
+
+      .img {
+        top: mvw(80);
+        left: mvw(147);
+        width: mvw(500);
+        height: mvw(375);
+        background: url("../../../assets/images/secKvMob1Img.png") no-repeat
+          center / cover;
+      }
+    }
+
+    .fbWrapper {
+      top: mvw(471);
+      left: 0;
+      width: 100%;
+      height: mvw(261);
+
+      .text {
+        left: mvw(40);
+      }
+
+      .out {
+        background: url("../../../assets/images/secKvMobBg2K.png") no-repeat
+          center / cover;
+      }
+
+      .box {
+        width: 100%;
+        height: 100%;
+        mask-image: url("../../../assets/images/secKvMobBg2.png");
+      }
+
+      .img {
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/secKvImg2.png") no-repeat center /
+          cover;
+      }
+    }
+
+    .fcWrapper {
+      top: mvw(742);
+      width: mvw(349);
+      height: mvw(433);
+      overflow: unset;
+
+      .out {
+        background: url("../../../assets/images/secKvMobBg3K.png") no-repeat
+          center / cover;
+      }
+
+      .box {
+        width: 100%;
+        height: 100%;
+        mask-image: url("../../../assets/images/secKvMobBg3.png");
+      }
+
+      .img {
+        width: 102%;
+        height: 100%;
+        background: url("../../../assets/images/secKvMobImg3.png") no-repeat
+          center / cover;
+      }
+    }
+
+    .fdWrapper {
+      top: mvw(1048);
+      right: 0;
+      left: unset;
+      width: mvw(356);
+      height: mvw(421);
+
+      .text {
+        left: mvw(78);
+      }
+
+      .out {
+        background: url("../../../assets/images/secKvMobBg4K.png") no-repeat
+          center / cover;
+      }
+
+      .box {
+        width: 100%;
+        height: 100%;
+        mask-image: url("../../../assets/images/secKvMobBg4.png");
+      }
+
+      .img {
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/secKvMobImg4.png") no-repeat
+          center / cover;
+      }
+    }
+
+    .feWrapper {
+      top: mvw(742);
+      width: mvw(339);
+      height: mvw(296);
+
+      .text {
+        left: mvw(60);
+      }
+
+      .out {
+        background: url("../../../assets/images/secKvMobBg5K.png") no-repeat
+          center / cover;
+      }
+
+      .box {
+        width: 100%;
+        height: 100%;
+        mask-image: url("../../../assets/images/secKvMobBg5.png");
+      }
+
+      .img {
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        background: url("../../../assets/images/secKvMobImg5.png") no-repeat
+          center / cover;
+      }
+    }
+
+    .ffWrapper {
+      top: mvw(1185);
+      bottom: unset;
+      width: mvw(344);
+      height: mvw(283);
+
+      .out {
+        background: url("../../../assets/images/secKvMobBg6K.png") no-repeat
+          center / cover;
+      }
+
+      .box {
+        width: 100%;
+        height: 100%;
+        mask-image: url("../../../assets/images/secKvMobBg6.png");
+      }
+
+      .img {
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/secKvMobImg6.png") no-repeat
+          center / cover;
+      }
+    }
+
+    .fgWrapper {
+      top: mvw(1479);
+      bottom: unset;
+      width: 100%;
+      height: mvw(248);
+
+      .text {
+        right: mvw(35);
+        left: unset;
+
+        .f1 {
+          margin-bottom: mvw(20);
+        }
+      }
+
+      .out {
+        background: url("../../../assets/images/secKvMobBg7K.png") no-repeat
+          center / cover;
+      }
+
+      .box {
+        width: 100%;
+        height: 100%;
+        mask-image: url("../../../assets/images/secKvMobBg7.png");
+      }
+
+      .img {
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/secKvMobImg7.png") no-repeat
+          center / cover;
+      }
+    }
+
+    .text {
+      bottom: mvw(40);
+      left: mvw(40);
+      font-size: mvw(33);
+      line-height: 1.1;
+
+      .small {
+        font-size: mvw(20);
+        line-height: 1.25;
+      }
+    }
+  }
+}

@@ -1,0 +1,600 @@
+@import "../var";
+
+.sec6 {
+  width: 100%;
+  margin-top: px-to-vw(-90);
+
+  .sec6-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    height: px-to-vw(668);
+    padding-top: px-to-vw(220);
+    background: url("../../../assets/images/sec5Bg.png") no-repeat center /
+      contain;
+  }
+
+  .sec6-icon {
+    position: absolute;
+    top: px-to-vw(220);
+    left: px-to-vw(1330);
+    width: px-to-vw(127);
+    height: px-to-vw(53);
+    background: url("../../../assets/images/sec5Icon.png") no-repeat center /
+      contain;
+  }
+
+  .sec6-back {
+    position: absolute;
+    top: px-to-vw(280);
+    left: px-to-vw(742);
+    width: px-to-vw(809);
+    height: px-to-vw(161);
+    background: url("../../../assets/images/sec5Back.png") no-repeat center /
+      contain;
+  }
+
+  .sec6-text {
+    position: relative;
+    z-index: 3;
+    width: px-to-vw(791);
+    height: px-to-vw(153);
+    margin: auto;
+    background: url("../../../assets/images/sec5Text.png") no-repeat center /
+      contain;
+
+    &.title-active {
+      animation: flash-ant 0.3s;
+      animation-fill-mode: forwards;
+    }
+
+    &:after {
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    &:before {
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    &.title-active:before {
+      position: absolute;
+      left: 4px;
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/sec5Text.png") no-repeat center /
+        contain;
+      animation: noise-anim-2 0.5s 1 linear alternate-reverse,
+        disappear-ant 0.1s 0.5s forwards;
+      content: "";
+    }
+
+    &.title-active:after {
+      position: absolute;
+      left: -4px;
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/sec5Text.png") no-repeat center /
+        contain;
+      animation: noise-anim 0.5s 1 linear alternate-reverse,
+        disappear-ant 0.1s 0.5s forwards;
+      content: "";
+    }
+  }
+
+  .sec6-content {
+    width: 100%;
+    height: px-to-vw(1100);
+    margin-top: px-to-vw(-20);
+    background: url("../../../assets/images/sec5Content.png") no-repeat center /
+      cover;
+  }
+
+  .sec6-info {
+    position: relative;
+    width: px-to-vw(635);
+    height: px-to-vw(276);
+    padding-top: px-to-vw(50);
+    padding-left: px-to-vw(50);
+    background: url("../../../assets/images/sec5InfoBox.png") no-repeat center /
+      contain;
+
+    .subTitle {
+      font-size: px-to-vw(30);
+      font-family: "Bold";
+    }
+
+    .info {
+      max-width: 83.5%;
+      margin-top: px-to-vw(20);
+      color: #00000080;
+      font-size: px-to-vw(16);
+      font-family: "Light";
+
+      div {
+        line-height: calc(25 / 16);
+      }
+    }
+
+    .sec6-info-b {
+      position: absolute;
+      top: px-to-vw(40);
+
+      .info {
+        max-width: 88%;
+      }
+    }
+
+    .sec6-info-c {
+      position: absolute;
+      top: px-to-vw(40);
+
+      .info {
+        max-width: 88%;
+      }
+    }
+  }
+
+  .top {
+    display: flex;
+    gap: px-to-vw(220);
+    width: fit-content;
+    margin: auto;
+
+    .title {
+      width: px-to-vw(480);
+      color: #000;
+    }
+  }
+
+  .sec6-box {
+    position: relative;
+    width: px-to-vw(1628);
+    height: px-to-vw(780);
+    margin: auto;
+    margin-top: px-to-vw(-60);
+    overflow: hidden;
+
+    div {
+      position: absolute;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .box {
+      z-index: 1;
+      background: url("../../../assets/images/sec5Box.png") no-repeat center /
+        contain;
+    }
+
+    .bigText {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+      width: px-to-vw(704);
+      height: px-to-vw(186);
+      margin: auto;
+      background: url("../../../assets/images/sec5BigText.png") no-repeat center /
+        contain;
+    }
+
+    .phoneA {
+      z-index: 2;
+      width: px-to-vw(1628);
+      height: px-to-vw(780);
+      background: url("../../../assets/images/sec5PhoneB.png") no-repeat center /
+        contain;
+    }
+
+    .phoneOut {
+      top: px-to-vw(1);
+      z-index: 8;
+      width: px-to-vw(1628);
+      height: px-to-vw(780);
+      background: url("../../../assets/images/sec5PhoneOut.png") no-repeat
+        center / contain;
+      clip-path: inset(0 60% 0 0);
+    }
+
+    .phoneB {
+      z-index: 3;
+      width: px-to-vw(1628);
+      height: px-to-vw(780);
+      background: url("../../../assets/images/sec5PhoneA.png") no-repeat center /
+        cover;
+    }
+
+    .phoneC {
+      z-index: 4;
+      width: px-to-vw(1628);
+      height: px-to-vw(780);
+      background: url("../../../assets/images/sec5PhoneC.png") no-repeat center /
+        cover;
+    }
+
+    .phoneAText {
+      position: absolute;
+      top: px-to-vw(33);
+      left: px-to-vw(25);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: px-to-vw(30);
+      width: px-to-vw(513);
+      height: px-to-vw(628);
+      padding-top: px-to-vw(120);
+      padding-left: px-to-vw(140);
+      background: url("../../../assets/images/sec5Mask.png") no-repeat center /
+        cover;
+
+      div {
+        width: unset;
+        height: unset;
+      }
+
+      .fcommon {
+        display: flex;
+        flex-direction: column;
+
+        .img {
+          height: px-to-vw(81);
+        }
+      }
+
+      .f1 {
+        .img {
+          width: px-to-vw(146);
+          background: url("../../../assets/images/sec57.png") no-repeat center /
+            cover;
+        }
+      }
+
+      .f2 {
+        .img {
+          width: px-to-vw(117);
+          background: url("../../../assets/images/sec531.png") no-repeat center /
+            cover;
+        }
+      }
+
+      .f3 {
+        .img {
+          width: px-to-vw(160);
+          background: url("../../../assets/images/sec5105.png") no-repeat center /
+            cover;
+        }
+      }
+
+      .f4 {
+        .img {
+          width: px-to-vw(115);
+          background: url("../../../assets/images/sec518.png") no-repeat center /
+            cover;
+        }
+      }
+
+      .hours {
+        margin-left: px-to-vw(-20);
+        color: #ffffff80;
+        font-size: px-to-vw(30);
+        font-family: "Book";
+      }
+
+      .do {
+        margin-top: px-to-vw(-20);
+        margin-left: px-to-vw(40);
+        color: #ffffff80;
+        font-size: px-to-vw(16);
+        font-family: "Light";
+      }
+
+      .imgGroup {
+        display: flex;
+        align-items: center;
+      }
+
+      div {
+        position: relative;
+      }
+    }
+  }
+
+  .sec6-title-box {
+    position: relative;
+
+    .title-b {
+      position: absolute;
+      top: 0;
+    }
+
+    .title-c {
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sec6 {
+    margin-top: mvw(-15);
+
+    .sec6-wrapper {
+      height: mvw(426);
+      padding-top: mvw(145);
+      background: url("../../../assets/images/sec5MobBg.png") no-repeat center /
+        contain;
+    }
+
+    .sec6-text-a {
+      position: relative;
+      z-index: 2;
+      width: mvw(470);
+      height: mvw(37);
+      margin-left: mvw(128);
+      background: url("../../../assets/images/sec5MobTextA.png") no-repeat
+        center / contain;
+
+      &.title-active {
+        animation: flash-ant 0.3s;
+        animation-fill-mode: forwards;
+      }
+
+      &:after {
+        clip: rect(0, 900px, 0, 0);
+      }
+
+      &:before {
+        clip: rect(0, 900px, 0, 0);
+      }
+
+      &.title-active:before {
+        position: absolute;
+        left: 4px;
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/sec5MobTextA.png") no-repeat
+          center / contain;
+        animation: noise-anim-2 0.5s 1 linear alternate-reverse,
+          disappear-ant 0.1s 0.5s forwards;
+        content: "";
+      }
+
+      &.title-active:after {
+        position: absolute;
+        left: -4px;
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/sec5MobTextA.png") no-repeat
+          center / contain;
+        animation: noise-anim 0.5s 1 linear alternate-reverse,
+          disappear-ant 0.1s 0.5s forwards;
+        content: "";
+      }
+    }
+
+    .sec6-text-b {
+      position: relative;
+      z-index: 2;
+      width: mvw(500);
+      height: mvw(37);
+      margin-top: mvw(20);
+      margin-left: mvw(128);
+      background: url("../../../assets/images/sec5MobTextB.png") no-repeat
+        center / contain;
+
+      &.title-active {
+        animation: flash-ant 0.3s;
+        animation-fill-mode: forwards;
+      }
+
+      &:after {
+        clip: rect(0, 900px, 0, 0);
+      }
+
+      &:before {
+        clip: rect(0, 900px, 0, 0);
+      }
+
+      &.title-active:before {
+        position: absolute;
+        left: 4px;
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/sec5MobTextB.png") no-repeat
+          center / contain;
+        animation: noise-anim-2 0.5s 1 linear alternate-reverse,
+          disappear-ant 0.1s 0.5s forwards;
+        content: "";
+      }
+
+      &.title-active:after {
+        position: absolute;
+        left: -4px;
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/sec5MobTextB.png") no-repeat
+          center / contain;
+        animation: noise-anim 0.5s 1 linear alternate-reverse,
+          disappear-ant 0.1s 0.5s forwards;
+        content: "";
+      }
+    }
+
+    .sec6-icon {
+      top: mvw(146);
+      left: mvw(610);
+      width: mvw(77);
+      height: mvw(32);
+      background-size: cover;
+    }
+
+    .sec6-back {
+      top: mvw(190);
+      left: mvw(50);
+      width: mvw(483);
+      height: mvw(97);
+      background: url("../../../assets/images/sec5MobBack.png") no-repeat center /
+        contain;
+    }
+
+    .sec6-content {
+      height: mvw(1100);
+      background: url("../../../assets/images/sec5MobContent.png") no-repeat
+        center / contain;
+    }
+
+    .top {
+      flex-direction: column;
+      margin-left: mvw(28);
+
+      .title {
+        width: 90%;
+        font-size: mvw(54);
+        line-height: 1.2;
+      }
+
+      .line {
+        width: mvw(6);
+        height: mvw(40);
+        margin-top: mvw(15);
+      }
+    }
+
+    .sec6-info {
+      width: mvw(693);
+      height: mvw(354);
+      padding-top: mvw(50);
+      padding-left: mvw(40);
+      background: url("../../../assets/images/sec5MobInfoBox.png") no-repeat
+        center / contain;
+
+      .subTitle {
+        font-size: mvw(33);
+        font-family: "Medium";
+      }
+
+      .info {
+        max-width: 93%;
+        margin-top: mvw(20);
+        font-size: mvw(20);
+
+        div {
+          line-height: 2;
+        }
+      }
+
+      .sec6-info-b {
+        top: mvw(50);
+      }
+
+      .sec6-info-c {
+        top: mvw(50);
+      }
+    }
+
+    .sec6-box {
+      width: mvw(750);
+      height: mvw(447);
+      margin-top: mvw(20);
+      background: url("../../../assets/images/sec5MobBox.png") no-repeat center /
+        contain;
+
+      .phoneA {
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images//sec5PhoneMobB.png") no-repeat
+          center / contain;
+      }
+
+      .phoneB {
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images//sec5PhoneMobA.png") no-repeat
+          center / contain;
+      }
+
+      .phoneC {
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images//sec5PhoneMobC.png") no-repeat
+          center / contain;
+      }
+
+      .bigText {
+        width: mvw(462);
+        height: mvw(123);
+        background: url("../../../assets/images/sec5MobBigText.png") no-repeat
+          center / contain;
+      }
+
+      .box {
+        background: url("../../../assets/images/sec5MobBox.png") no-repeat
+          center / contain;
+      }
+
+      .phoneAText {
+        gap: mvw(12);
+        width: mvw(224);
+        height: mvw(390);
+        padding-top: mvw(20);
+        padding-left: mvw(20);
+        background: url("../../../assets/images/sec5MobMask.png") no-repeat
+          center / contain;
+
+        .hours {
+          margin-left: mvw(-16);
+          color: #fefefe;
+          font-size: mvw(20);
+          font-family: "Medium";
+        }
+
+        .do {
+          margin-top: mvw(-20);
+          margin-left: mvw(17);
+          color: #fefefe;
+          font-size: mvw(20);
+          font-family: "Light";
+        }
+
+        .f1 {
+          .img {
+            width: mvw(128);
+            height: mvw(71);
+            background: url("../../../assets/images/sec5Mob7.png") no-repeat
+              center / contain;
+          }
+        }
+
+        .f2 {
+          .img {
+            width: mvw(103);
+            height: mvw(72);
+            background: url("../../../assets/images/sec5Mob31.png") no-repeat
+              center / contain;
+          }
+        }
+
+        .f3 {
+          .img {
+            width: mvw(142);
+            height: mvw(71);
+            background: url("../../../assets/images/sec5Mob105.png") no-repeat
+              center / contain;
+          }
+        }
+
+        .f4 {
+          .img {
+            width: mvw(101);
+            height: mvw(72);
+            background: url("../../../assets/images/sec5Mob18.png") no-repeat
+              center / contain;
+          }
+        }
+      }
+    }
+  }
+}

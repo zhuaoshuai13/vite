@@ -1,0 +1,42 @@
+@import "../var";
+
+.secNote {
+  margin-top: -2px;
+  padding-top: px-to-vw(147);
+  padding-right: px-to-vw(360);
+  padding-bottom: px-to-vw(187);
+  padding-left: px-to-vw(330);
+  background-color: #181a1d;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(60);
+    margin-top: px-to-vw(50);
+    color: #fff;
+    font-size: 20px;
+    font-family: "Light";
+    line-height: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .secNote {
+    padding-top: mvw(0);
+    padding-right: mvw(28);
+    padding-bottom: mvw(157);
+    padding-left: mvw(28);
+    background-color: #080b0f;
+
+    .content {
+      gap: mvw(60);
+      margin-top: mvw(40);
+      padding: 0 mvw(22);
+      font-size: mvw(20);
+
+      p {
+        line-height: 2;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../var";
+
+.custom-cursor {
+  position: fixed;
+  z-index: 9999; /* 确保光标在最顶层 */
+  transform: translate(-50%, -50%); /* 将光标中心对齐鼠标位置 */
+  pointer-events: none; /* 使鼠标事件穿过自定义光标 */
+}
+
+.custom-cursor .img {
+  width: px-to-vw(100); /* 设置图片大小 */
+  height: px-to-vw(112); /* 设置图片大小 */
+  background: url("../../../assets/images/secPoint.png") no-repeat center /
+    contain;
+  transform: rotate(-25deg);
+  clip-path: inset(0 0 px-to-vw(25) 0);
+}
+
+@media screen and (max-width: 768px) {
+  .custom-cursor .img {
+    background: unset;
+  }
+}

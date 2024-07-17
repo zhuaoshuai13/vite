@@ -1,0 +1,200 @@
+@import "../var";
+
+.secCamer {
+  .secCamerWrapper {
+    height: px-to-vw(1175);
+    padding-top: px-to-vw(140);
+    padding-bottom: px-to-vw(67);
+    background: url("../../../assets/images/secCamerBg.png") no-repeat bottom /
+      contain;
+    background-color: #f3f5f7;
+  }
+
+  .top {
+    display: flex;
+    gap: px-to-vw(50);
+    padding-left: px-to-vw(330);
+  }
+
+  .secCamerText {
+    width: px-to-vw(709);
+    height: px-to-vw(294);
+    padding-top: px-to-vw(50);
+    padding-left: px-to-vw(60);
+    background: url("../../../assets/images/secCamerText.png") no-repeat center /
+      contain;
+
+    .text {
+      color: #000;
+      font-size: px-to-vw(30);
+      font-family: "Bold";
+    }
+
+    .info {
+      max-width: 90%;
+      margin-top: px-to-vw(20);
+      color: #00000080;
+      font-size: px-to-vw(16);
+      line-height: calc(25 / 16);
+    }
+  }
+
+  .title-out {
+    .title {
+      width: px-to-vw(400);
+      color: #000;
+    }
+  }
+
+  .group {
+    display: flex;
+    gap: px-to-vw(50);
+    justify-content: center;
+    width: fit-content;
+    margin: px-to-vw(100) auto 0;
+  }
+
+  .out {
+    position: relative;
+    width: px-to-vw(356);
+    height: px-to-vw(531);
+    padding-top: px-to-vw(25);
+    padding-left: px-to-vw(18);
+    background: url("../../../assets/images/secCamerOut.png") no-repeat center /
+      contain;
+  }
+
+  .in {
+    width: px-to-vw(322);
+    height: px-to-vw(474);
+  }
+
+  .two,
+  .four {
+    margin-top: px-to-vw(85);
+  }
+
+  .one .in {
+    background: url("../../../assets/images/secCamerOne.png") no-repeat center /
+      contain;
+  }
+
+  .two .in {
+    background: url("../../../assets/images/secCamerTwo.png") no-repeat center /
+      contain;
+  }
+
+  .three .in {
+    background: url("../../../assets/images/secCamerThree.png") no-repeat center /
+      contain;
+  }
+
+  .four .in {
+    background: url("../../../assets/images/secCamerFour.png") no-repeat center /
+      contain;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .secCamer {
+    .secCamerWrapper {
+      height: mvw(1250);
+      padding-top: mvw(150);
+      background: url("../../../assets/images/secCamerMobBg.png") no-repeat
+        bottom / contain;
+
+      .title {
+        width: 68%;
+      }
+
+      .top {
+        flex-direction: column;
+        padding-left: mvw(28);
+      }
+
+      .secCamerText {
+        width: mvw(693);
+        height: mvw(258);
+        padding-top: mvw(40);
+        padding-left: mvw(40);
+        background: url("../../../assets/images/secCamerMobText.png") no-repeat
+          bottom / contain;
+      }
+
+      .text {
+        font-size: mvw(33);
+      }
+
+      .info {
+        margin-top: mvw(30);
+        font-size: mvw(20);
+        line-height: 2;
+      }
+
+      .shrink {
+        margin-left: 0;
+      }
+
+      .out {
+        width: mvw(355);
+        height: mvw(530);
+        background: url("../../../assets/images/secCamerMobOut.png") no-repeat
+          bottom / contain;
+      }
+
+      .in {
+        width: mvw(323);
+        height: mvw(475);
+        margin-top: mvw(13);
+        margin-left: mvw(10);
+      }
+
+      .one {
+        flex-shrink: 0;
+        margin-left: mvw(160);
+
+        .in {
+          background: url("../../../assets/images/secCamerMobOne.png") no-repeat
+            bottom / contain;
+        }
+      }
+
+      .two {
+        flex-shrink: 0;
+        margin-top: 0;
+
+        .in {
+          background: url("../../../assets/images/secCamerMobTwo.png") no-repeat
+            bottom / contain;
+        }
+      }
+
+      .three {
+        flex-shrink: 0;
+
+        .in {
+          background: url("../../../assets/images/secCamerMobThree.png")
+            no-repeat bottom / contain;
+        }
+      }
+
+      .four {
+        flex-shrink: 0;
+        margin-top: 0;
+
+        .in {
+          background: url("../../../assets/images/secCamerMobFour.png")
+            no-repeat bottom / contain;
+        }
+      }
+    }
+
+    .group {
+      gap: mvw(20);
+      justify-content: flex-start;
+      max-width: 100%;
+      margin-top: mvw(58);
+      overflow: scroll;
+    }
+  }
+}

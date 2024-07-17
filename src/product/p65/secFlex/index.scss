@@ -1,0 +1,310 @@
+@import "../var";
+
+.secFlex {
+  margin-top: -1px;
+
+  .secFlexWrapper {
+    position: relative;
+    height: px-to-vw(1030);
+    padding-top: px-to-vw(80);
+    padding-left: px-to-vw(330);
+    background: url("../../../assets/images/secFlexBg.png") no-repeat center /
+      cover;
+  }
+
+  .secFlexIconBox {
+    display: flex;
+    gap: px-to-vw(6);
+    align-items: flex-end;
+    height: px-to-vw(130);
+    margin-top: px-to-vw(120);
+
+    .secFlexIcona .secFlexIcon {
+      background: url("../../../assets/images/secFlexA.png") no-repeat center /
+        contain;
+    }
+
+    .secFlexIcon {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      width: px-to-vw(115);
+      height: px-to-vw(110);
+      background: url("../../../assets/images/secFlexB.png") no-repeat center /
+        contain;
+      transform: skewX(-34deg);
+      transform-origin: bottom;
+      transition: all 0.5s;
+
+      div {
+        transform: skewX(34deg);
+        transition: all 0.5s;
+      }
+
+      &.active {
+        width: px-to-vw(145);
+        height: px-to-vw(130);
+
+        div {
+          width: px-to-vw(60);
+          height: px-to-vw(60);
+        }
+      }
+    }
+  }
+
+  .secFlexText {
+    width: px-to-vw(585);
+    height: px-to-vw(143);
+    margin-top: px-to-vw(65);
+    padding-top: px-to-vw(50);
+    padding-left: px-to-vw(50);
+    background: url("../../../assets/images/secFlexText.png") no-repeat center /
+      contain;
+  }
+
+  .secFlexTitle {
+    max-width: 90%;
+    color: #ffffff80;
+    font-size: px-to-vw(16);
+    font-family: "Light";
+    line-height: calc(25 / 16);
+  }
+
+  .camer {
+    width: px-to-vw(49);
+    height: px-to-vw(31);
+    background: url("../../../assets/images/secFlexCamer.png") no-repeat center /
+      contain;
+  }
+
+  .scand {
+    width: px-to-vw(45);
+    height: px-to-vw(39);
+    background: url("../../../assets/images/secFlexscand.png") no-repeat center /
+      contain;
+  }
+
+  .game {
+    width: px-to-vw(52);
+    height: px-to-vw(32);
+    background: url("../../../assets/images/secFlexGame.png") no-repeat center /
+      contain;
+  }
+
+  .light {
+    width: px-to-vw(30);
+    height: px-to-vw(55);
+    background: url("../../../assets/images/secFlexFly.png") no-repeat center /
+      contain;
+  }
+
+  .fly {
+    width: px-to-vw(55);
+    height: px-to-vw(44);
+    background: url("../../../assets/images/secFlexLight.png") no-repeat center /
+      contain;
+  }
+
+  .photo {
+    width: px-to-vw(45);
+    height: px-to-vw(50);
+    background: url("../../../assets/images/secFlexPhoto.png") no-repeat center /
+      contain;
+  }
+
+  .phoneBox {
+    position: absolute;
+    top: px-to-vw(335);
+    left: px-to-vw(850);
+    z-index: 0;
+    width: px-to-vw(772);
+    height: px-to-vw(670);
+    background: url("../../../assets/images/secFlexPhpne.png") no-repeat center /
+      contain;
+  }
+
+  @keyframes circle-wave {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    80% {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  .circle {
+    position: absolute;
+    top: px-to-vw(30);
+    left: px-to-vw(280);
+    z-index: 3;
+    width: px-to-vw(144);
+    height: px-to-vw(239);
+    transform: rotate3d(1, 1, 2, 35deg);
+
+    .circleIn {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+
+    .f1 {
+      width: px-to-vw(101);
+      height: px-to-vw(170);
+      background: url("../../../assets/images/secFlexf1.png") no-repeat center /
+        contain;
+      animation: circle-wave 1s cubic-bezier(0.42, 0.005, 0.07, 1) infinite;
+    }
+
+    .f2 {
+      width: px-to-vw(105);
+      height: px-to-vw(174);
+      background: url("../../../assets/images/secFlexf2.png") no-repeat center /
+        contain;
+      animation: circle-wave 1s cubic-bezier(0.42, 0.005, 0.07, 1) infinite;
+    }
+
+    .f3 {
+      width: px-to-vw(136);
+      height: px-to-vw(201);
+      background: url("../../../assets/images/secFlexf3.png") no-repeat center /
+        contain;
+      animation: circle-wave 1s cubic-bezier(0.42, 0.005, 0.07, 1) infinite;
+    }
+
+    .f4 {
+      width: px-to-vw(144);
+      height: px-to-vw(239);
+      background: url("../../../assets/images/secFlexf4.png") no-repeat center /
+        contain;
+      animation: circle-wave 1s cubic-bezier(0.42, 0.005, 0.07, 1) infinite;
+    }
+  }
+
+  .circleBOx {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .secFlex {
+    .secFlexWrapper {
+      height: mvw(1012);
+      padding-top: mvw(150);
+      padding-left: mvw(28);
+      background: url("../../../assets/images/secFlexMobBg.png") no-repeat
+        center / cover;
+    }
+
+    .secFlexText {
+      width: mvw(615);
+      height: mvw(140);
+      margin-top: mvw(40);
+      padding-top: mvw(50);
+      padding-left: mvw(50);
+      background: url("../../../assets/images/secFlexMobText.png") no-repeat
+        center / contain;
+    }
+
+    .secFlexTitle {
+      font-size: mvw(16);
+      line-height: 1.5;
+    }
+
+    .camer {
+      width: mvw(34);
+      height: mvw(23);
+    }
+
+    .scand {
+      width: mvw(32);
+      height: mvw(28);
+    }
+
+    .game {
+      width: mvw(37);
+      height: mvw(25);
+    }
+
+    .light {
+      width: mvw(40);
+      height: mvw(30);
+    }
+
+    .fly {
+      width: mvw(23);
+      height: mvw(38);
+    }
+
+    .photo {
+      width: mvw(30);
+      height: mvw(30);
+    }
+
+    .secFlexIconBox {
+      margin-top: mvw(122);
+
+      .secFlexIcona {
+        .secFlexIcon {
+          width: mvw(77);
+          height: mvw(61);
+        }
+      }
+
+      .secFlexIcon {
+        width: mvw(77);
+        height: mvw(61);
+
+        &.active {
+          width: mvw(113);
+          height: mvw(90);
+
+          div {
+            width: mvw(50);
+            height: mvw(50);
+          }
+        }
+      }
+    }
+
+    .phoneBox {
+      position: relative;
+      top: mvw(0);
+      left: mvw(0);
+      width: mvw(632);
+      height: mvw(287);
+      margin-top: mvw(62);
+      margin-left: mvw(-28);
+      background: url("../../../assets/images/secFlexMobPhpne.png") no-repeat
+        center / contain;
+    }
+
+    .circle {
+      top: mvw(-52);
+      left: mvw(472);
+      transform: rotate3d(1, 1, 7, 90deg);
+    }
+  }
+}

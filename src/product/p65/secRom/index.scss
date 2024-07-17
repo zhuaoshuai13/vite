@@ -1,0 +1,369 @@
+@import "../var";
+
+.secRom {
+  min-height: 100vh;
+  background-color: #080b0f;
+
+  .secRom-wrapper {
+    position: relative;
+    width: 100%;
+    height: px-to-vw(920);
+    background: url("../../../assets/images/secRomBg.png") no-repeat center /
+      contain;
+  }
+
+  .secRom-light {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/images/secRomLight.png") no-repeat center /
+      contain;
+  }
+
+  .secRom-big {
+    position: absolute;
+    top: px-to-vw(290);
+    left: px-to-vw(300);
+    z-index: 4;
+    width: px-to-vw(666);
+    height: px-to-vw(382);
+    background: url("../../../assets/images/secRomBig.png") no-repeat center /
+      contain;
+  }
+
+  .secRom-Box {
+    position: absolute;
+    top: px-to-vw(160);
+    left: px-to-vw(885);
+    z-index: 3;
+    width: px-to-vw(740);
+    height: px-to-vw(547);
+    padding-top: px-to-vw(90);
+    padding-right: px-to-vw(70);
+    padding-left: px-to-vw(80);
+    background: url("../../../assets/images/secRomBox.png") no-repeat center /
+      contain;
+  }
+
+  .secRom-title {
+    display: flex;
+    gap: px-to-vw(26);
+
+    .line {
+      width: px-to-vw(6);
+      height: px-to-vw(40);
+      margin-top: px-to-vw(18);
+      background: #02f8f6;
+    }
+
+    .title {
+      color: #fff;
+      font-size: px-to-vw(50);
+      font-family: "Bold";
+      line-height: normal;
+    }
+  }
+
+  .secRom-big-title {
+    margin-top: px-to-vw(50);
+    color: #fff;
+    font-size: px-to-vw(30);
+    font-family: "Bold";
+  }
+
+  .secRom-small-title {
+    max-width: 60%;
+    margin-top: px-to-vw(10);
+    color: #ffffff80;
+    font-size: px-to-vw(16);
+    font-family: "Light";
+    line-height: calc(25 / 16);
+
+    div {
+      line-height: calc(25 / 16);
+    }
+  }
+
+  .icon-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: px-to-vw(75);
+    color: #ffffff80;
+    font-size: px-to-vw(16);
+    font-family: "Light";
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: px-to-vw(5);
+    }
+  }
+
+  .secRom-text-b {
+    .icon-box {
+      gap: px-to-vw(70);
+      justify-content: flex-start;
+      margin-top: px-to-vw(45);
+    }
+
+    .secRom-small-title {
+      max-width: 84%;
+    }
+  }
+
+  .secRomPhotos {
+    width: px-to-vw(205);
+    height: px-to-vw(22);
+    background: url("../../../assets/images/secRomPhotos.png") no-repeat center /
+      contain;
+  }
+
+  .secRomTV {
+    width: px-to-vw(131);
+    height: px-to-vw(22);
+    background: url("../../../assets/images/secRomTV.png") no-repeat center /
+      contain;
+  }
+
+  .secRomApp {
+    width: px-to-vw(86);
+    height: px-to-vw(24);
+    background: url("../../../assets/images/secRomApp.png") no-repeat center /
+      contain;
+  }
+
+  .secRom-text-wrapper {
+    position: relative;
+  }
+
+  .secRom-text {
+    position: absolute;
+  }
+
+  .secRom-small {
+    position: absolute;
+    top: px-to-vw(180);
+    left: px-to-vw(430);
+    z-index: 4;
+    width: px-to-vw(535);
+    height: px-to-vw(243);
+    background: url("../../../assets/images/secRomSmall.png") no-repeat center /
+      contain;
+  }
+
+  .secRomHot {
+    width: px-to-vw(92);
+    height: px-to-vw(22);
+    background: url("../../../assets/images/secRomHot.png") no-repeat center /
+      contain;
+  }
+
+  .secRomCpu {
+    width: px-to-vw(118);
+    height: px-to-vw(22);
+    background: url("../../../assets/images/secRomCpu.png") no-repeat center /
+      contain;
+  }
+
+  .tips {
+    margin-top: px-to-vw(52);
+    color: #ffffff60;
+    font-size: px-to-vw(12);
+  }
+
+  .secRomHotBox {
+    max-width: 30%;
+  }
+
+  .secRomCpuBox {
+    max-width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .secRom {
+    .secRome-top {
+      position: relative;
+      height: mvw(408);
+      padding-top: mvw(150);
+      padding-left: mvw(47);
+      background: url("../../../assets/images/secRomBgTop.png") no-repeat center /
+        cover;
+    }
+
+    .secRom-wrapper {
+      height: mvw(1638);
+      background: url("../../../assets/images/secRomMobBg.png") no-repeat bottom /
+        contain;
+    }
+
+    .texta {
+      position: relative;
+      z-index: 2;
+      width: mvw(231);
+      height: mvw(40);
+      background: url("../../../assets/images/secRomTexta.png") no-repeat bottom /
+        contain;
+    }
+
+    .textb {
+      position: relative;
+      z-index: 2;
+      width: mvw(626);
+      height: mvw(39);
+      margin-top: mvw(20);
+      background: url("../../../assets/images/secRomTextb.png") no-repeat bottom /
+        contain;
+    }
+
+    .logo {
+      position: absolute;
+      top: mvw(152);
+      left: mvw(314);
+      z-index: 2;
+      width: mvw(77);
+      height: mvw(32);
+      background: url("../../../assets/images/sec5Icon.png") no-repeat center /
+        contain;
+    }
+
+    .textBg {
+      position: absolute;
+      top: mvw(140);
+      left: mvw(168);
+      width: mvw(444);
+      height: mvw(129);
+      background: url("../../../assets/images/secRomTextBg.png") no-repeat
+        center / contain;
+    }
+
+    .secRom-Box {
+      top: mvw(905);
+      right: 0;
+      left: 0;
+      width: mvw(678);
+      height: mvw(665);
+      margin: auto;
+      padding-top: mvw(80);
+      padding-left: mvw(74);
+      background: url("../../../assets/images/secRomMobBox.png") no-repeat
+        center / contain;
+    }
+
+    .secRom-big-title {
+      margin-top: mvw(50);
+      font-size: mvw(33);
+    }
+
+    .secRom-small-title {
+      max-width: 81%;
+      margin-top: mvw(20);
+      font-size: mvw(20);
+      line-height: 2;
+
+      div {
+        line-height: 2;
+      }
+    }
+
+    .icon-box {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      font-size: mvw(20);
+
+      & > div {
+        gap: mvw(8);
+      }
+    }
+
+    .secRomAppBox {
+      order: -1;
+      width: 100%;
+      margin-bottom: mvw(25);
+    }
+
+    .secRomTVBox {
+      margin-left: mvw(110);
+    }
+
+    .secRomApp {
+      width: mvw(85);
+      height: mvw(24);
+    }
+
+    .secRomTV {
+      width: mvw(118);
+      height: mvw(23);
+    }
+
+    .secRomPhotos {
+      width: mvw(195);
+      height: mvw(23);
+    }
+
+    .secRomHot {
+      width: mvw(97);
+      height: mvw(23);
+    }
+
+    .secRomCpu {
+      width: mvw(120);
+      height: mvw(23);
+    }
+
+    .secRomHotBox {
+      max-width: 37%;
+    }
+
+    .secRomCpuBox {
+      max-width: 37%;
+    }
+
+    .secRom-title {
+      margin-left: mvw(-24);
+
+      .title {
+        font-size: mvw(50);
+      }
+
+      .line {
+        width: mvw(6);
+        height: mvw(40);
+        margin-top: mvw(15);
+      }
+    }
+
+    .secRom-small {
+      top: mvw(430);
+      left: mvw(190);
+      width: mvw(379);
+      height: mvw(172);
+      background: url("../../../assets/images/secRomMobSmall.png") no-repeat
+        center / contain;
+    }
+
+    .secRom-light {
+      display: none;
+    }
+
+    .secRom-big {
+      display: none;
+    }
+
+    .secRom-text-b {
+      .secRom-small-title {
+        max-width: 86%;
+      }
+
+      .icon-box {
+        gap: mvw(100);
+        margin-top: mvw(35);
+      }
+    }
+
+    .tips {
+      margin-top: mvw(35);
+      font-size: mvw(20);
+    }
+  }
+}

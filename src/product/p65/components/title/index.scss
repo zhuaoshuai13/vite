@@ -1,0 +1,34 @@
+@import "../../var";
+
+.title-box {
+  display: flex;
+  gap: px-to-vw(26);
+
+  .line {
+    width: px-to-vw(6);
+    height: px-to-vw(40);
+    margin-top: px-to-vw(18);
+    background: #02f8f6;
+  }
+
+  .title {
+    color: #fff;
+    font-size: px-to-vw(54);
+    font-family: "Bold";
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-box {
+    .title {
+      font-size: mvw(54);
+    }
+
+    .line {
+      width: mvw(6);
+      height: mvw(40);
+      margin-top: mvw(15);
+    }
+  }
+}

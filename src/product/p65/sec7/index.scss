@@ -1,0 +1,265 @@
+@import "../var";
+
+.sec7 {
+  margin-top: px-to-vw(-20);
+
+  .sec7Wrapper {
+    width: 100%;
+    height: px-to-vw(1181);
+    background: url("../../../assets/images/sec6Bg.png") no-repeat center /
+      cover;
+  }
+
+  .content {
+    display: flex;
+    gap: px-to-vw(200);
+    justify-content: flex-start;
+    padding-left: px-to-vw(330);
+  }
+
+  .right {
+    margin-top: px-to-vw(110);
+
+    .title {
+      color: #000;
+    }
+  }
+
+  .sec7Text {
+    position: relative;
+    width: px-to-vw(638);
+    height: px-to-vw(258);
+    margin-top: px-to-vw(50);
+    padding-top: px-to-vw(40);
+    padding-left: px-to-vw(40);
+    background: url("../../../assets/images/sec6Text.png") no-repeat center /
+      contain;
+  }
+
+  .tile-group {
+    position: relative;
+
+    .title-b {
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .text-b {
+    position: absolute;
+    top: px-to-vw(40);
+
+    .shrink {
+      margin-left: 0;
+    }
+  }
+
+  .subTitle {
+    color: #000;
+    font-size: px-to-vw(30);
+    font-family: "Bold";
+  }
+
+  .info {
+    max-width: 89%;
+    margin-top: px-to-vw(20);
+    color: #00000080;
+    font-size: px-to-vw(16);
+    font-family: "Light";
+
+    div {
+      line-height: calc(25 / 16);
+    }
+  }
+
+  .video {
+    position: relative;
+    width: px-to-vw(365);
+    height: px-to-vw(1003);
+    margin-top: px-to-vw(24);
+    background: url("../../../assets/images/sec6Phone.png") no-repeat center /
+      contain;
+
+    video {
+      width: px-to-vw(368);
+      height: px-to-vw(726);
+      margin-top: px-to-vw(20);
+      border-radius: px-to-vw(12);
+    }
+
+    .v2 {
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .iconBox {
+    display: flex;
+    gap: px-to-vw(10);
+    align-items: flex-end;
+    color: #000;
+    font-size: px-to-vw(20);
+    font-family: "Normal";
+  }
+
+  .subInfo {
+    color: #000;
+    font-size: px-to-vw(20);
+
+    span {
+      color: #02f8f6;
+    }
+  }
+
+  .progess {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(10);
+  }
+
+  .out {
+    position: relative;
+    width: px-to-vw(496);
+    height: px-to-vw(28);
+    padding: px-to-vw(4);
+    overflow: hidden;
+    background-color: #848892;
+  }
+
+  .in {
+    height: 100%;
+    background-color: #cdd1d9;
+  }
+
+  .progessA {
+    margin-top: px-to-vw(55);
+
+    .in {
+      width: 0%;
+    }
+  }
+
+  .icona {
+    width: px-to-vw(100);
+    height: px-to-vw(30);
+    background: url("../../../assets/images/sec630.png") no-repeat center /
+      contain;
+  }
+
+  .iconb {
+    width: px-to-vw(100);
+    height: px-to-vw(30);
+    background: url("../../../assets/images/sec685.png") no-repeat center /
+      contain;
+  }
+
+  .progessB {
+    margin-top: px-to-vw(45);
+
+    .in {
+      width: 0%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec7 {
+    margin-top: -1px;
+
+    .videos {
+      position: absolute;
+      top: mvw(470);
+      left: mvw(77);
+    }
+
+    .video {
+      width: mvw(290);
+      height: mvw(726);
+
+      video {
+        width: mvw(286);
+        height: mvw(538);
+        border-radius: mvw(60);
+      }
+
+      .v2 {
+        left: 0;
+      }
+    }
+
+    .sec7Wrapper {
+      height: mvw(1167);
+      overflow: hidden;
+      background: url("../../../assets/images/sec6MobBg.png") no-repeat center /
+        cover;
+    }
+
+    .content {
+      flex-direction: column;
+      padding-left: mvw(28);
+    }
+
+    .right {
+      order: -1;
+      margin-top: mvw(50);
+    }
+
+    .sec7Text {
+      width: mvw(689);
+      height: mvw(310);
+      padding-top: mvw(50);
+      padding-left: mvw(50);
+    }
+
+    .subTitle {
+      font-size: mvw(33);
+    }
+
+    .text-b {
+      top: mvw(50);
+    }
+
+    .info {
+      font-size: mvw(16);
+
+      div {
+        line-height: 2.5;
+      }
+    }
+
+    .icona {
+      width: mvw(76);
+      height: mvw(23);
+    }
+
+    .iconb {
+      width: mvw(76);
+      height: mvw(23);
+    }
+
+    .out {
+      width: mvw(312);
+      height: mvw(20);
+      padding: mvw(2);
+    }
+
+    .progess {
+      gap: mvw(7);
+      margin-top: mvw(60);
+      padding-left: mvw(370);
+    }
+
+    .iconBox {
+      gap: mvw(7);
+      font-size: mvw(20);
+
+      div {
+        line-height: 1;
+      }
+    }
+
+    .subInfo {
+      font-size: mvw(20);
+    }
+  }
+}
