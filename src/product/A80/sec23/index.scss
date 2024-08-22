@@ -1,0 +1,59 @@
+@import "../var";
+
+.sec23 {
+  margin-top: pvw(320);
+
+  .subTitle {
+    max-width: 80%;
+  }
+
+  .subInfo {
+    max-width: 62%;
+    margin-top: pvw(40);
+    font-family: "Medium";
+  }
+
+  .img {
+    width: pvw(1901);
+    height: pvw(875);
+    margin: pvw(60) auto 0;
+    background: url("../../../assets/images/sec23Bg.png") no-repeat center /
+      cover;
+    border-radius: pvw(30);
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec23 {
+    margin-top: mvw(320);
+
+    .subTitle {
+      max-width: 51%;
+    }
+
+    .subInfo {
+      max-width: 85%;
+      margin-top: mvw(20);
+    }
+
+    .img {
+      width: mvw(682);
+      height: mvw(766);
+      margin-top: mvw(32);
+      background: url("../../../assets/images/sec23Mob.png") no-repeat top
+        center / cover;
+    }
+  }
+}
+
+@media (max-height: pvw(1177)) {
+  .sec23 {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 54px);
+
+    .img {
+      flex: 1;
+    }
+  }
+}

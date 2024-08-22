@@ -1,0 +1,209 @@
+@import "../var";
+
+.sec20 {
+  position: relative;
+  margin-top: pvw(752);
+  padding-bottom: pvw(0);
+
+  .left {
+    height: pvw(1270);
+    margin-left: pvw(330);
+  }
+
+  .subTitle {
+    max-width: 30%;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .subInfo {
+    max-width: 40%;
+    margin-top: pvw(75);
+    margin-left: 0;
+    font-family: "Book";
+    text-align: left;
+  }
+
+  .params {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: pvw(657);
+    margin-top: pvw(127);
+  }
+
+  .f5 {
+    width: 100%;
+    height: 1px;
+    margin: pvw(40) 0;
+    background-color: rgba(217, 217, 217, 1);
+  }
+
+  .top {
+    color: rgba(73, 194, 255, 1);
+    font-size: pvw(70);
+    font-family: "Medium";
+    line-height: calc(88 / 70);
+
+    span {
+      margin-left: pvw(-15);
+      color: #000;
+      font-size: pvw(30);
+      line-height: calc(38 / 30);
+    }
+  }
+
+  .bot {
+    font-size: pvw(30);
+    font-family: "Normal";
+    line-height: calc(38 / 30);
+  }
+
+  .phoneOut {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: pvw(1279);
+    height: pvw(1279);
+  }
+
+  .phone {
+    position: absolute;
+    top: pvw(-62);
+    left: pvw(-6);
+    z-index: 3;
+    width: pvw(1306);
+    height: pvw(1172);
+    background: url("../../../assets/images/phoneUp.png") no-repeat top center /
+      cover;
+    opacity: 1;
+  }
+
+  .phoneInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .phonea {
+    position: absolute;
+    top: pvw(-62);
+    left: pvw(-6);
+    z-index: 1;
+    width: pvw(1306);
+    height: pvw(1172);
+    background: url("../../../assets/images/phoneDown.png") no-repeat top center /
+      cover;
+  }
+
+  .line {
+    position: absolute;
+    top: pvw(935);
+    left: pvw(-328);
+    z-index: 2;
+    width: pvw(749);
+    height: pvw(831);
+    background: url("../../../assets/images/sec20Line.png") no-repeat top center /
+      cover;
+    clip-path: inset(0 0 60% 0);
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec20 {
+    margin-top: mvw(0);
+    padding-bottom: 0;
+
+    .left {
+      height: fit-content;
+      margin-left: 0;
+      padding: 0 mvw(34);
+    }
+
+    .subTitle {
+      max-width: 90%;
+      margin: auto;
+      text-align: center;
+    }
+
+    .subInfo {
+      max-width: 93%;
+      margin: mvw(20) auto 0;
+      text-align: center;
+    }
+
+    .params {
+      justify-content: flex-start;
+      width: 100%;
+      margin-top: mvw(0);
+    }
+
+    .top {
+      font-size: mvw(60);
+      line-height: calc(76 / 60);
+
+      span {
+        font-size: mvw(24);
+        line-height: calc(30 / 24);
+      }
+    }
+
+    .bot {
+      margin-top: mvw(9);
+      font-size: mvw(24);
+      line-height: calc(30 / 24);
+    }
+
+    .f1 {
+      margin-left: mvw(96);
+    }
+
+    .f2 {
+      margin-left: mvw(153);
+    }
+
+    .f3 {
+      margin-left: mvw(96);
+    }
+
+    .f4 {
+      margin-left: mvw(110);
+    }
+
+    .f5 {
+      margin-top: mvw(20);
+      margin-bottom: mvw(10);
+    }
+
+    .phoneOut {
+      position: relative;
+      width: 100%;
+      height: mvw(620);
+      margin-top: mvw(0);
+    }
+
+    .phone {
+      top: mvw(10);
+      right: unset;
+      left: mvw(46);
+      width: mvw(560);
+      height: mvw(547);
+    }
+
+    .phonea {
+      top: mvw(10);
+      right: unset;
+      left: mvw(46);
+      width: mvw(560);
+      height: mvw(547);
+    }
+
+    .line {
+      top: mvw(470);
+      left: mvw(-125);
+      width: mvw(307);
+      height: mvw(436);
+      clip-path: inset(0 0 68% 0);
+    }
+  }
+}

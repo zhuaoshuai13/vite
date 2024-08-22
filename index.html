@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product</title>
-</head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.basic_assets_href = "%VITE_ASSETS_URL%"
+    </script>
+    <script src="%VITE_CONFIG_URL%"></script>
 
-<body>
-  <div id="root"></div>
-  <script>
-    window.basic_assets_href = "%VITE_ASSETS_URL%";
-  </script>
-  <script src="%VITE_CONFIG_URL%"></script>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

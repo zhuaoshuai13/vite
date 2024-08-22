@@ -1,0 +1,40 @@
+@import "../var";
+
+.secAdd {
+  position: relative;
+  height: pvw(777);
+
+  // height: calc(100vh - 44px);
+  margin: auto;
+  padding-top: pvw(0);
+  background-color: rgba(17, 17, 17, 1);
+
+  .colorText {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: fit-content;
+    max-width: 60%;
+    height: fit-content;
+    margin: auto;
+    background: linear-gradient(
+      90deg,
+      #fff var(--gradient-angle),
+      #fff var(--gradient-angle1),
+      #4facfe var(--gradient-angle2),
+      #00f2fe var(--gradient-angle3)
+    );
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .secAdd {
+    height: mvw(272);
+    padding-top: mvw(0);
+
+    .colorText {
+      max-width: 70%;
+    }
+  }
+}

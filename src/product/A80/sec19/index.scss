@@ -1,0 +1,38 @@
+@import "../var";
+
+.sec19 {
+  position: relative;
+
+  // height: calc(100vh - 54px);
+  padding-top: pvw(550);
+
+  .colorText {
+    max-width: 50%;
+
+    // position: absolute;
+    // width: fit-content;
+    // max-width: 50%;
+    // height: fit-content;
+    // margin: auto;
+    // inset: 0;
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec19 {
+    position: relative;
+    height: fit-content;
+    padding: mvw(200) 0;
+
+    .colorText {
+      position: relative;
+      max-width: 53%;
+
+      // width: fit-content;
+      // max-width: 53%;
+      // height: fit-content;
+      // margin: auto;
+      // inset: 0;
+    }
+  }
+}

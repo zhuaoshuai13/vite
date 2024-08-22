@@ -1,0 +1,69 @@
+@import "../var";
+
+.sec15 {
+  position: relative;
+  margin-top: pvw(420);
+
+  .subTitle {
+    max-width: 60%;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .img {
+    width: pvw(1804);
+    height: pvw(1544);
+    margin-top: pvw(0);
+    margin-left: pvw(124);
+    background: url("../../../assets/images/sec15Bg.png") no-repeat top center /
+      cover;
+  }
+
+  .texta {
+    position: absolute;
+    top: pvw(330);
+    left: pvw(340);
+    z-index: 2;
+    font-size: pvw(364);
+    font-family: "Light";
+    line-height: calc(461 / 364);
+  }
+
+  .textb {
+    position: absolute;
+    top: pvw(590);
+    left: pvw(1255);
+    z-index: 2;
+    font-size: pvw(364);
+    font-family: "Light";
+    line-height: calc(461 / 364);
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec15 {
+    margin-top: mvw(320);
+
+    .img {
+      width: 120%;
+      height: mvw(640);
+      margin-top: mvw(60);
+      margin-left: 0;
+      background-size: cover;
+    }
+
+    .texta {
+      top: mvw(213);
+      left: mvw(34);
+      font-size: mvw(160);
+      line-height: calc(202 / 160);
+    }
+
+    .textb {
+      top: mvw(380);
+      left: mvw(364);
+      font-size: mvw(160);
+      line-height: calc(202 / 160);
+    }
+  }
+}

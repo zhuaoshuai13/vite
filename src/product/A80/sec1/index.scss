@@ -1,0 +1,232 @@
+@import "../var";
+
+.sec1out {
+  position: relative;
+  height: pvw(1430);
+
+  .sec2Wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .sec1Wrapper {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.sec1 {
+  position: relative;
+  width: 100%;
+  height: pvw(1200);
+  min-height: calc(100vh - 50px);
+
+  // height: 100vh;
+  // max-height: 1200px;
+  padding-top: pvw(457);
+  padding-left: pvw(147);
+  overflow: hidden;
+  background: url("../../../assets/images/sec1Bg.jpg") no-repeat top center /
+    cover;
+
+  .group {
+    display: flex;
+    gap: pvw(40);
+    align-items: center;
+    padding-left: pvw(60);
+  }
+
+  .slogen {
+    width: pvw(500);
+    color: rgba(50, 50, 60, 1);
+    font-size: pvw(80);
+    font-family: "Bold";
+    line-height: calc(86 / 80);
+  }
+
+  .logo {
+    width: pvw(311);
+    height: pvw(148);
+    background: url("../../../assets/images/sec1logo.png") no-repeat top center /
+      contain;
+  }
+
+  .params {
+    display: flex;
+    gap: pvw(20);
+    align-items: center;
+    margin-top: pvw(59);
+    color: rgba(50, 50, 60, 1);
+    text-align: center;
+  }
+
+  .line {
+    width: pvw(2);
+    height: pvw(62);
+    background-color: rgba(255, 7, 60, 1);
+  }
+
+  .f1 {
+    font-size: pvw(38);
+    font-family: "Bold";
+    line-height: calc(36 / 38);
+  }
+
+  .f2 {
+    margin-top: pvw(12);
+    font-size: pvw(22);
+    font-family: "Normal";
+    line-height: calc(30 / 22);
+  }
+
+  .sec1white {
+    position: absolute;
+    top: pvw(240);
+    left: pvw(1118);
+    width: pvw(952);
+    height: pvw(1184);
+    background: url("../../../assets/images/sec1White.png") no-repeat top center /
+      contain;
+  }
+
+  .sec1blue {
+    position: absolute;
+    top: 0;
+    left: pvw(1600);
+    z-index: 2;
+    width: pvw(937);
+    height: pvw(1242);
+    background: url("../../../assets/images/sec1Blue.png") no-repeat top center /
+      contain;
+  }
+
+  .sec1mask {
+    position: absolute;
+    top: pvw(684);
+    left: pvw(1600);
+    z-index: 1;
+    width: pvw(385);
+    height: pvw(490);
+    background: url("../../../assets/images/sec1Mask.png") no-repeat top center /
+      contain;
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec1out {
+    height: auto;
+  }
+
+  .sec1 {
+    height: mvw(1080);
+    padding-top: mvw(64);
+    padding-left: 0;
+    background: url("../../../assets/images/sec1MobBG.jpg") no-repeat top center /
+      cover;
+
+    .group {
+      display: block;
+    }
+
+    .sec1white {
+      top: mvw(526);
+      left: mvw(50);
+      width: mvw(424);
+      height: mvw(800);
+    }
+
+    .sec1blue {
+      top: mvw(310);
+      left: mvw(267);
+      width: mvw(437);
+      height: mvw(489);
+      background: url("../../../assets/images/sec1MobBlue.png") no-repeat top
+        center / contain;
+    }
+
+    .sec1mask {
+      top: mvw(730);
+      left: mvw(266);
+      width: mvw(289);
+      height: mvw(368);
+    }
+
+    .logo {
+      width: mvw(171);
+      height: mvw(80);
+      margin: auto;
+      background: url("../../../assets/images/sec1moblogo.png") no-repeat top
+        center / contain;
+    }
+
+    .slogen {
+      width: 90%;
+      max-width: 90%;
+      margin: mvw(26) auto 0;
+      font-size: mvw(36);
+      line-height: calc(46 / 36);
+      text-align: center;
+    }
+
+    .params {
+      gap: mvw(32);
+      width: fit-content;
+      margin: mvw(10) auto 0;
+    }
+
+    .f1 {
+      font-size: mvw(20);
+      line-height: calc(32 / 20);
+    }
+
+    .f2 {
+      margin-top: mvw(2);
+      font-size: mvw(12);
+      line-height: calc(15 / 12);
+    }
+
+    .line {
+      width: mvw(2);
+      height: mvw(28);
+    }
+  }
+}
+
+.sec2 {
+  position: relative;
+  width: 100%;
+  height: pvw(1430);
+  background-color: rgba(243, 243, 243, 1);
+
+  .img {
+    position: absolute;
+    z-index: 3;
+    width: pvw(89);
+    height: pvw(89);
+    margin: auto;
+    background: url("../../../assets/images/play.png") no-repeat center /
+      contain;
+    inset: 0;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec2 {
+    height: mvw(1622);
+
+    .img {
+      width: mvw(89);
+      height: mvw(89);
+    }
+  }
+}

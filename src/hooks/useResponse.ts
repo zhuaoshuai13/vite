@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react"
 // type MediaScreenKeysType = keyof typeof globalConfig.mediaScreens
 
 const mediaScreens = {
-  md: 1081,
+  md: 751,
 }
 
 type MediaScreenKeysType = keyof typeof mediaScreens

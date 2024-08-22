@@ -1,0 +1,308 @@
+@import "../var";
+
+.sec14 {
+  padding-top: pvw(0);
+
+  .content {
+    position: relative;
+    width: pvw(2199);
+    height: pvw(1100);
+    max-height: calc(100vh - 54px);
+    margin: auto;
+  }
+
+  .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: pvw(1365);
+    height: pvw(1100);
+    border-radius: pvw(30);
+  }
+
+  .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: pvw(793);
+    height: pvw(1100);
+    border-radius: pvw(30);
+  }
+
+  .com {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: pvw(100);
+    background-color: #fff;
+    border-radius: pvw(30);
+  }
+
+  .f1 {
+    z-index: 1;
+
+    .left {
+      background: url("../../../assets/images/sec14WhiteLeft.png") no-repeat
+        center / cover;
+    }
+
+    .right {
+      background: url("../../../assets/images/sec14WhiteRight.png") no-repeat
+        center / cover;
+    }
+
+    opacity: 0;
+    transition: all 0.5s;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .f2 {
+    z-index: 2;
+
+    .left {
+      background: url("../../../assets/images/sec14BlueLeft.png") no-repeat
+        center / cover;
+    }
+
+    .right {
+      background: url("../../../assets/images/sec14BlueRight.png") no-repeat
+        center / cover;
+    }
+
+    opacity: 0;
+    transition: all 0.5s;
+
+    .info {
+      max-width: 53%;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .f3 {
+    z-index: 3;
+
+    .left {
+      background: url("../../../assets/images/sec14BlackLeft.png") no-repeat
+        center / cover;
+    }
+
+    .right {
+      background: url("../../../assets/images/sec14BlackRight.png") no-repeat
+        center / cover;
+      background-color: black;
+    }
+
+    opacity: 0;
+    transition: all 0.5s;
+
+    .info {
+      max-width: 55%;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .title {
+    position: relative;
+    z-index: 2;
+    margin-top: pvw(851);
+    font-size: pvw(50);
+    font-family: "Bold";
+    line-height: calc(63 / 50);
+  }
+
+  .info {
+    position: relative;
+    z-index: 2;
+    max-width: 56%;
+    margin-top: pvw(36);
+    font-size: pvw(30);
+    font-family: "Book";
+  }
+
+  .btnGroup {
+    position: absolute;
+    top: pvw(471);
+    left: pvw(100);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    gap: pvw(28);
+
+    .btns {
+      width: pvw(32);
+      height: pvw(32);
+      border-radius: pvw(32);
+      cursor: pointer;
+    }
+
+    .btnWhite {
+      background: linear-gradient(180deg, #fffffe 0%, #dfdfdf 100%);
+
+      &.title {
+        border: 3px solid rgba(160, 160, 160, 1);
+        box-shadow: 1px 2px 3px 0 rgba(55, 55, 55, 0.28);
+      }
+    }
+
+    .btnBlue {
+      background: linear-gradient(180deg, #fff9e8 0%, #81d1ff 100%);
+
+      &.active {
+        border: 3px solid rgba(243, 243, 243, 1);
+        box-shadow: 1px 2px 3px 0 rgba(55, 55, 55, 0.28);
+      }
+    }
+
+    .btnBlack {
+      background: linear-gradient(180deg, #4d505e 0%, #2c2c2c 100%);
+
+      &.active {
+        border: 3px solid rgba(255, 255, 255, 1);
+        box-shadow: 1px 2px 3px 0 rgba(55, 55, 55, 0.28);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec14 {
+    padding-top: mvw(0);
+
+    .mb {
+      .titlea {
+        .desc {
+          width: 87%;
+        }
+      }
+
+      .titleb {
+        .desc {
+          width: 61%;
+        }
+      }
+
+      .titlec {
+        .desc {
+          width: 73%;
+        }
+      }
+    }
+
+    .left {
+      display: none;
+    }
+
+    .right {
+      display: none;
+    }
+
+    .content {
+      width: mvw(682);
+      height: mvw(900);
+      margin-top: mvw(24);
+    }
+
+    .com {
+      padding-left: 0;
+    }
+
+    .f1 {
+      background: url("../../../assets/images/sec14MobWhite.png") no-repeat top
+        center / cover;
+    }
+
+    .f2 {
+      background: url("../../../assets/images/sec14MobBlue.png") no-repeat top
+        center / cover;
+    }
+
+    .f3 {
+      background: url("../../../assets/images/sec14MobBlack.png") no-repeat top
+        center / cover;
+    }
+
+    .btnGroup {
+      top: mvw(274);
+      left: mvw(34);
+      gap: mvw(28);
+
+      .btns {
+        width: mvw(32);
+        height: mvw(32);
+        border-radius: 50%;
+      }
+    }
+
+    .title {
+      display: none;
+    }
+
+    .titlea,
+    .titleb,
+    .titlec {
+      opacity: 0;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    .info {
+      display: none;
+    }
+
+    .titleBox {
+      position: relative;
+      height: mvw(172);
+      padding-right: mvw(34);
+      padding-left: mvw(34);
+
+      & > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .text {
+      color: rgba(33, 33, 33, 1);
+      font-size: mvw(40);
+      font-family: "Medium";
+      line-height: calc(50 / 40);
+    }
+
+    .desc {
+      margin-top: mvw(8);
+      font-size: mvw(20);
+      font-family: "Light";
+      line-height: calc(30 / 20);
+    }
+  }
+}
+
+@media screen and (max-height: pvw(1100)) {
+  .sec14 {
+    .com {
+      .info {
+        position: absolute;
+        bottom: pvw(10);
+      }
+
+      .title {
+        position: absolute;
+        bottom: pvw(140);
+      }
+    }
+  }
+}

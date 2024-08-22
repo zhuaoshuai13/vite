@@ -36,9 +36,13 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: "src/product/p65/config.js",
+              src: "src/product/A80/config.js",
               dest: "dist/js",
             },
+            // {
+            //   src: "src/product/A80/utils/scroll.js",
+            //   dest: "dist/js",
+            // },
             // {
             //   src: "src/assets/images/*",
             //   dest: "dist/images",

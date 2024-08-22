@@ -1,0 +1,255 @@
+@import "../var";
+
+.sec17 {
+  margin-top: pvw(190);
+
+  .img {
+    width: pvw(1825);
+    height: pvw(1172);
+    margin: auto;
+    background: url("../../../assets/images/sec17Bg.png") no-repeat top center /
+      cover;
+  }
+
+  .mainContent {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: pvw(-345);
+  }
+
+  .subTitle {
+    max-width: 90%;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .subInfo {
+    max-width: 76%;
+    margin-top: pvw(40);
+    margin-left: 0;
+    font-family: "Book";
+    text-align: left;
+  }
+
+  .top {
+    display: flex;
+    gap: pvw(90);
+    align-items: center;
+    justify-content: center;
+    width: pvw(900);
+    padding-bottom: pvw(24);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .right {
+    text-align: center;
+  }
+
+  .line {
+    width: 1px;
+    height: pvw(120);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .param {
+    color: rgba(73, 194, 255, 1);
+    font-size: pvw(90);
+    font-family: "Medium";
+    line-height: calc(114 / 90);
+  }
+
+  .desc {
+    font-size: pvw(26);
+    font-family: "Normal";
+    line-height: calc(32 / 26);
+    white-space: nowrap;
+  }
+
+  .f1 {
+    span {
+      margin-left: pvw(-20);
+      color: #000;
+      font-size: pvw(40);
+      line-height: calc(50 / 40);
+    }
+  }
+
+  .lineb {
+    width: 1px;
+    height: pvw(100);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .f2 {
+    span {
+      margin-left: pvw(0);
+      color: #000;
+      font-size: pvw(50);
+      line-height: calc(63 / 50);
+      vertical-align: super;
+    }
+  }
+
+  .bot {
+    display: flex;
+    align-items: center;
+    margin-top: pvw(23);
+
+    .param {
+      font-size: pvw(70);
+      white-space: nowrap;
+    }
+  }
+
+  .f3 {
+    margin-right: pvw(70);
+
+    span {
+      margin-left: pvw(-15);
+      color: #000;
+      font-size: pvw(30);
+      line-height: calc(38 / 30);
+    }
+
+    .desc {
+      width: 90%;
+      margin: auto;
+      white-space: wrap;
+      text-align: center;
+    }
+  }
+
+  .f4 {
+    margin-right: pvw(53);
+    margin-left: pvw(70);
+
+    .desc {
+      width: 90%;
+      margin: auto;
+      white-space: wrap;
+      text-align: center;
+    }
+  }
+
+  .f5 {
+    margin-left: pvw(45);
+
+    span {
+      margin-left: pvw(-15);
+      color: #000;
+      font-size: pvw(30);
+      line-height: calc(38 / 30);
+    }
+
+    .desc {
+      width: 90%;
+      margin: auto;
+      white-space: wrap;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec17 {
+    margin-top: 0;
+    padding-top: mvw(0);
+
+    .subTitle {
+      max-width: 65%;
+      margin: auto;
+      font-family: "Bold";
+      text-align: center;
+    }
+
+    .mainContent {
+      margin-top: mvw(-123);
+    }
+
+    .subInfo {
+      max-width: 70%;
+      margin: mvw(20) auto 0;
+      font-family: "Normal";
+      text-align: center;
+    }
+
+    .img {
+      width: 100%;
+      height: mvw(588);
+      margin-top: mvw(32);
+    }
+
+    .right {
+      width: 100%;
+    }
+
+    .top {
+      gap: mvw(70);
+      width: 100%;
+      padding-bottom: mvw(30);
+    }
+
+    .bot {
+      justify-content: center;
+      width: 100%;
+      margin-top: mvw(30);
+
+      .param {
+        font-size: mvw(40);
+        line-height: calc(50 / 40);
+
+        span {
+          font-size: mvw(24);
+          line-height: calc(30 / 24);
+        }
+      }
+
+      .desc {
+        white-space: nowrap;
+      }
+    }
+
+    .param {
+      font-size: mvw(60);
+      line-height: calc(76 / 60);
+
+      span {
+        margin-left: mvw(-10);
+        font-size: mvw(24);
+        line-height: calc(30 / 24);
+      }
+    }
+
+    .desc {
+      margin-top: mvw(4);
+      font-size: mvw(20);
+      line-height: calc(25 / 20);
+    }
+
+    .line {
+      width: 1px;
+      height: mvw(80);
+    }
+
+    .lineb {
+      width: 1px;
+      height: mvw(60);
+    }
+
+    .f3 {
+      margin-right: mvw(55);
+    }
+
+    .f4 {
+      width: 100%;
+      margin-right: mvw(17);
+      margin-left: mvw(46);
+    }
+
+    .f5 {
+      margin-left: mvw(17);
+    }
+  }
+}

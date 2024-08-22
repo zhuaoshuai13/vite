@@ -1,0 +1,35 @@
+@import "../var";
+
+.sec24 {
+  margin-top: pvw(100);
+  padding-bottom: pvw(240);
+  font-size: pvw(24);
+  font-family: "Light";
+
+  div {
+    line-height: 2;
+  }
+
+  p {
+    margin-top: pvw(16);
+    margin-bottom: 0;
+    line-height: 2;
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec24 {
+    margin-top: mvw(40);
+    padding-bottom: mvw(130);
+    font-size: mvw(12);
+
+    div {
+      line-height: calc(30 / 12);
+    }
+
+    p {
+      margin-top: mvw(10);
+      line-height: calc(30 / 12);
+    }
+  }
+}

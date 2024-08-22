@@ -1,0 +1,255 @@
+@import "../var";
+
+.sec22 {
+  margin-top: pvw(0);
+
+  .subTitle {
+    max-width: 90%;
+  }
+
+  .subInfo {
+    max-width: 42%;
+    margin-top: pvw(60);
+    font-family: "Medium";
+    line-height: calc(48 / 30);
+  }
+
+  .box {
+    display: grid;
+    grid-template-rows: pvw(460) pvw(460);
+    grid-template-columns: pvw(814) pvw(1060);
+    width: 100%;
+    margin-top: pvw(120);
+    column-gap: pvw(26);
+    row-gap: pvw(20);
+
+    & > div {
+      background-color: rgba(250, 249, 250, 1);
+      border-radius: pvw(30);
+    }
+  }
+
+  .f2 {
+    grid-row: 1 /3;
+    padding-top: pvw(80);
+
+    .title {
+      max-width: 90%;
+      margin: auto;
+      text-align: center;
+    }
+
+    .info {
+      max-width: 67%;
+      margin: auto;
+      margin-top: pvw(28);
+      text-align: center;
+    }
+
+    .img {
+      width: pvw(261);
+      height: pvw(556);
+      margin: pvw(80) auto pvw(212);
+      background: url("../../../assets/images/sec22F2.png") no-repeat top center /
+        cover;
+    }
+  }
+
+  .title {
+    font-size: pvw(50);
+    font-family: "Bold";
+    line-height: calc(63 / 50);
+  }
+
+  .info {
+    margin-top: mvw(28);
+    font-size: pvw(26);
+    font-family: "Medium";
+    line-height: calc(40 / 26);
+  }
+
+  .f1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: pvw(85) pvw(0) pvw(120) pvw(80);
+
+    .title {
+      max-width: 40%;
+      margin-left: 0;
+    }
+
+    .info {
+      max-width: 35%;
+      margin-top: pvw(28);
+    }
+
+    .img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      width: pvw(587);
+      min-width: pvw(587);
+      height: pvw(222);
+      margin: auto;
+      background: url("../../../assets/images/sec22F1.png") no-repeat top center /
+        contain;
+    }
+  }
+
+  .f3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: pvw(91) pvw(124) pvw(90) pvw(80);
+
+    .title {
+      max-width: 60%;
+    }
+
+    .info {
+      max-width: 75%;
+      margin-top: pvw(28);
+    }
+
+    .img {
+      width: pvw(280);
+      min-width: pvw(280);
+      height: pvw(173);
+      background: url("../../../assets/images/sec22F3.png") no-repeat top center /
+        cover;
+    }
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec22 {
+    margin-top: mvw(0);
+
+    .subTitle {
+      max-width: 60%;
+    }
+
+    .subInfo {
+      max-width: 76%;
+      margin-top: mvw(12);
+    }
+
+    .box {
+      grid-template-rows: mvw(396) mvw(428);
+      grid-template-columns: mvw(333) mvw(333);
+      gap: mvw(16);
+      margin-top: mvw(24);
+
+      & > div {
+        border-radius: mvw(20);
+      }
+    }
+
+    .f1 {
+      display: flex;
+      flex-direction: column;
+      grid-row: 1 / 2;
+      grid-column: 1 / 3;
+      padding-top: mvw(20);
+
+      .title {
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .img {
+        position: relative;
+        width: mvw(525);
+        height: mvw(198);
+        margin: mvw(40) auto 0;
+        background: url("../../../assets/images/sec22MobF1.png") no-repeat top
+          center / cover;
+      }
+
+      .info {
+        max-width: 72%;
+        margin: mvw(20) auto 0;
+        margin-bottom: 0;
+      }
+    }
+
+    .f2 {
+      display: flex;
+      flex-direction: column;
+      grid-row: unset;
+      justify-content: flex-start;
+      padding: 0;
+      padding-top: mvw(20);
+
+      .title {
+        max-width: 100%;
+        margin: auto;
+      }
+
+      .info {
+        max-width: 94%;
+        margin: mvw(16) auto 0;
+      }
+
+      .img {
+        width: mvw(121);
+        height: mvw(253);
+        margin: mvw(41) auto 0;
+        background: url("../../../assets/images/sec22MobF2.png") no-repeat top
+          center / cover;
+      }
+    }
+
+    .f3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .title {
+        max-width: 100%;
+        margin: auto;
+      }
+
+      padding: 0;
+      padding-top: mvw(20);
+
+      .info {
+        max-width: 90%;
+        margin: mvw(16) auto 0;
+      }
+
+      .img {
+        width: mvw(160);
+        height: mvw(98);
+        margin-top: mvw(71);
+        background: url("../../../assets/images/sec22MobF3.png") no-repeat top
+          center / cover;
+      }
+    }
+
+    .title {
+      order: 1;
+      font-size: mvw(24);
+      line-height: calc(30 / 24);
+      text-align: center;
+    }
+
+    .info {
+      order: 2;
+      margin-top: mvw(16);
+      font-size: mvw(16);
+      font-family: "Book";
+      line-height: calc(24 / 16);
+      text-align: center;
+    }
+
+    .img {
+      order: 3;
+    }
+  }
+}

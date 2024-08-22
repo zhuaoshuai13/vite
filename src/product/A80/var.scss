@@ -1,0 +1,124 @@
+$pcwidth: 25.6;
+$mobwidth: 7.5;
+
+@font-face {
+  font-family: "Bold";
+  src: url("../../../src/assets/fonts/MarkOT-Bold.otf");
+}
+
+@font-face {
+  font-family: "Medium";
+  src: url("../../assets/fonts/MarkOT-Medium.otf");
+}
+
+@font-face {
+  font-family: "Light";
+  src: url("../../assets/fonts/MarkOT-Light.otf");
+}
+
+@font-face {
+  font-family: "Book";
+  src: url("../../assets/fonts/MarkOT-Book.otf");
+}
+
+@font-face {
+  font-family: "Normal";
+  src: url("../../assets/fonts/MarkOT.otf");
+}
+
+@function mvw($value) {
+  /* stylelint-disable-next-line at-rule-empty-line-before */
+  @return #{$value * calc(1 / $mobwidth)}vw;
+}
+
+@function pvw($value) {
+  /* stylelint-disable-next-line at-rule-empty-line-before */
+  @return #{$value * calc(1 / $pcwidth)}vw;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.a80 {
+  line-height: normal;
+  letter-spacing: -0.02em;
+  scroll-behavior: unset !important;
+}
+
+section {
+  margin-top: -1px;
+  overflow: hidden;
+}
+
+.imgLoadfalse {
+  div {
+    background-image: unset !important;
+  }
+}
+
+.mb {
+  display: none;
+}
+
+.subTitle {
+  max-width: 90%;
+  margin: auto;
+  font-size: pvw(70);
+  font-family: "Bold";
+  line-height: calc(88 / 70);
+  text-align: center;
+}
+
+.subInfo {
+  max-width: 90%;
+  margin: auto;
+  font-size: pvw(30);
+  font-family: "Medium";
+  line-height: calc(38 / 30);
+  text-align: center;
+}
+
+.mainContent {
+  width: pvw(1900);
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+
+  .mb {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .mainContent {
+    width: mvw(682);
+  }
+
+  .subTitle {
+    font-size: mvw(40);
+    font-family: "Medium";
+    line-height: calc(50 / 40);
+  }
+
+  .subInfo {
+    font-size: mvw(20);
+    font-family: "Light";
+    line-height: calc(30 / 20);
+  }
+}
+
+// .adams {
+//   position: fixed;
+//   top: 0;
+//   z-index: 2;
+//   width: 100%;
+//   height: 54px;
+//   background-color: red;
+// }

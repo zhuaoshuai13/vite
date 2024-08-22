@@ -1,0 +1,157 @@
+@import "../var";
+
+.sec7 {
+  --gradient-angle: 0%;
+  --gradient-angle1: 100%;
+  --gradient-angle2: 200%;
+  --gradient-angle3: 300%;
+
+  margin-top: pvw(430);
+  padding-bottom: pvw(420);
+
+  .common {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .subTitle {
+    max-width: 50%;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .subInfo {
+    max-width: 60%;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .f1 {
+    align-items: center;
+  }
+
+  .f2 {
+    align-items: center;
+    margin-top: pvw(20);
+  }
+
+  .top {
+    font-size: pvw(110);
+    font-family: "Medium";
+    line-height: calc(139 / 110);
+
+    span {
+      background: linear-gradient(
+        to bottom,
+        #000 var(--gradient-angle),
+        #000 var(--gradient-angle1),
+        #49c2ff var(--gradient-angle2),
+        #49c2ff var(--gradient-angle3)
+      );
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      transform: scale(1.2);
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .bot {
+    font-size: pvw(30);
+    font-family: "Medium";
+    text-align: right;
+  }
+
+  .img {
+    flex: 1;
+    width: 100%;
+    height: pvw(780);
+    margin-top: pvw(60);
+    background: url("../../../assets/images/sec7Bg.png") no-repeat top center /
+      cover;
+    border-radius: pvw(30);
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec7 {
+    margin-top: mvw(320);
+    padding-bottom: mvw(320);
+
+    .mainContent {
+      max-height: unset;
+    }
+
+    .subTitle {
+      max-width: 90%;
+      font-family: "Bold";
+    }
+
+    .f2 {
+      margin-top: 0;
+    }
+
+    .subInfo {
+      max-width: 85%;
+      margin-top: mvw(20);
+      font-family: "Normal";
+    }
+
+    .params {
+      display: flex;
+      gap: mvw(201);
+      margin-top: mvw(24);
+    }
+
+    .top {
+      font-size: mvw(40);
+      line-height: calc(50 / 40);
+
+      span {
+        margin-left: mvw(8);
+      }
+    }
+
+    .bot {
+      margin-top: mvw(4);
+      font-size: mvw(20);
+      font-family: "Normal";
+      line-height: calc(25 / 20);
+    }
+
+    .img {
+      height: mvw(1040);
+      margin-top: mvw(32);
+      background: url("../../../assets/images/sec7mob.jpg") no-repeat top center /
+        cover;
+    }
+  }
+}
+
+@media screen and (max-height: pvw(1270)) {
+  .sec7 {
+    .mainContent {
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 54px);
+
+      .img {
+        flex: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: mvw(1384)) and (max-width: 751px) {
+  .sec7 {
+    .mainContent {
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 54px);
+
+      .img {
+        flex: 1;
+      }
+    }
+  }
+}

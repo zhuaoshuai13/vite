@@ -1,0 +1,29 @@
+@import "../var";
+
+.sec13 {
+  position: relative;
+  max-width: 66%;
+  height: calc(103vh);
+  margin: auto;
+  padding-top: pvw(0);
+
+  .colorText {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    inset: 0;
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec13 {
+    max-width: 70%;
+    height: fit-content;
+    padding: mvw(160) 0 mvw(200);
+
+    .colorText {
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,312 @@
+@import "../var";
+
+.sec10 {
+  margin-top: -1px;
+  padding-top: pvw(420);
+  padding-bottom: pvw(200);
+  background-color: rgba(17, 17, 17, 1);
+
+  .subTitle {
+    max-width: 30%;
+    margin-left: pvw(702);
+    color: #fff;
+    text-align: left;
+  }
+
+  .subInfo {
+    max-width: 80%;
+    margin-top: pvw(40);
+    margin-left: pvw(702);
+    color: #fff;
+    text-align: left;
+  }
+
+  .imgGroup {
+    min-height: pvw(750);
+    margin-top: pvw(81);
+  }
+
+  .inner {
+    display: flex;
+    gap: pvw(14);
+    width: fit-content;
+    padding-left: pvw(702);
+  }
+
+  .box {
+    flex-shrink: 0;
+  }
+
+  .bot {
+    display: flex;
+    gap: pvw(40);
+    align-items: center;
+    margin-top: pvw(43);
+  }
+
+  .name {
+    color: #fff;
+    font-size: pvw(30);
+    font-family: "Book";
+    line-height: calc(38 / 30);
+  }
+
+  .box1 {
+    .img {
+      width: pvw(860);
+      height: pvw(667);
+      background: url("../../../assets/images/sec10Portrait.png") no-repeat top
+        center / cover;
+      opacity: 1;
+    }
+
+    .icon {
+      width: pvw(41);
+      height: pvw(43);
+      background: url("../../../assets/images/sec10PortraitIcon.png") no-repeat
+        top center / cover;
+    }
+  }
+
+  .box2 {
+    .img {
+      width: pvw(336);
+      height: pvw(453);
+      background: url("../../../assets/images/sec10Building.png") no-repeat top
+        center / cover;
+      opacity: 0.5;
+    }
+
+    .icon {
+      width: pvw(45);
+      height: pvw(44);
+      background: url("../../../assets/images/sec10BuildingIcon.png") no-repeat
+        top center / cover;
+    }
+  }
+
+  .box3 {
+    .img {
+      width: pvw(607);
+      height: pvw(453);
+      background: url("../../../assets/images/sec10Sky.png") no-repeat top
+        center / cover;
+      opacity: 0.5;
+    }
+
+    .icon {
+      width: pvw(52);
+      height: pvw(33);
+      background: url("../../../assets/images/sec10SkyIcon.png") no-repeat top
+        center / cover;
+    }
+  }
+
+  .box4 {
+    .img {
+      width: pvw(336);
+      height: pvw(453);
+      background: url("../../../assets/images/sec10Beach.png") no-repeat top
+        center / cover;
+      opacity: 0.5;
+    }
+
+    .icon {
+      width: pvw(54);
+      height: pvw(54);
+      background: url("../../../assets/images/sec10BeachIcon.png") no-repeat top
+        center / cover;
+    }
+  }
+
+  .box5 {
+    .img {
+      width: pvw(607);
+      height: pvw(453);
+      background: url("../../../assets/images/sec10Food.png") no-repeat top
+        center / cover;
+      opacity: 0.5;
+    }
+
+    .icon {
+      width: pvw(39);
+      height: pvw(49);
+      background: url("../../../assets/images/sec10FoodIcon.png") no-repeat top
+        center / cover;
+    }
+  }
+
+  .box6 {
+    .img {
+      width: pvw(336);
+      height: pvw(453);
+      background: url("../../../assets/images/sec10Pet.png") no-repeat top
+        center / cover;
+      opacity: 0.5;
+    }
+
+    .icon {
+      width: pvw(40);
+      height: pvw(38);
+      background: url("../../../assets/images/sec10PetIcon.png") no-repeat top
+        center / cover;
+    }
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec10 {
+    padding-top: mvw(320);
+    padding-bottom: 0;
+
+    .subTitle {
+      max-width: 80%;
+      margin-left: mvw(34);
+    }
+
+    .subInfo {
+      max-width: 80%;
+      margin-top: mvw(20);
+      margin-left: mvw(34);
+    }
+
+    .imgGroup {
+      margin-top: mvw(32);
+    }
+
+    .inner {
+      gap: mvw(16);
+      margin-left: mvw(34);
+      padding-left: 0;
+    }
+
+    .box {
+      width: mvw(334);
+      opacity: 0.5;
+      transition: all 0.5s;
+
+      .img {
+        width: mvw(334);
+        height: mvw(400);
+        border-radius: mvw(10);
+        opacity: 1;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    .bot {
+      gap: mvw(14);
+      justify-content: center;
+      margin-top: mvw(40);
+    }
+
+    .name {
+      font-size: mvw(30);
+      font-family: "Normal";
+      line-height: calc(38 / 30);
+    }
+
+    .box1 {
+      .img {
+        background: url("../../../assets/images/sec10MobPortrait.png") no-repeat
+          top center / contain;
+      }
+
+      .icon {
+        width: mvw(41);
+        height: mvw(43);
+      }
+    }
+
+    .box2 {
+      .img {
+        background: url("../../../assets/images/sec10MobBuilding.png") no-repeat
+          top center / contain;
+      }
+
+      .icon {
+        width: mvw(45);
+        height: mvw(44);
+      }
+    }
+
+    .box3 {
+      .img {
+        background: url("../../../assets/images/sec10MobSky.png") no-repeat top
+          center / contain;
+      }
+
+      .icon {
+        width: mvw(52);
+        height: mvw(33);
+      }
+    }
+
+    .box4 {
+      .img {
+        background: url("../../../assets/images/sec10MobBeach.png") no-repeat
+          top center / contain;
+      }
+
+      .icon {
+        width: mvw(54);
+        height: mvw(54);
+      }
+    }
+
+    .box5 {
+      .img {
+        background: url("../../../assets/images/sec10MobFood.png") no-repeat top
+          center / contain;
+      }
+
+      .icon {
+        width: mvw(39);
+        height: mvw(49);
+      }
+    }
+
+    .box6 {
+      .img {
+        background: url("../../../assets/images/sec10MobPet.png") no-repeat top
+          center / contain;
+      }
+
+      .icon {
+        width: mvw(40);
+        height: mvw(38);
+      }
+    }
+
+    .btn {
+      display: flex;
+      gap: mvw(60);
+      margin-top: mvw(80);
+      margin-left: mvw(536);
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: mvw(60);
+        height: mvw(60);
+        background: url("../../../assets/images/sec10Left.png") no-repeat center /
+          contain;
+        border-radius: 50%;
+
+        &.dis {
+          background: url("../../../assets/images/sec10Dis.png") no-repeat
+            center / contain;
+        }
+      }
+    }
+
+    .right {
+      transform: rotate(180deg);
+      opacity: 0.8;
+    }
+  }
+}

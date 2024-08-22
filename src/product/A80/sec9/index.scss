@@ -1,0 +1,134 @@
+@import "../var";
+
+.sec9 {
+  position: relative;
+  z-index: 2;
+  margin-top: pvw(0);
+  padding-top: pvw(240);
+  text-align: left;
+  background-color: rgba(17, 17, 17, 1);
+
+  .imgGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: pvw(0);
+  }
+
+  .img {
+    width: pvw(816);
+    height: pvw(940);
+    overflow: hidden;
+    border-radius: pvw(30);
+  }
+
+  .f1 {
+    display: flex;
+    flex-direction: column;
+
+    .inner {
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/sec9Light.jpg") no-repeat top
+        center / cover;
+      background-position: center;
+    }
+  }
+
+  .f2 {
+    display: flex;
+    flex-direction: column;
+
+    .inner {
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/sec9Dark.jpg") no-repeat top
+        center / cover;
+      background-position: center;
+    }
+  }
+
+  .text {
+    margin-top: pvw(40);
+    color: rgba(73, 194, 255, 1);
+    font-size: pvw(50);
+    font-family: "Bold";
+    line-height: calc(63 / 50);
+  }
+
+  .desc {
+    margin-top: pvw(28);
+    color: #fff;
+    font-size: pvw(30);
+    font-family: "Medium";
+    line-height: calc(38 / 30);
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .sec9 {
+    padding-top: mvw(1);
+
+    .img {
+      order: 3;
+      width: 100%;
+      height: mvw(420);
+      margin-top: mvw(40);
+      border-radius: mvw(16);
+    }
+
+    .text {
+      order: 1;
+      margin-top: 0;
+      font-size: mvw(40);
+      font-family: "Medium";
+      line-height: calc(50 / 40);
+      text-align: center;
+    }
+
+    .desc {
+      order: 2;
+      margin-top: mvw(12);
+      font-size: mvw(24);
+      font-family: "Light";
+      line-height: calc(36 / 24);
+      text-align: center;
+    }
+
+    .f1 {
+      display: flex;
+      flex-direction: column;
+
+      .img {
+        margin-top: mvw(20);
+        background: url("../../../assets/images/sec9mobLight.jpg") no-repeat top
+          center / cover;
+      }
+    }
+
+    .f2 {
+      display: flex;
+      flex-direction: column;
+
+      .img {
+        margin-top: mvw(20);
+        background: url("../../../assets/images/sec9mobDark.jpg") no-repeat top
+          center / cover;
+      }
+    }
+
+    .imgGroup {
+      flex-direction: column;
+      gap: mvw(60);
+      height: auto;
+      margin-top: mvw(320);
+    }
+  }
+}
+
+@media (max-height: pvw(1144)) {
+  .sec9 {
+    .imgGroup {
+      height: calc(100vh - 54px);
+    }
+  }
+}
