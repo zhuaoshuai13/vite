@@ -1,0 +1,52 @@
+@import '../vars';
+
+.s25ultra .sec2 {
+  .sec2_wrap {
+    position: relative;
+    height: px-to-vw(900);
+  }
+
+  .video_wrap {
+    height: 100%;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .text_wrap {
+    position: absolute;
+    top: px-to-vw(200);
+    width: 100%;
+
+    p {
+      line-height: 2;
+    }
+
+    p:nth-child(2) {
+      font-size: 75px;
+    }
+  }
+
+  .title_items {
+    font-size: px-to-vw(37.5);
+    text-align: center;
+  }
+
+  .video_play_btn {
+    position: absolute;
+    top: px-to-vw(637);
+    right: 0;
+    left: 0;
+    width: px-to-vw(64);
+    height: px-to-vw(64);
+    margin: 0 auto;
+    background-color: unset !important;
+    border: none !important;
+  }
+}
+
+@media (max-width: $mobwidthPx) {}

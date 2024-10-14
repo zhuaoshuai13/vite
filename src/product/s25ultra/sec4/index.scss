@@ -1,0 +1,68 @@
+@import '../vars';
+
+.s25ultra .sec4 {
+  .sec4_wrap {
+    position: relative;
+  }
+
+  .spec_part {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+
+    @include bg("pc/sec4_bg_pc.png");
+
+    background-size: 100% 100%;
+  }
+
+  .content_wrap {
+    position: relative;
+    height: 100vh;
+  }
+
+  .part {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: px-to-vw(40) 0;
+  }
+
+  .data_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: px-to-vw(50);
+  }
+
+  .data {
+    display: flex;
+    gap: px-to-vw(16);
+    align-items: center;
+    width: calc((100% - (px-to-vw(50) * 2)) / 3);
+
+    img {
+      width: px-to-vw(36);
+      height: fit-content;
+    }
+
+    .title {
+      font-size: px-to-vw(33);
+      font-family: "Medium";
+    }
+
+    .subtitle {
+      font-size: px-to-vw(16);
+    }
+  }
+
+  .part2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .corning_wrap {
+    width: px-to-vw(116);
+  }
+}
+
+@media (max-width: $mobwidthPx) {}

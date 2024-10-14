@@ -1,0 +1,79 @@
+@import '../vars';
+
+.s25ultra .sec6 {
+  overflow: unset;
+
+  .sec6_wrap {
+    position: relative;
+    height: px-to-vw(750);
+
+    @include bg("pc/sec6_bg_pc.png");
+  }
+
+  .part {
+    position: absolute;
+    top: px-to-vw(300);
+    width: 100%;
+  }
+
+  .part2,
+  .part3 {
+    opacity: 0;
+  }
+
+  .text_wrap {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .desc {
+    margin-top: px-to-vw(36);
+    font-size: px-to-vw(37.5);
+  }
+
+  .pic_wrap {
+    position: absolute;
+    top: px-to-vw(320);
+    right: 0;
+    left: 0;
+    width: px-to-vw(1222);
+    margin: 0 auto;
+  }
+
+  .phone_wrap {
+    width: px-to-vw(1222);
+  }
+
+  .hand_wrap {
+    position: absolute;
+    top: px-to-vw(-220);
+    right: 0;
+    width: px-to-vw(744);
+  }
+
+  .fingerprint_wrap {
+    position: absolute;
+    top: px-to-vw(45);
+    left: px-to-vw(800);
+    width: px-to-vw(137);
+  }
+
+  .fingerprintlight_wrap1 {
+    position: absolute;
+    top: 0;
+    left: px-to-vw(760);
+    width: px-to-vw(250);
+    opacity: .5;
+  }
+
+  .fingerprintlight_wrap2 {
+    position: absolute;
+    top: px-to-vw(-42);
+    left: px-to-vw(716);
+    width: px-to-vw(360);
+    opacity: .5;
+  }
+}
+
+@media (max-width: $mobwidthPx) {}

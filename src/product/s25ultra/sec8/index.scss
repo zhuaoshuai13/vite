@@ -1,0 +1,28 @@
+@import '../vars';
+
+.s25ultra .sec8 {
+  .sec8_wrap {
+    position: relative;
+    height: px-to-vw(1050);
+  }
+
+  .sec8_bg {
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .text_wrap {
+    position: absolute;
+    top: px-to-vw(80);
+    right: 0;
+    left: 0;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: $mobwidthPx) {}

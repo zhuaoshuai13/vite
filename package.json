@@ -15,6 +15,7 @@
     "@gsap/react": "^2.0.2",
     "gsap": "^3.12.1",
     "gsap-trial": "^3.12.1",
+    "lenis": "^1.1.13",
     "postcss-plugin": "^1.0.0",
     "react": "^16.14.0",
     "react-countup": "^6.4.2",

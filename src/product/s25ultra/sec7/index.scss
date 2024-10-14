@@ -1,0 +1,45 @@
+@import '../vars';
+
+.s25ultra .sec7 {
+  .sec7_wrap {
+    position: relative;
+  }
+
+  .spec_part {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .content_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .text_wrap {
+    position: relative;
+    z-index: 1;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .desc {
+    margin-top: px-to-vw(36);
+    font-size: px-to-vw(37.5);
+  }
+
+  .pic_wrap {
+    margin-top: px-to-vw(-230);
+  }
+
+  .phone2 {
+    position: absolute;
+    top: px-to-vw(200);
+    opacity: 0;
+  }
+}
+
+@media (max-width: $mobwidthPx) {}

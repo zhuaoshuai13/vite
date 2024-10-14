@@ -1,0 +1,39 @@
+@import '../vars';
+
+.s25ultra .sec5 {
+  .sec5_wrap {
+    position: relative;
+    height: px-to-vw(950);
+    padding: px-to-vw(50) 0;
+
+    @include bg("pc/sec5_bg_pc.png");
+
+    background-size: 100% 100%;
+  }
+
+  .text_wrap {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pic_wrap {
+    position: absolute;
+    top: px-to-vw(320);
+    left: px-to-vw(180);
+  }
+
+  .phone_wrap {
+    width: px-to-vw(1300);
+  }
+
+  .nit_wrap {
+    position: absolute;
+    top: px-to-vw(184);
+    right: px-to-vw(20);
+    width: px-to-vw(744);
+    opacity: .8;
+  }
+}
+
+@media (max-width: $mobwidthPx) {}

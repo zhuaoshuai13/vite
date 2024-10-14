@@ -1,0 +1,83 @@
+@import '../vars';
+
+.s25ultra .sec1 {
+  .sec1_wrap {
+    position: relative;
+    height: px-to-vw(850);
+
+    @include bg("pc/sec1_bg_pc.png");
+  }
+
+  .phone_wrap {
+    position: absolute;
+  }
+
+  .phone1 {
+    top: px-to-vw(30);
+    left: px-to-vw(1192);
+    width: px-to-vw(655);
+  }
+
+  .phone2 {
+    top: px-to-vw(90);
+    left: px-to-vw(870);
+    width: px-to-vw(535);
+  }
+
+  .phone3 {
+    top: px-to-vw(26);
+    left: px-to-vw(90);
+    width: px-to-vw(828);
+  }
+
+  .content_wrap {
+    position: absolute;
+    top: px-to-vw(700);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 px-to-vw(50);
+  }
+
+  .left {
+    display: flex;
+  }
+
+  .logo {
+    width: px-to-vw(309);
+  }
+
+  .icon_items {
+    display: flex;
+    gap: px-to-vw(30);
+
+    .item {
+      &:nth-child(1) {
+        width: px-to-vw(41);
+      }
+      
+      &:nth-child(2) {
+        width: px-to-vw(43);
+      }
+
+      &:nth-child(3) {
+        width: px-to-vw(26);
+      }
+      
+      &:nth-child(4) {
+        width: px-to-vw(66);
+      }
+      
+      &:nth-child(5) {
+        width: px-to-vw(38);
+      }
+      
+      &:nth-child(6) {
+        width: px-to-vw(56);
+      }
+    }
+  }
+}
+
+@media (max-width: $mobwidthPx) {}

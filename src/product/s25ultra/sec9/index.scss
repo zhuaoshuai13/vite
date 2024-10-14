@@ -1,0 +1,50 @@
+@import '../vars';
+
+.s25ultra .sec9 {
+  .sec9_wrap {
+    position: relative;
+    height: px-to-vw(1050);
+  }
+
+  .text_wrap {
+    position: absolute;
+    top: px-to-vw(80);
+    right: 0;
+    left: 0;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    text-align: right;
+  }
+
+  .pic_wrap {
+    position: absolute;
+    top: px-to-vw(178);
+    left: px-to-vw(415);
+  }
+
+  .stone1_wrap {
+    position: absolute;
+    bottom: 0;
+    width: px-to-vw(691);
+  }
+
+  .phone_wrap {
+    width: px-to-vw(880);
+  }
+
+  .stone2_wrap {
+    position: absolute;
+    bottom: px-to-vw(-8);
+    left: px-to-vw(476);
+    width: px-to-vw(211);
+  }
+
+  .stone3_wrap {
+    position: absolute;
+    bottom: px-to-vw(-152);
+    left: px-to-vw(-135);
+    width: px-to-vw(1289);
+  }
+}
+
+@media (max-width: $mobwidthPx) {}
