@@ -45,6 +45,29 @@
     left: px-to-vw(-135);
     width: px-to-vw(1289);
   }
+
+  .data_wrap {
+    display: flex;
+    gap: px-to-vw(72);
+    max-width: var(--content-width);
+    margin: 0 auto;
+
+    .title {
+      font-size: px-to-vw(50);
+      font-family: "Medium";
+
+      .unit {
+        font-size: px-to-vw(25);
+        font-family: "Bold";
+      }
+    }
+
+    .desc {
+      font-size: px-to-vw(16);
+      font-family: "Regular";
+      opacity: .8;
+    }
+  }
 }
 
 @media (max-width: $mobwidthPx) {}

@@ -2,25 +2,20 @@ const src = window.basic_assets_href
 window.src = src
 window.s25ultraConfig = {
   sec1: {
-    feature: [
+    data: [
       {
-        featureTitle: "108MP",
-        featureDesc: "Ultra Sensing <br /> Main Camera",
+        title: `6.78" AMOLED`,
+        desc: "Corning® Gorilla® <br/> Glass 7i ",
       },
       {
-        featureTitle: "5G",
-        featureDesc: "Powerful & High-Speed <br /> Processor",
+        title: "6.9mm",
+        desc: "Ultra Slim <br/> Design",
       },
       {
-        featureTitle: "5000mAh",
-        featureDesc: "Long-life Battery,  <br /> 33W Super Charge",
+        title: "512+16GB*",
+        desc: "(8+8GB) <br/> Extended RAM",
       },
     ],
-    slogn: src + "/images/sec1_slogn_pc.webp",
-    phone: {
-      pc: src + "/images/sec1_phone_pc.webp",
-      mb: src + "/images/mb/sec1_phone_mb.webp",
-    },
   },
   sec2: {
     text: [
@@ -157,5 +152,45 @@ window.s25ultraConfig = {
   sec9: {
     title: "Survives <br/> 25000 impacts",
     desc: "5 major TitanShield Protection technologies to comprehensively <br/> safeguard your beloved phone.",
+    data: [
+      {
+        title: "500",
+        unit: "times",
+        desc: "Rolling machine tests",
+      },
+      {
+        title: "2000",
+        unit: "times",
+        desc: "Extreme pressure tests",
+      },
+      {
+        title: "25000",
+        unit: "times",
+        desc: "Extreme micro drop tests",
+      },
+      {
+        title: "70/-40°C",
+        unit: "",
+        desc: "Extreme tests of ultra high/low temperatures",
+      },
+    ],
+  },
+  sec10: {
+    part1: {
+      title: "Silicone <br/> Sealing Rings",
+      desc: "In the S25 Ultra, silicone seals are applied to the edges of the screen and battery cover, as well as all external interfaces, offering comprehensive waterproofing and shock resistance.",
+    },
+    part2: {
+      title: "Integrated <br/> Metal Inner <br/> Frame",
+      desc: "During the die-casting process of the motherboard upper cover, we integrated metal strips to create a robust metal frame, significantly enhancing the device's resistance to bending compared to traditional designs.",
+    },
+    part3: {
+      title: "Racing-Chassis-Class <br/> Die-cast Mg-Al Material",
+      desc: "The S25 Ultra features an upper cover made from the same high-strength die-cast magnesium-aluminum material used in racing car chassis. This material's hardness far exceeds that of traditional stamped aluminum, making the entire device's structure more robust.",
+    },
+    part4: {
+      title: "Coated <br/> Protection Film",
+      desc: "The S25 Ultra has a backup plan, with a full-device coating that effectively prevents the seepage of water, sweat, and adhesives.",
+    },
   },
 }

@@ -18,18 +18,47 @@
   .content_wrap {
     position: relative;
     height: 100vh;
+
+    @include bg("pc/sec4_bg2_pc.png");
+
+    background-size: 100% 100%;
   }
 
   .part {
+    position: relative;
     max-width: var(--content-width);
     margin: 0 auto;
-    padding: px-to-vw(40) 0;
+    padding: px-to-vw(60) 0;
+  }
+
+  .phone_wrap {
+    position: absolute;
+    top: px-to-vw(360);
+    left: px-to-vw(45);
+    width: px-to-vw(1802);
+  }
+
+  .phone_mask_wrap {
+    position: absolute;
+    top: px-to-vw(300);
+    left: px-to-vw(240);
+    width: px-to-vw(1350);
+    opacity: 0;
   }
 
   .data_wrap {
+    position: absolute;
+    top: px-to-vw(740);
     display: flex;
     flex-wrap: wrap;
     gap: px-to-vw(50);
+    padding: px-to-vw(40) px-to-vw(90);
+    background: rgba(255, 255, 255, .2);
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    opacity: 0;
+    backdrop-filter: blur(10px);
   }
 
   .data {
@@ -58,10 +87,25 @@
     top: 0;
     right: 0;
     left: 0;
+    opacity: 0;
+  }
+
+  .bottom_wrap {
+    position: absolute;
+    top: px-to-vw(700);
+    left: 0;
+    max-width: px-to-vw(600);
   }
 
   .corning_wrap {
     width: px-to-vw(116);
+  }
+
+  .warranty_wrap {
+    position: absolute;
+    top: px-to-vw(90);
+    right: 0;
+    width: px-to-vw(249);
   }
 }
 

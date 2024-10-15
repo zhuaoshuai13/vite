@@ -1,4 +1,4 @@
-import { useContext, useRef, useState, useEffect } from "react"
+import React, { useContext, useRef, useState, useEffect } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -19,13 +19,25 @@ const Sec4 = () => {
     const tl = gsap
       .timeline()
       .to(".spec_part", { y: "-100%", ease: "power2.inOut" }, "a")
+      .from(".part1 .desc_16", { opacity: 0, ease: "power2.inOut" }, "b")
+      .from(
+        ".phone_wrap",
+        { x: "-20%", y: "-20%", scale: 1.2, ease: "power2.inOut" },
+        "b"
+      )
+      .to(".data_wrap1", { opacity: 1, ease: "power2.inOut" })
+      .to(".data_wrap1", { opacity: 0, ease: "power2.inOut" }, "c")
+      .to(".data_wrap2", { opacity: 1, ease: "power2.inOut" }, "c+=0.5")
+      .to(".part1", { opacity: 0, ease: "power2.inOut" }, "d")
+      .to(".part2", { opacity: 1, ease: "power2.inOut" }, "d+=0.5")
+      .to(".phone_mask_wrap", { opacity: 1, ease: "power2.inOut" }, "d+=0.5")
     ScrollTrigger.create({
       trigger: ".sec4_wrap",
       pin: true,
       start: `top 0%`,
-      end: "+=200%",
+      end: "+=400%",
       animation: tl,
-      scrub: true
+      scrub: true,
     })
   }
 
@@ -52,6 +64,12 @@ const Sec4 = () => {
           </div>
         </div>
         <div className='content_wrap'>
+          <div className='img_wrap phone_wrap'>
+            <img src={src + "/images/pc/sec4_phone_pc.png"} />
+          </div>
+          <div className='img_wrap phone_mask_wrap'>
+            <img src={src + "/images/pc/sec4_phone_mask_pc.png"} />
+          </div>
           <div className='part part1'>
             <div className='text_wrap'>
               <div
@@ -63,10 +81,10 @@ const Sec4 = () => {
                 dangerouslySetInnerHTML={{ __html: config.sec4.part1.desc }}
               ></p>
             </div>
-            <div className='data_wrap'>
+            <div className='data_wrap data_wrap1'>
               {config?.sec4?.part1?.data?.map((item: any, index: number) => (
-                <>
-                  <div className='data' key={index}>
+                <React.Fragment key={index}>
+                  <div className='data'>
                     <img src={src + "/images/pc/" + item.icon} />
                     <div className='data_text_wrap'>
                       <div className='title'>{item.title}</div>
@@ -74,13 +92,13 @@ const Sec4 = () => {
                     </div>
                   </div>
                   {index === 1 && <br />}
-                </>
+                </React.Fragment>
               ))}
             </div>
-            <div className='data_wrap'>
+            <div className='data_wrap data_wrap2'>
               {config?.sec4?.part2?.data?.map((item: any, index: number) => (
-                <>
-                  <div className='data' key={index}>
+                <React.Fragment key={index}>
+                  <div className='data'>
                     <img src={src + "/images/pc/" + item.icon} />
                     <div className='data_text_wrap'>
                       <div className='title'>{item.title}</div>
@@ -88,7 +106,7 @@ const Sec4 = () => {
                     </div>
                   </div>
                   {index === 1 && <br />}
-                </>
+                </React.Fragment>
               ))}
             </div>
           </div>
@@ -99,7 +117,7 @@ const Sec4 = () => {
                 dangerouslySetInnerHTML={{ __html: config?.sec4?.part2?.title }}
               ></div>
             </div>
-            <div>
+            <div className='bottom_wrap'>
               <div className='img_wrap corning_wrap'>
                 <img src={src + "/images/pc/sec4_corning_pc.png"} />
               </div>

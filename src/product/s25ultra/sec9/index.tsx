@@ -24,18 +24,30 @@ const Sec9 = () => {
         opacity: 0,
         ease: "power2.inOut",
       })
-      .from(".sec9_bg", {
-        opacity: 0,
-        ease: "power2.inOut",
-      }, "a")
-      .from(".stone1_wrap", {
-        opacity: 0,
-        ease: "power2.inOut",
-      }, "a")
-      .from(".stone2_wrap", {
-        opacity: 0,
-        ease: "power2.inOut",
-      }, "a")
+      .from(
+        ".sec9_bg",
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .from(
+        ".stone1_wrap",
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .from(
+        ".stone2_wrap",
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
       .from(".stone3_wrap", {
         opacity: 0,
         ease: "power2.inOut",
@@ -47,6 +59,14 @@ const Sec9 = () => {
       end: "+=300%",
       animation: tl,
       scrub: 0.2,
+    })
+
+    gsap.to(".stone3_wrap", {
+      y: -50,
+      duration: 1.5,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
     })
   }
 
@@ -86,6 +106,17 @@ const Sec9 = () => {
             className='desc_16'
             dangerouslySetInnerHTML={{ __html: config?.sec9?.desc }}
           ></p>
+        </div>
+        <div className='data_wrap'>
+          {config?.sec9?.data?.map((item: any, index: number) => (
+            <div className='data' key={index}>
+              <div className='title'>
+                {item.title}
+                {item.unit && <span className='unit'>{item.unit}</span>}
+              </div>
+              <div className='desc'>{item.desc}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

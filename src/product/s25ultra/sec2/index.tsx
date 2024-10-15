@@ -12,40 +12,33 @@ const Sec2 = () => {
   const { s25ultraConfig: config } = window as any
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
+  const [activeIndex, setActiveIndex] = useState(1)
+  const length = config?.sec2?.text.length
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
-  const sec1Ani = () => {
-    // const tl = gsap
-    //   .timeline()
-    //   .to(".title_items", { y: -100, ease: "power2.inOut" }, "a")
-
-    // ScrollTrigger.create({
-    //   trigger: ".sec2_wrap",
-    //   pin: true,
-    //   start: `top 0%`,
-    //   end: "+=2000",
-    //   animation: tl,
-    // })
-    // const titleList = gsap.utils.toArray(".sec2 .title_items p")
-    // titleList.forEach((item, index) =>
-    //   gsap.to(item, {
-    //     scrollTrigger: {
-    //       trigger: ".sec2_wrap",
-    //       scrub: true,
-    //       pin: true,
-    //       start: "top 0%",
-    //       end: "+=100%",
-    //     },
-    //     fontSize: 75,
-    //     ease: "none",
-    //   })
-    // )
+  const sec2Ani = () => {
+    const tl = gsap.timeline()
+    ScrollTrigger.create({
+      trigger: ".sec2_wrap",
+      pin: true,
+      start: `top 0%`,
+      end: "+=2000",
+      animation: tl,
+      onUpdate: (self) => {
+        const active = Math.round(self.progress * (length - 1))
+        if (active == 0) {
+          setActiveIndex(1)
+        } else {
+          setActiveIndex(active)
+        }
+      },
+    })
   }
 
   useGSAP(
     () => {
-      sec1Ani()
+      sec2Ani()
     },
     { scope: wrap }
   )
@@ -71,7 +64,9 @@ const Sec2 = () => {
         <div className='text_wrap'>
           <div className='title_items'>
             {config.sec2.text.map((item: string, index: number) => (
-              <p key={index}>{item}</p>
+              <p key={index} className={index === activeIndex ? "active" : ""}>
+                {item}
+              </p>
             ))}
           </div>
         </div>

@@ -42,10 +42,47 @@
 
   .left {
     display: flex;
+    gap: px-to-vw(28);
   }
 
   .logo {
     width: px-to-vw(309);
+  }
+
+  .data_wrap {
+    display: flex;
+    gap: px-to-vw(16);
+    align-items: flex-end;
+
+    .data_item {
+      position: relative;
+      display: flex;
+      gap: px-to-vw(8);
+      align-items: center;
+      padding-right: px-to-vw(16);
+
+      &:not(:last-child):after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: block;
+        width: 2px;
+        height: px-to-vw(27);
+        background-color: #e9798b;
+        transform: translateY(-50%);
+        content: "";
+      }
+    }
+
+    .title {
+      font-size: px-to-vw(26);
+      font-family: "Regular";
+    }
+
+    .desc {
+      font-size: px-to-vw(12);
+      font-family: "Regular";
+    }
   }
 
   .icon_items {
@@ -56,7 +93,7 @@
       &:nth-child(1) {
         width: px-to-vw(41);
       }
-      
+
       &:nth-child(2) {
         width: px-to-vw(43);
       }
@@ -64,15 +101,15 @@
       &:nth-child(3) {
         width: px-to-vw(26);
       }
-      
+
       &:nth-child(4) {
         width: px-to-vw(66);
       }
-      
+
       &:nth-child(5) {
         width: px-to-vw(38);
       }
-      
+
       &:nth-child(6) {
         width: px-to-vw(56);
       }

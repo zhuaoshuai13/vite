@@ -8,7 +8,7 @@ import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
-const Sec5 = () => {
+const Sec6 = () => {
   const { s25ultraConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
@@ -28,8 +28,28 @@ const Sec5 = () => {
       start: `top 0`,
       end: "+=400%",
       animation: tl,
-      scrub: true
-      // toggleActions: "play none none reverse",
+      scrub: true,
+      toggleActions: "play none none reverse",
+    })
+
+    const t2 = gsap
+      .timeline()
+      .from(".sec6 .part1 .hand_wrap", 1, {
+        x: "50%",
+        y: "-50%",
+        ease: "power4.inOut",
+      })
+      .from(".sec6 .part1 .circle_wrap", 1, {
+        opacity: 0,
+        ease: "power2.inOut",
+        repeat: -1,
+        yoyo: true,
+      })
+    ScrollTrigger.create({
+      trigger: ".sec6_wrap",
+      start: `top 50%`,
+      animation: t2,
+      toggleActions: "play none none reverse",
     })
   }
 
@@ -58,8 +78,8 @@ const Sec5 = () => {
             <div className='img_wrap phone_wrap'>
               <img src={src + "/images/pc/sec6_p1_pc.png"} />
             </div>
-            <div className='img_wrap nit_wrap'>
-              {/* <img src={src + "/images/pc/sec5_nit_pc.png"} /> */}
+            <div className='img_wrap circle_wrap'>
+              <img src={src + "/images/pc/sec6_circle_pc.png"} />
             </div>
           </div>
           <div className='img_wrap hand_wrap'>
@@ -123,4 +143,4 @@ const Sec5 = () => {
   )
 }
 
-export default Sec5
+export default Sec6

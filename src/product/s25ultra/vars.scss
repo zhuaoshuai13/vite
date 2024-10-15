@@ -4,6 +4,11 @@ $mobwidth: 10.8;
 $mobwidthPx: 1080px;
 
 @font-face {
+  font-family: 'Regular';
+  src: url('/src/assets/font/MarkOT.otf');
+}
+
+@font-face {
   font-family: 'Book';
   src: url('/src/assets/font/MarkOT-Book.otf');
 }

@@ -1,0 +1,80 @@
+@import '../vars';
+
+.s25ultra .sec10 {
+  .sec10_wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: px-to-vw(50) 0;
+  }
+
+  .pic_wrap {
+    position: relative;
+    width: px-to-vw(1320);
+    height: px-to-vw(700);
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .phone_items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .phone_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .text_items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .text_wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: px-to-vw(920);
+      height: 100%;
+      padding: px-to-vw(50) px-to-vw(60);
+      opacity: 0;
+    }
+
+    .text1,
+    .text2 {
+      justify-content: space-between;
+    }
+
+    .text3,
+    .text4 {
+      justify-content: flex-end;
+    }
+
+    .text1 {
+      max-width: px-to-vw(600);
+    }
+
+    .text2 {
+      max-width: px-to-vw(750);
+    }
+
+    .title {
+      font-size: px-to-vw(66);
+      font-family: "Medium";
+    }
+  }
+}
+
+@media (max-width: $mobwidthPx) {}

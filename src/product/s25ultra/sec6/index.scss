@@ -5,9 +5,13 @@
 
   .sec6_wrap {
     position: relative;
-    height: px-to-vw(750);
+
+    // height: px-to-vw(750);
+    height: 100vh;
 
     @include bg("pc/sec6_bg_pc.png");
+
+    background-size: 100% 100%;
   }
 
   .part {
@@ -50,6 +54,13 @@
     top: px-to-vw(-220);
     right: 0;
     width: px-to-vw(744);
+  }
+
+  .circle_wrap {
+    position: absolute;
+    top: px-to-vw(12);
+    left: px-to-vw(740);
+    width: px-to-vw(256);
   }
 
   .fingerprint_wrap {
