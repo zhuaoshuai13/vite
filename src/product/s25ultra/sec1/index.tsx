@@ -1,5 +1,5 @@
-import { useContext, useRef, useState, useEffect } from "react"
-import { ScreenContext } from "../../../provider"
+import { useRef } from "react"
+// import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
@@ -10,7 +10,7 @@ import "./index.scss"
 
 const Sec1 = () => {
   const { s25ultraConfig: config, src } = window as any
-  const { isPc } = useContext(ScreenContext)
+  // const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
   const { isLoaded } = UseImagesLoad([
     src + "/images/pc/sec1_p1_pc.png",

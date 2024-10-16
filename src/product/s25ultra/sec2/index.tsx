@@ -1,5 +1,5 @@
-import { useContext, useRef, useState, useEffect } from "react"
-import { ScreenContext } from "../../../provider"
+import { useRef, useState } from "react"
+// import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
@@ -10,7 +10,7 @@ import "./index.scss"
 
 const Sec2 = () => {
   const { s25ultraConfig: config } = window as any
-  const { isPc } = useContext(ScreenContext)
+  // const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
   const [activeIndex, setActiveIndex] = useState(1)
   const length = config?.sec2?.text.length

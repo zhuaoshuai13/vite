@@ -1,16 +1,16 @@
-import { useContext, useRef, useState, useEffect } from "react"
-import { ScreenContext } from "../../../provider"
+import { useRef } from "react"
+// import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
+// import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
 const Sec5 = () => {
   const { s25ultraConfig: config, src } = window as any
-  const { isPc } = useContext(ScreenContext)
+  // const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -62,11 +62,17 @@ const Sec5 = () => {
             dangerouslySetInnerHTML={{ __html: config?.sec5?.desc }}
           ></p>
         </div>
-        <div className="pic_wrap">
-          <div className="img_wrap phone_wrap">
+        <div className='pic_wrap'>
+          <div className='img_wrap phone_wrap'>
             <img src={src + "/images/pc/sec5_phone_pc.png"} />
           </div>
-          <div className="img_wrap nit_wrap">
+          <div className='phone_mask_wrap'>
+            <div className='img_wrap'>
+              <img src={src + "/images/pc/sec5_phone_mask_pc.png"} />
+            </div>
+            <div className="mask"></div>
+          </div>
+          <div className='img_wrap nit_wrap'>
             <img src={src + "/images/pc/sec5_nit_pc.png"} />
           </div>
         </div>

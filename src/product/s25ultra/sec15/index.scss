@@ -1,0 +1,37 @@
+@import '../vars';
+
+.s25ultra .sec15 {
+  .sec15_wrap {
+    position: relative;
+    height: px-to-vw(950);
+  }
+
+  .text_wrap {
+    position: absolute;
+    top: px-to-vw(160);
+    left: px-to-vw(360);
+    z-index: 1;
+    margin: 0 auto;
+  }
+
+  .text_wrap1 {
+    max-width: px-to-vw(600);
+
+    .desc_16 {
+      max-width: 92%;
+    }
+  }
+
+  .text_wrap2 {
+    opacity: 0;
+  }
+
+  .phone1 {
+    position: absolute;
+    top: 0;
+    left: px-to-vw(700);
+    width: px-to-vw(1132);
+  }
+}
+
+@media (max-width: $mobwidthPx) {}

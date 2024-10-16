@@ -84,9 +84,6 @@ const Sec10 = () => {
       // end: "+=300%",
       animation: tl,
       toggleActions: "play none none reverse",
-      onLeave: () => {
-        console.log(111111111111111)
-      },
     })
 
     const t2 = gsap

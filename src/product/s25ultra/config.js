@@ -193,4 +193,83 @@ window.s25ultraConfig = {
       desc: "The S25 Ultra has a backup plan, with a full-device coating that effectively prevents the seepage of water, sweat, and adhesives.",
     },
   },
+  sec11: {
+    spec_title: "EXCELLENCE IN AESTHETICS",
+    spec_desc:
+      "Draw inspiration from magical nature,  with the avanced aesthetics and craftsmanship, transform the S25 Ultra into a trendy item! ",
+    part1: {
+      title: "An elegant creation",
+      desc: "Fashion on one side, technology on the other. Combining natural inspiration with cutting-edge design concepts, advanced Optical Coating Process creates a dual texture of matte and glossy finishes, exuding a premium feel.",
+    },
+    part2: {
+      title: "A stylish creation",
+      desc: "The unique photochromic technology allows you to experience two distinctly different shades of Pearl Blue on your phone, showcasing the beauty of nature. Holding it is like holding a fashionable piece of art.",
+    },
+    color: [
+      {
+        title: "Meteor Titanium",
+        desc: "Inspired by meteors in space, it's as if a shooting star pierces the night sky, twinkling with an enigmatic glow.",
+      },
+      {
+        title: "Bromo Black",
+        desc: "Inspired by the basalt of Mount Bromo in Indonesia, it reflects the unique luster of basalt under the sunlight, resembling the shimmering stars in the night sky.",
+      },
+      {
+        title: "Komodo  Ocean",
+        desc: "Inspired by the Komodo Island of Indonesia, where the ocean transitions from light to deep blue under the sun, the S25 Ultra's back perfectly captures this shifting spectrum of colors.",
+      },
+    ],
+  },
+  sec12: {
+    title: "Sync your mood",
+    desc: "The RGB Ring Light provides different lighting effects to indicate various status messages and synchronizes its color changes with the rhythm of the music, perfectly integrating practicality and style.",
+    data: [
+      {
+        title: "Charging",
+      },
+      {
+        title: "Music",
+      },
+      {
+        title: "Notifications",
+      },
+      {
+        title: "Gaming",
+      },
+    ],
+  },
+  sec13: {
+    spec_title: "EXCELLENCE IN PERFORMANCE",
+    spec_desc: `The remarkable performance improvement,  coupled with effective software tuning, <br/> a "new phone" experience for many years.`,
+    part1: {
+      title: "60-month of smooth use",
+      desc: "After undergoing rigorous testing in the itel lab, this phone is guaranteed to be free of lag for 5 years. thanks to the powerful Virtual Memory Expansion Tech and Atom Storage Tech, you no longer need to worry about the phone's performance weakening over time.*",
+      data: [
+        {
+          subtitle: "Up to",
+          title: "16(8+8)GB RAM",
+          desc: "18 Apps running simultaneously.*",
+        },
+        {
+          subtitle: "Up to",
+          title: "512GB ROM",
+          desc: "Capable of storing 120,000+ photos*",
+        },
+      ],
+    },
+    part2: {
+      title: "Unleash the beast",
+      desc: "The S25 Ultra features a powerful octa-core processor with ARM Cortex-A75 up to 2.2Ghz, coupled with a Graphite cooling system, to fully unleash its performance and allow you to enjoy mainstream mobile games with ease.",
+    },
+  },
+  sec15: {
+    part1: {
+      title: "The powerhouse in  your hand",
+      desc: "The S25 Ultra comes with a massive 5000mAh battery and super fast charging of 18W. With smart charging protection, the battery can last for up to 4 years and endure an impressive 1000 charge cycles.*",
+    },
+    part2: {
+      title: "No gaming compromises",
+      desc: "The phone with Bypass Charging Tech can be powered directly without using the battery, ensuring a heat-free gaming or watching experience while charging simultaneously.*",
+    },
+  },
 }

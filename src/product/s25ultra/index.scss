@@ -71,7 +71,8 @@
   }
 
   .spec_text_wrap {
-    max-width: var(--content-width);
+    // max-width: var(--content-width);
+    max-width: px-to-vw(1250);
     margin: 0 auto;
     text-align: center;
   }

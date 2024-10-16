@@ -1,0 +1,58 @@
+@import '../vars';
+
+.s25ultra .sec13 {
+  .sec13_wrap {
+    position: relative;
+  }
+
+  .spec_part {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .content_wrap {
+    height: 100vh;
+  }
+  
+  .text_wrap {
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+
+  .part1 {
+    .text_wrap {
+      .desc_16 {
+        max-width: 43%;
+      }
+    }
+
+    .phone_wrap {
+      width: px-to-vw(1818);
+      margin: 0 0 0 auto;
+    }
+
+    .chip_wrap1 {
+      position: absolute;
+      top: px-to-vw(265);
+      left: px-to-vw(925);
+      width: px-to-vw(335);
+    }
+
+    .clip_light_circle_wrap1 {
+      position: absolute;
+      top: px-to-vw(463);
+      left: px-to-vw(866);
+      width: px-to-vw(423);
+    }
+
+    .clip_light_wrap1 {
+      position: absolute;
+      top: px-to-vw(286);
+      left: px-to-vw(845);
+      width: px-to-vw(446);
+    }
+  }
+}
+
+@media (max-width: $mobwidthPx) {}

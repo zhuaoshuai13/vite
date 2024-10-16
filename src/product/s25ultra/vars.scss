@@ -40,7 +40,7 @@ $mobwidthPx: 1080px;
 }
 
 @mixin bg($url, $size: true) {
-  background-image: url("../../../src/assets/s25ultra/images/#{$url}");
+  background-image: url("../../../../src/assets/s25ultra/images/#{$url}");
   background-repeat: no-repeat;
 
   @if $size == true {
