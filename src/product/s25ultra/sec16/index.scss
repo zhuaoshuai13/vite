@@ -1,0 +1,258 @@
+@import '../vars';
+
+.s25ultra .sec16 {
+  .sec16_wrap {
+    position: relative;
+  }
+
+  .spec_part {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .content_wrap {
+    position: relative;
+    height: 100vh;
+  }
+
+  .content_bg_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .part {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &:not(.part1) {
+      transform: translateX(100%);
+    }
+  }
+
+  .title_75 {
+    .desc {
+      margin-left: px-to-vw(16);
+      font-size: px-to-vw(25);
+    }
+  }
+
+  .data_wrap {
+    .data {
+      &:not(:first-child) {
+        margin-top: px-to-vw(12);
+      }
+    }
+
+    .data_title {
+      margin-right: px-to-vw(24);
+      font-size: px-to-vw(37.5);
+      font-family: "Medium";
+    }
+
+    .data_desc {
+      font-size: px-to-vw(25);
+      opacity: .6;
+    }
+  }
+
+  .box_wrap {
+    position: absolute;
+    right: 0;
+    bottom: px-to-vw(245);
+    left: 0;
+    width: px-to-vw(1320);
+    margin: 0 auto;
+  }
+
+  .next_wrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: px-to-vw(72);
+    height: px-to-vw(72);
+    cursor: pointer;
+  }
+
+  .part1 {
+    .text_wrap {
+      position: absolute;
+      top: px-to-vw(60);
+      left: px-to-vw(90);
+    }
+
+    .mp32_wrap {
+      position: absolute;
+      bottom: px-to-vw(445);
+      left: px-to-vw(970);
+      width: px-to-vw(652);
+    }
+
+    .mp50_wrap {
+      position: absolute;
+      bottom: px-to-vw(445);
+      left: px-to-vw(300);
+      width: px-to-vw(652);
+    }
+
+    .front_phone {
+      position: absolute;
+      bottom: 0;
+      left: px-to-vw(925);
+      width: px-to-vw(497);
+    }
+
+    .front_phone_shadow {
+      position: absolute;
+      bottom: 0;
+      left: px-to-vw(826);
+      width: px-to-vw(101);
+    }
+
+    .back_phone {
+      position: absolute;
+      bottom: 0;
+      left: px-to-vw(497);
+      width: px-to-vw(597);
+    }
+
+    .big_front_phone {
+      position: absolute;
+      bottom: px-to-vw(-1645);
+      left: px-to-vw(280);
+      width: px-to-vw(978);
+
+      // transform: translate(33%, -15.3%) scale(.68);
+    }
+
+    .mp32_line {
+      position: absolute;
+      bottom: px-to-vw(595);
+      left: px-to-vw(952);
+      width: 1px;
+      height: px-to-vw(180);
+      background-color: #000;
+    }
+  }
+
+  .part2 {
+    .text_wrap {
+      position: absolute;
+      top: 0;
+      left: px-to-vw(64);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: px-to-vw(480);
+      height: 100%;
+      padding: px-to-vw(60) 0;
+    }
+
+    .title {
+      font-size: px-to-vw(50);
+      font-family: "Medium";
+    }
+
+    .mp32_swiper {
+      position: absolute;
+      top: px-to-vw(60);
+      left: px-to-vw(570);
+      width: px-to-vw(620);
+    }
+
+    .swiper-slide-active {
+      z-index: 2;
+
+      .mp32_img {
+        transform: scale(1);
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .mp32_img {
+      position: relative;
+      width: px-to-vw(536);
+      transform: scale(.8);
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .4);
+        content: "";
+      }
+    }
+  }
+
+  .part3 {
+    .left_wrap {
+      position: absolute;
+      top: 0;
+      left: px-to-vw(64);
+      max-width: px-to-vw(600);
+      padding: px-to-vw(60) px-to-vw(60) px-to-vw(60) 0;
+    }
+
+    .right_wrap {
+      position: absolute;
+      top: 50%;
+      left: px-to-vw(660);
+      max-width: px-to-vw(600);
+      padding: px-to-vw(60) 0;
+      transform: translateY(-50%);
+    }
+
+    .title {
+      font-size: px-to-vw(50);
+      font-family: "Medium";
+    }
+
+    .mic_wrap {
+      position: absolute;
+      top: px-to-vw(375);
+      left: px-to-vw(60);
+    }
+
+    .smile_wrap {
+      position: absolute;
+      top: px-to-vw(500);
+      left: px-to-vw(370);
+    }
+
+    .icon_wrap {
+      text-align: center;
+
+      .img_wrap {
+        width: px-to-vw(82);
+        height: px-to-vw(82);
+        margin: 0 auto;
+      }
+    }
+
+    .icon_title {
+      margin-top: px-to-vw(10);
+      font-size: px-to-vw(16);
+      font-family: "Medium";
+    }
+  }
+}
+
+@media (max-width: $mobwidthPx) {}

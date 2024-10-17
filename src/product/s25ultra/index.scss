@@ -50,6 +50,11 @@
     vertical-align: baseline;
   }
 
+  button {
+    background-color: unset;
+    border: none;
+  }
+
   .mob {
     display: none;
   }
@@ -104,10 +109,6 @@
     font-size: px-to-vw(75);
     font-family: "Medium";
     line-height: 1.2;
-
-    span {
-      color: #95d6ab;
-    }
   }
 
   .desc_16 {

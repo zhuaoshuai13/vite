@@ -265,11 +265,70 @@ window.s25ultraConfig = {
   sec15: {
     part1: {
       title: "The powerhouse in  your hand",
-      desc: "The S25 Ultra comes with a massive 5000mAh battery and super fast charging of 18W. With smart charging protection, the battery can last for up to 4 years and endure an impressive 1000 charge cycles.*",
+      desc: "The S25 Ultra comes with a massive 5000mAh battery and super fast <br/> charging of 18W. With smart charging protection, the battery can last <br/> for up to 4 years and endure an impressive 1000 charge cycles.*",
     },
     part2: {
       title: "No gaming compromises",
-      desc: "The phone with Bypass Charging Tech can be powered directly without using the battery, ensuring a heat-free gaming or watching experience while charging simultaneously.*",
+      desc: "The phone with Bypass Charging Tech can be powered directly without using the battery, <br/> ensuring a heat-free gaming or watching experience while charging simultaneously.*",
     },
+  },
+  sec16: {
+    spec_title: "EXCELLENCE IN PHOTOGRAPHY",
+    spec_desc:
+      "Ultra-clear front and rear cameras, with specially crafted features and filters, <br/> turning everyone into a photography master.",
+    front: {
+      title: "32MP",
+      desc: "AI Selfie Camera",
+      data: [
+        { data_title: "", data_desc: "Aperture: f/2.2" },
+        { data_title: "", data_desc: "FOV: 88.9°" },
+      ],
+    },
+    back: {
+      title: "50MP",
+      desc: "Ultra-clear Camera",
+      data: [
+        { data_title: "", data_desc: "Aperture: f/1.6" },
+        { data_title: "", data_desc: "Pixel size: 0.64μm" },
+        { data_title: "Macro Lens", data_desc: "4cm Focus Distance" },
+      ],
+    },
+    part1: {},
+    part2: {
+      title: "Beauty in focus",
+      desc: "The leading 32MP AI Selfie Camera with large angle, which features AI Beauty 2.0, captures stunning selfies with exceptional detail and clarity, even in group photos.",
+    },
+    part3: {
+      title: "Clarity in every detail",
+      desc: "The best-in-class 50MP Ultra Clear Camera allows you to effortlessly capture clear and captivating photos in any complex environment, ranging from low light to backlight scenarios. Even better, you can capture your highlight moments by recording in 2K video!",
+      mic: {
+        title: "Support Voice Control Shutter",
+      },
+      smile: {
+        title: "Support Smile Shutter",
+      },
+    },
+  },
+  sec17: {
+    title: "Capture with flair",
+    desc: "Dare to integrate AI technology into mobile photography, creating three distinctive stylistic tone filters that allow your photos to effortlessly convey a variety of emotions and atmospheres. Coupled with the use of an exclusive master watermark, every snapshot you take is instantly transformed into a masterpiece.",
+    data: [
+      {
+        pic: "sec17_standard_pc.png",
+        mode: "Standard",
+      },
+      {
+        pic: "sec17_bright_pc.png",
+        mode: "Bright",
+      },
+      {
+        pic: "sec17_master_pc.png",
+        mode: "Master",
+      },
+    ],
+  },
+  sec18: {
+    title: "Capture with fun",
+    desc: "Embrace the fun of Vlogging with Dual-view Video Recording, effortlessly capturing both your reactions and the stunning scenery you're enjoying, or the engaging interactions with your friends.",
   },
 }

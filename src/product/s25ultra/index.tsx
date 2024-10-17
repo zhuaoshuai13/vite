@@ -20,8 +20,9 @@ import Sec12 from "./sec12"
 import Sec13 from "./sec13"
 // import Sec14 from "./sec14"
 import Sec15 from "./sec15"
-// import Sec16 from "./sec16"
-// import Sec17 from "./sec17"
+import Sec16 from "./sec16"
+import Sec17 from "./sec17"
+import Sec18 from "./sec18"
 import "./index.scss"
 
 const S25Ultra = () => {
@@ -75,6 +76,9 @@ const S25Ultra = () => {
         <Sec12 />
         <Sec13 />
         <Sec15 />
+        <Sec16 />
+        <Sec17 />
+        <Sec18 />
       </div>
     </ReactLenis>
   )

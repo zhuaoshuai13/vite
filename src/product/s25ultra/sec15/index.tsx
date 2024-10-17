@@ -18,14 +18,40 @@ const Sec15 = () => {
   const sec15Ani = () => {
     const tl = gsap
       .timeline()
-      // .to(".spec_part", 1, { y: "-100%", ease: "power2.inOut" })
-      // .from(".chip_wrap1", {
-      //   x: "-4%",
-      //   y: "42%",
-      //   rotate: "-7deg",
-      //   rotateX: "62deg",
-      //   ease: "power2.inOut",
-      // })
+      .to(
+        ".phone1",
+        {
+          x: "-24%",
+          y: "24%",
+          rotate: "44.5deg",
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .to(
+        ".text_wrap1",
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .to(
+        ".text_wrap2",
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .to(
+        ".phone2",
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
     ScrollTrigger.create({
       trigger: ".sec15_wrap",
       pin: true,
@@ -70,9 +96,12 @@ const Sec15 = () => {
             dangerouslySetInnerHTML={{ __html: config?.sec15?.part2?.desc }}
           ></p>
         </div>
-        <div className="pic_wrap">
-          <div className="img_wrap phone1">
+        <div className='pic_wrap'>
+          <div className='img_wrap phone1'>
             <img src={src + "/images/pc/sec15_p1_pc.png"} />
+          </div>
+          <div className='img_wrap phone2'>
+            <img src={src + "/images/pc/sec15_p2_pc.png"} />
           </div>
         </div>
       </div>

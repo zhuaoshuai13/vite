@@ -15,7 +15,7 @@
   }
 
   .text_wrap1 {
-    max-width: px-to-vw(600);
+    max-width: px-to-vw(700);
 
     .desc_16 {
       max-width: 92%;
@@ -28,9 +28,17 @@
 
   .phone1 {
     position: absolute;
-    top: 0;
-    left: px-to-vw(700);
+    top: px-to-vw(100);
+    left: px-to-vw(780);
     width: px-to-vw(1132);
+  }
+
+  .phone2 {
+    position: absolute;
+    top: px-to-vw(370);
+    left: px-to-vw(340);
+    width: px-to-vw(1254);
+    opacity: 0;
   }
 }
 

@@ -1,0 +1,19 @@
+@import '../vars';
+
+.s25ultra .sec18 {
+  .sec18_wrap {
+    padding: 0 0 px-to-vw(100);
+  }
+
+  .text_wrap {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pic_wrap {
+    height: px-to-vw(600);
+  }
+}
+
+@media (max-width: $mobwidthPx) {}
