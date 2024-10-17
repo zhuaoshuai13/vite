@@ -38,8 +38,8 @@ const Sec4 = ({ useGSAP, gsap, config, responsive }: ComponentType) => {
             opacity: 0,
             ease: "sine.inOut",
             yoyo: true,
-            repeat: 5,
-            duration: 0.3,
+            repeat: 8,
+            duration: 0.4,
             onComplete: function () {
               gsap.set(".title-line-box", { opacity: 1, duration: 0.5 }) // 将属性设置回初始状态
             },
@@ -126,8 +126,8 @@ const Sec4 = ({ useGSAP, gsap, config, responsive }: ComponentType) => {
             opacity: 0,
             ease: "sine.inOut",
             yoyo: true,
-            repeat: 5,
-            duration: 0.3,
+            repeat: 8,
+            duration: 0.4,
             onComplete: function () {
               gsap.set(".title-line-box", { opacity: 1, duration: 0.5 }) // 将属性设置回初始状态
             },
@@ -151,8 +151,8 @@ const Sec4 = ({ useGSAP, gsap, config, responsive }: ComponentType) => {
           })
 
           gsap.to(".phoneGai", {
-            y: -30,
-            x: 30,
+            y: -15,
+            x: 15,
             ease: "sine.inOut",
             scrollTrigger: {
               trigger: ".sec4-title-box",
@@ -162,20 +162,20 @@ const Sec4 = ({ useGSAP, gsap, config, responsive }: ComponentType) => {
             },
           })
 
-          gsap.from(".phoneMask", {
-            opacity: 0,
-            ease: "sine.inOut",
-            scrollTrigger: {
-              trigger: ".sec4-title-box",
-              start: "top bottom-=100",
-              end: "+=300",
-              scrub: 1,
-            },
-          })
+          // gsap.from(".phoneMask", {
+          //   opacity: 0,
+          //   ease: "sine.inOut",
+          //   scrollTrigger: {
+          //     trigger: ".sec4-title-box",
+          //     start: "top bottom-=100",
+          //     end: "+=300",
+          //     scrub: 1,
+          //   },
+          // })
 
           gsap.to(".phoneLight", {
-            y: -30,
-            x: 30,
+            y: -15,
+            x: 15,
             clipPath: "circle(100% at center)",
             ease: "sine.inOut",
             scrollTrigger: {
@@ -201,7 +201,7 @@ const Sec4 = ({ useGSAP, gsap, config, responsive }: ComponentType) => {
             <div className='phoneGai'></div>
             <div className='phoneLight'></div>
             <div className='phone-inner'></div>
-            <div className='phoneMask mb'></div>
+            {/* <div className='phoneMask mb'></div> */}
           </div>
         </div>
         <div className='sec4-title-box'>

@@ -136,9 +136,9 @@
 
   .top {
     display: flex;
-    gap: px-to-vw(220);
-    width: fit-content;
+    gap: px-to-vw(56);
     margin: auto;
+    padding-left: px-to-vw(330);
 
     .title {
       width: px-to-vw(480);
@@ -150,6 +150,7 @@
     position: relative;
     width: px-to-vw(1628);
     height: px-to-vw(780);
+    height: pvh(780);
     margin: auto;
     margin-top: px-to-vw(-60);
     overflow: hidden;
@@ -184,7 +185,7 @@
     .phoneA {
       z-index: 2;
       width: px-to-vw(1628);
-      height: px-to-vw(780);
+      height: pvh(780);
       background: url("../../../assets/images/sec5PhoneB.png") no-repeat center /
         contain;
     }
@@ -193,7 +194,7 @@
       top: px-to-vw(1);
       z-index: 8;
       width: px-to-vw(1628);
-      height: px-to-vw(780);
+      height: pvh(780);
       background: url("../../../assets/images/sec5PhoneOut.png") no-repeat
         center / contain;
       clip-path: inset(0 60% 0 0);
@@ -202,17 +203,17 @@
     .phoneB {
       z-index: 3;
       width: px-to-vw(1628);
-      height: px-to-vw(780);
+      height: pvh(780);
       background: url("../../../assets/images/sec5PhoneA.png") no-repeat center /
-        cover;
+        contain;
     }
 
     .phoneC {
       z-index: 4;
       width: px-to-vw(1628);
-      height: px-to-vw(780);
+      height: pvh(780);
       background: url("../../../assets/images/sec5PhoneC.png") no-repeat center /
-        cover;
+        contain;
     }
 
     .phoneAText {
@@ -225,10 +226,14 @@
       gap: px-to-vw(30);
       width: px-to-vw(513);
       height: px-to-vw(628);
+      height: pvh(628);
       padding-top: px-to-vw(120);
+      padding-top: 5%;
       padding-left: px-to-vw(140);
+      padding-left: 8.5%;
       background: url("../../../assets/images/sec5Mask.png") no-repeat center /
-        cover;
+        contain;
+      background-position: left;
 
       div {
         width: unset;
@@ -241,13 +246,14 @@
 
         .img {
           height: px-to-vw(81);
+          height: pvh(81);
         }
       }
 
       .f1 {
         .img {
           width: px-to-vw(146);
-          background: url("../../../assets/images/sec57.png") no-repeat center /
+          background: url("../../../assets/images/sec57.png") no-repeat left /
             cover;
         }
       }
@@ -255,7 +261,7 @@
       .f2 {
         .img {
           width: px-to-vw(117);
-          background: url("../../../assets/images/sec531.png") no-repeat center /
+          background: url("../../../assets/images/sec531.png") no-repeat left /
             cover;
         }
       }
@@ -263,7 +269,7 @@
       .f3 {
         .img {
           width: px-to-vw(160);
-          background: url("../../../assets/images/sec5105.png") no-repeat center /
+          background: url("../../../assets/images/sec5105.png") no-repeat left /
             cover;
         }
       }
@@ -271,7 +277,7 @@
       .f4 {
         .img {
           width: px-to-vw(115);
-          background: url("../../../assets/images/sec518.png") no-repeat center /
+          background: url("../../../assets/images/sec518.png") no-repeat left /
             cover;
         }
       }
@@ -304,6 +310,7 @@
 
   .sec6-title-box {
     position: relative;
+    margin-top: px-to-vw(50);
 
     .title-b {
       position: absolute;
@@ -320,6 +327,10 @@
 @media screen and (max-width: 768px) {
   .sec6 {
     margin-top: mvw(-15);
+
+    .sec6-title-box {
+      margin-top: 0;
+    }
 
     .sec6-wrapper {
       height: mvw(426);
@@ -449,6 +460,7 @@
     .top {
       flex-direction: column;
       margin-left: mvw(28);
+      padding-left: 0;
 
       .title {
         width: 90%;
@@ -497,7 +509,7 @@
 
     .sec6-box {
       width: mvw(750);
-      height: mvw(447);
+      height: mvw(493);
       margin-top: mvw(20);
       background: url("../../../assets/images/sec5MobBox.png") no-repeat center /
         contain;
@@ -505,25 +517,34 @@
       .phoneA {
         width: 100%;
         height: 100%;
-        background: url("../../../assets/images//sec5PhoneMobB.png") no-repeat
+        background: url("../../../assets/images/sec5PhoneMobB.png") no-repeat
           center / contain;
       }
 
       .phoneB {
         width: 100%;
         height: 100%;
-        background: url("../../../assets/images//sec5PhoneMobA.png") no-repeat
+        background: url("../../../assets/images/sec5PhoneMobA.png") no-repeat
           center / contain;
       }
 
       .phoneC {
         width: 100%;
         height: 100%;
-        background: url("../../../assets/images//sec5PhoneMobC.png") no-repeat
+        background: url("../../../assets/images/sec5PhoneMobC.png") no-repeat
+          center / contain;
+      }
+
+      .phoneOut {
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/sec5MobPhoneOut.png") no-repeat
           center / contain;
       }
 
       .bigText {
+        top: mvw(146);
+        bottom: unset;
         width: mvw(462);
         height: mvw(123);
         background: url("../../../assets/images/sec5MobBigText.png") no-repeat
@@ -536,6 +557,8 @@
       }
 
       .phoneAText {
+        top: mvw(10);
+        left: mvw(50);
         gap: mvw(12);
         width: mvw(224);
         height: mvw(390);
@@ -553,7 +576,7 @@
 
         .do {
           margin-top: mvw(-20);
-          margin-left: mvw(17);
+          margin-left: mvw(20);
           color: #fefefe;
           font-size: mvw(20);
           font-family: "Light";
@@ -564,7 +587,7 @@
             width: mvw(128);
             height: mvw(71);
             background: url("../../../assets/images/sec5Mob7.png") no-repeat
-              center / contain;
+              left / cover;
           }
         }
 
@@ -573,7 +596,7 @@
             width: mvw(103);
             height: mvw(72);
             background: url("../../../assets/images/sec5Mob31.png") no-repeat
-              center / contain;
+              left / cover;
           }
         }
 
@@ -582,7 +605,7 @@
             width: mvw(142);
             height: mvw(71);
             background: url("../../../assets/images/sec5Mob105.png") no-repeat
-              center / contain;
+              left / cover;
           }
         }
 
@@ -591,7 +614,7 @@
             width: mvw(101);
             height: mvw(72);
             background: url("../../../assets/images/sec5Mob18.png") no-repeat
-              center / contain;
+              left / cover;
           }
         }
       }

@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 
 import Title from "../components/title"
 import "./index.scss"
@@ -15,11 +15,52 @@ const Sec6 = ({
   responsive,
 }: ComponentType) => {
   const container = useRef<HTMLDivElement>(null)
+  const text = useRef<HTMLDivElement>(null)
   const load = UseObservable(container)
 
   useGSAP(
     () => {
       if (container.current) {
+        gsap.from(".title", {
+          opacity: 0,
+          y: 60,
+          ease: "sine.inOut",
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom-=100",
+            end: "+=100",
+            scrub: 0.5,
+          },
+        })
+
+        gsap.from(".line", {
+          opacity: 0,
+          y: 60,
+          ease: "sine.inOut",
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom-=100",
+            end: "+=100",
+            scrub: 0.5,
+          },
+        })
+
+        gsap.from(".line-box", {
+          opacity: 0,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: 8,
+          duration: 0.4,
+          onComplete: function () {
+            gsap.set(".line-box", { opacity: 1, duration: 0.5 }) // 将属性设置回初始状态
+          },
+
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom+=100",
+            toggleActions: "restart none none reverse",
+          },
+        })
         if (responsive?.md) {
           gsap.to(".sec6-text", {
             className: "sec6-text title-active",
@@ -51,9 +92,13 @@ const Sec6 = ({
 
         gsap.from(".bigText", {
           x: "-100%",
+          opacity: 0,
+          // duration: 1,
           scrollTrigger: {
-            trigger: ".bigText",
-            start: "top bottom",
+            trigger: ".sec6-content",
+            start: "top center",
+            end: "top top",
+            scrub: true,
             toggleActions: "restart none none reverse",
           },
         })
@@ -79,6 +124,8 @@ const Sec6 = ({
         })
 
         const tl = gsap.timeline()
+        // bigText固定一会儿
+        tl.to(".bigText", { className: "bigText bigTexta" }, "z")
         // A出现
         tl.from(".phoneA", { opacity: 0 }, "a")
         tl.to(".bigText", { opacity: 0 }, "a")
@@ -90,28 +137,30 @@ const Sec6 = ({
         tl.from(".phoneAText .f3", { opacity: 0, y: 20 }, "g+=.3")
         tl.from(".phoneAText .f4", { opacity: 0, y: 20 }, "g+=.4")
 
-        // B出现
-        tl.to(".phoneAText", { opacity: 0 }, "b")
-        tl.to(".phoneA", { opacity: 0 }, "b")
-
-        tl.from(".phoneB", { opacity: 0 }, "b")
+        // B文字出现
         tl.to(".title-a", { opacity: 0, y: -30 }, "b")
         tl.from(".title-b", { opacity: 0, y: 30 }, "b+=.2")
         tl.to(".sec6-info-a .subTitle", { opacity: 0, y: -30 }, "b")
         tl.to(".sec6-info-a .info", { opacity: 0, y: -30 }, "b+=.2")
         tl.from(".sec6-info-b .subTitle", { opacity: 0, y: 30 }, "b+=.1")
         tl.from(".sec6-info-b .info", { opacity: 0, y: 30 }, "b+=.3")
+        // B图出现
+        tl.to(".phoneAText", { opacity: 0 }, "m")
+        tl.to(".phoneA", { opacity: 0 }, "m")
+        tl.from(".phoneB", { opacity: 0 }, "m")
 
-        // C出现
-        tl.to(".phoneB", { opacity: 0 }, "c")
+        // tl.to(".title-b", { opacity: 1 }, "k")
 
-        tl.from(".phoneC", { opacity: 0 }, "c")
+        // C文字出现
         tl.to(".title-b", { opacity: 0, y: -30 }, "c")
         tl.from(".title-c", { opacity: 0, y: 30 }, "c+=.2")
         tl.to(".sec6-info-b .subTitle", { opacity: 0, y: -30 }, "c")
         tl.to(".sec6-info-b .info", { opacity: 0, y: -30 }, "c+=.2")
         tl.from(".sec6-info-c .subTitle", { opacity: 0, y: 30 }, "c+=.1")
         tl.from(".sec6-info-c .info", { opacity: 0, y: 30 }, "c+=.3")
+        // C图片出现
+        tl.to(".phoneB", { opacity: 0 }, "x")
+        tl.from(".phoneC", { opacity: 0 }, "x")
 
         tl.to(".title-c", { opacity: 1 }, "d")
 
@@ -132,6 +181,27 @@ const Sec6 = ({
     },
     { dependencies: [responsive?.md], scope: container, revertOnUpdate: true }
   )
+
+  useEffect(() => {
+    // 真实宽度
+    let wid = 0
+
+    // 本来的宽度
+    console.log((1628 / 1920) * window.innerWidth)
+    const wh = (780 / 1920) * window.innerWidth
+    const hh = (780 / 1080) * window.innerHeight
+    if (hh < wh) {
+      wid = (1628 / 780) * hh
+      // 计算真实left
+      const left = ((1628 / 1920) * window.innerWidth - wid) / 2
+      if (text.current) {
+        text.current.style.left = `${Math.floor(left) + 7}px`
+      }
+    }
+
+    // console.log(nw)
+    // console.log(nh)
+  }, [])
   return (
     <div className={`sec6 imgLoad${load}`} ref={container}>
       <div className='out'>
@@ -206,34 +276,34 @@ const Sec6 = ({
               <div className='phoneC'></div>
               <div className='phoneOut'></div>
               <div className='box'></div>
-              <div className='phoneAText'>
+              <div className='phoneAText' ref={text}>
                 <div className='f1 fcommon'>
                   <div className='imgGroup'>
                     <div className='img'></div>
-                    <div className='hours'>Hours</div>
+                    <div className='hours'>{config.sec6.hour}</div>
                   </div>
-                  <div className='do'>FPS Game</div>
+                  <div className='do'>{config.sec6.game}</div>
                 </div>
                 <div className='f2 fcommon'>
                   <div className='imgGroup'>
                     <div className='img'></div>
-                    <div className='hours'>Hours</div>
+                    <div className='hours'>{config.sec6.hour}</div>
                   </div>
-                  <div className='do'>Calling</div>
+                  <div className='do'>{config.sec6.calling}</div>
                 </div>
                 <div className='f3 fcommon'>
                   <div className='imgGroup'>
                     <div className='img'></div>
-                    <div className='hours'>Hours</div>
+                    <div className='hours'>{config.sec6.hour}</div>
                   </div>
-                  <div className='do'>Music</div>
+                  <div className='do'>{config.sec6.music}</div>
                 </div>
                 <div className='f4 fcommon'>
                   <div className='imgGroup'>
                     <div className='img'></div>
-                    <div className='hours'>Hours</div>
+                    <div className='hours'>{config.sec6.hour}</div>
                   </div>
-                  <div className='do'>Social Chat</div>
+                  <div className='do'>{config.sec6.social}</div>
                 </div>
               </div>
             </div>

@@ -17,40 +17,109 @@ const SecSlender = ({
   useGSAP(
     () => {
       if (container.current) {
+        gsap.from(".title", {
+          opacity: 0,
+          y: 60,
+          ease: "sine.inOut",
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom-=100",
+            end: "+=100",
+            scrub: 0.5,
+          },
+        })
+
+        gsap.from(".line", {
+          opacity: 0,
+          y: 60,
+          ease: "sine.inOut",
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom-=100",
+            end: "+=100",
+            scrub: 0.5,
+          },
+        })
+
+        gsap.from(".line-box", {
+          opacity: 0,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: 8,
+          duration: 0.4,
+          onComplete: function () {
+            gsap.set(".line-box", { opacity: 1, duration: 0.5 }) // 将属性设置回初始状态
+          },
+
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom+=100",
+            toggleActions: "restart none none reverse",
+          },
+        })
         gsap.from(".secSlenderTitle", {
           y: 90,
           opacity: 0,
           scrollTrigger: {
             trigger: ".secSlenderText",
-            start: "top bottom-=100",
+            start: "top bottom-=200",
             toggleActions: "restart none none reverse",
           },
         })
-        gsap.from(".text", {
-          scale: 2,
-          y: -60,
-          opacity: 0,
+        if (responsive?.md) {
+          gsap.from(".text", {
+            scale: 2,
+            y: -60,
+            opacity: 0,
+            duration: 1.2,
+            scrollTrigger: {
+              trigger: ".hand",
+              start: "top center-=200",
+              end: "+=300",
+              // scrub: true,
+              toggleActions: "restart none none reverse",
+            },
+          })
 
-          scrollTrigger: {
-            trigger: ".hand",
-            start: "top bottom-=100",
-            end: "+=300",
-            scrub: true,
-            toggleActions: "restart none none reverse",
-          },
-        })
+          gsap.from(".hand", {
+            x: -100,
+            opacity: 0,
+            duration: 1.2,
+            scrollTrigger: {
+              trigger: ".hand",
+              start: "top center-=200",
+              // scrub: true,
+              end: "+=200",
+              toggleActions: "restart none none reverse",
+            },
+          })
+        } else {
+          gsap.from(".text", {
+            scale: 2,
+            y: -60,
+            opacity: 0,
 
-        gsap.from(".hand", {
-          x: -100,
-          opacity: 0,
-          scrollTrigger: {
-            trigger: ".hand",
-            start: "top bottom-=100",
-            scrub: true,
-            end: "+=200",
-            toggleActions: "restart none none reverse",
-          },
-        })
+            scrollTrigger: {
+              trigger: ".top",
+              start: "top center",
+              end: "+=300",
+              scrub: true,
+              toggleActions: "restart none none reverse",
+            },
+          })
+
+          gsap.from(".hand", {
+            x: -100,
+            opacity: 0,
+            scrollTrigger: {
+              trigger: ".top",
+              start: "top center",
+              scrub: true,
+              end: "+=200",
+              toggleActions: "restart none none reverse",
+            },
+          })
+        }
       }
     },
     { dependencies: [responsive?.md], scope: container, revertOnUpdate: true }

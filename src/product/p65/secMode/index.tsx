@@ -16,26 +16,6 @@ const SecMode = ({
   useGSAP(
     () => {
       if (container.current) {
-        gsap.to(".open", {
-          top: `${computepx(-415)}`,
-          scrollTrigger: {
-            trigger: ".secModeWrapper",
-            start: `${responsive?.md ? "top center-=300" : "top center+=150"}`,
-            end: `${responsive?.md ? "top top" : "+=100"}`,
-            scrub: 1,
-          },
-        })
-
-        gsap.to(".down", {
-          bottom: `${computepx(-411)}`,
-          scrollTrigger: {
-            trigger: ".secModeWrapper",
-            start: `${responsive?.md ? "top center-=300" : "top center+=150"}`,
-            end: `${responsive?.md ? "top top" : "+=100"}`,
-            scrub: 1,
-          },
-        })
-
         gsap.from(".phone", {
           opacity: 0,
           scrollTrigger: {
@@ -66,13 +46,43 @@ const SecMode = ({
 
         const tl = gsap.timeline()
 
+        tl.to(
+          ".open",
+          {
+            duration: 100,
+            top: `${computepx(-415)}`,
+            // scrollTrigger: {
+            //   trigger: ".secModeWrapper .trigger",
+            //   start: `${responsive?.md ? "top bottom" : "top bottom"}`,
+            //   end: `${responsive?.md ? "top top" : "+=100"}`,
+            //   scrub: 1,
+            // },
+          },
+          "z"
+        )
+
+        tl.to(
+          ".down",
+          {
+            duration: 100,
+            bottom: `${computepx(-411)}`,
+            // scrollTrigger: {
+            //   trigger: ".secModeWrapper .trigger",
+            //   start: `${responsive?.md ? "top bottom" : "top bottom"}`,
+            //   end: `${responsive?.md ? "top top" : "+=100"}`,
+            //   scrub: 1,
+            // },
+          },
+          "z"
+        )
+
         tl.from(
           ".phone",
           {
             duration: 100,
             transform: "rotate3d(0, 0, 0, 0deg)",
-            top: "-400",
-            left: "800",
+            top: "-900",
+            left: "1800",
           },
           "a"
         )
@@ -99,7 +109,7 @@ const SecMode = ({
         ScrollTrigger.create({
           trigger: ".secModeWrapper",
           start: `${responsive?.md ? "top top" : "top center"}`,
-          end: `${responsive?.md ? "" : "top top"}`,
+          end: `${responsive?.md ? "+=2000" : "top top"}`,
           animation: tl,
           scrub: true,
           pin: responsive?.md,
@@ -112,6 +122,7 @@ const SecMode = ({
   return (
     <div className={`secMode imgLoad${load}`} ref={container}>
       <div className='secModeWrapper'>
+        <div className='trigger'></div>
         <div className='titlebox'>
           <div className='title-line'></div>
           <div className='title'>{config.sec14.title}</div>

@@ -18,6 +18,46 @@ const Sec8 = ({
   useGSAP(
     () => {
       if (container.current) {
+        gsap.from(".title", {
+          opacity: 0,
+          y: 60,
+          ease: "sine.inOut",
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom-=100",
+            end: "+=100",
+            scrub: 0.5,
+          },
+        })
+
+        gsap.from(".line", {
+          opacity: 0,
+          y: 60,
+          ease: "sine.inOut",
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom-=100",
+            end: "+=100",
+            scrub: 0.5,
+          },
+        })
+
+        gsap.from(".line-box", {
+          opacity: 0,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: 8,
+          duration: 0.4,
+          onComplete: function () {
+            gsap.set(".line-box", { opacity: 1, duration: 0.5 }) // 将属性设置回初始状态
+          },
+
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom+=100",
+            toggleActions: "restart none none reverse",
+          },
+        })
         gsap.to(".texta", {
           className: "texta title-active",
           // ease: "sine.inOut",
@@ -33,7 +73,7 @@ const Sec8 = ({
           // ease: "sine.inOut",
           scrollTrigger: {
             trigger: ".sec8-title-trigger",
-            start: "top bottom",
+            start: "top bottom-=150",
             toggleActions: "restart none none reverse",
           },
         })
@@ -58,93 +98,30 @@ const Sec8 = ({
           },
         })
 
-        gsap.from(".opneWrapper .f2", {
-          opacity: 0,
-          x: -10,
-          y: 10,
-          scrollTrigger: {
-            trigger: ".opneWrapper",
-            start: "top center+=20",
-            end: "top top",
-            toggleActions: "play none none reverse",
-            scrub: true,
-          },
-        })
-
-        gsap.from(".opneWrapper .f3", {
-          opacity: 0,
-          x: -10,
-          y: 10,
-          scrollTrigger: {
-            trigger: ".opneWrapper",
-            start: "top center+=100",
-            end: "top top",
-            toggleActions: "play none none reverse",
-            scrub: true,
-          },
-        })
-        gsap.from(".opneWrapper .f4", {
-          opacity: 0,
-          x: -10,
-          y: 10,
-          scrollTrigger: {
-            trigger: ".opneWrapper",
-            start: "top center+=80",
-            end: "top top",
-            toggleActions: "play none none reverse",
-            scrub: true,
-          },
-        })
-        gsap.from(".opneWrapper .f5", {
-          opacity: 0,
-          x: -10,
-          y: 10,
-          scrollTrigger: {
-            trigger: ".opneWrapper",
-            start: "top center+=60",
-            end: "top top",
-            toggleActions: "play none none reverse",
-            scrub: true,
-          },
-        })
-        gsap.from(".opneWrapper .f6", {
-          opacity: 0,
-          x: -10,
-          y: 10,
-          scrollTrigger: {
-            trigger: ".opneWrapper",
-            start: "top center+=40",
-            end: "top top",
-            toggleActions: "play none none reverse",
-            scrub: true,
-          },
-        })
-        gsap.from(".opneWrapper .f7", {
-          opacity: 0,
-          x: -10,
-          y: 10,
-          scrollTrigger: {
-            trigger: ".opneWrapper",
-            start: "top center+=20",
-            end: "top top",
-            toggleActions: "play none none reverse",
-            scrub: true,
-          },
-        })
-
         const tl = gsap.timeline()
+
+        tl.from(".opneWrapper .f2", { opacity: 0, x: -10, y: 10 }, "z")
+
+        tl.from(".opneWrapper .f3", { opacity: 0, x: -10, y: 10 }, "z+=.1")
+        tl.from(".opneWrapper .f4", { opacity: 0, x: -10, y: 10 }, "z+=.2")
+        tl.from(".opneWrapper .f5", { opacity: 0, x: -10, y: 10 }, "z+=.3")
+        tl.from(".opneWrapper .f6", { opacity: 0, x: -10, y: 10 }, "z+=.4")
+        tl.from(".opneWrapper .f7", { opacity: 0, x: -10, y: 10 }, "z+=.5")
+
         tl.to(".bigTitle", { opacity: 0, y: -30 }, "a")
         tl.to(".infoBox", { opacity: 0, y: -60 }, "a+=.2")
         tl.from(".phone", { left: 500, opacity: 0 }, "a+=.3")
         tl.to(".open", { opacity: 0, left: -500, scale: 0.8 }, "a+=.3")
         tl.to(".out", { className: "out active" }, "a+=.3")
-        tl.from(".infoBoxb", { opacity: 0, y: 60 }, "a+=.4")
+        if (responsive?.md) {
+          tl.from(".infoBoxb", { opacity: 0, y: 60 }, "a+=.4")
+        }
         tl.from(".bigTitleb", { opacity: 0, y: 60 }, "a+=.5")
 
         ScrollTrigger.create({
           trigger: ".content.pc",
           start: "top top",
-          end: "+=1200",
+          end: "+=3200",
           animation: tl,
           scrub: true,
           pin: true,
@@ -283,7 +260,7 @@ const Sec8 = ({
           opacity: 0,
           scrollTrigger: {
             trigger: ".textBox",
-            start: "top bottom-=270",
+            start: "top bottom-=300",
             toggleActions: "play none none reverse",
           },
         })
@@ -293,7 +270,7 @@ const Sec8 = ({
           opacity: 0,
           scrollTrigger: {
             trigger: ".textBox",
-            start: "top bottom-=290",
+            start: "top bottom-=310",
             toggleActions: "play none none reverse",
           },
         })

@@ -67,17 +67,19 @@ const SecOs = ({
           },
         })
 
-        const tl = gsap.timeline()
-        tl.from(".osBg", { y: 100 }, "a")
-        tl.to(".osBgBox", { y: -100 }, "b")
+        if (responsive?.md) {
+          const tl = gsap.timeline()
+          tl.from(".osBg", { y: 100 }, "a")
+          tl.to(".osBgBox", { y: -100 }, "b")
 
-        ScrollTrigger.create({
-          trigger: ".secOsWrapper",
-          start: "top bottom",
-          end: "top top",
-          animation: tl,
-          scrub: true,
-        })
+          ScrollTrigger.create({
+            trigger: ".secOsWrapper",
+            start: "top bottom",
+            end: "top top",
+            animation: tl,
+            scrub: true,
+          })
+        }
       }
     },
     { dependencies: [responsive?.md], scope: container, revertOnUpdate: true }

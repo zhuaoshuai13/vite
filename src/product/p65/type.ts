@@ -5,4 +5,5 @@ export type ComponentType = {
   ScrollTrigger?: any
   UseObservable?: any
   responsive?: any
+  out?: any
 }

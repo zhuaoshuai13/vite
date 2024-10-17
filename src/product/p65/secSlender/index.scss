@@ -41,9 +41,10 @@
   }
 
   .hand {
-    width: px-to-vw(1496);
-    height: px-to-vw(557);
-    margin-left: px-to-vw(-55);
+    width: px-to-vw(1920);
+    height: px-to-vw(995);
+    margin-top: px-to-vw(-520);
+    margin-left: px-to-vw(20);
 
     div {
       background: url("../../../assets/images/secSlenderHand.png") no-repeat
@@ -61,6 +62,7 @@
     .hand {
       width: mvw(750);
       height: mvw(231);
+      margin-top: 0;
 
       div {
         background: url("../../../assets/images/secSlenderMobHand.png")

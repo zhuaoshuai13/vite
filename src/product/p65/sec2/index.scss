@@ -1,22 +1,9 @@
 @import "../var";
 
-.a {
-  height: calc(100vh);
-  padding-top: 25vh;
-  overflow: hidden;
-  background-color: blue;
-}
-
-.b {
-  width: 3920px;
-  height: 50vh;
-  background: linear-gradient(to left, red, purple);
-}
-
 .sec2 {
   position: relative;
   z-index: 2;
-  margin-top: px-to-vw(-50);
+  margin-top: -1px;
   overflow: hidden;
 
   .sec2Wrapper {
@@ -448,7 +435,7 @@
     }
 
     .ffWrapper {
-      top: mvw(1185);
+      top: mvw(1186);
       bottom: unset;
       width: mvw(344);
       height: mvw(283);

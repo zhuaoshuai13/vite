@@ -6,6 +6,7 @@
   background-color: #080b0f;
 
   .secGameWrapper {
+    // height: pvh(1242);
     padding-top: px-to-vw(160);
     padding-bottom: px-to-vw(357);
     padding-left: px-to-vw(300);
@@ -66,16 +67,21 @@
 
   .game {
     position: absolute;
-    top: 0;
+
+    // top: pvh(50);
     bottom: 0;
     left: 0;
     width: 100%;
     height: px-to-vw(1242);
 
+    // height: pvh(1242);
+
     .in {
       position: relative;
       width: 100%;
       height: 100%;
+
+      // height: pvh(1242);
       background: url("../../../assets/images/secGameBg.png") no-repeat center /
         cover;
     }
@@ -86,6 +92,8 @@
       left: px-to-vw(685);
       width: px-to-vw(1051);
       height: px-to-vw(838);
+
+      // height: pvh(838);
       background: url("../../../assets/images/secGameHand.png") no-repeat center /
         cover;
     }
@@ -93,6 +101,8 @@
     .circleBox {
       position: absolute;
       top: px-to-vw(620);
+
+      // top: pvh(640);
       left: px-to-vw(850);
       width: px-to-vw(300);
       height: px-to-vw(300);
@@ -101,6 +111,8 @@
 
     .circleBoxB {
       top: px-to-vw(420);
+
+      // top: pvh(440);
       left: px-to-vw(1150);
     }
 
@@ -171,6 +183,8 @@
     width: px-to-vw(319);
     height: px-to-vw(112);
 
+    // height: pvh(112);
+
     .newLight {
       .btn {
         opacity: 1;
@@ -196,6 +210,8 @@
     z-index: 9;
     width: px-to-vw(319);
     height: px-to-vw(112);
+
+    // height: pvh(112);
   }
 
   .BoxC {
@@ -203,6 +219,8 @@
     z-index: 9;
     width: px-to-vw(319);
     height: px-to-vw(112);
+
+    // height: pvh(112);
   }
 
   .newLight {
@@ -221,6 +239,7 @@
       z-index: 7;
       background: url("../../../assets/images/mask.png") no-repeat center /
         contain;
+      opacity: 0.5 !important;
     }
 
     .btnLight {
@@ -228,6 +247,7 @@
       background: url("../../../assets/images/btnLight.png") no-repeat center /
         contain;
       opacity: 0;
+      animation: shine 2s linear infinite;
     }
 
     .btn {
@@ -242,6 +262,8 @@
       font-size: px-to-vw(25);
       font-family: "Book";
       line-height: px-to-vw(112);
+
+      // line-height: pvh(112);
       text-align: center;
       opacity: 0;
     }
@@ -254,6 +276,8 @@
     z-index: 9;
     width: px-to-vw(228) !important;
     height: px-to-vw(67) !important;
+
+    // height: pvh(67) !important;
     background: url("../../../assets/images/secGameLinea.png") no-repeat center /
       contain;
   }

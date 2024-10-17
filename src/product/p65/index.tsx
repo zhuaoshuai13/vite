@@ -1,7 +1,8 @@
-// import { useEffect } from "react"
+import { useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { TextPlugin } from "gsap/TextPlugin"
+import { ScrollToPlugin } from "gsap/all"
 import { EasePack } from "gsap/EasePack"
 import { useGSAP } from "@gsap/react"
 
@@ -18,6 +19,7 @@ import Sec5 from "./sec5"
 import Sec6 from "./sec6"
 import Sec7 from "./sec7"
 import Sec8 from "./sec8"
+import SecTitle from "./secTitle"
 import SecRom from "./secRom"
 import SecSpeed from "./secSpeed"
 import SecGame from "./secGame"
@@ -29,14 +31,17 @@ import SecZoom from "./secZoom"
 import SecAutomatic from "./secAutomatic"
 import SecOs from "./secOs"
 import SecNote from "./secNote"
+import FullVideo from "./fullVideo"
 
 import "./var.scss"
 
 const Index = () => {
   const { P65Config } = window as any
   const { responsive } = UseResponse()
+  const out = useRef<HTMLDivElement>(null)
 
   gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollToPlugin)
   // gsap.registerPlugin(ScrollSmoother)
   gsap.registerPlugin(TextPlugin)
   gsap.registerPlugin(EasePack)
@@ -56,10 +61,11 @@ const Index = () => {
     ScrollTrigger: ScrollTrigger,
     UseObservable: UseObservable,
     responsive: responsive,
+    out: out,
   }
 
   return (
-    <div>
+    <div className='p65' ref={out}>
       <CustomCursor />
       <Sec1 {...commonProps} />
       <Sec2 {...commonProps} />
@@ -69,6 +75,7 @@ const Index = () => {
       <Sec6 {...commonProps} />
       <Sec7 {...commonProps} />
       <Sec8 {...commonProps} />
+      <SecTitle {...commonProps} />
       <SecRom {...commonProps} />
       <SecSpeed {...commonProps} />
       <SecGame {...commonProps} />
@@ -80,6 +87,7 @@ const Index = () => {
       <SecAutomatic {...commonProps} />
       <SecOs {...commonProps} />
       <SecNote {...commonProps} />
+      <FullVideo {...commonProps} />
     </div>
   )
 }

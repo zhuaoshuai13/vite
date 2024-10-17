@@ -13,6 +13,7 @@ const Title = (prop: { children: ReactNode }) => {
   const container = useRef<HTMLDivElement>(null)
   useGSAP(
     () => {
+      return
       gsap.from(".title", {
         opacity: 0,
         y: 60,
@@ -41,8 +42,8 @@ const Title = (prop: { children: ReactNode }) => {
         opacity: 0,
         ease: "sine.inOut",
         yoyo: true,
-        repeat: 5,
-        duration: 0.3,
+        repeat: 8,
+        duration: 0.4,
         onComplete: function () {
           gsap.set(".line-box", { opacity: 1, duration: 0.5 }) // 将属性设置回初始状态
         },

@@ -187,6 +187,12 @@
     background-color: #080b0f;
 
     .secOsWrapper {
+      .osMask {
+        height: mvw(557);
+        background: url("../../../assets/images/secOsMobMask.png") no-repeat
+          center / cover;
+      }
+
       .osBox {
         height: mvw(526);
         background: url("../../../assets/images/secOsMobMask.png") no-repeat

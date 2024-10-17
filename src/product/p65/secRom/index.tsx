@@ -45,8 +45,8 @@ const SecRom = ({
           opacity: 0,
           ease: "sine.inOut",
           yoyo: true,
-          repeat: 5,
-          duration: 0.3,
+          repeat: 8,
+          duration: 0.4,
           onComplete: function () {
             gsap.set(".line-box", { opacity: 1, duration: 0.5 }) // 将属性设置回初始状态
           },
@@ -135,6 +135,7 @@ const SecRom = ({
         tl.to(".secRom-big", { opacity: 0 }, "a")
         tl.to(".secRom-light", { opacity: 0 }, "a")
         tl.from(".secRom-small", { opacity: 0, y: -200, scale: 1.3 }, "a")
+        tl.from(".secRom-Box", { className: "secRom-Box active" }, "a")
         tl.to(".secRom-text-a .secRom-title", { opacity: 0, y: -20 }, "a")
         tl.to(".secRom-text-a .secRom-big-title-a", { opacity: 0, y: -20 }, "a")
         tl.to(

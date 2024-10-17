@@ -1,6 +1,7 @@
 @import "../var";
 
 .sec3 {
+  position: relative;
   height: fit-content;
   margin: auto;
   margin-top: px-to-vw(-60);
@@ -177,6 +178,10 @@
     z-index: 4;
     width: fit-content;
     height: fit-content;
+
+    .mask {
+      opacity: 0.5;
+    }
   }
 
   .sec3-color-b-line {

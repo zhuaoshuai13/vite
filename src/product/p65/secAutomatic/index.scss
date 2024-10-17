@@ -10,7 +10,7 @@
     padding-top: px-to-vw(140);
     overflow: hidden;
     background: url("../../../assets/images/secAutomaticBg.png") no-repeat
-      center / contain;
+      center / cover;
 
     .content {
       display: flex;
@@ -42,9 +42,9 @@
         div {
           position: absolute;
           top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
+          left: px-to-vw(-4);
+          width: 101%;
+          height: 101%;
         }
       }
 
@@ -109,6 +109,30 @@
           transform: rotate(0deg);
         }
       }
+
+      .infoBox {
+        position: absolute;
+        top: px-to-vw(140);
+        left: px-to-vw(748);
+        z-index: 2;
+        width: px-to-vw(200);
+        height: px-to-vw(33);
+
+        &.infoBoxa {
+          background: url("../../../assets/images/secAutomaticinfoa.png")
+            no-repeat top center / contain;
+        }
+
+        &.infoBoxb {
+          background: url("../../../assets/images/secAutomaticinfob.png")
+            no-repeat top center / contain;
+        }
+
+        &.infoBoxc {
+          background: url("../../../assets/images/secAutomaticinfoc.png")
+            no-repeat top center / contain;
+        }
+      }
     }
 
     .right {
@@ -154,9 +178,10 @@
   .secAutomatic {
     .secAutomaticWrapper {
       height: mvw(1320);
+      min-height: 100vh;
       padding-top: mvw(150);
       background: url("../../../assets/images/secAutomaticMobBg.png") no-repeat
-        center / contain;
+        center / cover;
 
       .secAutomaticText {
         width: mvw(693);
@@ -197,6 +222,29 @@
 
       .left {
         padding-left: mvw(330);
+
+        .infoBox {
+          top: mvw(100);
+          left: mvw(423);
+          z-index: 2;
+          width: mvw(200);
+          height: mvw(33);
+
+          &.infoBoxa {
+            background: url("../../../assets/images/secAutomaticMobInfoa.png")
+              no-repeat top center / contain;
+          }
+
+          &.infoBoxb {
+            background: url("../../../assets/images/secAutomaticMobInfob.png")
+              no-repeat top center / contain;
+          }
+
+          &.infoBoxc {
+            background: url("../../../assets/images/secAutomaticMobInfoc.png")
+              no-repeat top center / contain;
+          }
+        }
 
         .photoWrapper {
           width: mvw(256);

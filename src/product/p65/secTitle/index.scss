@@ -1,0 +1,66 @@
+@import "../var";
+
+.secTitle {
+  position: relative;
+  height: px-to-vw(598);
+  margin-top: px-to-vw(-50);
+  background: url("../../../assets/images/secTitleBg.png") no-repeat center /
+    cover;
+
+  .text {
+    position: absolute;
+    top: px-to-vw(235);
+    left: px-to-vw(465);
+    width: px-to-vw(975);
+    height: px-to-vw(155);
+    background: url("../../../assets/images/secTitleText.png") no-repeat center /
+      cover;
+
+    &.title-active {
+      animation: flash-ant 0.3s;
+      animation-fill-mode: forwards;
+    }
+
+    &:after {
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    &:before {
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    &.title-active:before {
+      position: absolute;
+      left: 4px;
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/secTitleText.png") no-repeat
+        center / contain;
+      animation: noise-anim-2 0.5s 1 linear alternate-reverse,
+        disappear-ant 0.1s 0.5s forwards;
+      content: "";
+    }
+
+    &.title-active:after {
+      position: absolute;
+      left: -4px;
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/secTitleText.png") no-repeat
+        center / contain;
+      animation: noise-anim 0.5s 1 linear alternate-reverse,
+        disappear-ant 0.1s 0.5s forwards;
+      content: "";
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: px-to-vw(235);
+    left: px-to-vw(890);
+    width: px-to-vw(127);
+    height: px-to-vw(53);
+    background: url("../../../assets/images/sec5Icon.png") no-repeat center /
+      cover;
+  }
+}

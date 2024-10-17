@@ -5,7 +5,7 @@
 
   .sec7Wrapper {
     width: 100%;
-    height: px-to-vw(1181);
+    height: px-to-vw(947);
     background: url("../../../assets/images/sec6Bg.png") no-repeat center /
       cover;
   }
@@ -14,7 +14,7 @@
     display: flex;
     gap: px-to-vw(200);
     justify-content: flex-start;
-    padding-left: px-to-vw(330);
+    padding-left: px-to-vw(350);
   }
 
   .right {
@@ -74,15 +74,15 @@
 
   .video {
     position: relative;
-    width: px-to-vw(365);
-    height: px-to-vw(1003);
-    margin-top: px-to-vw(24);
+    width: px-to-vw(338);
+    height: px-to-vw(857);
+    margin-top: px-to-vw(35);
     background: url("../../../assets/images/sec6Phone.png") no-repeat center /
       contain;
 
     video {
-      width: px-to-vw(368);
-      height: px-to-vw(726);
+      width: px-to-vw(330);
+      height: px-to-vw(680);
       margin-top: px-to-vw(20);
       border-radius: px-to-vw(12);
     }
@@ -90,6 +90,7 @@
     .v2 {
       position: absolute;
       top: 0;
+      left: 0;
     }
   }
 
@@ -164,6 +165,16 @@
 
 @media screen and (max-width: 767px) {
   .sec7 {
+    .pin-spacer {
+      background: linear-gradient(
+        90deg,
+        #c6c7cc 0%,
+        #d0d1d6 36.98%,
+        #dadce1 69.9%,
+        #d8d8e0 100%
+      );
+    }
+
     margin-top: -1px;
 
     .videos {

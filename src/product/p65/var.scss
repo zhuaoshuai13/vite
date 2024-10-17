@@ -1,30 +1,6 @@
 $pcwidth: 19.2;
+$pcheight: 10.8;
 $mobwidth: 7.5;
-
-@font-face {
-  font-family: "Bold";
-  src: url("../../assets/font/MarkOT-Bold.otf");
-}
-
-@font-face {
-  font-family: "Medium";
-  src: url("../../assets/font/MarkOT-Medium.otf");
-}
-
-@font-face {
-  font-family: "Light";
-  src: url("../../assets/font/MarkOT-Light.otf");
-}
-
-@font-face {
-  font-family: "Book";
-  src: url("../../assets/font/MarkOT-Book.otf");
-}
-
-@font-face {
-  font-family: "Normal";
-  src: url("../../assets/font/MarkOT.otf");
-}
 
 @keyframes noise-anim-img {
   0% {
@@ -430,12 +406,19 @@ $mobwidth: 7.5;
   @return #{$value * calc(1 / $pcwidth)}vw;
 }
 
+@function pvh($value) {
+  /* stylelint-disable-next-line at-rule-empty-line-before */
+  @return #{$value * calc(1 / $pcheight)}vh;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.p65 {
   line-height: normal;
-  cursor: none;
 }
 
 .imgLoadfalse {

@@ -18,6 +18,46 @@ const Sec7 = ({
   useGSAP(
     () => {
       if (container.current) {
+        gsap.from(".title", {
+          opacity: 0,
+          y: 60,
+          ease: "sine.inOut",
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom-=100",
+            end: "+=100",
+            scrub: 0.5,
+          },
+        })
+
+        gsap.from(".line", {
+          opacity: 0,
+          y: 60,
+          ease: "sine.inOut",
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom-=100",
+            end: "+=100",
+            scrub: 0.5,
+          },
+        })
+
+        gsap.from(".line-box", {
+          opacity: 0,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: 8,
+          duration: 0.4,
+          onComplete: function () {
+            gsap.set(".line-box", { opacity: 1, duration: 0.5 }) // 将属性设置回初始状态
+          },
+
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom+=100",
+            toggleActions: "restart none none reverse",
+          },
+        })
         gsap.from(".sec7Text .subTitle div", {
           y: 60,
           opacity: 0,
@@ -63,21 +103,17 @@ const Sec7 = ({
         // B出现
         tl.to(".title-a", { opacity: 0, y: -30 }, "b")
         tl.from(".title-b", { opacity: 0, y: 30 }, "b+=.2")
-        tl.to(".v1", { opacity: 0 }, "b")
-        tl.from(".v2", { opacity: 0 }, "b+=.2")
         tl.to(".text-a .subTitle", { opacity: 0, y: -30 }, "b")
         tl.to(".text-a .info", { opacity: 0, y: -30 }, "b+=.2")
         tl.from(".text-b .subTitle", { opacity: 0, y: 30 }, "b+=.1")
         tl.from(".text-b .info", { opacity: 0, y: 30 }, "b+=.3")
+        tl.to(".v1", { opacity: 0 }, "c")
+        tl.from(".v2", { opacity: 0 }, "c+=.2")
 
         ScrollTrigger.create({
           trigger: ".sec7Wrapper",
 
-          start: `${
-            responsive?.md
-              ? "top top+=54"
-              : `top top+=${window.innerHeight * 0.1}`
-          }`,
+          start: `${responsive?.md ? "top top+=54" : `top top`}`,
           end: "+=1200",
           animation: tl,
           scrub: true,

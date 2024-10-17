@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 
 import { ComponentType } from "../type"
 
@@ -17,22 +17,22 @@ const Sec3 = ({
   const content = useRef<HTMLDivElement>(null)
   const wrapper = useRef<HTMLDivElement>(null)
   const load = UseObservable(container)
+  const btnA = useRef<HTMLDivElement>(null)
+  const btnB = useRef<HTMLDivElement>(null)
 
   useGSAP(
     () => {
       if (container.current && content.current && wrapper.current) {
-        console.log(content.current)
-        const { top: topWrapper } = wrapper.current.getBoundingClientRect()
+        // const { top: topWrapper } = wrapper.current.getBoundingClientRect()
 
-        const { height, top: topPin } = content.current.getBoundingClientRect()
-        console.log(topPin - topWrapper)
+        // const { height, top: topPin } = content.current.getBoundingClientRect()
 
-        const h = Number(height.toFixed(0))
-        const max = Number(window.innerHeight)
+        // const h = Number(height.toFixed(0))
+        // const max = Number(window.innerHeight)
 
-        const pinH = (max - h) / 2
+        // const pinH = (max - h) / 2
 
-        const dis = topPin - topWrapper - pinH
+        const dis = (560 / 1920) * window.innerWidth - 54
 
         gsap.to(".sec3-title-a", {
           className: "sec3-title-a title-active",
@@ -84,8 +84,8 @@ const Sec3 = ({
             opacity: 0,
             ease: "sine.inOut",
             yoyo: true,
-            repeat: 5,
-            duration: 0.3,
+            repeat: 8,
+            duration: 0.4,
             onComplete: function () {
               gsap.set(".title-line-box", { opacity: 1, duration: 0.5 }) // 将属性设置回初始状态
             },
@@ -157,7 +157,10 @@ const Sec3 = ({
             },
           })
           tl.to(".sec3-color-a-line", { opacity: 0 }, "b")
-          tl.to(".sec3-color-a .mask", { opacity: 1 }, "b")
+          tl.to(".sec3-color-a .mask", { opacity: 0.5 }, "b")
+          tl.to(".sec3-color-a .btn", { opacity: 0 }, "b")
+          tl.to(".sec3-color-a .btnText", { opacity: 0.5 }, "b")
+          tl.to(".sec3-color-a .btnLight", { display: "none" }, "b")
           tl.from(".sec3-color-a .mask", { filter: "blur(10px)" }, "b+=.5")
           tl.to(
             ".sec3-color-a .sec3-color-b-mask",
@@ -167,16 +170,10 @@ const Sec3 = ({
           tl.to(".sec3-color-b .mask", { filter: "blur(10px)" }, "b")
           tl.to(".sec3-color-b-line", { clipPath: "inset(0 0px 0 0px)" }, "c")
           tl.to(".sec3-color-b .mask", { opacity: 0 }, "c")
-          tl.to(".phonea", { opacity: "0" }, "d")
-          tl.to(".sec3-desc-title-control", { y: -60, opacity: 0 }, "a")
-          tl.to(
-            ".sec3-desc-info-control",
-            { y: -60, opacity: 0, delay: 0.2 },
-            "a"
-          )
-          tl.from(".sec3-desc-title-b", { opacity: 0, y: 30, delay: 0.4 }, "a")
-          tl.from(".sec3-desc-info-b", { opacity: 0, y: 30, delay: 0.5 }, "a")
-          tl.to(".sec3-content", { x: 0 }, "m")
+          tl.from(".sec3-color-b .btnText", { opacity: 0 }, "c")
+          tl.from(".sec3-color-b .btn", { opacity: 0 }, "c")
+          tl.from(".sec3-color-b .btnLight", { display: "none" }, "c")
+          tl.to(".phonea", { opacity: "0", duration: 0 }, "c+=.2")
         } else {
           gsap.from(".title-line", {
             opacity: 0,
@@ -206,8 +203,8 @@ const Sec3 = ({
             opacity: 0,
             ease: "sine.inOut",
             yoyo: true,
-            repeat: 5,
-            duration: 0.3,
+            repeat: 8,
+            duration: 0.4,
             onComplete: function () {
               gsap.set(".title-line-box", { opacity: 1, duration: 0.5 }) // 将属性设置回初始状态
             },
@@ -268,7 +265,7 @@ const Sec3 = ({
           })
 
           tl.to(".sec3-color-a-line", { opacity: 0 }, "b")
-          tl.to(".sec3-color-a .mask", { opacity: 1 }, "b")
+          tl.to(".sec3-color-a .mask", { opacity: 0.5 }, "b")
           tl.from(".sec3-color-a .mask", { filter: "blur(10px)" }, "b+=.5")
           tl.to(
             ".sec3-color-a .sec3-color-b-mask",
@@ -278,28 +275,19 @@ const Sec3 = ({
           tl.to(".sec3-color-b .mask", { filter: "blur(10px)" }, "b")
           tl.to(".sec3-color-a .btnLight", { display: "none" }, "b")
           tl.to(".sec3-color-a .btnText", { opacity: 0 }, "b")
-          tl.to(".sec3-color-a .btn", { opacity: 1 }, "b")
+          tl.to(".sec3-color-a .btn", { opacity: 0 }, "b")
 
           tl.to(".sec3-color-b-line", { clipPath: "inset(0 0px 0 0px)" }, "c")
           tl.to(".sec3-color-b .btnLight", { display: "block" }, "c")
           tl.to(".sec3-color-b .btn", { opacity: 1 }, "c-=.1")
           tl.to(".sec3-color-b .btnText", { opacity: 1 }, "c")
           tl.to(".sec3-color-b .mask", { opacity: 0 }, "c")
-          tl.to(".phonea", { clipPath: "inset(0 0 0 100%)" }, "d")
-          tl.to(".sec3-desc-title-control", { y: -60, opacity: 0 }, "a")
-          tl.to(
-            ".sec3-desc-info-control",
-            { y: -60, opacity: 0, delay: 0.2 },
-            "a"
-          )
-          tl.from(".sec3-desc-title-b", { opacity: 0, y: 30, delay: 0.4 }, "a")
-          tl.from(".sec3-desc-info-b", { opacity: 0, y: 30, delay: 0.5 }, "a")
+          tl.to(".phonea", { opacity: 0 }, "d")
           tl.to(".sec3-content", { x: 0 }, "m")
         }
 
-        ScrollTrigger.create({
+        const scrollTriggerInstance = ScrollTrigger.create({
           trigger: ".wrapper",
-
           start: () => {
             if (responsive?.md) {
               return `top top-=${dis}`
@@ -312,11 +300,22 @@ const Sec3 = ({
           scrub: true,
           pin: true,
         })
+
+        btnA.current?.addEventListener("click", () => {
+          scrollTriggerInstance.scroll(scrollTriggerInstance.start) // 跳转到开始位置
+        })
+
+        btnB.current?.addEventListener("click", () => {
+          scrollTriggerInstance.scroll(scrollTriggerInstance.end) // 跳转到开始位置
+        })
       }
     },
 
     { dependencies: [responsive?.md], scope: container, revertOnUpdate: true }
   ) // <-- scope for selector text (optional)
+  useEffect(() => {
+    // console.log("a")
+  }, [])
   return (
     <div className={`sec3 imgLoad${load}`} ref={container}>
       <div className='wrapper' ref={wrapper}>
@@ -339,11 +338,11 @@ const Sec3 = ({
             <div className='phone phoneb'></div>
 
             <div className='mbLayout'>
-              <div className='sec3-color-a'>
+              <div className='sec3-color-a' ref={btnA}>
                 <div className='sec3-color-a-line'></div>
                 <Lighting text={config.sec3.pointa} />
               </div>
-              <div className='sec3-color-b'>
+              <div className='sec3-color-b' ref={btnB}>
                 <div className='sec3-color-b-line'></div>
                 <Lighting text={config.sec3.pointb} />
               </div>
@@ -359,14 +358,6 @@ const Sec3 = ({
                       {config.sec3.infoa}
                       <Shrink />
                     </div>
-                  </div>
-                </div>
-                <div className='sec3-desc-b'>
-                  <div className='sec3-desc-title-b'>
-                    {config.sec3.subtitleb}
-                  </div>
-                  <div className='sec3-desc-info-b'>
-                    {config.sec3.infob} <Shrink />
                   </div>
                 </div>
               </div>

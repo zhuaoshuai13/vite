@@ -6,6 +6,14 @@
   margin-top: px-to-vw(-46);
   overflow: hidden;
 
+  .trigger {
+    position: absolute;
+    top: 70vh;
+    width: 100%;
+    height: 1px;
+    margin: auto;
+  }
+
   .secModeWrapper {
     position: relative;
     width: 100%;
@@ -221,6 +229,10 @@
 @media screen and (max-width: 768px) {
   .secMode {
     margin-top: mvw(-15);
+
+    .trigger {
+      top: 40vh;
+    }
 
     .secModeWrapper {
       height: mvw(800);

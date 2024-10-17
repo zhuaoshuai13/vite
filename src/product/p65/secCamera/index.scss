@@ -13,6 +13,7 @@
   .top {
     display: flex;
     gap: px-to-vw(50);
+    align-items: center;
     padding-left: px-to-vw(330);
   }
 
@@ -41,8 +42,9 @@
 
   .title-out {
     .title {
-      width: px-to-vw(400);
+      width: px-to-vw(345);
       color: #000;
+      font-size: px-to-vw(50);
     }
   }
 
@@ -105,10 +107,12 @@
 
       .title {
         width: 68%;
+        font-size: 7.2vw;
       }
 
       .top {
         flex-direction: column;
+        align-items: flex-start;
         padding-left: mvw(28);
       }
 
@@ -195,6 +199,7 @@
       max-width: 100%;
       margin-top: mvw(58);
       overflow: scroll;
+      overflow-y: hidden;
     }
   }
 }

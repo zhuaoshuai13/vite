@@ -1,7 +1,7 @@
 window.P65Config = {
   sec1: {
     paramsa: "5000mAh+2400mAh*",
-    paramsb: "120Hz 6.7",
+    paramsb: `120Hz 6.7"`,
     paramsc: "256+12GB(6+6GB)*",
     slogena: "Free Bundle",
     slogenb: "Charging Case",
@@ -11,7 +11,51 @@ window.P65Config = {
       "Set off on this exhilarating quest and push the boundaries of the ordinary. Feel the surge of the",
     subtitlec:
       "future, ignite your ambition, and let Cyber Power fuel your journey into uncharted territory.",
+    moba: "This is your ticket to the Cyber World.",
+    mobb: "Set off on this exhilarating quest and push the",
+    mobc: "boundaries of the ordinary. Feel the surge of the",
+    mobd: "future, ignite your ambition, and let Cyber Power",
+    mobe: "fuel your journey into uncharted territory.",
     btnText: "Into the future now ",
+    // short video
+    shortVideo: {
+      H: "/fileadmin/assets/v/P65/dist/videos/enShortH.mp4",
+      V: "/fileadmin/assets/v/P65/dist/videos/enShortV.mp4",
+    },
+    // en video
+    video: {
+      H: {
+        src: "/fileadmin/assets/v/P65/dist/videos/enH.mp4",
+        post: "/fileadmin/assets/v/P65/dist/post/postH.jpg",
+      },
+      V: {
+        src: "/fileadmin/assets/v/P65/dist/videos/enV.mp4",
+        post: "/fileadmin/assets/v/P65/dist/post/postV.jpg",
+      },
+    },
+    // pt video
+    //  video: {
+    //   H: {
+    //     src: "https://iteldev.mez100.com.cn/fileadmin/assets/v/P65/dist/videos/ptH.mp4",
+    //     post: "",
+    //   },
+    //   V: {
+    //     src: "https://iteldev.mez100.com.cn/fileadmin/assets/v/P65/dist/videos/ptV.mp4",
+    //     post: "",
+    //   },
+    // },
+
+    // fr video
+    //  video: {
+    //   H: {
+    //     src: "https://iteldev.mez100.com.cn/fileadmin/assets/v/P65/dist/videos/frH.mp4",
+    //     post: "",
+    //   },
+    //   V: {
+    //     src: "https://iteldev.mez100.com.cn/fileadmin/assets/v/P65/dist/videos/frV.mp4",
+    //     post: "",
+    //   },
+    // },
   },
   sec2: {
     titlea: "Stylish <br /> Cyber Design",
@@ -27,7 +71,7 @@ window.P65Config = {
     titleg1: "Up to",
     titleg2: "256GB",
     titleg3: "ROM",
-    titleg4: "+12BG(6+6)",
+    titleg4: "+12GB(6+6)",
     titleg5: "RAM*",
   },
   sec3: {
@@ -36,14 +80,14 @@ window.P65Config = {
     pointb: "Cyber Black",
     subtitlea: "Stylish Cyber Design",
     infoa:
-      "Drawing from the sleek appeal of mecha design, this creation embodies a distinctive fusion of strength and style. Crafted from resilient Cyber Shield and accented with a brushed metallic texture. Its audacious aesthetic is perfect for those who dare to explore and innovate.",
+      "Drawing from the sleek appeal of mecha design, this creation embodies a distinctive fusion of strength and style. Crafted from resilient Cyber-Shield and accented with a brushed metallic texture. Its audacious aesthetic is perfect for those who dare to explore and innovate.",
     subtitleb: "Stylish Cyber Design",
     infob:
-      "Drawing from the sleek appeal of mecha design, this creation embodies a distinctive fusion of strength and style. Crafted from resilient Cyber Shield and accented with a brushed metallic texture. Its audacious aesthetic is perfect for those who dare to explore and innovate.",
+      "Drawing from the sleek appeal of mecha design, this creation embodies a distinctive fusion of strength and style. Crafted from resilient Cyber-Shield and accented with a brushed metallic texture. Its audacious aesthetic is perfect for those who dare to explore and innovate.",
   },
   sec4: {
     title: "Cyber-Shield",
-    info: "The Cyber Shield is styled in cold-rolled steel, exuding a sturdy and powerful aura with its brushed metal texture. This unique design fuses minimalist lines and rivets, bringing the mecha aesthetic to life.",
+    info: "The Cyber-Shield is styled in cold-rolled steel, exuding a sturdy and powerful aura with its brushed metal texture. This unique design fuses minimalist lines and rivets, bringing the mecha aesthetic to life.",
   },
   sec5: {
     title: `Dynamic <br class="pc"/> Light Show`,
@@ -73,6 +117,11 @@ window.P65Config = {
     subtitlec: "2400mAh Charging Case",
     infoc:
       "Free bundle charging case, easy to carry, boosts your battery life by 45%, worry-free while on the go.*",
+    game: "FPS Game",
+    calling: "Calling",
+    music: "Music",
+    social: "Social Chat",
+    hour: "Hours",
   },
   sec7: {
     titlea: "Speedy Power Up",
@@ -88,10 +137,10 @@ window.P65Config = {
     forty: "40%",
     hundred: "100%",
     video1: {
-      src: "https://iteldev.mez100.com.cn/fileadmin/assets/v/P65/dist/videos/v1.mp4",
+      src: "/fileadmin/assets/v/P65/dist/videos/v1.mp4",
     },
     video2: {
-      src: "https://iteldev.mez100.com.cn/fileadmin/assets/v/P65/dist/videos/v2.mp4",
+      src: "/fileadmin/assets/v/P65/dist/videos/v2.mp4",
     },
   },
   sec8: {
@@ -109,7 +158,7 @@ window.P65Config = {
     titleb: "High-Speed Processing",
     subtitlea: "Up to 256GB ROM",
     infoa:
-      " With a vast 255GB ROM, there is ample space for all your favorites.",
+      " With a vast 256GB ROM, there is ample space for all your favorites.",
     subtitleb: "Up to 12GB(6+6) RAM*",
     infob:
       "The P65 256GB version boasts a whopping 12GB of super-fast RAM, effortlessly handling multitasking with the capability to run 18 apps smoothly in the background.",
@@ -165,7 +214,7 @@ window.P65Config = {
     desc: "New Interactive Experience",
     subtitlea: "AI Voice Assistant",
     infoa:
-      " Multi-language voice wake-up with ease—set alarms and more, all with a simple command.",
+      " Multi-language voice wake-up with ease – set alarms and more, all with a simple command.",
     subtitleb: "Multifunctional NFC",
     infob:
       " No more wallets or transit cards needed – just you and our NFC funtion for hassle-free outings.*",

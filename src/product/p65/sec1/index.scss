@@ -1,7 +1,48 @@
 @import "../var";
 
 .sec1 {
+  position: relative;
+  height: px-to-vw(2019);
   overflow: hidden;
+
+  .fout {
+    position: relative;
+    z-index: 2;
+    height: px-to-vw(2019);
+    background: url("../../../assets/images/sec1.png") no-repeat center / cover;
+  }
+
+  .adam {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .playIcon {
+      position: absolute;
+      z-index: 2;
+      width: px-to-vw(150);
+      height: px-to-vw(150);
+      margin: auto;
+      background: url("../../../assets/images/playIcon.png") no-repeat center /
+        cover;
+      inset: 0;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 
   .wrapper {
     overflow: hidden;
@@ -16,10 +57,12 @@
 
   .sec1Bg2 {
     position: relative;
+    z-index: 3;
     height: px-to-vw(1082);
     padding-top: px-to-vw(90);
-    background: url("../../../assets/images/sec1Bg2.png") no-repeat center /
-      cover;
+
+    // background: url("../../../assets/images/sec1Bg2.png") no-repeat center /
+    //   cover;
   }
 
   .phoneBox {
@@ -53,7 +96,7 @@
   }
 
   .leftMask {
-    top: px-to-vw(-130);
+    top: px-to-vw(-190);
     left: px-to-vw(260);
     z-index: 1;
     width: px-to-vw(941);
@@ -83,7 +126,7 @@
   }
 
   .rightMask {
-    top: px-to-vw(140);
+    top: 7vw;
     left: px-to-vw(890);
     z-index: 1;
     width: px-to-vw(865);
@@ -133,7 +176,7 @@
       }
 
       .description {
-        max-width: 85%;
+        max-width: 88%;
         margin: 60px auto 0;
         color: rgba(255, 255, 255, 0.8);
         font-size: px-to-vw(25);
@@ -257,6 +300,14 @@
 
 @media screen and (max-width: 767px) {
   .sec1 {
+    height: fit-content;
+    background: unset;
+
+    .fout {
+      height: fit-content;
+      background: unset;
+    }
+
     .sec1Bg {
       height: mvw(1060);
       background: url("../../../assets/images/sec1MobBg.png") no-repeat center /
@@ -316,7 +367,7 @@
 
     .rightMask {
       top: mvw(240);
-      left: mvw(250);
+      left: mvw(270);
       z-index: 1;
       width: mvw(490);
       height: mvw(643);
@@ -333,6 +384,7 @@
 
     .kvText {
       top: mvw(800);
+      z-index: 2;
       width: 100%;
       margin-right: 0;
       margin-left: 0;
@@ -427,6 +479,20 @@
       span {
         font-size: mvw(20);
         line-height: mvw(63);
+      }
+    }
+
+    .video {
+      z-index: 10;
+      height: 100%;
+
+      .playIcon {
+        width: mvw(150);
+        height: mvw(150);
+      }
+
+      video {
+        object-fit: cover;
       }
     }
   }

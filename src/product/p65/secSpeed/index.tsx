@@ -19,6 +19,46 @@ const SecSpeed = ({
   useGSAP(
     () => {
       if (container.current) {
+        gsap.from(".title", {
+          opacity: 0,
+          y: 60,
+          ease: "sine.inOut",
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom-=100",
+            end: "+=100",
+            scrub: 0.5,
+          },
+        })
+
+        gsap.from(".line", {
+          opacity: 0,
+          y: 60,
+          ease: "sine.inOut",
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom-=100",
+            end: "+=100",
+            scrub: 0.5,
+          },
+        })
+
+        gsap.from(".line-box", {
+          opacity: 0,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: 8,
+          duration: 0.4,
+          onComplete: function () {
+            gsap.set(".line-box", { opacity: 1, duration: 0.5 }) // 将属性设置回初始状态
+          },
+
+          scrollTrigger: {
+            trigger: ".title-box",
+            start: "top bottom+=100",
+            toggleActions: "restart none none reverse",
+          },
+        })
         gsap.from(".speed-title", {
           opacity: 0,
           y: 60,
