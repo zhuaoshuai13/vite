@@ -262,6 +262,24 @@ window.s25ultraConfig = {
       desc: "The S25 Ultra features a powerful octa-core processor with ARM Cortex-A75 up to 2.2Ghz, coupled with a Graphite cooling system, to fully unleash its performance and allow you to enjoy mainstream mobile games with ease.",
     },
   },
+  sec14: {
+    title: "Super wall-penetrating capability",
+    desc: "The S25 Ultra supports Super Wi-Fi, providing ultra-low latency for seamless gaming and automatically switching to the best <br/> network across different Wi-Fi networks, offering significantly stronger signal strength in public spaces with shared Wi-Fi.",
+    data: [
+      {
+        title: "26ms",
+        desc: "Super low latency for gaming",
+      },
+      {
+        title: "6.5MB/s",
+        desc: "Download speed when using Wi-Fi and Bluetooth together",
+      },
+      {
+        title: "5x*",
+        desc: "Faster switch to the optimal Wi-Fi network",
+      },
+    ],
+  },
   sec15: {
     part1: {
       title: "The powerhouse in  your hand",
@@ -308,6 +326,17 @@ window.s25ultraConfig = {
         title: "Support Smile Shutter",
       },
     },
+    part4: {
+      title: "50MP Mode",
+    },
+    part5: {
+      title: "Super HDR",
+      on: "on",
+      off: "off",
+    },
+    part6: {
+      title: "Super Night Mode",
+    },
   },
   sec17: {
     title: "Capture with flair",
@@ -330,5 +359,83 @@ window.s25ultraConfig = {
   sec18: {
     title: "Capture with fun",
     desc: "Embrace the fun of Vlogging with Dual-view Video Recording, effortlessly capturing both your reactions and the stunning scenery you're enjoying, or the engaging interactions with your friends.",
+  },
+  sec19: {
+    spec_title: "EXCELLENCE IN EXPERIENCE",
+    spec_desc:
+      "Every feature is meticulously refined, with continuous updates and optimizations, <br/> ensuring it's always user-friendly.",
+    part1: {
+      desc: "Based on the latest Android 14, it introduces a more stylish UI design and enhanced desktop widget functionalities, offering you a more aesthetically pleasing and seamless system experience.",
+    },
+    part2: {
+      title: "Upgradeable to <br/> Android 15™",
+      desc: "Support for 2 years of Android system and security patch upgrades significantly extends the lifespan of your phone.",
+    },
+    part3: {
+      title: "GPT AI Assistant",
+      desc: "Say hello to your best assistant! It frees your hands and helps you handle many simple tasks.",
+    },
+    part4: {
+      content1: {
+        title: "AI Call Noise Cancellation",
+        desc: "Experience crystal-clear calls, designed to minimize background noise and enhance human voice. ",
+      },
+      content2: {
+        title: "AI Wallpaper",
+        desc: "Create exclusive wallpapers using text or images to showcase your distinctive taste.",
+      },
+      content3: {
+        title: "ASK AI",
+        desc: `<span class="highlight">When reading emails or chatting on WhatsApp, it can translate and polish the text on the page,</span> significantly boosting your work efficiency.`,
+      },
+    },
+    part5: {
+      title: "Dynamic Bar",
+      desc: "Welcome to the Dynamic Bar, where accessing important notifications is now more convenient and seamless than ever before.",
+    },
+    part6: {
+      title: "Smart AOD",
+      desc: "Important information is easily accessible.",
+    },
+    part7: {
+      content1: {
+        title: "Infrared Remote Control",
+        desc: "Turn your smartphone into a versatile controller for home appliances.*",
+      },
+      content2: {
+        title: "720° NFC",
+        desc: "With 720° NFC, you can quickly complete card swiping without aligning to a specific angle.*",
+      },
+      content3: {
+        title: "Sound By DTS",
+        desc: `DTS audio brings immersive, high-fidelity sound to your smartphone for an enhanced listening experience.`,
+      },
+    },
+    part8: {
+      title: "Smart connectivity",
+      desc: "It is built-in with the iPulse App and supports seamless interconnection with your itel watch, allowing you to remotely control smartphone photography and synchronize health data to the phone. It's not just about the Internet of Things, it represents a trendy lifestyle.*",
+    },
+    part9: {
+      note: " Notes:",
+      tips: [
+        `1. The 60-month Fluency data is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
+        `2. S25 Ultra 512GB+16GB version's RAM is composed of (8+8)GB expansion.`,
+        `3. The screen-to-body ratio and brightness data are obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
+        `4. Corning and Gorilla are registered trademarks of Corning Incorporated. The data of Corning® Gorilla® Glass 7i is obtained from the Corning Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
+        `5. The data of accidental touch rates is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
+        `6. The weight and thickness data are obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
+        `7. The data from quality tests is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
+        `8. The storage data of "60,000+ Photos" is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
+        `9. The 18 Apps Running Simultaneously data is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
+        `10. The data of Super Wi-Fi is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
+        `11. The battery of itel S25 Ultra has a typical capacity of 5000mAh and a rated capacity of 4900mAh.`,
+        `12. The data of 1000 charge cycles is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
+        `13. The data of Bypass Charging Tech is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
+        `14. Android is a trademark of Google LLC.`,
+        `15. The availability of Infrared Remote Control and NFC features may vary by region and device. Please refer to the actual situation for details.`,
+        `16. iPulse, itel's own watch app, is widely compatible and pre-installed on itel S25 Series.`,
+        `17. Product images are for reference only, please refer to the actual product. Some specifications and descriptions may change due to supplier replacements, please refer to the actual product. The data mentioned is based on our design technical specifications, lab, and supplier test data, and actual situations may vary slightly due to different testing software versions, specific testing environments, and versions.`,
+      ],
+    },
   },
 }

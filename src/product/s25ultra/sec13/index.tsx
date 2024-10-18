@@ -20,7 +20,7 @@ const Sec13 = () => {
       .timeline()
       .to(".spec_part", 1, { y: "-100%", ease: "power2.inOut" })
       .from(
-        ".chip_wrap1",
+        ".part1 .chip_wrap1",
         {
           x: "-4%",
           y: "42%",
@@ -28,23 +28,93 @@ const Sec13 = () => {
           rotateX: "62deg",
           ease: "power2.inOut",
         },
-        // "a"
+        "a"
       )
       .from(
-        ".clip_light_wrap1 img",
+        ".part1 .clip_light_wrap1 img",
         {
           clipPath: "inset(400px 0 0)",
           ease: "power2.inOut",
         },
-        "a"
+        "b"
       )
       .from(
-        ".clip_light_circle_wrap1",
+        ".part1 .clip_light_circle_wrap1",
         {
           opacity: 0,
           ease: "power2.inOut",
         },
+        "b"
+      )
+      .from(
+        ".part1 .chip_wrap2",
+        {
+          x: "-4%",
+          y: "44%",
+          rotate: "-7deg",
+          rotateX: "62deg",
+          ease: "power2.inOut",
+        },
         "a"
+      )
+      .from(
+        ".part1 .clip_light_wrap2 img",
+        {
+          clipPath: "inset(400px 0 0)",
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .from(
+        ".part1 .clip_light_circle_wrap2",
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .from(".part1 .data_wrap", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      .to(
+        ".part1",
+        {
+          x: "-100%",
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .to(
+        ".part2",
+        {
+          x: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(".part2 .chip_wrap1", {
+        x: "-4%",
+        y: "58%",
+        rotate: "-6deg",
+        rotateX: "60deg",
+        ease: "power2.inOut",
+      })
+      .from(
+        ".part2 .clip_light_wrap1 img",
+        {
+          clipPath: "inset(400px 0 0)",
+          ease: "power2.inOut",
+        },
+        "d"
+      )
+      .from(
+        ".part2 .clip_light_circle_wrap1",
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "d"
       )
     ScrollTrigger.create({
       trigger: ".sec13_wrap",
@@ -79,7 +149,7 @@ const Sec13 = () => {
           </div>
         </div>
         <div className='content_wrap'>
-          <div className='part1'>
+          <div className='part part1'>
             <div className='text_wrap'>
               <div
                 className='title_75'
@@ -96,6 +166,15 @@ const Sec13 = () => {
               <div className='img_wrap phone_wrap'>
                 <img src={src + "/images/pc/sec13_part1_pc.png"} />
               </div>
+              <div className='img_wrap clip_light_circle_wrap2'>
+                <img src={src + "/images/pc/sec13_512g_light_circle_pc.png"} />
+              </div>
+              <div className='img_wrap clip_light_wrap2'>
+                <img src={src + "/images/pc/sec13_512g_light_pc.png"} />
+              </div>
+              <div className='img_wrap chip_wrap2'>
+                <img src={src + "/images/pc/sec13_512g_pc.png"} />
+              </div>
               <div className='img_wrap clip_light_circle_wrap1'>
                 <img src={src + "/images/pc/sec13_16g_light_circle_pc.png"} />
               </div>
@@ -105,8 +184,53 @@ const Sec13 = () => {
               <div className='img_wrap chip_wrap1'>
                 <img src={src + "/images/pc/sec13_16g_pc.png"} />
               </div>
-              <div className='img_wrap chip_wrap2'>
-                <img src={src + "/images/pc/sec13_512g_pc.png"} />
+            </div>
+            <div className='data_wrap'>
+              {config?.sec13?.part1?.data?.map((item: any, index: number) => {
+                return (
+                  <div className='data' key={index}>
+                    <div
+                      className='data_subtitle'
+                      dangerouslySetInnerHTML={{ __html: item?.subtitle }}
+                    ></div>
+                    <div
+                      className='data_title'
+                      dangerouslySetInnerHTML={{ __html: item?.title }}
+                    ></div>
+                    <div
+                      className='data_desc'
+                      dangerouslySetInnerHTML={{ __html: item?.desc }}
+                    ></div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div className='part part2'>
+            <div className='text_wrap'>
+              <div
+                className='title_75'
+                dangerouslySetInnerHTML={{
+                  __html: config?.sec13?.part2?.title,
+                }}
+              ></div>
+              <p
+                className='desc_16'
+                dangerouslySetInnerHTML={{ __html: config?.sec13?.part2?.desc }}
+              ></p>
+            </div>
+            <div className='pic_wrap'>
+              <div className='img_wrap phone_wrap'>
+                <img src={src + "/images/pc/sec13_part2_pc.png"} />
+              </div>
+              <div className='img_wrap clip_light_circle_wrap1'>
+                <img src={src + "/images/pc/sec13_t620_light_circle_pc.png"} />
+              </div>
+              <div className='img_wrap clip_light_wrap1'>
+                <img src={src + "/images/pc/sec13_t620_light_pc.png"} />
+              </div>
+              <div className='img_wrap chip_wrap1'>
+                <img src={src + "/images/pc/sec13_t620_pc.png"} />
               </div>
             </div>
           </div>

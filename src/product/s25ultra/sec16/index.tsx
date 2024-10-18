@@ -17,11 +17,54 @@ import "./index.scss"
 const Sec16 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { s25ultraConfig: config, src } = window as any
-  const length = config?.sec11?.color?.length
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
-  const [swiperInstance, setSwiperInstance] = useState<any>()
-  const swiperRef = useRef<SwiperClass>()
+  const [part2SwiperInstance, setPart2SwiperInstance] = useState<any>()
+  const part2SwiperRef = useRef<SwiperClass>()
+  const [part4SwiperInstance, setPart4SwiperInstance] = useState<any>()
+  const part4SwiperRef = useRef<SwiperClass>()
+  const [part5IsOpen, setPart5IsOpen] = useState(true)
+  const [timeline, setTimeline] = useState<any>()
+
+  const handlePart2SwiperNext = () => {
+    part2SwiperInstance.slideNext()
+  }
+  const handlePart4SwiperNext = () => {
+    part4SwiperInstance.slideNext()
+  }
+
+  const pageTionClick = (index: number) => {
+    gsap.to(window, {
+      scrollTo: {
+        y: timeline.scrollTrigger.labelToScroll("part" + (index + 2)),
+      },
+      ease: "power2.inOut",
+    })
+  }
+
+  const Pagetion = ({
+    length,
+    activeIndex,
+  }: {
+    length: number
+    activeIndex: number
+  }) => {
+    return (
+      <div className='pagination_wrap'>
+        {new Array(length).fill(null).map((_, index) => {
+          return (
+            <span
+              className={`pagination_item ${
+                index === activeIndex ? "active" : ""
+              }`}
+              key={index}
+              onClick={() => pageTionClick(index)}
+            ></span>
+          )
+        })}
+      </div>
+    )
+  }
 
   const sec16Ani = () => {
     const tl = gsap
@@ -44,15 +87,19 @@ const Sec16 = () => {
         },
         "b"
       )
-      .to(".big_front_phone", {
-        x: "33%",
-        y: "-15.30%",
-        scale: 0.68,
-        // x: 0,
-        // y: 0,
-        // scale: 1,
-        ease: "power2.inOut",
-      })
+      .to(
+        ".big_front_phone",
+        {
+          x: "33%",
+          y: "-15.30%",
+          scale: 0.68,
+          // x: 0,
+          // y: 0,
+          // scale: 1,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
       .from(
         [
           ".mp50_wrap",
@@ -89,7 +136,7 @@ const Sec16 = () => {
           x: "-100%",
           ease: "power2.inOut",
         },
-        "d"
+        "part2"
       )
       .to(
         ".part3",
@@ -97,16 +144,73 @@ const Sec16 = () => {
           x: 0,
           ease: "power2.inOut",
         },
-        "d"
+        "part2"
+      )
+      .to(
+        ".part3",
+        {
+          x: "-100%",
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".part4",
+        {
+          x: 0,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".part4",
+        {
+          x: "-100%",
+          ease: "power2.inOut",
+        },
+        "part4"
+      )
+      .to(
+        ".part5",
+        {
+          x: 0,
+          ease: "power2.inOut",
+        },
+        "part4"
+      )
+      .to(
+        ".part5",
+        {
+          x: "-100%",
+          ease: "power2.inOut",
+        },
+        "part5"
+      )
+      .to(
+        ".part6",
+        {
+          x: 0,
+          ease: "power2.inOut",
+        },
+        "part5"
+      )
+      .to(
+        ".part6",
+        {
+          ease: "power2.inOut",
+        },
+        "part6"
       )
     ScrollTrigger.create({
       trigger: ".sec16_wrap",
       pin: true,
       start: `top 0%`,
-      end: "+=500%",
+      end: "+=1000%",
       animation: tl,
       scrub: 0.2,
     })
+
+    setTimeline(tl)
   }
 
   useGSAP(
@@ -296,8 +400,8 @@ const Sec16 = () => {
                 <Swiper
                   effect={"fade"}
                   onSwiper={(swiper) => {
-                    setSwiperInstance(swiper)
-                    swiperRef.current = swiper
+                    setPart2SwiperInstance(swiper)
+                    part2SwiperRef.current = swiper
                   }}
                   modules={[Navigation, Pagination]}
                   autoplay={{ delay: 5000 }}
@@ -312,7 +416,7 @@ const Sec16 = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className='img_wrap mp32_img'>
-                      <img src={src + "/images/pc/sec16_32mp_p1_pc.png"} />
+                      <img src={src + "/images/pc/sec16_32mp_p2_pc.png"} />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -320,11 +424,20 @@ const Sec16 = () => {
                       <img src={src + "/images/pc/sec16_32mp_p1_pc.png"} />
                     </div>
                   </SwiperSlide>
+                  <SwiperSlide>
+                    <div className='img_wrap mp32_img'>
+                      <img src={src + "/images/pc/sec16_32mp_p2_pc.png"} />
+                    </div>
+                  </SwiperSlide>
                 </Swiper>
               </div>
-              <div className="img_wrap next_wrap">
+              <div
+                className='img_wrap next_wrap'
+                onClick={handlePart2SwiperNext}
+              >
                 <img src={src + "/images/pc/sec16_next_pc.png"} />
               </div>
+              <Pagetion length={5} activeIndex={0} />
             </div>
           </div>
           <div className='part part3'>
@@ -407,9 +520,7 @@ const Sec16 = () => {
                   }}
                 ></div>
               </div>
-              <div className="img_wrap next_wrap">
-                <img src={src + "/images/pc/sec16_next_pc.png"} />
-              </div>
+              <Pagetion length={5} activeIndex={1} />
             </div>
           </div>
           <div className='part part4'>
@@ -417,9 +528,175 @@ const Sec16 = () => {
               <div className='img_wrap box_bg'>
                 <img src={src + "/images/pc/sec16_box_pc.png"} />
               </div>
-              <div className="img_wrap next_wrap">
+              <div className='text_wrap'>
+                <div className='top_wrap'>
+                  <div
+                    className='title_75'
+                    dangerouslySetInnerHTML={{
+                      __html: config?.sec16?.back?.title,
+                    }}
+                  ></div>
+                  <div className='title_75'>
+                    <div
+                      className='desc'
+                      dangerouslySetInnerHTML={{
+                        __html: config?.sec16?.back?.desc,
+                      }}
+                    ></div>
+                  </div>
+                </div>
+                <div className='bottom_wrap'>
+                  <div
+                    className='title'
+                    dangerouslySetInnerHTML={{
+                      __html: config?.sec16?.part4?.title,
+                    }}
+                  ></div>
+                </div>
+              </div>
+              <div className='mp50_swiper'>
+                <Swiper
+                  effect={"fade"}
+                  onSwiper={(swiper) => {
+                    setPart4SwiperInstance(swiper)
+                    part4SwiperRef.current = swiper
+                  }}
+                  modules={[Navigation, Pagination]}
+                  autoplay={{ delay: 5000 }}
+                  slidesPerView={2}
+                  loop={true}
+                  // onSlideChange={() => handleSwiperSlide()}
+                >
+                  <SwiperSlide>
+                    <div className='img_wrap mp50_img'>
+                      <img src={src + "/images/pc/sec16_50mp_p1_pc.png"} />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className='img_wrap mp50_img'>
+                      <img src={src + "/images/pc/sec16_50mp_p2_pc.png"} />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className='img_wrap mp50_img'>
+                      <img src={src + "/images/pc/sec16_50mp_p1_pc.png"} />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className='img_wrap mp50_img'>
+                      <img src={src + "/images/pc/sec16_50mp_p2_pc.png"} />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+              <div
+                className='img_wrap next_wrap'
+                onClick={handlePart4SwiperNext}
+              >
                 <img src={src + "/images/pc/sec16_next_pc.png"} />
               </div>
+              <Pagetion length={5} activeIndex={2} />
+            </div>
+          </div>
+          <div className='part part5'>
+            <div className='box_wrap'>
+              <div className='img_wrap box_bg'>
+                <img src={src + "/images/pc/sec16_box_pc.png"} />
+              </div>
+              <div className='text_wrap'>
+                <div className='top_wrap'>
+                  <div
+                    className='title_75'
+                    dangerouslySetInnerHTML={{
+                      __html: config?.sec16?.back?.title,
+                    }}
+                  ></div>
+                  <div className='title_75'>
+                    <div
+                      className='desc'
+                      dangerouslySetInnerHTML={{
+                        __html: config?.sec16?.back?.desc,
+                      }}
+                    ></div>
+                  </div>
+                </div>
+                <div className='bottom_wrap'>
+                  <div
+                    className='title'
+                    dangerouslySetInnerHTML={{
+                      __html: config?.sec16?.part5?.title,
+                    }}
+                  ></div>
+                  <button
+                    className={part5IsOpen ? "active" : ""}
+                    onClick={() => {
+                      setPart5IsOpen(!part5IsOpen)
+                    }}
+                  >
+                    <div
+                      className={`white_circle ${part5IsOpen ? "active" : ""}`}
+                    ></div>
+                    <div
+                      className={`btn_text ${part5IsOpen ? "active" : ""}`}
+                      dangerouslySetInnerHTML={{
+                        __html: config?.sec16?.part5?.on,
+                      }}
+                    ></div>
+                    <div
+                      className={`btn_text ${!part5IsOpen ? "active" : ""}`}
+                      dangerouslySetInnerHTML={{
+                        __html: config?.sec16?.part5?.off,
+                      }}
+                    ></div>
+                  </button>
+                </div>
+              </div>
+              <div className='pic_wrap'>
+                <div className={`img_wrap ${part5IsOpen ? "active" : ""}`}>
+                  <img src={src + "/images/pc/sec16_hdr_on_pc.png"} />
+                </div>
+                <div className={`img_wrap ${!part5IsOpen ? "active" : ""}`}>
+                  <img src={src + "/images/pc/sec16_hdr_off_pc.png"} />
+                </div>
+              </div>
+              <Pagetion length={5} activeIndex={3} />
+            </div>
+          </div>
+          <div className='part part6'>
+            <div className='box_wrap'>
+              <div className='img_wrap box_bg'>
+                <img src={src + "/images/pc/sec16_box_pc.png"} />
+              </div>
+              <div className='text_wrap'>
+                <div className='top_wrap'>
+                  <div
+                    className='title_75'
+                    dangerouslySetInnerHTML={{
+                      __html: config?.sec16?.back?.title,
+                    }}
+                  ></div>
+                  <div className='title_75'>
+                    <div
+                      className='desc'
+                      dangerouslySetInnerHTML={{
+                        __html: config?.sec16?.back?.desc,
+                      }}
+                    ></div>
+                  </div>
+                </div>
+                <div className='bottom_wrap'>
+                  <div
+                    className='title'
+                    dangerouslySetInnerHTML={{
+                      __html: config?.sec16?.part6?.title,
+                    }}
+                  ></div>
+                </div>
+              </div>
+              <div className={`img_wrap night_wrap`}>
+                <img src={src + "/images/pc/sec16_night_pc.png"} />
+              </div>
+              <Pagetion length={5} activeIndex={4} />
             </div>
           </div>
         </div>
