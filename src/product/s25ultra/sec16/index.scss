@@ -13,7 +13,9 @@
 
   .content_wrap {
     position: relative;
-    height: 100vh;
+
+    // height: 100vh;
+    height: px-to-vw(1000);
   }
 
   .content_bg_wrap {
@@ -70,11 +72,15 @@
 
   .box_wrap {
     position: absolute;
+    top: 50%;
     right: 0;
-    bottom: px-to-vw(245);
+
+    // bottom: px-to-vw(245);
+    // bottom: px-to-vw(165);
     left: 0;
     width: px-to-vw(1320);
     margin: 0 auto;
+    transform: translateY(-50%);
   }
 
   .next_wrap {
@@ -133,6 +139,7 @@
       bottom: px-to-vw(-1645);
       left: px-to-vw(280);
       width: px-to-vw(978);
+      height: px-to-vw(2364);
 
       // transform: translate(33%, -15.3%) scale(.68);
     }

@@ -35,7 +35,7 @@ const Sec4 = () => {
       trigger: ".sec4_wrap",
       pin: true,
       start: `top 0%`,
-      end: "+=400%",
+      end: "+=800%",
       animation: tl,
       scrub: true,
     })
@@ -65,10 +65,13 @@ const Sec4 = () => {
         </div>
         <div className='content_wrap'>
           <div className='img_wrap phone_wrap'>
-            <img src={src + "/images/pc/sec4_phone_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec4_phone_pc.png"} />
           </div>
           <div className='img_wrap phone_mask_wrap'>
-            <img src={src + "/images/pc/sec4_phone_mask_pc.png"} />
+            <img
+              loading='lazy'
+              src={src + "/images/pc/sec4_phone_mask_pc.png"}
+            />
           </div>
           <div className='part part1'>
             <div className='text_wrap'>
@@ -85,7 +88,7 @@ const Sec4 = () => {
               {config?.sec4?.part1?.data?.map((item: any, index: number) => (
                 <React.Fragment key={index}>
                   <div className='data'>
-                    <img src={src + "/images/pc/" + item.icon} />
+                    <img loading='lazy' src={src + "/images/pc/" + item.icon} />
                     <div className='data_text_wrap'>
                       <div className='title'>{item.title}</div>
                       <div className='subtitle'>{item.subtitle}</div>
@@ -99,7 +102,7 @@ const Sec4 = () => {
               {config?.sec4?.part2?.data?.map((item: any, index: number) => (
                 <React.Fragment key={index}>
                   <div className='data'>
-                    <img src={src + "/images/pc/" + item.icon} />
+                    <img loading='lazy' src={src + "/images/pc/" + item.icon} />
                     <div className='data_text_wrap'>
                       <div className='title'>{item.title}</div>
                       <div className='subtitle'>{item.subtitle}</div>
@@ -119,7 +122,10 @@ const Sec4 = () => {
             </div>
             <div className='bottom_wrap'>
               <div className='img_wrap corning_wrap'>
-                <img src={src + "/images/pc/sec4_corning_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec4_corning_pc.png"}
+                />
               </div>
               <p
                 className='desc_16'
@@ -127,7 +133,10 @@ const Sec4 = () => {
               ></p>
             </div>
             <div className='img_wrap warranty_wrap'>
-              <img src={src + "/images/pc/sec4_warranty_pc.png"} />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec4_warranty_pc.png"}
+              />
             </div>
           </div>
         </div>

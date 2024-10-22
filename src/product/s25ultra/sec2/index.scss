@@ -3,7 +3,25 @@
 .s25ultra .sec2 {
   .sec2_wrap {
     position: relative;
-    height: px-to-vw(900);
+
+    // height: px-to-vw(900);
+    height: 100vh;
+  }
+
+  .part {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bg_wrap {
+    height: 100%;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
   .video_wrap {
@@ -47,6 +65,14 @@
     margin: 0 auto;
     background-color: unset !important;
     border: none !important;
+    cursor: pointer;
+  }
+
+  .part2_btn {
+    top: 50%;
+    right: unset;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 

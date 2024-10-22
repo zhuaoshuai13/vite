@@ -23,7 +23,7 @@ const Sec15 = () => {
         {
           x: "-24%",
           y: "24%",
-          rotate: "44.5deg",
+          rotate: "44.7deg",
           ease: "power2.inOut",
         },
         "a"
@@ -98,10 +98,10 @@ const Sec15 = () => {
         </div>
         <div className='pic_wrap'>
           <div className='img_wrap phone1'>
-            <img src={src + "/images/pc/sec15_p1_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec15_p1_pc.png"} />
           </div>
           <div className='img_wrap phone2'>
-            <img src={src + "/images/pc/sec15_p2_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec15_p2_pc.png"} />
           </div>
         </div>
       </div>

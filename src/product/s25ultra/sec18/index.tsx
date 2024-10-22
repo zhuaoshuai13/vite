@@ -50,9 +50,9 @@ const Sec18 = () => {
             dangerouslySetInnerHTML={{ __html: config?.sec18?.title }}
           ></div>
         </div>
-        <div className="pic_wrap">
-          <div className="img_wrap">
-            <img src={src + "/images/pc/sec18_phone_pc.png"} />
+        <div className='pic_wrap'>
+          <div className='img_wrap'>
+            <img loading='lazy' src={src + "/images/pc/sec18_phone_pc.png"} />
           </div>
         </div>
         <div className='text_wrap'>

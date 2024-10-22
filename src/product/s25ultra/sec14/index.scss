@@ -10,7 +10,12 @@
 
   .top_wrap {
     position: relative;
-    margin-bottom: px-to-vw(20);
+  }
+
+  .bottom_wrap {
+    margin-top: -1px;
+    padding-top: px-to-vw(20);
+    background-color: #fff;
   }
 
   .ellipse_wrap {

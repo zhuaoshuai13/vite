@@ -322,29 +322,29 @@ const Sec10 = () => {
       <div className='sec10_wrap'>
         <div className='pic_wrap'>
           <div className='img_wrap bg_wrap'>
-            <img src={src + "/images/pc/sec10_bg_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec10_bg_pc.png"} />
           </div>
           <div className='phone_items'>
             <div className='img_wrap phone_wrap phone7'>
-              <img src={src + "/images/pc/sec10_p7_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec10_p7_pc.png"} />
             </div>
             <div className='img_wrap phone_wrap phone6'>
-              <img src={src + "/images/pc/sec10_p6_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec10_p6_pc.png"} />
             </div>
             <div className='img_wrap phone_wrap phone5'>
-              <img src={src + "/images/pc/sec10_p5_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec10_p5_pc.png"} />
             </div>
             <div className='img_wrap phone_wrap phone4'>
-              <img src={src + "/images/pc/sec10_p4_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec10_p4_pc.png"} />
             </div>
             <div className='img_wrap phone_wrap phone3'>
-              <img src={src + "/images/pc/sec10_p3_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec10_p3_pc.png"} />
             </div>
             <div className='img_wrap phone_wrap phone2'>
-              <img src={src + "/images/pc/sec10_p2_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec10_p2_pc.png"} />
             </div>
             <div className='img_wrap phone_wrap phone1'>
-              <img src={src + "/images/pc/sec10_p1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec10_p1_pc.png"} />
             </div>
           </div>
           <div className='text_items'>

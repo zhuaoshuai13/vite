@@ -12,7 +12,7 @@
     width: px-to-vw(1320);
     margin: 0 auto;
 
-    &>.row {
+    &>.sec2_row {
       display: flex;
       gap: px-to-vw(16);
       justify-content: space-between;
@@ -20,7 +20,7 @@
       &:nth-child(1) {
         height: px-to-vw(550);
 
-        .col:nth-child(1) {
+        .sec2_col:nth-child(1) {
           flex: 1;
         }
       }
@@ -28,7 +28,7 @@
       &:nth-child(2) {
         height: px-to-vw(450);
 
-        .col {
+        .sec2_col {
           flex: 1;
         }
       }
@@ -36,17 +36,17 @@
       &:nth-child(3) {
         height: px-to-vw(400);
 
-        &>.col:nth-child(1) {
+        &>.sec2_col:nth-child(1) {
           display: flex;
           flex-direction: column;
           gap: px-to-vw(15);
 
-          &>.row:nth-child(1) {
+          &>.sec2_row:nth-child(1) {
             display: flex;
             flex: 1;
             gap: px-to-vw(15);
 
-            .col {
+            .sec2_col {
               flex: 1;
             }
           }

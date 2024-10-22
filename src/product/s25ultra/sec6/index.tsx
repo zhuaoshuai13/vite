@@ -19,9 +19,19 @@ const Sec6 = () => {
     const tl = gsap
       .timeline()
       .to(".sec6 .part1", 1, { opacity: 0, ease: "power2.inOut" }, "a")
-      .to(".sec6 .part2", 1, { opacity: 1, ease: "power2.inOut" }, "a")
+      .to(
+        ".sec6 .part2",
+        1,
+        { opacity: 1, ease: "power2.inOut", delay: 0.5 },
+        "a"
+      )
       .to(".sec6 .part2", 1, { opacity: 0, ease: "power2.inOut" }, "b")
-      .to(".sec6 .part3", 1, { opacity: 1, ease: "power2.inOut" }, "b")
+      .to(
+        ".sec6 .part3",
+        1,
+        { opacity: 1, ease: "power2.inOut", delay: 0.5 },
+        "b"
+      )
     ScrollTrigger.create({
       trigger: ".sec6_wrap",
       pin: true,
@@ -76,14 +86,14 @@ const Sec6 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone_wrap'>
-              <img src={src + "/images/pc/sec6_p1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec6_p1_pc.png"} />
             </div>
             <div className='img_wrap circle_wrap'>
-              <img src={src + "/images/pc/sec6_circle_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec6_circle_pc.png"} />
             </div>
           </div>
           <div className='img_wrap hand_wrap'>
-            <img src={src + "/images/pc/sec6_f1_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec6_f1_pc.png"} />
           </div>
         </div>
         <div className='part part2'>
@@ -99,14 +109,14 @@ const Sec6 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone_wrap'>
-              <img src={src + "/images/pc/sec6_p2_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec6_p2_pc.png"} />
             </div>
             <div className='img_wrap nit_wrap'>
-              {/* <img src={src + "/images/pc/sec5_nit_pc.png"} /> */}
+              {/* <img loading="lazy" src={src + "/images/pc/sec5_nit_pc.png"} /> */}
             </div>
           </div>
           <div className='img_wrap hand_wrap'>
-            <img src={src + "/images/pc/sec6_f2_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec6_f2_pc.png"} />
           </div>
         </div>
         <div className='part part3'>
@@ -122,20 +132,29 @@ const Sec6 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone_wrap'>
-              <img src={src + "/images/pc/sec6_p3_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec6_p3_pc.png"} />
             </div>
             <div className='img_wrap fingerprint_wrap'>
-              <img src={src + "/images/pc/sec6_fingerprint_pc.png"} />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec6_fingerprint_pc.png"}
+              />
             </div>
             <div className='img_wrap fingerprintlight_wrap1'>
-              <img src={src + "/images/pc/sec6_fingerprintlight1_pc.png"} />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec6_fingerprintlight1_pc.png"}
+              />
             </div>
             <div className='img_wrap fingerprintlight_wrap2'>
-              <img src={src + "/images/pc/sec6_fingerprintlight2_pc.png"} />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec6_fingerprintlight2_pc.png"}
+              />
             </div>
           </div>
           <div className='img_wrap hand_wrap'>
-            <img src={src + "/images/pc/sec6_f1_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec6_f1_pc.png"} />
           </div>
         </div>
       </div>

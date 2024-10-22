@@ -122,7 +122,7 @@ const Sec17 = () => {
             modules={[EffectFade, Pagination, Autoplay]}
             autoplay={{ delay: 3000 }}
             pagination={{
-              el: ".swiper_pagination",
+              el: ".sec17 .swiper_pagination",
               type: "bullets",
               clickable: true,
             }}
@@ -133,7 +133,7 @@ const Sec17 = () => {
               <SwiperSlide key={index}>
                 <div className='swiper_item'>
                   <div className='img_wrap'>
-                    <img src={src + "/images/pc/" + item.pic} />
+                    <img loading='lazy' src={src + "/images/pc/" + item.pic} />
                   </div>
                   <div className='mode_name'>{item.mode}</div>
                 </div>

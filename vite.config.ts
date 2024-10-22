@@ -36,15 +36,15 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: "src/product/spark20pro5g/config.js",
+              src: "src/product/s25ultra/config.js",
               dest: "dist/js",
             },
             {
-              src: "src/assets/spark20pro5g/images/*",
+              src: "src/assets/s25ultra/images/*",
               dest: "dist/images",
             },
             {
-              src: "src/assets/spark20pro5g/videos/*",
+              src: "src/assets/s25ultra/videos/*",
               dest: "dist/videos",
             },
           ],

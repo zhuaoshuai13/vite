@@ -24,6 +24,7 @@ import Sec16 from "./sec16"
 import Sec17 from "./sec17"
 import Sec18 from "./sec18"
 import Sec19 from "./sec19"
+import FullVideo from "./fullVideo"
 import "./index.scss"
 
 const S25Ultra = () => {
@@ -82,6 +83,7 @@ const S25Ultra = () => {
         <Sec17 />
         <Sec18 />
         <Sec19 />
+        <FullVideo />
       </div>
     </ReactLenis>
   )

@@ -3,7 +3,12 @@
 .s25ultra .sec9 {
   .sec9_wrap {
     position: relative;
-    height: px-to-vw(1050);
+    // height: px-to-vw(1200);
+  }
+
+  .sec9_bg {
+    width: 100%;
+    height: px-to-vw(961);
   }
 
   .text_wrap {
@@ -50,7 +55,7 @@
     display: flex;
     gap: px-to-vw(72);
     max-width: var(--content-width);
-    margin: 0 auto;
+    margin: px-to-vw(64) auto 0;
 
     .title {
       font-size: px-to-vw(50);

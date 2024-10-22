@@ -28,7 +28,7 @@ const Sec12 = () => {
       trigger: ".sec12_wrap",
       pin: true,
       start: `top 0%`,
-      end: "+=500%",
+      end: "+=300%",
       animation: tl,
       scrub: 0.2,
       onUpdate: (self) => {
@@ -52,10 +52,10 @@ const Sec12 = () => {
       <div className='sec12_wrap'>
         <div className='pic_wrap'>
           <div className='img_wrap bg_wrap'>
-            <img src={src + "/images/pc/sec12_bg_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec12_bg_pc.png"} />
           </div>
           <div className='img_wrap phone_wrap'>
-            <img src={src + "/images/pc/sec12_phone_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec12_phone_pc.png"} />
           </div>
           <div className='content_wrap'>
             <div className='text_wrap'>
@@ -98,17 +98,17 @@ const Sec12 = () => {
                 }`}
                 key={index}
               >
-                <img src={src + "/images/pc/" + item} />
+                <img loading='lazy' src={src + "/images/pc/" + item} />
               </div>
             ))}
             {/* <div className='img_wrap circle_item'>
-              <img src={src + "/images/pc/sec12_red_pc.png"} />
+              <img loading="lazy" src={src + "/images/pc/sec12_red_pc.png"} />
             </div>
             <div className='img_wrap circle_item'>
-              <img src={src + "/images/pc/sec12_blue_pc.png"} />
+              <img loading="lazy" src={src + "/images/pc/sec12_blue_pc.png"} />
             </div>
             <div className='img_wrap circle_item'>
-              <img src={src + "/images/pc/sec12_purple_pc.png"} />
+              <img loading="lazy" src={src + "/images/pc/sec12_purple_pc.png"} />
             </div> */}
           </div>
         </div>

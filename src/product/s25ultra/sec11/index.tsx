@@ -31,7 +31,7 @@ const Sec11 = () => {
       trigger: ".sec11_wrap",
       pin: true,
       start: `top 0%`,
-      end: "+=500%",
+      end: "+=400%",
       animation: tl,
       scrub: 0.2,
       onUpdate: (self) => {
@@ -74,21 +74,21 @@ const Sec11 = () => {
                 activeIndex === 0 ? "active" : ""
               }`}
             >
-              <img src={src + "/images/pc/sec11_p1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec11_p1_pc.png"} />
             </div>
             <div
               className={`img_wrap phone_wrap phone2 ${
                 activeIndex === 1 ? "active" : ""
               }`}
             >
-              <img src={src + "/images/pc/sec11_p2_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec11_p2_pc.png"} />
             </div>
             <div
               className={`img_wrap phone_wrap phone3 ${
                 activeIndex === 2 ? "active" : ""
               }`}
             >
-              <img src={src + "/images/pc/sec11_p3_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec11_p3_pc.png"} />
             </div>
           </div>
           <div>
@@ -124,13 +124,13 @@ const Sec11 = () => {
           <div className='bottom_content'>
             <div className='btn_wrap'>
               <button className='titanium'>
-                <img src={src + "/images/pc/sec11_b1_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec11_b1_pc.png"} />
               </button>
               <button className='black'>
-                <img src={src + "/images/pc/sec11_b2_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec11_b2_pc.png"} />
               </button>
               <button className='ocean'>
-                <img src={src + "/images/pc/sec11_b3_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec11_b3_pc.png"} />
               </button>
             </div>
             <div className='color_wrap'>

@@ -1,16 +1,16 @@
-import { useContext, useRef, useState, useEffect } from "react"
-import { ScreenContext } from "../../../provider"
+import { useRef } from "react"
+// import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
+// import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
 const Sec7 = () => {
   const { s25ultraConfig: config, src } = window as any
-  const { isPc } = useContext(ScreenContext)
+  // const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -71,10 +71,10 @@ const Sec7 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone1'>
-              <img src={src + "/images/pc/sec7_p1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec7_p1_pc.png"} />
             </div>
             <div className='img_wrap phone2'>
-              <img src={src + "/images/pc/sec7_p2_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec7_p2_pc.png"} />
             </div>
           </div>
         </div>

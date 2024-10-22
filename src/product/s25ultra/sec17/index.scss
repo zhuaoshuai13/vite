@@ -17,6 +17,13 @@
     margin: px-to-vw(40) auto 0;
   }
 
+  .swiper_item {
+    .img_wrap {
+      width: 100%;
+      height: px-to-vw(664);
+    }
+  }
+
   .mode_name {
     margin: 0 px-to-vw(36) 0 0;
     font-size: px-to-vw(25);

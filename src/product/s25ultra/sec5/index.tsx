@@ -15,36 +15,22 @@ const Sec5 = () => {
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
-  const sec1Ani = () => {
-    // const tl = gsap
-    //   .timeline()
-    //   .to(".title_items", { y: -100, ease: "power2.inOut" }, "a")
-    // ScrollTrigger.create({
-    //   trigger: ".sec2_wrap",
-    //   pin: true,
-    //   start: `top 0%`,
-    //   end: "+=2000",
-    //   animation: tl,
-    // })
-    // const titleList = gsap.utils.toArray(".sec2 .title_items p")
-    // titleList.forEach((item, index) =>
-    //   gsap.to(item, {
-    //     scrollTrigger: {
-    //       trigger: ".sec2_wrap",
-    //       scrub: true,
-    //       pin: true,
-    //       start: "top 0%",
-    //       end: "+=100%",
-    //     },
-    //     fontSize: 75,
-    //     ease: "none",
-    //   })
-    // )
+  const sec5Ani = () => {
+    const tl = gsap
+      .timeline()
+      .from(".light_wrap", { x: "-80%", ease: "power2.inOut", duration: 1.5 })
+      .from(".nit_wrap", { opacity: 0, ease: "power2.inOut" })
+    ScrollTrigger.create({
+      trigger: ".sec5_wrap",
+      start: `top 30%`,
+      animation: tl,
+      toggleActions: "play none none reverse",
+    })
   }
 
   useGSAP(
     () => {
-      sec1Ani()
+      sec5Ani()
     },
     { scope: wrap }
   )
@@ -64,16 +50,17 @@ const Sec5 = () => {
         </div>
         <div className='pic_wrap'>
           <div className='img_wrap phone_wrap'>
-            <img src={src + "/images/pc/sec5_phone_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec5_phone_pc.png"} />
           </div>
-          <div className='phone_mask_wrap'>
-            <div className='img_wrap'>
-              <img src={src + "/images/pc/sec5_phone_mask_pc.png"} />
-            </div>
-            <div className="mask"></div>
+          <div className='light_wrap'></div>
+          <div className='img_wrap mask_wrap'>
+            <img
+              loading='lazy'
+              src={src + "/images/pc/sec5_phone_mask_pc.png"}
+            />
           </div>
           <div className='img_wrap nit_wrap'>
-            <img src={src + "/images/pc/sec5_nit_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec5_nit_pc.png"} />
           </div>
         </div>
       </div>

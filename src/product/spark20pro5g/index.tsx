@@ -60,11 +60,6 @@ const Spark20Pro5G = () => {
     { scope: wrap }
   )
 
-  const lenis = useLenis(({ scroll }) => {
-    // called every scroll
-  })
-
-
   return (
     <ReactLenis root>
     <div className='spark20pro5g' ref={wrap}>

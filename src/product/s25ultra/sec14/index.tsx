@@ -41,71 +41,85 @@ const Sec14 = () => {
       <div className='sec14_wrap'>
         <div className='top_wrap'>
           <div className='img_wrap ellipse_wrap'>
-            <img src={src + "/images/pc/sec14_ellipse_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec14_ellipse_pc.png"} />
           </div>
           <div className='img_wrap wifi_wrap'>
-            <img src={src + "/images/pc/sec14_wifi_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec14_wifi_pc.png"} />
           </div>
         </div>
-        <div className='text_wrap'>
-          <div
-            className='title_75'
-            dangerouslySetInnerHTML={{ __html: config?.sec14?.title }}
-          ></div>
-        </div>
-        <div className='pic_wrap'>
-          <div className='img_wrap bg_wrap'>
-            <img src={src + "/images/pc/sec14_bg_pc.png"} />
-          </div>
-          <div className='img_wrap left_hand1'>
-            <img src={src + "/images/pc/sec14_lefthand1_pc.png"} />
-          </div>
-          <div className='img_wrap right_hand1'>
-            <img src={src + "/images/pc/sec14_righthand1_pc.png"} />
-          </div>
-          <div className='img_wrap phone_wrap'>
-            <img src={src + "/images/pc/sec14_phone_pc.png"} />
-          </div>
-          <div className='circleBox left_circle'>
-            <div className='circle'></div>
-            <div className='circle1'></div>
-            <div className='circle2'></div>
-            <div className='circle3'></div>
-          </div>
-          <div className='circleBox right_circle'>
-            <div className='circle'></div>
-            <div className='circle1'></div>
-            <div className='circle2'></div>
-            <div className='circle3'></div>
-          </div>
-          <div className='img_wrap left_hand2'>
-            <img src={src + "/images/pc/sec14_lefthand2_pc.png"} />
-          </div>
-          <div className='img_wrap right_hand2'>
-            <img src={src + "/images/pc/sec14_righthand2_pc.png"} />
-          </div>
-          <div className='text_wrap bottom_text'>
+        <div className='bottom_wrap'>
+          <div className='text_wrap'>
             <div
-              className='desc_16'
-              dangerouslySetInnerHTML={{ __html: config?.sec14?.desc }}
+              className='title_75'
+              dangerouslySetInnerHTML={{ __html: config?.sec14?.title }}
             ></div>
           </div>
-        </div>
-        <div className='data_wrap'>
-          {config?.sec14?.data?.map((item: any, index: number) => {
-            return (
-              <div className='data' key={index}>
-                <div
-                  className='data_title'
-                  dangerouslySetInnerHTML={{ __html: item.title }}
-                ></div>
-                <div
-                  className='desc_16'
-                  dangerouslySetInnerHTML={{ __html: item.desc }}
-                ></div>
-              </div>
-            )
-          })}
+          <div className='pic_wrap'>
+            <div className='img_wrap bg_wrap'>
+              <img loading='lazy' src={src + "/images/pc/sec14_bg_pc.png"} />
+            </div>
+            <div className='img_wrap left_hand1'>
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec14_lefthand1_pc.png"}
+              />
+            </div>
+            <div className='img_wrap right_hand1'>
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec14_righthand1_pc.png"}
+              />
+            </div>
+            <div className='img_wrap phone_wrap'>
+              <img loading='lazy' src={src + "/images/pc/sec14_phone_pc.png"} />
+            </div>
+            <div className='circleBox left_circle'>
+              <div className='circle'></div>
+              <div className='circle1'></div>
+              <div className='circle2'></div>
+              <div className='circle3'></div>
+            </div>
+            <div className='circleBox right_circle'>
+              <div className='circle'></div>
+              <div className='circle1'></div>
+              <div className='circle2'></div>
+              <div className='circle3'></div>
+            </div>
+            <div className='img_wrap left_hand2'>
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec14_lefthand2_pc.png"}
+              />
+            </div>
+            <div className='img_wrap right_hand2'>
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec14_righthand2_pc.png"}
+              />
+            </div>
+            <div className='text_wrap bottom_text'>
+              <div
+                className='desc_16'
+                dangerouslySetInnerHTML={{ __html: config?.sec14?.desc }}
+              ></div>
+            </div>
+          </div>
+          <div className='data_wrap'>
+            {config?.sec14?.data?.map((item: any, index: number) => {
+              return (
+                <div className='data' key={index}>
+                  <div
+                    className='data_title'
+                    dangerouslySetInnerHTML={{ __html: item.title }}
+                  ></div>
+                  <div
+                    className='desc_16'
+                    dangerouslySetInnerHTML={{ __html: item.desc }}
+                  ></div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>

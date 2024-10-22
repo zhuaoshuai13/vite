@@ -49,10 +49,12 @@ const Sec13 = () => {
       .from(
         ".part1 .chip_wrap2",
         {
-          x: "-4%",
-          y: "44%",
+          x: "-2%",
+          y: "47%",
           rotate: "-7deg",
-          rotateX: "62deg",
+          rotateX: "60deg",
+          skewX: "4deg",
+          skewY: "2deg",
           ease: "power2.inOut",
         },
         "a"
@@ -116,6 +118,7 @@ const Sec13 = () => {
         },
         "d"
       )
+      .to(".part2 .clip_light_circle_wrap1", {})
     ScrollTrigger.create({
       trigger: ".sec13_wrap",
       pin: true,
@@ -164,25 +167,43 @@ const Sec13 = () => {
             </div>
             <div className='pic_wrap'>
               <div className='img_wrap phone_wrap'>
-                <img src={src + "/images/pc/sec13_part1_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec13_part1_pc.png"}
+                />
               </div>
               <div className='img_wrap clip_light_circle_wrap2'>
-                <img src={src + "/images/pc/sec13_512g_light_circle_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec13_512g_light_circle_pc.png"}
+                />
               </div>
               <div className='img_wrap clip_light_wrap2'>
-                <img src={src + "/images/pc/sec13_512g_light_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec13_512g_light_pc.png"}
+                />
               </div>
               <div className='img_wrap chip_wrap2'>
-                <img src={src + "/images/pc/sec13_512g_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec13_512g_pc.png"}
+                />
               </div>
               <div className='img_wrap clip_light_circle_wrap1'>
-                <img src={src + "/images/pc/sec13_16g_light_circle_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec13_16g_light_circle_pc.png"}
+                />
               </div>
               <div className='img_wrap clip_light_wrap1'>
-                <img src={src + "/images/pc/sec13_16g_light_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec13_16g_light_pc.png"}
+                />
               </div>
               <div className='img_wrap chip_wrap1'>
-                <img src={src + "/images/pc/sec13_16g_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec13_16g_pc.png"} />
               </div>
             </div>
             <div className='data_wrap'>
@@ -221,16 +242,28 @@ const Sec13 = () => {
             </div>
             <div className='pic_wrap'>
               <div className='img_wrap phone_wrap'>
-                <img src={src + "/images/pc/sec13_part2_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec13_part2_pc.png"}
+                />
               </div>
               <div className='img_wrap clip_light_circle_wrap1'>
-                <img src={src + "/images/pc/sec13_t620_light_circle_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec13_t620_light_circle_pc.png"}
+                />
               </div>
               <div className='img_wrap clip_light_wrap1'>
-                <img src={src + "/images/pc/sec13_t620_light_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec13_t620_light_pc.png"}
+                />
               </div>
               <div className='img_wrap chip_wrap1'>
-                <img src={src + "/images/pc/sec13_t620_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec13_t620_pc.png"}
+                />
               </div>
             </div>
           </div>

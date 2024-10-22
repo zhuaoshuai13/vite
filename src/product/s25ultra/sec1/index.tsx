@@ -50,13 +50,16 @@ const Sec1 = () => {
 
     ScrollTrigger.create({
       trigger: ".sec1_wrap",
-      start: `top 0`,
+      start: `top 50%`,
       animation: tl,
     })
   }
 
   useGSAP(
     () => {
+      if(window.innerHeight < 900) {
+        window.scrollTo(0, 125)
+      }
       if (isLoaded) {
         sec1Ani()
       }
@@ -67,19 +70,23 @@ const Sec1 = () => {
   return (
     <section className='sec1' ref={wrap}>
       <div className='sec1_wrap'>
-        <div className='phone_wrap img_wrap phone1'>
-          <img src={src + "/images/pc/sec1_p1_pc.png"} />
-        </div>
-        <div className='phone_wrap img_wrap phone2'>
-          <img src={src + "/images/pc/sec1_p2_pc.png"} />
-        </div>
-        <div className='phone_wrap img_wrap phone3'>
-          <img src={src + "/images/pc/sec1_p3_pc.png"} />
-        </div>
+        {isLoaded && (
+          <>
+            <div className='phone_wrap img_wrap phone1'>
+              <img loading='lazy' src={src + "/images/pc/sec1_p1_pc.png"} />
+            </div>
+            <div className='phone_wrap img_wrap phone2'>
+              <img loading='lazy' src={src + "/images/pc/sec1_p2_pc.png"} />
+            </div>
+            <div className='phone_wrap img_wrap phone3'>
+              <img loading='lazy' src={src + "/images/pc/sec1_p3_pc.png"} />
+            </div>
+          </>
+        )}
         <div className='content_wrap'>
           <div className='left'>
             <div className='img_wrap logo'>
-              <img src={src + "/images/pc/sec1_logo_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec1_logo_pc.png"} />
             </div>
             <div className='data_wrap'>
               {config?.sec1?.data?.map((item: any, index: number) => (
@@ -99,22 +106,40 @@ const Sec1 = () => {
           <div className='right'>
             <div className='icon_items'>
               <div className='img_wrap item'>
-                <img src={src + "/images/pc/sec1_icon1_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec1_icon1_pc.png"}
+                />
               </div>
               <div className='img_wrap item'>
-                <img src={src + "/images/pc/sec1_icon2_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec1_icon2_pc.png"}
+                />
               </div>
               <div className='img_wrap item'>
-                <img src={src + "/images/pc/sec1_icon3_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec1_icon3_pc.png"}
+                />
               </div>
               <div className='img_wrap item'>
-                <img src={src + "/images/pc/sec1_icon4_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec1_icon4_pc.png"}
+                />
               </div>
               <div className='img_wrap item'>
-                <img src={src + "/images/pc/sec1_icon5_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec1_icon5_pc.png"}
+                />
               </div>
               <div className='img_wrap item'>
-                <img src={src + "/images/pc/sec1_icon6_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec1_icon6_pc.png"}
+                />
               </div>
             </div>
           </div>

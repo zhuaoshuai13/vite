@@ -237,12 +237,15 @@ const Sec16 = () => {
         </div>
         <div className='content_wrap'>
           <div className='img_wrap content_bg_wrap'>
-            <img src={src + "/images/pc/sec16_bg_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec16_bg_pc.png"} />
           </div>
           <div className='part part1'>
             <div className='mp32_wrap'>
               <div className='img_wrap text_bg_wrap'>
-                <img src={src + "/images/pc/sec16_32mp_bg_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec16_32mp_bg_pc.png"}
+                />
               </div>
               <div className='text_wrap'>
                 <div className='title_75'>
@@ -284,7 +287,10 @@ const Sec16 = () => {
             </div>
             <div className='mp50_wrap'>
               <div className='img_wrap text_bg_wrap'>
-                <img src={src + "/images/pc/sec16_50mp_bg_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec16_50mp_bg_pc.png"}
+                />
               </div>
               <div className='text_wrap'>
                 <div className='title_75'>
@@ -325,23 +331,26 @@ const Sec16 = () => {
               </div>
             </div>
             <div className='img_wrap big_front_phone'>
-              <img src={src + "/images/pc/sec16_p1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec16_p1_pc.png"} />
             </div>
             <div className='mp32_line'></div>
             <div className='img_wrap back_phone'>
-              <img src={src + "/images/pc/sec16_p3_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec16_p3_pc.png"} />
             </div>
             <div className='img_wrap front_phone'>
-              <img src={src + "/images/pc/sec16_p2_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec16_p2_pc.png"} />
             </div>
             <div className='img_wrap front_phone_shadow'>
-              <img src={src + "/images/pc/sec16_p2_shadow_pc.png"} />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec16_p2_shadow_pc.png"}
+              />
             </div>
           </div>
           <div className='part part2'>
             <div className='box_wrap'>
               <div className='img_wrap box_bg'>
-                <img src={src + "/images/pc/sec16_box_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec16_box_pc.png"} />
               </div>
               <div className='text_wrap'>
                 <div className='top_wrap'>
@@ -411,22 +420,34 @@ const Sec16 = () => {
                 >
                   <SwiperSlide>
                     <div className='img_wrap mp32_img'>
-                      <img src={src + "/images/pc/sec16_32mp_p1_pc.png"} />
+                      <img
+                        loading='lazy'
+                        src={src + "/images/pc/sec16_32mp_p1_pc.png"}
+                      />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className='img_wrap mp32_img'>
-                      <img src={src + "/images/pc/sec16_32mp_p2_pc.png"} />
+                      <img
+                        loading='lazy'
+                        src={src + "/images/pc/sec16_32mp_p2_pc.png"}
+                      />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className='img_wrap mp32_img'>
-                      <img src={src + "/images/pc/sec16_32mp_p1_pc.png"} />
+                      <img
+                        loading='lazy'
+                        src={src + "/images/pc/sec16_32mp_p1_pc.png"}
+                      />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className='img_wrap mp32_img'>
-                      <img src={src + "/images/pc/sec16_32mp_p2_pc.png"} />
+                      <img
+                        loading='lazy'
+                        src={src + "/images/pc/sec16_32mp_p2_pc.png"}
+                      />
                     </div>
                   </SwiperSlide>
                 </Swiper>
@@ -435,7 +456,10 @@ const Sec16 = () => {
                 className='img_wrap next_wrap'
                 onClick={handlePart2SwiperNext}
               >
-                <img src={src + "/images/pc/sec16_next_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec16_next_pc.png"}
+                />
               </div>
               <Pagetion length={5} activeIndex={0} />
             </div>
@@ -443,7 +467,7 @@ const Sec16 = () => {
           <div className='part part3'>
             <div className='box_wrap'>
               <div className='img_wrap box_bg'>
-                <img src={src + "/images/pc/sec16_box_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec16_box_pc.png"} />
               </div>
               <div className='left_wrap'>
                 <div className='title_75'>
@@ -500,7 +524,10 @@ const Sec16 = () => {
               </div>
               <div className='icon_wrap mic_wrap'>
                 <div className='img_wrap'>
-                  <img src={src + "/images/pc/sec16_mic_pc.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec16_mic_pc.png"}
+                  />
                 </div>
                 <div
                   className='icon_title'
@@ -511,7 +538,10 @@ const Sec16 = () => {
               </div>
               <div className='icon_wrap smile_wrap'>
                 <div className='img_wrap'>
-                  <img src={src + "/images/pc/sec16_mic_pc.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec16_mic_pc.png"}
+                  />
                 </div>
                 <div
                   className='icon_title'
@@ -526,7 +556,7 @@ const Sec16 = () => {
           <div className='part part4'>
             <div className='box_wrap'>
               <div className='img_wrap box_bg'>
-                <img src={src + "/images/pc/sec16_box_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec16_box_pc.png"} />
               </div>
               <div className='text_wrap'>
                 <div className='top_wrap'>
@@ -569,22 +599,34 @@ const Sec16 = () => {
                 >
                   <SwiperSlide>
                     <div className='img_wrap mp50_img'>
-                      <img src={src + "/images/pc/sec16_50mp_p1_pc.png"} />
+                      <img
+                        loading='lazy'
+                        src={src + "/images/pc/sec16_50mp_p1_pc.png"}
+                      />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className='img_wrap mp50_img'>
-                      <img src={src + "/images/pc/sec16_50mp_p2_pc.png"} />
+                      <img
+                        loading='lazy'
+                        src={src + "/images/pc/sec16_50mp_p2_pc.png"}
+                      />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className='img_wrap mp50_img'>
-                      <img src={src + "/images/pc/sec16_50mp_p1_pc.png"} />
+                      <img
+                        loading='lazy'
+                        src={src + "/images/pc/sec16_50mp_p1_pc.png"}
+                      />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className='img_wrap mp50_img'>
-                      <img src={src + "/images/pc/sec16_50mp_p2_pc.png"} />
+                      <img
+                        loading='lazy'
+                        src={src + "/images/pc/sec16_50mp_p2_pc.png"}
+                      />
                     </div>
                   </SwiperSlide>
                 </Swiper>
@@ -593,7 +635,10 @@ const Sec16 = () => {
                 className='img_wrap next_wrap'
                 onClick={handlePart4SwiperNext}
               >
-                <img src={src + "/images/pc/sec16_next_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec16_next_pc.png"}
+                />
               </div>
               <Pagetion length={5} activeIndex={2} />
             </div>
@@ -601,7 +646,7 @@ const Sec16 = () => {
           <div className='part part5'>
             <div className='box_wrap'>
               <div className='img_wrap box_bg'>
-                <img src={src + "/images/pc/sec16_box_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec16_box_pc.png"} />
               </div>
               <div className='text_wrap'>
                 <div className='top_wrap'>
@@ -653,10 +698,16 @@ const Sec16 = () => {
               </div>
               <div className='pic_wrap'>
                 <div className={`img_wrap ${part5IsOpen ? "active" : ""}`}>
-                  <img src={src + "/images/pc/sec16_hdr_on_pc.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec16_hdr_on_pc.png"}
+                  />
                 </div>
                 <div className={`img_wrap ${!part5IsOpen ? "active" : ""}`}>
-                  <img src={src + "/images/pc/sec16_hdr_off_pc.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec16_hdr_off_pc.png"}
+                  />
                 </div>
               </div>
               <Pagetion length={5} activeIndex={3} />
@@ -665,7 +716,7 @@ const Sec16 = () => {
           <div className='part part6'>
             <div className='box_wrap'>
               <div className='img_wrap box_bg'>
-                <img src={src + "/images/pc/sec16_box_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec16_box_pc.png"} />
               </div>
               <div className='text_wrap'>
                 <div className='top_wrap'>
@@ -694,7 +745,10 @@ const Sec16 = () => {
                 </div>
               </div>
               <div className={`img_wrap night_wrap`}>
-                <img src={src + "/images/pc/sec16_night_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec16_night_pc.png"}
+                />
               </div>
               <Pagetion length={5} activeIndex={4} />
             </div>

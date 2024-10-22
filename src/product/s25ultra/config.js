@@ -25,7 +25,7 @@ window.s25ultraConfig = {
       "lovingly crafted for the uncompromising you",
     ],
     video: {
-      src: src + "/video/sec2_video.mp4",
+      src: src + "/videos/sec2_video_pc.mp4",
       poster: src + "/images/sec2_video_poster.webp",
     },
   },
@@ -196,7 +196,7 @@ window.s25ultraConfig = {
   sec11: {
     spec_title: "EXCELLENCE IN AESTHETICS",
     spec_desc:
-      "Draw inspiration from magical nature,  with the avanced aesthetics and craftsmanship, transform the S25 Ultra into a trendy item! ",
+      "Draw inspiration from magical nature,  with the advanced aesthetics and craftsmanship, transform the S25 Ultra into a trendy item! ",
     part1: {
       title: "An elegant creation",
       desc: "Fashion on one side, technology on the other. Combining natural inspiration with cutting-edge design concepts, advanced Optical Coating Process creates a dual texture of matte and glossy finishes, exuding a premium feel.",
@@ -283,7 +283,7 @@ window.s25ultraConfig = {
   sec15: {
     part1: {
       title: "The powerhouse in  your hand",
-      desc: "The S25 Ultra comes with a massive 5000mAh battery and super fast <br/> charging of 18W. With smart charging protection, the battery can last <br/> for up to 4 years and endure an impressive 1000 charge cycles.*",
+      desc: "The S25 Ultra comes with a massive 5000mAh battery and super fast <br/> charging of 18W. With smart charging protection, the battery can last <br/> for up to 4 years*",
     },
     part2: {
       title: "No gaming compromises",
@@ -307,7 +307,7 @@ window.s25ultraConfig = {
       desc: "Ultra-clear Camera",
       data: [
         { data_title: "", data_desc: "Aperture: f/1.6" },
-        { data_title: "", data_desc: "Pixel size: 0.64μm" },
+        // { data_title: "", data_desc: "Pixel size: 0.64μm" },
         { data_title: "Macro Lens", data_desc: "4cm Focus Distance" },
       ],
     },

@@ -4,14 +4,16 @@
   .sec5_wrap {
     position: relative;
     height: px-to-vw(950);
+    margin-top: px-to-vw(100);
     padding: px-to-vw(50) 0;
+    background-size: 100% 100% !important;
 
     @include bg("pc/sec5_bg_pc.png");
-
-    background-size: 100% 100%;
   }
 
   .text_wrap {
+    position: relative;
+    z-index: 1;
     max-width: var(--content-width);
     margin: 0 auto;
     text-align: center;
@@ -22,6 +24,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    overflow: hidden;
   }
 
   .phone_wrap {
@@ -29,7 +32,7 @@
     height: px-to-vw(930);
   }
 
-  .phone_mask_wrap {
+  .mask_wrap {
     position: absolute;
     top: 0;
     left: 0;
@@ -37,13 +40,14 @@
     height: 100%;
   }
 
-  .mask {
+  .light_wrap {
     position: absolute;
-    top: 0;
+    top: px-to-vw(400);
+    left: px-to-vw(800);
     width: 100%;
     height: px-to-vw(200);
-    background-color: #fff;
-    opacity: .5;
+    background-color: rgba(255, 255, 255, .4);
+    transform: rotate(-55deg);
   }
 
   .nit_wrap {
