@@ -186,7 +186,7 @@
           height: px-to-vw(20);
           content: "";
 
-          @include bg("pc/sec19_part4_icon3_pc.png");
+          @include bg("pc/sec19_part4_icon3_pc.webp");
         }
 
         &:after {
@@ -198,7 +198,7 @@
           height: px-to-vw(20);
           content: "";
 
-          @include bg("pc/sec19_part4_icon4_pc.png");
+          @include bg("pc/sec19_part4_icon4_pc.webp");
         }
       }
     }

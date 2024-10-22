@@ -41,10 +41,13 @@ const Sec14 = () => {
       <div className='sec14_wrap'>
         <div className='top_wrap'>
           <div className='img_wrap ellipse_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec14_ellipse_pc.png"} />
+            <img
+              loading='lazy'
+              src={src + "/images/pc/sec14_ellipse_pc.webp"}
+            />
           </div>
           <div className='img_wrap wifi_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec14_wifi_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec14_wifi_pc.webp"} />
           </div>
         </div>
         <div className='bottom_wrap'>
@@ -56,22 +59,25 @@ const Sec14 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap bg_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec14_bg_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec14_bg_pc.webp"} />
             </div>
             <div className='img_wrap left_hand1'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec14_lefthand1_pc.png"}
+                src={src + "/images/pc/sec14_lefthand1_pc.webp"}
               />
             </div>
             <div className='img_wrap right_hand1'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec14_righthand1_pc.png"}
+                src={src + "/images/pc/sec14_righthand1_pc.webp"}
               />
             </div>
             <div className='img_wrap phone_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec14_phone_pc.png"} />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec14_phone_pc.webp"}
+              />
             </div>
             <div className='circleBox left_circle'>
               <div className='circle'></div>
@@ -88,13 +94,13 @@ const Sec14 = () => {
             <div className='img_wrap left_hand2'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec14_lefthand2_pc.png"}
+                src={src + "/images/pc/sec14_lefthand2_pc.webp"}
               />
             </div>
             <div className='img_wrap right_hand2'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec14_righthand2_pc.png"}
+                src={src + "/images/pc/sec14_righthand2_pc.webp"}
               />
             </div>
             <div className='text_wrap bottom_text'>

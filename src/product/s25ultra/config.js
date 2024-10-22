@@ -70,22 +70,30 @@ window.s25ultraConfig = {
       desc: "itel collaborates with top suppliers to create a flagship-level curved screen, utilizing cutting-edge luminescent materials. <br/> It features top-tier display quality and eye protection, making it the king of the segment in every aspect.",
       data: [
         {
-          icon: "sec4_icon1_pc.png",
+          icon: "sec4_icon1_pc.webp",
           title: "6.78-inch",
           subtitle: "Large Display",
         },
         {
-          icon: "sec4_icon2_pc.png",
+          icon: "sec4_icon2_pc.webp",
           title: "1400nits*",
           subtitle: "Peak Brightness",
         },
-        { icon: "sec4_icon3_pc.png", title: "120Hz", subtitle: "Refresh Rate" },
         {
-          icon: "sec4_icon4_pc.png",
+          icon: "sec4_icon3_pc.webp",
+          title: "120Hz",
+          subtitle: "Refresh Rate",
+        },
+        {
+          icon: "sec4_icon4_pc.webp",
           title: "1500Hz",
           subtitle: "Instant Touch Sampling",
         },
-        { icon: "sec4_icon5_pc.png", title: "2160Hz", subtitle: "PWM Dimming" },
+        {
+          icon: "sec4_icon5_pc.webp",
+          title: "2160Hz",
+          subtitle: "PWM Dimming",
+        },
       ],
     },
     part2: {
@@ -93,27 +101,27 @@ window.s25ultraConfig = {
       desc: "The itel S25 Ultra comes equipped with leading Corning® Gorilla® Glass 7i, enhancing drop resistance by 160% and scratch resistance by 100% compared to regular glass. Even from a drop height of 1.5 meters, the screen remains intact.*",
       data: [
         {
-          icon: "sec4_icon6_pc.png",
+          icon: "sec4_icon6_pc.webp",
           title: "1.07 Billion",
           subtitle: "Colors",
         },
         {
-          icon: "sec4_icon7_pc.png",
+          icon: "sec4_icon7_pc.webp",
           title: "100%",
           subtitle: "DCI-P3 Color Gamut",
         },
         {
-          icon: "sec4_icon8_pc.png",
+          icon: "sec4_icon8_pc.webp",
           title: "2436*1080",
           subtitle: "FHD+ Resolution",
         },
         {
-          icon: "sec4_icon9_pc.png",
+          icon: "sec4_icon9_pc.webp",
           title: "94%*",
           subtitle: "Screen-to-body Ratio",
         },
         {
-          icon: "sec4_icon10_pc.png",
+          icon: "sec4_icon10_pc.webp",
           title: "5,000,000: 1",
           subtitle: "Contrast Ratio",
         },
@@ -343,15 +351,15 @@ window.s25ultraConfig = {
     desc: "Dare to integrate AI technology into mobile photography, creating three distinctive stylistic tone filters that allow your photos to effortlessly convey a variety of emotions and atmospheres. Coupled with the use of an exclusive master watermark, every snapshot you take is instantly transformed into a masterpiece.",
     data: [
       {
-        pic: "sec17_standard_pc.png",
+        pic: "sec17_standard_pc.webp",
         mode: "Standard",
       },
       {
-        pic: "sec17_bright_pc.png",
+        pic: "sec17_bright_pc.webp",
         mode: "Bright",
       },
       {
-        pic: "sec17_master_pc.png",
+        pic: "sec17_master_pc.webp",
         mode: "Master",
       },
     ],

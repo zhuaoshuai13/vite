@@ -75,9 +75,9 @@ const Sec2 = () => {
             <LazyLoad offset={1000}>
               <video
                 src={config.sec2.video.src}
-                poster={
-                  config.sec2.video.poster ? config.sec2.video.poster : ""
-                }
+                // poster={
+                //   config.sec2.video.poster ? config.sec2.video.poster : ""
+                // }
                 muted
                 preload='auto'
                 webkit-playsinline='true'
@@ -90,13 +90,13 @@ const Sec2 = () => {
           </div>
           <button className='video_play_btn part2_btn' onClick={handlePart2Btn}>
             <div className='img_wrap'>
-              <img src={src + "/images/pc/sec2_play_pc.png"} />
+              <img src={src + "/images/pc/sec2_play_pc.webp"} />
             </div>
           </button>
         </div>
         <div className='part part1'>
           <div className='img_wrap bg_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec2_bg_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec2_bg_pc.webp"} />
           </div>
           <div className='text_wrap'>
             <div className='title_items'>
@@ -110,11 +110,6 @@ const Sec2 = () => {
               ))}
             </div>
           </div>
-          <button className='video_play_btn' onClick={handlePart1Btn}>
-            <div className='img_wrap'>
-              <img src={src + "/images/pc/sec2_play_pc.png"} />
-            </div>
-          </button>
         </div>
       </div>
     </section>

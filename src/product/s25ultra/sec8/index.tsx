@@ -47,7 +47,7 @@ const Sec8 = () => {
     <section className='sec8' ref={wrap}>
       <div className='sec8_wrap'>
         <div className='img_wrap sec8_bg'>
-          <img loading='lazy' src={src + "/images/pc/sec8_bg_pc.png"} />
+          <img loading='lazy' src={src + "/images/pc/sec8_bg_pc.webp"} />
         </div>
         <div className='text_wrap'>
           <div

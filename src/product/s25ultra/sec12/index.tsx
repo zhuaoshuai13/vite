@@ -13,10 +13,10 @@ const Sec12 = () => {
   const { s25ultraConfig: config, src } = window as any
   const length = config?.sec12?.data?.length
   const circleList = [
-    "sec12_green_pc.png",
-    "sec12_red_pc.png",
-    "sec12_blue_pc.png",
-    "sec12_purple_pc.png",
+    "sec12_green_pc.webp",
+    "sec12_red_pc.webp",
+    "sec12_blue_pc.webp",
+    "sec12_purple_pc.webp",
   ]
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
@@ -52,10 +52,10 @@ const Sec12 = () => {
       <div className='sec12_wrap'>
         <div className='pic_wrap'>
           <div className='img_wrap bg_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec12_bg_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec12_bg_pc.webp"} />
           </div>
           <div className='img_wrap phone_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec12_phone_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec12_phone_pc.webp"} />
           </div>
           <div className='content_wrap'>
             <div className='text_wrap'>
@@ -102,13 +102,13 @@ const Sec12 = () => {
               </div>
             ))}
             {/* <div className='img_wrap circle_item'>
-              <img loading="lazy" src={src + "/images/pc/sec12_red_pc.png"} />
+              <img loading="lazy" src={src + "/images/pc/sec12_red_pc.webp"} />
             </div>
             <div className='img_wrap circle_item'>
-              <img loading="lazy" src={src + "/images/pc/sec12_blue_pc.png"} />
+              <img loading="lazy" src={src + "/images/pc/sec12_blue_pc.webp"} />
             </div>
             <div className='img_wrap circle_item'>
-              <img loading="lazy" src={src + "/images/pc/sec12_purple_pc.png"} />
+              <img loading="lazy" src={src + "/images/pc/sec12_purple_pc.webp"} />
             </div> */}
           </div>
         </div>

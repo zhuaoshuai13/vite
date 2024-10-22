@@ -68,7 +68,7 @@
       border-radius: px-to-vw(25);
 
       .img_wrap {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
   }
@@ -105,7 +105,7 @@
     overflow: unset;
     border-radius: px-to-vw(25) px-to-vw(275) px-to-vw(275) px-to-vw(25);
 
-    @include bg('pc/sec2_p1_bg_pc.png', false);
+    @include bg('pc/sec2_p1_bg_pc.webp', false);
 
     .text_wrap {
       display: flex;
@@ -161,7 +161,7 @@
     height: px-to-vw(140);
     padding: 0;
 
-    @include bg('pc/sec2_p8_bg_pc.png', false);
+    @include bg('pc/sec2_p8_bg_pc.webp', false);
 
     .text_wrap {
       margin: 0 auto;

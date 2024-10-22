@@ -86,14 +86,17 @@ const Sec6 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec6_p1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec6_p1_pc.webp"} />
             </div>
             <div className='img_wrap circle_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec6_circle_pc.png"} />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec6_circle_pc.webp"}
+              />
             </div>
           </div>
           <div className='img_wrap hand_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec6_f1_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec6_f1_pc.webp"} />
           </div>
         </div>
         <div className='part part2'>
@@ -109,14 +112,14 @@ const Sec6 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec6_p2_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec6_p2_pc.webp"} />
             </div>
             <div className='img_wrap nit_wrap'>
-              {/* <img loading="lazy" src={src + "/images/pc/sec5_nit_pc.png"} /> */}
+              {/* <img loading="lazy" src={src + "/images/pc/sec5_nit_pc.webp"} /> */}
             </div>
           </div>
           <div className='img_wrap hand_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec6_f2_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec6_f2_pc.webp"} />
           </div>
         </div>
         <div className='part part3'>
@@ -132,29 +135,29 @@ const Sec6 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec6_p3_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec6_p3_pc.webp"} />
             </div>
             <div className='img_wrap fingerprint_wrap'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec6_fingerprint_pc.png"}
+                src={src + "/images/pc/sec6_fingerprint_pc.webp"}
               />
             </div>
             <div className='img_wrap fingerprintlight_wrap1'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec6_fingerprintlight1_pc.png"}
+                src={src + "/images/pc/sec6_fingerprintlight1_pc.webp"}
               />
             </div>
             <div className='img_wrap fingerprintlight_wrap2'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec6_fingerprintlight2_pc.png"}
+                src={src + "/images/pc/sec6_fingerprintlight2_pc.webp"}
               />
             </div>
           </div>
           <div className='img_wrap hand_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec6_f1_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec6_f1_pc.webp"} />
           </div>
         </div>
       </div>

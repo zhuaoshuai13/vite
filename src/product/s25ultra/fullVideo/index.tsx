@@ -27,6 +27,7 @@ const FullVideo = () => {
           preload='auto'
           muted
           loop={true}
+          controls
         ></video>
 
         <div className='closeIcon' onClick={fa}></div>

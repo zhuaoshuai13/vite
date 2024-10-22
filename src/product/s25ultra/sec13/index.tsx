@@ -169,41 +169,44 @@ const Sec13 = () => {
               <div className='img_wrap phone_wrap'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec13_part1_pc.png"}
+                  src={src + "/images/pc/sec13_part1_pc.webp"}
                 />
               </div>
               <div className='img_wrap clip_light_circle_wrap2'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec13_512g_light_circle_pc.png"}
+                  src={src + "/images/pc/sec13_512g_light_circle_pc.webp"}
                 />
               </div>
               <div className='img_wrap clip_light_wrap2'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec13_512g_light_pc.png"}
+                  src={src + "/images/pc/sec13_512g_light_pc.webp"}
                 />
               </div>
               <div className='img_wrap chip_wrap2'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec13_512g_pc.png"}
+                  src={src + "/images/pc/sec13_512g_pc.webp"}
                 />
               </div>
               <div className='img_wrap clip_light_circle_wrap1'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec13_16g_light_circle_pc.png"}
+                  src={src + "/images/pc/sec13_16g_light_circle_pc.webp"}
                 />
               </div>
               <div className='img_wrap clip_light_wrap1'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec13_16g_light_pc.png"}
+                  src={src + "/images/pc/sec13_16g_light_pc.webp"}
                 />
               </div>
               <div className='img_wrap chip_wrap1'>
-                <img loading='lazy' src={src + "/images/pc/sec13_16g_pc.png"} />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec13_16g_pc.webp"}
+                />
               </div>
             </div>
             <div className='data_wrap'>
@@ -244,25 +247,25 @@ const Sec13 = () => {
               <div className='img_wrap phone_wrap'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec13_part2_pc.png"}
+                  src={src + "/images/pc/sec13_part2_pc.webp"}
                 />
               </div>
               <div className='img_wrap clip_light_circle_wrap1'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec13_t620_light_circle_pc.png"}
+                  src={src + "/images/pc/sec13_t620_light_circle_pc.webp"}
                 />
               </div>
               <div className='img_wrap clip_light_wrap1'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec13_t620_light_pc.png"}
+                  src={src + "/images/pc/sec13_t620_light_pc.webp"}
                 />
               </div>
               <div className='img_wrap chip_wrap1'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec13_t620_pc.png"}
+                  src={src + "/images/pc/sec13_t620_pc.webp"}
                 />
               </div>
             </div>

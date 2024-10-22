@@ -50,17 +50,17 @@ const Sec5 = () => {
         </div>
         <div className='pic_wrap'>
           <div className='img_wrap phone_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec5_phone_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec5_phone_pc.webp"} />
           </div>
           <div className='light_wrap'></div>
           <div className='img_wrap mask_wrap'>
             <img
               loading='lazy'
-              src={src + "/images/pc/sec5_phone_mask_pc.png"}
+              src={src + "/images/pc/sec5_phone_mask_pc.webp"}
             />
           </div>
           <div className='img_wrap nit_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec5_nit_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec5_nit_pc.webp"} />
           </div>
         </div>
       </div>

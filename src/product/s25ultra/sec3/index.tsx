@@ -64,14 +64,17 @@ const Sec3 = () => {
                   <div>
                     <img
                       loading='lazy'
-                      src={src + "/images/pc/sec2_p1_icon_pc.png"}
+                      src={src + "/images/pc/sec2_p1_icon_pc.webp"}
                       className='icon'
                     />
                     <div className='desc'>{config?.sec3?.item1?.desc2}</div>
                   </div>
                 </div>
                 <div className='img_wrap'>
-                  <img loading='lazy' src={src + "/images/pc/sec2_p1_pc.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec2_p1_pc.webp"}
+                  />
                 </div>
               </div>
             </div>
@@ -81,7 +84,10 @@ const Sec3 = () => {
                   <div className='title'>{config?.sec3?.item2?.title}</div>
                 </div>
                 <div className='img_wrap'>
-                  <img loading='lazy' src={src + "/images/pc/sec2_p2_pc.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec2_p2_pc.webp"}
+                  />
                 </div>
               </div>
             </div>
@@ -93,7 +99,10 @@ const Sec3 = () => {
                   <div className='title'>{config?.sec3?.item3?.title}</div>
                 </div>
                 <div className='img_wrap'>
-                  <img loading='lazy' src={src + "/images/pc/sec2_p3_pc.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec2_p3_pc.webp"}
+                  />
                 </div>
               </div>
             </div>
@@ -103,7 +112,10 @@ const Sec3 = () => {
                   <div className='title'>{config?.sec3?.item4?.title}</div>
                 </div>
                 <div className='img_wrap'>
-                  <img loading='lazy' src={src + "/images/pc/sec2_p4_pc.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec2_p4_pc.webp"}
+                  />
                 </div>
               </div>
             </div>
@@ -114,7 +126,10 @@ const Sec3 = () => {
                   <div className='desc'>{config?.sec3?.item5?.desc}</div>
                 </div>
                 <div className='img_wrap'>
-                  <img loading='lazy' src={src + "/images/pc/sec2_p5_pc.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec2_p5_pc.webp"}
+                  />
                 </div>
               </div>
             </div>
@@ -130,7 +145,7 @@ const Sec3 = () => {
                     <div className='img_wrap'>
                       <img
                         loading='lazy'
-                        src={src + "/images/pc/sec2_p6_pc.png"}
+                        src={src + "/images/pc/sec2_p6_pc.webp"}
                       />
                     </div>
                   </div>
@@ -143,7 +158,7 @@ const Sec3 = () => {
                     <div className='img_wrap'>
                       <img
                         loading='lazy'
-                        src={src + "/images/pc/sec2_p7_pc.png"}
+                        src={src + "/images/pc/sec2_p7_pc.webp"}
                       />
                     </div>
                   </div>
@@ -169,7 +184,10 @@ const Sec3 = () => {
                   ></div>
                 </div>
                 <div className='img_wrap'>
-                  <img loading='lazy' src={src + "/images/pc/sec2_p9_pc.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec2_p9_pc.webp"}
+                  />
                 </div>
               </div>
             </div>

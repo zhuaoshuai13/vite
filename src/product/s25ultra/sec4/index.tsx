@@ -65,12 +65,12 @@ const Sec4 = () => {
         </div>
         <div className='content_wrap'>
           <div className='img_wrap phone_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec4_phone_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec4_phone_pc.webp"} />
           </div>
           <div className='img_wrap phone_mask_wrap'>
             <img
               loading='lazy'
-              src={src + "/images/pc/sec4_phone_mask_pc.png"}
+              src={src + "/images/pc/sec4_phone_mask_pc.webp"}
             />
           </div>
           <div className='part part1'>
@@ -124,7 +124,7 @@ const Sec4 = () => {
               <div className='img_wrap corning_wrap'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec4_corning_pc.png"}
+                  src={src + "/images/pc/sec4_corning_pc.webp"}
                 />
               </div>
               <p
@@ -135,7 +135,7 @@ const Sec4 = () => {
             <div className='img_wrap warranty_wrap'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec4_warranty_pc.png"}
+                src={src + "/images/pc/sec4_warranty_pc.webp"}
               />
             </div>
           </div>

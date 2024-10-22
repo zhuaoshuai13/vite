@@ -62,48 +62,48 @@
     &:nth-child(1) {
       .noactive {
 
-        @include bg("pc/sec12_i1_2_pc.png");
+        @include bg("pc/sec12_i1_2_pc.webp");
       }
 
       .active {
 
-        @include bg("pc/sec12_i1_1_pc.png");
+        @include bg("pc/sec12_i1_1_pc.webp");
       }
     }
 
     &:nth-child(2) {
       .noactive {
 
-        @include bg("pc/sec12_i2_2_pc.png");
+        @include bg("pc/sec12_i2_2_pc.webp");
       }
 
       .active {
 
-        @include bg("pc/sec12_i2_1_pc.png");
+        @include bg("pc/sec12_i2_1_pc.webp");
       }
     }
 
     &:nth-child(3) {
       .noactive {
 
-        @include bg("pc/sec12_i3_2_pc.png");
+        @include bg("pc/sec12_i3_2_pc.webp");
       }
 
       .active {
 
-        @include bg("pc/sec12_i3_1_pc.png");
+        @include bg("pc/sec12_i3_1_pc.webp");
       }
     }
 
     &:nth-child(4) {
       .noactive {
 
-        @include bg("pc/sec12_i4_2_pc.png");
+        @include bg("pc/sec12_i4_2_pc.webp");
       }
 
       .active {
 
-        @include bg("pc/sec12_i4_1_pc.png");
+        @include bg("pc/sec12_i4_1_pc.webp");
       }
     }
 
@@ -170,6 +170,7 @@
   }
 
   @keyframes show {
+
     0%,
     33%,
     100% {

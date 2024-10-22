@@ -10,17 +10,18 @@
     z-index: 1;
     width: 100%;
 
-    @include bg("pc/sec4_bg_pc.png");
+    @include bg("pc/sec4_bg_pc.webp");
 
     background-size: 100% 100%;
   }
 
   .content_wrap {
     position: relative;
+
     // height: 100vh;
     height: px-to-vw(1000);
 
-    @include bg("pc/sec4_bg2_pc.png");
+    @include bg("pc/sec4_bg2_pc.webp");
 
     background-size: 100% 100%;
   }

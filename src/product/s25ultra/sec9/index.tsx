@@ -81,28 +81,28 @@ const Sec9 = () => {
     <section className='sec9' ref={wrap}>
       <div className='sec9_wrap'>
         <div className='img_wrap sec9_bg'>
-          <img loading='lazy' src={src + "/images/pc/sec9_bg_pc.png"} />
+          <img loading='lazy' src={src + "/images/pc/sec9_bg_pc.webp"} />
         </div>
         <div className='pic_wrap'>
           <div className='img_wrap stone1_wrap'>
             <img
               loading='lazy'
-              src={src + "/images/pc/sec9_stone_behind_pc.png"}
+              src={src + "/images/pc/sec9_stone_behind_pc.webp"}
             />
           </div>
           <div className='img_wrap phone_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec9_phone_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec9_phone_pc.webp"} />
           </div>
           <div className='img_wrap stone2_wrap'>
             <img
               loading='lazy'
-              src={src + "/images/pc/sec9_stone_front_pc.png"}
+              src={src + "/images/pc/sec9_stone_front_pc.webp"}
             />
           </div>
           <div className='img_wrap stone3_wrap'>
             <img
               loading='lazy'
-              src={src + "/images/pc/sec9_stone_move_pc.png"}
+              src={src + "/images/pc/sec9_stone_move_pc.webp"}
             />
           </div>
         </div>

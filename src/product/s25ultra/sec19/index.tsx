@@ -111,7 +111,7 @@ const Sec19 = () => {
             <div className='img_wrap logo_wrap'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec19_part1_logo_pc.png"}
+                src={src + "/images/pc/sec19_part1_logo_pc.webp"}
               />
             </div>
             <div className='text_wrap'>
@@ -136,7 +136,7 @@ const Sec19 = () => {
               <div className='img_wrap android_wrap'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec19_part2_android_pc.png"}
+                  src={src + "/images/pc/sec19_part2_android_pc.webp"}
                 />
               </div>
             </div>
@@ -144,7 +144,7 @@ const Sec19 = () => {
               <div className='img_wrap phone_wrap'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec19_part2_f1_pc.png"}
+                  src={src + "/images/pc/sec19_part2_f1_pc.webp"}
                 />
               </div>
             </div>
@@ -155,7 +155,7 @@ const Sec19 = () => {
                 <div className='img_wrap'>
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec19_part3_f1_pc.png"}
+                    src={src + "/images/pc/sec19_part3_f1_pc.webp"}
                   />
                 </div>
               </div>
@@ -176,13 +176,13 @@ const Sec19 = () => {
               <div className='shadow_wrap'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec19_part3_f3_pc.png"}
+                  src={src + "/images/pc/sec19_part3_f3_pc.webp"}
                 />
               </div>
               <div className='img_wrap'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec19_part3_f2_pc.png"}
+                  src={src + "/images/pc/sec19_part3_f2_pc.webp"}
                 />
               </div>
             </div>
@@ -205,13 +205,13 @@ const Sec19 = () => {
                   <div className='img_wrap bg_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/pc/sec19_part4_bg1_pc.png"}
+                      src={src + "/images/pc/sec19_part4_bg1_pc.webp"}
                     />
                   </div>
                   <div className='img_wrap phone_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/pc/sec19_part4_f1_pc.png"}
+                      src={src + "/images/pc/sec19_part4_f1_pc.webp"}
                     />
                   </div>
                   <div className='text_wrap'>
@@ -235,19 +235,19 @@ const Sec19 = () => {
                   <div className='img_wrap phone_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/pc/sec19_part4_f2_pc.png"}
+                      src={src + "/images/pc/sec19_part4_f2_pc.webp"}
                     />
                   </div>
                   <div className='img_wrap icon_wrap1'>
                     <img
                       loading='lazy'
-                      src={src + "/images/pc/sec19_part4_icon1_pc.png"}
+                      src={src + "/images/pc/sec19_part4_icon1_pc.webp"}
                     />
                   </div>
                   <div className='img_wrap icon_wrap2'>
                     <img
                       loading='lazy'
-                      src={src + "/images/pc/sec19_part4_icon2_pc.png"}
+                      src={src + "/images/pc/sec19_part4_icon2_pc.webp"}
                     />
                   </div>
                   <div className='text_wrap'>
@@ -271,14 +271,14 @@ const Sec19 = () => {
                   <div className='img_wrap phone_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/pc/sec19_part4_f3_pc.png"}
+                      src={src + "/images/pc/sec19_part4_f3_pc.webp"}
                     />
                   </div>
                   {/* <div className='img_wrap icon_wrap1'>
-                    <img loading="lazy" src={src + "/images/pc/sec19_part4_icon1_pc.png"} />
+                    <img loading="lazy" src={src + "/images/pc/sec19_part4_icon1_pc.webp"} />
                   </div>
                   <div className='img_wrap icon_wrap2'>
-                    <img loading="lazy" src={src + "/images/pc/sec19_part4_icon2_pc.png"} />
+                    <img loading="lazy" src={src + "/images/pc/sec19_part4_icon2_pc.webp"} />
                   </div> */}
                   <div className='text_wrap'>
                     <div
@@ -304,13 +304,13 @@ const Sec19 = () => {
               <div className='img_wrap bg_wrap'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec19_part5_bg_pc.png"}
+                  src={src + "/images/pc/sec19_part5_bg_pc.webp"}
                 />
               </div>
               <div className='img_wrap phone_wrap'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec19_part5_phone_pc.png"}
+                  src={src + "/images/pc/sec19_part5_phone_pc.webp"}
                 />
               </div>
               <div className='text_wrap'>
@@ -330,38 +330,41 @@ const Sec19 = () => {
               <div className='img_wrap pop pop1'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec19_part5_f1_pc.png"}
+                  src={src + "/images/pc/sec19_part5_f1_pc.webp"}
                 />
               </div>
               <div className='img_wrap pop pop2'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec19_part5_f2_pc.png"}
+                  src={src + "/images/pc/sec19_part5_f2_pc.webp"}
                 />
               </div>
               <div className='img_wrap pop pop3'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec19_part5_f3_pc.png"}
+                  src={src + "/images/pc/sec19_part5_f3_pc.webp"}
                 />
               </div>
               <div className='img_wrap pop pop4'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec19_part5_f4_pc.png"}
+                  src={src + "/images/pc/sec19_part5_f4_pc.webp"}
                 />
               </div>
               <div className='img_wrap pop pop5'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec19_part5_f5_pc.png"}
+                  src={src + "/images/pc/sec19_part5_f5_pc.webp"}
                 />
               </div>
             </div>
           </div>
           <div className='part part6'>
             <div className='img_wrap bg_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec19_part6_bg.png"} />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec19_part6_bg.webp"}
+              />
             </div>
             <div className='text_wrap'>
               <div
@@ -378,7 +381,10 @@ const Sec19 = () => {
               ></div>
             </div>
             <div className='img_wrap phone_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec19_part6_f1.png"} />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec19_part6_f1.webp"}
+              />
             </div>
           </div>
           <div className='part part7'>
@@ -388,7 +394,7 @@ const Sec19 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/pc/sec19_part7_f1_pc.png"}
+                      src={src + "/images/pc/sec19_part7_f1_pc.webp"}
                     />
                   </div>
                   <div className='text_wrap'>
@@ -412,7 +418,7 @@ const Sec19 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/pc/sec19_part7_f2_pc.png"}
+                      src={src + "/images/pc/sec19_part7_f2_pc.webp"}
                     />
                   </div>
                   <div className='text_wrap'>
@@ -436,7 +442,7 @@ const Sec19 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/pc/sec19_part7_f3_pc.png"}
+                      src={src + "/images/pc/sec19_part7_f3_pc.webp"}
                     />
                   </div>
                   <div className='text_wrap'>
@@ -461,19 +467,19 @@ const Sec19 = () => {
             <div className='img_wrap bg_wrap'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec19_part8_bg_pc.png"}
+                src={src + "/images/pc/sec19_part8_bg_pc.webp"}
               />
             </div>
             <div className='img_wrap watch_wrap'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec19_part8_watch_pc.png"}
+                src={src + "/images/pc/sec19_part8_watch_pc.webp"}
               />
             </div>
             <div className='img_wrap phone_wrap'>
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec19_part8_phone_pc.png"}
+                src={src + "/images/pc/sec19_part8_phone_pc.webp"}
               />
             </div>
             <div className='text_wrap'>

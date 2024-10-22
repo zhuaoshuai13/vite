@@ -74,21 +74,21 @@ const Sec11 = () => {
                 activeIndex === 0 ? "active" : ""
               }`}
             >
-              <img loading='lazy' src={src + "/images/pc/sec11_p1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec11_p1_pc.webp"} />
             </div>
             <div
               className={`img_wrap phone_wrap phone2 ${
                 activeIndex === 1 ? "active" : ""
               }`}
             >
-              <img loading='lazy' src={src + "/images/pc/sec11_p2_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec11_p2_pc.webp"} />
             </div>
             <div
               className={`img_wrap phone_wrap phone3 ${
                 activeIndex === 2 ? "active" : ""
               }`}
             >
-              <img loading='lazy' src={src + "/images/pc/sec11_p3_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec11_p3_pc.webp"} />
             </div>
           </div>
           <div>
@@ -124,13 +124,13 @@ const Sec11 = () => {
           <div className='bottom_content'>
             <div className='btn_wrap'>
               <button className='titanium'>
-                <img loading='lazy' src={src + "/images/pc/sec11_b1_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec11_b1_pc.webp"} />
               </button>
               <button className='black'>
-                <img loading='lazy' src={src + "/images/pc/sec11_b2_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec11_b2_pc.webp"} />
               </button>
               <button className='ocean'>
-                <img loading='lazy' src={src + "/images/pc/sec11_b3_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec11_b3_pc.webp"} />
               </button>
             </div>
             <div className='color_wrap'>

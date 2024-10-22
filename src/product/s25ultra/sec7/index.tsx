@@ -71,10 +71,10 @@ const Sec7 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone1'>
-              <img loading='lazy' src={src + "/images/pc/sec7_p1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec7_p1_pc.webp"} />
             </div>
             <div className='img_wrap phone2'>
-              <img loading='lazy' src={src + "/images/pc/sec7_p2_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec7_p2_pc.webp"} />
             </div>
           </div>
         </div>

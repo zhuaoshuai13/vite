@@ -32,12 +32,14 @@
   }
 
   .pic_wrap {
+    position: relative;
     margin-top: px-to-vw(-230);
   }
 
   .phone2 {
     position: absolute;
-    top: px-to-vw(200);
+    top: px-to-vw(18);
+    width: 100%;
     opacity: 0;
   }
 }

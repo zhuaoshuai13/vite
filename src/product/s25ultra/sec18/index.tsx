@@ -52,7 +52,7 @@ const Sec18 = () => {
         </div>
         <div className='pic_wrap'>
           <div className='img_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec18_phone_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec18_phone_pc.webp"} />
           </div>
         </div>
         <div className='text_wrap'>
