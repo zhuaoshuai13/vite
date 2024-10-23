@@ -30,7 +30,10 @@ const Sec4 = () => {
       .to(".data_wrap2", { opacity: 1, ease: "power2.inOut" }, "c+=0.5")
       .to(".part1", { opacity: 0, ease: "power2.inOut" }, "d")
       .to(".part2", { opacity: 1, ease: "power2.inOut" }, "d+=0.5")
-      .to(".phone_mask_wrap", { opacity: 1, ease: "power2.inOut" }, "d+=0.5")
+      .from(".phone_mask_wrap", {
+        clipPath: "inset(100% 0 0 0)",
+        ease: "power2.inOut",
+      })
     ScrollTrigger.create({
       trigger: ".sec4_wrap",
       pin: true,

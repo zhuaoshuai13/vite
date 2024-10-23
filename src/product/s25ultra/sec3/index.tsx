@@ -15,36 +15,25 @@ const Sec3 = () => {
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
-  const sec1Ani = () => {
-    // const tl = gsap
-    //   .timeline()
-    //   .to(".title_items", { y: -100, ease: "power2.inOut" }, "a")
-    // ScrollTrigger.create({
-    //   trigger: ".sec2_wrap",
-    //   pin: true,
-    //   start: `top 0%`,
-    //   end: "+=2000",
-    //   animation: tl,
-    // })
-    // const titleList = gsap.utils.toArray(".sec2 .title_items p")
-    // titleList.forEach((item, index) =>
-    //   gsap.to(item, {
-    //     scrollTrigger: {
-    //       trigger: ".sec2_wrap",
-    //       scrub: true,
-    //       pin: true,
-    //       start: "top 0%",
-    //       end: "+=100%",
-    //     },
-    //     fontSize: 75,
-    //     ease: "none",
-    //   })
-    // )
+  const sec3Ani = () => {
+    const tl = gsap.timeline().from(".item1 .img_wrap img", {
+      x: "-40%",
+      y: "-40$",
+      scale: 0.6,
+      ease: "power2.inOut",
+      duration: 1,
+    })
+    ScrollTrigger.create({
+      trigger: ".item1",
+      start: `top 75%`,
+      animation: tl,
+      toggleActions: "play none none reverse",
+    })
   }
 
   useGSAP(
     () => {
-      sec1Ani()
+      sec3Ani()
     },
     { scope: wrap }
   )

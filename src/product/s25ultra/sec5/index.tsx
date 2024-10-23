@@ -38,7 +38,7 @@ const Sec5 = () => {
   return (
     <section className='sec5' ref={wrap}>
       <div className='sec5_wrap'>
-        <div className='text_wrap'>
+        <div className='text_wrap slide_up'>
           <div
             className='title_75'
             dangerouslySetInnerHTML={{ __html: config?.sec5?.title }}

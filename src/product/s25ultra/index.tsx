@@ -35,17 +35,18 @@ const S25Ultra = () => {
   const specSecAni = () => {
     const animateFrom = (ele: any) => {
       return gsap.timeline().from(ele, 1, {
-        x: 100,
+        y: 100,
         opacity: 0,
         ease: "power2.inOut",
       })
     }
 
-    gsap.utils.toArray(".spec_sec .ctt").forEach((item: any) => {
+    gsap.utils.toArray(".s25ultra .slide_up").forEach((item: any) => {
       ScrollTrigger.create({
         trigger: item,
-        start: `top 85%`,
+        start: `top 95%`,
         animation: animateFrom(item),
+        toggleActions: "play none none reverse",
       })
     })
   }
@@ -54,7 +55,7 @@ const S25Ultra = () => {
     () => {
       specSecAni()
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [wrap] }
   )
 
   const lenis = useLenis(({ scroll }) => {

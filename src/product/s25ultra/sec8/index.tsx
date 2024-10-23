@@ -49,7 +49,7 @@ const Sec8 = () => {
         <div className='img_wrap sec8_bg'>
           <img loading='lazy' src={src + "/images/pc/sec8_bg_pc.webp"} />
         </div>
-        <div className='text_wrap'>
+        <div className='text_wrap slide_up'>
           <div
             className='title_75'
             dangerouslySetInnerHTML={{ __html: config?.sec8?.title }}

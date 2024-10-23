@@ -19,62 +19,14 @@ const Sec13 = () => {
     const tl = gsap
       .timeline()
       .to(".spec_part", 1, { y: "-100%", ease: "power2.inOut" })
-      .from(
-        ".part1 .chip_wrap1",
-        {
-          x: "-4%",
-          y: "42%",
-          rotate: "-7deg",
-          rotateX: "62deg",
-          ease: "power2.inOut",
-        },
-        "a"
-      )
-      .from(
-        ".part1 .clip_light_wrap1 img",
-        {
-          clipPath: "inset(400px 0 0)",
-          ease: "power2.inOut",
-        },
-        "b"
-      )
-      .from(
-        ".part1 .clip_light_circle_wrap1",
-        {
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-        "b"
-      )
-      .from(
-        ".part1 .chip_wrap2",
-        {
-          x: "-2%",
-          y: "47%",
-          rotate: "-7deg",
-          rotateX: "60deg",
-          skewX: "4deg",
-          skewY: "2deg",
-          ease: "power2.inOut",
-        },
-        "a"
-      )
-      .from(
-        ".part1 .clip_light_wrap2 img",
-        {
-          clipPath: "inset(400px 0 0)",
-          ease: "power2.inOut",
-        },
-        "b"
-      )
-      .from(
-        ".part1 .clip_light_circle_wrap2",
-        {
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-        "b"
-      )
+      .from(".part1 .chip_wrap", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      .from(".part1 .light_wrap", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
       .from(".part1 .data_wrap", {
         opacity: 0,
         ease: "power2.inOut",
@@ -95,30 +47,15 @@ const Sec13 = () => {
         },
         "c"
       )
-      .from(".part2 .chip_wrap1", {
-        x: "-4%",
-        y: "58%",
-        rotate: "-6deg",
-        rotateX: "60deg",
+      .from(".part2 .chip_wrap", {
+        opacity: 0,
         ease: "power2.inOut",
       })
-      .from(
-        ".part2 .clip_light_wrap1 img",
-        {
-          clipPath: "inset(400px 0 0)",
-          ease: "power2.inOut",
-        },
-        "d"
-      )
-      .from(
-        ".part2 .clip_light_circle_wrap1",
-        {
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-        "d"
-      )
-      .to(".part2 .clip_light_circle_wrap1", {})
+      .from(".part2 .light_wrap", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      .to(".part2 .light_wrap", {})
     ScrollTrigger.create({
       trigger: ".sec13_wrap",
       pin: true,
@@ -172,37 +109,13 @@ const Sec13 = () => {
                   src={src + "/images/pc/sec13_part1_pc.webp"}
                 />
               </div>
-              <div className='img_wrap clip_light_circle_wrap2'>
+              <div className='img_wrap light_wrap'>
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec13_512g_light_circle_pc.webp"}
+                  src={src + "/images/pc/sec13_light_pc.webp"}
                 />
               </div>
-              <div className='img_wrap clip_light_wrap2'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec13_512g_light_pc.webp"}
-                />
-              </div>
-              <div className='img_wrap chip_wrap2'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec13_512g_pc.webp"}
-                />
-              </div>
-              <div className='img_wrap clip_light_circle_wrap1'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec13_16g_light_circle_pc.webp"}
-                />
-              </div>
-              <div className='img_wrap clip_light_wrap1'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec13_16g_light_pc.webp"}
-                />
-              </div>
-              <div className='img_wrap chip_wrap1'>
+              <div className='img_wrap chip_wrap'>
                 <img
                   loading='lazy'
                   src={src + "/images/pc/sec13_16g_pc.webp"}
@@ -250,19 +163,13 @@ const Sec13 = () => {
                   src={src + "/images/pc/sec13_part2_pc.webp"}
                 />
               </div>
-              <div className='img_wrap clip_light_circle_wrap1'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec13_t620_light_circle_pc.webp"}
-                />
-              </div>
-              <div className='img_wrap clip_light_wrap1'>
+              <div className='img_wrap light_wrap'>
                 <img
                   loading='lazy'
                   src={src + "/images/pc/sec13_t620_light_pc.webp"}
                 />
               </div>
-              <div className='img_wrap chip_wrap1'>
+              <div className='img_wrap chip_wrap'>
                 <img
                   loading='lazy'
                   src={src + "/images/pc/sec13_t620_pc.webp"}

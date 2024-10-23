@@ -3,7 +3,9 @@
 .s25ultra .sec9 {
   .sec9_wrap {
     position: relative;
+
     // height: px-to-vw(1200);
+    margin-top: px-to-vw(-10);
   }
 
   .sec9_bg {

@@ -26,39 +26,6 @@ const Sec19 = () => {
   const [part5IsOpen, setPart5IsOpen] = useState(true)
   const [timeline, setTimeline] = useState<any>()
 
-  // const pageTionClick = (index: number) => {
-  //   gsap.to(window, {
-  //     scrollTo: {
-  //       y: timeline.scrollTrigger.labelToScroll("part" + (index + 2)),
-  //     },
-  //     ease: "power2.inOut",
-  //   })
-  // }
-
-  // const Pagetion = ({
-  //   length,
-  //   activeIndex,
-  // }: {
-  //   length: number
-  //   activeIndex: number
-  // }) => {
-  //   return (
-  //     <div className='pagination_wrap'>
-  //       {new Array(length).fill(null).map((_, index) => {
-  //         return (
-  //           <span
-  //             className={`pagination_item ${
-  //               index === activeIndex ? "active" : ""
-  //             }`}
-  //             key={index}
-  //             onClick={() => pageTionClick(index)}
-  //           ></span>
-  //         )
-  //       })}
-  //     </div>
-  //   )
-  // }
-
   const handleHover = (activeIndex: number) => {
     document.querySelectorAll(".sec19 .part7 .item").forEach((item, index) => {
       item.classList.remove("active")
@@ -82,13 +49,47 @@ const Sec19 = () => {
     })
 
     setTimeline(tl)
+
+    const tl2 = gsap
+      .timeline()
+      .from(".pop1", { x: "10%", y: "100%", ease: "power2.inOut" }, "a")
+      .from(".pop2", { x: "30%", y: "0%", ease: "power2.inOut" }, "a")
+      .from(".pop3", { x: "0%", y: "0%", ease: "power2.inOut" }, "a")
+      .from(".pop4", { x: "20%", y: "-100%", ease: "power2.inOut" }, "a")
+      .from(".pop5", { x: "20%", y: "-300%", ease: "power2.inOut" }, "a")
+    ScrollTrigger.create({
+      trigger: ".sec19 .part5",
+      start: `top -50%`,
+      animation: tl2,
+      toggleActions: "play none none reverse",
+    })
+
+    gsap.utils
+      .toArray([
+        ".left_slide",
+        ".part5 .text_wrap",
+        ".part6 .text_wrap",
+        ".part8 .text_wrap",
+      ])
+      .forEach((item: any) => {
+        gsap.from(item, 1, {
+          y: 100,
+          opacity: 0,
+          ease: "power2.inOut",
+          scrollTrigger: {
+            trigger: item,
+            start: `top -10%`,
+            toggleActions: "play none none reverse",
+          },
+        })
+      })
   }
 
   useGSAP(
     () => {
       sec19Ani()
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [wrap] }
   )
 
   return (
@@ -122,7 +123,7 @@ const Sec19 = () => {
             </div>
           </div>
           <div className='part part2'>
-            <div className='text_wrap'>
+            <div className='text_wrap slide_up'>
               <div
                 className='title_75'
                 dangerouslySetInnerHTML={{
@@ -159,18 +160,20 @@ const Sec19 = () => {
                   />
                 </div>
               </div>
-              <div
-                className='title_75'
-                dangerouslySetInnerHTML={{
-                  __html: config?.sec19?.part3?.title,
-                }}
-              ></div>
-              <div
-                className='desc_16'
-                dangerouslySetInnerHTML={{
-                  __html: config?.sec19?.part3?.desc,
-                }}
-              ></div>
+              <div className='left_slide'>
+                <div
+                  className='title_75'
+                  dangerouslySetInnerHTML={{
+                    __html: config?.sec19?.part3?.title,
+                  }}
+                ></div>
+                <div
+                  className='desc_16'
+                  dangerouslySetInnerHTML={{
+                    __html: config?.sec19?.part3?.desc,
+                  }}
+                ></div>
+              </div>
             </div>
             <div className='img_box phone_wrap2'>
               <div className='shadow_wrap'>
@@ -197,7 +200,6 @@ const Sec19 = () => {
               modules={[Navigation, Pagination, Autoplay]}
               autoplay={{ delay: 3000 }}
               slidesPerView={1}
-              // loop={true}
               pagination={{ clickable: true, el: ".sec19 .swiper_pagination" }}
             >
               <SwiperSlide>
@@ -274,12 +276,6 @@ const Sec19 = () => {
                       src={src + "/images/pc/sec19_part4_f3_pc.webp"}
                     />
                   </div>
-                  {/* <div className='img_wrap icon_wrap1'>
-                    <img loading="lazy" src={src + "/images/pc/sec19_part4_icon1_pc.webp"} />
-                  </div>
-                  <div className='img_wrap icon_wrap2'>
-                    <img loading="lazy" src={src + "/images/pc/sec19_part4_icon2_pc.webp"} />
-                  </div> */}
                   <div className='text_wrap'>
                     <div
                       className='title_75'

@@ -26,9 +26,9 @@ const Sec1 = () => {
       .from(
         ".phone2",
         {
-          x: "20%",
-          y: "-20%",
-          rotate: "-32deg",
+          // x: "20%",
+          // y: "-20%",
+          // rotate: "-32deg",
           opacity: 0,
           ease: "power2.inOut",
           duration: 1,
@@ -38,12 +38,12 @@ const Sec1 = () => {
       .from(
         ".phone3",
         {
-          x: "100%",
-          y: "-20%",
-          rotate: "-66deg",
+          x: "50%",
+          y: "-10%",
+          rotate: "-30deg",
           opacity: 0,
           ease: "power2.inOut",
-          duration: 1.5,
+          duration: 1,
         },
         "a"
       )
@@ -73,13 +73,43 @@ const Sec1 = () => {
         {isLoaded && (
           <>
             <div className='phone_wrap img_wrap phone1'>
-              <img loading='lazy' src={src + "/images/pc/sec1_p1_pc.webp"} />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec1_p1_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec1_p1_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec1_p1_pc.webp"} />
+              </picture>
             </div>
             <div className='phone_wrap img_wrap phone2'>
-              <img loading='lazy' src={src + "/images/pc/sec1_p2_pc.webp"} />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec1_p2_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec1_p2_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec1_p2_pc.webp"} />
+              </picture>
             </div>
             <div className='phone_wrap img_wrap phone3'>
-              <img loading='lazy' src={src + "/images/pc/sec1_p3_pc.webp"} />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec1_p3_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec1_p3_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec1_p3_pc.webp"} />
+              </picture>
             </div>
           </>
         )}

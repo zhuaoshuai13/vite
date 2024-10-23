@@ -41,7 +41,7 @@
     position: relative;
     width: px-to-vw(1320);
     height: px-to-vw(700);
-    margin: 0 auto;
+    margin: px-to-vw(24) auto 0;
 
     .img_wrap {
       position: absolute;
@@ -119,22 +119,28 @@
   .circle1,
   .circle2,
   .circle3 {
-    animation-name: circlechange;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    // animation-name: circlechange;
+    // animation-duration: 3s;
+    // animation-timing-function: linear;
+    // animation-iteration-count: infinite;
   }
 
   .circle1 {
-    animation-delay: 1s;
+    // animation-delay: 1s;
+    transform: scale(2);
+    opacity: .75;
   }
 
   .circle2 {
-    animation-delay: 2s;
+    // animation-delay: 2s;
+    transform: scale(3);
+    opacity: .5;
   }
 
   .circle3 {
-    animation-delay: 3s;
+    // animation-delay: 3s;
+    transform: scale(4);
+    opacity: .25;
   }
 
   @keyframes circlechange {

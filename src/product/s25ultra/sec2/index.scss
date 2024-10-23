@@ -35,19 +35,33 @@
     }
   }
 
+  .slogn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    font-size: px-to-vw(100);
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
   .text_wrap {
     position: absolute;
-    top: px-to-vw(200);
+    top: 50%;
+    left: 50%;
     width: 100%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
 
     p {
-      line-height: 2;
+      line-height: 1.6;
       transition: all .5s;
     }
 
-    p.active {
-      font-size: px-to-vw(75);
-    }
+    // p.active {
+    //   // font-size: px-to-vw(75);
+    //   margin: px-to-vw(30) 0;
+    // }
   }
 
   .title_items {

@@ -42,15 +42,14 @@
 
   .phone_mask_wrap {
     position: absolute;
-    top: px-to-vw(300);
-    left: px-to-vw(240);
+    top: px-to-vw(299);
+    left: px-to-vw(251);
     width: px-to-vw(1350);
-    opacity: 0;
   }
 
   .data_wrap {
     position: absolute;
-    top: px-to-vw(640);
+    top: px-to-vw(700);
     display: flex;
     flex-wrap: wrap;
     gap: px-to-vw(50);

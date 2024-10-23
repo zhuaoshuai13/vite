@@ -11,7 +11,6 @@ import "./index.scss"
 const Sec12 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { s25ultraConfig: config, src } = window as any
-  const length = config?.sec12?.data?.length
   const circleList = [
     "sec12_green_pc.webp",
     "sec12_red_pc.webp",
@@ -21,21 +20,13 @@ const Sec12 = () => {
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
   const [activeIndex, setActiveIndex] = useState(0)
-
   const sec12Ani = () => {
     const tl = gsap.timeline().to(".pic_wrap", {})
     ScrollTrigger.create({
       trigger: ".sec12_wrap",
-      pin: true,
-      start: `top 0%`,
-      end: "+=300%",
       animation: tl,
-      scrub: 0.2,
-      onUpdate: (self) => {
-        const active = Math.round(self.progress * (length - 1))
-        if (active >= 0) {
-          setActiveIndex(active)
-        }
+      onEnter: () => {
+        setActiveIndex(0)
       },
     })
   }
@@ -46,6 +37,18 @@ const Sec12 = () => {
     },
     { scope: wrap }
   )
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (activeIndex < 3) {
+        setActiveIndex((prev) => prev + 1)
+      } else {
+        setActiveIndex(0)
+      }
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [activeIndex])
 
   return (
     <section className='sec12' ref={wrap}>
@@ -58,7 +61,7 @@ const Sec12 = () => {
             <img loading='lazy' src={src + "/images/pc/sec12_phone_pc.webp"} />
           </div>
           <div className='content_wrap'>
-            <div className='text_wrap'>
+            <div className='text_wrap slide_up'>
               <div
                 className='title_75'
                 dangerouslySetInnerHTML={{ __html: config?.sec12?.title }}

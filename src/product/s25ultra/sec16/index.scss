@@ -85,10 +85,11 @@
 
   .next_wrap {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    width: px-to-vw(72);
-    height: px-to-vw(72);
+    top: 50%;
+    right: px-to-vw(36);
+    width: px-to-vw(48);
+    height: px-to-vw(48);
+    transform: translateY(-50%);
     cursor: pointer;
   }
 

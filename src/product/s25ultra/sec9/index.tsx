@@ -50,24 +50,27 @@ const Sec9 = () => {
       )
       .from(".stone3_wrap", {
         opacity: 0,
+        scale: 0,
         ease: "power2.inOut",
-      })
+        duration: 1,
+      }, "a")
     ScrollTrigger.create({
       trigger: ".sec9_wrap",
-      pin: true,
-      start: `top 0%`,
-      end: "+=300%",
+      // pin: true,
+      start: `top 50%`,
+      // end: "+=300%",
       animation: tl,
-      scrub: 0.2,
+      // scrub: 0.2,
+      toggleActions: "play none none reverse",
     })
 
-    gsap.to(".stone3_wrap", {
-      y: -50,
-      duration: 1.5,
-      ease: "power1.inOut",
-      repeat: -1,
-      yoyo: true,
-    })
+    // gsap.to(".stone3_wrap", {
+    //   y: -50,
+    //   duration: 1.5,
+    //   ease: "power1.inOut",
+    //   repeat: -1,
+    //   yoyo: true,
+    // })
   }
 
   useGSAP(
@@ -106,7 +109,7 @@ const Sec9 = () => {
             />
           </div>
         </div>
-        <div className='text_wrap'>
+        <div className='text_wrap slide_up'>
           <div
             className='title_75'
             dangerouslySetInnerHTML={{ __html: config?.sec9?.title }}
@@ -116,7 +119,7 @@ const Sec9 = () => {
             dangerouslySetInnerHTML={{ __html: config?.sec9?.desc }}
           ></p>
         </div>
-        <div className='data_wrap'>
+        <div className='data_wrap slide_up'>
           {config?.sec9?.data?.map((item: any, index: number) => (
             <div className='data' key={index}>
               <div className='title'>

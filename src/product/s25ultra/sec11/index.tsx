@@ -15,12 +15,25 @@ const Sec11 = () => {
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
   const [activeIndex, setActiveIndex] = useState(1)
+  const [timeline, setTimeline] = useState<any>()
+
+  const handleSwitchPic = (index: number) => {
+    gsap.to(window, {
+      scrollTo: {
+        y: timeline.scrollTrigger.labelToScroll("pic" + index),
+      },
+      ease: "power2.inOut",
+    })
+  }
 
   const sec11Ani = () => {
     const tl = gsap
       .timeline()
       .to(".spec_part", 1, { y: "-100%", ease: "power2.inOut" })
-      .to(".pic_wrap", 3, {})
+      .to(".pic_wrap", 1, {}, "pic1")
+      .to(".pic_wrap", 1, {}, "pic2")
+      .to(".pic_wrap", 1, {}, "pic3")
+      // .to(".pic_wrap", 1, {}, "pic4")
     // .fromTo(
     //   ".phone2",
     //   { rotateX: 90 },
@@ -35,14 +48,16 @@ const Sec11 = () => {
       animation: tl,
       scrub: 0.2,
       onUpdate: (self) => {
-        const active = Math.round(
-          ((self.progress - 0.25) / 0.75) * (length - 1)
-        )
-        if (active >= 0) {
-          setActiveIndex(active)
+        if(self.progress >= 0.25 && self.progress < 0.5) {
+          setActiveIndex(0)
+        }else if(self.progress >= 0.5 && self.progress < 0.75) {
+          setActiveIndex(1)
+        }else if(self.progress >= 0.75) {
+          setActiveIndex(2)
         }
       },
     })
+    setTimeline(tl)
   }
 
   useGSAP(
@@ -123,13 +138,13 @@ const Sec11 = () => {
           </div>
           <div className='bottom_content'>
             <div className='btn_wrap'>
-              <button className='titanium'>
+              <button className='titanium' onClick={() => handleSwitchPic(1)}>
                 <img loading='lazy' src={src + "/images/pc/sec11_b1_pc.webp"} />
               </button>
-              <button className='black'>
+              <button className='black' onClick={() => handleSwitchPic(2)}>
                 <img loading='lazy' src={src + "/images/pc/sec11_b2_pc.webp"} />
               </button>
-              <button className='ocean'>
+              <button className='ocean' onClick={() => handleSwitchPic(3)}>
                 <img loading='lazy' src={src + "/images/pc/sec11_b3_pc.webp"} />
               </button>
             </div>

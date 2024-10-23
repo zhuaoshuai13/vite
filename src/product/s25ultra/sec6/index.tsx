@@ -74,7 +74,7 @@ const Sec6 = () => {
     <section className='sec6' ref={wrap}>
       <div className='sec6_wrap'>
         <div className='part part1'>
-          <div className='text_wrap'>
+          <div className='text_wrap slide_up'>
             <div
               className='title_75'
               dangerouslySetInnerHTML={{ __html: config?.sec6?.part1?.title }}

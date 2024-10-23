@@ -12,20 +12,11 @@ const Sec2 = () => {
   const { s25ultraConfig: config, src } = window as any
   // const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
-  const [activeIndex, setActiveIndex] = useState(1)
+  const [activeIndex, setActiveIndex] = useState(0)
   const length = config?.sec2?.text.length
   const [timeline, setTimeline] = useState<any>()
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
-
-  const handlePart1Btn = () => {
-    gsap.to(window, {
-      scrollTo: {
-        y: timeline.scrollTrigger.labelToScroll("part3"),
-      },
-      ease: "power2.inOut",
-    })
-  }
 
   const handlePart2Btn = () => {
     gsap.to(".fullVideo", {
@@ -36,26 +27,35 @@ const Sec2 = () => {
   const sec2Ani = () => {
     const tl = gsap
       .timeline()
-      .to(".title_items p", {})
+      .to(".slogn", { opacity: 0, y: 100 })
+      .to(".text_wrap", { opacity: 1 })
+      .to(".title_items p:nth-child(1)", { margin: "2vw 0" })
+      .to(".title_items p:nth-child(1)", { margin: "0 0" }, "a")
+      .to(".title_items p:nth-child(2)", { margin: "2vw 0" }, "a")
+      .to(".title_items p:nth-child(2)", { margin: "0 0" }, "b")
+      .to(".title_items p:nth-child(3)", { margin: "2vw 0" }, "b")
+      .to(".title_items p:nth-child(3)", { margin: "0 0" }, "c")
+      .to(".title_items p:nth-child(4)", { margin: "2vw 0" }, "c")
+      .to(".title_items p:nth-child(4)", { margin: "0 0" })
       .to(".part1", { y: "-100%" }, "part2")
       .to(".part2", {}, "part3")
     ScrollTrigger.create({
       trigger: ".sec2_wrap",
       pin: true,
-      scrub: 0.2,
+      scrub: true,
       start: `top 0%`,
       end: "+=300%",
       animation: tl,
-      onUpdate: (self) => {
-        const active = Math.round((self.progress + 0.6) * (length - 1))
-        if (active >= 0 && active < length) {
-          if (self.progress == 0) {
-            setActiveIndex(1)
-          } else {
-            setActiveIndex(active)
-          }
-        }
-      },
+      // onUpdate: (self) => {
+      //   const active = Math.round((self.progress + 0.6) * (length - 1))
+      //   if (active >= 0 && active < length) {
+      //     if (self.progress == 0) {
+      //       setActiveIndex(1)
+      //     } else {
+      //       setActiveIndex(active)
+      //     }
+      //   }
+      // },
     })
     setTimeline(tl)
   }
@@ -98,6 +98,10 @@ const Sec2 = () => {
           <div className='img_wrap bg_wrap'>
             <img loading='lazy' src={src + "/images/pc/sec2_bg_pc.webp"} />
           </div>
+          <p
+            className='slogn'
+            dangerouslySetInnerHTML={{ __html: config.sec2.slogn }}
+          ></p>
           <div className='text_wrap'>
             <div className='title_items'>
               {config.sec2.text.map((item: string, index: number) => (

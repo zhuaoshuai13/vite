@@ -70,19 +70,15 @@ const Sec16 = () => {
     const tl = gsap
       .timeline()
       .to(".spec_part", { y: "-100%", ease: "power2.inOut" })
+      .to(".mp32_line", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
       .from(
         ".mp32_wrap",
         {
           x: "-49%",
           y: "-12%",
-          ease: "power2.inOut",
-        },
-        "b"
-      )
-      .to(
-        ".mp32_line",
-        {
-          opacity: 0,
           ease: "power2.inOut",
         },
         "b"

@@ -6,6 +6,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react"
 import { EffectFade, Autoplay, Navigation, Pagination } from "swiper/modules"
+import LazyLoad from "react-lazyload"
 
 import "swiper/css"
 import "swiper/css/effect-fade"
@@ -44,18 +45,35 @@ const Sec18 = () => {
   return (
     <section className='sec18' ref={wrap}>
       <div className='sec18_wrap'>
-        <div className='text_wrap'>
+        <div className='text_wrap slide_up'>
           <div
             className='title_75'
             dangerouslySetInnerHTML={{ __html: config?.sec18?.title }}
           ></div>
         </div>
         <div className='pic_wrap'>
+          <div className='video_wrap'>
+            <LazyLoad offset={1000}>
+              <video
+                src={config.sec18.video.src}
+                // poster={
+                //   config.sec2.video.poster ? config.sec2.video.poster : ""
+                // }
+                muted
+                preload='auto'
+                webkit-playsinline='true'
+                playsInline={true}
+                autoPlay
+                loop
+                controls={false}
+              ></video>
+            </LazyLoad>
+          </div>
           <div className='img_wrap'>
             <img loading='lazy' src={src + "/images/pc/sec18_phone_pc.webp"} />
           </div>
         </div>
-        <div className='text_wrap'>
+        <div className='text_wrap slide_up'>
           <p
             className='desc_16'
             dangerouslySetInnerHTML={{ __html: config?.sec18?.desc }}

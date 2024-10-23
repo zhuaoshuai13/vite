@@ -42,66 +42,20 @@
 
     .phone_wrap {
       position: absolute;
-
-      // bottom: px-to-vw(-180);
-      top: px-to-vw(280);
-      right: 0;
-      width: px-to-vw(1818);
-      margin: 0 0 0 auto;
+      top: px-to-vw(80);
+      width: 100%;
     }
 
-    .chip_wrap1 {
+    .chip_wrap {
       position: absolute;
-      top: px-to-vw(265);
-
-      // left: px-to-vw(925);
-      right: px-to-vw(645);
-      width: px-to-vw(335);
+      top: px-to-vw(80);
+      width: 100%;
     }
 
-    .clip_light_circle_wrap1 {
+    .light_wrap {
       position: absolute;
-      top: px-to-vw(463);
-
-      // left: px-to-vw(866);
-      right: px-to-vw(613);
-      width: px-to-vw(423);
-    }
-
-    .clip_light_wrap1 {
-      position: absolute;
-      top: px-to-vw(286);
-
-      // left: px-to-vw(845);
-      right: px-to-vw(612);
-      width: px-to-vw(446);
-    }
-
-    .chip_wrap2 {
-      position: absolute;
-      top: px-to-vw(312);
-
-      // left: px-to-vw(1232);
-      right: px-to-vw(309);
-      width: px-to-vw(362);
-    }
-
-    .clip_light_circle_wrap2 {
-      position: absolute;
-      top: px-to-vw(450);
-
-      // left: px-to-vw(1140);
-      right: px-to-vw(236);
-      width: px-to-vw(519);
-    }
-
-    .clip_light_wrap2 {
-      position: absolute;
-      top: px-to-vw(300);
-
-      // left: px-to-vw(1182);
-      right: px-to-vw(309);
-      width: px-to-vw(411);
+      top: px-to-vw(80);
+      width: 100%;
     }
 
     .data_wrap {
@@ -146,40 +100,27 @@
     left: 0;
     transform: translateX(100%);
 
+    .text_wrap {
+      max-width: px-to-vw(680);
+      margin: 0 0 0 px-to-vw(360);
+    }
+
     .phone_wrap {
       position: absolute;
-      top: px-to-vw(353);
-      right: 0;
-
-      // bottom: 0;
-      width: px-to-vw(1817);
+      bottom: 0;
+      width: 100%;
     }
 
-    .chip_wrap1 {
+    .chip_wrap {
       position: absolute;
-      top: px-to-vw(414);
-
-      // left: px-to-vw(660);
-      right: px-to-vw(899);
-      width: px-to-vw(342);
+      bottom: 0;
+      width: 100%;
     }
 
-    .clip_light_circle_wrap1 {
+    .light_wrap {
       position: absolute;
-      top: px-to-vw(587);
-
-      // left: px-to-vw(602);
-      right: px-to-vw(863);
-      width: px-to-vw(440);
-    }
-
-    .clip_light_wrap1 {
-      position: absolute;
-      top: px-to-vw(400);
-
-      // left: px-to-vw(584);
-      right: px-to-vw(867);
-      width: px-to-vw(452);
+      bottom: 0;
+      width: 100%;
     }
   }
 }

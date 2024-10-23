@@ -18,20 +18,24 @@ const Sec14 = () => {
   const sec14Ani = () => {
     const tl = gsap
       .timeline()
-      .to(".spec_part", 1, { y: "-100%", ease: "power2.inOut" })
+      .from(".pic_wrap", { opacity: 0, y: 100, ease: "power2.inOut" })
+    // .from(".left_hand1", { opacity: 0, ease: "power2.inOut" }, "a")
+    // .from(".left_hand2", { opacity: 0, ease: "power2.inOut" }, "a")
+    // .from(".right_hand1", { opacity: 0, ease: "power2.inOut" }, "a")
+    // .from(".right_hand2", { opacity: 0, ease: "power2.inOut" }, "a")
+    // .from(".phone_wrap", { opacity: 0, ease: "power2.inOut" }, "b")
+    // .from(".circleBox", { opacity: 0, ease: "power2.inOut" }, "b")
     ScrollTrigger.create({
-      trigger: ".sec13_wrap",
-      pin: true,
-      start: `top 0%`,
-      end: "+=500%",
+      trigger: ".sec14_wrap",
+      start: `top 50%`,
       animation: tl,
-      scrub: 0.2,
+      toggleActions: "play none none reverse",
     })
   }
 
   useGSAP(
     () => {
-      // sec14Ani()
+      sec14Ani()
     },
     { scope: wrap }
   )

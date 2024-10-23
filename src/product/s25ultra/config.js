@@ -18,9 +18,10 @@ window.s25ultraConfig = {
     ],
   },
   sec2: {
+    slogn: "Elegance in Excellence",
     text: [
-      "Combining cutting-edge technology with avant-garde aesthetic concepts",
-      "Elegance in Excellence",
+      "Combining cutting-edge technology",
+      "with avant-garde aesthetic concepts",
       "this is the brand-new S25 Ultra",
       "lovingly crafted for the uncompromising you",
     ],
@@ -367,6 +368,9 @@ window.s25ultraConfig = {
   sec18: {
     title: "Capture with fun",
     desc: "Embrace the fun of Vlogging with Dual-view Video Recording, effortlessly capturing both your reactions and the stunning scenery you're enjoying, or the engaging interactions with your friends.",
+    video: {
+      src: src + "/videos/sec18_video_pc.mp4",
+    },
   },
   sec19: {
     spec_title: "EXCELLENCE IN EXPERIENCE",
