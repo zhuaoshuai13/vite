@@ -48,12 +48,16 @@ const Sec9 = () => {
         },
         "a"
       )
-      .from(".stone3_wrap", {
-        opacity: 0,
-        scale: 0,
-        ease: "power2.inOut",
-        duration: 1,
-      }, "a")
+      .from(
+        ".stone3_wrap",
+        {
+          opacity: 0,
+          scale: 0,
+          ease: "power2.inOut",
+          duration: 1,
+        },
+        "a"
+      )
     ScrollTrigger.create({
       trigger: ".sec9_wrap",
       // pin: true,
@@ -83,32 +87,6 @@ const Sec9 = () => {
   return (
     <section className='sec9' ref={wrap}>
       <div className='sec9_wrap'>
-        <div className='img_wrap sec9_bg'>
-          <img loading='lazy' src={src + "/images/pc/sec9_bg_pc.webp"} />
-        </div>
-        <div className='pic_wrap'>
-          <div className='img_wrap stone1_wrap'>
-            <img
-              loading='lazy'
-              src={src + "/images/pc/sec9_stone_behind_pc.webp"}
-            />
-          </div>
-          <div className='img_wrap phone_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec9_phone_pc.webp"} />
-          </div>
-          <div className='img_wrap stone2_wrap'>
-            <img
-              loading='lazy'
-              src={src + "/images/pc/sec9_stone_front_pc.webp"}
-            />
-          </div>
-          <div className='img_wrap stone3_wrap'>
-            <img
-              loading='lazy'
-              src={src + "/images/pc/sec9_stone_move_pc.webp"}
-            />
-          </div>
-        </div>
         <div className='text_wrap slide_up'>
           <div
             className='title_75'
@@ -118,6 +96,79 @@ const Sec9 = () => {
             className='desc_16'
             dangerouslySetInnerHTML={{ __html: config?.sec9?.desc }}
           ></p>
+        </div>
+        {isPc ? (
+          <div className='img_wrap sec9_bg'>
+            <img loading='lazy' src={src + "/images/pc/sec9_bg_pc.webp"} />
+          </div>
+        ) : null}
+        <div className='pic_wrap'>
+          {!isPc ? (
+            <div className='img_wrap sec9_bg'>
+              <img loading='lazy' src={src + "/images/mb/sec9_bg_mb.png"} />
+            </div>
+          ) : null}
+          <div className='img_wrap stone1_wrap'>
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec9_stone_behind_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec9_stone_behind_pc.webp"}
+              />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec9_stone_behind_pc.webp"}
+              />
+            </picture>
+          </div>
+          <div className='img_wrap phone_wrap'>
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec9_phone_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec9_phone_pc.webp"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec9_phone_pc.webp"} />
+            </picture>
+          </div>
+          <div className='img_wrap stone2_wrap'>
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec9_stone_front_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec9_stone_front_pc.webp"}
+              />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec9_stone_front_pc.webp"}
+              />
+            </picture>
+          </div>
+          <div className='img_wrap stone3_wrap'>
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec9_stone_move_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec9_stone_move_pc.webp"}
+              />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec9_stone_move_pc.webp"}
+              />
+            </picture>
+          </div>
         </div>
         <div className='data_wrap slide_up'>
           {config?.sec9?.data?.map((item: any, index: number) => (

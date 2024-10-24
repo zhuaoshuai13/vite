@@ -33,13 +33,6 @@ const Sec11 = () => {
       .to(".pic_wrap", 1, {}, "pic1")
       .to(".pic_wrap", 1, {}, "pic2")
       .to(".pic_wrap", 1, {}, "pic3")
-      // .to(".pic_wrap", 1, {}, "pic4")
-    // .fromTo(
-    //   ".phone2",
-    //   { rotateX: 90 },
-    //   { rotateX: 0, opacity: 1, ease: "power2.inOut" },
-    //   "a+=0.2"
-    // )
     ScrollTrigger.create({
       trigger: ".sec11_wrap",
       pin: true,
@@ -48,11 +41,36 @@ const Sec11 = () => {
       animation: tl,
       scrub: 0.2,
       onUpdate: (self) => {
-        if(self.progress >= 0.25 && self.progress < 0.5) {
+        if (self.progress >= 0.25 && self.progress < 0.5) {
           setActiveIndex(0)
-        }else if(self.progress >= 0.5 && self.progress < 0.75) {
+        } else if (self.progress >= 0.5 && self.progress < 0.75) {
           setActiveIndex(1)
-        }else if(self.progress >= 0.75) {
+        } else if (self.progress >= 0.75) {
+          setActiveIndex(2)
+        }
+      },
+    })
+    setTimeline(tl)
+  }
+  const sec11AniMb = () => {
+    const tl = gsap
+      .timeline()
+      .to(".pic_wrap", 1, {}, "pic1")
+      .to(".pic_wrap", 1, {}, "pic2")
+      .to(".pic_wrap", 1, {}, "pic3")
+    ScrollTrigger.create({
+      trigger: ".sec11_wrap .content_wrap",
+      pin: true,
+      start: `top 0%`,
+      end: "+=400%",
+      animation: tl,
+      scrub: 0.2,
+      onUpdate: (self) => {
+        if (self.progress < 0.3) {
+          setActiveIndex(0)
+        } else if (self.progress >= 0.3 && self.progress < 0.6) {
+          setActiveIndex(1)
+        } else if (self.progress >= 0.6) {
           setActiveIndex(2)
         }
       },
@@ -62,9 +80,13 @@ const Sec11 = () => {
 
   useGSAP(
     () => {
-      sec11Ani()
+      if (isPc) {
+        sec11Ani()
+      } else {
+        sec11AniMb()
+      }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc] }
   )
 
   return (
@@ -83,34 +105,11 @@ const Sec11 = () => {
           </div>
         </div>
         <div className='content_wrap'>
-          <div className={`pic_wrap`}>
+          <div className='all_text'>
             <div
-              className={`img_wrap phone_wrap phone1 ${
-                activeIndex === 0 ? "active" : ""
-              }`}
-            >
-              <img loading='lazy' src={src + "/images/pc/sec11_p1_pc.webp"} />
-            </div>
-            <div
-              className={`img_wrap phone_wrap phone2 ${
-                activeIndex === 1 ? "active" : ""
-              }`}
-            >
-              <img loading='lazy' src={src + "/images/pc/sec11_p2_pc.webp"} />
-            </div>
-            <div
-              className={`img_wrap phone_wrap phone3 ${
-                activeIndex === 2 ? "active" : ""
-              }`}
-            >
-              <img loading='lazy' src={src + "/images/pc/sec11_p3_pc.webp"} />
-            </div>
-          </div>
-          <div>
-            <div
-              className={`text_wrap ${activeIndex === 1 ? "white" : ""} ${
-                activeIndex === 0 || activeIndex === 1 ? "active" : ""
-              }`}
+              className={`text_wrap ${
+                isPc && activeIndex === 1 ? "white" : ""
+              } ${activeIndex === 0 || activeIndex === 1 ? "active" : ""}`}
             >
               <div
                 className='title'
@@ -134,6 +133,59 @@ const Sec11 = () => {
                 className='desc_16'
                 dangerouslySetInnerHTML={{ __html: config?.sec11?.part2?.desc }}
               ></p>
+            </div>
+          </div>
+          <div className={`pic_wrap`}>
+            <div
+              className={`img_wrap phone_wrap phone1 ${
+                activeIndex === 0 ? "active" : ""
+              }`}
+            >
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec11_p1_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec11_p1_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec11_p1_pc.webp"} />
+              </picture>
+            </div>
+            <div
+              className={`img_wrap phone_wrap phone2 ${
+                activeIndex === 1 ? "active" : ""
+              }`}
+            >
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec11_p2_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec11_p2_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec11_p2_pc.webp"} />
+              </picture>
+            </div>
+            <div
+              className={`img_wrap phone_wrap phone3 ${
+                activeIndex === 2 ? "active" : ""
+              }`}
+            >
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec11_p3_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec11_p3_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec11_p3_pc.webp"} />
+              </picture>
             </div>
           </div>
           <div className='bottom_content'>

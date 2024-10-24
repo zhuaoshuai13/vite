@@ -85,4 +85,53 @@
   }
 }
 
-@media (max-width: $mobwidthPx) {}
+@media (max-width: $mobwidthPx) {
+  .s25ultra .sec10 {
+    .sec10_wrap {
+      display: block;
+      padding: px-to-vw-mb(160) 0 0;
+    }
+
+    .pic_wrap {
+      width: var(--content-width);
+      height: px-to-vw-mb(780);
+    }
+
+    .phone1 {
+      top: px-to-vw-mb(60);
+      left: px-to-vw-mb(-24);
+      width: px-to-vw-mb(200);
+    }
+
+    .phone7 {
+      top: px-to-vw-mb(320);
+      left: px-to-vw-mb(570);
+      width: px-to-vw-mb(156);
+    }
+
+    .text_items {
+      position: relative;
+      top: unset;
+      left: unset;
+      max-width: var(--content-width);
+      height: px-to-vw-mb(400);
+      margin: px-to-vw-mb(50) auto 0;
+
+      .text_wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .title {
+        font-size: px-to-vw-mb(54);
+        font-family: "Bold";
+        line-height: 1.1;
+      }
+    }
+  }
+}

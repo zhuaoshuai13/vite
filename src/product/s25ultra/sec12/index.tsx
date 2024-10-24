@@ -53,24 +53,61 @@ const Sec12 = () => {
   return (
     <section className='sec12' ref={wrap}>
       <div className='sec12_wrap'>
+        {!isPc ? (
+          <div className='text_wrap slide_up'>
+            <div
+              className='title_75'
+              dangerouslySetInnerHTML={{ __html: config?.sec12?.title }}
+            ></div>
+            <p
+              className='desc_16'
+              dangerouslySetInnerHTML={{ __html: config?.sec12?.desc }}
+            ></p>
+          </div>
+        ) : null}
         <div className='pic_wrap'>
           <div className='img_wrap bg_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec12_bg_pc.webp"} />
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec12_bg_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec12_bg_pc.webp"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec12_bg_pc.webp"} />
+            </picture>
           </div>
           <div className='img_wrap phone_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec12_phone_pc.webp"} />
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec12_phone_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec12_phone_pc.webp"}
+              />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec12_phone_pc.webp"}
+              />
+            </picture>
           </div>
           <div className='content_wrap'>
-            <div className='text_wrap slide_up'>
-              <div
-                className='title_75'
-                dangerouslySetInnerHTML={{ __html: config?.sec12?.title }}
-              ></div>
-              <p
-                className='desc_16'
-                dangerouslySetInnerHTML={{ __html: config?.sec12?.desc }}
-              ></p>
-            </div>
+            {isPc ? (
+              <div className='text_wrap slide_up'>
+                <div
+                  className='title_75'
+                  dangerouslySetInnerHTML={{ __html: config?.sec12?.title }}
+                ></div>
+                <p
+                  className='desc_16'
+                  dangerouslySetInnerHTML={{ __html: config?.sec12?.desc }}
+                ></p>
+              </div>
+            ) : null}
             <div className='data_wrap'>
               {config?.sec12?.data?.map((item: any, index: number) => {
                 return (

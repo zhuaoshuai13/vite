@@ -19,12 +19,6 @@ const Sec14 = () => {
     const tl = gsap
       .timeline()
       .from(".pic_wrap", { opacity: 0, y: 100, ease: "power2.inOut" })
-    // .from(".left_hand1", { opacity: 0, ease: "power2.inOut" }, "a")
-    // .from(".left_hand2", { opacity: 0, ease: "power2.inOut" }, "a")
-    // .from(".right_hand1", { opacity: 0, ease: "power2.inOut" }, "a")
-    // .from(".right_hand2", { opacity: 0, ease: "power2.inOut" }, "a")
-    // .from(".phone_wrap", { opacity: 0, ease: "power2.inOut" }, "b")
-    // .from(".circleBox", { opacity: 0, ease: "power2.inOut" }, "b")
     ScrollTrigger.create({
       trigger: ".sec14_wrap",
       start: `top 50%`,
@@ -45,10 +39,20 @@ const Sec14 = () => {
       <div className='sec14_wrap'>
         <div className='top_wrap'>
           <div className='img_wrap ellipse_wrap'>
-            <img
-              loading='lazy'
-              src={src + "/images/pc/sec14_ellipse_pc.webp"}
-            />
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec14_ellipse_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec14_ellipse_pc.webp"}
+              />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec14_ellipse_pc.webp"}
+              />
+            </picture>
           </div>
           <div className='img_wrap wifi_wrap'>
             <img loading='lazy' src={src + "/images/pc/sec14_wifi_pc.webp"} />
@@ -63,25 +67,65 @@ const Sec14 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap bg_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec14_bg_pc.webp"} />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec14_bg_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec14_bg_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec14_bg_pc.webp"} />
+              </picture>
             </div>
             <div className='img_wrap left_hand1'>
-              <img
-                loading='lazy'
-                src={src + "/images/pc/sec14_lefthand1_pc.webp"}
-              />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec14_lefthand1_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec14_lefthand1_pc.webp"}
+                />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec14_lefthand1_pc.webp"}
+                />
+              </picture>
             </div>
             <div className='img_wrap right_hand1'>
-              <img
-                loading='lazy'
-                src={src + "/images/pc/sec14_righthand1_pc.webp"}
-              />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec14_righthand1_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec14_righthand1_pc.webp"}
+                />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec14_righthand1_pc.webp"}
+                />
+              </picture>
             </div>
             <div className='img_wrap phone_wrap'>
-              <img
-                loading='lazy'
-                src={src + "/images/pc/sec14_phone_pc.webp"}
-              />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec14_phone_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec14_phone_pc.webp"}
+                />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec14_phone_pc.webp"}
+                />
+              </picture>
             </div>
             <div className='circleBox left_circle'>
               <div className='circle'></div>
@@ -96,16 +140,36 @@ const Sec14 = () => {
               <div className='circle3'></div>
             </div>
             <div className='img_wrap left_hand2'>
-              <img
-                loading='lazy'
-                src={src + "/images/pc/sec14_lefthand2_pc.webp"}
-              />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec14_lefthand2_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec14_lefthand2_pc.webp"}
+                />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec14_lefthand2_pc.webp"}
+                />
+              </picture>
             </div>
             <div className='img_wrap right_hand2'>
-              <img
-                loading='lazy'
-                src={src + "/images/pc/sec14_righthand2_pc.webp"}
-              />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec14_righthand2_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec14_righthand2_pc.webp"}
+                />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec14_righthand2_pc.webp"}
+                />
+              </picture>
             </div>
             <div className='text_wrap bottom_text'>
               <div

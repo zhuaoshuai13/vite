@@ -1,5 +1,5 @@
-import { useRef, useState } from "react"
-// import { ScreenContext } from "../../../provider"
+import { useRef, useState, useContext } from "react"
+import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
@@ -10,7 +10,7 @@ import "./index.scss"
 
 const Sec2 = () => {
   const { s25ultraConfig: config, src } = window as any
-  // const { isPc } = useContext(ScreenContext)
+  const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
   const [activeIndex, setActiveIndex] = useState(0)
   const length = config?.sec2?.text.length
@@ -46,16 +46,6 @@ const Sec2 = () => {
       start: `top 0%`,
       end: "+=300%",
       animation: tl,
-      // onUpdate: (self) => {
-      //   const active = Math.round((self.progress + 0.6) * (length - 1))
-      //   if (active >= 0 && active < length) {
-      //     if (self.progress == 0) {
-      //       setActiveIndex(1)
-      //     } else {
-      //       setActiveIndex(active)
-      //     }
-      //   }
-      // },
     })
     setTimeline(tl)
   }
@@ -74,10 +64,7 @@ const Sec2 = () => {
           <div className='video_wrap'>
             <LazyLoad offset={1000}>
               <video
-                src={config.sec2.video.src}
-                // poster={
-                //   config.sec2.video.poster ? config.sec2.video.poster : ""
-                // }
+                src={isPc ? config.sec2.video.pc : config.sec2.video.mb}
                 muted
                 preload='auto'
                 webkit-playsinline='true'

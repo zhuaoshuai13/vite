@@ -20,7 +20,7 @@
 
   .text_wrap {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: var(--content-width);
     margin: 0 auto;
     text-align: center;
@@ -44,4 +44,19 @@
   }
 }
 
-@media (max-width: $mobwidthPx) {}
+@media (max-width: $mobwidthPx) {
+  .s25ultra .sec7 {
+    .content_wrap {
+      justify-content: flex-end;
+    }
+
+    .pic_wrap {
+      height: px-to-vw-mb(1162);
+      margin-top: px-to-vw-mb(-250);
+    }
+
+    .desc {
+      font-size: px-to-vw-mb(29);
+    }
+  }
+}

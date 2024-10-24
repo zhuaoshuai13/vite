@@ -6,13 +6,10 @@
   }
 
   .spec_part {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
 
     @include bg("pc/sec4_bg_pc.webp");
 
-    background-size: 100% 100%;
+    background-size: 100% 100% !important;
   }
 
   .content_wrap {
@@ -110,4 +107,72 @@
   }
 }
 
-@media (max-width: $mobwidthPx) {}
+@media (max-width: $mobwidthPx) {
+  .s25ultra .sec4 {
+    .spec_part {
+
+      @include bg("mb/sec4_bg_mb.png");
+    }
+
+    .content_wrap {
+      height: px-to-vw-mb(1120);
+
+      @include bg("mb/sec4_bg2_mb.png");
+    }
+
+    .phone_wrap {
+      top: px-to-vw-mb(450);
+      width: px-to-vw-mb(703);
+    }
+
+    .part {
+      padding: px-to-vw-mb(90) 0;
+    }
+
+    .data_wrap {
+      top: px-to-vw-mb(640);
+      gap: px-to-vw-mb(40) px-to-vw-mb(60);
+      width: 100%;
+      padding: px-to-vw-mb(48) px-to-vw-mb(20);
+
+      .title {
+        font-size: px-to-vw-mb(33);
+      }
+
+      .subtitle {
+        font-size: px-to-vw-mb(20.8);
+      }
+    }
+
+    .data {
+      gap: px-to-vw-mb(18);
+      width: calc((100% - (px-to-vw-mb(80))) / 2);
+
+      img {
+        width: px-to-vw-mb(36);
+      }
+    }
+
+    .warranty_wrap {
+      top: px-to-vw-mb(250);
+      right: px-to-vw-mb(48);
+      width: px-to-vw-mb(196);
+    }
+    
+    .corning_wrap {
+      width: px-to-vw-mb(112);
+      margin-bottom: px-to-vw-mb(50);
+    }
+    
+    .bottom_wrap {
+      top: px-to-vw-mb(680);
+      max-width: var(--content-width);
+    }
+
+    .phone_mask_wrap {
+      top: px-to-vw-mb(423);
+      left: px-to-vw-mb(31);
+      width: px-to-vw-mb(670);
+    }
+  }
+}

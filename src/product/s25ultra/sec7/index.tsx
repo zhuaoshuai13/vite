@@ -1,5 +1,5 @@
-import { useRef } from "react"
-// import { ScreenContext } from "../../../provider"
+import { useRef, useContext } from "react"
+import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
@@ -10,7 +10,7 @@ import "./index.scss"
 
 const Sec7 = () => {
   const { s25ultraConfig: config, src } = window as any
-  // const { isPc } = useContext(ScreenContext)
+  const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -35,10 +35,34 @@ const Sec7 = () => {
       scrub: 0.2,
     })
   }
+  const sec7AniMb = () => {
+    const tl = gsap
+      .timeline()
+      .to(".spec_part", { y: "-100%", ease: "power2.inOut" })
+      .to(".phone1", { opacity: 0, ease: "power2.inOut" }, "a")
+      .fromTo(
+        ".phone2",
+        { rotateY: 90 },
+        { rotateY: 0, opacity: 1, ease: "power2.inOut" },
+        "a+=0.2"
+      )
+    ScrollTrigger.create({
+      trigger: ".sec7_wrap",
+      pin: true,
+      start: `top 0%`,
+      end: "+=300%",
+      animation: tl,
+      scrub: 0.2,
+    })
+  }
 
   useGSAP(
     () => {
-      sec7Ani()
+      if (isPc) {
+        sec7Ani()
+      } else {
+        sec7AniMb()
+      }
     },
     { scope: wrap }
   )
@@ -71,10 +95,30 @@ const Sec7 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone1'>
-              <img loading='lazy' src={src + "/images/pc/sec7_p1_pc.webp"} />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec7_p1_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec7_p1_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec7_p1_pc.webp"} />
+              </picture>
             </div>
             <div className='img_wrap phone2'>
-              <img loading='lazy' src={src + "/images/pc/sec7_p2_pc.webp"} />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec7_p2_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec7_p2_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec7_p2_pc.webp"} />
+              </picture>
             </div>
           </div>
         </div>

@@ -87,4 +87,52 @@
   }
 }
 
-@media (max-width: $mobwidthPx) {}
+@media (max-width: $mobwidthPx) {
+  .s25ultra .sec6 {
+    .sec6_wrap {
+      height: px-to-vw-mb(750);
+
+      @include bg("mb/sec6_bg_mb.png");
+    }
+
+    .part {
+      top: px-to-vw-mb(50);
+    }
+
+    .desc {
+      font-size: px-to-vw-mb(29);
+    }
+
+    .pic_wrap {
+      top: px-to-vw-mb(488);
+      right: unset;
+      left: 0;
+      width: px-to-vw-mb(615);
+    }
+
+    .phone_wrap {
+      width: 100%;
+    }
+
+    .circle_wrap {
+      width: px-to-vw-mb(200);
+    }
+
+    .hand_wrap {
+      top: px-to-vw-mb(176);
+      width: px-to-vw-mb(406);
+    }
+
+    .fingerprint_wrap {
+      width: px-to-vw-mb(145);
+    }
+
+    .fingerprintlight_wrap1 {
+      width: px-to-vw-mb(200);
+    }
+
+    .fingerprintlight_wrap2 {
+      width: px-to-vw-mb(245);
+    }
+  }
+}

@@ -26,8 +26,8 @@ window.s25ultraConfig = {
       "lovingly crafted for the uncompromising you",
     ],
     video: {
-      src: src + "/videos/sec2_video_pc.mp4",
-      poster: src + "/images/sec2_video_poster.webp",
+      pc: src + "/videos/sec2_video_pc.mp4",
+      mb: src + "/videos/sec2_video_mb.mp4",
     },
   },
   sec3: {
@@ -39,11 +39,19 @@ window.s25ultraConfig = {
     item2: {
       title: `6.9mm Ultra Slim Body`,
     },
+    item2Mb: {
+      title: `6.9mm`,
+      desc: "Ultra Slim Body",
+    },
     item3: {
       title: `TitanShield Protection`,
     },
     item4: {
       title: `IP64 Dust & Water Resistant`,
+    },
+    item4Mb: {
+      title: `IP64`,
+      desc: "Dust & Water Resistant",
     },
     item5: {
       title: `32MP`,
@@ -59,7 +67,7 @@ window.s25ultraConfig = {
       title: `60-month Fluency*`,
     },
     item9: {
-      title: `Up to 256GB ROM <br /> +16GB*(8+8) RAM`,
+      title: `Up to 256GB ROM <br class="pc"/> +16GB*(8+8) RAM`,
     },
   },
   sec4: {
@@ -159,7 +167,7 @@ window.s25ultraConfig = {
     desc: "With an IP64 rating for dust and water resistance, this device is well-protected against everyday wear and tear, <br/> including dust ingress and light water splashes.",
   },
   sec9: {
-    title: "Survives <br/> 25000 impacts",
+    title: `Survives <br class="pc"/> 25000 impacts`,
     desc: "5 major TitanShield Protection technologies to comprehensively <br/> safeguard your beloved phone.",
     data: [
       {
@@ -190,7 +198,7 @@ window.s25ultraConfig = {
       desc: "In the S25 Ultra, silicone seals are applied to the edges of the screen and battery cover, as well as all external interfaces, offering comprehensive waterproofing and shock resistance.",
     },
     part2: {
-      title: "Integrated <br/> Metal Inner <br/> Frame",
+      title: `Integrated <br/> Metal Inner <br class="pc"/> Frame`,
       desc: "During the die-casting process of the motherboard upper cover, we integrated metal strips to create a robust metal frame, significantly enhancing the device's resistance to bending compared to traditional designs.",
     },
     part3: {
@@ -257,11 +265,13 @@ window.s25ultraConfig = {
         {
           subtitle: "Up to",
           title: "16(8+8)GB RAM",
+          titleMb: "Up to 16(8+8)GB RAM",
           desc: "18 Apps running simultaneously.*",
         },
         {
           subtitle: "Up to",
           title: "512GB ROM",
+          titleMb: "Up to 512GB ROM",
           desc: "Capable of storing 120,000+ photos*",
         },
       ],
@@ -273,7 +283,7 @@ window.s25ultraConfig = {
   },
   sec14: {
     title: "Super wall-penetrating capability",
-    desc: "The S25 Ultra supports Super Wi-Fi, providing ultra-low latency for seamless gaming and automatically switching to the best <br/> network across different Wi-Fi networks, offering significantly stronger signal strength in public spaces with shared Wi-Fi.",
+    desc: `The S25 Ultra supports Super Wi-Fi, providing ultra-low latency for seamless gaming and automatically switching to the best <br class="pc"/> network across different Wi-Fi networks, offering significantly stronger signal strength in public spaces with shared Wi-Fi.`,
     data: [
       {
         title: "26ms",

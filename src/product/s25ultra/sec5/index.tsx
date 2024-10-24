@@ -1,5 +1,5 @@
-import { useRef } from "react"
-// import { ScreenContext } from "../../../provider"
+import { useRef, useContext } from "react"
+import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
@@ -10,7 +10,7 @@ import "./index.scss"
 
 const Sec5 = () => {
   const { s25ultraConfig: config, src } = window as any
-  // const { isPc } = useContext(ScreenContext)
+  const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -27,12 +27,28 @@ const Sec5 = () => {
       toggleActions: "play none none reverse",
     })
   }
+  const sec5AniMb = () => {
+    const tl = gsap
+      .timeline()
+      .from(".light_wrap", { x: "-130%", ease: "power2.inOut", duration: 1.5 })
+      .from(".nit_wrap", { opacity: 0, ease: "power2.inOut" })
+    ScrollTrigger.create({
+      trigger: ".sec5_wrap",
+      start: `top 30%`,
+      animation: tl,
+      toggleActions: "play none none reverse",
+    })
+  }
 
   useGSAP(
     () => {
-      sec5Ani()
+      if (isPc) {
+        sec5Ani()
+      } else {
+        sec5AniMb()
+      }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc] }
   )
 
   return (

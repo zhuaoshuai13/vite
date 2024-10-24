@@ -28,7 +28,7 @@
   }
 
   .phone_wrap {
-    width: px-to-vw(100%);
+    // width: 100%;
     height: px-to-vw(930);
   }
 
@@ -59,4 +59,44 @@
   }
 }
 
-@media (max-width: $mobwidthPx) {}
+@media (max-width: $mobwidthPx) {
+  .s25ultra .sec5 {
+    .sec5_wrap {
+      height: auto;
+    }
+
+    .pic_wrap {
+      position: relative;
+      margin-top: px-to-vw-mb(-120);
+    }
+
+    .phone_wrap {
+      height: px-to-vw-mb(640);
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .mask_wrap {
+      img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .nit_wrap {
+      top: px-to-vw-mb(333);
+      left: px-to-vw-mb(220);
+      width: px-to-vw-mb(500);
+    }
+
+    .light_wrap {
+      top: px-to-vw-mb(300);
+      left: px-to-vw-mb(500);
+    }
+  }
+}

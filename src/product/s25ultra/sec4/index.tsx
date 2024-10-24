@@ -1,5 +1,5 @@
-import React, { useRef } from "react"
-// import { ScreenContext } from "../../../provider"
+import React, { useRef, useContext } from "react"
+import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
@@ -10,7 +10,7 @@ import "./index.scss"
 
 const Sec4 = () => {
   const { s25ultraConfig: config, src } = window as any
-  // const { isPc } = useContext(ScreenContext)
+  const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -44,11 +44,43 @@ const Sec4 = () => {
     })
   }
 
+  const sec4AniMb = () => {
+    const tl = gsap
+      .timeline()
+      .from(".part1 .desc_16", { opacity: 0, ease: "power2.inOut" }, "b")
+      .from(
+        ".phone_wrap",
+        { x: "-20%", y: "-20%", scale: 1.2, ease: "power2.inOut" },
+        "b"
+      )
+      .to(".data_wrap1", { opacity: 1, ease: "power2.inOut" })
+      .to(".data_wrap1", { opacity: 0, ease: "power2.inOut" }, "c")
+      .to(".data_wrap2", { opacity: 1, ease: "power2.inOut" }, "c+=0.5")
+      .to(".part1", { opacity: 0, ease: "power2.inOut" }, "d")
+      .to(".part2", { opacity: 1, ease: "power2.inOut" }, "d+=0.5")
+      .from(".phone_mask_wrap", {
+        clipPath: "inset(100% 0 0 0)",
+        ease: "power2.inOut",
+      })
+    ScrollTrigger.create({
+      trigger: ".content_wrap",
+      pin: true,
+      start: `top 0%`,
+      end: "+=800%",
+      animation: tl,
+      scrub: true,
+    })
+  }
+
   useGSAP(
     () => {
-      sec4Ani()
+      if (isPc) {
+        sec4Ani()
+      }else {
+        sec4AniMb()
+      }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc] }
   )
 
   return (
@@ -68,7 +100,17 @@ const Sec4 = () => {
         </div>
         <div className='content_wrap'>
           <div className='img_wrap phone_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec4_phone_pc.webp"} />
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec4_phone_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec4_phone_pc.webp"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec4_phone_pc.webp"} />
+            </picture>
           </div>
           <div className='img_wrap phone_mask_wrap'>
             <img
@@ -97,7 +139,8 @@ const Sec4 = () => {
                       <div className='subtitle'>{item.subtitle}</div>
                     </div>
                   </div>
-                  {index === 1 && <br />}
+                  {index === 1 && <br className="pc" />}
+                  {index === 0 && <br className="mb" />}
                 </React.Fragment>
               ))}
             </div>
@@ -111,7 +154,8 @@ const Sec4 = () => {
                       <div className='subtitle'>{item.subtitle}</div>
                     </div>
                   </div>
-                  {index === 1 && <br />}
+                  {index === 1 && <br className="pc" />}
+                  {index === 0 && <br className="mb" />}
                 </React.Fragment>
               ))}
             </div>

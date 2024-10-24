@@ -86,7 +86,17 @@ const Sec6 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec6_p1_pc.webp"} />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec6_p1_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec6_p1_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec6_p1_pc.webp"} />
+              </picture>
             </div>
             <div className='img_wrap circle_wrap'>
               <img
@@ -96,7 +106,17 @@ const Sec6 = () => {
             </div>
           </div>
           <div className='img_wrap hand_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec6_f1_pc.webp"} />
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec6_f1_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec6_f1_pc.webp"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec6_f1_pc.webp"} />
+            </picture>
           </div>
         </div>
         <div className='part part2'>
@@ -112,14 +132,31 @@ const Sec6 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec6_p2_pc.webp"} />
-            </div>
-            <div className='img_wrap nit_wrap'>
-              {/* <img loading="lazy" src={src + "/images/pc/sec5_nit_pc.webp"} /> */}
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec6_p2_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec6_p2_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec6_p2_pc.webp"} />
+              </picture>
             </div>
           </div>
           <div className='img_wrap hand_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec6_f2_pc.webp"} />
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec6_f2_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec6_f2_pc.webp"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec6_f2_pc.webp"} />
+            </picture>
           </div>
         </div>
         <div className='part part3'>
@@ -135,7 +172,17 @@ const Sec6 = () => {
           </div>
           <div className='pic_wrap'>
             <div className='img_wrap phone_wrap'>
-              <img loading='lazy' src={src + "/images/pc/sec6_p3_pc.webp"} />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec6_p1_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec6_p3_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec6_p3_pc.webp"} />
+              </picture>
             </div>
             <div className='img_wrap fingerprint_wrap'>
               <img
@@ -157,7 +204,17 @@ const Sec6 = () => {
             </div>
           </div>
           <div className='img_wrap hand_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec6_f1_pc.webp"} />
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec6_f1_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec6_f1_pc.webp"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec6_f1_pc.webp"} />
+            </picture>
           </div>
         </div>
       </div>

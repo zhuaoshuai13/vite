@@ -3,8 +3,6 @@
 .s25ultra .sec2 {
   .sec2_wrap {
     position: relative;
-
-    // height: px-to-vw(900);
     height: 100vh;
   }
 
@@ -57,11 +55,6 @@
       line-height: 1.6;
       transition: all .5s;
     }
-
-    // p.active {
-    //   // font-size: px-to-vw(75);
-    //   margin: px-to-vw(30) 0;
-    // }
   }
 
   .title_items {
@@ -90,4 +83,18 @@
   }
 }
 
-@media (max-width: $mobwidthPx) {}
+@media (max-width: $mobwidthPx) {
+  .s25ultra .sec2 {
+    .slogn {
+      font-size: px-to-vw-mb(50);
+    }
+
+    .title_items {
+      font-size: px-to-vw-mb(25);
+    }
+
+    .lazyload-wrapper {
+      height: 100%;
+    }
+  }
+}

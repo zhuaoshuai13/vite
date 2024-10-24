@@ -47,7 +47,17 @@ const Sec8 = () => {
     <section className='sec8' ref={wrap}>
       <div className='sec8_wrap'>
         <div className='img_wrap sec8_bg'>
-          <img loading='lazy' src={src + "/images/pc/sec8_bg_pc.webp"} />
+          <picture>
+            <source
+              media='(max-width: 750px)'
+              srcSet={src + "/images/mb/sec8_bg_mb.png"}
+            />
+            <source
+              media='(min-width: 751px)'
+              srcSet={src + "/images/pc/sec8_bg_pc.webp"}
+            />
+            <img loading='lazy' src={src + "/images/pc/sec8_bg_pc.webp"} />
+          </picture>
         </div>
         <div className='text_wrap slide_up'>
           <div

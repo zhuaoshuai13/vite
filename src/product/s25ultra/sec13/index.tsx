@@ -65,10 +65,63 @@ const Sec13 = () => {
       scrub: 0.2,
     })
   }
+  const sec13AniMb = () => {
+    const tl = gsap
+      .timeline()
+      .from(".part1 .chip_wrap", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      .from(".part1 .light_wrap", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      .from(".part1 .data_wrap", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      .to(
+        ".part1",
+        {
+          x: "-100%",
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .to(
+        ".part2",
+        {
+          x: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(".part2 .chip_wrap", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      .from(".part2 .light_wrap", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      .to(".part2 .light_wrap", {})
+    ScrollTrigger.create({
+      trigger: ".sec13_wrap .content_wrap",
+      pin: true,
+      start: `top 0%`,
+      end: "+=500%",
+      animation: tl,
+      scrub: 0.2,
+    })
+  }
 
   useGSAP(
     () => {
-      sec13Ani()
+      if (isPc) {
+        sec13Ani()
+      } else {
+        sec13AniMb()
+      }
     },
     { scope: wrap }
   )
@@ -104,35 +157,69 @@ const Sec13 = () => {
             </div>
             <div className='pic_wrap'>
               <div className='img_wrap phone_wrap'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec13_part1_pc.webp"}
-                />
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec13_part1_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec13_part1_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec13_part1_pc.webp"}
+                  />
+                </picture>
               </div>
               <div className='img_wrap light_wrap'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec13_light_pc.webp"}
-                />
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec13_light_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec13_light_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec13_light_pc.webp"}
+                  />
+                </picture>
               </div>
               <div className='img_wrap chip_wrap'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec13_16g_pc.webp"}
-                />
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec13_16g_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec13_16g_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec13_16g_pc.webp"}
+                  />
+                </picture>
               </div>
             </div>
             <div className='data_wrap'>
               {config?.sec13?.part1?.data?.map((item: any, index: number) => {
                 return (
                   <div className='data' key={index}>
-                    <div
-                      className='data_subtitle'
-                      dangerouslySetInnerHTML={{ __html: item?.subtitle }}
-                    ></div>
+                    {isPc ? (
+                      <div
+                        className='data_subtitle'
+                        dangerouslySetInnerHTML={{ __html: item?.subtitle }}
+                      ></div>
+                    ) : null}
                     <div
                       className='data_title'
-                      dangerouslySetInnerHTML={{ __html: item?.title }}
+                      dangerouslySetInnerHTML={{
+                        __html: isPc ? item?.title : item?.titleMb,
+                      }}
                     ></div>
                     <div
                       className='data_desc'
@@ -158,22 +245,52 @@ const Sec13 = () => {
             </div>
             <div className='pic_wrap'>
               <div className='img_wrap phone_wrap'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec13_part2_pc.webp"}
-                />
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec13_part2_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec13_part2_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec13_part2_pc.webp"}
+                  />
+                </picture>
               </div>
               <div className='img_wrap light_wrap'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec13_t620_light_pc.webp"}
-                />
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec13_t620_light_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec13_t620_light_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec13_t620_light_pc.webp"}
+                  />
+                </picture>
               </div>
               <div className='img_wrap chip_wrap'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec13_t620_pc.webp"}
-                />
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec13_t620_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec13_t620_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec13_t620_pc.webp"}
+                  />
+                </picture>
               </div>
             </div>
           </div>

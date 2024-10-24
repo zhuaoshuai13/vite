@@ -1,5 +1,5 @@
-import { useRef } from "react"
-// import { ScreenContext } from "../../../provider"
+import { useRef, useContext } from "react"
+import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
@@ -10,7 +10,7 @@ import "./index.scss"
 
 const Sec1 = () => {
   const { s25ultraConfig: config, src } = window as any
-  // const { isPc } = useContext(ScreenContext)
+  const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
   const { isLoaded } = UseImagesLoad([
     src + "/images/pc/sec1_p1_pc.webp",
@@ -57,7 +57,7 @@ const Sec1 = () => {
 
   useGSAP(
     () => {
-      if (window.innerHeight < 900) {
+      if (isPc && window.innerHeight < 900) {
         window.scrollTo(0, 125)
       }
       if (isLoaded) {
