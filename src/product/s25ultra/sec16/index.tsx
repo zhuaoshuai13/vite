@@ -89,9 +89,6 @@ const Sec16 = () => {
           x: "33%",
           y: "-15.30%",
           scale: 0.68,
-          // x: 0,
-          // y: 0,
-          // scale: 1,
           ease: "power2.inOut",
         },
         "b"
@@ -126,6 +123,7 @@ const Sec16 = () => {
         },
         "c"
       )
+      .to(".part3", {}, "switchPart2Swiper")
       .to(
         ".part2",
         {
@@ -158,6 +156,7 @@ const Sec16 = () => {
         },
         "part3"
       )
+      .to(".part4", {}, "switchPart4Swiper")
       .to(
         ".part4",
         {
@@ -174,6 +173,7 @@ const Sec16 = () => {
         },
         "part4"
       )
+      .to(".part5", {}, "switchPart5Button")
       .to(
         ".part5",
         {
@@ -205,6 +205,15 @@ const Sec16 = () => {
       animation: tl,
       scrub: 0.2,
     })
+    // tl.add(() => {
+    //   part2SwiperInstance.slideNext()
+    // }, "switchPart2Swiper")
+    // tl.add(() => {
+    //   part4SwiperInstance.slideNext()
+    // }, "switchPart4Swiper")
+    // tl.add(() => {
+    //   document.querySelector<HTMLElement>(".sec16 .part5 button")?.click()
+    // }, "switchPart5Button")
 
     setTimeline(tl)
   }
@@ -212,9 +221,28 @@ const Sec16 = () => {
   useGSAP(
     () => {
       sec16Ani()
+      // if (part2SwiperInstance && part4SwiperInstance) {
+      // }
     },
-    { scope: wrap }
+    {
+      scope: wrap,
+      // dependencies: [part2SwiperInstance, part4SwiperInstance],
+    }
   )
+
+  useEffect(() => {
+    if (timeline && part2SwiperInstance && part4SwiperInstance) {
+      timeline.add(() => {
+        part2SwiperInstance.slideNext()
+      }, "switchPart2Swiper")
+      timeline.add(() => {
+        part4SwiperInstance.slideNext()
+      }, "switchPart4Swiper")
+      timeline.add(() => {
+        document.querySelector<HTMLElement>(".sec16 .part5 button")?.click()
+      }, "switchPart5Button")
+    }
+  }, [timeline, part2SwiperInstance, part4SwiperInstance])
 
   return (
     <section className='sec16' ref={wrap}>

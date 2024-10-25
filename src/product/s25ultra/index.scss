@@ -69,7 +69,7 @@
 
   .spec_part {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,7 +130,7 @@
     .spec_part {
       position: unset;
       height: auto;
-      padding: px-to-vw-mb(100) 0;
+      padding: px-to-vw-mb(160) 0;
     }
 
     .spec_text_wrap {

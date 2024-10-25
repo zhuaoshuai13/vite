@@ -10,7 +10,11 @@
 
   .sec9_bg {
     width: 100%;
-    height: px-to-vw(961);
+    height: px-to-vw(720);
+
+    img {
+      height: 100%;
+    }
   }
 
   .text_wrap {
@@ -26,8 +30,8 @@
 
   .pic_wrap {
     position: absolute;
-    top: px-to-vw(183);
-    left: px-to-vw(415);
+    top: px-to-vw(195);
+    left: px-to-vw(590);
   }
 
   .stone1_wrap {
@@ -37,20 +41,20 @@
   }
 
   .phone_wrap {
-    width: px-to-vw(880);
+    width: px-to-vw(600);
   }
 
   .stone2_wrap {
     position: absolute;
-    bottom: px-to-vw(-5);
-    left: px-to-vw(472);
+    bottom: px-to-vw(-4);
+    left: px-to-vw(296);
     width: px-to-vw(211);
   }
 
   .stone3_wrap {
     position: absolute;
     bottom: px-to-vw(-152);
-    left: px-to-vw(-135);
+    left: px-to-vw(-235);
     width: px-to-vw(1289);
   }
 

@@ -38,7 +38,6 @@ const Sec7 = () => {
   const sec7AniMb = () => {
     const tl = gsap
       .timeline()
-      .to(".spec_part", { y: "-100%", ease: "power2.inOut" })
       .to(".phone1", { opacity: 0, ease: "power2.inOut" }, "a")
       .fromTo(
         ".phone2",
@@ -47,7 +46,7 @@ const Sec7 = () => {
         "a+=0.2"
       )
     ScrollTrigger.create({
-      trigger: ".sec7_wrap",
+      trigger: ".sec7_wrap .content_wrap",
       pin: true,
       start: `top 0%`,
       end: "+=300%",

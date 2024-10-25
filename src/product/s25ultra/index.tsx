@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
@@ -29,6 +29,8 @@ import "./index.scss"
 
 const S25Ultra = () => {
   const wrap = useRef(null)
+  // 传到sec19的swiper，有了swiper之后再执行slide-up动画，防止slide-up的动画初始化在swiper初始化之前，导致slide-up动画的触发时机有问题
+  const [part4SwiperInstance, setPart4SwiperInstance] = useState<any>()
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -53,9 +55,11 @@ const S25Ultra = () => {
 
   useGSAP(
     () => {
-      specSecAni()
+      if (part4SwiperInstance) {
+        specSecAni()
+      }
     },
-    { scope: wrap, dependencies: [wrap] }
+    { scope: wrap, dependencies: [wrap, part4SwiperInstance] }
   )
 
   const lenis = useLenis(({ scroll }) => {
@@ -83,7 +87,10 @@ const S25Ultra = () => {
         <Sec16 />
         <Sec17 />
         <Sec18 />
-        <Sec19 />
+        <Sec19
+          part4SwiperInstance={part4SwiperInstance}
+          setPart4SwiperInstance={setPart4SwiperInstance}
+        />
         <FullVideo />
       </div>
     </ReactLenis>

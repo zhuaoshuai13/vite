@@ -21,7 +21,7 @@ const Sec14 = () => {
       .from(".pic_wrap", { opacity: 0, y: 100, ease: "power2.inOut" })
     ScrollTrigger.create({
       trigger: ".sec14_wrap",
-      start: `top 50%`,
+      start: `top 30%`,
       animation: tl,
       toggleActions: "play none none reverse",
     })

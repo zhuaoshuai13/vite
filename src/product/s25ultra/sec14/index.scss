@@ -264,6 +264,8 @@
 
     .bottom_text {
       padding: px-to-vw-mb(40);
+      background-image: unset;
+      backdrop-filter: blur(30px);
     }
 
     .data_wrap {

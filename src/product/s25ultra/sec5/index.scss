@@ -3,12 +3,8 @@
 .s25ultra .sec5 {
   .sec5_wrap {
     position: relative;
-    height: px-to-vw(950);
+    height: px-to-vw(930);
     margin-top: px-to-vw(100);
-    padding: px-to-vw(50) 0;
-    background-size: 100% 100% !important;
-
-    @include bg("pc/sec5_bg_pc.webp");
   }
 
   .text_wrap {

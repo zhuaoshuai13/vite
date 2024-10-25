@@ -19,9 +19,18 @@ const Sec10 = () => {
     const tl = gsap
       .timeline()
       .from(
+        ".phone4",
+        {
+          scale: 0.9,
+          ease: "power2.inOut",
+          duration: 2,
+        },
+        "a"
+      )
+      .from(
         ".phone3",
         {
-          x: "4%",
+          x: "4.5%",
           y: "14%",
           ease: "power2.inOut",
           duration: 2,
@@ -31,7 +40,7 @@ const Sec10 = () => {
       .from(
         ".phone2",
         {
-          x: "15%",
+          x: "15.5%",
           y: "6%",
           ease: "power2.inOut",
           duration: 2,
@@ -41,8 +50,9 @@ const Sec10 = () => {
       .from(
         ".phone1",
         {
-          x: "26%",
+          x: "28%",
           y: "11%",
+          scale: 1.05,
           ease: "power2.inOut",
           duration: 2,
         },
@@ -53,6 +63,7 @@ const Sec10 = () => {
         {
           x: "-9%",
           y: "0%",
+          rotate: "2deg",
           ease: "power2.inOut",
           duration: 2,
         },
@@ -63,6 +74,7 @@ const Sec10 = () => {
         {
           x: "-19%",
           y: "-15%",
+          rotate: "4deg",
           ease: "power2.inOut",
           duration: 2,
         },
@@ -71,8 +83,9 @@ const Sec10 = () => {
       .from(
         ".phone7",
         {
-          x: "-28%",
+          x: "-27%",
           y: "-33%",
+          rotate: "5deg",
           ease: "power2.inOut",
           duration: 2,
         },

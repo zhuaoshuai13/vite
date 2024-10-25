@@ -170,6 +170,7 @@
     .title {
       color: transparent;
       background-image: linear-gradient(to right, #ffaf32 0%, #eb2314 80%, #d80f00 100%);
+      -webkit-background-clip: text;
       background-clip: text;
     }
   }

@@ -14,7 +14,7 @@ const Sec11 = () => {
   const length = config?.sec11?.color?.length
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
-  const [activeIndex, setActiveIndex] = useState(1)
+  const [activeIndex, setActiveIndex] = useState(0)
   const [timeline, setTimeline] = useState<any>()
 
   const handleSwitchPic = (index: number) => {

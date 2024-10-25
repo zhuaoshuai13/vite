@@ -62,9 +62,50 @@ const Sec15 = () => {
     })
   }
 
+  const sec15AniMb = () => {
+    const tl = gsap
+      .timeline()
+      .to(
+        ".text_wrap1",
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .to(
+        ".text_wrap2",
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .to(
+        ".phone2",
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+    ScrollTrigger.create({
+      trigger: ".sec15_wrap",
+      pin: true,
+      start: `top 10%`,
+      end: "+=200%",
+      animation: tl,
+      scrub: 0.2,
+    })
+  }
+
   useGSAP(
     () => {
-      sec15Ani()
+      if (isPc) {
+        sec15Ani()
+      } else {
+        sec15AniMb()
+      }
     },
     { scope: wrap }
   )
@@ -72,36 +113,58 @@ const Sec15 = () => {
   return (
     <section className='sec15' ref={wrap}>
       <div className='sec15_wrap'>
-        <div className='text_wrap text_wrap1'>
-          <div
-            className='title_75'
-            dangerouslySetInnerHTML={{
-              __html: config?.sec15?.part1?.title,
-            }}
-          ></div>
-          <p
-            className='desc_16'
-            dangerouslySetInnerHTML={{ __html: config?.sec15?.part1?.desc }}
-          ></p>
-        </div>
-        <div className='text_wrap text_wrap2'>
-          <div
-            className='title_75'
-            dangerouslySetInnerHTML={{
-              __html: config?.sec15?.part2?.title,
-            }}
-          ></div>
-          <p
-            className='desc_16'
-            dangerouslySetInnerHTML={{ __html: config?.sec15?.part2?.desc }}
-          ></p>
-        </div>
         <div className='pic_wrap'>
           <div className='img_wrap phone1'>
-            <img loading='lazy' src={src + "/images/pc/sec15_p1_pc.webp"} />
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec15_p1_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec15_p1_pc.webp"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec15_p1_pc.webp"} />
+            </picture>
           </div>
           <div className='img_wrap phone2'>
-            <img loading='lazy' src={src + "/images/pc/sec15_p2_pc.webp"} />
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec15_p2_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec15_p2_pc.webp"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec15_p2_pc.webp"} />
+            </picture>
+          </div>
+        </div>
+        <div className='all_text'>
+          <div className='text_wrap text_wrap1'>
+            <div
+              className='title_75'
+              dangerouslySetInnerHTML={{
+                __html: config?.sec15?.part1?.title,
+              }}
+            ></div>
+            <p
+              className='desc_16'
+              dangerouslySetInnerHTML={{ __html: config?.sec15?.part1?.desc }}
+            ></p>
+          </div>
+          <div className='text_wrap text_wrap2'>
+            <div
+              className='title_75'
+              dangerouslySetInnerHTML={{
+                __html: config?.sec15?.part2?.title,
+              }}
+            ></div>
+            <p
+              className='desc_16'
+              dangerouslySetInnerHTML={{ __html: config?.sec15?.part2?.desc }}
+            ></p>
           </div>
         </div>
       </div>

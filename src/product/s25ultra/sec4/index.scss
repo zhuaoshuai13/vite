@@ -33,20 +33,20 @@
   .phone_wrap {
     position: absolute;
     top: px-to-vw(360);
-    left: px-to-vw(45);
-    width: px-to-vw(1802);
+    left: px-to-vw(190);
+    width: px-to-vw(1600);
   }
 
   .phone_mask_wrap {
     position: absolute;
-    top: px-to-vw(299);
-    left: px-to-vw(251);
-    width: px-to-vw(1350);
+    top: px-to-vw(308);
+    left: px-to-vw(372);
+    width: px-to-vw(1198);
   }
 
   .data_wrap {
     position: absolute;
-    top: px-to-vw(700);
+    top: px-to-vw(640);
     display: flex;
     flex-wrap: wrap;
     gap: px-to-vw(50);
@@ -90,7 +90,7 @@
 
   .bottom_wrap {
     position: absolute;
-    top: px-to-vw(650);
+    top: px-to-vw(600);
     left: 0;
     max-width: px-to-vw(600);
   }

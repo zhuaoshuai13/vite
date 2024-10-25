@@ -50,6 +50,12 @@ const Sec18 = () => {
             className='title_75'
             dangerouslySetInnerHTML={{ __html: config?.sec18?.title }}
           ></div>
+          {!isPc ? (
+            <p
+              className='desc_16'
+              dangerouslySetInnerHTML={{ __html: config?.sec18?.desc }}
+            ></p>
+          ) : null}
         </div>
         <div className='pic_wrap'>
           <div className='video_wrap'>
@@ -73,12 +79,14 @@ const Sec18 = () => {
             <img loading='lazy' src={src + "/images/pc/sec18_phone_pc.webp"} />
           </div>
         </div>
-        <div className='text_wrap slide_up'>
-          <p
-            className='desc_16'
-            dangerouslySetInnerHTML={{ __html: config?.sec18?.desc }}
-          ></p>
-        </div>
+        {isPc ? (
+          <div className='text_wrap slide_up'>
+            <p
+              className='desc_16'
+              dangerouslySetInnerHTML={{ __html: config?.sec18?.desc }}
+            ></p>
+          </div>
+        ) : null}
       </div>
     </section>
   )

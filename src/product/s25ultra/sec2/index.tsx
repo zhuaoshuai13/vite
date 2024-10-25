@@ -1,4 +1,4 @@
-import { useRef, useState, useContext } from "react"
+import React, { useRef, useState, useContext } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -27,18 +27,10 @@ const Sec2 = () => {
   const sec2Ani = () => {
     const tl = gsap
       .timeline()
-      .to(".slogn", { opacity: 0, y: 100 })
-      .to(".text_wrap", { opacity: 1 })
-      .to(".title_items p:nth-child(1)", { margin: "2vw 0" })
-      .to(".title_items p:nth-child(1)", { margin: "0 0" }, "a")
-      .to(".title_items p:nth-child(2)", { margin: "2vw 0" }, "a")
-      .to(".title_items p:nth-child(2)", { margin: "0 0" }, "b")
-      .to(".title_items p:nth-child(3)", { margin: "2vw 0" }, "b")
-      .to(".title_items p:nth-child(3)", { margin: "0 0" }, "c")
-      .to(".title_items p:nth-child(4)", { margin: "2vw 0" }, "c")
-      .to(".title_items p:nth-child(4)", { margin: "0 0" })
-      .to(".part1", { y: "-100%" }, "part2")
-      .to(".part2", {}, "part3")
+      .from(".slogn", { fontSize: "5.2vw" })
+      .from(".title_items p:not(.slogn)", { opacity: 0 })
+      .to(".part1", { y: "-100%" })
+      .to(".part2", {})
     ScrollTrigger.create({
       trigger: ".sec2_wrap",
       pin: true,
@@ -85,19 +77,24 @@ const Sec2 = () => {
           <div className='img_wrap bg_wrap'>
             <img loading='lazy' src={src + "/images/pc/sec2_bg_pc.webp"} />
           </div>
-          <p
+          {/* <p
             className='slogn'
             dangerouslySetInnerHTML={{ __html: config.sec2.slogn }}
-          ></p>
+          ></p> */}
           <div className='text_wrap'>
             <div className='title_items'>
               {config.sec2.text.map((item: string, index: number) => (
-                <p
-                  key={index}
-                  className={index === activeIndex ? "active" : ""}
-                >
-                  {item}
-                </p>
+                <React.Fragment key={index}>
+                  <p className={index === activeIndex ? "active" : ""}>
+                    {item}
+                  </p>
+                  {index + 1 === Math.floor(config?.sec2?.text?.length / 2) ? (
+                    <p
+                      className='slogn'
+                      dangerouslySetInnerHTML={{ __html: config?.sec2?.slogn }}
+                    ></p>
+                  ) : null}
+                </React.Fragment>
               ))}
             </div>
           </div>
