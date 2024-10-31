@@ -1,4 +1,4 @@
-import React, { useRef, useState, useContext } from "react"
+import React, { useRef, useContext } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -12,10 +12,7 @@ const Sec2 = () => {
   const { s25ultraConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
-  const [activeIndex, setActiveIndex] = useState(0)
-  const length = config?.sec2?.text.length
-  const [timeline, setTimeline] = useState<any>()
-
+  const videoRef = useRef<HTMLVideoElement>(null)
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
   const handlePart2Btn = () => {
@@ -36,17 +33,53 @@ const Sec2 = () => {
       pin: true,
       scrub: true,
       start: `top 0%`,
-      end: "+=300%",
+      end: "+=3000",
       animation: tl,
     })
-    setTimeline(tl)
+  }
+
+  const sec2AniMb = () => {
+    const tl = gsap
+      .timeline()
+      .from(".slogn", { fontSize: "7.7vw" })
+      .from(".title_items p:not(.slogn)", { opacity: 0 })
+      .to(".part1", { y: "-100%" })
+      .to(".part2", {})
+    ScrollTrigger.create({
+      trigger: ".sec2_wrap",
+      pin: true,
+      scrub: true,
+      start: `top 0%`,
+      end: "+=3000",
+      animation: tl,
+    })
+
+    gsap.timeline().to(".sec2 .video_wrap", {
+      scrollTrigger: {
+        trigger: ".sec2 .video_wrap",
+        start: "top 100%",
+        onEnter: () => {
+          if (document.querySelector(".sec2 .video_wrap video")) {
+            (
+              document.querySelector(
+                ".sec2 .video_wrap video"
+              ) as HTMLVideoElement
+            )?.play()
+          }
+        },
+      },
+    })
   }
 
   useGSAP(
     () => {
-      sec2Ani()
+      if (isPc) {
+        sec2Ani()
+      } else {
+        sec2AniMb()
+      }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc], revertOnUpdate: true }
   )
 
   return (
@@ -56,6 +89,7 @@ const Sec2 = () => {
           <div className='video_wrap'>
             <LazyLoad offset={1000}>
               <video
+                ref={videoRef}
                 src={isPc ? config.sec2.video.pc : config.sec2.video.mb}
                 muted
                 preload='auto'
@@ -77,17 +111,11 @@ const Sec2 = () => {
           <div className='img_wrap bg_wrap'>
             <img loading='lazy' src={src + "/images/pc/sec2_bg_pc.webp"} />
           </div>
-          {/* <p
-            className='slogn'
-            dangerouslySetInnerHTML={{ __html: config.sec2.slogn }}
-          ></p> */}
           <div className='text_wrap'>
             <div className='title_items'>
               {config.sec2.text.map((item: string, index: number) => (
                 <React.Fragment key={index}>
-                  <p className={index === activeIndex ? "active" : ""}>
-                    {item}
-                  </p>
+                  <p>{item}</p>
                   {index + 1 === Math.floor(config?.sec2?.text?.length / 2) ? (
                     <p
                       className='slogn'

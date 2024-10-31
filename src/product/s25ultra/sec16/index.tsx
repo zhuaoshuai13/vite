@@ -4,9 +4,8 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react"
-import { EffectFade, Autoplay, Navigation, Pagination } from "swiper/modules"
+import { Navigation, Pagination } from "swiper/modules"
 
 import "swiper/css"
 import "swiper/css/effect-fade"
@@ -123,6 +122,7 @@ const Sec16 = () => {
         },
         "c"
       )
+      .to(".part2", {})
       .to(".part3", {}, "switchPart2Swiper")
       .to(
         ".part2",
@@ -156,6 +156,7 @@ const Sec16 = () => {
         },
         "part3"
       )
+      .to(".part4", {})
       .to(".part4", {}, "switchPart4Swiper")
       .to(
         ".part4",
@@ -173,6 +174,7 @@ const Sec16 = () => {
         },
         "part4"
       )
+      .to(".part5", {})
       .to(".part5", {}, "switchPart5Button")
       .to(
         ".part5",
@@ -205,22 +207,170 @@ const Sec16 = () => {
       animation: tl,
       scrub: 0.2,
     })
-    // tl.add(() => {
-    //   part2SwiperInstance.slideNext()
-    // }, "switchPart2Swiper")
-    // tl.add(() => {
-    //   part4SwiperInstance.slideNext()
-    // }, "switchPart4Swiper")
-    // tl.add(() => {
-    //   document.querySelector<HTMLElement>(".sec16 .part5 button")?.click()
-    // }, "switchPart5Button")
+
+    setTimeline(tl)
+  }
+
+  const sec16AniMb = () => {
+    const tl = gsap
+      .timeline()
+      .to(".mp32_line", 0.2, {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      .from(
+        ".mp32_wrap",
+        {
+          x: "-28%",
+          y: "-21%",
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .to(
+        ".big_front_phone",
+        {
+          x: "28%",
+          y: "0%",
+          scale: 0.82,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .from(
+        [
+          ".mp50_wrap",
+          ".mp32_wrap .text_bg_wrap",
+          ".back_phone",
+          ".front_phone",
+          ".front_phone_shadow",
+        ],
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .to(
+        ".big_front_phone",
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .to(
+        ".part1",
+        {
+          x: "-100%",
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .to(
+        ".part2",
+        {
+          x: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .to(".part2", {})
+      .to(".part3", {}, "switchPart2Swiper")
+      .to(
+        ".part2",
+        {
+          x: "-100%",
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".part3",
+        {
+          x: 0,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".part3",
+        {
+          x: "-100%",
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".part4",
+        {
+          x: 0,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(".part4", {})
+      .to(".part4", {}, "switchPart4Swiper")
+      .to(
+        ".part4",
+        {
+          x: "-100%",
+          ease: "power2.inOut",
+        },
+        "part4"
+      )
+      .to(
+        ".part5",
+        {
+          x: 0,
+          ease: "power2.inOut",
+        },
+        "part4"
+      )
+      .to(".part4", {})
+      .to(".part5", {}, "switchPart5Button")
+      .to(
+        ".part5",
+        {
+          x: "-100%",
+          ease: "power2.inOut",
+        },
+        "part5"
+      )
+      .to(
+        ".part6",
+        {
+          x: 0,
+          ease: "power2.inOut",
+        },
+        "part5"
+      )
+      .to(
+        ".part6",
+        {
+          ease: "power2.inOut",
+        },
+        "part6"
+      )
+    ScrollTrigger.create({
+      trigger: ".sec16_wrap",
+      pin: true,
+      start: `bottom 100%`,
+      end: "+=5000",
+      animation: tl,
+      scrub: 0.2,
+    })
 
     setTimeline(tl)
   }
 
   useGSAP(
     () => {
-      sec16Ani()
+      if (isPc) {
+        sec16Ani()
+      } else {
+        sec16AniMb()
+      }
       // if (part2SwiperInstance && part4SwiperInstance) {
       // }
     },
@@ -261,15 +411,27 @@ const Sec16 = () => {
         </div>
         <div className='content_wrap'>
           <div className='img_wrap content_bg_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec16_bg_pc.webp"} />
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec16_bg_mb.webp"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec16_bg_pc.webp"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec16_bg_pc.webp"} />
+            </picture>
           </div>
           <div className='part part1'>
             <div className='mp32_wrap'>
               <div className='img_wrap text_bg_wrap'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec16_32mp_bg_pc.webp"}
-                />
+                {isPc ? (
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec16_32mp_bg_pc.webp"}
+                  />
+                ) : null}
               </div>
               <div className='text_wrap'>
                 <div className='title_75'>
@@ -311,10 +473,12 @@ const Sec16 = () => {
             </div>
             <div className='mp50_wrap'>
               <div className='img_wrap text_bg_wrap'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec16_50mp_bg_pc.webp"}
-                />
+                {isPc ? (
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec16_50mp_bg_pc.webp"}
+                  />
+                ) : null}
               </div>
               <div className='text_wrap'>
                 <div className='title_75'>
@@ -355,14 +519,44 @@ const Sec16 = () => {
               </div>
             </div>
             <div className='img_wrap big_front_phone'>
-              <img loading='lazy' src={src + "/images/pc/sec16_p1_pc.webp"} />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec16_p1_mb.webp"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec16_p1_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec16_p1_pc.webp"} />
+              </picture>
             </div>
             <div className='mp32_line'></div>
             <div className='img_wrap back_phone'>
-              <img loading='lazy' src={src + "/images/pc/sec16_p3_pc.webp"} />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec16_p3_mb.webp"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec16_p3_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec16_p3_pc.webp"} />
+              </picture>
             </div>
             <div className='img_wrap front_phone'>
-              <img loading='lazy' src={src + "/images/pc/sec16_p2_pc.webp"} />
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec16_p2_mb.webp"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec16_p2_pc.webp"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec16_p2_pc.webp"} />
+              </picture>
             </div>
             <div className='img_wrap front_phone_shadow'>
               <img
@@ -374,10 +568,12 @@ const Sec16 = () => {
           <div className='part part2'>
             <div className='box_wrap'>
               <div className='img_wrap box_bg'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec16_box_pc.webp"}
-                />
+                {isPc ? (
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec16_box_pc.webp"}
+                  />
+                ) : null}
               </div>
               <div className='text_wrap'>
                 <div className='top_wrap'>
@@ -399,12 +595,14 @@ const Sec16 = () => {
                       (item: any, index: number) => {
                         return (
                           <div className='data' key={index}>
-                            <div
-                              className='data_title'
-                              dangerouslySetInnerHTML={{
-                                __html: item.data_title,
-                              }}
-                            ></div>
+                            {item?.data_title ? (
+                              <div
+                                className='data_title'
+                                dangerouslySetInnerHTML={{
+                                  __html: item.data_title,
+                                }}
+                              ></div>
+                            ) : null}
                             <div
                               className='data_desc'
                               dangerouslySetInnerHTML={{
@@ -494,50 +692,116 @@ const Sec16 = () => {
           <div className='part part3'>
             <div className='box_wrap'>
               <div className='img_wrap box_bg'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec16_box_pc.webp"}
-                />
+                {isPc ? (
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec16_box_pc.webp"}
+                  />
+                ) : null}
               </div>
-              <div className='left_wrap'>
-                <div className='title_75'>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: config?.sec16?.back?.title,
-                    }}
-                  ></span>
-                  <span
-                    className='desc'
-                    dangerouslySetInnerHTML={{
-                      __html: config?.sec16?.back?.desc,
-                    }}
-                  ></span>
-                </div>
-                <div className='data_wrap'>
-                  {config?.sec16?.back?.data?.map(
-                    (item: any, index: number) => {
-                      return (
-                        <div className='data' key={index}>
-                          {item.data_title && (
+              {isPc ? (
+                <div className='left_wrap'>
+                  <div className='title_75'>
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: config?.sec16?.back?.title,
+                      }}
+                    ></span>
+                    <span
+                      className='desc'
+                      dangerouslySetInnerHTML={{
+                        __html: config?.sec16?.back?.desc,
+                      }}
+                    ></span>
+                  </div>
+                  <div className='data_wrap'>
+                    {config?.sec16?.back?.data?.map(
+                      (item: any, index: number) => {
+                        return (
+                          <div className='data' key={index}>
+                            {item.data_title && (
+                              <span
+                                className='data_title'
+                                dangerouslySetInnerHTML={{
+                                  __html: item.data_title,
+                                }}
+                              ></span>
+                            )}
                             <span
-                              className='data_title'
+                              className='data_desc'
                               dangerouslySetInnerHTML={{
-                                __html: item.data_title,
+                                __html: item.data_desc,
                               }}
                             ></span>
-                          )}
+                          </div>
+                        )
+                      }
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <div className='left_wrap'>
+                  <div>
+                    <div className='title_75'>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: config?.sec16?.back?.title,
+                        }}
+                      ></span>
+                      <span
+                        className='desc'
+                        dangerouslySetInnerHTML={{
+                          __html: config?.sec16?.back?.desc,
+                        }}
+                      ></span>
+                    </div>
+                    <div className='data_wrap'>
+                      <div className='data'>
+                        {config?.sec16?.back?.data[0].data_title && (
                           <span
-                            className='data_desc'
+                            className='data_title'
                             dangerouslySetInnerHTML={{
-                              __html: item.data_desc,
+                              __html: config?.sec16?.back?.data[0].data_title,
                             }}
                           ></span>
-                        </div>
-                      )
-                    }
-                  )}
+                        )}
+                        <span
+                          className='data_desc'
+                          dangerouslySetInnerHTML={{
+                            __html: config?.sec16?.back?.data[0].data_desc,
+                          }}
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='data_wrap'>
+                    {config?.sec16?.back?.data?.map(
+                      (item: any, index: number) => {
+                        if (index != 0) {
+                          return (
+                            <div className='data' key={index}>
+                              {item.data_title && (
+                                <span
+                                  className='data_title'
+                                  dangerouslySetInnerHTML={{
+                                    __html: item.data_title,
+                                  }}
+                                ></span>
+                              )}
+                              <span
+                                className='data_desc'
+                                dangerouslySetInnerHTML={{
+                                  __html: item.data_desc,
+                                }}
+                              ></span>
+                            </div>
+                          )
+                        }
+                      }
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
               <div className='right_wrap'>
                 <div
                   className='title'
@@ -570,7 +834,7 @@ const Sec16 = () => {
                 <div className='img_wrap'>
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec16_mic_pc.webp"}
+                    src={src + "/images/pc/sec16_smile_pc.webp"}
                   />
                 </div>
                 <div
@@ -586,10 +850,12 @@ const Sec16 = () => {
           <div className='part part4'>
             <div className='box_wrap'>
               <div className='img_wrap box_bg'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec16_box_pc.webp"}
-                />
+                {isPc ? (
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec16_box_pc.webp"}
+                  />
+                ) : null}
               </div>
               <div className='text_wrap'>
                 <div className='top_wrap'>
@@ -628,6 +894,7 @@ const Sec16 = () => {
                   autoplay={{ delay: 5000 }}
                   slidesPerView={2}
                   loop={true}
+                  direction={isPc ? "horizontal" : "vertical"}
                   // onSlideChange={() => handleSwiperSlide()}
                 >
                   <SwiperSlide>
@@ -679,10 +946,12 @@ const Sec16 = () => {
           <div className='part part5'>
             <div className='box_wrap'>
               <div className='img_wrap box_bg'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec16_box_pc.webp"}
-                />
+                {isPc ? (
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec16_box_pc.webp"}
+                  />
+                ) : null}
               </div>
               <div className='text_wrap'>
                 <div className='top_wrap'>
@@ -752,10 +1021,12 @@ const Sec16 = () => {
           <div className='part part6'>
             <div className='box_wrap'>
               <div className='img_wrap box_bg'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec16_box_pc.webp"}
-                />
+                {isPc ? (
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec16_box_pc.webp"}
+                  />
+                ) : null}
               </div>
               <div className='text_wrap'>
                 <div className='top_wrap'>

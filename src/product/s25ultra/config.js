@@ -67,7 +67,7 @@ window.s25ultraConfig = {
       title: `60-month Fluency*`,
     },
     item9: {
-      title: `Up to 256GB ROM <br class="pc"/> +16GB*(8+8) RAM`,
+      title: `Up to 512GB ROM <br class="pc"/> +16GB*(8+8) RAM`,
     },
   },
   sec4: {
@@ -160,15 +160,15 @@ window.s25ultraConfig = {
     spec_desc:
       "Incredibly slim, yet unbelievably durable. <br/> Dare to embrace innovative tech and materials, delivering a flagship experience for you.",
     title: "Thin like a blade",
-    desc: "Just 163g & Only 6.9mm*",
+    desc: "Just 163g & only 6.9mm*",
   },
   sec8: {
     title: "Fearless in the rain",
     desc: "With an IP64 rating for dust and water resistance, this device is well-protected against everyday wear and tear, <br/> including dust ingress and light water splashes.",
   },
   sec9: {
-    title: `Survives <br class="pc"/> 25000 impacts`,
-    desc: "5 major TitanShield Protection technologies to comprehensively <br/> safeguard your beloved phone.",
+    title: `Survives <br class="pc"/> 25000 impacts*`,
+    desc: "TitanShield Protection incorporates 4 major technologies to comprehensively <br/> safeguard your beloved phone.",
     data: [
       {
         title: "500",
@@ -213,7 +213,7 @@ window.s25ultraConfig = {
   sec11: {
     spec_title: "EXCELLENCE IN AESTHETICS",
     spec_desc:
-      "Draw inspiration from magical nature,  with the advanced aesthetics and craftsmanship, transform the S25 Ultra into a trendy item! ",
+      "Draw inspiration from magical nature, with the advanced aesthetics and craftsmanship, transform the S25 Ultra into a trendy item!",
     part1: {
       title: "An elegant creation",
       desc: "Fashion on one side, technology on the other. Combining natural inspiration with cutting-edge design concepts, advanced Optical Coating Process creates a dual texture of matte and glossy finishes, exuding a premium feel.",
@@ -257,16 +257,16 @@ window.s25ultraConfig = {
   },
   sec13: {
     spec_title: "EXCELLENCE IN PERFORMANCE",
-    spec_desc: `The remarkable performance improvement,  coupled with effective software tuning, <br/> a "new phone" experience for many years.`,
+    spec_desc: `The remarkable performance improvement, coupled with effective software tuning, <br/> a "new phone" experience for many years.`,
     part1: {
       title: "60-month of smooth use",
-      desc: "After undergoing rigorous testing in the itel lab, this phone is guaranteed to be free of lag for 5 years. thanks to the powerful Virtual Memory Expansion Tech and Atom Storage Tech, you no longer need to worry about the phone's performance weakening over time.*",
+      desc: "After undergoing rigorous testing in the itel lab, this phone is guaranteed to be free of lag for 5 years. thanks to the powerful Virtual Memory Expansion Tech and Atom Storage Tech, you no longer need to worry about the phone's performance weakening over time.",
       data: [
         {
           subtitle: "Up to",
           title: "16(8+8)GB RAM",
           titleMb: "Up to 16(8+8)GB RAM",
-          desc: "18 Apps running simultaneously.*",
+          desc: "18 Apps running simultaneously*",
         },
         {
           subtitle: "Up to",
@@ -287,7 +287,7 @@ window.s25ultraConfig = {
     data: [
       {
         title: "26ms",
-        desc: "Super low latency for gaming",
+        desc: "Super low Latency for gaming",
       },
       {
         title: "6.5MB/s",
@@ -301,12 +301,12 @@ window.s25ultraConfig = {
   },
   sec15: {
     part1: {
-      title: "The powerhouse in  your hand",
-      desc: "The S25 Ultra comes with a massive 5000mAh battery and super fast <br/> charging of 18W. With smart charging protection, the battery can last <br/> for up to 4 years*",
+      title: "The powerhouse in your hand",
+      desc: "The S25 Ultra comes with a massive 5000mAh battery and super fast charging of 18W.",
     },
     part2: {
       title: "No gaming compromises",
-      desc: "The phone with Bypass Charging Tech can be powered directly without using the battery, <br/> ensuring a heat-free gaming or watching experience while charging simultaneously.*",
+      desc: "The phone with Bypass Charging Tech can be powered directly without passing the battery, <br/> ensuring a heat-free gaming or watching experience while charging simultaneously.*",
     },
   },
   sec16: {
@@ -400,7 +400,7 @@ window.s25ultraConfig = {
     part4: {
       content1: {
         title: "AI Call Noise Cancellation",
-        desc: "Experience crystal-clear calls, designed to minimize background noise and enhance human voice. ",
+        desc: "Experience crystal-clear calls, designed to minimize background noise and enhance human voice.",
       },
       content2: {
         title: "AI Wallpaper",
@@ -451,12 +451,11 @@ window.s25ultraConfig = {
         `9. The 18 Apps Running Simultaneously data is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
         `10. The data of Super Wi-Fi is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
         `11. The battery of itel S25 Ultra has a typical capacity of 5000mAh and a rated capacity of 4900mAh.`,
-        `12. The data of 1000 charge cycles is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
-        `13. The data of Bypass Charging Tech is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
-        `14. Android is a trademark of Google LLC.`,
-        `15. The availability of Infrared Remote Control and NFC features may vary by region and device. Please refer to the actual situation for details.`,
-        `16. iPulse, itel's own watch app, is widely compatible and pre-installed on itel S25 Series.`,
-        `17. Product images are for reference only, please refer to the actual product. Some specifications and descriptions may change due to supplier replacements, please refer to the actual product. The data mentioned is based on our design technical specifications, lab, and supplier test data, and actual situations may vary slightly due to different testing software versions, specific testing environments, and versions.`,
+        `12. The data of Bypass Charging Tech is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
+        `13. Android is a trademark of Google LLC.`,
+        `14. The availability of Infrared Remote Control and NFC features may vary by region and device. Please refer to the actual situation for details.`,
+        `15. iPulse, itel's own watch app, is widely compatible and pre-installed on itel S25 Series.`,
+        `16. Product images are for reference only, please refer to the actual product. Some specifications and descriptions may change due to supplier replacements, please refer to the actual product. The data mentioned is based on our design technical specifications, lab, and supplier test data, and actual situations may vary slightly due to different testing software versions, specific testing environments, and versions.`,
       ],
     },
   },

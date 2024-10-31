@@ -65,8 +65,8 @@ const Sec4 = () => {
     ScrollTrigger.create({
       trigger: ".content_wrap",
       pin: true,
-      start: `top 0%`,
-      end: "+=800%",
+      start: `top 60`,
+      end: "+=3000",
       animation: tl,
       scrub: true,
     })
@@ -76,11 +76,11 @@ const Sec4 = () => {
     () => {
       if (isPc) {
         sec4Ani()
-      }else {
+      } else {
         sec4AniMb()
       }
     },
-    { scope: wrap, dependencies: [isPc] }
+    { scope: wrap, dependencies: [isPc], revertOnUpdate: true }
   )
 
   return (
@@ -103,7 +103,7 @@ const Sec4 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec4_phone_mb.png"}
+                srcSet={src + "/images/mb/sec4_phone_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -139,8 +139,8 @@ const Sec4 = () => {
                       <div className='subtitle'>{item.subtitle}</div>
                     </div>
                   </div>
-                  {index === 1 && <br className="pc" />}
-                  {index === 0 && <br className="mb" />}
+                  {index === 1 && <br className='pc' />}
+                  {index === 0 && <br className='mb' />}
                 </React.Fragment>
               ))}
             </div>
@@ -154,8 +154,8 @@ const Sec4 = () => {
                       <div className='subtitle'>{item.subtitle}</div>
                     </div>
                   </div>
-                  {index === 1 && <br className="pc" />}
-                  {index === 0 && <br className="mb" />}
+                  {index === 1 && <br className='pc' />}
+                  {index === 0 && <br className='mb' />}
                 </React.Fragment>
               ))}
             </div>

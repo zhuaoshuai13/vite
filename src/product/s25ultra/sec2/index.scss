@@ -69,20 +69,27 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .slogn {
+    margin: px-to-vw(70) 0;
+  }
 }
 
 @media (max-width: $mobwidthPx) {
   .s25ultra .sec2 {
-    .slogn {
-      font-size: px-to-vw-mb(50);
-    }
-
     .title_items {
+      max-width: var(--content-width);
+      margin: 0 auto;
       font-size: px-to-vw-mb(25);
     }
 
     .lazyload-wrapper {
       height: 100%;
+    }
+
+    .part2_btn {
+      width: px-to-vw-mb(100);
+      height: px-to-vw-mb(100);
     }
   }
 }

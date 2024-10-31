@@ -64,7 +64,7 @@ const Sec1 = () => {
         sec1Ani()
       }
     },
-    { scope: wrap, dependencies: [isLoaded] }
+    { scope: wrap, dependencies: [isLoaded, isPc], revertOnUpdate: true }
   )
 
   return (
@@ -76,7 +76,7 @@ const Sec1 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec1_p1_mb.png"}
+                  srcSet={src + "/images/mb/sec1_p1_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -89,7 +89,7 @@ const Sec1 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec1_p2_mb.png"}
+                  srcSet={src + "/images/mb/sec1_p2_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -102,7 +102,7 @@ const Sec1 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec1_p3_mb.png"}
+                  srcSet={src + "/images/mb/sec1_p3_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'

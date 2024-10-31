@@ -1,10 +1,9 @@
-import { useContext, useRef, useState, useEffect } from "react"
+import { useContext, useRef } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
@@ -12,6 +11,7 @@ const Sec6 = () => {
   const { s25ultraConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
+  const sec6_wrap = useRef<HTMLDivElement>(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -63,16 +63,69 @@ const Sec6 = () => {
     })
   }
 
+  const sec6AniMb = () => {
+    const tl = gsap
+      .timeline()
+      .to(".sec6 .part1", 1, { opacity: 0, ease: "power2.inOut" }, "a")
+      .to(
+        ".sec6 .part2",
+        1,
+        { opacity: 1, ease: "power2.inOut", delay: 0.5 },
+        "a"
+      )
+      .to(".sec6 .part2", 1, { opacity: 0, ease: "power2.inOut" }, "b")
+      .to(
+        ".sec6 .part3",
+        1,
+        { opacity: 1, ease: "power2.inOut", delay: 0.5 },
+        "b"
+      )
+    ScrollTrigger.create({
+      trigger: ".sec6_wrap",
+      pin: true,
+      // start: `top ${
+      //   (window.innerHeight - sec6_wrap?.current?.clientHeight) / 2
+      // }`,
+      start: `top 60`,
+      end: "+=1600",
+      animation: tl,
+      scrub: true,
+      toggleActions: "play none none reverse",
+    })
+
+    const t2 = gsap
+      .timeline()
+      .from(".sec6 .part1 .hand_wrap", 1, {
+        x: "50%",
+        y: "-50%",
+        ease: "power4.inOut",
+      })
+      .from(".sec6 .part1 .circle_wrap", 1, {
+        opacity: 0,
+        ease: "power2.inOut",
+        repeat: -1,
+        yoyo: true,
+      })
+    ScrollTrigger.create({
+      trigger: ".sec6_wrap",
+      start: `top 50%`,
+      animation: t2,
+      toggleActions: "play none none reverse",
+    })
+  }
+
   useGSAP(
     () => {
-      sec6Ani()
+      if (isPc) {
+        sec6Ani()
+      } else sec6AniMb()
     },
     { scope: wrap }
   )
 
   return (
     <section className='sec6' ref={wrap}>
-      <div className='sec6_wrap'>
+      <div className='sec6_wrap' ref={sec6_wrap}>
         <div className='part part1'>
           <div className='text_wrap slide_up'>
             <div
@@ -89,7 +142,7 @@ const Sec6 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec6_p1_mb.png"}
+                  srcSet={src + "/images/mb/sec6_p1_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -109,7 +162,7 @@ const Sec6 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec6_f1_mb.png"}
+                srcSet={src + "/images/mb/sec6_f1_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -135,7 +188,7 @@ const Sec6 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec6_p2_mb.png"}
+                  srcSet={src + "/images/mb/sec6_p2_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -149,7 +202,7 @@ const Sec6 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec6_f2_mb.png"}
+                srcSet={src + "/images/mb/sec6_f2_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -175,7 +228,7 @@ const Sec6 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec6_p1_mb.png"}
+                  srcSet={src + "/images/mb/sec6_p1_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -207,7 +260,7 @@ const Sec6 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec6_f1_mb.png"}
+                srcSet={src + "/images/mb/sec6_f1_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'

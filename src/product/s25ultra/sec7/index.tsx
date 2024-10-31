@@ -48,8 +48,8 @@ const Sec7 = () => {
     ScrollTrigger.create({
       trigger: ".sec7_wrap .content_wrap",
       pin: true,
-      start: `top 0%`,
-      end: "+=300%",
+      start: `bottom 100%`,
+      end: "+=500",
       animation: tl,
       scrub: 0.2,
     })
@@ -97,7 +97,7 @@ const Sec7 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_p1_mb.png"}
+                  srcSet={src + "/images/mb/sec7_p1_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -110,7 +110,7 @@ const Sec7 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_p2_mb.png"}
+                  srcSet={src + "/images/mb/sec7_p2_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'

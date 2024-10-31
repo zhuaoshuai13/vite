@@ -1,19 +1,18 @@
-import { useContext, useRef, useState, useEffect } from "react"
+import { useContext, useRef, useState } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
 const Sec11 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { s25ultraConfig: config, src } = window as any
-  const length = config?.sec11?.color?.length
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
+  const content_wrap = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
   const [timeline, setTimeline] = useState<any>()
 
@@ -61,8 +60,11 @@ const Sec11 = () => {
     ScrollTrigger.create({
       trigger: ".sec11_wrap .content_wrap",
       pin: true,
-      start: `top 0%`,
-      end: "+=400%",
+      // start: `top 0%`,
+      start: `top ${
+        (window.innerHeight - (content_wrap?.current?.clientHeight || 0)) / 2
+      }`,
+      end: "+=1600",
       animation: tl,
       scrub: 0.2,
       onUpdate: (self) => {
@@ -104,7 +106,7 @@ const Sec11 = () => {
             ></p>
           </div>
         </div>
-        <div className='content_wrap'>
+        <div className='content_wrap' ref={content_wrap}>
           <div className='all_text'>
             <div
               className={`text_wrap ${
@@ -144,7 +146,7 @@ const Sec11 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_p1_mb.png"}
+                  srcSet={src + "/images/mb/sec11_p1_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -161,7 +163,7 @@ const Sec11 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_p2_mb.png"}
+                  srcSet={src + "/images/mb/sec11_p2_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -178,7 +180,7 @@ const Sec11 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_p3_mb.png"}
+                  srcSet={src + "/images/mb/sec11_p3_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -191,13 +193,52 @@ const Sec11 = () => {
           <div className='bottom_content'>
             <div className='btn_wrap'>
               <button className='titanium' onClick={() => handleSwitchPic(1)}>
-                <img loading='lazy' src={src + "/images/pc/sec11_b1_pc.webp"} />
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec11_b1_mb.webp"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec11_b1_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec11_b1_pc.webp"}
+                  />
+                </picture>
               </button>
               <button className='black' onClick={() => handleSwitchPic(2)}>
-                <img loading='lazy' src={src + "/images/pc/sec11_b2_pc.webp"} />
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec11_b2_mb.webp"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec11_b2_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec11_b2_pc.webp"}
+                  />
+                </picture>
               </button>
               <button className='ocean' onClick={() => handleSwitchPic(3)}>
-                <img loading='lazy' src={src + "/images/pc/sec11_b3_pc.webp"} />
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec11_b3_mb.webp"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec11_b3_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec11_b3_pc.webp"}
+                  />
+                </picture>
               </button>
             </div>
             <div className='color_wrap'>

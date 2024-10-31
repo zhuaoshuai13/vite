@@ -31,11 +31,44 @@ const Sec3 = () => {
     })
   }
 
+  const sec3AniMb = () => {
+    const tl = gsap.timeline().from(".item1 .img_wrap img", {
+      x: "-40%",
+      y: "-40%",
+      scale: 0.6,
+      ease: "power2.inOut",
+      duration: 1,
+    })
+    ScrollTrigger.create({
+      trigger: ".item1",
+      start: `top 75%`,
+      animation: tl,
+      toggleActions: "play none none reverse",
+    })
+
+    gsap.utils.toArray(".sec3 .sec3_item").forEach((item: any) => {
+      gsap.timeline().from(item, {
+        borderRadius: (25 / 750) * window.innerWidth,
+        ease: "power2.inOut",
+        duration: 2,
+        scrollTrigger: {
+          trigger: item,
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+      })
+    })
+  }
+
   useGSAP(
     () => {
-      sec3Ani()
+      if (isPc) {
+        sec3Ani()
+      } else {
+        sec3AniMb()
+      }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc], revertOnUpdate: true }
   )
 
   return (
@@ -205,7 +238,7 @@ const Sec3 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/mb/sec2_p1_mb.png"}
+                      src={src + "/images/mb/sec2_p1_mb.webp"}
                     />
                   </div>
                 </div>
@@ -221,7 +254,7 @@ const Sec3 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/mb/sec2_p2_mb.png"}
+                      src={src + "/images/mb/sec2_p2_mb.webp"}
                     />
                   </div>
                 </div>
@@ -235,7 +268,7 @@ const Sec3 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/mb/sec2_p4_mb.png"}
+                      src={src + "/images/mb/sec2_p4_mb.webp"}
                     />
                   </div>
                 </div>
@@ -250,7 +283,7 @@ const Sec3 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/mb/sec2_p3_mb.png"}
+                      src={src + "/images/mb/sec2_p3_mb.webp"}
                     />
                   </div>
                 </div>
@@ -264,7 +297,7 @@ const Sec3 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/mb/sec2_p5_mb.png"}
+                      src={src + "/images/mb/sec2_p5_mb.webp"}
                     />
                   </div>
                 </div>
@@ -302,7 +335,7 @@ const Sec3 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/mb/sec2_p7_mb.png"}
+                      src={src + "/images/mb/sec2_p7_mb.webp"}
                     />
                   </div>
                 </div>
@@ -322,7 +355,7 @@ const Sec3 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/mb/sec2_p9_mb.png"}
+                      src={src + "/images/mb/sec2_p9_mb.webp"}
                     />
                   </div>
                 </div>

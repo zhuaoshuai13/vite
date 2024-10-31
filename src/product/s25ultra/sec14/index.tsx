@@ -1,24 +1,25 @@
-import { useContext, useRef, useState, useEffect } from "react"
+import { useContext, useRef } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
 const Sec14 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { s25ultraConfig: config, src } = window as any
-  const length = config?.sec11?.color?.length
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
 
   const sec14Ani = () => {
     const tl = gsap
       .timeline()
-      .from(".pic_wrap", { opacity: 0, y: 100, ease: "power2.inOut" })
+      .from(".ani_wrap", {
+        rotate: isPc ? "-7deg" : "-4deg",
+        ease: "power2.inOut",
+      })
     ScrollTrigger.create({
       trigger: ".sec14_wrap",
       start: `top 30%`,
@@ -42,7 +43,7 @@ const Sec14 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec14_ellipse_mb.png"}
+                srcSet={src + "/images/mb/sec14_ellipse_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -70,7 +71,7 @@ const Sec14 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec14_bg_mb.png"}
+                  srcSet={src + "/images/mb/sec14_bg_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -79,97 +80,99 @@ const Sec14 = () => {
                 <img loading='lazy' src={src + "/images/pc/sec14_bg_pc.webp"} />
               </picture>
             </div>
-            <div className='img_wrap left_hand1'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec14_lefthand1_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec14_lefthand1_pc.webp"}
-                />
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec14_lefthand1_pc.webp"}
-                />
-              </picture>
-            </div>
-            <div className='img_wrap right_hand1'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec14_righthand1_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec14_righthand1_pc.webp"}
-                />
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec14_righthand1_pc.webp"}
-                />
-              </picture>
-            </div>
-            <div className='img_wrap phone_wrap'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec14_phone_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec14_phone_pc.webp"}
-                />
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec14_phone_pc.webp"}
-                />
-              </picture>
-            </div>
-            <div className='circleBox left_circle'>
-              <div className='circle'></div>
-              <div className='circle1'></div>
-              <div className='circle2'></div>
-              <div className='circle3'></div>
-            </div>
-            <div className='circleBox right_circle'>
-              <div className='circle'></div>
-              <div className='circle1'></div>
-              <div className='circle2'></div>
-              <div className='circle3'></div>
-            </div>
-            <div className='img_wrap left_hand2'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec14_lefthand2_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec14_lefthand2_pc.webp"}
-                />
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec14_lefthand2_pc.webp"}
-                />
-              </picture>
-            </div>
-            <div className='img_wrap right_hand2'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec14_righthand2_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec14_righthand2_pc.webp"}
-                />
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec14_righthand2_pc.webp"}
-                />
-              </picture>
+            <div className='ani_wrap'>
+              <div className='img_wrap left_hand1'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec14_lefthand1_mb.webp"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec14_lefthand1_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec14_lefthand1_pc.webp"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap right_hand1'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec14_righthand1_mb.webp"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec14_righthand1_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec14_righthand1_pc.webp"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap phone_wrap'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec14_phone_mb.webp"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec14_phone_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec14_phone_pc.webp"}
+                  />
+                </picture>
+              </div>
+              <div className='circleBox left_circle'>
+                <div className='circle'></div>
+                <div className='circle1'></div>
+                <div className='circle2'></div>
+                <div className='circle3'></div>
+              </div>
+              <div className='circleBox right_circle'>
+                <div className='circle'></div>
+                <div className='circle1'></div>
+                <div className='circle2'></div>
+                <div className='circle3'></div>
+              </div>
+              <div className='img_wrap left_hand2'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec14_lefthand2_mb.webp"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec14_lefthand2_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec14_lefthand2_pc.webp"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap right_hand2'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec14_righthand2_mb.webp"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec14_righthand2_pc.webp"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec14_righthand2_pc.webp"}
+                  />
+                </picture>
+              </div>
             </div>
             <div className='text_wrap bottom_text'>
               <div

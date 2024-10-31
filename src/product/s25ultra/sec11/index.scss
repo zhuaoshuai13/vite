@@ -84,10 +84,16 @@
     }
 
     button {
+      width: px-to-vw(25);
+      height: px-to-vw(25);
       font-size: 0;
       background-color: unset;
       border: none;
       cursor: pointer;
+
+      img {
+        width: 100%;
+      }
     }
 
     .color_item {
@@ -125,6 +131,10 @@
 
 @media (max-width: $mobwidthPx) {
   .s25ultra .sec11 {
+    .spec_part {
+      padding-top: 0;
+    }
+
     .content_wrap {
       height: auto;
       background-color: #f2f2f2;
@@ -165,9 +175,14 @@
       height: px-to-vw-mb(260);
       margin: 0 auto;
 
+      button {
+        width: px-to-vw-mb(36);
+        height: px-to-vw-mb(36);
+      }
+
       .btn_wrap {
         position: absolute;
-        top: px-to-vw-mb(56);
+        top: px-to-vw-mb(52);
         right: 0;
         z-index: 1;
         gap: px-to-vw-mb(20);

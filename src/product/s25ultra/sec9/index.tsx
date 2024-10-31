@@ -1,10 +1,9 @@
-import { useContext, useRef, useState, useEffect } from "react"
+import { useContext, useRef } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
@@ -105,14 +104,14 @@ const Sec9 = () => {
         <div className='pic_wrap'>
           {!isPc ? (
             <div className='img_wrap sec9_bg'>
-              <img loading='lazy' src={src + "/images/mb/sec9_bg_mb.png"} />
+              <img loading='lazy' src={src + "/images/mb/sec9_bg_mb.webp"} />
             </div>
           ) : null}
           <div className='img_wrap stone1_wrap'>
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec9_stone_behind_mb.png"}
+                srcSet={src + "/images/mb/sec9_stone_behind_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -128,7 +127,7 @@ const Sec9 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec9_phone_mb.png"}
+                srcSet={src + "/images/mb/sec9_phone_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -141,7 +140,7 @@ const Sec9 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec9_stone_front_mb.png"}
+                srcSet={src + "/images/mb/sec9_stone_front_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -157,7 +156,7 @@ const Sec9 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec9_stone_move_mb.png"}
+                srcSet={src + "/images/mb/sec9_stone_move_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'

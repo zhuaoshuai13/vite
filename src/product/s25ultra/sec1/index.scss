@@ -122,7 +122,7 @@
     .sec1_wrap {
       height: px-to-vw-mb(1060);
 
-      @include bg("mb/sec1_bg_mb.png");
+      @include bg("mb/sec1_bg_mb.webp");
     }
 
     .content_wrap {
@@ -147,6 +147,7 @@
         padding-right: px-to-vw-mb(12);
 
         &:not(:last-child):after {
+          width: 1px;
           height: px-to-vw-mb(24);
         }
       }

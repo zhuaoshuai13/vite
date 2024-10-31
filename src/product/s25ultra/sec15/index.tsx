@@ -1,17 +1,15 @@
-import { useContext, useRef, useState, useEffect } from "react"
+import { useContext, useRef } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
 const Sec15 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { s25ultraConfig: config, src } = window as any
-  const length = config?.sec11?.color?.length
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
 
@@ -93,7 +91,7 @@ const Sec15 = () => {
       trigger: ".sec15_wrap",
       pin: true,
       start: `top 10%`,
-      end: "+=200%",
+      end: "+=1200",
       animation: tl,
       scrub: 0.2,
     })
@@ -118,7 +116,7 @@ const Sec15 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec15_p1_mb.png"}
+                srcSet={src + "/images/mb/sec15_p1_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -131,7 +129,7 @@ const Sec15 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec15_p2_mb.png"}
+                srcSet={src + "/images/mb/sec15_p2_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'

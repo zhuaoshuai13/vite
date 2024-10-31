@@ -111,17 +111,18 @@
   .s25ultra .sec4 {
     .spec_part {
 
-      @include bg("mb/sec4_bg_mb.png");
+      @include bg("mb/sec4_bg_mb.webp");
     }
 
     .content_wrap {
       height: px-to-vw-mb(1120);
 
-      @include bg("mb/sec4_bg2_mb.png");
+      @include bg("mb/sec4_bg2_mb.webp");
     }
 
     .phone_wrap {
       top: px-to-vw-mb(450);
+      left: px-to-vw-mb(16);
       width: px-to-vw-mb(703);
     }
 
@@ -150,6 +151,7 @@
 
       img {
         width: px-to-vw-mb(36);
+        object-fit: contain;
       }
     }
 
@@ -158,12 +160,12 @@
       right: px-to-vw-mb(48);
       width: px-to-vw-mb(196);
     }
-    
+
     .corning_wrap {
       width: px-to-vw-mb(112);
       margin-bottom: px-to-vw-mb(50);
     }
-    
+
     .bottom_wrap {
       top: px-to-vw-mb(680);
       max-width: var(--content-width);

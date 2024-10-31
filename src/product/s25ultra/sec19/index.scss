@@ -484,6 +484,8 @@
     }
 
     .part1 {
+      padding: px-to-vw-mb(0) 0 px-to-vw-mb(120);
+
       .logo_wrap {
         width: px-to-vw-mb(364);
         height: px-to-vw-mb(364);
@@ -597,6 +599,8 @@
       }
 
       .dynamic_bar {
+        overflow: hidden;
+
         .bg_wrap {
           position: absolute;
           bottom: px-to-vw-mb(100);

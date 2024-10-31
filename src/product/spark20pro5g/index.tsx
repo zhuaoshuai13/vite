@@ -3,7 +3,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import { ReactLenis, useLenis } from "lenis/react"
+import { ReactLenis } from "lenis/react"
 
 import Sec1 from "./sec1"
 import Sec2 from "./sec2"

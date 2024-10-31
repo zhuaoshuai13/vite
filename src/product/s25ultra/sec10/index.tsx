@@ -1,10 +1,9 @@
-import { useContext, useRef, useState, useEffect } from "react"
+import { useContext, useRef } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
@@ -30,8 +29,8 @@ const Sec10 = () => {
       .from(
         ".phone3",
         {
-          x: "4.5%",
-          y: "14%",
+          x: "2%",
+          y: "7%",
           ease: "power2.inOut",
           duration: 2,
         },
@@ -40,8 +39,8 @@ const Sec10 = () => {
       .from(
         ".phone2",
         {
-          x: "15.5%",
-          y: "6%",
+          x: "7%",
+          y: "3%",
           ease: "power2.inOut",
           duration: 2,
         },
@@ -50,8 +49,8 @@ const Sec10 = () => {
       .from(
         ".phone1",
         {
-          x: "28%",
-          y: "11%",
+          x: "14%",
+          y: "5%",
           scale: 1.05,
           ease: "power2.inOut",
           duration: 2,
@@ -61,7 +60,7 @@ const Sec10 = () => {
       .from(
         ".phone5",
         {
-          x: "-9%",
+          x: "-4%",
           y: "0%",
           rotate: "2deg",
           ease: "power2.inOut",
@@ -72,8 +71,8 @@ const Sec10 = () => {
       .from(
         ".phone6",
         {
-          x: "-19%",
-          y: "-15%",
+          x: "-10%",
+          y: "-7%",
           rotate: "4deg",
           ease: "power2.inOut",
           duration: 2,
@@ -83,8 +82,8 @@ const Sec10 = () => {
       .from(
         ".phone7",
         {
-          x: "-27%",
-          y: "-33%",
+          x: "-13%",
+          y: "-16%",
           rotate: "5deg",
           ease: "power2.inOut",
           duration: 2,
@@ -328,8 +327,8 @@ const Sec10 = () => {
       .from(
         ".phone3",
         {
-          x: "7%",
-          y: "10%",
+          x: "3%",
+          y: "5%",
           ease: "power2.inOut",
           duration: 2,
         },
@@ -338,8 +337,8 @@ const Sec10 = () => {
       .from(
         ".phone2",
         {
-          x: "23%",
-          y: "4%",
+          x: "12%",
+          y: "2%",
           ease: "power2.inOut",
           duration: 2,
         },
@@ -348,8 +347,8 @@ const Sec10 = () => {
       .from(
         ".phone1",
         {
-          x: "132%",
-          y: "10%",
+          x: "66%",
+          y: "5%",
           rotate: "-3deg",
           ease: "power2.inOut",
           duration: 2,
@@ -359,8 +358,8 @@ const Sec10 = () => {
       .from(
         ".phone5",
         {
-          x: "-15%",
-          y: "-2%",
+          x: "-7%",
+          y: "-1%",
           ease: "power2.inOut",
           duration: 2,
         },
@@ -369,8 +368,8 @@ const Sec10 = () => {
       .from(
         ".phone6",
         {
-          x: "-32%",
-          y: "-12%",
+          x: "-16%",
+          y: "-6%",
           ease: "power2.inOut",
           duration: 2,
         },
@@ -379,8 +378,8 @@ const Sec10 = () => {
       .from(
         ".phone7",
         {
-          x: "-195%",
-          y: "-41%",
+          x: "-98%",
+          y: "-20%",
           ease: "power2.inOut",
           duration: 2,
         },
@@ -610,7 +609,7 @@ const Sec10 = () => {
     ScrollTrigger.create({
       trigger: ".sec10_wrap",
       start: `top 0%`,
-      end: "+=500%",
+      end: "+=5000",
       pin: true,
       scrub: 0.2,
       animation: t2,
@@ -637,7 +636,7 @@ const Sec10 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec10_bg_mb.png"}
+                srcSet={src + "/images/mb/sec10_bg_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -651,7 +650,7 @@ const Sec10 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p7_mb.png"}
+                  srcSet={src + "/images/mb/sec10_p7_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -664,7 +663,7 @@ const Sec10 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p6_mb.png"}
+                  srcSet={src + "/images/mb/sec10_p6_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -677,7 +676,7 @@ const Sec10 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p5_mb.png"}
+                  srcSet={src + "/images/mb/sec10_p5_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -690,7 +689,7 @@ const Sec10 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p4_mb.png"}
+                  srcSet={src + "/images/mb/sec10_p4_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -703,7 +702,7 @@ const Sec10 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p3_mb.png"}
+                  srcSet={src + "/images/mb/sec10_p3_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -716,7 +715,7 @@ const Sec10 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p2_mb.png"}
+                  srcSet={src + "/images/mb/sec10_p2_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -729,7 +728,7 @@ const Sec10 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p1_mb.png"}
+                  srcSet={src + "/images/mb/sec10_p1_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'

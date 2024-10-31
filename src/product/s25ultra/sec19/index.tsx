@@ -1,12 +1,11 @@
-import { useContext, useRef, useState, useEffect } from "react"
+import { useContext, useRef } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react"
-import { EffectFade, Autoplay, Navigation, Pagination } from "swiper/modules"
+import { Autoplay, Navigation, Pagination } from "swiper/modules"
 
 import "swiper/css"
 import "swiper/css/effect-fade"
@@ -14,16 +13,18 @@ import "swiper/css/pagination"
 
 import "./index.scss"
 
-const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
+const Sec19 = ({
+  part4SwiperInstance,
+  setPart4SwiperInstance,
+}: {
+  part4SwiperInstance: any
+  setPart4SwiperInstance: any
+}) => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { s25ultraConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
-  const part2SwiperRef = useRef<SwiperClass>()
-  // const [part4SwiperInstance, setPart4SwiperInstance] = useState<any>()
   const part4SwiperRef = useRef<SwiperClass>()
-  const [part5IsOpen, setPart5IsOpen] = useState(true)
-  const [timeline, setTimeline] = useState<any>()
 
   const handleHover = (activeIndex: number) => {
     document.querySelectorAll(".sec19 .part7 .item").forEach((item, index) => {
@@ -47,24 +48,11 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
       scrub: 0.2,
     })
 
-    const tl2 = gsap
-      .timeline()
-      .from(".pop1", { x: "10%", y: "100%", ease: "power2.inOut" }, "a")
-      .from(".pop2", { x: "30%", y: "0%", ease: "power2.inOut" }, "a")
-      .from(".pop3", { x: "0%", y: "0%", ease: "power2.inOut" }, "a")
-      .from(".pop4", { x: "20%", y: "-100%", ease: "power2.inOut" }, "a")
-      .from(".pop5", { x: "20%", y: "-300%", ease: "power2.inOut" }, "a")
-    ScrollTrigger.create({
-      trigger: ".sec19 .part5 .pic_wrap",
-      start: `top 80%`,
-      animation: tl2,
-      toggleActions: "play none none reverse",
-    })
-
     const t3 = gsap
       .timeline()
       .to(".spec_part", { y: "-100%", ease: "power2.inOut" })
-    const aa = ScrollTrigger.create({
+
+    ScrollTrigger.create({
       trigger: ".sec19_wrap .part4",
       pin: true,
       start: `top 0%`,
@@ -82,24 +70,6 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
       },
     })
 
-    setTimeline(t3)
-  }
-
-  const sec19AniMb = () => {
-    const tl = gsap
-      .timeline()
-      .to(".spec_part", { y: "-100%", ease: "power2.inOut" })
-    ScrollTrigger.create({
-      trigger: ".sec19_wrap",
-      pin: true,
-      start: `top 0%`,
-      end: "+=100%",
-      animation: tl,
-      scrub: 0.2,
-    })
-
-    setTimeline(tl)
-
     const tl2 = gsap
       .timeline()
       .from(".pop1", { x: "10%", y: "100%", ease: "power2.inOut" }, "a")
@@ -108,31 +78,11 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
       .from(".pop4", { x: "20%", y: "-100%", ease: "power2.inOut" }, "a")
       .from(".pop5", { x: "20%", y: "-300%", ease: "power2.inOut" }, "a")
     ScrollTrigger.create({
-      trigger: ".sec19 .part5",
-      start: `top -50%`,
+      trigger: ".sec19 .part5 .pic_wrap",
+      start: `top 80%`,
       animation: tl2,
       toggleActions: "play none none reverse",
     })
-
-    gsap.utils
-      .toArray([
-        ".left_slide",
-        ".part5 .text_wrap",
-        ".part6 .text_wrap",
-        ".part8 .text_wrap",
-      ])
-      .forEach((item: any) => {
-        gsap.from(item, 1, {
-          y: 100,
-          opacity: 0,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: item,
-            start: `top -10%`,
-            toggleActions: "play none none reverse",
-          },
-        })
-      })
   }
 
   useGSAP(
@@ -142,12 +92,10 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
       } else {
         // sec19AniMb()
       }
-      // if (part4SwiperInstance) {
-      // }
     },
     {
       scope: wrap,
-      dependencies: [wrap, part4SwiperInstance]
+      dependencies: [part4SwiperInstance],
     }
   )
 
@@ -174,7 +122,7 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
                 src={src + "/images/pc/sec19_part1_logo_pc.webp"}
               />
             </div>
-            <div className='text_wrap'>
+            <div className='text_wrap slide_up'>
               <div
                 className='desc_16'
                 dangerouslySetInnerHTML={{ __html: config?.sec19?.part1?.desc }}
@@ -209,7 +157,7 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec19_part2_f1_mb.png"}
+                    srcSet={src + "/images/mb/sec19_part2_f1_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -280,8 +228,12 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
                 setPart4SwiperInstance(swiper)
                 part4SwiperRef.current = swiper
               }}
-              modules={[Navigation, Pagination]}
-              // autoplay={{ delay: 3000 }}
+              modules={
+                isPc
+                  ? [Navigation, Pagination]
+                  : [Navigation, Pagination, Autoplay]
+              }
+              autoplay={{ delay: 2000 }}
               slidesPerView={1}
               pagination={{ clickable: true, el: ".sec19 .swiper_pagination" }}
             >
@@ -292,13 +244,13 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
                       {/* <div className='img_wrap bg_wrap'>
                         <img
                           loading='lazy'
-                          src={src + "/images/pc/sec19_part4_assist_mb.png"}
+                          src={src + "/images/pc/sec19_part4_assist_mb.webp"}
                         />
                       </div> */}
                       <div className='img_wrap phone_wrap'>
                         <img
                           loading='lazy'
-                          src={src + "/images/mb/sec19_part4_assist_mb.png"}
+                          src={src + "/images/mb/sec19_part4_assist_mb.webp"}
                         />
                       </div>
                       <div className='text_wrap'>
@@ -325,7 +277,7 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
                     <picture>
                       <source
                         media='(max-width: 750px)'
-                        srcSet={src + "/images/mb/sec19_part4_bg1_mb.png"}
+                        srcSet={src + "/images/mb/sec19_part4_bg1_mb.webp"}
                       />
                       <source
                         media='(min-width: 751px)'
@@ -426,43 +378,43 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
                       <div className='img_wrap bg_wrap'>
                         <img
                           loading='lazy'
-                          src={src + "/images/mb/sec19_part4_bar_bg_mb.png"}
+                          src={src + "/images/mb/sec19_part4_bar_bg_mb.webp"}
                         />
                       </div>
                       <div className='img_wrap phone_wrap'>
                         <img
                           loading='lazy'
-                          src={src + "/images/mb/sec19_part4_bar_mb.png"}
+                          src={src + "/images/mb/sec19_part4_bar_mb.webp"}
                         />
                       </div>
                       <div className='img_wrap pop pop1'>
                         <img
                           loading='lazy'
-                          src={src + "/images/mb/sec19_part4_pop1_mb.png"}
+                          src={src + "/images/mb/sec19_part4_pop1_mb.webp"}
                         />
                       </div>
                       <div className='img_wrap pop pop2'>
                         <img
                           loading='lazy'
-                          src={src + "/images/mb/sec19_part4_pop2_mb.png"}
+                          src={src + "/images/mb/sec19_part4_pop2_mb.webp"}
                         />
                       </div>
                       <div className='img_wrap pop pop3'>
                         <img
                           loading='lazy'
-                          src={src + "/images/mb/sec19_part4_pop3_mb.png"}
+                          src={src + "/images/mb/sec19_part4_pop3_mb.webp"}
                         />
                       </div>
                       <div className='img_wrap pop pop4'>
                         <img
                           loading='lazy'
-                          src={src + "/images/mb/sec19_part4_pop4_mb.png"}
+                          src={src + "/images/mb/sec19_part4_pop4_mb.webp"}
                         />
                       </div>
                       <div className='img_wrap pop pop5'>
                         <img
                           loading='lazy'
-                          src={src + "/images/mb/sec19_part4_pop5_mb.png"}
+                          src={src + "/images/mb/sec19_part4_pop5_mb.webp"}
                         />
                       </div>
                       <div className='text_wrap'>
@@ -486,7 +438,7 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
                       <div className='img_wrap phone_wrap'>
                         <img
                           loading='lazy'
-                          src={src + "/images/mb/sec19_part4_smart_mb.png"}
+                          src={src + "/images/mb/sec19_part4_smart_mb.webp"}
                         />
                       </div>
                       <div className='text_wrap'>
@@ -610,7 +562,7 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
                     <picture>
                       <source
                         media='(max-width: 750px)'
-                        srcSet={src + "/images/mb/sec19_part7_f1_mb.png"}
+                        srcSet={src + "/images/mb/sec19_part7_f1_mb.webp"}
                       />
                       <source
                         media='(min-width: 751px)'
@@ -644,7 +596,7 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
                     <picture>
                       <source
                         media='(max-width: 750px)'
-                        srcSet={src + "/images/mb/sec19_part7_f2_mb.png"}
+                        srcSet={src + "/images/mb/sec19_part7_f2_mb.webp"}
                       />
                       <source
                         media='(min-width: 751px)'
@@ -678,15 +630,15 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
                     <picture>
                       <source
                         media='(max-width: 750px)'
-                        srcSet={src + "/images/mb/sec19_part7_f3_mb.png"}
+                        srcSet={src + "/images/mb/sec19_part7_f3_mb.webp"}
                       />
                       <source
                         media='(min-width: 751px)'
-                        srcSet={src + "/images/pc/sec19_part7_f3_pc.png"}
+                        srcSet={src + "/images/pc/sec19_part7_f3_pc.webp"}
                       />
                       <img
                         loading='lazy'
-                        src={src + "/images/pc/sec19_part7_f3_pc.png"}
+                        src={src + "/images/pc/sec19_part7_f3_pc.webp"}
                       />
                     </picture>
                   </div>
@@ -727,7 +679,7 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec19_part8_bg_mb.png"}
+                  srcSet={src + "/images/mb/sec19_part8_bg_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -743,7 +695,7 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec19_part8_watch_mb.png"}
+                  srcSet={src + "/images/mb/sec19_part8_watch_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -759,7 +711,7 @@ const Sec19 = ({part4SwiperInstance, setPart4SwiperInstance}) => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec19_part8_phone_mb.png"}
+                  srcSet={src + "/images/mb/sec19_part8_phone_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'

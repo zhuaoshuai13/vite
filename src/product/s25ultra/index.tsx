@@ -1,10 +1,11 @@
-import { useRef, useState } from "react"
+import { useRef, useState, useContext } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import { ReactLenis, useLenis } from "lenis/react"
+import { ReactLenis } from "lenis/react"
 
+import { ScreenContext } from "../../provider"
 import Sec1 from "./sec1"
 import Sec2 from "./sec2"
 import Sec3 from "./sec3"
@@ -31,6 +32,7 @@ const S25Ultra = () => {
   const wrap = useRef(null)
   // 传到sec19的swiper，有了swiper之后再执行slide-up动画，防止slide-up的动画初始化在swiper初始化之前，导致slide-up动画的触发时机有问题
   const [part4SwiperInstance, setPart4SwiperInstance] = useState<any>()
+  const { isPc } = useContext(ScreenContext)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -51,6 +53,19 @@ const S25Ultra = () => {
         toggleActions: "play none none reverse",
       })
     })
+
+    if (!isPc) {
+      gsap.utils
+        .toArray(".s25ultra .spec_part .spec_text_wrap")
+        .forEach((item: any) => {
+          ScrollTrigger.create({
+            trigger: item,
+            start: `top 95%`,
+            animation: animateFrom(item),
+            toggleActions: "play none none reverse",
+          })
+        })
+    }
   }
 
   useGSAP(
@@ -59,12 +74,8 @@ const S25Ultra = () => {
         specSecAni()
       }
     },
-    { scope: wrap, dependencies: [wrap, part4SwiperInstance] }
+    { scope: wrap, dependencies: [part4SwiperInstance] }
   )
-
-  const lenis = useLenis(({ scroll }) => {
-    // called every scroll
-  })
 
   return (
     <ReactLenis root>

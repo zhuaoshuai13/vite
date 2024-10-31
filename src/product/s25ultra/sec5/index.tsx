@@ -18,8 +18,8 @@ const Sec5 = () => {
   const sec5Ani = () => {
     const tl = gsap
       .timeline()
-      .from(".light_wrap", { x: "-80%", ease: "power2.inOut", duration: 1.5 })
-      .from(".nit_wrap", { opacity: 0, ease: "power2.inOut" })
+      .from(".light_wrap", { x: "-80%", ease: "power2.inOut", duration: 1 })
+      .from(".nit_wrap", { opacity: 0, ease: "power2.inOut", duration: 0.25 })
     ScrollTrigger.create({
       trigger: ".sec5_wrap",
       start: `top 30%`,
@@ -30,8 +30,8 @@ const Sec5 = () => {
   const sec5AniMb = () => {
     const tl = gsap
       .timeline()
-      .from(".light_wrap", { x: "-130%", ease: "power2.inOut", duration: 1.5 })
-      .from(".nit_wrap", { opacity: 0, ease: "power2.inOut" })
+      .from(".light_wrap", { x: "-130%", ease: "power2.inOut", duration: 1 })
+      .from(".nit_wrap", { opacity: 0, ease: "power2.inOut", duration: 0.25 })
     ScrollTrigger.create({
       trigger: ".sec5_wrap",
       start: `top 30%`,
@@ -48,7 +48,7 @@ const Sec5 = () => {
         sec5AniMb()
       }
     },
-    { scope: wrap, dependencies: [isPc] }
+    { scope: wrap, dependencies: [isPc], revertOnUpdate: true }
   )
 
   return (

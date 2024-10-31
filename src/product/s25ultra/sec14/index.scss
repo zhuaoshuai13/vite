@@ -28,6 +28,7 @@
     position: absolute;
     bottom: 0;
     left: 50%;
+    width: px-to-vw(106);
     transform: translateX(-50%);
   }
 
@@ -92,13 +93,13 @@
   }
 
   .left_circle {
-    top: px-to-vw(168);
-    left: px-to-vw(408);
+    top: px-to-vw(145);
+    left: px-to-vw(360);
   }
 
   .right_circle {
-    top: px-to-vw(230);
-    right: px-to-vw(285);
+    top: px-to-vw(210);
+    right: px-to-vw(340);
   }
 
   /* 扩散动画 */
@@ -107,8 +108,8 @@
   .circle2,
   .circle3 {
     position: absolute;
-    top: 50px;
-    left: 15px;
+    top: px-to-vw(75);
+    left: px-to-vw(75);
     width: px-to-vw(50);
     height: px-to-vw(50);
     background: rgba(255, 255, 255, .75);
@@ -218,6 +219,10 @@
       overflow: hidden;
     }
 
+    .wifi_wrap {
+      width: px-to-vw-mb(117);
+    }
+
     .bottom_wrap {
       padding-top: px-to-vw-mb(36);
     }
@@ -229,6 +234,7 @@
     .pic_wrap {
       width: var(--content-width);
       height: px-to-vw-mb(620);
+      margin: px-to-vw-mb(80) auto 0;
 
       .bg_wrap {
         top: px-to-vw-mb(105);
@@ -262,9 +268,35 @@
       }
     }
 
+    .circleBox {
+      width: px-to-vw-mb(100);
+      height: px-to-vw-mb(100);
+    }
+
+    .left_circle {
+      top: px-to-vw-mb(72);
+      left: px-to-vw-mb(176);
+    }
+
+    .right_circle {
+      top: px-to-vw-mb(102);
+      right: px-to-vw-mb(172);
+    }
+
+    .circle,
+    .circle1,
+    .circle2,
+    .circle3 {
+      top: px-to-vw-mb(37.5);
+      left: px-to-vw-mb(37.5);
+      width: px-to-vw-mb(25);
+      height: px-to-vw-mb(25);
+    }
+
     .bottom_text {
       padding: px-to-vw-mb(40);
       background-image: unset;
+      -webkit-backdrop-filter: blur(30px);
       backdrop-filter: blur(30px);
     }
 
@@ -286,6 +318,7 @@
           &:after {
             position: absolute;
             bottom: 0;
+            left: 0;
             display: block;
             width: 100%;
             height: 1px;

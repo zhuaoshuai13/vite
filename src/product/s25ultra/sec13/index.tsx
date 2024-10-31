@@ -1,17 +1,15 @@
-import { useContext, useRef, useState, useEffect } from "react"
+import { useContext, useRef } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
 const Sec13 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { s25ultraConfig: config, src } = window as any
-  const length = config?.sec11?.color?.length
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
 
@@ -109,7 +107,7 @@ const Sec13 = () => {
       trigger: ".sec13_wrap .content_wrap",
       pin: true,
       start: `top 0%`,
-      end: "+=500%",
+      end: "+=2000",
       animation: tl,
       scrub: 0.2,
     })
@@ -160,7 +158,7 @@ const Sec13 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_part1_mb.png"}
+                    srcSet={src + "/images/mb/sec13_part1_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -176,7 +174,7 @@ const Sec13 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_light_mb.png"}
+                    srcSet={src + "/images/mb/sec13_light_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -192,7 +190,7 @@ const Sec13 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_16g_mb.png"}
+                    srcSet={src + "/images/mb/sec13_16g_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -248,7 +246,7 @@ const Sec13 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_part2_mb.png"}
+                    srcSet={src + "/images/mb/sec13_part2_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -264,7 +262,7 @@ const Sec13 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_t620_light_mb.png"}
+                    srcSet={src + "/images/mb/sec13_t620_light_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -280,7 +278,7 @@ const Sec13 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_t620_mb.png"}
+                    srcSet={src + "/images/mb/sec13_t620_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'

@@ -4,7 +4,6 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
@@ -70,7 +69,7 @@ const Sec12 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec12_bg_mb.png"}
+                srcSet={src + "/images/mb/sec12_bg_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -83,7 +82,7 @@ const Sec12 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec12_phone_mb.png"}
+                srcSet={src + "/images/mb/sec12_phone_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'

@@ -201,6 +201,13 @@
     .sec3_item {
       padding: px-to-vw-mb(32) px-to-vw-mb(36);
       border-radius: px-to-vw-mb(25);
+      transition: all 1s;
+
+      &:not(.item1) {
+        .img_wrap {
+          height: 100%;
+        }
+      }
     }
 
     .title {

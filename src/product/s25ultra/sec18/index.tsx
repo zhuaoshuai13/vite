@@ -1,27 +1,19 @@
-import { useContext, useRef, useState, useEffect } from "react"
+import { useContext, useRef } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import { Swiper, SwiperClass, SwiperSlide } from "swiper/react"
-import { EffectFade, Autoplay, Navigation, Pagination } from "swiper/modules"
 import LazyLoad from "react-lazyload"
-
-import "swiper/css"
-import "swiper/css/effect-fade"
-import "swiper/css/pagination"
 
 import "./index.scss"
 
 const Sec18 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { s25ultraConfig: config, src } = window as any
-  const length = config?.sec11?.color?.length
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
-  const [swiperInstance, setSwiperInstance] = useState<any>()
-  const swiperRef = useRef<SwiperClass>()
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   const sec18Ani = () => {
     // const tl = gsap.timeline().to("", { ease: "power2.inOut" })
@@ -35,9 +27,32 @@ const Sec18 = () => {
     // })
   }
 
+  const sec18AniMb = () => {
+    gsap.timeline().to(".sec18 .video_wrap", {
+      scrollTrigger: {
+        trigger: ".sec18 .video_wrap",
+        start: "top 100%",
+        onEnter: () => {
+          if (document.querySelector(".sec18 .video_wrap video")) {
+            (
+              document.querySelector(
+                ".sec18 .video_wrap video"
+              ) as HTMLVideoElement
+            )?.play()
+          }
+          videoRef.current?.play()
+        },
+      },
+    })
+  }
+
   useGSAP(
     () => {
-      sec18Ani()
+      if (isPc) {
+        sec18Ani()
+      } else {
+        sec18AniMb()
+      }
     },
     { scope: wrap }
   )
@@ -61,17 +76,15 @@ const Sec18 = () => {
           <div className='video_wrap'>
             <LazyLoad offset={1000}>
               <video
+                ref={videoRef}
                 src={config.sec18.video.src}
-                // poster={
-                //   config.sec2.video.poster ? config.sec2.video.poster : ""
-                // }
-                muted
                 preload='auto'
                 webkit-playsinline='true'
                 playsInline={true}
+                controls={false}
                 autoPlay
                 loop
-                controls={false}
+                muted
               ></video>
             </LazyLoad>
           </div>
