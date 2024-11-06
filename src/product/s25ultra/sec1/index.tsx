@@ -24,18 +24,6 @@ const Sec1 = () => {
     const tl = gsap
       .timeline()
       .from(
-        ".phone2",
-        {
-          // x: "20%",
-          // y: "-20%",
-          // rotate: "-32deg",
-          opacity: 0,
-          ease: "power2.inOut",
-          duration: 1,
-        },
-        "a"
-      )
-      .from(
         ".phone3",
         {
           x: "50%",

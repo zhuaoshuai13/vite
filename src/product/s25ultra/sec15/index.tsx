@@ -16,16 +16,16 @@ const Sec15 = () => {
   const sec15Ani = () => {
     const tl = gsap
       .timeline()
-      .to(
-        ".phone1",
-        {
-          x: "-24%",
-          y: "24%",
-          rotate: "44.7deg",
-          ease: "power2.inOut",
-        },
-        "a"
-      )
+      // .to(
+      //   ".phone1",
+      //   {
+      //     x: "-24%",
+      //     y: "24%",
+      //     rotate: "44.7deg",
+      //     ease: "power2.inOut",
+      //   },
+      //   "a"
+      // )
       .to(
         ".text_wrap1",
         {
@@ -112,7 +112,12 @@ const Sec15 = () => {
     <section className='sec15' ref={wrap}>
       <div className='sec15_wrap'>
         <div className='pic_wrap'>
-          <div className='img_wrap phone1'>
+          <div
+            className='img_wrap phone1'
+            style={
+              isPc ? { transform: "translate(-24%, 24%) rotate(44.7deg)" } : {}
+            }
+          >
             <picture>
               <source
                 media='(max-width: 750px)'

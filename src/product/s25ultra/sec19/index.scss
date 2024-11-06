@@ -332,6 +332,14 @@
       width: px-to-vw(536);
       transform: translateX(-50%);
     }
+
+    .pop_wrap {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: px-to-vw(536);
+      transform: translateX(-50%);
+    }
   }
 
   .part7 {

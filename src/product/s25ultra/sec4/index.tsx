@@ -28,7 +28,9 @@ const Sec4 = () => {
       .to(".data_wrap1", { opacity: 1, ease: "power2.inOut" })
       .to(".data_wrap1", { opacity: 0, ease: "power2.inOut" }, "c")
       .to(".data_wrap2", { opacity: 1, ease: "power2.inOut" }, "c+=0.5")
-      .to(".part1", { opacity: 0, ease: "power2.inOut" }, "d")
+      // .to(".part1", { opacity: 0, ease: "power2.inOut" }, "d")
+      .to(".part1 .text_wrap", { opacity: 0, ease: "power2.inOut" }, "d")
+      .to(".part1 .data_wrap2", { opacity: 0, ease: "power2.inOut" }, "d")
       .to(".part2", { opacity: 1, ease: "power2.inOut" }, "d+=0.5")
       .from(".phone_mask_wrap", {
         clipPath: "inset(100% 0 0 0)",
@@ -56,7 +58,9 @@ const Sec4 = () => {
       .to(".data_wrap1", { opacity: 1, ease: "power2.inOut" })
       .to(".data_wrap1", { opacity: 0, ease: "power2.inOut" }, "c")
       .to(".data_wrap2", { opacity: 1, ease: "power2.inOut" }, "c+=0.5")
-      .to(".part1", { opacity: 0, ease: "power2.inOut" }, "d")
+      // .to(".part1", { opacity: 0, ease: "power2.inOut" }, "d")
+      .to(".part1 .text_wrap", { opacity: 0, ease: "power2.inOut" }, "d")
+      .to(".part1 .data_wrap2", { opacity: 0, ease: "power2.inOut" }, "d")
       .to(".part2", { opacity: 1, ease: "power2.inOut" }, "d+=0.5")
       .from(".phone_mask_wrap", {
         clipPath: "inset(100% 0 0 0)",

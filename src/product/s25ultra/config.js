@@ -73,7 +73,7 @@ window.s25ultraConfig = {
   sec4: {
     spec_title: "EXCELLENCE IN VISION",
     spec_desc:
-      "Top-tier display quality, premier brightness, superb eye care, and durability all in one screen. <br/> Countless advantages are embodied in this display.",
+      "Top-tier display quality, premier brightness, <br class='mb'> superb eye care, and durability all in one screen. <br/> Countless advantages are embodied in this display.",
     part1: {
       title: "A vibrant curved display <br/> comes to life",
       desc: "itel collaborates with top suppliers to create a flagship-level curved screen, utilizing cutting-edge luminescent materials. <br/> It features top-tier display quality and eye protection, making it the king of the segment in every aspect.",
@@ -139,7 +139,7 @@ window.s25ultraConfig = {
   },
   sec5: {
     title: "Visible in the sunlight",
-    desc: "The global brightness reaches an astonishing 1000 nits, with peak values that are alarmingly high at 1400 nits, <br/> enabling you to vividly perceive the captivating content on the screen even in direct sunlight.*",
+    desc: "The global brightness reaches an astonishing 1000 nits, with <br class='mb'> peak values that are alarmingly high at 1400 nits, <br class='pc'/> enabling <br class='mb'> you to vividly perceive the captivating content on the screen <br class='mb'> even in direct sunlight.*",
   },
   sec6: {
     part1: {
@@ -164,11 +164,11 @@ window.s25ultraConfig = {
   },
   sec8: {
     title: "Fearless in the rain",
-    desc: "With an IP64 rating for dust and water resistance, this device is well-protected against everyday wear and tear, <br/> including dust ingress and light water splashes.",
+    desc: "With an IP64 rating for dust and water resistance, this device <br class='mb'> is well-protected against everyday wear and tear, <br class='pc'/> including <br class='mb'> dust ingress and light water splashes.",
   },
   sec9: {
-    title: `Survives <br class="pc"/> 25000 impacts*`,
-    desc: "TitanShield Protection incorporates 4 major technologies to comprehensively <br/> safeguard your beloved phone.",
+    title: `Survives <br class="pc"/> 25000 impacts<span>*</span>`,
+    desc: "TitanShield Protection incorporates 4 major technologies <br class='mb'> to comprehensively <br class='pc'/> safeguard your beloved phone.",
     data: [
       {
         title: "500",
@@ -188,7 +188,7 @@ window.s25ultraConfig = {
       {
         title: "70/-40°C",
         unit: "",
-        desc: "Extreme tests of ultra high/low temperatures",
+        desc: "Extreme tests of ultra <br class='mb'> high/low temperatures",
       },
     ],
   },
@@ -213,7 +213,7 @@ window.s25ultraConfig = {
   sec11: {
     spec_title: "EXCELLENCE IN AESTHETICS",
     spec_desc:
-      "Draw inspiration from magical nature, with the advanced aesthetics and craftsmanship, transform the S25 Ultra into a trendy item!",
+      "Draw inspiration from magical nature, <br class='mb'> with the advanced aesthetics and craftsmanship, <br class='mb'> transform the S25 Ultra into a trendy item!",
     part1: {
       title: "An elegant creation",
       desc: "Fashion on one side, technology on the other. Combining natural inspiration with cutting-edge design concepts, advanced Optical Coating Process creates a dual texture of matte and glossy finishes, exuding a premium feel.",
@@ -239,7 +239,7 @@ window.s25ultraConfig = {
   },
   sec12: {
     title: "Sync your mood",
-    desc: "The RGB Ring Light provides different lighting effects to indicate various status messages and synchronizes its color changes with the rhythm of the music, perfectly integrating practicality and style.",
+    desc: "The RGB Ring Light provides different lighting effects to <br class='mb'> indicate various status messages and synchronizes its <br class='mb'> color changes with the rhythm of the music, perfectly <br class='mb'> integrating practicality and style.",
     data: [
       {
         title: "Charging",
@@ -257,10 +257,10 @@ window.s25ultraConfig = {
   },
   sec13: {
     spec_title: "EXCELLENCE IN PERFORMANCE",
-    spec_desc: `The remarkable performance improvement, coupled with effective software tuning, <br/> a "new phone" experience for many years.`,
+    spec_desc: `The remarkable performance improvement, <br class='mb'> coupled with effective software tuning, <br/> a "new phone" experience for many years.`,
     part1: {
       title: "60-month of smooth use",
-      desc: "After undergoing rigorous testing in the itel lab, this phone is guaranteed to be free of lag for 5 years. thanks to the powerful Virtual Memory Expansion Tech and Atom Storage Tech, you no longer need to worry about the phone's performance weakening over time.",
+      desc: "After undergoing rigorous testing in the itel lab, this phone <br class='mb'> is guaranteed to be free of lag for 5 years. thanks to the <br class='mb'> powerful Virtual Memory Expansion Tech and Atom <br class='mb'> Storage Tech, you no longer need to worry about the <br class='mb'> phone's performance weakening over time.",
       data: [
         {
           subtitle: "Up to",
@@ -278,7 +278,7 @@ window.s25ultraConfig = {
     },
     part2: {
       title: "Unleash the beast",
-      desc: "The S25 Ultra features a powerful octa-core processor with ARM Cortex-A75 up to 2.2Ghz, coupled with a Graphite cooling system, to fully unleash its performance and allow you to enjoy mainstream mobile games with ease.",
+      desc: "The S25 Ultra features a powerful octa-core processor <br class='mb'> with ARM Cortex-A75 up to 2.2Ghz, coupled with a <br class='mb'> Graphite cooling system, to fully unleash its <br class='mb'> performance and allow you to enjoy mainstream <br class='mb'> mobile games with ease.",
     },
   },
   sec14: {
@@ -287,7 +287,7 @@ window.s25ultraConfig = {
     data: [
       {
         title: "26ms",
-        desc: "Super low Latency for gaming",
+        desc: "Super low <br class='mb'> Latency for gaming",
       },
       {
         title: "6.5MB/s",
@@ -295,7 +295,7 @@ window.s25ultraConfig = {
       },
       {
         title: "5x*",
-        desc: "Faster switch to the optimal Wi-Fi network",
+        desc: "Faster switch to the <br class='mb'> optimal Wi-Fi network",
       },
     ],
   },
@@ -312,7 +312,7 @@ window.s25ultraConfig = {
   sec16: {
     spec_title: "EXCELLENCE IN PHOTOGRAPHY",
     spec_desc:
-      "Ultra-clear front and rear cameras, with specially crafted features and filters, <br/> turning everyone into a photography master.",
+      "Ultra-clear front and rear cameras, <br class='mb'> with specially crafted features and filters, <br/> turning everyone into a photography master.",
     front: {
       title: "32MP",
       desc: "AI Selfie Camera",
@@ -377,7 +377,7 @@ window.s25ultraConfig = {
   },
   sec18: {
     title: "Capture with fun",
-    desc: "Embrace the fun of Vlogging with Dual-view Video Recording, effortlessly capturing both your reactions and the stunning scenery you're enjoying, or the engaging interactions with your friends.",
+    desc: "Embrace the fun of Vlogging with Dual-view Video Recording, effortlessly capturing both your reactions and the stunning scenery you're enjoying, or the engaging interactions with <br class='mb'> your friends.",
     video: {
       src: src + "/videos/sec18_video_pc.mp4",
     },
@@ -385,7 +385,7 @@ window.s25ultraConfig = {
   sec19: {
     spec_title: "EXCELLENCE IN EXPERIENCE",
     spec_desc:
-      "Every feature is meticulously refined, with continuous updates and optimizations, <br/> ensuring it's always user-friendly.",
+      "Every feature is meticulously refined, <br class='mb'> with continuous updates and optimizations, <br/> ensuring it's always user-friendly.",
     part1: {
       desc: "Based on the latest Android 14, it introduces a more stylish UI design and enhanced desktop widget functionalities, offering you a more aesthetically pleasing and seamless system experience.",
     },
@@ -395,25 +395,25 @@ window.s25ultraConfig = {
     },
     part3: {
       title: "GPT AI Assistant",
-      desc: "Say hello to your best assistant! It frees your hands and helps you handle many simple tasks.",
+      desc: "Say hello to your best assistant! It frees your hands <br class='mb'> and helps you handle many simple tasks.",
     },
     part4: {
       content1: {
         title: "AI Call Noise Cancellation",
-        desc: "Experience crystal-clear calls, designed to minimize background noise and enhance human voice.",
+        desc: "Experience crystal-clear calls, designed to minimize <br class='mb'> background noise and enhance human voice.",
       },
       content2: {
         title: "AI Wallpaper",
-        desc: "Create exclusive wallpapers using text or images to showcase your distinctive taste.",
+        desc: "Create exclusive wallpapers using text or images to <br class='mb'> showcase your distinctive taste.",
       },
       content3: {
         title: "ASK AI",
-        desc: `<span class="highlight">When reading emails or chatting on WhatsApp, it can translate and polish the text on the page,</span> significantly boosting your work efficiency.`,
+        desc: `<span class="highlight">When reading emails or chatting on WhatsApp, it can <br class='mb'> translate and polish the text on the page,</span> significantly <br class='mb'> boosting your work efficiency.`,
       },
     },
     part5: {
       title: "Dynamic Bar",
-      desc: "Welcome to the Dynamic Bar, where accessing important notifications is now more convenient and seamless than ever before.",
+      desc: "Welcome to the Dynamic Bar, where accessing <br class='mb'> important notifications is now more convenient and <br class='mb'> seamless than ever before.",
     },
     part6: {
       title: "Smart AOD",

@@ -19,13 +19,13 @@ const Sec7 = () => {
     const tl = gsap
       .timeline()
       .to(".spec_part", { y: "-100%", ease: "power2.inOut" })
-      .to(".phone1", { opacity: 0, ease: "power2.inOut" }, "a")
       .fromTo(
         ".phone2",
-        { rotateX: 90 },
         { rotateX: 0, opacity: 1, ease: "power2.inOut" },
-        "a+=0.2"
+        { rotateX: 90 },
+        "a"
       )
+      .from(".phone1", { opacity: 0, ease: "power2.inOut" }, "a+=0.1")
     ScrollTrigger.create({
       trigger: ".sec7_wrap",
       pin: true,
@@ -38,13 +38,13 @@ const Sec7 = () => {
   const sec7AniMb = () => {
     const tl = gsap
       .timeline()
-      .to(".phone1", { opacity: 0, ease: "power2.inOut" }, "a")
       .fromTo(
         ".phone2",
-        { rotateY: 90 },
         { rotateY: 0, opacity: 1, ease: "power2.inOut" },
-        "a+=0.2"
+        { rotateY: 90 },
+        "a"
       )
+      .from(".phone1", { opacity: 0, ease: "power2.inOut" }, "a+=0.2")
     ScrollTrigger.create({
       trigger: ".sec7_wrap .content_wrap",
       pin: true,

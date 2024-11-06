@@ -176,7 +176,10 @@ const Sec9 = () => {
                 {item.title}
                 {item.unit && <span className='unit'>{item.unit}</span>}
               </div>
-              <div className='desc'>{item.desc}</div>
+              <div
+                className='desc'
+                dangerouslySetInnerHTML={{ __html: item.desc }}
+              ></div>
             </div>
           ))}
         </div>

@@ -26,6 +26,14 @@
     max-width: var(--content-width);
     margin: 0 auto;
     text-align: right;
+
+    .title_75 {
+      position: relative;
+
+      span {
+        position: absolute;
+      }
+    }
   }
 
   .pic_wrap {

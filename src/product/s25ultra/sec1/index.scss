@@ -88,6 +88,7 @@
   .icon_items {
     display: flex;
     gap: px-to-vw(30);
+    align-items: center;
 
     .item {
       &:nth-child(1) {

@@ -3,7 +3,7 @@
 .s25ultra .sec15 {
   .sec15_wrap {
     position: relative;
-    height: px-to-vw(950);
+    height: px-to-vw(100);
   }
 
   .text_wrap {
@@ -28,14 +28,14 @@
 
   .phone1 {
     position: absolute;
-    top: px-to-vw(100);
+    top: px-to-vw(150);
     left: px-to-vw(780);
     width: px-to-vw(1132);
   }
 
   .phone2 {
     position: absolute;
-    top: px-to-vw(368);
+    top: px-to-vw(418);
     left: px-to-vw(342);
     width: px-to-vw(1254);
     opacity: 0;
@@ -72,7 +72,7 @@
     .all_text {
       position: relative;
       margin-top: px-to-vw-mb(-350);
-      padding: px-to-vw-mb(260) px-to-vw-mb(50) px-to-vw-mb(60) px-to-vw-mb(220);
+      padding: px-to-vw-mb(260) px-to-vw-mb(50) px-to-vw-mb(100) px-to-vw-mb(220);
       background-color: #f0f0f0;
 
       .text_wrap1 {

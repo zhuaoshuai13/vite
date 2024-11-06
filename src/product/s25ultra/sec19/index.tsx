@@ -83,6 +83,18 @@ const Sec19 = ({
       animation: tl2,
       toggleActions: "play none none reverse",
     })
+
+    const tl3 = gsap.timeline().from(".part6 .pop_wrap", {
+      rotate: "360deg",
+      duration: 1,
+      ease: "power2.inOut",
+    })
+    ScrollTrigger.create({
+      trigger: ".sec19 .part6",
+      start: `top 50%`,
+      animation: tl3,
+      toggleActions: "play none none reverse",
+    })
   }
 
   useGSAP(
@@ -549,6 +561,12 @@ const Sec19 = ({
                   <img
                     loading='lazy'
                     src={src + "/images/pc/sec19_part6_f1.webp"}
+                  />
+                </div>
+                <div className='img_wrap pop_wrap'>
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec19_part6_f2.webp"}
                   />
                 </div>
               </div>

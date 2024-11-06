@@ -1,42 +1,42 @@
-import { useContext, useRef } from "react"
-import { ScreenContext } from "../../../provider"
+// import { useContext, useRef } from "react"
+// import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import { useGSAP } from "@gsap/react"
+// import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
 
 const Sec14 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { s25ultraConfig: config, src } = window as any
-  const { isPc } = useContext(ScreenContext)
-  const wrap = useRef(null)
+  // const { isPc } = useContext(ScreenContext)
+  // const wrap = useRef(null)
 
-  const sec14Ani = () => {
-    const tl = gsap
-      .timeline()
-      .from(".ani_wrap", {
-        rotate: isPc ? "-7deg" : "-4deg",
-        ease: "power2.inOut",
-      })
-    ScrollTrigger.create({
-      trigger: ".sec14_wrap",
-      start: `top 30%`,
-      animation: tl,
-      toggleActions: "play none none reverse",
-    })
-  }
+  // const sec14Ani = () => {
+  //   const tl = gsap
+  //     .timeline()
+  //     .from(".ani_wrap", {
+  //       rotate: isPc ? "-7deg" : "-4deg",
+  //       ease: "power2.inOut",
+  //     })
+  //   ScrollTrigger.create({
+  //     trigger: ".sec14_wrap",
+  //     start: `top 30%`,
+  //     animation: tl,
+  //     toggleActions: "play none none reverse",
+  //   })
+  // }
 
-  useGSAP(
-    () => {
-      sec14Ani()
-    },
-    { scope: wrap }
-  )
+  // useGSAP(
+  //   () => {
+  //     sec14Ani()
+  //   },
+  //   { scope: wrap }
+  // )
 
   return (
-    <section className='sec14' ref={wrap}>
+    <section className='sec14'>
       <div className='sec14_wrap'>
         <div className='top_wrap'>
           <div className='img_wrap ellipse_wrap'>

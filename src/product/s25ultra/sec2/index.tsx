@@ -22,10 +22,19 @@ const Sec2 = () => {
   }
 
   const sec2Ani = () => {
+    gsap.utils.toArray(".sec2 .title_items p").forEach((item: any) => {
+      gsap.from(item, {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: item,
+          start: "top 90%",
+        },
+      })
+    })
     const tl = gsap
       .timeline()
-      .from(".slogn", { fontSize: "5.2vw" })
-      .from(".title_items p:not(.slogn)", { opacity: 0 })
+      .to(".title_items p:not(.slogn) span", { opacity: 0 })
+      .to(".slogn", { fontSize: "5.2vw" })
       .to(".part1", { y: "-100%" })
       .to(".part2", {})
     ScrollTrigger.create({
@@ -39,10 +48,19 @@ const Sec2 = () => {
   }
 
   const sec2AniMb = () => {
+    gsap.utils.toArray(".sec2 .title_items p").forEach((item: any) => {
+      gsap.from(item, {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: item,
+          start: "top 90%",
+        },
+      })
+    })
     const tl = gsap
       .timeline()
-      .from(".slogn", { fontSize: "7.7vw" })
-      .from(".title_items p:not(.slogn)", { opacity: 0 })
+      .to(".title_items p:not(.slogn) span", { opacity: 0 })
+      .to(".slogn", { fontSize: "7.7vw" })
       .to(".part1", { y: "-100%" })
       .to(".part2", {})
     ScrollTrigger.create({
@@ -60,7 +78,7 @@ const Sec2 = () => {
         start: "top 100%",
         onEnter: () => {
           if (document.querySelector(".sec2 .video_wrap video")) {
-            (
+            ;(
               document.querySelector(
                 ".sec2 .video_wrap video"
               ) as HTMLVideoElement
@@ -115,12 +133,17 @@ const Sec2 = () => {
             <div className='title_items'>
               {config.sec2.text.map((item: string, index: number) => (
                 <React.Fragment key={index}>
-                  <p>{item}</p>
+                  <p>
+                    <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                  </p>
                   {index + 1 === Math.floor(config?.sec2?.text?.length / 2) ? (
-                    <p
-                      className='slogn'
-                      dangerouslySetInnerHTML={{ __html: config?.sec2?.slogn }}
-                    ></p>
+                    <p className='slogn'>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: config?.sec2?.slogn,
+                        }}
+                      ></span>
+                    </p>
                   ) : null}
                 </React.Fragment>
               ))}
