@@ -85,7 +85,7 @@ const Sec19 = ({
     })
 
     const tl3 = gsap.timeline().from(".part6 .pop_wrap", {
-      rotate: "360deg",
+      rotate: "30deg",
       duration: 1,
       ease: "power2.inOut",
     })

@@ -2,18 +2,30 @@ const src = window.basic_assets_href
 window.src = src
 window.s25ultraConfig = {
   sec1: {
+    title: "Tough. <br class='mb'/>Slim. <br class='mb'/>Durable.",
     data: [
       {
-        title: `6.78" AMOLED`,
-        desc: "Corning® Gorilla® <br/> Glass 7i ",
+        title: `6.78"3D-Curved AMOLED`,
+        desc: "Corning® Gorilla® <br class='pc'/> Glass 7i ",
       },
       {
         title: "6.9mm",
-        desc: "Ultra Slim <br/> Design",
+        desc: "Ultra Slim <br class='pc'/> Design",
       },
       {
         title: "512+16GB*",
-        desc: "(8+8GB) <br/> Extended RAM",
+        desc: "(8+8GB) <br class='pc'/> Extended RAM",
+      },
+    ],
+    watchTitle: "Smart Watch <br class='mb'/> Storm Ultra",
+    data2: [
+      {
+        title: `2.02"`,
+        desc: "Tested <br class='pc'/> Scratchproof Screen",
+      },
+      {
+        title: "iPulse*",
+        desc: "Watch App <br class='pc'/> Pre-installed on S25 Series",
       },
     ],
   },
@@ -29,6 +41,10 @@ window.s25ultraConfig = {
       pc: src + "/videos/sec2_video_pc.mp4",
       mb: src + "/videos/sec2_video_mb.mp4",
     },
+    full_video: {
+      pc: src + "/videos/sec2_video_all_pc.mp4",
+      mb: src + "/videos/sec2_video_all_mb.mp4",
+    }
   },
   sec3: {
     item1: {

@@ -24,6 +24,16 @@ const Sec1 = () => {
     const tl = gsap
       .timeline()
       .from(
+        ".title1",
+        {
+          y: 100,
+          opacity: 0,
+          ease: "power2.inOut",
+          duration: 1,
+        },
+        "a"
+      )
+      .from(
         ".phone3",
         {
           x: "50%",
@@ -57,6 +67,10 @@ const Sec1 = () => {
 
   return (
     <section className='sec1' ref={wrap}>
+      <div
+        className='title1'
+        dangerouslySetInnerHTML={{ __html: config?.sec1?.title }}
+      ></div>
       <div className='sec1_wrap'>
         {isLoaded && (
           <>
@@ -101,6 +115,26 @@ const Sec1 = () => {
             </div>
           </>
         )}
+        <div className='icon_items'>
+          <div className='img_wrap item'>
+            <img loading='lazy' src={src + "/images/pc/sec1_icon1_pc.webp"} />
+          </div>
+          <div className='img_wrap item'>
+            <img loading='lazy' src={src + "/images/pc/sec1_icon2_pc.webp"} />
+          </div>
+          <div className='img_wrap item'>
+            <img loading='lazy' src={src + "/images/pc/sec1_icon3_pc.webp"} />
+          </div>
+          <div className='img_wrap item'>
+            <img loading='lazy' src={src + "/images/pc/sec1_icon4_pc.webp"} />
+          </div>
+          <div className='img_wrap item'>
+            <img loading='lazy' src={src + "/images/pc/sec1_icon5_pc.webp"} />
+          </div>
+          <div className='img_wrap item'>
+            <img loading='lazy' src={src + "/images/pc/sec1_icon6_pc.webp"} />
+          </div>
+        </div>
         <div className='content_wrap'>
           <div className='left'>
             <div className='img_wrap logo'>
@@ -121,46 +155,26 @@ const Sec1 = () => {
               ))}
             </div>
           </div>
-          <div className='right'>
-            <div className='icon_items'>
-              <div className='img_wrap item'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec1_icon1_pc.webp"}
-                />
-              </div>
-              <div className='img_wrap item'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec1_icon2_pc.webp"}
-                />
-              </div>
-              <div className='img_wrap item'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec1_icon3_pc.webp"}
-                />
-              </div>
-              <div className='img_wrap item'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec1_icon4_pc.webp"}
-                />
-              </div>
-              <div className='img_wrap item'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec1_icon5_pc.webp"}
-                />
-              </div>
-              <div className='img_wrap item'>
-                <img
-                  loading='lazy'
-                  src={src + "/images/pc/sec1_icon6_pc.webp"}
-                />
-              </div>
+          {/* <div className='right'>
+            <div
+              className='data2_title'
+              dangerouslySetInnerHTML={{ __html: config?.sec1?.watchTitle }}
+            ></div>
+            <div className='data_wrap'>
+              {config?.sec1?.data2?.map((item: any, index: number) => (
+                <div className='data_item' key={index}>
+                  <div
+                    className='title'
+                    dangerouslySetInnerHTML={{ __html: item?.title }}
+                  ></div>
+                  <div
+                    className='desc'
+                    dangerouslySetInnerHTML={{ __html: item?.desc }}
+                  ></div>
+                </div>
+              ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

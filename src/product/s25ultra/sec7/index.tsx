@@ -25,7 +25,7 @@ const Sec7 = () => {
         { rotateX: 90 },
         "a"
       )
-      .from(".phone1", { opacity: 0, ease: "power2.inOut" }, "a+=0.1")
+      .from(".phone1", { opacity: 0, ease: "power2.inOut" }, "b")
     ScrollTrigger.create({
       trigger: ".sec7_wrap",
       pin: true,
@@ -44,7 +44,7 @@ const Sec7 = () => {
         { rotateY: 90 },
         "a"
       )
-      .from(".phone1", { opacity: 0, ease: "power2.inOut" }, "a+=0.2")
+      .from(".phone1", { opacity: 0, ease: "power2.inOut" }, "b")
     ScrollTrigger.create({
       trigger: ".sec7_wrap .content_wrap",
       pin: true,
