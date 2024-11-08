@@ -9,6 +9,7 @@ const FullVideo = () => {
   const { s25ultraConfig: config } = window as any
   const { isPc } = useContext(ScreenContext)
   const fa = () => {
+    ;(document.querySelector(".fullVideo video") as HTMLVideoElement)?.pause()
     gsap.to(".fullVideo", {
       top: "120%",
     })
@@ -22,7 +23,6 @@ const FullVideo = () => {
           webkit-playsinline='true'
           playsInline={true}
           preload='auto'
-          muted
           loop={true}
           controls
         ></video>

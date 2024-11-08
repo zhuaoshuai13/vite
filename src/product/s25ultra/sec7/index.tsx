@@ -22,10 +22,14 @@ const Sec7 = () => {
       .fromTo(
         ".phone2",
         { rotateX: 0, opacity: 1, ease: "power2.inOut" },
-        { rotateX: 90 },
+        { rotateX: 70, opacity: 0, duration: 0.1 },
         "a"
       )
-      .from(".phone1", { opacity: 0, ease: "power2.inOut" }, "b")
+      .to(
+        ".phone1",
+        { visibility: "visible", ease: "power2.inOut", duration: 0.1 },
+        "b"
+      )
     ScrollTrigger.create({
       trigger: ".sec7_wrap",
       pin: true,
@@ -41,15 +45,15 @@ const Sec7 = () => {
       .fromTo(
         ".phone2",
         { rotateY: 0, opacity: 1, ease: "power2.inOut" },
-        { rotateY: 90 },
+        { rotateY: 70, opacity: 0 },
         "a"
       )
-      .from(".phone1", { opacity: 0, ease: "power2.inOut" }, "b")
+      .to(".phone1", { visibility: "visible", ease: "power2.inOut" }, "b")
     ScrollTrigger.create({
       trigger: ".sec7_wrap .content_wrap",
       pin: true,
       start: `bottom 100%`,
-      end: "+=500",
+      end: "+=300",
       animation: tl,
       scrub: 0.2,
     })

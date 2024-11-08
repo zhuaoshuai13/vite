@@ -69,9 +69,9 @@
         top: 50%;
         right: 0;
         display: block;
-        width: 2px;
         height: px-to-vw(27);
         background-color: #e9798b;
+        outline: 1px solid #e9798b;
         transform: translateY(-50%);
         content: "";
       }
@@ -135,11 +135,11 @@
 @media (max-width: $mobwidthPx) {
   .s25ultra .sec1 {
     .sec1_wrap {
-      height: px-to-vw-mb(1300);
+      height: px-to-vw-mb(1200);
 
       @include bg("mb/sec1_bg_mb.webp");
 
-      background-size: 100% px-to-vw-mb(1400);
+      background-size: 100% px-to-vw-mb(1600);
     }
 
     .title1 {
@@ -191,7 +191,8 @@
 
         &:not(:last-child):after {
           width: 1px;
-          height: px-to-vw-mb(24);
+          height: px-to-vw-mb(30);
+          outline: none;
         }
 
         &:after {
@@ -239,7 +240,7 @@
     }
 
     .icon_items {
-      top: px-to-vw-mb(1215);
+      top: px-to-vw-mb(1085);
       left: px-to-vw-mb(40);
       gap: px-to-vw-mb(30);
       transform: unset;

@@ -608,6 +608,11 @@
       .mp32_img {
         width: px-to-vw-mb(457);
         transform-origin: top;
+
+        &:after {
+          width: 97%;
+          height: 98%;
+        }
       }
 
       .swiper-slide {
@@ -717,6 +722,10 @@
       .mp50_img {
         width: 100%;
         background-color: #fff;
+
+        &:after {
+          width: 98%;
+        }
       }
 
       .swiper {

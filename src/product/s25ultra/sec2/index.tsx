@@ -19,6 +19,10 @@ const Sec2 = () => {
     gsap.to(".fullVideo", {
       top: 0,
     })
+
+    {
+      ;(document.querySelector(".fullVideo video") as HTMLVideoElement)?.play()
+    }
   }
 
   const sec2Ani = () => {

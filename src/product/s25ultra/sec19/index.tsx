@@ -447,10 +447,22 @@ const Sec19 = ({
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className='ai_wrap smart_aod'>
-                      <div className='img_wrap phone_wrap'>
+                      {/* <div className='img_wrap phone_wrap'>
                         <img
                           loading='lazy'
                           src={src + "/images/mb/sec19_part4_smart_mb.webp"}
+                        />
+                      </div> */}
+                      <div className='img_wrap phone_wrap'>
+                        <img
+                          loading='lazy'
+                          src={src + "/images/mb/sec19_part4_smart2_mb.webp"}
+                        />
+                      </div>
+                      <div className='img_wrap pop_wrap'>
+                        <img
+                          loading='lazy'
+                          src={src + "/images/mb/sec19_part4_smart3_mb.webp"}
                         />
                       </div>
                       <div className='text_wrap'>

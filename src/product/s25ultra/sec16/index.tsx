@@ -570,7 +570,6 @@ const Sec16 = () => {
               <div className='img_wrap box_bg'>
                 {isPc ? (
                   <img
-                    loading='lazy'
                     src={src + "/images/pc/sec16_box_pc.webp"}
                   />
                 ) : null}
@@ -646,7 +645,6 @@ const Sec16 = () => {
                   <SwiperSlide>
                     <div className='img_wrap mp32_img'>
                       <img
-                        loading='lazy'
                         src={src + "/images/pc/sec16_32mp_p1_pc.webp"}
                       />
                     </div>
@@ -654,7 +652,6 @@ const Sec16 = () => {
                   <SwiperSlide>
                     <div className='img_wrap mp32_img'>
                       <img
-                        loading='lazy'
                         src={src + "/images/pc/sec16_32mp_p2_pc.webp"}
                       />
                     </div>
@@ -662,7 +659,6 @@ const Sec16 = () => {
                   <SwiperSlide>
                     <div className='img_wrap mp32_img'>
                       <img
-                        loading='lazy'
                         src={src + "/images/pc/sec16_32mp_p1_pc.webp"}
                       />
                     </div>
@@ -670,7 +666,6 @@ const Sec16 = () => {
                   <SwiperSlide>
                     <div className='img_wrap mp32_img'>
                       <img
-                        loading='lazy'
                         src={src + "/images/pc/sec16_32mp_p2_pc.webp"}
                       />
                     </div>

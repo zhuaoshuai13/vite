@@ -16,15 +16,17 @@ const Sec18 = () => {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   const sec18Ani = () => {
-    // const tl = gsap.timeline().to("", { ease: "power2.inOut" })
-    // ScrollTrigger.create({
-    //   trigger: ".sec18_wrap",
-    //   pin: true,
-    //   start: `top 0%`,
-    //   end: "+=500%",
-    //   animation: tl,
-    //   scrub: 0.2,
-    // })
+    const tl = gsap.timeline().from(".text_wrap .desc_16", 1, {
+      opacity: 0,
+      y: 100,
+      ease: "power2.inOut",
+    })
+    ScrollTrigger.create({
+      trigger: ".text_wrap .desc_16",
+      start: `top 105%`,
+      animation: tl,
+      toggleActions: "play none none reverse",
+    })
   }
 
   const sec18AniMb = () => {
@@ -34,7 +36,7 @@ const Sec18 = () => {
         start: "top 100%",
         onEnter: () => {
           if (document.querySelector(".sec18 .video_wrap video")) {
-            (
+            ;(
               document.querySelector(
                 ".sec18 .video_wrap video"
               ) as HTMLVideoElement
@@ -93,7 +95,7 @@ const Sec18 = () => {
           </div>
         </div>
         {isPc ? (
-          <div className='text_wrap slide_up'>
+          <div className='text_wrap'>
             <p
               className='desc_16'
               dangerouslySetInnerHTML={{ __html: config?.sec18?.desc }}

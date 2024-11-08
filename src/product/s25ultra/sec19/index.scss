@@ -660,6 +660,23 @@
           left: 0;
           width: 100%;
         }
+
+        .pop_wrap {
+          position: absolute;
+          right: 0;
+          bottom: px-to-vw-mb(400);
+          left: 0;
+          width: px-to-vw-mb(227);
+          margin: 0 auto;
+          transform: rotate(30deg);
+          transition: all .5s;
+        }
+      }
+
+      .swiper-slide-active {
+        .pop_wrap {
+          transform: rotate(0);
+        }
       }
 
       .swiper_pagination {

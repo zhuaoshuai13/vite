@@ -108,6 +108,8 @@
       right: unset;
       left: 0;
       width: px-to-vw-mb(615);
+      transform: scale(1.15);
+      transform-origin: left;
     }
 
     .phone_wrap {
@@ -119,8 +121,10 @@
     }
 
     .hand_wrap {
-      top: px-to-vw-mb(176);
+      top: px-to-vw-mb(150);
+      right: px-to-vw-mb(-80);
       width: px-to-vw-mb(406);
+      transform: scale(1.15);
     }
 
     .fingerprint_wrap {
