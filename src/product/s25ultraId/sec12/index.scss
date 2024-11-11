@@ -171,6 +171,7 @@
 }
 
 @keyframes show {
+
   0%,
   33%,
   100% {
@@ -180,6 +181,22 @@
   16%,
   66% {
     opacity: 0;
+  }
+}
+
+@media (min-width: $mobwidthPx) {
+  .s25ultra .sec12 {
+    .pic_wrap {
+      height: px-to-vw(700);
+    }
+
+    .bg_wrap {
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
+    }
   }
 }
 

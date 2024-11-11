@@ -36,7 +36,8 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: "src/product/s25ultra/config.js",
+              src: "src/product/s25ultraId/config_id.js",
+              // src: "src/product/s25ultra/config.js",
               dest: "dist/js",
             },
             {

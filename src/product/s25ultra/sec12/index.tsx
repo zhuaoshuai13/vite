@@ -88,10 +88,7 @@ const Sec12 = () => {
                 media='(min-width: 751px)'
                 srcSet={src + "/images/pc/sec12_phone_pc.webp"}
               />
-              <img
-                loading='lazy'
-                src={src + "/images/pc/sec12_phone_pc.webp"}
-              />
+              <img src={src + "/images/pc/sec12_phone_pc.webp"} />
             </picture>
           </div>
           <div className='content_wrap'>

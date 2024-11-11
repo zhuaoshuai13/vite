@@ -15,7 +15,7 @@
   }
 
   .text_wrap1 {
-    max-width: px-to-vw(700);
+    max-width: px-to-vw(1000);
 
     .desc_16 {
       max-width: 92%;
@@ -23,6 +23,7 @@
   }
 
   .text_wrap2 {
+    max-width: var(--content-width);
     opacity: 0;
   }
 
@@ -45,7 +46,7 @@
 @media (max-width: $mobwidthPx) {
   .s25ultra .sec15 {
     .sec15_wrap {
-      height: px-to-vw-mb(1100);
+      height: px-to-vw-mb(1250);
     }
 
     .pic_wrap {
@@ -72,7 +73,7 @@
     .all_text {
       position: relative;
       margin-top: px-to-vw-mb(-350);
-      padding: px-to-vw-mb(260) px-to-vw-mb(50) px-to-vw-mb(100) px-to-vw-mb(220);
+      padding: px-to-vw-mb(260) px-to-vw-mb(50) px-to-vw-mb(200) px-to-vw-mb(220);
       background-color: #f0f0f0;
 
       .text_wrap1 {

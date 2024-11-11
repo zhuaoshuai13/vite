@@ -64,7 +64,7 @@ const Sec2 = () => {
     const tl = gsap
       .timeline()
       .to(".title_items p:not(.slogn) span", { opacity: 0 })
-      .to(".slogn", { fontSize: "7.7vw" })
+      .to(".slogn", { fontSize: "5.2vw" })
       .to(".part1", { y: "-100%" })
       .to(".part2", {})
     ScrollTrigger.create({

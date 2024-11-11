@@ -89,7 +89,6 @@ const Sec12 = () => {
                 srcSet={src + "/images/pc/sec12_phone_pc.webp"}
               />
               <img
-                loading='lazy'
                 src={src + "/images/pc/sec12_phone_pc.webp"}
               />
             </picture>

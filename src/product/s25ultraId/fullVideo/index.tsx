@@ -19,7 +19,7 @@ const FullVideo = () => {
       <div className='inner'>
         <video
           src={isPc ? config.sec2.full_video.pc : config.sec2.full_video.mb}
-          autoPlay={true}
+          // autoPlay={true}
           webkit-playsinline='true'
           playsInline={true}
           preload='auto'

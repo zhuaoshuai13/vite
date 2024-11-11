@@ -10,6 +10,7 @@
 
   .title1 {
     padding-top: px-to-vw(48);
+    padding-left: px-to-vw(230);
     font-size: px-to-vw(64);
     font-family: "Bold";
     text-align: center;
@@ -97,7 +98,7 @@
 
   .icon_items {
     position: absolute;
-    top: px-to-vw(730);
+    top: px-to-vw(758);
     right: px-to-vw(16);
     display: flex;
     gap: px-to-vw(30);
@@ -209,7 +210,7 @@
       }
 
       .title {
-        font-size: px-to-vw-mb(30);
+        font-size: px-to-vw-mb(28);
       }
 
       .desc {
