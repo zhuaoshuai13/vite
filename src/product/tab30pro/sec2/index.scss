@@ -1,0 +1,36 @@
+@import '../vars';
+
+.tab30pro .sec2 {
+  .sec2_wrap {
+    position: relative;
+    height: 100vh;
+  }
+
+  .play_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: px-to-vw(108);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .tab30pro .sec2 {
+    .title_items {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      font-size: px-to-vw-mb(25);
+    }
+
+    .lazyload-wrapper {
+      height: 100%;
+    }
+
+    .part2_btn {
+      width: px-to-vw-mb(100);
+      height: px-to-vw-mb(100);
+    }
+  }
+}

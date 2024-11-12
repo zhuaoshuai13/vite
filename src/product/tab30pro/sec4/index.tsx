@@ -1,0 +1,35 @@
+import "./index.scss"
+
+const Sec4 = () => {
+  const { tab30proConfig: config, src } = window as any
+
+  return (
+    <section className='sec4'>
+      <div className='sec4_wrap'>
+        <div className='spec_part'>
+          <div className='img_wrap spec_bg'>
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec4_bg_mb.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec4_bg_pc.png"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec4_bg_pc.png"} />
+            </picture>
+          </div>
+          <div className='spec_text_wrap'>
+            <div
+              className='spec_title'
+              dangerouslySetInnerHTML={{ __html: config?.sec4?.title }}
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Sec4

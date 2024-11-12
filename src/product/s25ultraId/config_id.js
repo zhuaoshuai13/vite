@@ -426,7 +426,7 @@ pengalaman "ponsel baru" untuk banyak tahun.`,
       },
       content3: {
         title: "ASK AI",
-        desc: `Ketika membaca email atau mengobrol di WhatsApp, fitur ini dapat menerjemahkan dan memoles teks di halaman, yang meningkatkan efisiensi kerja Anda secara signifikan.`,
+        desc: `<span class="highlight">Ketika membaca email atau mengobrol di WhatsApp, fitur ini dapat menerjemahkan dan memoles teks di halaman,</span> yang meningkatkan efisiensi kerja Anda secara signifikan.`,
       },
     },
     part5: {

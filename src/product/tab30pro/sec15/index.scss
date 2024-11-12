@@ -1,0 +1,91 @@
+@import '../vars';
+
+.tab30pro .sec15 {
+  .sec15_wrap {
+    position: relative;
+    height: px-to-vw(100);
+  }
+
+  .text_wrap {
+    position: absolute;
+    top: px-to-vw(160);
+    left: px-to-vw(360);
+    z-index: 1;
+    margin: 0 auto;
+  }
+
+  .text_wrap1 {
+    max-width: px-to-vw(700);
+
+    .desc_16 {
+      max-width: 92%;
+    }
+  }
+
+  .text_wrap2 {
+    max-width: var(--content-width);
+    opacity: 0;
+  }
+
+  .phone1 {
+    position: absolute;
+    top: px-to-vw(150);
+    left: px-to-vw(780);
+    width: px-to-vw(1132);
+  }
+
+  .phone2 {
+    position: absolute;
+    top: px-to-vw(418);
+    left: px-to-vw(342);
+    width: px-to-vw(1254);
+    opacity: 0;
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .tab30pro .sec15 {
+    .sec15_wrap {
+      height: px-to-vw-mb(1100);
+    }
+
+    .pic_wrap {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: px-to-vw-mb(750);
+    }
+
+    .phone1 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .phone2 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .all_text {
+      position: relative;
+      margin-top: px-to-vw-mb(-350);
+      padding: px-to-vw-mb(260) px-to-vw-mb(50) px-to-vw-mb(100) px-to-vw-mb(220);
+      background-color: #f0f0f0;
+
+      .text_wrap1 {
+        position: unset;
+        max-width: 100%;
+      }
+
+      .text_wrap2 {
+        top: px-to-vw-mb(260);
+        right: px-to-vw-mb(50);
+        left: px-to-vw-mb(220);
+      }
+    }
+  }
+}

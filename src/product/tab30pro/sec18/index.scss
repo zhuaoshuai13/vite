@@ -1,0 +1,111 @@
+@import '../vars';
+
+.tab30pro .sec18 {
+  padding: 0 0 px-to-vw(90);
+
+  .text_wrap {
+    display: flex;
+    gap: px-to-vw(100);
+    max-width: px-to-vw(1200);
+    margin: 0 auto;
+
+    .left_wrap {
+      flex-shrink: 0;
+      width: 50%;
+    }
+
+    .desc_16 {
+      margin-top: 0;
+    }
+  }
+
+  .box_wrap {
+    width: px-to-vw(1520);
+    height: px-to-vw(700);
+    margin: px-to-vw(32) auto 0;
+    padding: px-to-vw(160);
+    background-image: linear-gradient(to right, #f1f1f1 0%, #f7f7f7 100%);
+    border-radius: px-to-vw(20);
+  }
+
+  .switch_content {
+    position: relative;
+    height: px-to-vw(360);
+  }
+
+  .line_wrap {
+    position: absolute;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+
+    .active_line {
+      position: absolute;
+      top: 0;
+      left: -1px;
+      width: 4px;
+      height: calc(100% / 3);
+      background-color: #ff073c;
+      transition: all .5s;
+    }
+  }
+
+  .datas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: px-to-vw(330);
+    height: 100%;
+    margin-left: px-to-vw(24);
+
+    .data_wrap {
+      // max-height: px-to-vw(36);
+      overflow: hidden;
+      transition: all .5s;
+
+      &.active_data {
+        // max-height: px-to-vw(180);
+
+        .tran_wrap {
+          grid-template-rows: 1fr;
+        }
+
+        .desc_16 {
+          margin-top: px-to-vw(12);
+        }
+      }
+    }
+
+    .data_title {
+      font-size: px-to-vw(25);
+      font-family: "Medium";
+    }
+
+    .tran_wrap {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      transition: all .5s;
+    }
+
+    .desc_16 {
+      min-height: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .tab30pro .sec18 {
+    .sec18_wrap {
+      padding: 0 0 px-to-vw-mb(100);
+    }
+
+    .pic_wrap {
+      width: var(--content-width);
+      height: px-to-vw-mb(318);
+      margin: px-to-vw-mb(32) auto 0;
+    }
+  }
+}
