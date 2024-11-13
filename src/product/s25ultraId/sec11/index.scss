@@ -29,6 +29,12 @@
     }
   }
 
+  .phone3 {
+    img {
+      object-position: center bottom;
+    }
+  }
+
   .text_wrap {
     position: absolute;
     top: px-to-vw(75);
@@ -61,8 +67,8 @@
     }
 
     &:nth-child(2) {
-      right: px-to-vw(360);
-      max-width: px-to-vw(500);
+      right: px-to-vw(280);
+      max-width: px-to-vw(550);
       color: #0a2846;
 
       .desc_16 {

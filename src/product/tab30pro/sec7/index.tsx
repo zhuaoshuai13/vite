@@ -18,17 +18,110 @@ const Sec7 = () => {
   const sec7Ani = () => {
     const tl = gsap
       .timeline()
-      .to(".spec_part", { y: "-100%", ease: "power2.inOut" })
-      .fromTo(
-        ".phone2",
-        { rotateX: 0, opacity: 1, ease: "power2.inOut" },
-        { rotateX: 70, opacity: 0, duration: 0.1 },
+      .to(".text_wrap:not(:nth-child(2))", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      .to(
+        ".text_wrap:nth-child(2)",
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
         "a"
       )
+      .from(
+        ".icon_wrap1",
+        {
+          x: "100%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .to(".icon_wrap1", {
+        duration: 0.5,
+        ease: "power2.inOut",
+      })
       .to(
-        ".phone1",
-        { visibility: "visible", ease: "power2.inOut", duration: 0.1 },
+        ".text_wrap:not(:nth-child(3))",
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
         "b"
+      )
+      .to(
+        ".text_wrap:nth-child(3)",
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .to(
+        ".bg_wrap2",
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .from(
+        ".icon_wrap2",
+        {
+          x: "363%",
+          y: "204%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(
+        ".icon_wrap3",
+        {
+          x: "227%",
+          y: "189%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(
+        ".icon_wrap4",
+        {
+          x: "-147%",
+          y: "228%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(
+        ".icon_wrap5",
+        {
+          x: "-338%",
+          y: "67%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(
+        ".icon_wrap6",
+        {
+          x: "-48%",
+          y: "-102%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(
+        ".icon_wrap",
+        {
+          ease: "power2.inOut",
+        },
       )
     ScrollTrigger.create({
       trigger: ".sec7_wrap",
@@ -73,55 +166,179 @@ const Sec7 = () => {
   return (
     <section className='sec7' ref={wrap}>
       <div className='sec7_wrap'>
-        <div className='spec_part'>
-          <div className='spec_text_wrap'>
-            <div
-              className='spec_title'
-              dangerouslySetInnerHTML={{ __html: config?.sec7?.spec_title }}
-            ></div>
-            <p
-              className='spec_desc'
-              dangerouslySetInnerHTML={{ __html: config?.sec7?.spec_desc }}
-            ></p>
-          </div>
-        </div>
         <div className='content_wrap'>
-          <div className='text_wrap'>
-            <div
-              className='title_58'
-              dangerouslySetInnerHTML={{ __html: config?.sec7?.title }}
-            ></div>
-            <p
-              className='desc'
-              dangerouslySetInnerHTML={{ __html: config?.sec7?.desc }}
-            ></p>
-          </div>
           <div className='pic_wrap'>
-            <div className='img_wrap phone1'>
+            <div className='img_wrap bg_wrap bg_wrap1'>
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_p1_mb.png"}
+                  srcSet={src + "/images/mb/sec7_bg1_mb.png"}
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec7_p1_pc.png"}
+                  srcSet={src + "/images/pc/sec7_bg1_pc.png"}
                 />
-                <img loading='lazy' src={src + "/images/pc/sec7_p1_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec7_bg1_pc.png"} />
               </picture>
             </div>
-            <div className='img_wrap phone2'>
+            <div className='img_wrap bg_wrap bg_wrap2'>
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_p2_mb.png"}
+                  srcSet={src + "/images/mb/sec7_bg2_mb.png"}
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec7_p2_pc.png"}
+                  srcSet={src + "/images/pc/sec7_bg2_pc.png"}
                 />
-                <img loading='lazy' src={src + "/images/pc/sec7_p2_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec7_bg2_pc.png"} />
               </picture>
+            </div>
+            <div className='img_wrap icon_wrap icon_wrap1'>
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec7_icon1_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec7_icon1_pc.png"}
+                />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec7_icon1_pc.png"}
+                />
+              </picture>
+            </div>
+            <div className='img_wrap icon_wrap icon_wrap2'>
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec7_icon2_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec7_icon2_pc.png"}
+                />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec7_icon2_pc.png"}
+                />
+              </picture>
+            </div>
+            <div className='img_wrap icon_wrap icon_wrap3'>
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec7_icon3_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec7_icon3_pc.png"}
+                />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec7_icon3_pc.png"}
+                />
+              </picture>
+            </div>
+            <div className='img_wrap icon_wrap icon_wrap4'>
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec7_icon4_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec7_icon4_pc.png"}
+                />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec7_icon4_pc.png"}
+                />
+              </picture>
+            </div>
+            <div className='img_wrap icon_wrap icon_wrap5'>
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec7_icon5_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec7_icon5_pc.png"}
+                />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec7_icon5_pc.png"}
+                />
+              </picture>
+            </div>
+            <div className='img_wrap icon_wrap icon_wrap6'>
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec7_icon6_mb.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec7_icon6_pc.png"}
+                />
+                <img
+                  loading='lazy'
+                  src={src + "/images/pc/sec7_icon6_pc.png"}
+                />
+              </picture>
+            </div>
+          </div>
+          <div className='all_text'>
+            <div className='text_wrap'>
+              <div
+                className='title_58'
+                dangerouslySetInnerHTML={{ __html: config?.sec7?.part1?.title }}
+              ></div>
+              <div
+                className='subtitle_37'
+                dangerouslySetInnerHTML={{
+                  __html: config?.sec7?.part1?.subtitle,
+                }}
+              ></div>
+              <p
+                className='desc_16'
+                dangerouslySetInnerHTML={{ __html: config?.sec7?.part1?.desc }}
+              ></p>
+            </div>
+            <div className='text_wrap'>
+              <div
+                className='title_58'
+                dangerouslySetInnerHTML={{ __html: config?.sec7?.part2?.title }}
+              ></div>
+              <div
+                className='subtitle_37'
+                dangerouslySetInnerHTML={{
+                  __html: config?.sec7?.part2?.subtitle,
+                }}
+              ></div>
+              <p
+                className='desc_16'
+                dangerouslySetInnerHTML={{ __html: config?.sec7?.part2?.desc }}
+              ></p>
+            </div>
+            <div className='text_wrap'>
+              <div
+                className='title_58'
+                dangerouslySetInnerHTML={{ __html: config?.sec7?.part3?.title }}
+              ></div>
+              <div
+                className='subtitle_37'
+                dangerouslySetInnerHTML={{
+                  __html: config?.sec7?.part3?.subtitle,
+                }}
+              ></div>
+              <p
+                className='desc_16'
+                dangerouslySetInnerHTML={{ __html: config?.sec7?.part3?.desc }}
+              ></p>
             </div>
           </div>
         </div>

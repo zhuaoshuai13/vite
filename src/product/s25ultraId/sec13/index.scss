@@ -119,6 +119,24 @@
   }
 }
 
+@media (min-width: $mobwidthPx) {
+  .s25ultra .sec13 {
+    .part2 {
+      .text_wrap {
+        max-width: px-to-vw(900);
+      }
+
+      .pic_wrap {
+        position: absolute;
+        top: px-to-vw(100);
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
 @media (max-width: $mobwidthPx) {
   .s25ultra .sec13 {
     .sec13_wrap {}

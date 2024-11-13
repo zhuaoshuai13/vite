@@ -1,187 +1,170 @@
-import { useContext, useRef } from "react"
+import { useContext, useRef, useState } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
+import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
 const Sec9 = () => {
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
-  const wrap = useRef(null)
+  const wrap = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [activeIndex, setActiveIndex] = useState(0)
 
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+  const triggerSpace = () => {
+    if (wrap.current) {
+      return (
+        (window.innerHeight -
+          wrap?.current?.offsetHeight -
+          config?.navHeightPc) /
+          2 +
+        config?.navHeightPc
+      )
+    }
+    return window.innerHeight
+  }
 
   const sec9Ani = () => {
-    const tl = gsap
-      .timeline()
-      .from(".phone_wrap", {
-        x: "-100%",
-        y: "-100%",
-        opacity: 0,
-        ease: "power2.inOut",
-      })
-      .from(
-        ".sec9_bg",
-        {
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-        "a"
-      )
-      .from(
-        ".stone1_wrap",
-        {
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-        "a"
-      )
-      .from(
-        ".stone2_wrap",
-        {
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-        "a"
-      )
-      .from(
-        ".stone3_wrap",
-        {
-          opacity: 0,
-          scale: 0,
-          ease: "power2.inOut",
-          duration: 1,
-        },
-        "a"
-      )
-    ScrollTrigger.create({
-      trigger: ".sec9_wrap",
-      // pin: true,
-      start: `top 50%`,
-      // end: "+=300%",
-      animation: tl,
-      // scrub: 0.2,
-      toggleActions: "play none none reverse",
+    const tl = gsap.timeline().from(".text_wrap .desc_16", 1, {
+      // opacity: 0,
+      // y: 100,
+      ease: "power2.inOut",
     })
+    ScrollTrigger.create({
+      trigger: wrap.current,
+      start: `top ${triggerSpace()}`,
+      end: "+=200%",
+      pin: true,
+      scrub: 0.2,
+      animation: tl,
+      toggleActions: "play none none reverse",
+      onUpdate: (self) => {
+        setActiveIndex(Math.round(self.progress * 2))
+      },
+    })
+  }
 
-    // gsap.to(".stone3_wrap", {
-    //   y: -50,
-    //   duration: 1.5,
-    //   ease: "power1.inOut",
-    //   repeat: -1,
-    //   yoyo: true,
-    // })
+  const sec9AniMb = () => {
+    gsap.timeline().to(".sec9 .video_wrap", {
+      scrollTrigger: {
+        trigger: ".sec9 .video_wrap",
+        start: "top 100%",
+        onEnter: () => {
+          if (document.querySelector(".sec9 .video_wrap video")) {
+            ;(
+              document.querySelector(
+                ".sec9 .video_wrap video"
+              ) as HTMLVideoElement
+            )?.play()
+          }
+          videoRef.current?.play()
+        },
+      },
+    })
   }
 
   useGSAP(
     () => {
-      sec9Ani()
+      if (isPc) {
+        sec9Ani()
+      } else {
+        sec9AniMb()
+      }
     },
     { scope: wrap }
   )
 
   return (
-    <section className='sec9' ref={wrap}>
-      <div className='sec9_wrap'>
-        <div className='text_wrap slide_up'>
-          <div
-            className='title_58'
-            dangerouslySetInnerHTML={{ __html: config?.sec9?.title }}
-          ></div>
-          <p
-            className='desc_16'
-            dangerouslySetInnerHTML={{ __html: config?.sec9?.desc }}
-          ></p>
-        </div>
-        {isPc ? (
-          <div className='img_wrap sec9_bg'>
+    <section className='sec9'>
+      <div className='sec9_wrap' ref={wrap}>
+        <div className='img_wrap bg_wrap'>
+          <picture>
+            <source
+              media='(max-width: 750px)'
+              srcSet={src + "/images/mb/sec9_bg_mb.png"}
+            />
+            <source
+              media='(min-width: 751px)'
+              srcSet={src + "/images/pc/sec9_bg_pc.png"}
+            />
             <img loading='lazy' src={src + "/images/pc/sec9_bg_pc.png"} />
+          </picture>
+        </div>
+        <div className='text_wrap slide_up'>
+          <div className='left_wrap'>
+            <div
+              className='title_58'
+              dangerouslySetInnerHTML={{ __html: config?.sec9?.title }}
+            ></div>
+            <div
+              className='subtitle_37'
+              dangerouslySetInnerHTML={{ __html: config?.sec9?.subtitle }}
+            ></div>
           </div>
-        ) : null}
-        <div className='pic_wrap'>
-          {!isPc ? (
-            <div className='img_wrap sec9_bg'>
-              <img loading='lazy' src={src + "/images/mb/sec9_bg_mb.png"} />
-            </div>
-          ) : null}
-          <div className='img_wrap stone1_wrap'>
-            <picture>
-              <source
-                media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec9_stone_behind_mb.png"}
-              />
-              <source
-                media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec9_stone_behind_pc.png"}
-              />
-              <img
-                loading='lazy'
-                src={src + "/images/pc/sec9_stone_behind_pc.png"}
-              />
-            </picture>
-          </div>
-          <div className='img_wrap phone_wrap'>
-            <picture>
-              <source
-                media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec9_phone_mb.png"}
-              />
-              <source
-                media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec9_phone_pc.png"}
-              />
-              <img loading='lazy' src={src + "/images/pc/sec9_phone_pc.png"} />
-            </picture>
-          </div>
-          <div className='img_wrap stone2_wrap'>
-            <picture>
-              <source
-                media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec9_stone_front_mb.png"}
-              />
-              <source
-                media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec9_stone_front_pc.png"}
-              />
-              <img
-                loading='lazy'
-                src={src + "/images/pc/sec9_stone_front_pc.png"}
-              />
-            </picture>
-          </div>
-          <div className='img_wrap stone3_wrap'>
-            <picture>
-              <source
-                media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec9_stone_move_mb.png"}
-              />
-              <source
-                media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec9_stone_move_pc.png"}
-              />
-              <img
-                loading='lazy'
-                src={src + "/images/pc/sec9_stone_move_pc.png"}
-              />
-            </picture>
+          <div className='right_wrap'>
+            <p
+              className='desc_16'
+              dangerouslySetInnerHTML={{ __html: config?.sec9?.desc }}
+            ></p>
           </div>
         </div>
-        <div className='data_wrap slide_up'>
-          {config?.sec9?.data?.map((item: any, index: number) => (
-            <div className='data' key={index}>
-              <div className='title'>
-                {item.title}
-                {item.unit && <span className='unit'>{item.unit}</span>}
-              </div>
+        <div className='box_wrap'>
+          <div className='switch_content'>
+            <div className='line_wrap'>
               <div
-                className='desc'
-                dangerouslySetInnerHTML={{ __html: item.desc }}
+                className='active_line'
+                style={{ transform: `translateY(${activeIndex * 100}%)` }}
               ></div>
             </div>
-          ))}
+            <div className='datas'>
+              {config?.sec9?.data?.map((item: any, index: number) => {
+                return (
+                  <div
+                    className={`data_wrap ${
+                      index === activeIndex ? "active_data" : ""
+                    }`}
+                    key={index}
+                  >
+                    <div
+                      className='data_title'
+                      dangerouslySetInnerHTML={{ __html: item?.title }}
+                    ></div>
+                    <div className='tran_wrap'>
+                      <p
+                        className='desc_16'
+                        dangerouslySetInnerHTML={{ __html: item?.desc }}
+                      ></p>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div className='data_pic equal_parent'>
+            <div className='pic_wrap equal_parent'>
+              <div className='img_wrap phone1_wrap'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec9_1_1_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec9_1_1_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec9_1_1_pc.png"}
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

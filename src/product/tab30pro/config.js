@@ -90,6 +90,53 @@ window.tab30proConfig = {
       },
     ],
   },
+  sec6: {
+    title: "Screen Size Increased by 18%*",
+    subtitle: `Compared to Other Flagship Tablets`,
+    desc: "With a larger screen, you can enjoy a more immersive gaming experience and increase work efficiency. When browsing web pages or spreadsheets, you can view more content at once. This is the kind of large-screen experience that once you've tried, you won't want to go back to smaller screens.",
+  },
+  sec7: {
+    part1: {
+      title: "Work Smart On-The-Go",
+      subtitle: "Pre-Installed WPS Office",
+      desc: "It comes pre-installed with genuine WPS Office, ready to use right out of the box, offering a PC-level experience that makes it easy to handle professional documents, making it your perfect mobile office companion.",
+    },
+    part2: {
+      title: "PC-level File Processing Efficiency Pre-Installed WPS Office",
+      subtitle: "Pre-Installed WPS Office",
+      desc: "WPS supports viewing and editing 47 types of files, including doc, xls, and ppt. Work that used to only be possible on a computer can now be done on a tablet as well.",
+    },
+    part3: {
+      title: "Limited-time Offer",
+      subtitle: "WPS Membership Monthly Card Available for Free!*",
+      desc: "Experience a wealth of features and unparalleled office efficiency. WPS Membership Monthly Card is available, but quantities are limited, so get yours first come, first served!",
+    },
+  },
+  sec8: {
+    title: "Always Online Seamlessly",
+    subtitle: "High-speed 4G Network",
+    desc: "VistaTab 30 Pro supports 4G high-speed networks and dual SIM dual standby capabilities, ensuring you can surf the web effortlessly and maintain close contact with your partners wherever you are.",
+    data: ["Support Wi-Fi 5G", "Support Bluetooth 5.2"],
+  },
+  sec9: {
+    title: "Link Your World",
+    subtitle: "Multi-device Collaboration",
+    desc: "The VistaTab 30 Pro seamlessly connects with various devices, including smartphones, computers, and smartwatches, enabling convenient features like phone screen mirroring, fast file transfers, and viewing smartwatch data for enhanced efficiency in work and life.",
+    data: [
+      {
+        title: "Screen Mirroring",
+        desc: "Mirror your phone screen to your tablet and control your phone directly from the tablet.",
+      },
+      {
+        title: "Quick Share",
+        desc: "Connect to the same Wi-Fi and transfer files between your phone and tablet without using cellular data.",
+      },
+      {
+        title: "Smartwatch Data Sync",
+        desc: "Sync your health data seamlessly on your tablet.",
+      },
+    ],
+  },
   sec16: {
     title: "Unleash Creativity <br/> with AI",
     subtitle: "Learning Center",

@@ -116,7 +116,7 @@ const Sec5 = () => {
               ?.slice(0, 4)
               ?.map((item: any, index: number) => {
                 return (
-                  <div className='data'>
+                  <div className='data' key={index}>
                     <img src={item?.icon} />
                     <div className='data_text'>
                       <div
@@ -135,7 +135,7 @@ const Sec5 = () => {
           <div className='data_box'>
             {config?.sec5?.data?.slice(4)?.map((item: any, index: number) => {
               return (
-                <div className='data'>
+                <div className='data' key={index}>
                   <img src={item?.icon} />
                   <div className='data_text'>
                     <div

@@ -71,7 +71,7 @@ window.s25ultraConfig = {
     },
     item5: {
       title: `Kamera`,
-      desc: "Swafoto AI 32 MP",
+      desc: "Selfie AI 32 MP",
     },
     item6: {
       desc: `Dapat ditingkatkan ke Android 15™`,
@@ -123,7 +123,7 @@ window.s25ultraConfig = {
     },
     part2: {
       title: "Kaca pelindung yang tidak dapat dihancurkan",
-      desc: "itel S25 Ultra dilengkapi dengan Corning® Gorilla® Glass 7i yang terkemuka, meningkatkan ketahanan terhadap jatuh sebesar 160% dan ketahanan terhadap goresan sebesar 100% dibandingkan kaca reguler. Bahkan dari ketinggian jatuh 1,5 meter, layar tetap utuh.*",
+      desc: "itel S25 Ultra dilengkapi dengan Corning® Gorilla® Glass 7i yang terkemuka, meningkatkan ketahanan terhadap jatuh sebesar 160% dan ketahanan terhadap goresan sebesar 100% dibandingkan kaca reguler. Bahkan dari ketinggian jatuh 1,5 meter, layar tetap tangguh.*",
       data: [
         {
           icon: "sec4_icon6_pc.webp",
@@ -155,15 +155,15 @@ window.s25ultraConfig = {
   },
   sec5: {
     title: "Terlihat di bawah sinar matahari",
-    desc: "Kecerahan global mencapai 1.000 nit yang mengagumkan, dengan nilai puncak yang sangat tinggi pada 1.400 nit, yang memungkinkan Anda untuk mendapatkan konten yang menarik secara jelas di layar bahkan ketika di bawah sinar matahari langsung.*",
+    desc: "Kecerahan global mencapai 1.000 nit yang mengagumkan, dengan nilai puncak yang sangat tinggi pada 1.400 nit, yang memungkinkan Anda melihat layar dengan jelas bahkan saat dibawah sinar matahari langsung.*",
   },
   sec6: {
     part1: {
-      title: "Anti-salah sentuh pintar",
+      title: "smart anti mistouch",
       desc: "＜2% dalam laju sentuhan tidak disengaja*",
     },
     part2: {
-      title: "Tampilan Sentuhan Basah",
+      title: "wet touch display",
       desc: "Mendukung tangan basah & tangan berminyak",
     },
     part3: {
@@ -174,13 +174,13 @@ window.s25ultraConfig = {
   sec7: {
     spec_title: "KEUNGGULAN DALAM DAYA TAHAN",
     spec_desc:
-      "Sangat ramping, tetapi daya tahan luar biasa. <br/> Berani meraih teknologi dan bahan yang inovatif, memberikan pengalaman kelas atas bagi Anda.",
+      "Desain yang ramping dengan daya tahan yang luar biasa. <br class='pc'/> Berani menghadirkan teknologi dan material inovatif untuk pengalaman premium Anda.",
     title: "Setipis mata pisau.",
-    desc: "Hanya seberat 163 g & setipis 6,9 mm*",
+    desc: "Hanya seberat 163gr & setipis 6,9 mm*",
   },
   sec8: {
     title: "Tidak takut hujan",
-    desc: "Dengan peringkat IP64 untuk ketahanan terhadap debu dan air, perangkat ini terlindungi baik terhadap pemakaian dan keausan sehari-hari, termasuk rembesan debu dan percikan air ringan.",
+    desc: "Dengan peringkat IP64 untuk ketahanan terhadap debu dan air, perangkat ini terlindungi dari pemakaian sehari-hari, termasuk paparan debu dan percikan air ringan.",
   },
   sec9: {
     title: `Tahan <br class="pc"/> 25.000 benturan<span>*</span>`,
@@ -204,14 +204,14 @@ window.s25ultraConfig = {
       {
         title: "70/-40°C",
         unit: "",
-        desc: "Tes ekstrem suhu tinggi/rendah ultra",
+        desc: "Tes ekstrem suhu tinggi/rendah",
       },
     ],
   },
   sec10: {
     part1: {
       title: "Ring Penyegelan Silikon",
-      desc: "Dalam S25 Ultra, segel silikon diterapkan ke tepi layar dan penutup baterai, serta semua antarmuka eksternal, yang menawarkan ketahanan terhadap air dan kejut yang komprehensif.",
+      desc: "Pada S25 Ultra, segel silikon diterapkan di sepanjang tepi layar dan penutup baterai, serta semua antarmuka eksternal. Hal ini memberikan perlindungan maksimal terhadap air dan benturan secara menyeluruh.",
     },
     part2: {
       title: `Bingkai Bagian Dalam Logam Terintegrasi`,
@@ -229,14 +229,14 @@ window.s25ultraConfig = {
   sec11: {
     spec_title: "KEUNGGULAN DALAM ESTETIKA",
     spec_desc:
-      "Gambar inspirasi dari keajaiban alam, dengan estetika dan proses pembuatan tingkat lanjut, mengubah S25 Ultra menjadi item yang trendi! ",
+      `Inspirasi desain dari keindahan alam, dipadukan dengan proses pembuatan yang cermat, menjadikan S25 Ultra sebagai item trendi yang penuh estetika!`,
     part1: {
       title: "Kreasi yang elegan",
-      desc: "Mode di satu sisi, teknologi di sisi lain. Menggabungkan inspirasi alami dengan konsep desain yang canggih, Proses Lapisan Optik tingkat lanjut menciptakan tekstur ganda sentuhan akhir legap dan berkilau, yang menonjolkan kesan premium.",
+      desc: `Estetika bertemu dengan teknologi. Terinspirasi dari alam, dengan konsep desain modern dan Proses Lapisan Optik tingkat tinggi, menciptakan tekstur ganda yang halus dan berkilau, memberikan kesan premium yang elegan.`,
     },
     part2: {
-      title: "Kreasi yang modis",
-      desc: "Teknologi fotokromik unik memungkinkan Anda untuk menikmati dua warna Biru Mutiara yang sangat berbeda di ponsel Anda, yang menonjolkan keindahan alam. Memegangnya seperti memegang karya seni yang modis.",
+      title: "Kreasi yang Elegan",
+      desc: "Teknologi fotokromik yang inovatif memungkinkan Anda menikmati dua nuansa Biru Mutiara yang berbeda pada ponsel Anda, menonjolkan keindahan alam secara elegan. Menggenggamnya memberikan pengalaman seperti memegang karya seni yang modis.",
     },
     color: [
       {
@@ -273,12 +273,10 @@ window.s25ultraConfig = {
   },
   sec13: {
     spec_title: "KEUNGGULAN DALAM KINERJA",
-    spec_desc: `Peningkatan kinerja yang luar biasa, 
-digabungkan dengan penyesuaian perangkat lunak yang efektif, 
-pengalaman "ponsel baru" untuk banyak tahun.`,
+    spec_desc: `Peningkatan kinerja yang luar biasa, digabungkan dengan penyesuaian perangkat lunak yang efektif, memberikan pengalaman 'ponsel baru' yang bertahan lama.`,
     part1: {
       title: "60 bulan penggunaan yang lancar",
-      desc: "Setelah melewati pengujian yang ketat di lab itel, ponsel ini dijamin bebas lambat selama 5 tahun, berkat Teknologi Ekspansi Memori Virtual dan Teknologi Penyimpanan Atom, Anda tidak perlu khawatir lagi tentang melemahnya kinerja ponsel seiring waktu.",
+      desc: "Setelah melewati pengujian yang ketat di laboratorium itel, ponsel ini dijamin bebas dari lag selama 5 tahun. Berkat Teknologi Ekspansi Memori Virtual dan Teknologi Penyimpanan Atom, Anda tidak perlu khawatir lagi mengenai penurunan kinerja ponsel seiring berjalannya waktu.",
       data: [
         {
           subtitle: "RAM hingga",
@@ -300,8 +298,8 @@ pengalaman "ponsel baru" untuk banyak tahun.`,
     },
   },
   sec14: {
-    title: "Kemampuan penetrasi dinding super",
-    desc: `S25 Ultra mendukung Wi-Fi Super, yang menyediakan latensi ultrarendah untuk bermain game yang lancar dan secara otomatis beralih ke jaringan terbaik lintas jaringan Wi-Fi yang berbeda, yang menawarkan kekuatan sinyal yang lebih kuat secara signifikan di ruang publik dengan Wi-Fi bersama.`,
+    title: "Kemampuan Penetrasi Dinding yang Superior",
+    desc: `S25 Ultra mendukung Wi-Fi Super, yang menyediakan latensi ultra-rendah untuk pengalaman bermain game yang lancar. Selain itu, perangkat ini secara otomatis beralih ke jaringan terbaik di antara berbagai jaringan Wi-Fi, menawarkan kekuatan sinyal yang jauh lebih kuat di ruang publik dengan Wi-Fi bersama.`,
     data: [
       {
         title: "26 mdtk*",
@@ -324,16 +322,16 @@ pengalaman "ponsel baru" untuk banyak tahun.`,
     },
     part2: {
       title: "Tidak ada kompromi dalam bermain game",
-      desc: "Ponsel dengan Teknologi Pengisian Daya Bypass dapat diberi daya secara langsung tanpa melewati baterai, memastikan pengalaman bermain game atau menonton yang bebas panas saat mengisi daya secara bersamaan.*",
+      desc: "Dilengkapi dengan teknologi Bypass Charging yang memungkinkan pengisian daya langsung tanpa melalui baterai, memberikan pengalaman menonton dan bermain game yang nyaman tanpa khawatir perangkat menjadi panas saat pengisian daya berlangsung.",
     },
   },
   sec16: {
     spec_title: "KEUNGGULAN DALAM FOTOGRAFI",
     spec_desc:
-      "Kamera depan dan belakang ultrajernih, dengan fitur dan filter yang dibuat secara khusus, mengubah semua orang menjadi master fotografi.",
+      "Kamera depan dan belakang dengan resolusi ultra-jernih, dilengkapi fitur dan filter yang dirancang khusus, menjadikan setiap pengguna dapat menghasilkan foto berkualitas tinggi seperti seorang fotografer profesional.",
     front: {
       title: "32MP",
-      desc: "Kamera Swafoto AI",
+      desc: "Kamera selfie AI",
       data: [
         { data_title: "", data_desc: "Apertur: f/2,2" },
         { data_title: "", data_desc: "FOV: 88,9°" },
@@ -403,7 +401,7 @@ pengalaman "ponsel baru" untuk banyak tahun.`,
   sec19: {
     spec_title: "KEUNGGULAN DALAM PENGALAMAN",
     spec_desc:
-      "Setiap fitur disempurnakan secara teliti,dengan pembaruan dan pengoptimalan terus-menerus, memastikannya selalu ramah pengguna.",
+      "Setiap fitur dirancang dengan cermat dan terus disempurnakan melalui pembaruan dan pengoptimalan berkala, memastikan pengalaman yang selalu ramah pengguna.",
     part1: {
       desc: "Dengan didasarkan pada Android 14 terbaru, sistem ini memperkenalkan desain UI yang lebih modis dan fungsionalitas widget desktop yang disempurnakan, memberi Anda pengalaman sistem yang menyenangkan secara estetika dan lancar.",
     },
@@ -444,7 +442,7 @@ pengalaman "ponsel baru" untuk banyak tahun.`,
       },
       content2: {
         title: "NFC 720°",
-        desc: "Dengan NFC 720°, Anda dapat secara cepat menyelesaikan penggesekan kartu tanpa menyelaraskan ke sudut spesifik.*",
+        desc: "Dengan NFC 720°, Anda dapat dengan cepat melakukan pemindaian kartu tanpa perlu menyesuaikan posisi ke sudut tertentu.",
       },
       content3: {
         title: "Suara dari DTS",

@@ -14,7 +14,7 @@ const Sec8 = () => {
   return (
     <section className='sec8' ref={wrap}>
       <div className='sec8_wrap'>
-        <div className='img_wrap sec8_bg'>
+        <div className='img_wrap bg_wrap'>
           <picture>
             <source
               media='(max-width: 750px)'
@@ -27,15 +27,34 @@ const Sec8 = () => {
             <img loading='lazy' src={src + "/images/pc/sec8_bg_pc.png"} />
           </picture>
         </div>
-        <div className='text_wrap slide_up'>
-          <div
-            className='title_58'
-            dangerouslySetInnerHTML={{ __html: config?.sec8?.title }}
-          ></div>
-          <p
-            className='desc_16'
-            dangerouslySetInnerHTML={{ __html: config?.sec8?.desc }}
-          ></p>
+        <div className='content_wrap'>
+          <div className='text_wrap slide_up'>
+            <div
+              className='title_58'
+              dangerouslySetInnerHTML={{ __html: config?.sec8?.title }}
+            ></div>
+            <div
+              className='subtitle_37'
+              dangerouslySetInnerHTML={{
+                __html: config?.sec8?.subtitle,
+              }}
+            ></div>
+            <p
+              className='desc_16'
+              dangerouslySetInnerHTML={{ __html: config?.sec8?.desc }}
+            ></p>
+          </div>
+          <div className='datas slide_up'>
+            {config?.sec8?.data?.map((item: any, index: number) => {
+              return (
+                <div
+                  className='data'
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: item }}
+                ></div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>
