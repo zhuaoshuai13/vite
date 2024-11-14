@@ -17,307 +17,49 @@ const Sec10 = () => {
   const sec10Ani = () => {
     const tl = gsap
       .timeline()
-      .from(
-        ".phone4",
+      .to(
+        ".part1",
         {
-          scale: 0.9,
+          x: "-100%",
           ease: "power2.inOut",
-          duration: 2,
         },
         "a"
       )
-      .from(
-        ".phone3",
+      .to(
+        ".part2",
         {
-          x: "2%",
-          y: "7%",
+          x: 0,
           ease: "power2.inOut",
-          duration: 2,
         },
         "a"
       )
-      .from(
-        ".phone2",
-        {
-          x: "7%",
-          y: "3%",
-          ease: "power2.inOut",
-          duration: 2,
-        },
-        "a"
-      )
-      .from(
-        ".phone1",
-        {
-          x: "14%",
-          y: "5%",
-          scale: 1.05,
-          ease: "power2.inOut",
-          duration: 2,
-        },
-        "a"
-      )
-      .from(
-        ".phone5",
-        {
-          x: "-4%",
-          y: "0%",
-          rotate: "2deg",
-          ease: "power2.inOut",
-          duration: 2,
-        },
-        "a"
-      )
-      .from(
-        ".phone6",
-        {
-          x: "-10%",
-          y: "-7%",
-          rotate: "4deg",
-          ease: "power2.inOut",
-          duration: 2,
-        },
-        "a"
-      )
-      .from(
-        ".phone7",
-        {
-          x: "-13%",
-          y: "-16%",
-          rotate: "5deg",
-          ease: "power2.inOut",
-          duration: 2,
-        },
-        "a"
-      )
-    ScrollTrigger.create({
-      trigger: ".sec10_wrap",
-      start: `top 50%`,
-      // end: "+=300%",
-      animation: tl,
-      toggleActions: "play none none reverse",
-    })
-
-    const t2 = gsap
-      .timeline()
       .to(
-        ".phone3",
+        ".part2",
         {
-          left: "-3%",
-          top: "-10%",
-          ease: "power2.inOut",
-        },
-        "b"
-      )
-      .to(
-        ".phone2",
-        {
-          left: "-10%",
-          top: "-34%",
-          ease: "power2.inOut",
-        },
-        "b"
-      )
-      .to(
-        ".phone1",
-        {
-          left: "-21%",
-          top: "-47%",
-          ease: "power2.inOut",
-        },
-        "b"
-      )
-      .to(
-        ".phone5",
-        {
-          left: "10%",
-          top: "10%",
-          ease: "power2.inOut",
-        },
-        "b"
-      )
-      .to(
-        ".phone6",
-        {
-          left: "20%",
-          top: "20%",
-          ease: "power2.inOut",
-        },
-        "b"
-      )
-      .to(
-        ".phone7",
-        {
-          left: "35%",
-          top: "15%",
-          ease: "power2.inOut",
-        },
-        "b"
-      )
-      .to(
-        ".phone_items",
-        {
-          x: "40%",
-          y: "50%",
-          rotate: "20deg",
+          x: "-100%",
           ease: "power2.inOut",
         },
         "c"
       )
       .to(
-        ".phone_wrap:not(.phone2)",
+        ".part3",
         {
-          opacity: 0.2,
+          x: 0,
           ease: "power2.inOut",
         },
         "c"
       )
-      .to(
-        ".text1",
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-        },
-        "c"
-      )
-      .to(
-        ".phone_wrap:not(.phone3):not(.phone4)",
-        {
-          opacity: 0.2,
-          ease: "power2.inOut",
-        },
-        "d"
-      )
-      .to(
-        [".phone3", ".phone4"],
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-        },
-        "d"
-      )
-      .to(
-        ".phone_items",
-        {
-          x: "25%",
-          y: "10%",
-          ease: "power2.inOut",
-        },
-        "d"
-      )
-      .to(
-        ".text1",
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-        },
-        "d"
-      )
-      .to(
-        ".text_wrap:not(.text2)",
-        {
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-        "d"
-      )
-      .to(
-        ".text2",
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-        },
-        "d+=0.2"
-      )
-      .to(
-        ".phone_wrap:not(.phone5)",
-        {
-          opacity: 0.2,
-          ease: "power2.inOut",
-        },
-        "e"
-      )
-      .to(
-        ".phone5",
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-        },
-        "e"
-      )
-      .to(
-        ".phone_items",
-        {
-          x: "16%",
-          y: "-32%",
-          ease: "power2.inOut",
-        },
-        "e"
-      )
-      .to(
-        ".text_wrap:not(.text3)",
-        {
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-        "e"
-      )
-      .to(
-        ".text3",
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-        },
-        "e+=0.2"
-      )
-      .to(
-        ".phone_wrap:not(.phone6)",
-        {
-          opacity: 0.2,
-          ease: "power2.inOut",
-        },
-        "f"
-      )
-      .to(
-        ".phone6",
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-        },
-        "f"
-      )
-      .to(
-        ".phone_items",
-        {
-          x: "-9%",
-          y: "-64%",
-          ease: "power2.inOut",
-        },
-        "f"
-      )
-      .to(
-        ".text_wrap:not(.text4)",
-        {
-          opacity: 0,
-          ease: "power2.inOut",
-        },
-        "f"
-      )
-      .to(
-        ".text4",
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-        },
-        "f+=0.2"
-      )
+      .from([".part3 .phone_wrap2", ".part3 .phone_wrap3"], {
+        clipPath: "inset(100% 0 0 0)",
+        ease: "power2.inOut",
+      })
     ScrollTrigger.create({
       trigger: ".sec10_wrap",
       start: `top 0%`,
       end: "+=500%",
       pin: true,
       scrub: 0.2,
-      animation: t2,
+      animation: tl,
       toggleActions: "play none none reverse",
     })
   }
@@ -631,234 +373,202 @@ const Sec10 = () => {
   return (
     <section className='sec10' ref={wrap}>
       <div className='sec10_wrap'>
-        <div className='pic_wrap'>
-          <div className='img_wrap bg_wrap'>
-            <picture>
-              <source
-                media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec10_bg_mb.png"}
-              />
-              <source
-                media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec10_bg_pc.png"}
-              />
-              <img loading='lazy' src={src + "/images/pc/sec10_bg_pc.png"} />
-            </picture>
-          </div>
-          <div className='phone_items'>
-            <div className='img_wrap phone_wrap phone7'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p7_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec10_p7_pc.png"}
-                />
-                <img loading='lazy' src={src + "/images/pc/sec10_p7_pc.png"} />
-              </picture>
-            </div>
-            <div className='img_wrap phone_wrap phone6'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p6_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec10_p6_pc.png"}
-                />
-                <img loading='lazy' src={src + "/images/pc/sec10_p6_pc.png"} />
-              </picture>
-            </div>
-            <div className='img_wrap phone_wrap phone5'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p5_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec10_p5_pc.png"}
-                />
-                <img loading='lazy' src={src + "/images/pc/sec10_p5_pc.png"} />
-              </picture>
-            </div>
-            <div className='img_wrap phone_wrap phone4'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p4_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec10_p4_pc.png"}
-                />
-                <img loading='lazy' src={src + "/images/pc/sec10_p4_pc.png"} />
-              </picture>
-            </div>
-            <div className='img_wrap phone_wrap phone3'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p3_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec10_p3_pc.png"}
-                />
-                <img loading='lazy' src={src + "/images/pc/sec10_p3_pc.png"} />
-              </picture>
-            </div>
-            <div className='img_wrap phone_wrap phone2'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p2_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec10_p2_pc.png"}
-                />
-                <img loading='lazy' src={src + "/images/pc/sec10_p2_pc.png"} />
-              </picture>
-            </div>
-            <div className='img_wrap phone_wrap phone1'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec10_p1_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec10_p1_pc.png"}
-                />
-                <img loading='lazy' src={src + "/images/pc/sec10_p1_pc.png"} />
-              </picture>
-            </div>
-          </div>
-          {isPc ? (
-            <div className='text_items'>
-              <div className='text_wrap text1'>
-                <div
-                  className='title'
-                  dangerouslySetInnerHTML={{
-                    __html: config?.sec10?.part1?.title,
-                  }}
-                ></div>
-                <p
-                  className='desc_16'
-                  dangerouslySetInnerHTML={{
-                    __html: config?.sec10?.part1?.desc,
-                  }}
-                ></p>
-              </div>
-              <div className='text_wrap text2'>
-                <div
-                  className='title'
-                  dangerouslySetInnerHTML={{
-                    __html: config?.sec10?.part2?.title,
-                  }}
-                ></div>
-                <p
-                  className='desc_16'
-                  dangerouslySetInnerHTML={{
-                    __html: config?.sec10?.part2?.desc,
-                  }}
-                ></p>
-              </div>
-              <div className='text_wrap text3'>
-                <div
-                  className='title'
-                  dangerouslySetInnerHTML={{
-                    __html: config?.sec10?.part3?.title,
-                  }}
-                ></div>
-                <p
-                  className='desc_16'
-                  dangerouslySetInnerHTML={{
-                    __html: config?.sec10?.part3?.desc,
-                  }}
-                ></p>
-              </div>
-              <div className='text_wrap text4'>
-                <div
-                  className='title'
-                  dangerouslySetInnerHTML={{
-                    __html: config?.sec10?.part4?.title,
-                  }}
-                ></div>
-                <p
-                  className='desc_16'
-                  dangerouslySetInnerHTML={{
-                    __html: config?.sec10?.part4?.desc,
-                  }}
-                ></p>
-              </div>
-            </div>
-          ) : null}
-        </div>
-        {!isPc ? (
-          <div className='text_items'>
-            <div className='text_wrap text1'>
+        <div className='parts'>
+          <div className='part equal_parent part1'>
+            <div className='text_wrap'>
               <div
-                className='title'
+                className='title_58'
                 dangerouslySetInnerHTML={{
                   __html: config?.sec10?.part1?.title,
                 }}
               ></div>
+              <div
+                className='subtitle_37'
+                dangerouslySetInnerHTML={{
+                  __html: config?.sec10?.part1?.subtitle,
+                }}
+              ></div>
               <p
                 className='desc_16'
-                dangerouslySetInnerHTML={{
-                  __html: config?.sec10?.part1?.desc,
-                }}
+                dangerouslySetInnerHTML={{ __html: config?.sec10?.part1?.desc }}
               ></p>
             </div>
-            <div className='text_wrap text2'>
+            <div className='pic_wrap equal_parent'>
+              <div className='img_wrap phone_wrap1'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec10_1_1_pc.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec10_1_1_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec10_1_1_pc.png"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap phone_wrap2'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec10_1_2_pc.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec10_1_2_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec10_1_2_pc.png"}
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div className='part equal_parent part2'>
+            <div className='text_wrap'>
               <div
-                className='title'
+                className='title_58'
                 dangerouslySetInnerHTML={{
                   __html: config?.sec10?.part2?.title,
                 }}
               ></div>
+              <div
+                className='subtitle_37'
+                dangerouslySetInnerHTML={{
+                  __html: config?.sec10?.part2?.subtitle,
+                }}
+              ></div>
               <p
                 className='desc_16'
-                dangerouslySetInnerHTML={{
-                  __html: config?.sec10?.part2?.desc,
-                }}
+                dangerouslySetInnerHTML={{ __html: config?.sec10?.part2?.desc }}
               ></p>
             </div>
-            <div className='text_wrap text3'>
+            <div className='pic_wrap equal_parent'>
+              <div className='img_wrap phone_wrap1'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec10_2_1_pc.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec10_2_1_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec10_2_1_pc.png"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap phone_wrap2'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec10_2_2_pc.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec10_2_2_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec10_2_2_pc.png"}
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div className='part equal_parent part3'>
+            <div className='text_wrap'>
               <div
-                className='title'
+                className='title_58'
                 dangerouslySetInnerHTML={{
                   __html: config?.sec10?.part3?.title,
                 }}
               ></div>
-              <p
-                className='desc_16'
-                dangerouslySetInnerHTML={{
-                  __html: config?.sec10?.part3?.desc,
-                }}
-              ></p>
-            </div>
-            <div className='text_wrap text4'>
               <div
-                className='title'
+                className='subtitle_37'
                 dangerouslySetInnerHTML={{
-                  __html: config?.sec10?.part4?.title,
+                  __html: config?.sec10?.part3?.subtitle,
                 }}
               ></div>
               <p
                 className='desc_16'
-                dangerouslySetInnerHTML={{
-                  __html: config?.sec10?.part4?.desc,
-                }}
+                dangerouslySetInnerHTML={{ __html: config?.sec10?.part3?.desc }}
               ></p>
+              <div className='img_wrap wps_wrap'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec10_3_4_pc.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec10_3_4_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec10_3_4_pc.png"}
+                  />
+                </picture>
+              </div>
+            </div>
+            <div className='pic_wrap equal_parent'>
+              <div className='img_wrap phone_wrap1'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec10_3_1_pc.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec10_3_1_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec10_3_1_pc.png"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap phone_wrap2'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec10_3_2_pc.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec10_3_2_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec10_3_2_pc.png"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap phone_wrap3'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec10_3_3_pc.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec10_3_3_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec10_3_3_pc.png"}
+                  />
+                </picture>
+              </div>
             </div>
           </div>
-        ) : null}
+        </div>
       </div>
     </section>
   )

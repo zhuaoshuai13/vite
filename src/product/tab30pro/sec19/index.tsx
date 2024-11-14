@@ -35,19 +35,6 @@ const Sec19 = () => {
         <div className='box_wrap'>
           <div className='left_wrap'>
             <div className='box_item'>
-              <div className='img_wrap'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec6_p2_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec6_p2_pc.png"}
-                  />
-                  <img loading='lazy' src={src + "/images/pc/sec6_p2_pc.png"} />
-                </picture>
-              </div>
               <div className='text_wrap'>
                 <div
                   className='title'
@@ -62,23 +49,26 @@ const Sec19 = () => {
                   }}
                 ></div>
               </div>
+              <div className='img_wrap img_wrap1'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec19_f1_pc.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec19_f1_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec19_f1_pc.png"}
+                  />
+                </picture>
+              </div>
             </div>
           </div>
           <div className='right_wrap'>
             <div className='box_item'>
-              <div className='img_wrap'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec6_p2_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec6_p2_pc.png"}
-                  />
-                  <img loading='lazy' src={src + "/images/pc/sec6_p2_pc.png"} />
-                </picture>
-              </div>
               <div className='text_wrap'>
                 <div
                   className='title'
@@ -93,21 +83,24 @@ const Sec19 = () => {
                   }}
                 ></div>
               </div>
-            </div>
-            <div className='box_item'>
-              <div className='img_wrap'>
+              <div className='img_wrap img_wrap2'>
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec6_p2_mb.png"}
+                    srcSet={src + "/images/mb/sec19_f2_pc.png"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec6_p2_pc.png"}
+                    srcSet={src + "/images/pc/sec19_f2_pc.png"}
                   />
-                  <img loading='lazy' src={src + "/images/pc/sec6_p2_pc.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec19_f2_pc.png"}
+                  />
                 </picture>
               </div>
+            </div>
+            <div className='box_item'>
               <div className='text_wrap'>
                 <div
                   className='title'
@@ -122,6 +115,22 @@ const Sec19 = () => {
                   }}
                 ></div>
               </div>
+              <div className='img_wrap img_wrap3'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec19_f3_pc.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec19_f3_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec19_f3_pc.png"}
+                  />
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -130,7 +139,7 @@ const Sec19 = () => {
             className='note'
             dangerouslySetInnerHTML={{ __html: config?.sec19?.notes + ":" }}
           ></div>
-          {config?.sec19?.tips?.map((item, index) => (
+          {config?.sec19?.tips?.map((item: string, index: number) => (
             <p
               dangerouslySetInnerHTML={{ __html: item }}
               key={index}

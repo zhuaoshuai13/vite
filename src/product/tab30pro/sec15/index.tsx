@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react"
+import React, { useContext, useRef } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -16,39 +16,24 @@ const Sec15 = () => {
   const sec15Ani = () => {
     const tl = gsap
       .timeline()
-      // .to(
-      //   ".phone1",
-      //   {
-      //     x: "-24%",
-      //     y: "24%",
-      //     rotate: "44.7deg",
-      //     ease: "power2.inOut",
-      //   },
-      //   "a"
-      // )
       .to(
         ".text_wrap1",
         {
           opacity: 0,
           ease: "power2.inOut",
+          duration: 1,
         },
         "a"
       )
       .to(
-        ".text_wrap2",
+        [".text_wrap2", ".bg_wrap2", ".datas"],
         {
           opacity: 1,
           ease: "power2.inOut",
+          duration: 1,
+          delay: 0.5,
         },
-        "b"
-      )
-      .to(
-        ".phone2",
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-        },
-        "b"
+        "a"
       )
     ScrollTrigger.create({
       trigger: ".sec15_wrap",
@@ -112,35 +97,30 @@ const Sec15 = () => {
     <section className='sec15' ref={wrap}>
       <div className='sec15_wrap'>
         <div className='pic_wrap'>
-          <div
-            className='img_wrap phone1'
-            style={
-              isPc ? { transform: "translate(-24%, 24%) rotate(44.7deg)" } : {}
-            }
-          >
+          <div className='img_wrap equal_parent bg_wrap1'>
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec15_p1_mb.png"}
+                srcSet={src + "/images/mb/sec15_f1_pc.png"}
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec15_p1_pc.png"}
+                srcSet={src + "/images/pc/sec15_f1_pc.png"}
               />
-              <img loading='lazy' src={src + "/images/pc/sec15_p1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec15_f1_pc.png"} />
             </picture>
           </div>
-          <div className='img_wrap phone2'>
+          <div className='img_wrap equal_parent bg_wrap2'>
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec15_p2_mb.png"}
+                srcSet={src + "/images/mb/sec15_f2_pc.png"}
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec15_p2_pc.png"}
+                srcSet={src + "/images/pc/sec15_f2_pc.png"}
               />
-              <img loading='lazy' src={src + "/images/pc/sec15_p2_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec15_f2_pc.png"} />
             </picture>
           </div>
         </div>
@@ -150,6 +130,12 @@ const Sec15 = () => {
               className='title_58'
               dangerouslySetInnerHTML={{
                 __html: config?.sec15?.part1?.title,
+              }}
+            ></div>
+            <div
+              className='subtitle_37'
+              dangerouslySetInnerHTML={{
+                __html: config?.sec15?.part1?.subtitle,
               }}
             ></div>
             <p
@@ -164,11 +150,38 @@ const Sec15 = () => {
                 __html: config?.sec15?.part2?.title,
               }}
             ></div>
+            <div
+              className='subtitle_37'
+              dangerouslySetInnerHTML={{
+                __html: config?.sec15?.part2?.subtitle,
+              }}
+            ></div>
             <p
               className='desc_16'
               dangerouslySetInnerHTML={{ __html: config?.sec15?.part2?.desc }}
             ></p>
           </div>
+        </div>
+        <div className='datas'>
+          {config?.sec15?.part2?.data?.map((item: any, index: number) => {
+            return (
+              <React.Fragment key={index}>
+                <div className='data_item'>
+                  <div
+                    className='data_title'
+                    dangerouslySetInnerHTML={{ __html: item?.title }}
+                  ></div>
+                  <div
+                    className='data_desc'
+                    dangerouslySetInnerHTML={{ __html: item?.desc }}
+                  ></div>
+                </div>
+                {index !== config?.sec14?.data?.length - 1 && (
+                  <div className='data_line'></div>
+                )}
+              </React.Fragment>
+            )
+          })}
         </div>
       </div>
     </section>

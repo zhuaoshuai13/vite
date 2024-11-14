@@ -3,43 +3,65 @@
 .tab30pro .sec15 {
   .sec15_wrap {
     position: relative;
-    height: px-to-vw(100);
+    height: px-to-vw(1090);
+  }
+
+  .bg_wrap2 {
+    opacity: 0;
   }
 
   .text_wrap {
     position: absolute;
-    top: px-to-vw(160);
+    top: px-to-vw(100);
     left: px-to-vw(360);
     z-index: 1;
+    width: var(--content-width);
     margin: 0 auto;
-  }
-
-  .text_wrap1 {
-    max-width: px-to-vw(700);
+    color: #fff;
 
     .desc_16 {
-      max-width: 92%;
+      color: #fff;
     }
   }
 
   .text_wrap2 {
-    max-width: var(--content-width);
     opacity: 0;
   }
 
-  .phone1 {
+  .datas {
     position: absolute;
-    top: px-to-vw(150);
-    left: px-to-vw(780);
-    width: px-to-vw(1132);
-  }
-
-  .phone2 {
-    position: absolute;
-    top: px-to-vw(418);
-    left: px-to-vw(342);
-    width: px-to-vw(1254);
+    top: px-to-vw(810);
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: var(--content-width);
+    min-height: px-to-vw(150);
+    margin: 0 auto;
+    color: #fff;
+    background-size: 100% 100% !important;
     opacity: 0;
+
+    @include bg("pc/sec15_data_bg_pc.png", false);
+
+    .data_title {
+      font-size: px-to-vw(29);
+      font-family: "Regular";
+    }
+
+    .data_desc {
+      margin-top: px-to-vw(8);
+      font-size: px-to-vw(16.6);
+      font-family: "Regular";
+    }
+
+    .data_line {
+      display: block;
+      width: 1px;
+      height: px-to-vw(53);
+      background-color: #fff;
+    }
   }
 }
 

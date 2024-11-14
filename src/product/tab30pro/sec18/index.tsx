@@ -4,7 +4,6 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
@@ -15,6 +14,21 @@ const Sec18 = () => {
   const wrap = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
+
+  const picArray = [
+    {
+      pc: src + "/images/pc/sec18_f1_pc.png",
+      mb: src + "/images/pc/sec18_f1_pc.png",
+    },
+    {
+      pc: src + "/images/pc/sec18_f2_pc.png",
+      mb: src + "/images/pc/sec18_f2_pc.png",
+    },
+    {
+      pc: src + "/images/pc/sec18_f3_pc.png",
+      mb: src + "/images/pc/sec18_f3_pc.png",
+    },
+  ]
 
   const triggerSpace = () => {
     if (wrap.current) {
@@ -131,6 +145,24 @@ const Sec18 = () => {
                 )
               })}
             </div>
+          </div>
+          <div className='pic_wrap equal_parent'>
+            {picArray.map((item, index) => {
+              return (
+                <div
+                  className={`img_wrap equal_parent ${
+                    activeIndex === index ? "active_img_wrap" : ""
+                  }`}
+                  key={index}
+                >
+                  <picture>
+                    <source media='(max-width: 750px)' srcSet={item?.mb} />
+                    <source media='(min-width: 751px)' srcSet={item?.pc} />
+                    <img loading='lazy' src={item?.pc} />
+                  </picture>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>

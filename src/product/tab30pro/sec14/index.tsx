@@ -1,202 +1,94 @@
-// import { useContext, useRef } from "react"
-// import { ScreenContext } from "../../../provider"
+import { useContext, useRef } from "react"
+import { ScreenContext } from "../../../provider"
+import React from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-// import { useGSAP } from "@gsap/react"
+import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
 
 const Sec14 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { tab30proConfig: config, src } = window as any
-  // const { isPc } = useContext(ScreenContext)
-  // const wrap = useRef(null)
+  const { isPc } = useContext(ScreenContext)
+  const wrap = useRef(null)
 
-  // const sec14Ani = () => {
-  //   const tl = gsap
-  //     .timeline()
-  //     .from(".ani_wrap", {
-  //       rotate: isPc ? "-7deg" : "-4deg",
-  //       ease: "power2.inOut",
-  //     })
-  //   ScrollTrigger.create({
-  //     trigger: ".sec14_wrap",
-  //     start: `top 30%`,
-  //     animation: tl,
-  //     toggleActions: "play none none reverse",
-  //   })
-  // }
+  const sec14Ani = () => {
+    const tl = gsap.timeline().from(".phone_wrap", {
+      x: "100%",
+      duration: 1,
+      ease: "power2.inOut",
+    })
+    ScrollTrigger.create({
+      trigger: ".phone_wrap",
+      start: `top 80%`,
+      animation: tl,
+      toggleActions: "play none none reverse",
+    })
+  }
 
-  // useGSAP(
-  //   () => {
-  //     sec14Ani()
-  //   },
-  //   { scope: wrap }
-  // )
+  useGSAP(
+    () => {
+      sec14Ani()
+    },
+    { scope: wrap }
+  )
 
   return (
     <section className='sec14'>
-      <div className='sec14_wrap'>
-        <div className='top_wrap'>
-          <div className='img_wrap ellipse_wrap'>
-            <picture>
-              <source
-                media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec14_ellipse_mb.png"}
-              />
-              <source
-                media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec14_ellipse_pc.png"}
-              />
-              <img
-                loading='lazy'
-                src={src + "/images/pc/sec14_ellipse_pc.png"}
-              />
-            </picture>
-          </div>
-          <div className='img_wrap wifi_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec14_wifi_pc.png"} />
-          </div>
-        </div>
-        <div className='bottom_wrap'>
-          <div className='text_wrap'>
+      <div className='sec14_wrap' ref={wrap}>
+        <div className='text_wrap slide_up'>
+          <div className='left_wrap'>
             <div
               className='title_58'
               dangerouslySetInnerHTML={{ __html: config?.sec14?.title }}
             ></div>
+            <div
+              className='subtitle_37'
+              dangerouslySetInnerHTML={{ __html: config?.sec14?.subtitle }}
+            ></div>
           </div>
-          <div className='pic_wrap'>
-            <div className='img_wrap bg_wrap'>
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec14_bg_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec14_bg_pc.png"}
-                />
-                <img loading='lazy' src={src + "/images/pc/sec14_bg_pc.png"} />
-              </picture>
-            </div>
-            <div className='ani_wrap'>
-              <div className='img_wrap left_hand1'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec14_lefthand1_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec14_lefthand1_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec14_lefthand1_pc.png"}
-                  />
-                </picture>
-              </div>
-              <div className='img_wrap right_hand1'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec14_righthand1_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec14_righthand1_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec14_righthand1_pc.png"}
-                  />
-                </picture>
-              </div>
-              <div className='img_wrap phone_wrap'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec14_phone_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec14_phone_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec14_phone_pc.png"}
-                  />
-                </picture>
-              </div>
-              <div className='circleBox left_circle'>
-                <div className='circle'></div>
-                <div className='circle1'></div>
-                <div className='circle2'></div>
-                <div className='circle3'></div>
-              </div>
-              <div className='circleBox right_circle'>
-                <div className='circle'></div>
-                <div className='circle1'></div>
-                <div className='circle2'></div>
-                <div className='circle3'></div>
-              </div>
-              <div className='img_wrap left_hand2'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec14_lefthand2_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec14_lefthand2_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec14_lefthand2_pc.png"}
-                  />
-                </picture>
-              </div>
-              <div className='img_wrap right_hand2'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec14_righthand2_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec14_righthand2_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec14_righthand2_pc.png"}
-                  />
-                </picture>
-              </div>
-            </div>
-            <div className='text_wrap bottom_text'>
-              <div
-                className='desc_16'
-                dangerouslySetInnerHTML={{ __html: config?.sec14?.desc }}
-              ></div>
-            </div>
+          <div className='right_wrap'>
+            <p
+              className='desc_16'
+              dangerouslySetInnerHTML={{ __html: config?.sec14?.desc }}
+            ></p>
           </div>
-          <div className='data_wrap'>
-            {config?.sec14?.data?.map((item: any, index: number) => {
-              return (
-                <div className='data' key={index}>
+        </div>
+        <div className='img_wrap phone_wrap'>
+          <picture>
+            <source
+              media='(max-width: 750px)'
+              srcSet={src + "/images/mb/sec14_f1_pc.png"}
+            />
+            <source
+              media='(min-width: 751px)'
+              srcSet={src + "/images/pc/sec14_f1_pc.png"}
+            />
+            <img loading='lazy' src={src + "/images/pc/sec14_f1_pc.png"} />
+          </picture>
+        </div>
+        <div className='datas slide_up'>
+          {config?.sec14?.data?.map((item: any, index: number) => {
+            return (
+              <React.Fragment key={index}>
+                <div className='data_item'>
                   <div
                     className='data_title'
-                    dangerouslySetInnerHTML={{ __html: item.title }}
+                    dangerouslySetInnerHTML={{ __html: item?.title }}
                   ></div>
                   <div
-                    className='desc_16'
-                    dangerouslySetInnerHTML={{ __html: item.desc }}
+                    className='data_desc'
+                    dangerouslySetInnerHTML={{ __html: item?.desc }}
                   ></div>
                 </div>
-              )
-            })}
-          </div>
+                {index !== config?.sec14?.data?.length - 1 && (
+                  <div className='data_line'></div>
+                )}
+              </React.Fragment>
+            )
+          })}
         </div>
       </div>
     </section>

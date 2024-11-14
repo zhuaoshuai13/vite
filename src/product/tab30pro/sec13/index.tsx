@@ -16,49 +16,25 @@ const Sec13 = () => {
   const sec13Ani = () => {
     const tl = gsap
       .timeline()
-      .to(".spec_part", 1, { y: "-100%", ease: "power2.inOut" })
-      .from(".part1 .chip_wrap", {
-        opacity: 0,
+      .to(".text_wrap>.desc_16", { opacity: 0, ease: "power2.inOut" })
+      .to(".text_wrap>.desc_16", {
+        display: "none",
+        duration: 0.1,
         ease: "power2.inOut",
       })
-      .from(".part1 .light_wrap", {
-        opacity: 0,
+      .to([".datas", ".compare_wrap"], {
+        opacity: 1,
         ease: "power2.inOut",
       })
-      .from(".part1 .data_wrap", {
-        opacity: 0,
+      .from(".score_line", {
+        width: 0,
         ease: "power2.inOut",
       })
-      .to(
-        ".part1",
-        {
-          x: "-100%",
-          ease: "power2.inOut",
-        },
-        "c"
-      )
-      .to(
-        ".part2",
-        {
-          x: 0,
-          ease: "power2.inOut",
-        },
-        "c"
-      )
-      .from(".part2 .chip_wrap", {
-        opacity: 0,
-        ease: "power2.inOut",
-      })
-      .from(".part2 .light_wrap", {
-        opacity: 0,
-        ease: "power2.inOut",
-      })
-      .to(".part2 .light_wrap", {})
     ScrollTrigger.create({
       trigger: ".sec13_wrap",
       pin: true,
       start: `top 0%`,
-      end: "+=500%",
+      end: "+=200%",
       animation: tl,
       scrub: 0.2,
     })
@@ -127,168 +103,97 @@ const Sec13 = () => {
   return (
     <section className='sec13' ref={wrap}>
       <div className='sec13_wrap'>
-        <div className='spec_part'>
-          <div className='spec_text_wrap'>
-            <div
-              className='spec_title'
-              dangerouslySetInnerHTML={{ __html: config?.sec13?.spec_title }}
-            ></div>
-            <p
-              className='spec_desc'
-              dangerouslySetInnerHTML={{ __html: config?.sec13?.spec_desc }}
-            ></p>
+        <div className='pic_wrap equal_parent'>
+          <div className='img_wrap bg_wrap equal_parent'>
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec13_bg_pc.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec13_bg_pc.png"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec13_bg_pc.png"} />
+            </picture>
+          </div>
+          <div className='img_wrap processor_wrap slide_up'>
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec13_processor_pc.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec13_processor_pc.png"}
+              />
+              <img
+                loading='lazy'
+                src={src + "/images/pc/sec13_processor_pc.png"}
+              />
+            </picture>
           </div>
         </div>
-        <div className='content_wrap'>
-          <div className='part part1'>
-            <div className='text_wrap'>
-              <div
-                className='title_58'
-                dangerouslySetInnerHTML={{
-                  __html: config?.sec13?.part1?.title,
-                }}
-              ></div>
-              <p
-                className='desc_16'
-                dangerouslySetInnerHTML={{ __html: config?.sec13?.part1?.desc }}
-              ></p>
-            </div>
-            <div className='pic_wrap'>
-              <div className='img_wrap phone_wrap'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_part1_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec13_part1_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec13_part1_pc.png"}
-                  />
-                </picture>
-              </div>
-              <div className='img_wrap light_wrap'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_light_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec13_light_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec13_light_pc.png"}
-                  />
-                </picture>
-              </div>
-              <div className='img_wrap chip_wrap'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_16g_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec13_16g_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec13_16g_pc.png"}
-                  />
-                </picture>
-              </div>
-            </div>
-            <div className='data_wrap'>
-              {config?.sec13?.part1?.data?.map((item: any, index: number) => {
-                return (
-                  <div className='data' key={index}>
-                    {isPc ? (
-                      <div
-                        className='data_subtitle'
-                        dangerouslySetInnerHTML={{ __html: item?.subtitle }}
-                      ></div>
-                    ) : null}
-                    <div
-                      className='data_title'
-                      dangerouslySetInnerHTML={{
-                        __html: isPc ? item?.title : item?.titleMb,
-                      }}
-                    ></div>
-                    <div
-                      className='data_desc'
-                      dangerouslySetInnerHTML={{ __html: item?.desc }}
-                    ></div>
-                  </div>
-                )
-              })}
-            </div>
+        <div className='text_wrap slide_up'>
+          <div
+            className='title_58'
+            dangerouslySetInnerHTML={{
+              __html: config?.sec13?.title,
+            }}
+          ></div>
+          <div
+            className='subtitle_37'
+            dangerouslySetInnerHTML={{
+              __html: config?.sec13?.subtitle,
+            }}
+          ></div>
+          <p
+            className='desc_16'
+            dangerouslySetInnerHTML={{ __html: config?.sec13?.desc }}
+          ></p>
+          <div className='datas'>
+            {config?.sec13?.data?.map((item: any, index: number) => {
+              return (
+                <div className='data_item' key={index}>
+                  <div
+                    className='data_title'
+                    dangerouslySetInnerHTML={{ __html: item?.title }}
+                  ></div>
+                  <div
+                    className='desc_16'
+                    dangerouslySetInnerHTML={{ __html: item?.desc }}
+                  ></div>
+                </div>
+              )
+            })}
           </div>
-          <div className='part part2'>
-            <div className='text_wrap'>
+          <div className='compare_wrap'>
+            <div className='processor_modal_wrap'>
               <div
-                className='title_58'
-                dangerouslySetInnerHTML={{
-                  __html: config?.sec13?.part2?.title,
-                }}
+                className='processor_name'
+                dangerouslySetInnerHTML={{ __html: config?.sec13?.cpu1 }}
               ></div>
-              <p
-                className='desc_16'
-                dangerouslySetInnerHTML={{ __html: config?.sec13?.part2?.desc }}
-              ></p>
+              <div
+                className='processor_name'
+                dangerouslySetInnerHTML={{ __html: config?.sec13?.cpu2 }}
+              ></div>
             </div>
-            <div className='pic_wrap'>
-              <div className='img_wrap phone_wrap'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_part2_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec13_part2_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec13_part2_pc.png"}
-                  />
-                </picture>
+            <div className='improve_wrap'>
+              <div className='improve_item'>
+                <div
+                  className='improve'
+                  dangerouslySetInnerHTML={{ __html: config?.sec13?.improve1 }}
+                ></div>
+                <div className='score_line new_score'></div>
+                <div className='score_line old_score'></div>
               </div>
-              <div className='img_wrap light_wrap'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_t620_light_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec13_t620_light_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec13_t620_light_pc.png"}
-                  />
-                </picture>
-              </div>
-              <div className='img_wrap chip_wrap'>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec13_t620_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec13_t620_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec13_t620_pc.png"}
-                  />
-                </picture>
+              <div className='improve_item'>
+                <div
+                  className='improve'
+                  dangerouslySetInnerHTML={{ __html: config?.sec13?.improve2 }}
+                ></div>
+                <div className='score_line new_score'></div>
+                <div className='score_line old_score'></div>
               </div>
             </div>
           </div>

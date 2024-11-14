@@ -19,7 +19,11 @@
   }
 
   .box_item {
-    padding: px-to-vw(64);
+    display: flex;
+    flex-direction: column;
+    gap: px-to-vw(30);
+    justify-content: center;
+    padding: px-to-vw(32) px-to-vw(64);
     text-align: center;
     background-color: #f1f1f1;
     border-radius: px-to-vw(20);
@@ -49,6 +53,22 @@
     &>div {
       flex: 1;
     }
+  }
+
+  .img_wrap {
+    margin: 0 auto;
+  }
+
+  .img_wrap1 {
+    width: px-to-vw(624);
+  }
+
+  .img_wrap2 {
+    width: px-to-vw(136);
+  }
+
+  .img_wrap3 {
+    width: px-to-vw(485);
   }
 
   .tips_wrap {

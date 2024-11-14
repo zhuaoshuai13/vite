@@ -3,129 +3,43 @@
 .tab30pro .sec11 {
   .sec11_wrap {
     position: relative;
+    padding: px-to-vw(80) 0 px-to-vw(200);
   }
 
-  .content_wrap {
-    height: 100vh;
-  }
-
-  .phone_wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all .5s;
-
-    &.active {
-      opacity: 1;
-    }
-
-    img {
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-    }
-  }
-
-  .text_wrap {
-    position: absolute;
-    top: px-to-vw(75);
-    z-index: 1;
+  .all_text {
+    position: relative;
+    max-width: var(--content-width);
     margin: 0 auto;
-    opacity: 0;
 
-    &.white {
-      .title {
-        color: #fff;
-      }
-
-      .desc_16 {
-        color: #fff;
-      }
-    }
-
-    &.active {
-      opacity: 1;
-    }
-
-    .title {
-      font-size: px-to-vw(58);
-      font-family: "Medium";
-    }
-
-    &:first-child {
-      left: px-to-vw(360);
-      max-width: px-to-vw(560);
-    }
-
-    &:nth-child(2) {
-      right: px-to-vw(360);
-      max-width: px-to-vw(500);
-      color: #0a2846;
-
-      .desc_16 {
-        color: inherit;
-      }
+    .text_wrap:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
     }
   }
 
-  .bottom_content {
-    position: absolute;
+  .pic_wrap {
+    display: flex;
+    gap: px-to-vw(15);
+    height: px-to-vw(551);
+    margin-top: px-to-vw(70);
 
-    // top: px-to-vw(945);
-    bottom: px-to-vw(100);
-    left: px-to-vw(360);
-
-    .btn_wrap {
-      display: flex;
-      gap: px-to-vw(11);
+    .img_wrap {
+      flex-shrink: 0;
     }
+  }
 
-    button {
-      width: px-to-vw(25);
-      height: px-to-vw(25);
-      font-size: 0;
-      background-color: unset;
-      border: none;
-      cursor: pointer;
+  .pic_wrap2 {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: px-to-vw(15);
+    width: px-to-vw(785);
+  }
 
-      img {
-        width: 100%;
-      }
-    }
-
-    .color_item {
-      position: absolute;
-      width: var(--content-width);
-      margin-top: px-to-vw(10);
-      color: #fff;
-      opacity: 0;
-
-      &.active {
-        opacity: 1;
-      }
-
-      &.color_ocean {
-        color: #0a2846;
-      }
-    }
-
-    .color_title {
-      max-width: px-to-vw(320);
-      font-size: px-to-vw(37.5);
-      font-family: "Book";
-    }
-
-    .color_desc {
-      position: absolute;
-      top: 50%;
-      left: px-to-vw(320);
-      margin: 0;
-      color: inherit;
-      transform: translateY(-50%);
-    }
+  .phone_wrap1 {
+    margin-left: px-to-vw(200);
   }
 }
 

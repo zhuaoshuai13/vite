@@ -146,7 +146,23 @@ const Sec9 = () => {
             </div>
           </div>
           <div className='data_pic equal_parent'>
-            <div className='pic_wrap equal_parent'>
+            <div className={`pic_wrap equal_parent ${activeIndex === 0 ? "active_pic_wrap" : ""}`}>
+              <div className='img_wrap wave_wrap1'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec9_wave_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec9_wave_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec9_wave_pc.png"}
+                  />
+                </picture>
+              </div>
               <div className='img_wrap phone1_wrap'>
                 <picture>
                   <source
@@ -160,6 +176,138 @@ const Sec9 = () => {
                   <img
                     loading='lazy'
                     src={src + "/images/pc/sec9_1_1_pc.png"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap phone2_wrap'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec9_1_2_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec9_1_2_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec9_1_2_pc.png"}
+                  />
+                </picture>
+              </div>
+            </div>
+            <div className={`pic_wrap equal_parent ${activeIndex === 1 ? "active_pic_wrap" : ""}`}>
+              <div className='img_wrap wave_wrap2'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec9_wave_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec9_wave_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec9_wave_pc.png"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap wave_wrap3'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec9_wave_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec9_wave_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec9_wave_pc.png"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap phone3_wrap'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec9_2_1_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec9_2_1_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec9_2_1_pc.png"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap phone4_wrap'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec9_2_2_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec9_2_2_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec9_2_2_pc.png"}
+                  />
+                </picture>
+              </div>
+            </div>
+            <div className={`pic_wrap equal_parent ${activeIndex === 2 ? "active_pic_wrap" : ""}`}>
+              <div className='img_wrap wave_wrap4'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec9_wave_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec9_wave_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec9_wave_pc.png"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap phone5_wrap'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec9_3_1_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec9_3_1_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec9_3_1_pc.png"}
+                  />
+                </picture>
+              </div>
+              <div className='img_wrap phone6_wrap'>
+                <picture>
+                  <source
+                    media='(max-width: 750px)'
+                    srcSet={src + "/images/mb/sec9_3_2_mb.png"}
+                  />
+                  <source
+                    media='(min-width: 751px)'
+                    srcSet={src + "/images/pc/sec9_3_2_pc.png"}
+                  />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/pc/sec9_3_2_pc.png"}
                   />
                 </picture>
               </div>

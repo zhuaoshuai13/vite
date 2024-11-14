@@ -11,13 +11,13 @@ const Sec4 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec4_bg_mb.png"}
+                srcSet={src + "/images/mb/sec4_f1_pc.png"}
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec4_bg_pc.png"}
+                srcSet={src + "/images/pc/sec4_f1_pc.png"}
               />
-              <img loading='lazy' src={src + "/images/pc/sec4_bg_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec4_f1_pc.png"} />
             </picture>
           </div>
           <div className='spec_text_wrap'>

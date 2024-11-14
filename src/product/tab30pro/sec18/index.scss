@@ -1,7 +1,7 @@
 @import '../vars';
 
 .tab30pro .sec18 {
-  padding: 0 0 px-to-vw(90);
+  padding: px-to-vw(200) 0 px-to-vw(90);
 
   .text_wrap {
     display: flex;
@@ -20,6 +20,7 @@
   }
 
   .box_wrap {
+    position: relative;
     width: px-to-vw(1520);
     height: px-to-vw(700);
     margin: px-to-vw(32) auto 0;
@@ -30,6 +31,7 @@
 
   .switch_content {
     position: relative;
+    z-index: 1;
     height: px-to-vw(360);
   }
 
@@ -60,13 +62,10 @@
     margin-left: px-to-vw(24);
 
     .data_wrap {
-      // max-height: px-to-vw(36);
       overflow: hidden;
       transition: all .5s;
 
       &.active_data {
-        // max-height: px-to-vw(180);
-
         .tran_wrap {
           grid-template-rows: 1fr;
         }
@@ -92,6 +91,17 @@
     .desc_16 {
       min-height: 0;
       margin-top: 0;
+    }
+  }
+
+  .pic_wrap {
+    .img_wrap {
+      opacity: 0;
+      transition: all .5s;
+
+      &.active_img_wrap {
+        opacity: 1;
+      }
     }
   }
 }

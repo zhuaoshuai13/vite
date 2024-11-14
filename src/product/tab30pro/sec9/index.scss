@@ -1,8 +1,6 @@
 @import '../vars';
 
 .tab30pro .sec9 {
-  padding: 0 0 px-to-vw(90);
-
   .sec9_wrap {
     position: relative;
     display: flex;
@@ -114,10 +112,91 @@
     }
   }
 
-  .data_pic {}
+  .pic_wrap {
+    opacity: 0;
+    transition: all .5s;
+
+    &.active_pic_wrap {
+      opacity: 1;
+    }
+  }
 
   .phone1_wrap {
+    position: absolute;
+    top: 50%;
+    left: px-to-vw(545);
     width: px-to-vw(596);
+    transform: translateY(-50%);
+  }
+
+  .phone2_wrap {
+    position: absolute;
+    top: 50%;
+    left: px-to-vw(1215);
+    width: px-to-vw(155);
+    transform: translateY(-50%);
+  }
+
+  .wave_wrap1 {
+    position: absolute;
+    top: 50%;
+    left: px-to-vw(1102);
+    width: px-to-vw(378);
+    transform: translateY(-50%);
+  }
+
+  .phone3_wrap {
+    position: absolute;
+    top: 50%;
+    left: px-to-vw(687);
+    width: px-to-vw(528);
+    transform: translateY(-50%);
+  }
+
+  .phone4_wrap {
+    position: absolute;
+    top: 50%;
+    left: px-to-vw(1266);
+    width: px-to-vw(140);
+    transform: translateY(-50%);
+  }
+
+  .wave_wrap2 {
+    position: absolute;
+    top: px-to-vw(20);
+    left: px-to-vw(578);
+    width: px-to-vw(275);
+  }
+
+  .wave_wrap3 {
+    position: absolute;
+    bottom: 0;
+    left: px-to-vw(1181);
+    width: px-to-vw(306);
+  }
+
+  .phone5_wrap {
+    position: absolute;
+    top: 50%;
+    left: px-to-vw(536);
+    width: px-to-vw(605);
+    transform: translateY(-50%);
+  }
+
+  .phone6_wrap {
+    position: absolute;
+    top: 50%;
+    left: px-to-vw(1213);
+    width: px-to-vw(141);
+    transform: translateY(-50%);
+  }
+
+  .wave_wrap4 {
+    position: absolute;
+    top: 50%;
+    left: px-to-vw(1102);
+    width: px-to-vw(357);
+    transform: translateY(-50%);
   }
 }
 

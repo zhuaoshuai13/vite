@@ -28,15 +28,23 @@ const Sec11 = () => {
   const sec11Ani = () => {
     const tl = gsap
       .timeline()
-      .to(".spec_part", 1, { y: "-100%", ease: "power2.inOut" })
-      .to(".pic_wrap", 1, {}, "pic1")
-      .to(".pic_wrap", 1, {}, "pic2")
-      .to(".pic_wrap", 1, {}, "pic3")
+      .to(".pic_wrap", { x: "-39vw", ease: "power2.inOut", duration: 2 }, "a")
+      .to(
+        ".text_wrap:nth-child(1)",
+        { opacity: 0, ease: "power2.inOut", duration: 1 },
+        "a"
+      )
+      .to(
+        ".text_wrap:nth-child(2)",
+        { opacity: 1, ease: "power2.inOut", duration: 1 },
+        "a+=1"
+      )
+      .to(".text_wrap:nth-child(2)", { ease: "power2.inOut", duration: 1 })
     ScrollTrigger.create({
       trigger: ".sec11_wrap",
       pin: true,
       start: `top 0%`,
-      end: "+=400%",
+      end: "+=150%",
       animation: tl,
       scrub: 0.2,
       onUpdate: (self) => {
@@ -94,173 +102,97 @@ const Sec11 = () => {
   return (
     <section className='sec11' ref={wrap}>
       <div className='sec11_wrap'>
-        <div className='spec_part'>
-          <div className='spec_text_wrap'>
+        <div className='all_text'>
+          <div className='text_wrap'>
             <div
-              className='spec_title'
-              dangerouslySetInnerHTML={{ __html: config?.sec11?.spec_title }}
+              className='title_58'
+              dangerouslySetInnerHTML={{
+                __html: config?.sec11?.part1?.title,
+              }}
+            ></div>
+            <div
+              className='subtitle_37'
+              dangerouslySetInnerHTML={{
+                __html: config?.sec11?.part1?.subtitle,
+              }}
             ></div>
             <p
-              className='spec_desc'
-              dangerouslySetInnerHTML={{ __html: config?.sec11?.spec_desc }}
+              className='desc_16'
+              dangerouslySetInnerHTML={{ __html: config?.sec11?.part1?.desc }}
+            ></p>
+          </div>
+          <div className='text_wrap'>
+            <div
+              className='title_58'
+              dangerouslySetInnerHTML={{
+                __html: config?.sec11?.part2?.title,
+              }}
+            ></div>
+            <div
+              className='subtitle_37'
+              dangerouslySetInnerHTML={{
+                __html: config?.sec11?.part2?.subtitle,
+              }}
+            ></div>
+            <p
+              className='desc_16'
+              dangerouslySetInnerHTML={{ __html: config?.sec11?.part2?.desc }}
             ></p>
           </div>
         </div>
-        <div className='content_wrap' ref={content_wrap}>
-          <div className='all_text'>
-            <div
-              className={`text_wrap ${
-                isPc && activeIndex === 1 ? "white" : ""
-              } ${activeIndex === 0 || activeIndex === 1 ? "active" : ""}`}
-            >
-              <div
-                className='title'
-                dangerouslySetInnerHTML={{
-                  __html: config?.sec11?.part1?.title,
-                }}
-              ></div>
-              <p
-                className='desc_16'
-                dangerouslySetInnerHTML={{ __html: config?.sec11?.part1?.desc }}
-              ></p>
-            </div>
-            <div className={`text_wrap ${activeIndex === 2 ? "active" : ""}`}>
-              <div
-                className='title'
-                dangerouslySetInnerHTML={{
-                  __html: config?.sec11?.part2?.title,
-                }}
-              ></div>
-              <p
-                className='desc_16'
-                dangerouslySetInnerHTML={{ __html: config?.sec11?.part2?.desc }}
-              ></p>
-            </div>
+        <div className='pic_wrap'>
+          <div className='img_wrap phone_wrap1'>
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec11_f1_pc.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec11_f1_pc.png"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec11_f1_pc.png"} />
+            </picture>
           </div>
-          <div className={`pic_wrap`}>
-            <div
-              className={`img_wrap phone_wrap phone1 ${
-                activeIndex === 0 ? "active" : ""
-              }`}
-            >
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_p1_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec11_p1_pc.png"}
-                />
-                <img loading='lazy' src={src + "/images/pc/sec11_p1_pc.png"} />
-              </picture>
-            </div>
-            <div
-              className={`img_wrap phone_wrap phone2 ${
-                activeIndex === 1 ? "active" : ""
-              }`}
-            >
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_p2_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec11_p2_pc.png"}
-                />
-                <img loading='lazy' src={src + "/images/pc/sec11_p2_pc.png"} />
-              </picture>
-            </div>
-            <div
-              className={`img_wrap phone_wrap phone3 ${
-                activeIndex === 2 ? "active" : ""
-              }`}
-            >
-              <picture>
-                <source
-                  media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_p3_mb.png"}
-                />
-                <source
-                  media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec11_p3_pc.png"}
-                />
-                <img loading='lazy' src={src + "/images/pc/sec11_p3_pc.png"} />
-              </picture>
-            </div>
+          <div className='img_wrap phone_wrap2'>
+            <picture>
+              <source
+                media='(max-width: 750px)'
+                srcSet={src + "/images/mb/sec11_f2_pc.png"}
+              />
+              <source
+                media='(min-width: 751px)'
+                srcSet={src + "/images/pc/sec11_f2_pc.png"}
+              />
+              <img loading='lazy' src={src + "/images/pc/sec11_f2_pc.png"} />
+            </picture>
           </div>
-          <div className='bottom_content'>
-            <div className='btn_wrap'>
-              <button className='titanium' onClick={() => handleSwitchPic(1)}>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec11_b1_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec11_b1_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec11_b1_pc.png"}
-                  />
-                </picture>
-              </button>
-              <button className='black' onClick={() => handleSwitchPic(2)}>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec11_b2_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec11_b2_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec11_b2_pc.png"}
-                  />
-                </picture>
-              </button>
-              <button className='ocean' onClick={() => handleSwitchPic(3)}>
-                <picture>
-                  <source
-                    media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec11_b3_mb.png"}
-                  />
-                  <source
-                    media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec11_b3_pc.png"}
-                  />
-                  <img
-                    loading='lazy'
-                    src={src + "/images/pc/sec11_b3_pc.png"}
-                  />
-                </picture>
-              </button>
+          <div className='pic_wrap2'>
+            <div className='img_wrap phone_wrap3'>
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec11_f3_pc.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec11_f3_pc.png"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec11_f3_pc.png"} />
+              </picture>
             </div>
-            <div className='color_wrap'>
-              {config?.sec11?.color?.map((item: any, index: number) => {
-                return (
-                  <div
-                    className={`color_item ${
-                      activeIndex === index ? "active" : ""
-                    } ${index === 2 ? "color_ocean" : ""}`}
-                    key={index}
-                  >
-                    <div
-                      className='color_title'
-                      dangerouslySetInnerHTML={{ __html: item.title }}
-                    ></div>
-                    <div
-                      className='desc_16 color_desc'
-                      dangerouslySetInnerHTML={{ __html: item.desc }}
-                    ></div>
-                  </div>
-                )
-              })}
+            <div className='img_wrap phone_wrap4'>
+              <picture>
+                <source
+                  media='(max-width: 750px)'
+                  srcSet={src + "/images/mb/sec11_f4_pc.png"}
+                />
+                <source
+                  media='(min-width: 751px)'
+                  srcSet={src + "/images/pc/sec11_f4_pc.png"}
+                />
+                <img loading='lazy' src={src + "/images/pc/sec11_f4_pc.png"} />
+              </picture>
             </div>
           </div>
         </div>

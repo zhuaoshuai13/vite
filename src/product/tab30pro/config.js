@@ -46,7 +46,7 @@ window.tab30proConfig = {
     },
   },
   sec4: {
-    title: "Portable Office <br/> Innovations",
+    title: "PORTABLE OFFICE <br/> INNOVATIONS",
   },
   sec5: {
     title: "Experience Immersive Clarity",
@@ -137,13 +137,114 @@ window.tab30proConfig = {
       },
     ],
   },
+  sec10: {
+    part1: {
+      title: "Portable Productivity Master",
+      subtitle: "Supports Keyboard & Stylus",
+      desc: "When coupled with the dedicated keyboard and stylus, VistaTab 30 Pro will take your productivity to new heights.",
+    },
+    part2: {
+      title: "Unrivaled Writing Precision",
+      subtitle: "Dedicated Stylus",
+      desc: `4096 levels of pressure sensitivity for a writing 
+experience as smooth as on paper. A quick 5-minute charge provides up to 10 hours of use, with the longest battery life supporting up to 4.5 days of continuous use. When not in use, it magnetically attaches to your tablet for convenient storage.*`,
+    },
+    part3: {
+      title: "Efficiency at <br class='pc'/> Your Fingertips",
+      subtitle: "Dedicated Keyboard",
+      desc: "80-key full-size keyboard for laptop-like typing efficiency. With multi-angle suspension, you can always find your comfortable position. Exclusive AI and WPS keys for one-touch activation, quickly entering a high-efficiency state. Comes with a built-in touchpad for precise touch control.",
+    },
+  },
+  sec11: {
+    part1: {
+      title: "Easy to Carry",
+      subtitle: "7mm Ultra Thin Design",
+      desc: "With a 7mm ultra-slim body, you can effortlessly slip it into your bag and take it anywhere with ease.",
+    },
+    part2: {
+      title: "Minimalist Design",
+      subtitle: "Premium Metal Body",
+      desc: `Featuring a metallic body with a premium feel, a minimalist design, and a space gray color scheme, it's hard not to fall in love with it.`,
+    },
+  },
+  sec12: {
+    title: "IMMERSIVE <br/> ENTERTAINMENT & LEARNING",
+  },
+  sec13: {
+    title: "Unleash Gaming Power",
+    subtitle: "Helio G99 Ultimate Processor",
+    desc: `Meet the MediaTek Helio G99 – the 6nm gaming powerhouse. With a 2.2GHz octa-core CPU, it's built for speed, offering seamless gameplay at 1920x1200 resolution. Ready to level up your mobile gaming?`,
+    data: [
+      {
+        title: "6nm",
+        desc: "High-efficiency process",
+      },
+      {
+        title: "40%*",
+        desc: "Lower power consumption",
+      },
+    ],
+    cpu1: "Helio G99",
+    cpu2: "Helio G88",
+    improve1: "CPU Performance Boosted by 40%",
+    improve2: "GPU Performance Boosted by 60%",
+  },
+  sec14: {
+    title: "Stay Powered All Day",
+    subtitle: "10000mAh Mega Battery",
+    desc: `Upgrade to the colossal 10000mAh battery with 18W Fast Charge and wave goodbye to charging worries. Enjoy a long-lasting battery that will last all day, providing ample battery life even during extended outings.`,
+    data: [
+      {
+        title: "19 Hours",
+        desc: "Meeting",
+      },
+      {
+        title: "25 Hours",
+        desc: "Movies",
+      },
+      {
+        title: "18 Hours*",
+        desc: "Gaming",
+      },
+    ],
+    cpu1: "Helio G99",
+    cpu2: "Helio G88",
+    improve1: "CPU Performance Boosted by 40%",
+    improve2: "GPU Performance Boosted by 60%",
+  },
+  sec15: {
+    part1: {
+      title: "Velocity in Action",
+      subtitle: "Up to 16GB(8+8)RAM*",
+      desc: `VistaTab 30 Pro's 16GB RAM ensures apps run smoothly, ready at your fingertips. Experience seamless multitasking without lag.*`,
+    },
+    part2: {
+      title: "Plenty of Memory",
+      subtitle: "Up to 256GB ROM",
+      desc: `With a vast 256GB ROM, there is ample space for all your favorites.`,
+      data: [
+        {
+          title: "160,000+",
+          desc: "Photos",
+        },
+        {
+          title: "300+",
+          desc: "Movies",
+        },
+        {
+          title: "9600+*",
+          desc: "Apps",
+        },
+      ],
+    },
+  },
   sec16: {
-    title: "Unleash Creativity <br/> with AI",
+    title: "Learning Made Easy",
     subtitle: "Learning Center",
     desc: "Unleash personalized learning with our free Learning Center, designed for all ages from early years through K12. Enjoy curated video lessons and complimentary local resources. Simplify your child's education and boost cognitive skills at no extra cost.",
   },
   sec17: {
-    title: "Unleash Creativity <br/> with AI",
+    title: "UNLEASH CREATIVITY <br/> WITH AI",
   },
   sec18: {
     title: "AI for Productivity",
