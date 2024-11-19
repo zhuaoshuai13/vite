@@ -8,6 +8,10 @@ window.tab30proConfig = {
     tips: `*VistaTab 30 Pro 256+16GB version RAM is composed of (8+8)GB expansion.`,
   },
   sec2: {
+    preview_video: {
+      pc: src + "/videos/sec2_video_pc.mp4",
+      mb: "sec2_video_pc.mp4",
+    },
     full_video: {
       pc: src + "/videos/sec2_full_video_pc.mp4",
       mb: "sec2_full_video_mb.mp4",
@@ -56,37 +60,37 @@ window.tab30proConfig = {
       {
         title: "13''",
         desc: "Mega Display",
-        icon: src + "/images/pc/sec5_icon1_pc.png",
+        icon: src + "/images/pc/sec5_icon1_pc.webp",
       },
       {
         title: "16: 10",
         desc: "Efficient screen ratio",
-        icon: src + "/images/pc/sec5_icon2_pc.png",
+        icon: src + "/images/pc/sec5_icon2_pc.webp",
       },
       {
         title: "450 nits*",
         desc: "Brightness",
-        icon: src + "/images/pc/sec5_icon3_pc.png",
+        icon: src + "/images/pc/sec5_icon3_pc.webp",
       },
       {
         title: "1920 x 1200",
         desc: "Resolution",
-        icon: src + "/images/pc/sec5_icon4_pc.png",
+        icon: src + "/images/pc/sec5_icon4_pc.webp",
       },
       {
         title: "86%",
         desc: "Screen-to-body Ratio",
-        icon: src + "/images/pc/sec5_icon5_pc.png",
+        icon: src + "/images/pc/sec5_icon5_pc.webp",
       },
       {
         title: "1500:1",
         desc: "Contrast Ratio",
-        icon: src + "/images/pc/sec5_icon6_pc.png",
+        icon: src + "/images/pc/sec5_icon6_pc.webp",
       },
       {
         title: "16.7 Million",
         desc: "Vivid Colors",
-        icon: src + "/images/pc/sec5_icon7_pc.png",
+        icon: src + "/images/pc/sec5_icon7_pc.webp",
       },
     ],
   },

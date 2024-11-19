@@ -71,11 +71,11 @@ const Sec5 = () => {
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec5_display_dark_pc.jpg"}
+                srcSet={src + "/images/pc/sec5_display_dark_pc.webp"}
               />
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec5_display_dark_pc.jpg"}
+                src={src + "/images/pc/sec5_display_dark_pc.webp"}
               />
             </picture>
           </div>
@@ -83,15 +83,15 @@ const Sec5 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec5_display_light_mb.jpg"}
+                srcSet={src + "/images/mb/sec5_display_light_mb.png"}
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec5_display_light_pc.jpg"}
+                srcSet={src + "/images/pc/sec5_display_light_pc.webp"}
               />
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec5_display_light_pc.jpg"}
+                src={src + "/images/pc/sec5_display_light_pc.webp"}
               />
             </picture>
           </div>
@@ -110,11 +110,31 @@ const Sec5 = () => {
             dangerouslySetInnerHTML={{ __html: config?.sec5?.desc }}
           ></p>
         </div>
-        <div className='datas'>
-          <div className='data_box'>
-            {config?.sec5?.data
-              ?.slice(0, 4)
-              ?.map((item: any, index: number) => {
+        {isPc ? (
+          <div className='datas'>
+            <div className='data_box'>
+              {config?.sec5?.data
+                ?.slice(0, 4)
+                ?.map((item: any, index: number) => {
+                  return (
+                    <div className='data' key={index}>
+                      <img src={item?.icon} />
+                      <div className='data_text'>
+                        <div
+                          className='data_title'
+                          dangerouslySetInnerHTML={{ __html: item?.title }}
+                        ></div>
+                        <div
+                          className='data_desc'
+                          dangerouslySetInnerHTML={{ __html: item?.desc }}
+                        ></div>
+                      </div>
+                    </div>
+                  )
+                })}
+            </div>
+            <div className='data_box'>
+              {config?.sec5?.data?.slice(4)?.map((item: any, index: number) => {
                 return (
                   <div className='data' key={index}>
                     <img src={item?.icon} />
@@ -131,27 +151,31 @@ const Sec5 = () => {
                   </div>
                 )
               })}
+            </div>
           </div>
-          <div className='data_box'>
-            {config?.sec5?.data?.slice(4)?.map((item: any, index: number) => {
-              return (
-                <div className='data' key={index}>
-                  <img src={item?.icon} />
-                  <div className='data_text'>
-                    <div
-                      className='data_title'
-                      dangerouslySetInnerHTML={{ __html: item?.title }}
-                    ></div>
-                    <div
-                      className='data_desc'
-                      dangerouslySetInnerHTML={{ __html: item?.desc }}
-                    ></div>
+        ) : (
+          <div className='datas'>
+            <div className='data_box'>
+              {config?.sec5?.data?.map((item: any, index: number) => {
+                return (
+                  <div className='data' key={index}>
+                    <img src={item?.icon} />
+                    <div className='data_text'>
+                      <div
+                        className='data_title'
+                        dangerouslySetInnerHTML={{ __html: item?.title }}
+                      ></div>
+                      <div
+                        className='data_desc'
+                        dangerouslySetInnerHTML={{ __html: item?.desc }}
+                      ></div>
+                    </div>
                   </div>
-                </div>
-              )
-            })}
+                )
+              })}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   )

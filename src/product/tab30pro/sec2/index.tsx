@@ -27,11 +27,26 @@ const Sec2 = () => {
   return (
     <section className='sec2' ref={wrap}>
       <div className='sec2_wrap'>
-        <div className='img_wrap bg_wrap'>
-          <img loading='lazy' src={src + "/images/pc/sec2_bg_pc.png"} />
+        <div className='video_wrap'>
+          <LazyLoad offset={1000}>
+            <video
+              src={
+                isPc
+                  ? config?.sec2?.preview_video?.pc
+                  : config?.sec2?.preview_video?.mb
+              }
+              muted
+              preload='auto'
+              webkit-playsinline='true'
+              playsInline={true}
+              autoPlay
+              loop
+              controls={false}
+            ></video>
+          </LazyLoad>
         </div>
         <div className='img_wrap play_wrap' onClick={() => handlePart2Btn()}>
-          <img loading='lazy' src={src + "/images/pc/sec2_play_pc.png"} />
+          <img loading='lazy' src={src + "/images/pc/sec2_play_pc.webp"} />
         </div>
       </div>
     </section>

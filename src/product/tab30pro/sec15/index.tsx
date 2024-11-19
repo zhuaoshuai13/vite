@@ -39,7 +39,7 @@ const Sec15 = () => {
       trigger: ".sec15_wrap",
       pin: true,
       start: `top 0%`,
-      end: "+=500%",
+      end: "+=200%",
       animation: tl,
       scrub: 0.2,
     })
@@ -101,26 +101,26 @@ const Sec15 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec15_f1_pc.png"}
+                srcSet={src + "/images/mb/sec15_f1_pc.webp"}
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec15_f1_pc.png"}
+                srcSet={src + "/images/pc/sec15_f1_pc.webp"}
               />
-              <img loading='lazy' src={src + "/images/pc/sec15_f1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec15_f1_pc.webp"} />
             </picture>
           </div>
           <div className='img_wrap equal_parent bg_wrap2'>
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec15_f2_pc.png"}
+                srcSet={src + "/images/mb/sec15_f2_pc.webp"}
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec15_f2_pc.png"}
+                srcSet={src + "/images/pc/sec15_f2_pc.webp"}
               />
-              <img loading='lazy' src={src + "/images/pc/sec15_f2_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec15_f2_pc.webp"} />
             </picture>
           </div>
         </div>

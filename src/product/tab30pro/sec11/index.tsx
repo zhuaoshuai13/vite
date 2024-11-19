@@ -145,26 +145,26 @@ const Sec11 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec11_f1_pc.png"}
+                srcSet={src + "/images/mb/sec11_f1_pc.webp"}
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec11_f1_pc.png"}
+                srcSet={src + "/images/pc/sec11_f1_pc.webp"}
               />
-              <img loading='lazy' src={src + "/images/pc/sec11_f1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec11_f1_pc.webp"} />
             </picture>
           </div>
           <div className='img_wrap phone_wrap2'>
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec11_f2_pc.png"}
+                srcSet={src + "/images/mb/sec11_f2_pc.webp"}
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec11_f2_pc.png"}
+                srcSet={src + "/images/pc/sec11_f2_pc.webp"}
               />
-              <img loading='lazy' src={src + "/images/pc/sec11_f2_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec11_f2_pc.webp"} />
             </picture>
           </div>
           <div className='pic_wrap2'>
@@ -172,26 +172,26 @@ const Sec11 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_f3_pc.png"}
+                  srcSet={src + "/images/mb/sec11_f3_pc.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec11_f3_pc.png"}
+                  srcSet={src + "/images/pc/sec11_f3_pc.webp"}
                 />
-                <img loading='lazy' src={src + "/images/pc/sec11_f3_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec11_f3_pc.webp"} />
               </picture>
             </div>
             <div className='img_wrap phone_wrap4'>
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_f4_pc.png"}
+                  srcSet={src + "/images/mb/sec11_f4_pc.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec11_f4_pc.png"}
+                  srcSet={src + "/images/pc/sec11_f4_pc.webp"}
                 />
-                <img loading='lazy' src={src + "/images/pc/sec11_f4_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec11_f4_pc.webp"} />
               </picture>
             </div>
           </div>

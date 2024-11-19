@@ -11,10 +11,10 @@ const Sec12 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { tab30proConfig: config, src } = window as any
   const circleList = [
-    "sec12_green_pc.png",
-    "sec12_red_pc.png",
-    "sec12_blue_pc.png",
-    "sec12_purple_pc.png",
+    "sec12_green_pc.webp",
+    "sec12_red_pc.webp",
+    "sec12_blue_pc.webp",
+    "sec12_purple_pc.webp",
   ]
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
@@ -57,13 +57,13 @@ const Sec12 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec12_f1_pc.png"}
+                srcSet={src + "/images/mb/sec12_f1_pc.webp"}
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec12_f1_pc.png"}
+                srcSet={src + "/images/pc/sec12_f1_pc.webp"}
               />
-              <img loading='lazy' src={src + "/images/pc/sec12_f1_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec12_f1_pc.webp"} />
             </picture>
           </div>
           <div className='spec_text_wrap'>

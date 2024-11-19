@@ -18,16 +18,46 @@ const Sec19 = () => {
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
-  const part4SwiperRef = useRef<SwiperClass>()
 
-  const handleHover = (activeIndex: number) => {
-    document.querySelectorAll(".sec19 .part7 .item").forEach((item, index) => {
-      item.classList.remove("active")
-      if (index === activeIndex) {
-        item.classList.add("active")
-      }
+  const sec19Ani = () => {
+    const tl = gsap
+      .timeline()
+      .from(
+        ".left_wrap",
+        1,
+        {
+          opacity: 0,
+          x: "-20%",
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .from(
+        ".right_wrap",
+        1,
+        {
+          opacity: 0,
+          x: "20%",
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+    ScrollTrigger.create({
+      trigger: wrap.current,
+      start: `top 90%`,
+      animation: tl,
+      toggleActions: "play none none reverse",
     })
   }
+
+  useGSAP(
+    () => {
+      if (isPc) {
+        sec19Ani()
+      }
+    },
+    { scope: wrap }
+  )
 
   return (
     <section className='sec19' ref={wrap}>
@@ -53,15 +83,15 @@ const Sec19 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec19_f1_pc.png"}
+                    srcSet={src + "/images/mb/sec19_f1_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec19_f1_pc.png"}
+                    srcSet={src + "/images/pc/sec19_f1_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec19_f1_pc.png"}
+                    src={src + "/images/pc/sec19_f1_pc.webp"}
                   />
                 </picture>
               </div>
@@ -87,15 +117,15 @@ const Sec19 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec19_f2_pc.png"}
+                    srcSet={src + "/images/mb/sec19_f2_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec19_f2_pc.png"}
+                    srcSet={src + "/images/pc/sec19_f2_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec19_f2_pc.png"}
+                    src={src + "/images/pc/sec19_f2_pc.webp"}
                   />
                 </picture>
               </div>
@@ -119,15 +149,15 @@ const Sec19 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec19_f3_pc.png"}
+                    srcSet={src + "/images/mb/sec19_f3_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec19_f3_pc.png"}
+                    srcSet={src + "/images/pc/sec19_f3_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec19_f3_pc.png"}
+                    src={src + "/images/pc/sec19_f3_pc.webp"}
                   />
                 </picture>
               </div>

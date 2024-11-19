@@ -22,9 +22,9 @@ const Sec8 = () => {
             />
             <source
               media='(min-width: 751px)'
-              srcSet={src + "/images/pc/sec8_bg_pc.png"}
+              srcSet={src + "/images/pc/sec8_bg_pc.webp"}
             />
-            <img loading='lazy' src={src + "/images/pc/sec8_bg_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec8_bg_pc.webp"} />
           </picture>
         </div>
         <div className='content_wrap'>

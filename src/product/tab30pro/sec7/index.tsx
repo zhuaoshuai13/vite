@@ -117,12 +117,9 @@ const Sec7 = () => {
         },
         "c"
       )
-      .from(
-        ".icon_wrap",
-        {
-          ease: "power2.inOut",
-        },
-      )
+      .from(".icon_wrap", {
+        ease: "power2.inOut",
+      })
     ScrollTrigger.create({
       trigger: ".sec7_wrap",
       pin: true,
@@ -176,9 +173,9 @@ const Sec7 = () => {
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec7_bg1_pc.png"}
+                  srcSet={src + "/images/pc/sec7_bg1_pc.webp"}
                 />
-                <img loading='lazy' src={src + "/images/pc/sec7_bg1_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec7_bg1_pc.webp"} />
               </picture>
             </div>
             <div className='img_wrap bg_wrap bg_wrap2'>
@@ -189,9 +186,9 @@ const Sec7 = () => {
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec7_bg2_pc.png"}
+                  srcSet={src + "/images/pc/sec7_bg2_pc.webp"}
                 />
-                <img loading='lazy' src={src + "/images/pc/sec7_bg2_pc.png"} />
+                <img loading='lazy' src={src + "/images/pc/sec7_bg2_pc.webp"} />
               </picture>
             </div>
             <div className='img_wrap icon_wrap icon_wrap1'>
@@ -202,11 +199,11 @@ const Sec7 = () => {
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec7_icon1_pc.png"}
+                  srcSet={src + "/images/pc/sec7_icon1_pc.webp"}
                 />
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec7_icon1_pc.png"}
+                  src={src + "/images/pc/sec7_icon1_pc.webp"}
                 />
               </picture>
             </div>
@@ -218,11 +215,11 @@ const Sec7 = () => {
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec7_icon2_pc.png"}
+                  srcSet={src + "/images/pc/sec7_icon2_pc.webp"}
                 />
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec7_icon2_pc.png"}
+                  src={src + "/images/pc/sec7_icon2_pc.webp"}
                 />
               </picture>
             </div>
@@ -234,11 +231,11 @@ const Sec7 = () => {
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec7_icon3_pc.png"}
+                  srcSet={src + "/images/pc/sec7_icon3_pc.webp"}
                 />
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec7_icon3_pc.png"}
+                  src={src + "/images/pc/sec7_icon3_pc.webp"}
                 />
               </picture>
             </div>
@@ -250,11 +247,11 @@ const Sec7 = () => {
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec7_icon4_pc.png"}
+                  srcSet={src + "/images/pc/sec7_icon4_pc.webp"}
                 />
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec7_icon4_pc.png"}
+                  src={src + "/images/pc/sec7_icon4_pc.webp"}
                 />
               </picture>
             </div>
@@ -266,11 +263,11 @@ const Sec7 = () => {
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec7_icon5_pc.png"}
+                  srcSet={src + "/images/pc/sec7_icon5_pc.webp"}
                 />
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec7_icon5_pc.png"}
+                  src={src + "/images/pc/sec7_icon5_pc.webp"}
                 />
               </picture>
             </div>
@@ -282,11 +279,11 @@ const Sec7 = () => {
                 />
                 <source
                   media='(min-width: 751px)'
-                  srcSet={src + "/images/pc/sec7_icon6_pc.png"}
+                  srcSet={src + "/images/pc/sec7_icon6_pc.webp"}
                 />
                 <img
                   loading='lazy'
-                  src={src + "/images/pc/sec7_icon6_pc.png"}
+                  src={src + "/images/pc/sec7_icon6_pc.webp"}
                 />
               </picture>
             </div>

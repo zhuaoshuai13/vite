@@ -17,16 +17,16 @@ const Sec18 = () => {
 
   const picArray = [
     {
-      pc: src + "/images/pc/sec18_f1_pc.png",
-      mb: src + "/images/pc/sec18_f1_pc.png",
+      pc: src + "/images/pc/sec18_f1_pc.webp",
+      mb: src + "/images/pc/sec18_f1_pc.webp",
     },
     {
-      pc: src + "/images/pc/sec18_f2_pc.png",
-      mb: src + "/images/pc/sec18_f2_pc.png",
+      pc: src + "/images/pc/sec18_f2_pc.webp",
+      mb: src + "/images/pc/sec18_f2_pc.webp",
     },
     {
-      pc: src + "/images/pc/sec18_f3_pc.png",
-      mb: src + "/images/pc/sec18_f3_pc.png",
+      pc: src + "/images/pc/sec18_f3_pc.webp",
+      mb: src + "/images/pc/sec18_f3_pc.webp",
     },
   ]
 

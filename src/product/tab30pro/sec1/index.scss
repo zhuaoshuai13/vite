@@ -125,141 +125,91 @@
 @media (max-width: $mobwidthPx) {
   .tab30pro .sec1 {
     .sec1_wrap {
-      height: px-to-vw-mb(1200);
-
-      @include bg("mb/sec1_bg_mb.png");
-
-      background-size: 100% px-to-vw-mb(1600);
-    }
-
-    .title1 {
-      position: absolute;
-      top: px-to-vw-mb(100);
-      left: px-to-vw-mb(40);
-      z-index: 1;
-      padding: 0;
-      font-size: px-to-vw-mb(64);
-      text-align: left;
+      height: px-to-vw-mb(1065);
     }
 
     .content_wrap {
-      top: px-to-vw-mb(850);
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      padding: 0 px-to-vw-mb(40);
-    }
-
-    .left {
-      display: block;
-
-      .data_wrap {
-        align-items: flex-end;
-
-        .data_item {
-          align-items: flex-end;
-          padding-right: px-to-vw-mb(12);
-        }
-      }
+      top: px-to-vw-mb(200);
+      left: px-to-vw-mb(50);
+      transform: unset;
     }
 
     .logo {
-      width: px-to-vw-mb(250);
-      margin: 0 0 0 auto;
+      width: px-to-vw-mb(492);
+      height: px-to-vw-mb(51);
+      margin-bottom: px-to-vw-mb(24);
     }
 
     .data_wrap {
-      flex-direction: column;
       gap: px-to-vw-mb(12);
-      align-items: flex-end;
-      margin-top: px-to-vw-mb(24);
+      margin-bottom: px-to-vw-mb(24);
 
       .data_item {
-        flex-direction: column;
-        align-items: flex-end;
         padding-right: px-to-vw-mb(12);
+        font-size: px-to-vw-mb(15);
 
-        &:not(:last-child):after {
-          width: 1px;
-          height: px-to-vw-mb(30);
-          outline: none;
+        &:not(:last-child) {
+          &:after {
+            height: px-to-vw-mb(12);
+          }
         }
-
-        &:after {
-          position: absolute;
-          top: 50%;
-          right: 0;
-          display: block;
-          width: 1px;
-          height: px-to-vw-mb(30);
-          background-color: #e9798b;
-          transform: translateY(-50%);
-          content: "";
-        }
-      }
-
-      .title {
-        font-size: px-to-vw-mb(30);
-      }
-
-      .desc {
-        font-size: px-to-vw-mb(16);
       }
     }
 
-    .data2_title {
-      font-size: px-to-vw-mb(24);
+    .wps_wrap {
+      width: px-to-vw-mb(170);
+      height: px-to-vw-mb(26);
+    }
+
+    .carlcare_wrap {
+      top: px-to-vw-mb(48);
+      right: px-to-vw-mb(40);
+      width: px-to-vw-mb(150);
     }
 
     .phone1 {
-      top: px-to-vw-mb(290);
-      left: px-to-vw-mb(330);
-      width: px-to-vw-mb(531);
+      top: px-to-vw-mb(440);
+      left: px-to-vw-mb(236);
+      width: px-to-vw-mb(405);
     }
 
     .phone2 {
-      top: px-to-vw-mb(350);
-      left: px-to-vw-mb(230);
-      width: px-to-vw-mb(418);
+      top: px-to-vw-mb(395);
+      left: px-to-vw-mb(160);
+      width: px-to-vw-mb(382);
     }
 
     .phone3 {
-      top: px-to-vw-mb(480);
-      left: px-to-vw-mb(-100);
-      width: px-to-vw-mb(358);
+      top: px-to-vw-mb(600);
+      left: px-to-vw-mb(40);
+      width: px-to-vw-mb(671);
     }
 
-    .icon_items {
-      top: px-to-vw-mb(1085);
-      left: px-to-vw-mb(40);
-      gap: px-to-vw-mb(30);
-      transform: unset;
+    .phone4 {
+      top: px-to-vw-mb(780);
+      left: px-to-vw-mb(30);
+      width: px-to-vw-mb(623);
+    }
 
-      .item {
-        &:nth-child(1) {
-          width: px-to-vw-mb(37);
-        }
+    .sign_wrap {
+      top: px-to-vw-mb(888);
+      left: px-to-vw-mb(290);
+    }
 
-        &:nth-child(2) {
-          width: px-to-vw-mb(38);
-        }
+    .slogn_wrap {
+      width: px-to-vw-mb(236);
+    }
 
-        &:nth-child(3) {
-          width: px-to-vw-mb(23);
-        }
+    .pen_wrap {
+      top: px-to-vw-mb(-183);
+      left: px-to-vw-mb(234);
+      width: px-to-vw-mb(190);
+    }
 
-        &:nth-child(4) {
-          width: px-to-vw-mb(60);
-        }
-
-        &:nth-child(5) {
-          width: px-to-vw-mb(34);
-        }
-
-        &:nth-child(6) {
-          width: px-to-vw-mb(50);
-        }
-      }
+    .pen_shadow_wrap {
+      top: px-to-vw-mb(41);
+      left: px-to-vw-mb(234);
+      width: px-to-vw-mb(200);
     }
   }
 }

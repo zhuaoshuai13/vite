@@ -13,9 +13,12 @@ const Sec1 = () => {
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
   const { isLoaded } = UseImagesLoad([
-    src + "/images/pc/sec1_p1_pc.png",
-    src + "/images/pc/sec1_p2_pc.png",
-    src + "/images/pc/sec1_p3_pc.png",
+    src + "/images/pc/sec1_phone1_pc.webp",
+    src + "/images/pc/sec1_phone2_pc.webp",
+    src + "/images/pc/sec1_phone3_pc.webp",
+    src + "/images/pc/sec1_slogn_pc.webp",
+    src + "/images/pc/sec1_pen_pc.webp",
+    src + "/images/pc/sec1_logo_pc.webp",
   ])
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -83,9 +86,9 @@ const Sec1 = () => {
 
   useGSAP(
     () => {
-      if (isPc && window.innerHeight < 900) {
-        window.scrollTo(0, 125)
-      }
+      // if (isPc && window.innerHeight < 900) {
+      //   window.scrollTo(0, 125)
+      // }
       if (isLoaded) {
         sec1Ani()
       }
@@ -103,15 +106,15 @@ const Sec1 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec1_p3_mb.png"}
+                    srcSet={src + "/images/mb/sec1_phone4_mb.png"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec1_phone4_pc.png"}
+                    srcSet={src + "/images/pc/sec1_phone4_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec1_phone4_pc.png"}
+                    src={src + "/images/pc/sec1_phone4_pc.webp"}
                   />
                 </picture>
               </div>
@@ -119,15 +122,15 @@ const Sec1 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec1_p3_mb.png"}
+                    srcSet={src + "/images/mb/sec1_phone3_mb.png"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec1_phone3_pc.png"}
+                    srcSet={src + "/images/pc/sec1_phone3_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec1_phone3_pc.png"}
+                    src={src + "/images/pc/sec1_phone3_pc.webp"}
                   />
                 </picture>
               </div>
@@ -135,15 +138,15 @@ const Sec1 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec1_p2_mb.png"}
+                    srcSet={src + "/images/mb/sec1_phone2_mb.png"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec1_phone2_pc.png"}
+                    srcSet={src + "/images/pc/sec1_phone2_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec1_phone2_pc.png"}
+                    src={src + "/images/pc/sec1_phone2_pc.webp"}
                   />
                 </picture>
               </div>
@@ -151,15 +154,15 @@ const Sec1 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec1_p1_mb.png"}
+                    srcSet={src + "/images/mb/sec1_phone1_mb.png"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec1_phone1_pc.png"}
+                    srcSet={src + "/images/pc/sec1_phone1_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec1_phone1_pc.png"}
+                    src={src + "/images/pc/sec1_phone1_pc.webp"}
                   />
                 </picture>
               </div>
@@ -168,7 +171,7 @@ const Sec1 = () => {
         </div>
         <div className='content_wrap'>
           <div className='img_wrap logo'>
-            <img loading='lazy' src={src + "/images/pc/sec1_logo_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec1_logo_pc.webp"} />
           </div>
           <div className='data_wrap'>
             {config?.sec1?.data?.map((item: any, index: number) => (
@@ -180,7 +183,7 @@ const Sec1 = () => {
             ))}
           </div>
           <div className='img_wrap wps_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec1_wps_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec1_wps_pc.webp"} />
           </div>
         </div>
         <div
@@ -188,20 +191,20 @@ const Sec1 = () => {
           dangerouslySetInnerHTML={{ __html: config?.sec1?.tips }}
         ></div>
         <div className='img_wrap carlcare_wrap'>
-          <img loading='lazy' src={src + "/images/pc/sec1_carlcare_pc.png"} />
+          <img loading='lazy' src={src + "/images/pc/sec1_carlcare_pc.webp"} />
         </div>
         <div className='sign_wrap'>
           <div className='img_wrap slogn_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec1_slogn_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec1_slogn_pc.webp"} />
           </div>
           <div className='img_wrap pen_shadow_wrap'>
             <img
               loading='lazy'
-              src={src + "/images/pc/sec1_pen_shadow_pc.png"}
+              src={src + "/images/pc/sec1_pen_shadow_pc.webp"}
             />
           </div>
           <div className='img_wrap pen_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec1_pen_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec1_pen_pc.webp"} />
           </div>
         </div>
       </div>

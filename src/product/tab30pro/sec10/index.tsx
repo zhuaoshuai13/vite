@@ -17,6 +17,10 @@ const Sec10 = () => {
   const sec10Ani = () => {
     const tl = gsap
       .timeline()
+      .from(".part1 .phone_wrap2", {
+        x: "-100%",
+        ease: "power2.inOut",
+      })
       .to(
         ".part1",
         {
@@ -33,6 +37,11 @@ const Sec10 = () => {
         },
         "a"
       )
+      .from(".part2 .phone_wrap2", {
+        x: "20%",
+        y: "30%",
+        ease: "power2.inOut",
+      })
       .to(
         ".part2",
         {
@@ -55,7 +64,7 @@ const Sec10 = () => {
       })
     ScrollTrigger.create({
       trigger: ".sec10_wrap",
-      start: `top 0%`,
+      start: `top -10%`,
       end: "+=500%",
       pin: true,
       scrub: 0.2,
@@ -398,15 +407,15 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_1_1_pc.png"}
+                    srcSet={src + "/images/mb/sec10_1_1_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec10_1_1_pc.png"}
+                    srcSet={src + "/images/pc/sec10_1_1_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec10_1_1_pc.png"}
+                    src={src + "/images/pc/sec10_1_1_pc.webp"}
                   />
                 </picture>
               </div>
@@ -414,15 +423,15 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_1_2_pc.png"}
+                    srcSet={src + "/images/mb/sec10_1_2_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec10_1_2_pc.png"}
+                    srcSet={src + "/images/pc/sec10_1_2_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec10_1_2_pc.png"}
+                    src={src + "/images/pc/sec10_1_2_pc.webp"}
                   />
                 </picture>
               </div>
@@ -452,15 +461,15 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_2_1_pc.png"}
+                    srcSet={src + "/images/mb/sec10_2_1_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec10_2_1_pc.png"}
+                    srcSet={src + "/images/pc/sec10_2_1_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec10_2_1_pc.png"}
+                    src={src + "/images/pc/sec10_2_1_pc.webp"}
                   />
                 </picture>
               </div>
@@ -468,15 +477,15 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_2_2_pc.png"}
+                    srcSet={src + "/images/mb/sec10_2_2_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec10_2_2_pc.png"}
+                    srcSet={src + "/images/pc/sec10_2_2_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec10_2_2_pc.png"}
+                    src={src + "/images/pc/sec10_2_2_pc.webp"}
                   />
                 </picture>
               </div>
@@ -504,15 +513,15 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_3_4_pc.png"}
+                    srcSet={src + "/images/mb/sec10_3_4_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec10_3_4_pc.png"}
+                    srcSet={src + "/images/pc/sec10_3_4_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec10_3_4_pc.png"}
+                    src={src + "/images/pc/sec10_3_4_pc.webp"}
                   />
                 </picture>
               </div>
@@ -522,15 +531,15 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_3_1_pc.png"}
+                    srcSet={src + "/images/mb/sec10_3_1_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec10_3_1_pc.png"}
+                    srcSet={src + "/images/pc/sec10_3_1_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec10_3_1_pc.png"}
+                    src={src + "/images/pc/sec10_3_1_pc.webp"}
                   />
                 </picture>
               </div>
@@ -538,15 +547,15 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_3_2_pc.png"}
+                    srcSet={src + "/images/mb/sec10_3_2_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec10_3_2_pc.png"}
+                    srcSet={src + "/images/pc/sec10_3_2_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec10_3_2_pc.png"}
+                    src={src + "/images/pc/sec10_3_2_pc.webp"}
                   />
                 </picture>
               </div>
@@ -554,15 +563,15 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_3_3_pc.png"}
+                    srcSet={src + "/images/mb/sec10_3_3_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec10_3_3_pc.png"}
+                    srcSet={src + "/images/pc/sec10_3_3_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec10_3_3_pc.png"}
+                    src={src + "/images/pc/sec10_3_3_pc.webp"}
                   />
                 </picture>
               </div>

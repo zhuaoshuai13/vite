@@ -108,28 +108,28 @@ const Sec13 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec13_bg_pc.png"}
+                srcSet={src + "/images/mb/sec13_bg_pc.webp"}
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec13_bg_pc.png"}
+                srcSet={src + "/images/pc/sec13_bg_pc.webp"}
               />
-              <img loading='lazy' src={src + "/images/pc/sec13_bg_pc.png"} />
+              <img loading='lazy' src={src + "/images/pc/sec13_bg_pc.webp"} />
             </picture>
           </div>
           <div className='img_wrap processor_wrap slide_up'>
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec13_processor_pc.png"}
+                srcSet={src + "/images/mb/sec13_processor_pc.webp"}
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec13_processor_pc.png"}
+                srcSet={src + "/images/pc/sec13_processor_pc.webp"}
               />
               <img
                 loading='lazy'
-                src={src + "/images/pc/sec13_processor_pc.png"}
+                src={src + "/images/pc/sec13_processor_pc.webp"}
               />
             </picture>
           </div>

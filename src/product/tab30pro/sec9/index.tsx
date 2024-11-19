@@ -90,9 +90,9 @@ const Sec9 = () => {
             />
             <source
               media='(min-width: 751px)'
-              srcSet={src + "/images/pc/sec9_bg_pc.png"}
+              srcSet={src + "/images/pc/sec9_bg_pc.webp"}
             />
-            <img loading='lazy' src={src + "/images/pc/sec9_bg_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec9_bg_pc.webp"} />
           </picture>
         </div>
         <div className='text_wrap slide_up'>
@@ -146,7 +146,11 @@ const Sec9 = () => {
             </div>
           </div>
           <div className='data_pic equal_parent'>
-            <div className={`pic_wrap equal_parent ${activeIndex === 0 ? "active_pic_wrap" : ""}`}>
+            <div
+              className={`pic_wrap equal_parent ${
+                activeIndex === 0 ? "active_pic_wrap" : ""
+              }`}
+            >
               <div className='img_wrap wave_wrap1'>
                 <picture>
                   <source
@@ -155,11 +159,11 @@ const Sec9 = () => {
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec9_wave_pc.png"}
+                    srcSet={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec9_wave_pc.png"}
+                    src={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                 </picture>
               </div>
@@ -171,11 +175,11 @@ const Sec9 = () => {
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec9_1_1_pc.png"}
+                    srcSet={src + "/images/pc/sec9_1_1_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec9_1_1_pc.png"}
+                    src={src + "/images/pc/sec9_1_1_pc.webp"}
                   />
                 </picture>
               </div>
@@ -187,16 +191,20 @@ const Sec9 = () => {
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec9_1_2_pc.png"}
+                    srcSet={src + "/images/pc/sec9_1_2_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec9_1_2_pc.png"}
+                    src={src + "/images/pc/sec9_1_2_pc.webp"}
                   />
                 </picture>
               </div>
             </div>
-            <div className={`pic_wrap equal_parent ${activeIndex === 1 ? "active_pic_wrap" : ""}`}>
+            <div
+              className={`pic_wrap equal_parent ${
+                activeIndex === 1 ? "active_pic_wrap" : ""
+              }`}
+            >
               <div className='img_wrap wave_wrap2'>
                 <picture>
                   <source
@@ -205,11 +213,11 @@ const Sec9 = () => {
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec9_wave_pc.png"}
+                    srcSet={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec9_wave_pc.png"}
+                    src={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                 </picture>
               </div>
@@ -221,11 +229,11 @@ const Sec9 = () => {
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec9_wave_pc.png"}
+                    srcSet={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec9_wave_pc.png"}
+                    src={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                 </picture>
               </div>
@@ -237,11 +245,11 @@ const Sec9 = () => {
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec9_2_1_pc.png"}
+                    srcSet={src + "/images/pc/sec9_2_1_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec9_2_1_pc.png"}
+                    src={src + "/images/pc/sec9_2_1_pc.webp"}
                   />
                 </picture>
               </div>
@@ -253,16 +261,20 @@ const Sec9 = () => {
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec9_2_2_pc.png"}
+                    srcSet={src + "/images/pc/sec9_2_2_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec9_2_2_pc.png"}
+                    src={src + "/images/pc/sec9_2_2_pc.webp"}
                   />
                 </picture>
               </div>
             </div>
-            <div className={`pic_wrap equal_parent ${activeIndex === 2 ? "active_pic_wrap" : ""}`}>
+            <div
+              className={`pic_wrap equal_parent ${
+                activeIndex === 2 ? "active_pic_wrap" : ""
+              }`}
+            >
               <div className='img_wrap wave_wrap4'>
                 <picture>
                   <source
@@ -271,11 +283,11 @@ const Sec9 = () => {
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec9_wave_pc.png"}
+                    srcSet={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec9_wave_pc.png"}
+                    src={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                 </picture>
               </div>
@@ -287,11 +299,11 @@ const Sec9 = () => {
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec9_3_1_pc.png"}
+                    srcSet={src + "/images/pc/sec9_3_1_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec9_3_1_pc.png"}
+                    src={src + "/images/pc/sec9_3_1_pc.webp"}
                   />
                 </picture>
               </div>
@@ -303,11 +315,11 @@ const Sec9 = () => {
                   />
                   <source
                     media='(min-width: 751px)'
-                    srcSet={src + "/images/pc/sec9_3_2_pc.png"}
+                    srcSet={src + "/images/pc/sec9_3_2_pc.webp"}
                   />
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec9_3_2_pc.png"}
+                    src={src + "/images/pc/sec9_3_2_pc.webp"}
                   />
                 </picture>
               </div>

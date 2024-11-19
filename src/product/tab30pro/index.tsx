@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
 import { ReactLenis } from "lenis/react"
+import { SplitText } from "gsap-trial/SplitText"
 
 import { ScreenContext } from "../../provider"
 import Sec1 from "./sec1"
@@ -33,7 +34,7 @@ const Tab30Pro = () => {
   // 传到sec19的swiper，有了swiper之后再执行slide-up动画，防止slide-up的动画初始化在swiper初始化之前，导致slide-up动画的触发时机有问题
   const { isPc } = useContext(ScreenContext)
 
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText)
 
   const specSecAni = () => {
     const animateFrom = (ele: any) => {
@@ -53,14 +54,35 @@ const Tab30Pro = () => {
       })
     })
 
-    if (!isPc) {
+    if (isPc) {
       gsap.utils
         .toArray(".tab30pro .spec_part .spec_text_wrap")
         .forEach((item: any) => {
+          // const splitTxt = new SplitText(item).chars
+          const tl1 = gsap
+            .timeline()
+            .from(
+              item,
+              {
+                opacity: 0,
+                duration: 1,
+                ease: "power2.inOut",
+              },
+              "a"
+            )
+            .from(
+              item,
+              {
+                y: -350,
+                duration: 1,
+                ease: "bounce.out",
+              },
+              "a"
+            )
           ScrollTrigger.create({
             trigger: item,
-            start: `top 95%`,
-            animation: animateFrom(item),
+            start: `top 80%`,
+            animation: tl1,
             toggleActions: "play none none reverse",
           })
         })

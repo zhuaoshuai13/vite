@@ -117,13 +117,13 @@ const Sec6 = () => {
               />
               <source
                 media='(min-width: 751px)'
-                srcSet={src + "/images/pc/sec6_bg_pc.jpg"}
+                srcSet={src + "/images/pc/sec6_bg_pc.webp"}
               />
-              <img loading='lazy' src={src + "/images/pc/sec6_bg_pc.jpg"} />
+              <img loading='lazy' src={src + "/images/pc/sec6_bg_pc.webp"} />
             </picture>
           </div>
           <div className='img_wrap screen_text_wrap'>
-            <img loading='lazy' src={src + "/images/pc/sec6_18_pc.png"} />
+            <img loading='lazy' src={src + "/images/pc/sec6_18_pc.webp"} />
           </div>
         </div>
       </div>
