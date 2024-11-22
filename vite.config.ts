@@ -36,7 +36,7 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: "src/product/tab30pro/config.js",
+              src: "src/product/s25ultraPt/config_pt.js",
               dest: "dist/js",
             },
             {

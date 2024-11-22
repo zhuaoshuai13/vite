@@ -2,40 +2,29 @@ const src = window.basic_assets_href
 window.src = src
 window.s25ultraConfig = {
   sec1: {
-    title: "Tough. <br class='mb'/>Slim. <br class='mb'/>Durable.",
+    title: "Robuste. <br class='mb'/>Mince. <br class='mb'/>Durable.",
     data: [
       {
-        title: `6.78"3D-Curved AMOLED`,
-        desc: "Corning® Gorilla® <br class='pc'/> Glass 7i ",
+        title: `AMOLED 3D incurvé 6,78"`,
+        desc: "Verre Corning®  <br class='pc'/> Gorilla® 7i",
       },
       {
         title: "6.9mm",
-        desc: "Ultra Slim <br class='pc'/> Design",
+        desc: "Conception <br class='pc'/> ultra-mince",
       },
       {
-        title: "512+16GB*",
-        desc: "(8+8GB) <br class='pc'/> Extended RAM",
-      },
-    ],
-    watchTitle: "Smart Watch <br class='mb'/> Storm Ultra",
-    data2: [
-      {
-        title: `2.02"`,
-        desc: "Tested <br class='pc'/> Scratchproof Screen",
-      },
-      {
-        title: "iPulse*",
-        desc: "Watch App <br class='pc'/> Pre-installed on S25 Series",
+        title: "512 + 16 Go*",
+        desc: "RAM étendue <br class='pc'/> (8 + 8 Go)",
       },
     ],
   },
   sec2: {
-    slogn: "Elegance in Excellence",
+    slogn: "L'élégance et l'excellence",
     text: [
-      "Combining cutting-edge technology",
-      "with avant-garde aesthetic concepts",
-      "this is the brand-new S25 Ultra",
-      "lovingly crafted for the uncompromising you",
+      "Combinaison de technologies de pointe et",
+      "de concepts esthétiques d'avant-garde",
+      "voici le tout nouveau S25 Ultra",
+      "conçu juste pour vous, plus de compromis.",
     ],
     video: {
       pc: src + "/videos/sec2_video_pc.mp4",
@@ -44,325 +33,334 @@ window.s25ultraConfig = {
     full_video: {
       pc: src + "/videos/sec2_video_all_pc.mp4",
       mb: src + "/videos/sec2_video_all_mb.mp4",
-    }
+    },
   },
   sec3: {
     item1: {
-      title: `6.78" 3D-Curved`,
-      desc: "AMOLED Display",
-      desc2: "Corning® Gorilla® Glass 7i ",
+      title: `Écran AMOLED incurvé`,
+      desc: ` 3D de 6,78"`,
+      desc2: "Verre Corning® Gorilla® 7i ",
     },
     item2: {
-      title: `6.9mm Ultra Slim Body`,
+      title: `Corps ultra-mince de 6,9 mm`,
     },
     item2Mb: {
-      title: `6.9mm`,
-      desc: "Ultra Slim Body",
+      title: `Corps `,
+      desc: "ultra-mince de 6,9 mm",
     },
     item3: {
-      title: `TitanShield Protection`,
+      title: `Protection TitanShield`,
     },
     item4: {
-      title: `IP64 Dust & Water Resistant`,
+      title: `Résistance à la poussière et à l'eau IP64 `,
     },
     item4Mb: {
-      title: `IP64`,
-      desc: "Dust & Water Resistant",
+      title: `Résistance à la  `,
+      desc: "poussière et à l'eau IP64",
     },
     item5: {
-      title: `32MP`,
-      desc: "AI Selfie Camera",
+      title: `Appareil `,
+      desc: "photo selfie AI de 32 MP",
     },
     item6: {
-      desc: `Upgradeable to Andriod 15™`,
+      desc: `Possibilité de mettre à jour vers Android 15™`,
     },
     item7: {
-      desc: "Infrared Remote Control",
+      desc: "Contrôle infrarouge à distance ",
     },
     item8: {
-      title: `60-month Fluency*`,
+      title: `60 mois de fluidité*`,
     },
     item9: {
-      title: `Up to 512GB ROM <br class="pc"/> +16GB*(8+8) RAM`,
+      title: `Jusqu'à 512 Go de ROM <br class="pc"/> + 16 Go* (8 + 8) de RAM`,
     },
   },
   sec4: {
-    spec_title: "EXCELLENCE IN VISION",
-    spec_desc:
-      "Top-tier display quality, premier brightness, <br class='mb'> superb eye care, and durability all in one screen. <br/> Countless advantages are embodied in this display.",
+    spec_title: "EXCELLENCE EN VISION",
+    spec_desc: `Qualité d'affichage de premier ordre, excellente luminosité, 
+superbe éclairage nocturne et durabilité, le tout dans un seul écran. 
+Cet affichage offre de nombreux avantages.`,
     part1: {
-      title: "A vibrant curved display <br/> comes to life",
-      desc: "itel collaborates with top suppliers to create a flagship-level curved screen, utilizing cutting-edge luminescent materials. <br/> It features top-tier display quality and eye protection, making it the king of the segment in every aspect.",
+      title: "Un écran incurvé <br class='pc'> vibrant prend vie",
+      desc: "itel coopère avec les meilleurs fournisseurs pour créer un écran incurvé de niveau phare à l'aide de matériaux luminescents de pointe. Il offre une qualité d'affichage de premier ordre, ce qui en fait le roi du segment à tous égards.",
       data: [
         {
           icon: "sec4_icon1_pc.webp",
-          title: "6.78-inch",
-          subtitle: "Large Display",
+          title: "6,78 pouces",
+          subtitle: "Grand écran",
         },
         {
           icon: "sec4_icon2_pc.webp",
-          title: "1400nits*",
-          subtitle: "Peak Brightness",
+          title: "1 400 nits*",
+          subtitle: "Luminosité maximale",
         },
         {
           icon: "sec4_icon3_pc.webp",
-          title: "120Hz",
-          subtitle: "Refresh Rate",
+          title: "120 Hz",
+          subtitle: "Taux de rafraîchissement",
         },
         {
           icon: "sec4_icon4_pc.webp",
-          title: "1500Hz",
-          subtitle: "Instant Touch Sampling",
+          title: "1 500 Hz",
+          subtitle: "Échantillonnage tactile instantané",
         },
         {
           icon: "sec4_icon5_pc.webp",
-          title: "2160Hz",
-          subtitle: "PWM Dimming",
+          title: "2 160 Hz",
+          subtitle: "Gradation PWM",
         },
       ],
     },
     part2: {
-      title: "Indestructible <br/> protection glass",
-      desc: "The itel S25 Ultra comes equipped with leading Corning® Gorilla® Glass 7i, enhancing drop resistance by 160% and scratch resistance by 100% compared to regular glass. Even from a drop height of 1.5 meters, the screen remains intact.*",
+      title: "Verre de protection indestructible",
+      desc: "Le S25 Ultra d'itel est équipé du verre Corning® Gorilla® 7i, qui améliore la résistance aux chutes de 160 % et la résistance aux rayures de 100 % par rapport au verre ordinaire. Même à une hauteur de chute de 1,5 mètre, l'écran reste intact.*",
       data: [
         {
           icon: "sec4_icon6_pc.webp",
-          title: "1.07 Billion",
-          subtitle: "Colors",
+          title: "1,07 milliard",
+          subtitle: "Couleurs",
         },
         {
           icon: "sec4_icon7_pc.webp",
-          title: "100%",
-          subtitle: "DCI-P3 Color Gamut",
+          title: "100 %",
+          subtitle: "Gamme de couleurs DCI-P3",
         },
         {
           icon: "sec4_icon8_pc.webp",
-          title: "2436*1080",
-          subtitle: "FHD+ Resolution",
+          title: "2 436*1 080",
+          subtitle: "Résolution FHD+",
         },
         {
           icon: "sec4_icon9_pc.webp",
-          title: "94%*",
-          subtitle: "Screen-to-body Ratio",
+          title: "94 %*",
+          subtitle: "Rapport écran-corps",
         },
         {
           icon: "sec4_icon10_pc.webp",
-          title: "5,000,000: 1",
-          subtitle: "Contrast Ratio",
+          title: "5 000 000:1",
+          subtitle: "Rapport de contraste",
         },
       ],
     },
   },
   sec5: {
-    title: "Visible in the sunlight",
-    desc: "The global brightness reaches an astonishing 1000 nits, with <br class='mb'> peak values that are alarmingly high at 1400 nits, <br class='pc'/> enabling <br class='mb'> you to vividly perceive the captivating content on the screen <br class='mb'> even in direct sunlight.*",
+    title: "Visible à la lumière du soleil",
+    desc: "La luminosité globale atteint un étonnant 1 000 nits, avec des valeurs maximales de 1 400 nits, vous permettant de percevoir le contenu attrayant sur l'écran, même en plein soleil.*",
   },
   sec6: {
     part1: {
-      title: "Smart Anti-mistouch",
-      desc: "<2% in accidental touch rates",
+      title: "Prévention de contacts non voulus intelligente",
+      desc: "＜2 % de réduction des taux de <br class='pc'> contacts non voulus*",
     },
     part2: {
-      title: "Wet Touch Display",
-      desc: "Supports wet hands & oily hands",
+      title: "Écran tactile avec <br class='pc'> main mouillée",
+      desc: "Avec contrôle tactile avec mains <br class='pc'> mouillées et grasses",
     },
     part3: {
-      title: "In-Display Fingerprint Unlock",
-      desc: "Fast and safe",
+      title: "Déverrouillage par empreintes digitales intégré à l'écran",
+      desc: "Rapide et sûr",
     },
   },
   sec7: {
-    spec_title: "EXCELLENCE IN DURABILITY",
-    spec_desc:
-      "Incredibly slim, yet unbelievably durable. <br/> Dare to embrace innovative tech and materials, delivering a flagship experience for you.",
-    title: "Thin like a blade",
-    desc: "Just 163g & only 6.9mm*",
+    spec_title: "EXCELLENCE EN DURABILITÉ",
+    spec_desc: `Extrêmement mince, mais incroyablement durable.
+Des technologies et des matériaux innovants,
+pour vous offrir une expérience exceptionnelle.`,
+    title: "Mince comme une lame.",
+    desc: "Seulement 163 g et 6,9 mm*",
   },
   sec8: {
-    title: "Fearless in the rain",
-    desc: "With an IP64 rating for dust and water resistance, this device <br class='mb'> is well-protected against everyday wear and tear, <br class='pc'/> including <br class='mb'> dust ingress and light water splashes.",
+    title: "Sans souci sous la pluie",
+    desc: "Grâce à un indice IP64 pour la résistance à la poussière et à l'eau, ce téléphone est bien protégé contre l'usure quotidienne, qu'il s'agisse d'intrusion de poussière ou de petites éclaboussures d'eau.",
   },
   sec9: {
-    title: `Survives <br class="pc"/> 25000 impacts<span>*</span>`,
-    desc: "TitanShield Protection incorporates 4 major technologies <br class='mb'> to comprehensively <br class='pc'/> safeguard your beloved phone.",
+    title: `Survit à <br class="pc"/> 25 000 impacts<span>*</span>`,
+    desc: "La protection TitanShield intègre 4 technologies majeures <br class='pc'> pour protéger entièrement votre téléphone.",
     data: [
       {
         title: "500",
-        unit: "times",
-        desc: "Rolling machine tests",
+        unit: "fois",
+        desc: "Tests de machines à rouler",
       },
       {
-        title: "2000",
-        unit: "times",
-        desc: "Extreme pressure tests",
+        title: "2 000",
+        unit: "fois",
+        desc: "Tests de pression extrême",
       },
       {
-        title: "25000",
-        unit: "times",
-        desc: "Extreme micro drop tests",
+        title: "25 000",
+        unit: "fois",
+        desc: "Tests de micro-chute extrêmes",
       },
       {
-        title: "70/-40°C",
+        title: "70 / -40 °C",
         unit: "",
-        desc: "Extreme tests of ultra <br class='mb'> high/low temperatures",
+        desc: "Tests extrêmes à températures très élevées/basses",
       },
     ],
   },
   sec10: {
     part1: {
-      title: "Silicone <br/> Sealing Rings",
-      desc: "In the S25 Ultra, silicone seals are applied to the edges of the screen and battery cover, as well as all external interfaces, offering comprehensive waterproofing and shock resistance.",
+      title: "Joints d'étanchéité en silicone",
+      desc: "Sur le S25 Ultra, des joints en silicone sont appliqués sur les bords de l'écran et du couvercle de la batterie, ainsi que sur toutes les interfaces externes, offrant ainsi une étanchéité complète et une résistance aux chocs.",
     },
     part2: {
-      title: `Integrated <br/> Metal Inner <br class="pc"/> Frame`,
-      desc: "During the die-casting process of the motherboard upper cover, we integrated metal strips to create a robust metal frame, significantly enhancing the device's resistance to bending compared to traditional designs.",
+      title: `Cadre intérieur métallique intégré`,
+      desc: "Lors du moulage sous pression du couvercle supérieur de la carte mère, nous avons intégré des bandes métalliques pour créer un cadre métallique robuste, ce qui améliore considérablement la résistance à la flexion de l'appareil par rapport aux conceptions traditionnelles.",
     },
     part3: {
-      title: "Racing-Chassis-Class <br/> Die-cast Mg-Al Material",
-      desc: "The S25 Ultra features an upper cover made from the same high-strength die-cast magnesium-aluminum material used in racing car chassis. This material's hardness far exceeds that of traditional stamped aluminum, making the entire device's structure more robust.",
+      title: "Matériau Mg-Al moulé sous pression de qualité châssis de course",
+      desc: "Le couvercle supérieur du S25 Ultra est fabriqué à partir du même matériau en magnésium-aluminium moulé sous pression à haute résistance que celui utilisé dans les châssis des voitures de course. La dureté de ce matériau dépasse de loin celle de l'aluminium traditionnel estampé, ce qui rend l'ensemble de la structure de l'appareil plus robuste.",
     },
     part4: {
-      title: "Coated <br/> Protection Film",
-      desc: "The S25 Ultra has a backup plan, with a full-device coating that effectively prevents the seepage of water, sweat, and adhesives.",
+      title: "Film de protection enduit",
+      desc: "Un plan de secours est prévu pour le S25 Ultra, avec un revêtement complet de l'appareil qui empêche efficacement l'infiltration de l'eau, de la sueur et des adhésifs.",
     },
   },
   sec11: {
-    spec_title: "EXCELLENCE IN AESTHETICS",
-    spec_desc:
-      "Draw inspiration from magical nature, <br class='mb'> with the advanced aesthetics and craftsmanship, <br class='mb'> transform the S25 Ultra into a trendy item!",
+    spec_title: "EXCELLENCE EN ESTHÉTIQUE",
+    spec_desc: `S'inspirant des merveilles de la nature, 
+avec l'esthétique et le savoir-faire les plus avancés, 
+le S25 Ultra se transforme en une pièce élégante ! `,
     part1: {
-      title: "An elegant creation",
-      desc: "Fashion on one side, technology on the other. Combining natural inspiration with cutting-edge design concepts, advanced Optical Coating Process creates a dual texture of matte and glossy finishes, exuding a premium feel.",
+      title: "Une création élégante",
+      desc: "D'un côté la mode, de l'autre la technologie. En combinant l'inspiration naturelle avec des concepts de design de pointe, le processus de revêtement optique avancé crée une double texture mate et brillante, donnant une impression haut de gamme.",
     },
     part2: {
-      title: "A stylish creation",
-      desc: "The unique photochromic technology allows you to experience two distinctly different shades of Pearl Blue on your phone, showcasing the beauty of nature. Holding it is like holding a fashionable piece of art.",
+      title: "Une création de style",
+      desc: "La technologie photochromique unique vous permet de découvrir deux nuances distinctes de bleu perle sur votre téléphone, mettant en valeur la beauté de la nature. Le tenir, c'est comme tenir une œuvre d'art à la mode.",
     },
     color: [
       {
-        title: "Meteor Titanium",
-        desc: "Inspired by meteors in space, it's as if a shooting star pierces the night sky, twinkling with an enigmatic glow.",
+        title: "Titane Météore",
+        desc: "Inspiré des météores dans l'espace, comme si une étoile filante perçant le ciel nocturne, scintillant d'une lueur énigmatique.",
       },
       {
-        title: "Bromo Black",
-        desc: "Inspired by the basalt of Mount Bromo in Indonesia, it reflects the unique luster of basalt under the sunlight, resembling the shimmering stars in the night sky.",
+        title: "Noir de Bromo",
+        desc: "Inspiré du basalte du mont Bromo en Indonésie, il reflète l'éclat unique du basalte sous la lumière du soleil, ressemblant aux étoiles scintillantes dans le ciel nocturne.",
       },
       {
-        title: "Komodo  Ocean",
-        desc: "Inspired by the Komodo Island of Indonesia, where the ocean transitions from light to deep blue under the sun, the S25 Ultra's back perfectly captures this shifting spectrum of colors.",
+        title: "Océan de Komodo",
+        desc: "Inspiré de l'île de Komodo en Indonésie, où l'océan passe d'un bleu clair à un bleu profond sous le soleil, le dos du S25 Ultra capture parfaitement ce spectre de couleurs changeant.",
       },
     ],
   },
   sec12: {
-    title: "Sync your mood",
-    desc: "The RGB Ring Light provides different lighting effects to <br class='mb'> indicate various status messages and synchronizes its <br class='mb'> color changes with the rhythm of the music, perfectly <br class='mb'> integrating practicality and style.",
+    title: "Synchronisation de votre humeur",
+    desc: "L'anneau de lumière RVB offre différents effets de lumière pour indiquer divers messages d'état et synchronise ses changements de couleur avec le rythme de la musique, intégrant parfaitement l'aspect pratique et le style.",
     data: [
       {
-        title: "Charging",
+        title: "Charge",
       },
       {
-        title: "Music",
+        title: "Musique",
       },
       {
         title: "Notifications",
       },
       {
-        title: "Gaming",
+        title: "Jeux",
       },
     ],
   },
   sec13: {
-    spec_title: "EXCELLENCE IN PERFORMANCE",
-    spec_desc: `The remarkable performance improvement, <br class='mb'> coupled with effective software tuning, <br/> a "new phone" experience for many years.`,
+    spec_title: "EXCELLENCE EN PERFORMANCE",
+    spec_desc: `L'amélioration remarquable des performances, 
+avec un réglage efficace du logiciel, 
+offre une expérience de « nouveau téléphone » pendant de nombreuses années.`,
     part1: {
-      title: "60-month of smooth use",
-      desc: "After undergoing rigorous testing in the itel lab, this phone <br class='mb'> is guaranteed to be free of lag for 5 years. thanks to the <br class='mb'> powerful Virtual Memory Expansion Tech and Atom <br class='mb'> Storage Tech, you no longer need to worry about the <br class='mb'> phone's performance weakening over time.",
+      title: "60 mois d'utilisation fluide",
+      desc: "Après des tests rigoureux effectués par le laboratoire itel, ce téléphone est garanti sans décalage pendant 5 ans. Grâce à la puissante technologie d'extension de la mémoire virtuelle et à la technologie de stockage Atom, vous n'avez plus à vous soucier de l'affaiblissement des performances de votre téléphone au fil du temps.",
       data: [
         {
-          subtitle: "Up to",
-          title: "16(8+8)GB RAM",
-          titleMb: "Up to 16(8+8)GB RAM",
-          desc: "18 Apps running simultaneously*",
+          subtitle: "Jusqu'à ",
+          title: "16 (8 + 8) Go de RAM",
+          titleMb: "Jusqu'à 16 (8 + 8) Go de RAM",
+          desc: "18 applications exécutées simultanément*",
         },
         {
-          subtitle: "Up to",
-          title: "512GB ROM",
-          titleMb: "Up to 512GB ROM",
-          desc: "Capable of storing 120,000+ photos*",
+          subtitle: "Jusqu'à ",
+          title: "512 Go de ROM",
+          titleMb: "Jusqu'à 512 Go de ROM",
+          desc: "Capable de stocker plus de 120 000 photos*",
         },
       ],
     },
     part2: {
-      title: "Unleash the beast",
-      desc: "The S25 Ultra features a powerful octa-core processor <br class='mb'> with ARM Cortex-A75 up to 2.2Ghz, coupled with a <br class='mb'> Graphite cooling system, to fully unleash its <br class='mb'> performance and allow you to enjoy mainstream <br class='mb'> mobile games with ease.",
+      title: "Libérer le potentiel",
+      desc: "Le S25 Ultra est doté d'un puissant processeur octa-core avec ARM Cortex-A75 jusqu'à 2,2 GHz, associé à un système de refroidissement Graphite, afin d'exploiter pleinement ses performances et de vous permettre de profiter facilement des jeux mobiles grand public.",
     },
   },
   sec14: {
-    title: "Super wall-penetrating capability",
-    desc: `The S25 Ultra supports Super Wi-Fi, providing ultra-low latency for seamless gaming and automatically switching to the best <br class="pc"/> network across different Wi-Fi networks, offering significantly stronger signal strength in public spaces with shared Wi-Fi.`,
+    title: "Excellente capacité de pénétration des murs",
+    desc: `Doté du Super Wi-Fi, le S25 Ultra offre une latence ultra-faible pour des jeux fluides et passe automatiquement au meilleur réseau parmi les différents réseaux Wi-Fi, offrant ainsi une puissance de signal plus forte dans les espaces publics où le Wi-Fi est partagé.`,
     data: [
       {
-        title: "26ms",
-        desc: "Super low <br class='mb'> Latency for gaming",
+        title: "26 ms*",
+        desc: " Très faible latence pour les jeux",
       },
       {
-        title: "6.5MB/s",
-        desc: "Download speed when using Wi-Fi and Bluetooth together",
+        title: "6,5 Mo/s",
+        desc: "Vitesse de téléchargement simultanée via Wi-Fi et Bluetooth",
       },
       {
-        title: "5x*",
-        desc: "Faster switch to the <br class='mb'> optimal Wi-Fi network",
+        title: "5x",
+        desc: "Passage plus rapide au réseau Wi-Fi optimal",
       },
     ],
   },
   sec15: {
     part1: {
-      title: "The powerhouse in your hand",
-      desc: "The S25 Ultra comes with a massive 5000mAh battery and super fast charging of 18W.",
+      title: "La puissance dans votre main",
+      desc: "Le S25 Ultra est doté d'une énorme batterie de 5 000 mAh et d'une charge super rapide de 18 W. ",
     },
     part2: {
-      title: "No gaming compromises",
-      desc: "The phone with Bypass Charging Tech can be powered directly without passing the battery, <br/> ensuring a heat-free gaming or watching experience while charging simultaneously.*",
+      title: "Une expérience de jeu sans compromis",
+      desc: "Grâce à la technologie de charge de contournement, le téléphone peut être alimenté directement sans passer par la batterie, garantissant ainsi une expérience de jeu ou de visionnage sans chaleur tout en chargeant simultanément.*",
     },
   },
   sec16: {
-    spec_title: "EXCELLENCE IN PHOTOGRAPHY",
-    spec_desc:
-      "Ultra-clear front and rear cameras, <br class='mb'> with specially crafted features and filters, <br/> turning everyone into a photography master.",
+    spec_title: "EXCELLENCE EN PHOTOGRAPHIE",
+    spec_desc: `Des appareils photo avant et arrière ultra-clairs,
+avec des fonctions et des filtres spécialement conçus,
+pour rendre chacun maître dans l'art de la photographie.`,
     front: {
-      title: "32MP",
-      desc: "AI Selfie Camera",
+      title: "32 MP",
+      desc: "Appareil photo selfie AI de",
       data: [
-        { data_title: "", data_desc: "Aperture: f/2.2" },
-        { data_title: "", data_desc: "FOV: 88.9°" },
+        { data_title: "", data_desc: "Ouverture : f/2,2" },
+        { data_title: "", data_desc: "FOV : 88,9°" },
       ],
     },
     back: {
-      title: "50MP",
-      desc: "Ultra-clear Camera",
+      title: "50 MP",
+      desc: "Appareil photo ultra-clair de",
       data: [
-        { data_title: "", data_desc: "Aperture: f/1.6" },
+        { data_title: "", data_desc: "Ouverture : f/1,6" },
         // { data_title: "", data_desc: "Pixel size: 0.64μm" },
-        { data_title: "Macro Lens", data_desc: "4cm Focus Distance" },
+        {
+          data_title: "Objectif macro",
+          data_desc: "<br class='pc'/>Distance de mise au point de 4 cm",
+        },
       ],
     },
     part1: {},
     part2: {
-      title: "Beauty in focus",
-      desc: "The leading 32MP AI Selfie Camera with large angle, which features AI Beauty 2.0, captures stunning selfies with exceptional detail and clarity, even in group photos.",
+      title: "La beauté en évidence",
+      desc: "L'appareil photo selfie AI de 32 MP de pointe avec grand angle, dotée de la fonction Embellissement AI 2.0, capture des selfies époustouflants avec des détails et une clarté exceptionnels, même sur les photos de groupe.",
     },
     part3: {
-      title: "Clarity in every detail",
-      desc: "The best-in-class 50MP Ultra Clear Camera allows you to effortlessly capture clear and captivating photos in any complex environment, ranging from low light to backlight scenarios. Even better, you can capture your highlight moments by recording in 2K video!",
+      title: "Clarté dans chaque détail",
+      desc: "L'appareil photo ultra-clair de 50 MP, le meilleur de sa catégorie, vous permet de prendre sans effort des photos claires et époustouflantes dans n'importe quel environnement complexe, qu'il s'agisse de scènes à faible luminosité ou à contre-jour. Et mieux encore, vous pouvez capturer vos meilleurs moments en enregistrant en vidéo 2K !",
       mic: {
-        title: "Support Voice Control Shutter",
+        title: "Avec l'obturateur à commande vocale",
       },
       smile: {
-        title: "Support Smile Shutter",
+        title: "Avec l'obturateur de sourire",
       },
     },
     part4: {
-      title: "50MP Mode",
+      title: "Mode 50 MP",
     },
     part5: {
       title: "Super HDR",
@@ -370,12 +368,12 @@ window.s25ultraConfig = {
       off: "off",
     },
     part6: {
-      title: "Super Night Mode",
+      title: "Mode Nuit super",
     },
   },
   sec17: {
-    title: "Capture with flair",
-    desc: "Dare to integrate AI technology into mobile photography, creating three distinctive stylistic tone filters that allow your photos to effortlessly convey a variety of emotions and atmospheres. Coupled with the use of an exclusive master watermark, every snapshot you take is instantly transformed into a masterpiece.",
+    title: "Capturer avec brio",
+    desc: "En intégrant la technologie AI dans la photographie mobile, trois filtres de tonalité de style unique sont créés pour faciliter la transmission d'une variété d'émotions et d'atmosphères dans vos photos. Avec l'utilisation d'un filigrane exclusif, chaque cliché que vous prenez se transforme instantanément en chef-d'œuvre.",
     data: [
       {
         pic: "sec17_standard_pc.webp",
@@ -383,95 +381,111 @@ window.s25ultraConfig = {
       },
       {
         pic: "sec17_bright_pc.webp",
-        mode: "Bright",
+        mode: "Lumineux",
       },
       {
         pic: "sec17_master_pc.webp",
-        mode: "Master",
+        mode: "Maître",
       },
     ],
   },
   sec18: {
-    title: "Capture with fun",
-    desc: "Embrace the fun of Vlogging with Dual-view Video Recording, effortlessly capturing both your reactions and the stunning scenery you're enjoying, or the engaging interactions with <br class='mb'> your friends.",
+    title: "Capturer en s'amusant",
+    desc: "Profitez du plaisir du Vlogging grâce à l'enregistrement vidéo double vue pour capturer facilement vos réactions et les paysages époustouflants que vous admirez, ou encore les interactions intéressantes avec vos amis.",
     video: {
       src: src + "/videos/sec18_video_pc.mp4",
     },
   },
   sec19: {
-    spec_title: "EXCELLENCE IN EXPERIENCE",
-    spec_desc:
-      "Every feature is meticulously refined, <br class='mb'> with continuous updates and optimizations, <br/> ensuring it's always user-friendly.",
+    spec_title: "EXCELLENCE DANS L'EXPÉRIENCE",
+    spec_desc: `Chaque fonctionnalité est méticuleusement affinée,
+avec des mises à jour et des optimisations continues, 
+garantissant une utilisation toujours conviviale.`,
     part1: {
-      desc: "Based on the latest Android 14, it introduces a more stylish UI design and enhanced desktop widget functionalities, offering you a more aesthetically pleasing and seamless system experience.",
+      desc: "Basé sur la dernière version d'Android 14, il présente une interface utilisateur plus élégante et des fonctionnalités de widget de bureau améliorées, vous offrant une expérience système plus esthétique et plus transparente.",
     },
     part2: {
-      title: "Upgradeable to <br/> Android 15™",
-      desc: "Support for 2 years of Android system and security patch upgrades significantly extends the lifespan of your phone.",
+      title: "Possibilité de mettre à jour vers Android 15™",
+      desc: "2 ans de mises à jour et des correctifs de sécurité du système Android prolongent considérablement la durée de vie de votre téléphone.",
     },
     part3: {
-      title: "GPT AI Assistant",
-      desc: "Say hello to your best assistant! It frees your hands <br class='mb'> and helps you handle many simple tasks.",
+      title: "Assistant AI GPT",
+      desc: "Dites bonjour à votre meilleur assistant ! Il vous libère les mains et vous aide à effectuer de nombreuses tâches simples.",
     },
     part4: {
       content1: {
-        title: "AI Call Noise Cancellation",
-        desc: "Experience crystal-clear calls, designed to minimize <br class='mb'> background noise and enhance human voice.",
+        title: "Annulation du bruit des appels par AI",
+        desc: "Des appels d'excellente qualité, conçus pour minimiser les bruits de fond et améliorer la voix humaine. ",
       },
       content2: {
-        title: "AI Wallpaper",
-        desc: "Create exclusive wallpapers using text or images to <br class='mb'> showcase your distinctive taste.",
+        title: "Fond d'écran AI",
+        desc: "Créez des fonds d'écran exclusifs avec du texte ou des images pour mettre en valeur votre goût distinctif.",
       },
       content3: {
         title: "ASK AI",
-        desc: `<span class="highlight">When reading emails or chatting on WhatsApp, it can <br class='mb'> translate and polish the text on the page,</span> significantly <br class='mb'> boosting your work efficiency.`,
+        desc: `<span class="highlight">Lorsque vous lisez des courriels ou que vous discutez sur WhatsApp, il peut traduire et peaufiner le texte sur la page,</span> ce qui accroît considérablement votre efficacité au travail.`,
       },
     },
     part5: {
       title: "Dynamic Bar",
-      desc: "Welcome to the Dynamic Bar, where accessing <br class='mb'> important notifications is now more convenient and <br class='mb'> seamless than ever before.",
+      desc: "Bienvenue à la Dynamic Bar, qui rend désormais l'accès aux notifications cruciales plus pratique et plus transparent que jamais.",
     },
     part6: {
-      title: "Smart AOD",
-      desc: "Important information is easily accessible.",
+      title: "AOD intelligent",
+      desc: "Les informations importantes sont facilement accessibles.",
     },
     part7: {
       content1: {
-        title: "Infrared Remote Control",
-        desc: "Turn your smartphone into a versatile controller for home appliances.*",
+        title: "Contrôle infrarouge à distance",
+        desc: "Transformez votre smartphone en contrôleur polyvalent pour les appareils électroménagers.*",
       },
       content2: {
-        title: "720° NFC",
-        desc: "With 720° NFC, you can quickly complete card swiping without aligning to a specific angle.*",
+        title: "NFC 720°",
+        desc: "Grâce à la technologie NFC 720°, vous pouvez rapidement glisser votre carte sans avoir à vous aligner sur un angle spécifique.*",
       },
       content3: {
-        title: "Sound By DTS",
-        desc: `DTS audio brings immersive, high-fidelity sound to your smartphone for an enhanced listening experience.`,
+        title: "Son par DTS",
+        desc: `Le système audio DTS offre un son immersif et de haute fidélité à votre smartphone pour une expérience d'écoute améliorée.`,
       },
     },
     part8: {
-      title: "Smart connectivity",
-      desc: "It is built-in with the iPulse App and supports seamless interconnection with your itel watch, allowing you to remotely control smartphone photography and synchronize health data to the phone. It's not just about the Internet of Things, it represents a trendy lifestyle.*",
+      title: "Connectivité intelligente",
+      desc: "L'application iPulse intégrée permet une interconnexion transparente avec votre montre itel, facilitant le contrôle à distance de la photographie du smartphone et la synchronisation des données de santé avec le téléphone. Il ne s'agit pas seulement de l'Internet des objets, mais également d'un style de vie à la mode.*",
     },
     part9: {
-      note: " Notes:",
+      note: "Notes :",
       tips: [
-        `1. The 60-month Fluency data is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
-        `2. S25 Ultra 512GB+16GB version's RAM is composed of (8+8)GB expansion.`,
-        `3. The screen-to-body ratio and brightness data are obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
-        `4. Corning and Gorilla are registered trademarks of Corning Incorporated. The data of Corning® Gorilla® Glass 7i is obtained from the Corning Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
-        `5. The data of accidental touch rates is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
-        `6. The weight and thickness data are obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
-        `7. The data from quality tests is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
-        `8. The storage data of "60,000+ Photos" is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
-        `9. The 18 Apps Running Simultaneously data is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product.`,
-        `10. The data of Super Wi-Fi is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
-        `11. The battery of itel S25 Ultra has a typical capacity of 5000mAh and a rated capacity of 4900mAh.`,
-        `12. The data of Bypass Charging Tech is obtained from the itel Lab. Actual data may vary due to factors such as test environments or calculation methods, so please refer to the actual product. `,
-        `13. Android is a trademark of Google LLC.`,
-        `14. The availability of Infrared Remote Control and NFC features may vary by region and device. Please refer to the actual situation for details.`,
-        `15. iPulse, itel's own watch app, is widely compatible and pre-installed on itel S25 Series.`,
-        `16. Product images are for reference only, please refer to the actual product. Some specifications and descriptions may change due to supplier replacements, please refer to the actual product. The data mentioned is based on our design technical specifications, lab, and supplier test data, and actual situations may vary slightly due to different testing software versions, specific testing environments, and versions.`,
+        `1. Les données sur la fluidité à 60 mois sont obtenues auprès du laboratoire itel. Les données réelles peuvent varier en raison de facteurs tels que les environnements de test ou les méthodes de calcul, veuillez donc vous référer au produit réel.`,
+
+        `2. La RAM de version 512 Go + 16 Go du S25 Ultra est composée d'une extension de (8 + 8) Go.`,
+
+        `3. Les données relatives au rapport écran-corps et à la luminosité sont obtenues auprès du laboratoire itel. Les données réelles peuvent varier en raison de facteurs tels que les environnements de test ou les méthodes de calcul, veuillez donc vous référer au produit réel.`,
+
+        `4. Corning et Gorilla sont des marques déposées de Corning Incorporated. Les données du verre Corning® Gorilla® 7i ont été obtenues auprès du laboratoire Corning. Les données réelles peuvent varier en raison de facteurs tels que les environnements de test ou les méthodes de calcul, veuillez donc vous référer au produit réel.`,
+
+        `5. Les données relatives aux taux de contacts non voulus sont obtenues auprès du laboratoire itel. Les données réelles peuvent varier en raison de facteurs tels que les environnements de test ou les méthodes de calcul, veuillez donc vous référer au produit réel. `,
+
+        `6. Les données relatives au poids et à l'épaisseur sont obtenues auprès du laboratoire itel. Les données réelles peuvent varier en raison de facteurs tels que les environnements de test ou les méthodes de calcul, veuillez donc vous référer au produit réel.`,
+
+        `7. Les données des tests de qualité sont obtenues auprès du laboratoire itel. Les données réelles peuvent varier en raison de facteurs tels que les environnements de test ou les méthodes de calcul, veuillez donc vous référer au produit réel. `,
+
+        `8. Les données de stockage de « plus de 60 000 photos » sont obtenues auprès du laboratoire itel. Les données réelles peuvent varier en raison de facteurs tels que les environnements de test ou les méthodes de calcul, veuillez donc vous référer au produit réel.`,
+
+        `9. Les données relatives aux 18 applications exécutées simultanément sont obtenues auprès du laboratoire itel. Les données réelles peuvent varier en raison de facteurs tels que les environnements de test ou les méthodes de calcul, veuillez donc vous référer au produit réel.`,
+
+        `10. Les données de Super Wi-Fi sont obtenues auprès du laboratoire itel. Les données réelles peuvent varier en raison de facteurs tels que les environnements de test ou les méthodes de calcul, veuillez donc vous référer au produit réel. `,
+
+        `11. La batterie de l'itel S25 Ultra dispose d'une capacité typique de 5 000 mAh et d'une capacité nominale de 4 900 mAh.`,
+
+        `12. Les données de la technologie de charge de contournement sont obtenues auprès du laboratoire itel. Les données réelles peuvent varier en raison de facteurs tels que les environnements de test ou les méthodes de calcul, veuillez donc vous référer au produit réel. `,
+
+        `13. Android est une marque déposée de Google LLC.`,
+
+        `14. La disponibilité des fonctions de télécommande infrarouge et NFC peut varier selon la région et l'appareil. Veuillez vous référer à la situation réelle pour plus de détails.`,
+
+        `15. iPulse, l'application de montre d'itel, est largement compatible et préinstallée sur la série S25 d'itel.`,
+
+        `16. Les images du produit sont fournies à titre de référence uniquement, veuillez-vous référer au produit réel. Certaines spécifications et descriptions peuvent varier en raison de remplacements effectués par des fournisseurs, veuillez-vous référer au produit réel. Les données mentionnées sont basées sur les spécifications techniques de nos conceptions, les données de test des laboratoires et des fournisseurs. Les situations réelles peuvent varier légèrement en raison des différentes versions des logiciels de test, des environnements de test et des versions spécifiques.`,
       ],
     },
   },

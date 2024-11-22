@@ -185,8 +185,10 @@
 
 @media (min-width: $mobwidthPx) {
   .s25ultra .sec12 {
-    .title_75 {
-      font-size: px-to-vw(70);
+    .text_wrap {
+      .title_75 {
+        font-size: px-to-vw(65);
+      }
     }
   }
 }

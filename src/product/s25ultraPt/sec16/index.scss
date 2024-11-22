@@ -90,11 +90,6 @@
       position: absolute;
       top: px-to-vw(60);
       left: px-to-vw(90);
-
-      .title_75 {
-        display: flex;
-        align-items: flex-end;
-      }
     }
 
     .mp32_wrap {
@@ -163,11 +158,6 @@
       max-width: px-to-vw(480);
       height: 100%;
       padding: px-to-vw(60) 0;
-
-      .title_75 {
-        display: flex;
-        align-items: flex-end;
-      }
     }
 
     .title {
@@ -221,12 +211,6 @@
       left: px-to-vw(64);
       max-width: px-to-vw(600);
       padding: px-to-vw(60) px-to-vw(60) px-to-vw(60) 0;
-
-
-      .title_75 {
-        display: flex;
-        align-items: flex-end;
-      }
     }
 
     .right_wrap {
@@ -277,7 +261,7 @@
       position: absolute;
       top: 0;
       left: px-to-vw(64);
-      max-width: px-to-vw(380);
+      max-width: px-to-vw(600);
       padding: px-to-vw(60) px-to-vw(60) px-to-vw(60) 0;
 
       .title_75 {
@@ -569,11 +553,6 @@
       .text_wrap {
         top: px-to-vw-mb(48);
         left: px-to-vw-mb(36);
-
-        .title_75 {
-          flex-direction: column;
-          align-items: flex-start;
-        }
       }
 
       .front_phone {
@@ -600,11 +579,6 @@
 
       .text_wrap {
         position: unset;
-
-        .title_75 {
-          flex-direction: column;
-          align-items: flex-start;
-        }
       }
 
       .top_wrap {
@@ -671,18 +645,12 @@
 
       .left_wrap {
         top: px-to-vw-mb(48);
-        right: px-to-vw-mb(36);
         left: px-to-vw-mb(36);
         display: flex;
         gap: px-to-vw-mb(100);
         align-items: flex-end;
         max-width: 100%;
         padding: 0;
-
-        .title_75 {
-          flex-direction: column;
-          align-items: flex-start;
-        }
       }
 
       .data_wrap {

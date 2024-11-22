@@ -17,17 +17,6 @@ window.s25ultraConfig = {
         desc: "(8+8GB) <br class='pc'/> Extended RAM",
       },
     ],
-    watchTitle: "Smart Watch <br class='mb'/> Storm Ultra",
-    data2: [
-      {
-        title: `2.02"`,
-        desc: "Tested <br class='pc'/> Scratchproof Screen",
-      },
-      {
-        title: "iPulse*",
-        desc: "Watch App <br class='pc'/> Pre-installed on S25 Series",
-      },
-    ],
   },
   sec2: {
     slogn: "Elegance in Excellence",

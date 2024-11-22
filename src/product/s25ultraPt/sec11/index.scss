@@ -27,12 +27,6 @@
       object-fit: cover;
       object-position: center center;
     }
-
-    &:nth-child(3) {
-      img {
-        object-position: center bottom;
-      }
-    }
   }
 
   .text_wrap {
@@ -67,7 +61,7 @@
     }
 
     &:nth-child(2) {
-      right: px-to-vw(280);
+      right: px-to-vw(320);
       max-width: px-to-vw(500);
       color: #0a2846;
 
@@ -122,13 +116,12 @@
       max-width: px-to-vw(320);
       font-size: px-to-vw(37.5);
       font-family: "Book";
-      white-space: nowrap;
     }
 
     .color_desc {
       position: absolute;
       top: 50%;
-      left: px-to-vw(360);
+      left: px-to-vw(320);
       margin: 0;
       color: inherit;
       transform: translateY(-50%);
