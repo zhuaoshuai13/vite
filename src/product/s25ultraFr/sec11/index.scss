@@ -63,7 +63,15 @@
 
     &:first-child {
       left: px-to-vw(360);
-      max-width: px-to-vw(560);
+      max-width: px-to-vw(660);
+
+      .desc_16 {
+        max-width: 60%;
+      }
+
+      &.white {
+        max-width: unset;
+      }
     }
 
     &:nth-child(2) {
@@ -171,6 +179,12 @@
       .title {
         font-size: px-to-vw-mb(54);
         font-family: "Bold";
+      }
+
+      &:first-child {
+        .desc_16 {
+          max-width: unset;
+        }
       }
     }
 

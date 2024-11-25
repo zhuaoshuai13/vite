@@ -57,7 +57,15 @@
 
     &:first-child {
       left: px-to-vw(360);
-      max-width: px-to-vw(560);
+      max-width: px-to-vw(660);
+
+      &.white {
+        max-width: unset;
+      }
+
+      .desc_16 {
+        max-width: 60%;
+      }
     }
 
     &:nth-child(2) {
@@ -160,6 +168,12 @@
       width: 100% !important;
       max-width: 100% !important;
       text-align: center;
+
+      &:first-child {
+        .desc_16 {
+          max-width: unset;
+        }
+      }
 
       .title {
         font-size: px-to-vw-mb(54);
