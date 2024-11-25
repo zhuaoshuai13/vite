@@ -83,7 +83,7 @@ const Sec19 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec19_f1_pc.webp"}
+                    srcSet={src + "/images/mb/sec19_f1_mb.png"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -117,7 +117,7 @@ const Sec19 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec19_f2_pc.webp"}
+                    srcSet={src + "/images/mb/sec19_f2_mb.png"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -149,7 +149,7 @@ const Sec19 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec19_f3_pc.webp"}
+                    srcSet={src + "/images/mb/sec19_f3_mb.png"}
                   />
                   <source
                     media='(min-width: 751px)'

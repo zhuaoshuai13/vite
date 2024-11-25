@@ -10,11 +10,11 @@ window.tab30proConfig = {
   sec2: {
     preview_video: {
       pc: src + "/videos/sec2_video_pc.mp4",
-      mb: "sec2_video_pc.mp4",
+      mb: src + "/videos/sec2_full_video_mb.mp4",
     },
     full_video: {
       pc: src + "/videos/sec2_full_video_pc.mp4",
-      mb: "sec2_full_video_mb.mp4",
+      mb: src + "/videos/sec2_full_video_mb.mp4",
     },
   },
   sec3: {
@@ -25,7 +25,7 @@ window.tab30proConfig = {
     item2: {
       title: "Keyboard & Stylus",
       desc1: "Supports",
-      desc2: "80-key Full-size Keyboard",
+      desc2: "80-key <br class='mb'/> Full-size Keyboard",
     },
     item3: {
       title: `13" 2K`,
@@ -37,7 +37,7 @@ window.tab30proConfig = {
     },
     item5: {
       title: `7mm`,
-      desc: "Ultra Thin Design Light and Mighty",
+      desc: "Ultra Thin Design <br class='mb'/> Light and Mighty",
     },
     item6: {
       desc1: "Pre-Installed",
@@ -61,6 +61,7 @@ window.tab30proConfig = {
         title: "13''",
         desc: "Mega Display",
         icon: src + "/images/pc/sec5_icon1_pc.webp",
+        iconmb: src + "/images/mb/sec5_icon1_mb.png",
       },
       {
         title: "16: 10",
@@ -95,7 +96,7 @@ window.tab30proConfig = {
     ],
   },
   sec6: {
-    title: "Screen Size Increased by 18%*",
+    title: "Screen Size <br class='mb'/> Increased by 18%*",
     subtitle: `Compared to Other Flagship Tablets`,
     desc: "With a larger screen, you can enjoy a more immersive gaming experience and increase work efficiency. When browsing web pages or spreadsheets, you can view more content at once. This is the kind of large-screen experience that once you've tried, you won't want to go back to smaller screens.",
   },

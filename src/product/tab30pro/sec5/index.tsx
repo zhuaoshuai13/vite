@@ -36,13 +36,21 @@ const Sec5 = () => {
     })
   }
   const sec5AniMb = () => {
-    const tl = gsap
-      .timeline()
-      .from(".light_wrap", { x: "-130%", ease: "power2.inOut", duration: 1 })
-      .from(".nit_wrap", { opacity: 0, ease: "power2.inOut", duration: 0.25 })
+    const tl = gsap.timeline().from(
+      [".display_light_wrap", ".text_wrap", ".data_box"],
+      {
+        opacity: 0,
+        ease: "power2.inOut",
+        duration: 1,
+      },
+      "a"
+    )
     ScrollTrigger.create({
       trigger: ".sec5_wrap",
-      start: `top 30%`,
+      start: `top 0`,
+      end: "+=1000",
+      pin: true,
+      scrub: 0.2,
       animation: tl,
       toggleActions: "play none none reverse",
     })
@@ -67,7 +75,7 @@ const Sec5 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec5_display_dark_mb.jpg"}
+                srcSet={src + "/images/mb/sec5_display_dark_mb.png"}
               />
               <source
                 media='(min-width: 751px)'
@@ -159,7 +167,7 @@ const Sec5 = () => {
               {config?.sec5?.data?.map((item: any, index: number) => {
                 return (
                   <div className='data' key={index}>
-                    <img src={item?.icon} />
+                    <img src={isPc ? item?.icon : item?.iconmb || item?.icon} />
                     <div className='data_text'>
                       <div
                         className='data_title'

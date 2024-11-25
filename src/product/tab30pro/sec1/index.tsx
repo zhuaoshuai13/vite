@@ -40,7 +40,7 @@ const Sec1 = () => {
         ".phone1",
         {
           x: "10%",
-          y: "-50%",
+          y: "-30%",
           opacity: 0,
           ease: "power2.inOut",
           duration: 1,

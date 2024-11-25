@@ -20,7 +20,7 @@ const Sec6 = () => {
       .timeline()
       .from(
         ".screen_text_wrap",
-        { opacity: 0.4, duration: 0.5, ease: "power2.inOut" },
+        { opacity: 0.4, duration: 1.5, ease: "power2.inOut" },
         "a"
       )
     ScrollTrigger.create({
@@ -31,62 +31,27 @@ const Sec6 = () => {
     })
   }
 
-  const sec6AniMb = () => {
-    const tl = gsap
-      .timeline()
-      .to(".sec6 .part1", 1, { opacity: 0, ease: "power2.inOut" }, "a")
-      .to(
-        ".sec6 .part2",
-        1,
-        { opacity: 1, ease: "power2.inOut", delay: 0.5 },
-        "a"
-      )
-      .to(".sec6 .part2", 1, { opacity: 0, ease: "power2.inOut" }, "b")
-      .to(
-        ".sec6 .part3",
-        1,
-        { opacity: 1, ease: "power2.inOut", delay: 0.5 },
-        "b"
-      )
-    ScrollTrigger.create({
-      trigger: ".sec6_wrap",
-      pin: true,
-      // start: `top ${
-      //   (window.innerHeight - sec6_wrap?.current?.clientHeight) / 2
-      // }`,
-      start: `top 60`,
-      end: "+=1600",
-      animation: tl,
-      scrub: true,
-      toggleActions: "play none none reverse",
-    })
-
-    const t2 = gsap
-      .timeline()
-      .from(".sec6 .part1 .hand_wrap", 1, {
-        x: "50%",
-        y: "-50%",
-        ease: "power4.inOut",
-      })
-      .from(".sec6 .part1 .circle_wrap", 1, {
-        opacity: 0,
-        ease: "power2.inOut",
-        repeat: -1,
-        yoyo: true,
-      })
-    ScrollTrigger.create({
-      trigger: ".sec6_wrap",
-      start: `top 50%`,
-      animation: t2,
-      toggleActions: "play none none reverse",
-    })
-  }
+  // const sec6AniMb = () => {
+  //   const tl = gsap
+  //     .timeline()
+  //     .from(
+  //       ".screen_text_wrap",
+  //       { opacity: 0.4, duration: 0.5, ease: "power2.inOut" },
+  //       "a"
+  //     )
+  //   ScrollTrigger.create({
+  //     trigger: ".screen_text_wrap",
+  //     start: `top 95%`,
+  //     animation: tl,
+  //     toggleActions: "play none none reverse",
+  //   })
+  // }
 
   useGSAP(
     () => {
-      if (isPc) {
-        sec6Ani()
-      } else sec6AniMb()
+      sec6Ani()
+      // if (isPc) {
+      // } else sec6AniMb()
     },
     { scope: wrap }
   )
@@ -108,12 +73,12 @@ const Sec6 = () => {
             dangerouslySetInnerHTML={{ __html: config?.sec6?.desc }}
           ></p>
         </div>
-        <div className='pic_wrap'>
+        <div className='pic_wrap equal_parent'>
           <div className='img_wrap phone_wrap'>
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec6_bg_mb.jpg"}
+                srcSet={src + "/images/mb/sec6_bg_mb.png"}
               />
               <source
                 media='(min-width: 751px)'

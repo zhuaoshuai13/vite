@@ -346,7 +346,7 @@ const Sec3 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/pc/sec2_p5_pc.webp"}
+                      src={src + "/images/mb/sec2_p5_mb.png"}
                     />
                   </div>
                 </div>
@@ -397,7 +397,7 @@ const Sec3 = () => {
                 <div className='img_wrap'>
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec2_p3_pc.webp"}
+                    src={src + "/images/mb/sec2_p3_mb.png"}
                   />
                 </div>
               </div>
@@ -423,7 +423,7 @@ const Sec3 = () => {
                 <div className='img_wrap'>
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec2_p4_pc.webp"}
+                    src={src + "/images/mb/sec2_p4_mb.png"}
                   />
                 </div>
               </div>
@@ -455,7 +455,7 @@ const Sec3 = () => {
                 <div className='img_wrap'>
                   <img
                     loading='lazy'
-                    src={src + "/images/pc/sec2_p7_pc.webp"}
+                    src={src + "/images/mb/sec2_p7_mb.png"}
                   />
                 </div>
               </div>

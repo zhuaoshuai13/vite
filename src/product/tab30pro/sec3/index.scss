@@ -184,16 +184,74 @@
     }
 
     .desc {
+      margin-top: px-to-vw-mb(10);
       font-size: px-to-vw-mb(20.8);
+      line-height: 1.4;
+
+      &:nth-child(1) {
+        margin-top: 0;
+        margin-bottom: px-to-vw-mb(10);
+      }
     }
 
     .item1 {
       width: 100%;
       height: px-to-vw-mb(410);
+
+      .text_wrap {
+        max-width: px-to-vw-mb(250);
+      }
     }
 
     .item2 {
       height: 100%;
+
+      .text_wrap {
+        max-width: unset;
+      }
+    }
+
+    .item3 {
+      height: px-to-vw-mb(437);
+    }
+
+    .item4 {
+      width: 100%;
+      height: px-to-vw-mb(197);
+
+      .text_wrap {
+        max-width: px-to-vw-mb(230);
+      }
+    }
+
+    .item5 {
+      flex: 1;
+
+      .text_wrap {
+        max-width: unset;
+      }
+    }
+
+    .item6 {
+      width: 100%;
+      height: px-to-vw-mb(198);
+      padding: px-to-vw-mb(18) px-to-vw-mb(34);
+
+      .desc {
+        font-size: px-to-vw-mb(19);
+      }
+
+      .desc2 {
+        top: px-to-vw-mb(90);
+      }
+    }
+
+    .item7 {
+      height: px-to-vw-mb(201);
+
+      .text_wrap {
+        max-width: px-to-vw-mb(250);
+      }
     }
   }
 }

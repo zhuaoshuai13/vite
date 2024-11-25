@@ -22,14 +22,22 @@ const Sec13 = () => {
         duration: 0.1,
         ease: "power2.inOut",
       })
-      .to([".datas", ".compare_wrap"], {
-        opacity: 1,
-        ease: "power2.inOut",
-      })
-      .from(".score_line", {
-        width: 0,
-        ease: "power2.inOut",
-      })
+      .to(
+        [".datas", ".compare_wrap"],
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .from(
+        ".score_line",
+        {
+          width: 0,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
     ScrollTrigger.create({
       trigger: ".sec13_wrap",
       pin: true,
@@ -39,51 +47,37 @@ const Sec13 = () => {
       scrub: 0.2,
     })
   }
+
   const sec13AniMb = () => {
     const tl = gsap
       .timeline()
-      .from(".part1 .chip_wrap", {
-        opacity: 0,
-        ease: "power2.inOut",
-      })
-      .from(".part1 .light_wrap", {
-        opacity: 0,
-        ease: "power2.inOut",
-      })
-      .from(".part1 .data_wrap", {
-        opacity: 0,
+      .to(".text_wrap>.desc_16", { opacity: 0, ease: "power2.inOut" })
+      .to(".text_wrap>.desc_16", {
+        display: "none",
+        duration: 0.1,
         ease: "power2.inOut",
       })
       .to(
-        ".part1",
+        [".datas", ".compare_wrap"],
         {
-          x: "-100%",
+          opacity: 1,
           ease: "power2.inOut",
         },
-        "c"
+        "a"
       )
-      .to(
-        ".part2",
+      .from(
+        ".score_line",
         {
-          x: 0,
+          width: 0,
           ease: "power2.inOut",
         },
-        "c"
+        "a"
       )
-      .from(".part2 .chip_wrap", {
-        opacity: 0,
-        ease: "power2.inOut",
-      })
-      .from(".part2 .light_wrap", {
-        opacity: 0,
-        ease: "power2.inOut",
-      })
-      .to(".part2 .light_wrap", {})
     ScrollTrigger.create({
-      trigger: ".sec13_wrap .content_wrap",
+      trigger: ".sec13_wrap",
       pin: true,
       start: `top 0%`,
-      end: "+=2000",
+      end: "+=1500",
       animation: tl,
       scrub: 0.2,
     })
@@ -108,7 +102,7 @@ const Sec13 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec13_bg_pc.webp"}
+                srcSet={src + "/images/mb/sec13_bg_mb.png"}
               />
               <source
                 media='(min-width: 751px)'
@@ -121,7 +115,7 @@ const Sec13 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec13_processor_pc.webp"}
+                srcSet={src + "/images/mb/sec13_processor_mb.png"}
               />
               <source
                 media='(min-width: 751px)'

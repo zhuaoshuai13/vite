@@ -1,9 +1,10 @@
-import { useContext, useRef, useState } from "react"
+import { useContext, useRef } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
+import { getTriggerSpace } from "../../../utils/getTriggerSpace"
 
 import "./index.scss"
 
@@ -11,19 +12,7 @@ const Sec11 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
-  const wrap = useRef(null)
-  const content_wrap = useRef<HTMLDivElement>(null)
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [timeline, setTimeline] = useState<any>()
-
-  const handleSwitchPic = (index: number) => {
-    gsap.to(window, {
-      scrollTo: {
-        y: timeline.scrollTrigger.labelToScroll("pic" + index),
-      },
-      ease: "power2.inOut",
-    })
-  }
+  const wrap = useRef<HTMLDivElement>(null)
 
   const sec11Ani = () => {
     const tl = gsap
@@ -47,45 +36,32 @@ const Sec11 = () => {
       end: "+=150%",
       animation: tl,
       scrub: 0.2,
-      onUpdate: (self) => {
-        if (self.progress >= 0.25 && self.progress < 0.5) {
-          setActiveIndex(0)
-        } else if (self.progress >= 0.5 && self.progress < 0.75) {
-          setActiveIndex(1)
-        } else if (self.progress >= 0.75) {
-          setActiveIndex(2)
-        }
-      },
     })
-    setTimeline(tl)
   }
+
   const sec11AniMb = () => {
     const tl = gsap
       .timeline()
-      .to(".pic_wrap", 1, {}, "pic1")
-      .to(".pic_wrap", 1, {}, "pic2")
-      .to(".pic_wrap", 1, {}, "pic3")
+      .to(".pic_wrap", { x: "-186vw", ease: "power2.inOut", duration: 2 }, "a")
+      .to(
+        ".text_wrap:nth-child(1)",
+        { opacity: 0, ease: "power2.inOut", duration: 1 },
+        "a"
+      )
+      .to(
+        ".text_wrap:nth-child(2)",
+        { opacity: 1, ease: "power2.inOut", duration: 1 },
+        "a+=1"
+      )
+      .to(".text_wrap:nth-child(2)", { ease: "power2.inOut", duration: 1 })
     ScrollTrigger.create({
-      trigger: ".sec11_wrap .content_wrap",
+      trigger: ".sec11_wrap",
       pin: true,
-      // start: `top 0%`,
-      start: `top ${
-        (window.innerHeight - (content_wrap?.current?.clientHeight || 0)) / 2
-      }`,
-      end: "+=1600",
+      start: `top ${getTriggerSpace(wrap.current, config?.navHeightMb)}`,
+      end: "+=1000",
       animation: tl,
       scrub: 0.2,
-      onUpdate: (self) => {
-        if (self.progress < 0.3) {
-          setActiveIndex(0)
-        } else if (self.progress >= 0.3 && self.progress < 0.6) {
-          setActiveIndex(1)
-        } else if (self.progress >= 0.6) {
-          setActiveIndex(2)
-        }
-      },
     })
-    setTimeline(tl)
   }
 
   useGSAP(
@@ -145,7 +121,7 @@ const Sec11 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec11_f1_pc.webp"}
+                srcSet={src + "/images/mb/sec11_f1_mb.png"}
               />
               <source
                 media='(min-width: 751px)'
@@ -158,7 +134,7 @@ const Sec11 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec11_f2_pc.webp"}
+                srcSet={src + "/images/mb/sec11_f2_mb.png"}
               />
               <source
                 media='(min-width: 751px)'
@@ -172,7 +148,7 @@ const Sec11 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_f3_pc.webp"}
+                  srcSet={src + "/images/mb/sec11_f3_mb.png"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -185,7 +161,7 @@ const Sec11 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_f4_pc.webp"}
+                  srcSet={src + "/images/mb/sec11_f4_mb.png"}
                 />
                 <source
                   media='(min-width: 751px)'

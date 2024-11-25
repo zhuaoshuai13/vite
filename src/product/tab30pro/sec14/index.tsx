@@ -15,11 +15,27 @@ const Sec14 = () => {
   const wrap = useRef(null)
 
   const sec14Ani = () => {
-    const tl = gsap.timeline().from(".phone_wrap", {
-      x: "100%",
-      duration: 1,
-      ease: "power2.inOut",
-    })
+    const tl = gsap
+      .timeline()
+      .from(
+        ".phone_wrap",
+        {
+          x: "100%",
+          duration: 1,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .from(
+        ".datas",
+        {
+          y: 150,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
     ScrollTrigger.create({
       trigger: ".phone_wrap",
       start: `top 80%`,
@@ -60,7 +76,7 @@ const Sec14 = () => {
           <picture>
             <source
               media='(max-width: 750px)'
-              srcSet={src + "/images/mb/sec14_f1_pc.webp"}
+              srcSet={src + "/images/mb/sec14_f1_mb.png"}
             />
             <source
               media='(min-width: 751px)'
@@ -69,7 +85,7 @@ const Sec14 = () => {
             <img loading='lazy' src={src + "/images/pc/sec14_f1_pc.webp"} />
           </picture>
         </div>
-        <div className='datas slide_up'>
+        <div className='datas'>
           {config?.sec14?.data?.map((item: any, index: number) => {
             return (
               <React.Fragment key={index}>

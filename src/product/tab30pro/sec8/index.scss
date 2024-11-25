@@ -49,11 +49,29 @@
 @media (max-width: $mobwidthPx) {
   .tab30pro .sec8 {
     .sec8_wrap {
-      height: px-to-vw-mb(1140);
+      height: px-to-vw-mb(1420);
     }
 
-    .text_wrap {
+    .content_wrap {
       top: px-to-vw-mb(160);
+    }
+
+    .desc_16 {
+      max-width: 100%;
+    }
+
+    .datas {
+      margin-top: px-to-vw-mb(56);
+    }
+
+    .data {
+      padding: px-to-vw-mb(8) px-to-vw-mb(30);
+      font-size: px-to-vw-mb(33);
+      border-radius: px-to-vw-mb(29);
+
+      &:not(:last-child) {
+        margin-bottom: px-to-vw-mb(36);
+      }
     }
   }
 }

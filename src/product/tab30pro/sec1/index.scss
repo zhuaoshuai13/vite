@@ -211,5 +211,11 @@
       left: px-to-vw-mb(234);
       width: px-to-vw-mb(200);
     }
+
+    .tips {
+      bottom: px-to-vw-mb(40);
+      left: px-to-vw-mb(50);
+      font-size: px-to-vw-mb(7.5);
+    }
   }
 }

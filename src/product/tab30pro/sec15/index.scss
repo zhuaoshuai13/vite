@@ -30,7 +30,7 @@
 
   .datas {
     position: absolute;
-    top: px-to-vw(810);
+    top: px-to-vw(720);
     right: 0;
     left: 0;
     display: flex;
@@ -68,45 +68,27 @@
 @media (max-width: $mobwidthPx) {
   .tab30pro .sec15 {
     .sec15_wrap {
-      height: px-to-vw-mb(1100);
+      height: px-to-vw-mb(1111);
     }
 
-    .pic_wrap {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      height: px-to-vw-mb(750);
+    .text_wrap {
+      top: px-to-vw-mb(150);
+      left: calc((100vw - var(--content-width)) / 2);
     }
 
-    .phone1 {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+    .datas {
+      top: px-to-vw-mb(850);
+      min-height: px-to-vw-mb(136);
+      padding: px-to-vw-mb(24);
 
-    .phone2 {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+      @include bg("mb/sec15_data_bg_mb.png", false);
 
-    .all_text {
-      position: relative;
-      margin-top: px-to-vw-mb(-350);
-      padding: px-to-vw-mb(260) px-to-vw-mb(50) px-to-vw-mb(100) px-to-vw-mb(220);
-      background-color: #f0f0f0;
-
-      .text_wrap1 {
-        position: unset;
-        max-width: 100%;
+      .data_title {
+        font-size: px-to-vw-mb(27);
       }
 
-      .text_wrap2 {
-        top: px-to-vw-mb(260);
-        right: px-to-vw-mb(50);
-        left: px-to-vw-mb(220);
+      .data_desc {
+        font-size: px-to-vw-mb(20.8);
       }
     }
   }

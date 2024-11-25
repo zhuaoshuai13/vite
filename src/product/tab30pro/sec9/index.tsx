@@ -4,7 +4,6 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
@@ -15,6 +14,7 @@ const Sec9 = () => {
   const wrap = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
+  const [timeline, setTimeline] = useState<any>()
 
   const triggerSpace = () => {
     if (wrap.current) {
@@ -29,43 +29,409 @@ const Sec9 = () => {
     return window.innerHeight
   }
 
-  const sec9Ani = () => {
-    const tl = gsap.timeline().from(".text_wrap .desc_16", 1, {
-      // opacity: 0,
-      // y: 100,
+  const handleSwitchClick = (index: number) => {
+    setActiveIndex(index)
+    gsap.to(window, {
+      scrollTo: {
+        y: timeline.scrollTrigger.labelToScroll("part" + (index + 2)),
+      },
       ease: "power2.inOut",
     })
+  }
+
+  const sec9Ani = () => {
+    const tl = gsap
+      .timeline()
+      .to(
+        ".active_line",
+        1,
+        {
+          y: "0",
+          ease: "steps(1)",
+        },
+        "part1"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(1)) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "0fr",
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".data_wrap:nth-child(1) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "1fr",
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".pic_wrap:not(:nth-child(1))",
+        1,
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".pic_wrap:nth-child(1)",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(".sec9", 1, {
+        ease: "power2.inOut",
+      })
+      .to(
+        ".active_line",
+        1,
+        {
+          y: "100%",
+          ease: "steps(1)",
+        },
+        "part2"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(2)) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "0fr",
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".data_wrap:nth-child(2) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "1fr",
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".pic_wrap:not(:nth-child(2))",
+        1,
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".pic_wrap:nth-child(2)",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(".sec9", 1, {
+        ease: "power2.inOut",
+      })
+      .to(
+        ".active_line",
+        1,
+        {
+          y: "200%",
+          ease: "steps(1)",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(3)) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "0fr",
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:nth-child(3) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "1fr",
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".pic_wrap:not(:nth-child(3))",
+        1,
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".pic_wrap:nth-child(3)",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:nth-child(3) .tran_wrap",
+        1,
+        {
+          ease: "power2.inOut",
+        },
+        "part4"
+      )
+      .to(".sec9", 1, {
+        ease: "power2.inOut",
+      })
     ScrollTrigger.create({
       trigger: wrap.current,
       start: `top ${triggerSpace()}`,
-      end: "+=200%",
+      end: "+=300%",
       pin: true,
       scrub: 0.2,
       animation: tl,
       toggleActions: "play none none reverse",
-      onUpdate: (self) => {
-        setActiveIndex(Math.round(self.progress * 2))
-      },
+      // onUpdate: (self) => {
+      //   setActiveIndex(Math.round(self.progress * 2))
+      // },
     })
+    setTimeline(tl)
   }
 
   const sec9AniMb = () => {
-    gsap.timeline().to(".sec9 .video_wrap", {
-      scrollTrigger: {
-        trigger: ".sec9 .video_wrap",
-        start: "top 100%",
-        onEnter: () => {
-          if (document.querySelector(".sec9 .video_wrap video")) {
-            ;(
-              document.querySelector(
-                ".sec9 .video_wrap video"
-              ) as HTMLVideoElement
-            )?.play()
-          }
-          videoRef.current?.play()
+    const tl = gsap
+      .timeline()
+      .to(
+        ".active_line",
+        1,
+        {
+          y: "0",
+          ease: "steps(1)",
         },
-      },
+        "part1"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(1)) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "0fr",
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".data_wrap:nth-child(1) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "1fr",
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(1)) .data_title",
+        1,
+        {
+          opacity: 0.4,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".data_wrap:nth-child(1) .data_title",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".pic_wrap:not(:nth-child(1))",
+        1,
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".pic_wrap:nth-child(1)",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(".sec9", 1, {
+        ease: "power2.inOut",
+      })
+      .to(
+        ".active_line",
+        1,
+        {
+          y: "100%",
+          ease: "steps(1)",
+        },
+        "part2"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(2)) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "0fr",
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".data_wrap:nth-child(2) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "1fr",
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(2)) .data_title",
+        1,
+        {
+          opacity: 0.4,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".data_wrap:nth-child(2) .data_title",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".pic_wrap:not(:nth-child(2))",
+        1,
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".pic_wrap:nth-child(2)",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(".sec9", 1, {
+        ease: "power2.inOut",
+      })
+      .to(
+        ".active_line",
+        1,
+        {
+          y: "200%",
+          ease: "steps(1)",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(3)) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "0fr",
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:nth-child(3) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "1fr",
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      
+      .to(
+        ".data_wrap:not(:nth-child(3)) .data_title",
+        1,
+        {
+          opacity: .4,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:nth-child(3) .data_title",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".pic_wrap:not(:nth-child(3))",
+        1,
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".pic_wrap:nth-child(3)",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:nth-child(3) .tran_wrap",
+        1,
+        {
+          ease: "power2.inOut",
+        },
+        "part4"
+      )
+      .to(".sec9", 1, {
+        ease: "power2.inOut",
+      })
+    ScrollTrigger.create({
+      trigger: wrap.current,
+      start: `top ${triggerSpace()}`,
+      end: "+=1000",
+      pin: true,
+      scrub: 0.2,
+      animation: tl,
+      toggleActions: "play none none reverse",
+      // onUpdate: (self) => {
+      //   setActiveIndex(Math.round(self.progress * 2))
+      // },
     })
+    setTimeline(tl)
   }
 
   useGSAP(
@@ -133,6 +499,7 @@ const Sec9 = () => {
                     <div
                       className='data_title'
                       dangerouslySetInnerHTML={{ __html: item?.title }}
+                      onClick={() => handleSwitchClick(index)}
                     ></div>
                     <div className='tran_wrap'>
                       <p
@@ -155,7 +522,7 @@ const Sec9 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec9_wave_mb.png"}
+                    srcSet={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -171,7 +538,7 @@ const Sec9 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec9_1_1_mb.png"}
+                    srcSet={src + "/images/pc/sec9_1_1_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -187,7 +554,7 @@ const Sec9 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec9_1_2_mb.png"}
+                    srcSet={src + "/images/pc/sec9_1_2_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -209,7 +576,7 @@ const Sec9 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec9_wave_mb.png"}
+                    srcSet={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -225,7 +592,7 @@ const Sec9 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec9_wave_mb.png"}
+                    srcSet={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -241,7 +608,7 @@ const Sec9 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec9_2_1_mb.png"}
+                    srcSet={src + "/images/pc/sec9_2_1_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -257,7 +624,7 @@ const Sec9 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec9_2_2_mb.png"}
+                    srcSet={src + "/images/pc/sec9_2_2_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -279,7 +646,7 @@ const Sec9 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec9_wave_mb.png"}
+                    srcSet={src + "/images/pc/sec9_wave_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -295,7 +662,7 @@ const Sec9 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec9_3_1_mb.png"}
+                    srcSet={src + "/images/pc/sec9_3_1_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -311,7 +678,7 @@ const Sec9 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec9_3_2_mb.png"}
+                    srcSet={src + "/images/pc/sec9_3_2_pc.webp"}
                   />
                   <source
                     media='(min-width: 751px)'

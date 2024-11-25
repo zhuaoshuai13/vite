@@ -45,79 +45,24 @@
 
 @media (max-width: $mobwidthPx) {
   .tab30pro .sec11 {
-    .spec_part {
-      padding-top: 0;
-    }
-
-    .content_wrap {
-      height: auto;
-      background-color: #f2f2f2;
+    .sec11_wrap {
+      padding: px-to-vw-mb(150) 0;
     }
 
     .pic_wrap {
-      position: relative;
-      width: 100%;
-      height: px-to-vw-mb(542);
+      gap: px-to-vw-mb(12);
+      height: px-to-vw-mb(513);
+      margin-top: px-to-vw-mb(60);
     }
 
-    .all_text {
-      position: relative;
-      max-width: var(--content-width);
-      height: px-to-vw-mb(380);
-      margin: 0 auto;
-      color: #000;
+    .phone_wrap1 {
+      margin-left: calc((100vw - var(--content-width)) / 2);
     }
 
-    .text_wrap {
-      top: px-to-vw-mb(80) !important;
-      left: 0 !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      text-align: center;
-
-      .title {
-        font-size: px-to-vw-mb(54);
-        font-family: "Bold";
-      }
-    }
-
-    .bottom_content {
-      position: relative;
-      bottom: unset;
-      left: unset;
-      max-width: var(--content-width);
-      height: px-to-vw-mb(260);
-      margin: 0 auto;
-
-      button {
-        width: px-to-vw-mb(36);
-        height: px-to-vw-mb(36);
-      }
-
-      .btn_wrap {
-        position: absolute;
-        top: px-to-vw-mb(52);
-        right: 0;
-        z-index: 1;
-        gap: px-to-vw-mb(20);
-      }
-
-      .color_item {
-        margin-top: px-to-vw-mb(50);
-        color: #000;
-      }
-
-      .color_title {
-        max-width: 100%;
-        font-size: px-to-vw-mb(33);
-      }
-
-      .color_desc {
-        position: unset;
-        margin-top: px-to-vw-mb(24);
-        font-size: px-to-vw-mb(16.6);
-        transform: unset;
-      }
+    .pic_wrap2 {
+      gap: px-to-vw-mb(12);
+      justify-content: space-between;
+      width: px-to-vw-mb(731);
     }
   }
 }

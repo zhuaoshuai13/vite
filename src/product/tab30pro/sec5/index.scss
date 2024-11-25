@@ -109,6 +109,7 @@
     }
 
     .data {
+      gap: px-to-vw-mb(20);
       width: calc((var(--content-width) - px-to-vw-mb(10)) / 2);
       min-height: px-to-vw-mb(116);
       padding: px-to-vw-mb(16);
@@ -118,7 +119,8 @@
       backdrop-filter: brightness(1.5) blur(40px);
 
       img {
-        height: px-to-vw-mb(55);
+        width: px-to-vw-mb(54);
+        height: auto;
       }
 
       .data_title {
@@ -129,8 +131,30 @@
         font-size: px-to-vw-mb(20.8);
       }
 
-      &:last-child {
+      &:nth-child(2) {
+        justify-content: center;
+        order: 7;
         width: 100%;
+      }
+
+      &:nth-child(3) {
+        order: 5;
+      }
+
+      &:nth-child(4) {
+        order: 2;
+      }
+
+      &:nth-child(5) {
+        order: 4;
+      }
+
+      &:nth-child(6) {
+        order: 6;
+      }
+
+      &:nth-child(7) {
+        order: 3;
       }
     }
   }

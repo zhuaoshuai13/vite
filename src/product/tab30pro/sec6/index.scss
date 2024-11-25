@@ -22,14 +22,6 @@
     }
   }
 
-  .pic_wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   .phone_wrap {
     width: 100%;
     height: 100%;
@@ -50,53 +42,18 @@
 @media (max-width: $mobwidthPx) {
   .tab30pro .sec6 {
     .sec6_wrap {
-      height: px-to-vw-mb(750);
-
-      @include bg("mb/sec6_bg_mb.png");
+      height: px-to-vw-mb(1025);
     }
 
-    .part {
-      top: px-to-vw-mb(50);
+    .text_wrap {
+      top: px-to-vw-mb(60);
+      text-align: left;
     }
 
-    .desc {
-      font-size: px-to-vw-mb(29);
-    }
-
-    .pic_wrap {
-      top: px-to-vw-mb(488);
-      right: unset;
-      left: 0;
-      width: px-to-vw-mb(615);
-      transform: scale(1.15);
-      transform-origin: left;
-    }
-
-    .phone_wrap {
-      width: 100%;
-    }
-
-    .circle_wrap {
-      width: px-to-vw-mb(200);
-    }
-
-    .hand_wrap {
-      top: px-to-vw-mb(150);
-      right: px-to-vw-mb(-80);
-      width: px-to-vw-mb(406);
-      transform: scale(1.15);
-    }
-
-    .fingerprint_wrap {
-      width: px-to-vw-mb(145);
-    }
-
-    .fingerprintlight_wrap1 {
-      width: px-to-vw-mb(200);
-    }
-
-    .fingerprintlight_wrap2 {
-      width: px-to-vw-mb(245);
+    .screen_text_wrap {
+      top: px-to-vw-mb(710);
+      left: px-to-vw-mb(470);
+      width: px-to-vw-mb(136);
     }
   }
 }

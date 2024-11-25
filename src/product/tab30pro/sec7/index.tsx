@@ -132,18 +132,113 @@ const Sec7 = () => {
   const sec7AniMb = () => {
     const tl = gsap
       .timeline()
-      .fromTo(
-        ".phone2",
-        { rotateY: 0, opacity: 1, ease: "power2.inOut" },
-        { rotateY: 70, opacity: 0 },
+      .to(".text_wrap:not(:nth-child(2))", {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      .to(
+        ".text_wrap:nth-child(2)",
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
         "a"
       )
-      .to(".phone1", { visibility: "visible", ease: "power2.inOut" }, "b")
+      .from(
+        ".icon_wrap1",
+        {
+          x: "100%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .to(".icon_wrap1", {
+        duration: 0.5,
+        ease: "power2.inOut",
+      })
+      .to(
+        ".text_wrap:not(:nth-child(3))",
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .to(
+        ".text_wrap:nth-child(3)",
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .to(
+        ".bg_wrap2",
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "b"
+      )
+      .from(
+        ".icon_wrap2",
+        {
+          x: "363%",
+          y: "204%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(
+        ".icon_wrap3",
+        {
+          x: "227%",
+          y: "189%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(
+        ".icon_wrap4",
+        {
+          x: "-147%",
+          y: "228%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(
+        ".icon_wrap5",
+        {
+          x: "-338%",
+          y: "67%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(
+        ".icon_wrap6",
+        {
+          x: "-48%",
+          y: "-102%",
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "c"
+      )
+      .from(".icon_wrap", {
+        ease: "power2.inOut",
+      })
     ScrollTrigger.create({
-      trigger: ".sec7_wrap .content_wrap",
+      trigger: ".sec7_wrap",
       pin: true,
-      start: `bottom 100%`,
-      end: "+=300",
+      start: `top 0`,
+      end: "+=300%",
       animation: tl,
       scrub: 0.2,
     })
@@ -195,7 +290,7 @@ const Sec7 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_icon1_mb.png"}
+                  srcSet={src + "/images/pc/sec7_icon1_pc.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -211,7 +306,7 @@ const Sec7 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_icon2_mb.png"}
+                  srcSet={src + "/images/pc/sec7_icon2_pc.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -227,7 +322,7 @@ const Sec7 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_icon3_mb.png"}
+                  srcSet={src + "/images/pc/sec7_icon3_pc.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -243,7 +338,7 @@ const Sec7 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_icon4_mb.png"}
+                  srcSet={src + "/images/pc/sec7_icon4_pc.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -259,7 +354,7 @@ const Sec7 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_icon5_mb.png"}
+                  srcSet={src + "/images/pc/sec7_icon5_pc.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -275,7 +370,7 @@ const Sec7 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_icon6_mb.png"}
+                  srcSet={src + "/images/pc/sec7_icon6_pc.webp"}
                 />
                 <source
                   media='(min-width: 751px)'

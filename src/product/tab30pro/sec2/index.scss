@@ -30,19 +30,17 @@
 
 @media (max-width: $mobwidthPx) {
   .tab30pro .sec2 {
-    .title_items {
-      max-width: var(--content-width);
-      margin: 0 auto;
-      font-size: px-to-vw-mb(25);
+    .sec2_wrap {
+      height: px-to-vw-mb(1333);
     }
 
     .lazyload-wrapper {
       height: 100%;
     }
 
-    .part2_btn {
-      width: px-to-vw-mb(100);
-      height: px-to-vw-mb(100);
+    .play_wrap {
+      width: px-to-vw-mb(78);
+      height: px-to-vw-mb(78);
     }
   }
 }

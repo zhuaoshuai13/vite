@@ -4,6 +4,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
+import { getTriggerSpace } from "../../../utils/getTriggerSpace"
 
 import "./index.scss"
 
@@ -53,30 +54,25 @@ const Sec15 = () => {
         {
           opacity: 0,
           ease: "power2.inOut",
+          duration: 1,
         },
         "a"
       )
       .to(
-        ".text_wrap2",
+        [".text_wrap2", ".bg_wrap2", ".datas"],
         {
           opacity: 1,
           ease: "power2.inOut",
+          duration: 1,
+          delay: 0.5,
         },
-        "b"
-      )
-      .to(
-        ".phone2",
-        {
-          opacity: 1,
-          ease: "power2.inOut",
-        },
-        "b"
+        "a"
       )
     ScrollTrigger.create({
       trigger: ".sec15_wrap",
       pin: true,
-      start: `top 10%`,
-      end: "+=1200",
+      start: `top ${getTriggerSpace(wrap.current, config?.navHeightMb)}`,
+      end: "+=1500",
       animation: tl,
       scrub: 0.2,
     })
@@ -101,7 +97,7 @@ const Sec15 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec15_f1_pc.webp"}
+                srcSet={src + "/images/mb/sec15_f1_mb.png"}
               />
               <source
                 media='(min-width: 751px)'
@@ -114,7 +110,7 @@ const Sec15 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec15_f2_pc.webp"}
+                srcSet={src + "/images/mb/sec15_f2_mb.png"}
               />
               <source
                 media='(min-width: 751px)'
