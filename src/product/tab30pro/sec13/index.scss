@@ -94,7 +94,7 @@
   }
 
   .improve {
-    font-size: px-to-vw-mb(16.6);
+    font-size: px-to-vw(16.6);
     font-family: "Medium";
   }
 
@@ -177,7 +177,7 @@
     }
 
     .score_line {
-      height: px-to-vw-mb(5);
+      height: .6vw;
     }
 
     .new_score {

@@ -10,7 +10,7 @@ window.tab30proConfig = {
   sec2: {
     preview_video: {
       pc: src + "/videos/sec2_video_pc.mp4",
-      mb: src + "/videos/sec2_full_video_mb.mp4",
+      mb: src + "/videos/sec2_video_mb.mp4",
     },
     full_video: {
       pc: src + "/videos/sec2_full_video_pc.mp4",
@@ -61,7 +61,7 @@ window.tab30proConfig = {
         title: "13''",
         desc: "Mega Display",
         icon: src + "/images/pc/sec5_icon1_pc.webp",
-        iconmb: src + "/images/mb/sec5_icon1_mb.png",
+        iconmb: src + "/images/mb/sec5_icon1_mb.webp",
       },
       {
         title: "16: 10",

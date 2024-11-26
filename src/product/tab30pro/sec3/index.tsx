@@ -288,7 +288,10 @@ const Sec3 = () => {
                   </div>
                 </div>
                 <div className='img_wrap'>
-                  <img loading='lazy' src={src + "/images/mb/sec2_p1_mb.png"} />
+                  <img
+                    loading='lazy'
+                    src={src + "/images/mb/sec2_p1_mb.webp"}
+                  />
                 </div>
               </div>
             </div>
@@ -320,7 +323,7 @@ const Sec3 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/mb/sec2_p2_mb.png"}
+                      src={src + "/images/mb/sec2_p2_mb.webp"}
                     />
                   </div>
                 </div>
@@ -346,7 +349,7 @@ const Sec3 = () => {
                   <div className='img_wrap'>
                     <img
                       loading='lazy'
-                      src={src + "/images/mb/sec2_p5_mb.png"}
+                      src={src + "/images/mb/sec2_p5_mb.webp"}
                     />
                   </div>
                 </div>
@@ -397,7 +400,7 @@ const Sec3 = () => {
                 <div className='img_wrap'>
                   <img
                     loading='lazy'
-                    src={src + "/images/mb/sec2_p3_mb.png"}
+                    src={src + "/images/mb/sec2_p3_mb.webp"}
                   />
                 </div>
               </div>
@@ -423,7 +426,7 @@ const Sec3 = () => {
                 <div className='img_wrap'>
                   <img
                     loading='lazy'
-                    src={src + "/images/mb/sec2_p4_mb.png"}
+                    src={src + "/images/mb/sec2_p4_mb.webp"}
                   />
                 </div>
               </div>
@@ -455,7 +458,7 @@ const Sec3 = () => {
                 <div className='img_wrap'>
                   <img
                     loading='lazy'
-                    src={src + "/images/mb/sec2_p7_mb.png"}
+                    src={src + "/images/mb/sec2_p7_mb.webp"}
                   />
                 </div>
               </div>

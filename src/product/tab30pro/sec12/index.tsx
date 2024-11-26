@@ -1,63 +1,17 @@
-import { useContext, useRef, useState, useEffect } from "react"
-import { ScreenContext } from "../../../provider"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import { useGSAP } from "@gsap/react"
-
 import "./index.scss"
 
 const Sec12 = () => {
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { tab30proConfig: config, src } = window as any
-  const circleList = [
-    "sec12_green_pc.webp",
-    "sec12_red_pc.webp",
-    "sec12_blue_pc.webp",
-    "sec12_purple_pc.webp",
-  ]
-  const { isPc } = useContext(ScreenContext)
-  const wrap = useRef(null)
-  const [activeIndex, setActiveIndex] = useState(0)
-  const sec12Ani = () => {
-    const tl = gsap.timeline().to(".pic_wrap", {})
-    ScrollTrigger.create({
-      trigger: ".sec12_wrap",
-      animation: tl,
-      onEnter: () => {
-        setActiveIndex(0)
-      },
-    })
-  }
-
-  useGSAP(
-    () => {
-      sec12Ani()
-    },
-    { scope: wrap }
-  )
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (activeIndex < 3) {
-        setActiveIndex((prev) => prev + 1)
-      } else {
-        setActiveIndex(0)
-      }
-    }, 3000)
-
-    return () => clearInterval(interval)
-  }, [activeIndex])
 
   return (
-    <section className='sec12' ref={wrap}>
+    <section className='sec12'>
       <div className='sec12_wrap'>
         <div className='spec_part'>
           <div className='img_wrap spec_bg'>
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec12_f1_mb.png"}
+                srcSet={src + "/images/mb/sec12_f1_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'

@@ -76,7 +76,7 @@ const Sec14 = () => {
           <picture>
             <source
               media='(max-width: 750px)'
-              srcSet={src + "/images/mb/sec14_f1_mb.png"}
+              srcSet={src + "/images/mb/sec14_f1_mb.webp"}
             />
             <source
               media='(min-width: 751px)'

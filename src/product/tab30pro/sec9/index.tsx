@@ -8,11 +8,11 @@ import { useGSAP } from "@gsap/react"
 import "./index.scss"
 
 const Sec9 = () => {
+  const wrap = useRef<HTMLDivElement>(null)
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+  const { contextSafe } = useGSAP({ scope: wrap })
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
-  const wrap = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
   const [timeline, setTimeline] = useState<any>()
 
@@ -29,7 +29,7 @@ const Sec9 = () => {
     return window.innerHeight
   }
 
-  const handleSwitchClick = (index: number) => {
+  const handleSwitchClick = contextSafe((index: number) => {
     setActiveIndex(index)
     gsap.to(window, {
       scrollTo: {
@@ -37,7 +37,7 @@ const Sec9 = () => {
       },
       ease: "power2.inOut",
     })
-  }
+  })
 
   const sec9Ani = () => {
     const tl = gsap
@@ -87,9 +87,27 @@ const Sec9 = () => {
         },
         "part1"
       )
-      .to(".sec9", 1, {
-        ease: "power2.inOut",
-      })
+      .to(
+        ".data_wrap:not(:nth-child(1)) .data_title",
+        1,
+        {
+          opacity: 0.4,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".data_wrap:nth-child(1) .data_title",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      // .to(".sec9", 1, {
+      //   ease: "power2.inOut",
+      // })
       .to(
         ".active_line",
         1,
@@ -135,9 +153,27 @@ const Sec9 = () => {
         },
         "part2"
       )
-      .to(".sec9", 1, {
-        ease: "power2.inOut",
-      })
+      .to(
+        ".data_wrap:not(:nth-child(2)) .data_title",
+        1,
+        {
+          opacity: 0.4,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".data_wrap:nth-child(2) .data_title",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      // .to(".sec9", 1, {
+      //   ease: "power2.inOut",
+      // })
       .to(
         ".active_line",
         1,
@@ -184,6 +220,24 @@ const Sec9 = () => {
         "part3"
       )
       .to(
+        ".data_wrap:not(:nth-child(3)) .data_title",
+        1,
+        {
+          opacity: 0.4,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:nth-child(3) .data_title",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
         ".data_wrap:nth-child(3) .tran_wrap",
         1,
         {
@@ -191,9 +245,9 @@ const Sec9 = () => {
         },
         "part4"
       )
-      .to(".sec9", 1, {
-        ease: "power2.inOut",
-      })
+    // .to(".sec9", 1, {
+    //   ease: "power2.inOut",
+    // })
     ScrollTrigger.create({
       trigger: wrap.current,
       start: `top ${triggerSpace()}`,
@@ -275,9 +329,9 @@ const Sec9 = () => {
         },
         "part1"
       )
-      .to(".sec9", 1, {
-        ease: "power2.inOut",
-      })
+      // .to(".sec9", 1, {
+      //   ease: "power2.inOut",
+      // })
       .to(
         ".active_line",
         1,
@@ -341,9 +395,9 @@ const Sec9 = () => {
         },
         "part2"
       )
-      .to(".sec9", 1, {
-        ease: "power2.inOut",
-      })
+      // .to(".sec9", 1, {
+      //   ease: "power2.inOut",
+      // })
       .to(
         ".active_line",
         1,
@@ -371,12 +425,12 @@ const Sec9 = () => {
         },
         "part3"
       )
-      
+
       .to(
         ".data_wrap:not(:nth-child(3)) .data_title",
         1,
         {
-          opacity: .4,
+          opacity: 0.4,
           ease: "power2.inOut",
         },
         "part3"
@@ -416,9 +470,9 @@ const Sec9 = () => {
         },
         "part4"
       )
-      .to(".sec9", 1, {
-        ease: "power2.inOut",
-      })
+      // .to(".sec9", 1, {
+      //   ease: "power2.inOut",
+      // })
     ScrollTrigger.create({
       trigger: wrap.current,
       start: `top ${triggerSpace()}`,
@@ -452,7 +506,7 @@ const Sec9 = () => {
           <picture>
             <source
               media='(max-width: 750px)'
-              srcSet={src + "/images/mb/sec9_bg_mb.png"}
+              srcSet={src + "/images/mb/sec9_bg_mb.webp"}
             />
             <source
               media='(min-width: 751px)'

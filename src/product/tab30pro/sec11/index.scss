@@ -64,5 +64,12 @@
       justify-content: space-between;
       width: px-to-vw-mb(731);
     }
+
+    .phone_wrap1,
+    .phone_wrap2 {
+      img {
+        height: 100%;
+      }
+    }
   }
 }

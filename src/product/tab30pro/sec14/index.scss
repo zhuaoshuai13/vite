@@ -26,8 +26,8 @@
   .phone_wrap {
     position: relative;
     z-index: 1;
-    width: px-to-vw(1628);
-    height: px-to-vw(598);
+    width: px-to-vw(1443);
+    height: px-to-vw(530);
     margin: px-to-vw(50) 0 0 auto;
   }
 
@@ -92,7 +92,7 @@
       margin: px-to-vw-mb(-24) auto 0;
       padding: px-to-vw-mb(24);
 
-      @include bg("mb/sec14_data_bg_mb.png", false);
+      @include bg("mb/sec14_data_bg_mb.webp", false);
 
       .data_title {
         font-size: px-to-vw-mb(27);

@@ -4,12 +4,6 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-import { Swiper, SwiperClass, SwiperSlide } from "swiper/react"
-import { Autoplay, Navigation, Pagination } from "swiper/modules"
-
-import "swiper/css"
-import "swiper/css/effect-fade"
-import "swiper/css/pagination"
 
 import "./index.scss"
 
@@ -50,10 +44,61 @@ const Sec19 = () => {
     })
   }
 
+  const sec19AniMb = () => {
+    const tl = gsap.timeline().from(
+      ".left_wrap",
+      1,
+      {
+        opacity: 0,
+        y: 100,
+        ease: "power2.inOut",
+      },
+      "a"
+    )
+    ScrollTrigger.create({
+      trigger: ".left_wrap",
+      start: `top 90%`,
+      animation: tl,
+      toggleActions: "play none none reverse",
+    })
+    const tl2 = gsap
+      .timeline()
+      .from(
+        ".right_wrap .box_item:nth-child(1)",
+        1,
+        {
+          opacity: 0,
+          x: -100,
+          y: 100,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .from(
+        ".right_wrap .box_item:nth-child(2)",
+        1,
+        {
+          opacity: 0,
+          x: 100,
+          y: 100,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+    ScrollTrigger.create({
+      trigger: ".right_wrap",
+      start: `top 90%`,
+      animation: tl2,
+      toggleActions: "play none none reverse",
+    })
+  }
+
   useGSAP(
     () => {
       if (isPc) {
         sec19Ani()
+      } else {
+        sec19AniMb()
       }
     },
     { scope: wrap }
@@ -83,7 +128,7 @@ const Sec19 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec19_f1_mb.png"}
+                    srcSet={src + "/images/mb/sec19_f1_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -117,7 +162,7 @@ const Sec19 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec19_f2_mb.png"}
+                    srcSet={src + "/images/mb/sec19_f2_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -149,7 +194,7 @@ const Sec19 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec19_f3_mb.png"}
+                    srcSet={src + "/images/mb/sec19_f3_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'

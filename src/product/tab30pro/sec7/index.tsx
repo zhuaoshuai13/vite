@@ -4,7 +4,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-// import LazyLoad from "react-lazyload"
+import { getTriggerSpace } from "../../../utils/getTriggerSpace"
 
 import "./index.scss"
 
@@ -237,7 +237,7 @@ const Sec7 = () => {
     ScrollTrigger.create({
       trigger: ".sec7_wrap",
       pin: true,
-      start: `top 0`,
+      start: `top ${getTriggerSpace(wrap.current, config?.navHeightMb)}`,
       end: "+=300%",
       animation: tl,
       scrub: 0.2,
@@ -264,7 +264,7 @@ const Sec7 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_bg1_mb.png"}
+                  srcSet={src + "/images/mb/sec7_bg1_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -277,7 +277,7 @@ const Sec7 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec7_bg2_mb.png"}
+                  srcSet={src + "/images/mb/sec7_bg2_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'

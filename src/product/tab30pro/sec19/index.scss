@@ -133,18 +133,30 @@
       width: auto;
       height: px-to-vw-mb(286);
       margin: px-to-vw-mb(48) auto 0;
+
+      img {
+        height: 100%;
+      }
     }
 
     .img_wrap2 {
       width: auto;
       height: px-to-vw-mb(133);
       margin: px-to-vw-mb(20) auto 0;
+
+      img {
+        height: 100%;
+      }
     }
 
     .img_wrap3 {
       width: auto;
       height: px-to-vw-mb(43);
       margin: px-to-vw-mb(100) auto 0;
+
+      img {
+        height: 100%;
+      }
     }
 
     .tips_wrap {

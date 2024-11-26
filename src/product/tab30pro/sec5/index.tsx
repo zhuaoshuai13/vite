@@ -4,7 +4,6 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
-// import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
@@ -64,7 +63,7 @@ const Sec5 = () => {
         sec5AniMb()
       }
     },
-    { scope: wrap, dependencies: [isPc], revertOnUpdate: true }
+    { scope: wrap, dependencies: [isPc] }
   )
 
   return (
@@ -75,7 +74,7 @@ const Sec5 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec5_display_dark_mb.png"}
+                srcSet={src + "/images/mb/sec5_display_dark_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -91,7 +90,7 @@ const Sec5 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec5_display_light_mb.png"}
+                srcSet={src + "/images/mb/sec5_display_light_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'

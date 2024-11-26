@@ -25,7 +25,7 @@ const Sec6 = () => {
       )
     ScrollTrigger.create({
       trigger: ".screen_text_wrap",
-      start: `top 95%`,
+      start: `top 90%`,
       animation: tl,
       toggleActions: "play none none reverse",
     })
@@ -78,7 +78,7 @@ const Sec6 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec6_bg_mb.png"}
+                srcSet={src + "/images/mb/sec6_bg_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'

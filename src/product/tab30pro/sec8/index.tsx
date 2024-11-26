@@ -18,7 +18,7 @@ const Sec8 = () => {
           <picture>
             <source
               media='(max-width: 750px)'
-              srcSet={src + "/images/mb/sec8_bg_mb.png"}
+              srcSet={src + "/images/mb/sec8_bg_mb.webp"}
             />
             <source
               media='(min-width: 751px)'

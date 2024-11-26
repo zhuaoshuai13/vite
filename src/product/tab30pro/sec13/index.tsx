@@ -102,7 +102,7 @@ const Sec13 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec13_bg_mb.png"}
+                srcSet={src + "/images/mb/sec13_bg_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -115,7 +115,7 @@ const Sec13 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec13_processor_mb.png"}
+                srcSet={src + "/images/mb/sec13_processor_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'

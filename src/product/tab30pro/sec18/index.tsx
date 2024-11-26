@@ -17,15 +17,15 @@ const Sec18 = () => {
   const picArray = [
     {
       pc: src + "/images/pc/sec18_f1_pc.webp",
-      mb: src + "/images/mb/sec18_f2_mb.png",
+      mb: src + "/images/mb/sec18_f1_mb.webp",
     },
     {
       pc: src + "/images/pc/sec18_f2_pc.webp",
-      mb: src + "/images/mb/sec18_f2_mb.png",
+      mb: src + "/images/mb/sec18_f2_mb.webp",
     },
     {
       pc: src + "/images/pc/sec18_f3_pc.webp",
-      mb: src + "/images/mb/sec18_f3_mb.png",
+      mb: src + "/images/mb/sec18_f3_mb.webp",
     },
   ]
 
@@ -43,26 +43,6 @@ const Sec18 = () => {
   }
 
   const sec18Ani = () => {
-    const tl = gsap.timeline().from(".text_wrap .desc_16", 1, {
-      // opacity: 0,
-      // y: 100,
-      ease: "power2.inOut",
-    })
-    ScrollTrigger.create({
-      trigger: wrap.current,
-      start: `top ${triggerSpace()}`,
-      end: "+=200%",
-      pin: true,
-      scrub: 0.2,
-      animation: tl,
-      toggleActions: "play none none reverse",
-      onUpdate: (self) => {
-        setActiveIndex(Math.round(self.progress * 2))
-      },
-    })
-  }
-
-  const sec18AniMb = () => {
     const tl = gsap
       .timeline()
       .to(
@@ -128,9 +108,9 @@ const Sec18 = () => {
         },
         "part1"
       )
-      .to(".sec9", 1, {
-        ease: "power2.inOut",
-      })
+      // .to(".sec18", 1, {
+      //   ease: "power2.inOut",
+      // })
       .to(
         ".active_line",
         1,
@@ -194,9 +174,9 @@ const Sec18 = () => {
         },
         "part2"
       )
-      .to(".sec9", 1, {
-        ease: "power2.inOut",
-      })
+      // .to(".sec18", 1, {
+      //   ease: "power2.inOut",
+      // })
       .to(
         ".active_line",
         1,
@@ -269,9 +249,230 @@ const Sec18 = () => {
         },
         "part4"
       )
-      .to(".sec9", 1, {
-        ease: "power2.inOut",
-      })
+    // .to(".sec18", 1, {
+    //   ease: "power2.inOut",
+    // })
+    ScrollTrigger.create({
+      trigger: wrap.current,
+      start: `top ${triggerSpace()}`,
+      end: "+=200%",
+      pin: true,
+      scrub: 0.2,
+      animation: tl,
+      toggleActions: "play none none reverse",
+    })
+  }
+
+  const sec18AniMb = () => {
+    const tl = gsap
+      .timeline()
+      .to(
+        ".active_line",
+        1,
+        {
+          y: "0",
+          ease: "steps(1)",
+        },
+        "part1"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(1)) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "0fr",
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".data_wrap:nth-child(1) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "1fr",
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(1)) .data_title",
+        1,
+        {
+          opacity: 0.4,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".data_wrap:nth-child(1) .data_title",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".pic_wrap2:not(:nth-child(1))",
+        1,
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      .to(
+        ".pic_wrap2:nth-child(1)",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part1"
+      )
+      // .to(".sec18", 1, {
+      //   ease: "power2.inOut",
+      // })
+      .to(
+        ".active_line",
+        1,
+        {
+          y: "100%",
+          ease: "steps(1)",
+        },
+        "part2"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(2)) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "0fr",
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".data_wrap:nth-child(2) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "1fr",
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(2)) .data_title",
+        1,
+        {
+          opacity: 0.4,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".data_wrap:nth-child(2) .data_title",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".pic_wrap2:not(:nth-child(2))",
+        1,
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      .to(
+        ".pic_wrap2:nth-child(2)",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part2"
+      )
+      // .to(".sec18", 1, {
+      //   ease: "power2.inOut",
+      // })
+      .to(
+        ".active_line",
+        1,
+        {
+          y: "200%",
+          ease: "steps(1)",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:not(:nth-child(3)) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "0fr",
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:nth-child(3) .tran_wrap",
+        1,
+        {
+          gridTemplateRows: "1fr",
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+
+      .to(
+        ".data_wrap:not(:nth-child(3)) .data_title",
+        1,
+        {
+          opacity: 0.4,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:nth-child(3) .data_title",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".pic_wrap2:not(:nth-child(3))",
+        1,
+        {
+          opacity: 0,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".pic_wrap2:nth-child(3)",
+        1,
+        {
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "part3"
+      )
+      .to(
+        ".data_wrap:nth-child(3) .tran_wrap",
+        1,
+        {
+          ease: "power2.inOut",
+        },
+        "part4"
+      )
+      // .to(".sec18", 1, {
+      //   ease: "power2.inOut",
+      // })
     ScrollTrigger.create({
       trigger: wrap.current,
       start: `top ${triggerSpace()}`,
@@ -280,9 +481,6 @@ const Sec18 = () => {
       scrub: 0.2,
       animation: tl,
       toggleActions: "play none none reverse",
-      // onUpdate: (self) => {
-      //   setActiveIndex(Math.round(self.progress * 2))
-      // },
     })
   }
 

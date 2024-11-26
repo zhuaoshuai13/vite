@@ -172,7 +172,7 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_1_1_mb.png"}
+                    srcSet={src + "/images/mb/sec10_1_1_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -188,7 +188,7 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_1_2_mb.png"}
+                    srcSet={src + "/images/mb/sec10_1_2_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -226,7 +226,7 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_2_1_mb.png"}
+                    srcSet={src + "/images/mb/sec10_2_1_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -242,7 +242,7 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_2_2_mb.png"}
+                    srcSet={src + "/images/mb/sec10_2_2_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -296,7 +296,7 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_3_1_mb.png"}
+                    srcSet={src + "/images/mb/sec10_3_1_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -312,7 +312,7 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_3_2_mb.png"}
+                    srcSet={src + "/images/mb/sec10_3_2_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'
@@ -328,7 +328,7 @@ const Sec10 = () => {
                 <picture>
                   <source
                     media='(max-width: 750px)'
-                    srcSet={src + "/images/mb/sec10_3_3_mb.png"}
+                    srcSet={src + "/images/mb/sec10_3_3_mb.webp"}
                   />
                   <source
                     media='(min-width: 751px)'

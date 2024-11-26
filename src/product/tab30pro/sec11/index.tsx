@@ -121,7 +121,7 @@ const Sec11 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec11_f1_mb.png"}
+                srcSet={src + "/images/mb/sec11_f1_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -134,7 +134,7 @@ const Sec11 = () => {
             <picture>
               <source
                 media='(max-width: 750px)'
-                srcSet={src + "/images/mb/sec11_f2_mb.png"}
+                srcSet={src + "/images/mb/sec11_f2_mb.webp"}
               />
               <source
                 media='(min-width: 751px)'
@@ -148,7 +148,7 @@ const Sec11 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_f3_mb.png"}
+                  srcSet={src + "/images/mb/sec11_f3_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
@@ -161,7 +161,7 @@ const Sec11 = () => {
               <picture>
                 <source
                   media='(max-width: 750px)'
-                  srcSet={src + "/images/mb/sec11_f4_mb.png"}
+                  srcSet={src + "/images/mb/sec11_f4_mb.webp"}
                 />
                 <source
                   media='(min-width: 751px)'
