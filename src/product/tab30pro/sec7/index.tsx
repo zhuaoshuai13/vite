@@ -11,7 +11,7 @@ import "./index.scss"
 const Sec7 = () => {
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
-  const wrap = useRef(null)
+  const wrap = useRef<HTMLDivElement>(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -123,7 +123,10 @@ const Sec7 = () => {
     ScrollTrigger.create({
       trigger: ".sec7_wrap",
       pin: true,
-      start: `top 0%`,
+      start:
+        window.innerHeight > (wrap.current?.offsetHeight || 0)
+          ? `top ${getTriggerSpace(wrap.current, config?.navHeightPc)}`
+          : `top 0%`,
       end: "+=300%",
       animation: tl,
       scrub: 0.2,
@@ -252,7 +255,7 @@ const Sec7 = () => {
         sec7AniMb()
       }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc] }
   )
 
   return (

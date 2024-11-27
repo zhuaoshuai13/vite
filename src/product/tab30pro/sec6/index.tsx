@@ -53,7 +53,7 @@ const Sec6 = () => {
       // if (isPc) {
       // } else sec6AniMb()
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc] }
   )
 
   return (

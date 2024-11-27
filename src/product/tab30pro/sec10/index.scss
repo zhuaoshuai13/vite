@@ -152,21 +152,25 @@
         margin-top: px-to-vw-mb(18);
       }
 
+      .pic_wrap {
+        position: relative;
+      }
+
       .phone_wrap1 {
-        top: px-to-vw-mb(603);
-        left: px-to-vw-mb(189);
+        position: unset;
         width: px-to-vw-mb(349);
+        margin: px-to-vw-mb(40) auto 0;
       }
 
       .phone_wrap2 {
-        top: px-to-vw-mb(804);
-        left: px-to-vw-mb(217);
+        top: px-to-vw-mb(200);
+        left: px-to-vw-mb(209);
         width: px-to-vw-mb(101);
       }
 
       .phone_wrap3 {
-        top: px-to-vw-mb(803);
-        left: px-to-vw-mb(258);
+        top: px-to-vw-mb(199.5);
+        left: px-to-vw-mb(250.5);
         width: px-to-vw-mb(102);
       }
     }

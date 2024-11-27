@@ -101,6 +101,10 @@
       opacity: 0;
       transition: all .5s;
 
+      &:nth-child(1) {
+        opacity: 1;
+      }
+
       &.active_img_wrap {
         opacity: 1;
       }

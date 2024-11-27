@@ -1,78 +1,14 @@
-import { useRef, useContext } from "react"
+import { useContext } from "react"
 import { ScreenContext } from "../../../provider"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import { useGSAP } from "@gsap/react"
-// import LazyLoad from "react-lazyload"
 
 import "./index.scss"
 
 const Sec3 = () => {
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
-  const wrap = useRef(null)
-
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
-
-  const sec3Ani = () => {
-    const tl = gsap.timeline().from(".item1 .img_wrap img", {
-      x: "-40%",
-      y: "-40$",
-      scale: 0.6,
-      ease: "power2.inOut",
-      duration: 1,
-    })
-    ScrollTrigger.create({
-      trigger: ".item1",
-      start: `top 75%`,
-      animation: tl,
-      toggleActions: "play none none reverse",
-    })
-  }
-
-  const sec3AniMb = () => {
-    const tl = gsap.timeline().from(".item1 .img_wrap img", {
-      x: "-40%",
-      y: "-40%",
-      scale: 0.6,
-      ease: "power2.inOut",
-      duration: 1,
-    })
-    ScrollTrigger.create({
-      trigger: ".item1",
-      start: `top 75%`,
-      animation: tl,
-      toggleActions: "play none none reverse",
-    })
-
-    gsap.utils.toArray(".sec3 .sec3_item").forEach((item: any) => {
-      gsap.timeline().from(item, {
-        borderRadius: (25 / 750) * window.innerWidth,
-        ease: "power2.inOut",
-        duration: 2,
-        scrollTrigger: {
-          trigger: item,
-          start: "top 75%",
-          toggleActions: "play none none reverse",
-        },
-      })
-    })
-  }
-
-  useGSAP(
-    () => {
-      // if (isPc) {
-      //   sec3Ani()
-      // } else {
-      //   sec3AniMb()
-      // }
-    },
-    { scope: wrap, dependencies: [isPc], revertOnUpdate: true }
-  )
 
   return (
-    <section className='sec3' ref={wrap}>
+    <section className='sec3'>
       <div className='sec3_wrap'>
         {isPc ? (
           <div className='sec3_items'>

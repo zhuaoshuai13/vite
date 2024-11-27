@@ -101,7 +101,7 @@ const Sec19 = () => {
         sec19AniMb()
       }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc] }
   )
 
   return (

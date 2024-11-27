@@ -4,6 +4,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
+import { getTriggerSpace } from "../../../utils/getTriggerSpace"
 
 import "./index.scss"
 
@@ -11,7 +12,7 @@ const Sec13 = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
-  const wrap = useRef(null)
+  const wrap = useRef<HTMLDivElement>(null)
 
   const sec13Ani = () => {
     const tl = gsap
@@ -41,7 +42,10 @@ const Sec13 = () => {
     ScrollTrigger.create({
       trigger: ".sec13_wrap",
       pin: true,
-      start: `top 0%`,
+      start:
+        window.innerHeight > (wrap.current?.offsetHeight || 0)
+          ? `top ${getTriggerSpace(wrap.current, config?.navHeightPc)}`
+          : `top 0%`,
       end: "+=200%",
       animation: tl,
       scrub: 0.2,
@@ -77,7 +81,7 @@ const Sec13 = () => {
       trigger: ".sec13_wrap",
       pin: true,
       start: `top 0%`,
-      end: "+=1500",
+      end: "+=800",
       animation: tl,
       scrub: 0.2,
     })
@@ -91,7 +95,7 @@ const Sec13 = () => {
         sec13AniMb()
       }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc] }
   )
 
   return (

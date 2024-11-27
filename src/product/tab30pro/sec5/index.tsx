@@ -4,13 +4,14 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
+import { getTriggerSpace } from "../../../utils/getTriggerSpace"
 
 import "./index.scss"
 
 const Sec5 = () => {
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
-  const wrap = useRef(null)
+  const wrap = useRef<HTMLDivElement>(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -26,7 +27,10 @@ const Sec5 = () => {
     )
     ScrollTrigger.create({
       trigger: ".sec5_wrap",
-      start: `bottom 110%`,
+      start:
+        window.innerHeight > (wrap.current?.offsetHeight || 0)
+          ? `top ${getTriggerSpace(wrap.current, config?.navHeightPc)}`
+          : `bottom 110%`,
       end: "+=200%",
       pin: true,
       scrub: 0.2,
@@ -125,7 +129,7 @@ const Sec5 = () => {
                 ?.map((item: any, index: number) => {
                   return (
                     <div className='data' key={index}>
-                      <img src={item?.icon} />
+                      <img src={item?.icon} loading='lazy' />
                       <div className='data_text'>
                         <div
                           className='data_title'
@@ -144,7 +148,7 @@ const Sec5 = () => {
               {config?.sec5?.data?.slice(4)?.map((item: any, index: number) => {
                 return (
                   <div className='data' key={index}>
-                    <img src={item?.icon} />
+                    <img src={item?.icon} loading='lazy' />
                     <div className='data_text'>
                       <div
                         className='data_title'
@@ -166,7 +170,10 @@ const Sec5 = () => {
               {config?.sec5?.data?.map((item: any, index: number) => {
                 return (
                   <div className='data' key={index}>
-                    <img src={isPc ? item?.icon : item?.iconmb || item?.icon} />
+                    <img
+                      src={isPc ? item?.icon : item?.iconmb || item?.icon}
+                      loading='lazy'
+                    />
                     <div className='data_text'>
                       <div
                         className='data_title'

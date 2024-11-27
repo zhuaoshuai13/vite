@@ -12,7 +12,8 @@ const Sec18 = () => {
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef<HTMLDivElement>(null)
-  const [activeIndex, setActiveIndex] = useState(0)
+  const { contextSafe } = useGSAP({ scope: wrap })
+  const [timeline, setTimeline] = useState<any>()
 
   const picArray = [
     {
@@ -41,6 +42,15 @@ const Sec18 = () => {
     }
     return window.innerHeight
   }
+
+  const handleSwitchClick = contextSafe((index: number) => {
+    gsap.to(window, {
+      scrollTo: {
+        y: timeline.scrollTrigger.labelToScroll("part" + (index + 2)),
+      },
+      ease: "power2.inOut",
+    })
+  })
 
   const sec18Ani = () => {
     const tl = gsap
@@ -261,6 +271,7 @@ const Sec18 = () => {
       animation: tl,
       toggleActions: "play none none reverse",
     })
+    setTimeline(tl)
   }
 
   const sec18AniMb = () => {
@@ -470,9 +481,9 @@ const Sec18 = () => {
         },
         "part4"
       )
-      // .to(".sec18", 1, {
-      //   ease: "power2.inOut",
-      // })
+    // .to(".sec18", 1, {
+    //   ease: "power2.inOut",
+    // })
     ScrollTrigger.create({
       trigger: wrap.current,
       start: `top ${triggerSpace()}`,
@@ -482,6 +493,7 @@ const Sec18 = () => {
       animation: tl,
       toggleActions: "play none none reverse",
     })
+    setTimeline(tl)
   }
 
   useGSAP(
@@ -492,7 +504,7 @@ const Sec18 = () => {
         sec18AniMb()
       }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc] }
   )
 
   return (
@@ -519,23 +531,16 @@ const Sec18 = () => {
         <div className='box_wrap'>
           <div className='switch_content'>
             <div className='line_wrap'>
-              <div
-                className='active_line'
-                style={{ transform: `translateY(${activeIndex * 100}%)` }}
-              ></div>
+              <div className='active_line'></div>
             </div>
             <div className='datas'>
               {config?.sec18?.data?.map((item: any, index: number) => {
                 return (
-                  <div
-                    className={`data_wrap ${
-                      index === activeIndex ? "active_data" : ""
-                    }`}
-                    key={index}
-                  >
+                  <div className={`data_wrap`} key={index}>
                     <div
                       className='data_title'
                       dangerouslySetInnerHTML={{ __html: item?.title }}
+                      onClick={() => handleSwitchClick(index)}
                     ></div>
                     <div className='tran_wrap'>
                       <p
@@ -551,12 +556,7 @@ const Sec18 = () => {
           <div className='pic_wrap equal_parent'>
             {picArray.map((item, index) => {
               return (
-                <div
-                  className={`img_wrap pic_wrap2 equal_parent ${
-                    activeIndex === index ? "active_img_wrap" : ""
-                  }`}
-                  key={index}
-                >
+                <div className={`img_wrap pic_wrap2 equal_parent`} key={index}>
                   <picture>
                     <source media='(max-width: 750px)' srcSet={item?.mb} />
                     <source media='(min-width: 751px)' srcSet={item?.pc} />

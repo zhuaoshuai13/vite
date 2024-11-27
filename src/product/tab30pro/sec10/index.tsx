@@ -11,7 +11,7 @@ import "./index.scss"
 const Sec10 = () => {
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
-  const wrap = useRef(null)
+  const wrap = useRef<HTMLDivElement>(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -65,7 +65,11 @@ const Sec10 = () => {
       })
     ScrollTrigger.create({
       trigger: ".sec10_wrap",
-      start: `top -10%`,
+      // start: `top -10%`,
+      start:
+        window.innerHeight > (wrap.current?.offsetHeight || 0)
+          ? `top ${getTriggerSpace(wrap.current, config?.navHeightPc)}`
+          : `top -10%`,
       end: "+=500%",
       pin: true,
       scrub: 0.2,
@@ -141,7 +145,7 @@ const Sec10 = () => {
         sec10AniMb()
       }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc] }
   )
 
   return (

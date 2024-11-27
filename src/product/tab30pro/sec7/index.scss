@@ -1,6 +1,8 @@
 @import '../vars';
 
 .tab30pro .sec7 {
+  background-color: #000;
+
   .sec7_wrap {
     position: relative;
   }
@@ -95,8 +97,6 @@
 
 @media (max-width: $mobwidthPx) {
   .tab30pro .sec7 {
-    background-color: #000;
-
     .content_wrap {
       justify-content: flex-end;
       height: auto;

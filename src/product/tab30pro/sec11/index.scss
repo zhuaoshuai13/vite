@@ -41,6 +41,13 @@
   .phone_wrap1 {
     margin-left: px-to-vw(200);
   }
+
+  .phone_wrap1,
+  .phone_wrap2 {
+    img {
+      height: 100%;
+    }
+  }
 }
 
 @media (max-width: $mobwidthPx) {
@@ -63,13 +70,6 @@
       gap: px-to-vw-mb(12);
       justify-content: space-between;
       width: px-to-vw-mb(731);
-    }
-
-    .phone_wrap1,
-    .phone_wrap2 {
-      img {
-        height: 100%;
-      }
     }
   }
 }

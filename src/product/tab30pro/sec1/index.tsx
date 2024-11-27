@@ -86,9 +86,9 @@ const Sec1 = () => {
 
   useGSAP(
     () => {
-      // if (isPc && window.innerHeight < 900) {
-      //   window.scrollTo(0, 125)
-      // }
+      if (isPc && window.innerHeight < 900) {
+        window.scrollTo(0, 125)
+      }
       if (isLoaded) {
         sec1Ani()
       }

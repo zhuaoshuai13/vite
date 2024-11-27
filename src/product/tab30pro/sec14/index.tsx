@@ -48,7 +48,7 @@ const Sec14 = () => {
     () => {
       sec14Ani()
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isPc] }
   )
 
   return (

@@ -1,9 +1,6 @@
-import React, { useRef, useContext } from "react"
+import { useContext } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import { useGSAP } from "@gsap/react"
 import LazyLoad from "react-lazyload"
 
 import "./index.scss"
@@ -11,8 +8,6 @@ import "./index.scss"
 const Sec2 = () => {
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
-  const wrap = useRef(null)
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
   const handlePart2Btn = () => {
     gsap.to(".fullVideo", {
@@ -20,12 +15,12 @@ const Sec2 = () => {
     })
 
     {
-      ;(document.querySelector(".fullVideo video") as HTMLVideoElement)?.play()
+      (document.querySelector(".fullVideo video") as HTMLVideoElement)?.play()
     }
   }
 
   return (
-    <section className='sec2' ref={wrap}>
+    <section className='sec2'>
       <div className='sec2_wrap'>
         <div className='video_wrap'>
           <LazyLoad offset={1000}>

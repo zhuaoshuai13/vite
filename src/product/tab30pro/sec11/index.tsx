@@ -32,7 +32,10 @@ const Sec11 = () => {
     ScrollTrigger.create({
       trigger: ".sec11_wrap",
       pin: true,
-      start: `top 0%`,
+      start:
+        window.innerHeight > (wrap.current?.offsetHeight || 0)
+          ? `top ${getTriggerSpace(wrap.current, config?.navHeightPc)}`
+          : `top 0%`,
       end: "+=150%",
       animation: tl,
       scrub: 0.2,
