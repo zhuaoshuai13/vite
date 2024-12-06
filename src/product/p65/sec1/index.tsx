@@ -14,7 +14,7 @@ const Sec1 = ({
 }: ComponentType) => {
   const container = useRef<HTMLDivElement>(null)
   const btnA = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  // const videoRef = useRef<HTMLVideoElement>(null)
   const load = UseObservable(container)
 
   useGSAP(
@@ -430,7 +430,7 @@ const Sec1 = ({
       <div className='adam'>
         <div className='video'>
           <video
-            ref={videoRef}
+            // ref={videoRef}
             className='v1'
             src={
               responsive?.md
@@ -446,7 +446,6 @@ const Sec1 = ({
             autoPlay={true}
             webkit-playsinline='true'
             playsInline={true}
-            preload='auto'
             muted
             loop={true}
           ></video>
