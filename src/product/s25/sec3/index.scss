@@ -1,0 +1,390 @@
+/* stylelint-disable at-rule-empty-line-before */
+@import "../var";
+
+#sec3 {
+  padding-top: pvw(240);
+  padding-bottom: pvw(266);
+  background-color: #fff;
+
+  .sec3 {
+    display: flex;
+    flex-direction: column;
+    gap: pvw(20);
+    justify-content: space-between;
+  }
+
+  .big {
+    position: relative;
+    z-index: 4;
+    max-width: 90%;
+    font-size: pvw(37.5);
+    font-family: "Medium";
+    line-height: 0.9;
+  }
+
+  .small {
+    position: relative;
+    z-index: 4;
+    max-width: 90%;
+    font-size: pvw(25);
+    font-family: "Book";
+    line-height: 0.9;
+  }
+
+  .com {
+    position: relative;
+    padding-top: pvw(50);
+    padding-left: pvw(50);
+    overflow: hidden;
+    background-color: #eee;
+    border-radius: pvw(20);
+    transition: border-radius 0.5s;
+
+    .mt {
+      margin-top: pvw(15);
+    }
+
+    .img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s;
+    }
+
+    &:hover {
+      border-radius: pvw(20) !important;
+
+      .img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .g1 {
+    display: flex;
+    gap: pvw(20);
+    justify-content: space-between;
+  }
+
+  .g2 {
+    display: flex;
+    gap: pvw(20);
+    justify-content: space-between;
+  }
+
+  .g3 {
+    display: flex;
+    gap: pvw(20);
+    justify-content: space-between;
+  }
+
+  .g4 {
+    display: flex;
+    flex-direction: column;
+    gap: pvw(20);
+    justify-content: space-between;
+  }
+
+  .f1 {
+    position: relative;
+    z-index: 2;
+    width: pvw(792);
+    height: pvw(533);
+    overflow: unset;
+
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      @include bg("sec3F1");
+    }
+
+    .img {
+      top: pvw(65);
+      left: pvw(77);
+      width: pvw(688);
+      height: pvw(501);
+
+      .img_inner {
+        width: 100%;
+        height: 100%;
+
+        @include bg("sec3F1Phone");
+      }
+    }
+  }
+
+  .f2 {
+    width: pvw(490);
+    height: pvw(373);
+
+    .textb {
+      margin-top: pvw(12);
+    }
+
+    .img {
+      @include bg("sec3F2");
+    }
+  }
+
+  .f3 {
+    width: pvw(490);
+    height: pvw(141);
+    padding-left: 0;
+
+    .big {
+      width: fit-content;
+      margin: auto;
+      background: linear-gradient(213.85deg, #ffac4d, #ff6b48);
+      /* stylelint-disable-next-line property-no-vendor-prefix */
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .img {
+      @include bg("sec3F3");
+    }
+  }
+
+  .f4 {
+    width: pvw(560);
+    height: pvw(368);
+    border-bottom-right-radius: pvw(200);
+
+    .img {
+      @include bg("sec3F4");
+    }
+  }
+
+  .f5 {
+    width: pvw(721);
+    height: pvw(368);
+
+    .img {
+      @include bg("sec3F5");
+    }
+  }
+
+  .f6 {
+    width: pvw(311);
+    height: pvw(360);
+
+    .img {
+      @include bg("sec3F6");
+    }
+  }
+
+  .f7 {
+    width: pvw(307);
+    height: pvw(360);
+
+    .small {
+      font-size: pvw(20);
+    }
+
+    .img {
+      @include bg("sec3F7");
+    }
+  }
+
+  .f8 {
+    width: pvw(321);
+    height: pvw(360);
+
+    .img {
+      @include bg("sec3F8");
+    }
+  }
+
+  .f9 {
+    width: pvw(303);
+    height: pvw(360);
+
+    .img {
+      @include bg("sec3F9");
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sec3 {
+    .big {
+      font-size: mvw(37.5);
+    }
+
+    .com {
+      padding-top: mvw(35);
+      padding-left: mvw(46);
+      border-radius: mvw(13);
+
+      .mt {
+        margin-top: mvw(20);
+      }
+    }
+
+    .small {
+      font-size: mvw(25);
+    }
+
+    .g1 {
+      flex-wrap: wrap;
+      gap: mvw(10);
+    }
+
+    .g2 {
+      gap: mvw(10);
+      height: mvw(504);
+    }
+
+    .g4 {
+      gap: mvw(10);
+      width: 100%;
+    }
+
+    .f1 {
+      width: 100%;
+      height: mvw(501);
+
+      .bg {
+        @include bg("sec3F1mb");
+      }
+
+      .img {
+        top: mvw(126);
+        left: mvw(46);
+        width: mvw(577);
+        height: mvw(420);
+
+        .img_inner {
+          @include bg("sec3F1Phonemb");
+        }
+      }
+    }
+
+    .f2 {
+      width: 100%;
+      height: mvw(373);
+      border-radius: mvw(13) mvw(180) mvw(13) mvw(13);
+
+      .img {
+        @include bg("sec3F2mb");
+      }
+    }
+
+    .f3 {
+      order: -1;
+      width: 100%;
+      height: mvw(141);
+      padding-top: 0;
+      padding-left: 0;
+
+      .big {
+        height: mvw(141);
+        font-size: mvw(44);
+        line-height: mvw(141);
+      }
+
+      .img {
+        @include bg("sec3F3mb");
+      }
+    }
+
+    .f4 {
+      width: mvw(320);
+      height: 100%;
+
+      .img {
+        top: unset;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: mvw(232);
+        height: mvw(321);
+        margin: auto;
+        @include bg("sec3F4mb");
+      }
+    }
+
+    .f5 {
+      width: 100%;
+      height: mvw(331);
+      border-radius: mvw(13) mvw(13) mvw(13) mvw(180);
+
+      .img {
+        @include bg("sec3F5mb");
+      }
+    }
+
+    .f8 {
+      width: 100%;
+      height: mvw(276);
+
+      .img {
+        top: mvw(145);
+        right: 0;
+        left: 0;
+        width: mvw(121);
+        height: mvw(101);
+        margin: auto;
+
+        @include bg("sec3F8mb");
+      }
+    }
+
+    .f9 {
+      flex: 1;
+      width: 100%;
+
+      .img {
+        top: mvw(118);
+        right: 0;
+        left: 0;
+        width: mvw(135);
+        height: mvw(79);
+        margin: auto;
+
+        @include bg("sec3F9mb");
+      }
+    }
+
+    .g5 {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: mvw(10);
+    }
+
+    .g3 {
+      gap: mvw(10);
+      height: mvw(360);
+    }
+
+    .f6 {
+      flex: 1;
+      height: 100%;
+
+      .img {
+        @include bg("sec3F6mb");
+      }
+    }
+
+    .f7 {
+      flex: 1;
+      height: 100%;
+
+      .small {
+        font-size: mvw(25);
+      }
+
+      .img {
+        @include bg("sec3F7mb");
+      }
+    }
+  }
+}

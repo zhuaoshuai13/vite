@@ -1,0 +1,154 @@
+/* stylelint-disable at-rule-empty-line-before */
+@import "../var";
+
+#sec20 {
+  padding: pvw(224) 0 pvw(53);
+  background-color: #f8f8f8;
+
+  .tips {
+    display: flex;
+    flex: 1;
+    gap: pvw(70);
+    justify-content: center;
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+    border-radius: pvw(20);
+
+    &.mb {
+      display: none;
+    }
+  }
+
+  .common3 {
+    display: flex;
+    gap: pvw(24);
+    align-items: center;
+
+    .desc {
+      margin-top: 0;
+    }
+  }
+
+  .logo {
+    width: pvw(55);
+    height: pvw(55);
+  }
+
+  .smile {
+    .logo {
+      @include bg("sec21Smile");
+    }
+  }
+
+  .mic {
+    .logo {
+      @include bg("sec21Mic");
+    }
+  }
+
+  .desc {
+    margin-top: pvw(45);
+  }
+
+  .content {
+    display: flex;
+    gap: pvw(40);
+    justify-content: space-between;
+    margin-top: pvw(46);
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: pvw(36);
+    justify-content: space-between;
+
+    .leftImg {
+      width: pvw(580);
+      height: pvw(830);
+
+      @include bg("sec20F1");
+    }
+  }
+
+  .rightRmg {
+    width: pvw(580);
+    height: pvw(830);
+    margin-top: pvw(58);
+
+    @include bg("sec20F2");
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sec20 {
+    padding: mvw(180) 0 mvw(150);
+
+    .tips.pc {
+      display: none;
+    }
+
+    .tips.mb {
+      display: flex !important;
+      gap: mvw(114);
+      margin-top: mvw(49);
+      padding: mvw(27) 0;
+
+      .tip {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 90%;
+      }
+
+      .desc {
+        font-size: mvw(16.67);
+      }
+    }
+
+    .common3 {
+      gap: mvw(23);
+    }
+
+    .logo {
+      width: mvw(63);
+      height: mvw(63);
+    }
+
+    .content {
+      flex-direction: column;
+      gap: mvw(49);
+    }
+
+    .desc {
+      margin-top: mvw(20);
+      font-size: mvw(20);
+    }
+
+    .rightRmg {
+      width: mvw(489);
+      height: mvw(700);
+      margin-top: mvw(43);
+
+      @include bg("sec20F1mb");
+    }
+
+    .left {
+      order: 2;
+      width: mvw(489);
+      height: mvw(700);
+      margin-left: auto;
+
+      .leftImg {
+        width: mvw(489);
+        height: mvw(700);
+        @include bg("sec20F2mb");
+      }
+
+      .tips {
+        display: none;
+      }
+    }
+  }
+}

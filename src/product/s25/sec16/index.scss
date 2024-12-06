@@ -1,0 +1,100 @@
+@import "../var";
+
+#sec16 {
+  margin-top: pvw(180);
+
+  .oneTitle {
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: pvw(1300);
+    height: pvw(595);
+    margin-top: pvw(160);
+
+    @include bg("sec16Bg");
+  }
+
+  .desc {
+    margin-top: pvw(30);
+    text-align: center;
+  }
+
+  .phone {
+    width: pvw(1158);
+    height: pvw(560);
+    margin: 0 auto;
+    margin-top: pvw(-95);
+
+    @include bg("sec16Phone");
+  }
+
+  .params {
+    display: flex;
+    gap: pvw(66);
+    justify-content: center;
+    margin-top: pvw(30);
+    text-align: center;
+  }
+
+  .big {
+    font-size: pvw(50);
+    font-family: "Medium";
+    line-height: 0.9;
+  }
+
+  .small {
+    margin-top: 0;
+    margin-top: pvw(20);
+    font-size: pvw(16.67);
+    line-height: 0.9;
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sec16 {
+    margin-top: mvw(140);
+
+    .oneTitle {
+      line-height: 1.3;
+    }
+
+    .content {
+      width: 100%;
+      height: mvw(563);
+
+      @include bg("sec16Bgmb");
+    }
+
+    .phone {
+      width: mvw(641);
+      height: mvw(364);
+      margin-top: mvw(-64);
+
+      @include bg("sec16Phonemb");
+    }
+
+    .desc {
+      margin-top: mvw(40);
+      font-size: mvw(20);
+      line-height: 1.8;
+    }
+
+    .params {
+      margin-top: mvw(35);
+    }
+
+    .big {
+      font-size: mvw(33);
+    }
+
+    .small {
+      margin-top: mvw(15);
+      font-size: mvw(16);
+      line-height: 1.7;
+    }
+  }
+}

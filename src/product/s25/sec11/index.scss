@@ -1,0 +1,142 @@
+/* stylelint-disable at-rule-empty-line-before */
+@import "../var";
+
+#sec11 {
+  height: calc(100vh - 54px);
+  margin-top: pvw(250);
+  padding-top: pvw(120);
+
+  @include bg("sec11Bg");
+
+  .sec11 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .img {
+    position: absolute;
+    bottom: 0;
+    left: pvw(980);
+    width: pvw(859);
+    height: pvw(714);
+  }
+
+  .img1 {
+    z-index: 3;
+    @include bg("sec11F1");
+  }
+
+  .img2 {
+    z-index: 4;
+    opacity: 0;
+    clip-path: inset(0 50% 0 0);
+    @include bg("sec11F2");
+  }
+
+  .img3 {
+    z-index: 5;
+    opacity: 0;
+    clip-path: inset(0 50% 0 0);
+    @include bg("sec11F1");
+  }
+
+  .info {
+    margin-top: pvw(40);
+    font-size: pvw(37.5);
+    font-family: "Book";
+    line-height: 0.9;
+  }
+
+  .desc {
+    margin-top: pvw(40);
+  }
+
+  .grouop {
+    display: flex;
+    flex-direction: column;
+    margin-top: pvw(70);
+  }
+
+  .com {
+    display: flex;
+    gap: pvw(25);
+    align-items: center;
+  }
+
+  .line {
+    width: 3px;
+    height: pvw(65);
+    background-color: #fff;
+  }
+
+  .linea {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+  }
+
+  .word {
+    color: #000;
+    font-size: pvw(37.5);
+    font-family: "Medium";
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sec11 {
+    height: calc(100vh - 60px);
+
+    @include bg("sec11Bgmb");
+
+    .img {
+      right: 0;
+      bottom: 0;
+      left: unset;
+      width: mvw(342);
+      height: mvw(584);
+    }
+
+    .img1 {
+      @include bg("sec11F2mb", true, "png");
+    }
+
+    .img2 {
+      @include bg("sec11F1mb");
+    }
+
+    .img3 {
+      @include bg("sec11F2mb", true, "png");
+    }
+
+    .sec11 {
+      padding-top: mvw(170);
+    }
+
+    .info {
+      margin-top: mvw(40);
+      font-size: mvw(33);
+    }
+
+    .desc {
+      margin-top: mvw(40);
+      font-size: mvw(20);
+    }
+
+    .grouop {
+      margin-top: mvw(150);
+    }
+
+    .com {
+      gap: mvw(25);
+    }
+
+    .line {
+      height: mvw(65);
+    }
+
+    .word {
+      font-size: mvw(33);
+    }
+  }
+}

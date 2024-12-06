@@ -1,0 +1,358 @@
+@import "../var";
+
+#sec1 {
+  .sec1_wrap {
+    position: relative;
+    height: pvw(900);
+    padding-top: pvw(50);
+
+    @include bg("sec1_bg_pc", true, "webp");
+  }
+
+  .titleBig {
+    font-size: pvw(60);
+    font-family: "Bold";
+    text-align: center;
+  }
+
+  .phone_wrap {
+    position: absolute;
+  }
+
+  .phone1 {
+    top: pvw(130);
+    left: 60.5vw;
+    width: pvw(649);
+    height: pvw(580);
+
+    @include bg("sec1_p1_pc", false);
+  }
+
+  .phone2 {
+    top: pvw(190);
+    left: 44vw;
+    width: pvw(549);
+    height: pvw(601);
+    opacity: 1;
+
+    @include bg("sec1_p2_pc", false);
+  }
+
+  .phone3 {
+    top: pvw(126);
+    left: pvw(90);
+    width: pvw(855);
+    height: pvw(617);
+    opacity: 0;
+
+    @include bg("sec1_p3_pc", false);
+  }
+
+  .content_wrap {
+    position: absolute;
+    top: pvw(700);
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 pvw(50);
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: pvw(28);
+    margin-top: pvw(60);
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .textRight {
+    display: none;
+  }
+
+  .watchText {
+    margin-bottom: pvw(10);
+    font-size: pvw(32);
+    font-family: "Bold";
+    font-style: italic;
+    text-align: right;
+  }
+
+  .logo {
+    width: pvw(136);
+    height: pvw(54);
+
+    @include bg("sec1_logo_pc", false, "png");
+  }
+
+  .data_wrap {
+    display: flex;
+    gap: pvw(16);
+    align-items: flex-end;
+
+    .data_item.mb {
+      display: none;
+    }
+
+    .data_item {
+      position: relative;
+      display: flex;
+      gap: pvw(8);
+      align-items: center;
+      padding-right: pvw(16);
+
+      &:not(:last-child):after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: block;
+        width: 2px;
+        height: pvw(27);
+        background-color: #e9798b;
+        transform: translateY(-50%);
+        content: "";
+      }
+    }
+
+    .title {
+      font-size: pvw(26);
+      font-family: "Book";
+    }
+
+    .desc {
+      margin-top: 0;
+      font-size: pvw(12);
+      font-family: "Book";
+      line-height: 1;
+    }
+  }
+
+  .icon_items {
+    display: flex;
+    gap: pvw(30);
+    align-items: center;
+    justify-content: end;
+    margin-top: -2vw;
+
+    .item {
+      &:nth-child(1) {
+        width: pvw(43);
+        height: pvw(43);
+
+        @include bg("sec1_icon2_pc", true, "webp");
+      }
+
+      &:nth-child(2) {
+        width: pvw(66);
+        height: pvw(26);
+
+        @include bg("sec1_icon4_pc", true, "webp");
+      }
+
+      &:nth-child(3) {
+        width: pvw(26);
+        height: pvw(43);
+
+        @include bg("sec1_icon3_pc", true, "webp");
+      }
+
+      &:nth-child(4) {
+        width: pvw(38);
+        height: pvw(39);
+
+        @include bg("sec1_icon5_pc", true, "webp");
+      }
+
+      &:nth-child(5) {
+        width: pvw(56);
+        height: pvw(34);
+
+        @include bg("sec1_icon6_pc", true, "webp");
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sec1 {
+    max-height: 160vw;
+
+    .sec1_wrap {
+      height: 192vw;
+      padding-top: mvw(30);
+
+      @include bg("sec1bgmb", true, "png");
+    }
+
+    .titleBig {
+      margin-left: mvw(60);
+      font-size: mvw(60);
+      text-align: left;
+    }
+
+    .left {
+      display: block;
+      margin-top: 0;
+    }
+
+    .content_wrap {
+      top: 105vw;
+      left: 0;
+      display: block;
+      padding: 0 mvw(35);
+    }
+
+    .data_item {
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+
+      &:before {
+        position: absolute;
+        top: mvw(20);
+        right: 0;
+        width: 1px;
+        height: mvw(27);
+        background-color: red;
+        content: "";
+      }
+    }
+
+    .data_wrap_right {
+      align-items: flex-end !important;
+      margin-top: mvw(20) !important;
+
+      .data_item {
+        align-items: flex-end !important;
+        text-align: right !important;
+
+        &:before {
+          right: 0;
+          left: unset;
+        }
+      }
+    }
+
+    .textRight {
+      margin-top: 20vw;
+    }
+
+    .logo {
+      width: mvw(210);
+      height: mvw(84);
+      margin-left: 62vw;
+
+      @include bg("sec1logomb", true, "png");
+    }
+
+    .data_wrap {
+      flex-direction: column;
+      gap: mvw(20);
+      align-items: flex-end;
+      margin-top: mvw(36);
+
+      .title {
+        font-size: mvw(37);
+      }
+
+      .desc {
+        font-size: mvw(16);
+        line-height: 1.2;
+      }
+
+      .pc {
+        display: none !important;
+      }
+
+      .mbline {
+        width: 1px;
+        height: mvw(27);
+        background-color: #e9798b;
+      }
+
+      .data_item {
+        gap: mvw(5);
+        align-items: flex-end;
+        padding-right: mvw(15);
+
+        &:after {
+          display: none !important;
+        }
+      }
+    }
+
+    .phone1 {
+      top: mvw(290);
+      left: mvw(330);
+      width: mvw(413);
+      height: mvw(383);
+
+      @include bg("sec1greenmb", true, "png");
+    }
+
+    .phone2 {
+      top: mvw(350);
+      left: mvw(230);
+      width: mvw(414);
+      height: mvw(497);
+
+      @include bg("sec1yellowmb", true, "png");
+    }
+
+    .phone3 {
+      top: mvw(480);
+      left: mvw(-100);
+      width: mvw(349);
+      height: mvw(563);
+
+      @include bg("sec1blackmb", true, "png");
+    }
+
+    .right {
+      position: absolute;
+      top: 80vw;
+      right: unset;
+    }
+
+    .watchText {
+      font-size: mvw(32);
+    }
+
+    .icon_items {
+      gap: mvw(30);
+      margin-top: -36.2vw;
+
+      .item {
+        &:nth-child(1) {
+          width: mvw(43);
+          height: mvw(43);
+        }
+
+        &:nth-child(2) {
+          width: mvw(66);
+          height: mvw(26);
+        }
+
+        &:nth-child(3) {
+          width: mvw(26);
+          height: mvw(43);
+        }
+
+        &:nth-child(4) {
+          width: mvw(38);
+          height: mvw(39);
+        }
+
+        &:nth-child(5) {
+          width: mvw(56);
+          height: mvw(34);
+        }
+      }
+    }
+  }
+}

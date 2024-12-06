@@ -1,0 +1,101 @@
+@import "../var";
+
+#sec6 {
+  position: relative;
+  z-index: 3;
+  height: pvw(1000);
+  min-height: 100vh;
+
+  .smallContent {
+    padding-top: pvw(100);
+  }
+
+  @include bg("sec6Bg", true, "webp");
+
+  background-position: top right;
+
+  .sec6 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .phonea {
+    position: absolute;
+    top: pvw(380);
+    z-index: 4;
+    width: pvw(1286);
+    height: pvw(390);
+
+    @include bg("sec6Phonea");
+  }
+
+  .phoneb {
+    position: absolute;
+    top: pvw(380);
+    z-index: 3;
+    width: pvw(1286);
+    height: pvw(390);
+
+    @include bg("sec6Phoneb");
+  }
+
+  .text {
+    position: absolute;
+    top: pvw(520);
+    left: 28vw;
+    z-index: 5;
+    width: pvw(729);
+    height: pvw(180);
+    opacity: 0.8;
+
+    @include bg("sec6Text", true, "png");
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sec6 {
+    height: mvw(800);
+    min-height: unset;
+
+    @include bg("sec6Bgmb");
+
+    .smallContent {
+      padding-top: mvw(60);
+    }
+
+    .desc {
+      font-size: mvw(20);
+      line-height: 1.8;
+    }
+
+    .phonea {
+      top: mvw(380);
+      right: 0;
+      width: mvw(715);
+      height: mvw(222);
+      margin: auto;
+
+      @include bg("sec6Phoneamb");
+    }
+
+    .phoneb {
+      top: mvw(380);
+      right: 0;
+      width: mvw(715);
+      height: mvw(222);
+      margin: auto;
+
+      @include bg("sec6Phonebmb");
+    }
+
+    .text {
+      top: mvw(455);
+      left: 21vw;
+      width: mvw(421);
+      height: mvw(104);
+
+      @include bg("sec6Textmb", true, "png");
+    }
+  }
+}

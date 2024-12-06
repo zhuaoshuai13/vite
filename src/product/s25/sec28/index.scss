@@ -1,0 +1,41 @@
+@import "../var";
+
+.sec28 {
+  padding-bottom: pvw(318);
+  color: #000;
+  line-height: 1.5;
+  opacity: 0.8;
+
+  .note {
+    margin-bottom: pvw(70);
+    font-size: pvw(41);
+    font-family: "Medium";
+  }
+
+  p {
+    margin-top: pvw(40);
+    margin-bottom: 0;
+    font-size: pvw(16.67);
+    white-space: nowrap;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .sec28 {
+    .note {
+      margin-bottom: mvw(100);
+      font-size: mvw(41.6);
+      line-height: 0.9;
+    }
+
+    p {
+      margin-top: mvw(38);
+      font-size: mvw(16.67);
+      line-height: 1.5;
+    }
+  }
+}

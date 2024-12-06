@@ -1,0 +1,27 @@
+$pcwidth: 19.2;
+$pcheight: 10.8;
+$mobwidth: 7.5;
+
+@function pvw($value) {
+  /* stylelint-disable-next-line at-rule-empty-line-before */
+  @return #{$value * calc(1 / $pcwidth)}vw;
+}
+
+@function mvw($value) {
+  /* stylelint-disable-next-line at-rule-empty-line-before */
+  @return #{$value * calc(1 / $mobwidth)}vw;
+}
+
+@mixin bg($url, $size: true, $type: "webp") {
+  background-image: url("/src/assets/images/#{$url}.#{$type}");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @if $size == true {
+    background-size: cover;
+  }
+
+  @if $size == false {
+    background-size: contain;
+  }
+}
