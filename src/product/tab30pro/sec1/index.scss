@@ -148,7 +148,10 @@
 
         &:not(:last-child) {
           &:after {
+            width: 1px;
             height: px-to-vw-mb(12);
+            background-color: #e9798b;
+            outline: none;
           }
         }
       }

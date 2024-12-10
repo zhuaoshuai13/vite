@@ -20,12 +20,12 @@ window.tab30proConfig = {
   sec3: {
     item1: {
       title: "Helio G99",
-      desc: "Ultimate Processor with 4G Network <br /> 6nm Octa-core Processor",
+      desc: "Ultimate Processor <br class='mb'/> with 4G Network <br /> 6nm Octa-core Processor",
     },
     item2: {
-      title: "Keyboard & Stylus",
+      title: "Keyboard <br class='pc'/> & Stylus",
       desc1: "Supports",
-      desc2: "80-key <br class='mb'/> Full-size Keyboard",
+      desc2: "80-key <br /> Full-size Keyboard",
     },
     item3: {
       title: `13" 2K`,
@@ -33,7 +33,7 @@ window.tab30proConfig = {
     },
     item4: {
       title: `10000mAh`,
-      desc: "Mega Battery 18 Hours of Non-stop Gaming*",
+      desc: "Mega Battery <br /> 18 Hours of <br /> Non-stop Gaming*",
     },
     item5: {
       title: `7mm`,
@@ -53,7 +53,7 @@ window.tab30proConfig = {
     title: "PORTABLE OFFICE <br/> INNOVATIONS",
   },
   sec5: {
-    title: "Experience Immersive Clarity",
+    title: "Experience <br class='mb'/> Immersive Clarity",
     subtitle: `13" 2K Crystal-Clear Display`,
     desc: "Unveil the brilliance of visual excellence with our display, which boasts an impressive 13'' mega display and an immersive 86% screen-to-body ratio. Dive into the sharpness of a 1920x1200 resolution, perfect for cinematic experiences or professional work.",
     data: [
@@ -102,19 +102,19 @@ window.tab30proConfig = {
   },
   sec7: {
     part1: {
-      title: "Work Smart On-The-Go",
+      title: "Work Smart <br class='mb'/> On-The-Go",
       subtitle: "Pre-Installed WPS Office",
       desc: "It comes pre-installed with genuine WPS Office, ready to use right out of the box, offering a PC-level experience that makes it easy to handle professional documents, making it your perfect mobile office companion.",
     },
     part2: {
-      title: "PC-level File Processing Efficiency Pre-Installed WPS Office",
+      title: "PC-level File <br class='mb'/> Processing Efficiency",
       subtitle: "Pre-Installed WPS Office",
-      desc: "WPS supports viewing and editing 47 types of files, including doc, xls, and ppt. Work that used to only be possible on a computer can now be done on a tablet as well.",
+      desc: "WPS supports viewing and editing 47 types of files, including doc, xls, and ppt. <br class='pc'/> Work that used to only be possible on a computer can now be done on a tablet as well.",
     },
     part3: {
       title: "Limited-time Offer",
-      subtitle: "WPS Membership Monthly Card Available for Free!*",
-      desc: "Experience a wealth of features and unparalleled office efficiency. WPS Membership Monthly Card is available, but quantities are limited, so get yours first come, first served!",
+      subtitle: "WPS Membership Monthly <br class='mb'/> Card Available for Free!*",
+      desc: "Experience a wealth of features and unparalleled office efficiency. <br class='pc'/> WPS Membership Monthly Card is available, but quantities are limited, so get yours first come, first served!",
     },
   },
   sec8: {
@@ -144,18 +144,18 @@ window.tab30proConfig = {
   },
   sec10: {
     part1: {
-      title: "Portable Productivity Master",
+      title: "Portable <br class='mb'/> Productivity Master",
       subtitle: "Supports Keyboard & Stylus",
       desc: "When coupled with the dedicated keyboard and stylus, VistaTab 30 Pro will take your productivity to new heights.",
     },
     part2: {
-      title: "Unrivaled Writing Precision",
+      title: "Unrivaled <br class='mb'/> Writing Precision",
       subtitle: "Dedicated Stylus",
       desc: `4096 levels of pressure sensitivity for a writing 
 experience as smooth as on paper. A quick 5-minute charge provides up to 10 hours of use, with the longest battery life supporting up to 4.5 days of continuous use. When not in use, it magnetically attaches to your tablet for convenient storage.*`,
     },
     part3: {
-      title: "Efficiency at <br class='pc'/> Your Fingertips",
+      title: "Efficiency at <br/> Your Fingertips",
       subtitle: "Dedicated Keyboard",
       desc: "80-key full-size keyboard for laptop-like typing efficiency. With multi-angle suspension, you can always find your comfortable position. Exclusive AI and WPS keys for one-touch activation, quickly entering a high-efficiency state. Comes with a built-in touchpad for precise touch control.",
     },
@@ -173,7 +173,7 @@ experience as smooth as on paper. A quick 5-minute charge provides up to 10 hour
     },
   },
   sec12: {
-    title: "IMMERSIVE <br/> ENTERTAINMENT & LEARNING",
+    title: "IMMERSIVE <br/> ENTERTAINMENT <br class='mb'/> & LEARNING",
   },
   sec13: {
     title: "Unleash Gaming Power",
@@ -285,7 +285,7 @@ experience as smooth as on paper. A quick 5-minute charge provides up to 10 hour
     },
     notes: "Notes",
     tips: [
-      `1.The data on screen-to-body ratio and local peak brightness are obtained from the itel lab. Actual data may vary due to factors like test environments or calculation methods, please refer to the actual product.`,
+      `1.The data on screen-to-body ratio and local peak brightness are obtained from the itel Lab. Actual data may vary due to factors like test environments or calculation methods, please refer to the actual product.`,
       `2. Battery life data such as '18 hours of gaming' and '25 hours of movies' are obtained from the itel Lab. Actual data may vary due to different test environments, long-term battery usage, and other factors. It's provided for reference only.`,
       `3. The keyboard and stylus are not included in the tablet package and need to be purchased separately.`,
       `4. The Screen size comparison data is obtained from the itel Lab. Actual data may vary due to factors like test environments or calculation methods, please refer to the actual product.`,

@@ -45,6 +45,7 @@
   .phone_wrap1,
   .phone_wrap2 {
     img {
+      width: auto;
       height: 100%;
     }
   }
@@ -60,10 +61,19 @@
       gap: px-to-vw-mb(12);
       height: px-to-vw-mb(513);
       margin-top: px-to-vw-mb(60);
+
+      // .img_wrap {
+      //   flex-shrink: unset;
+      // }
     }
 
     .phone_wrap1 {
+      width: px-to-vw-mb(670);
       margin-left: calc((100vw - var(--content-width)) / 2);
+    }
+
+    .phone_wrap2 {
+      width: px-to-vw-mb(670);
     }
 
     .pic_wrap2 {

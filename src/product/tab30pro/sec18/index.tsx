@@ -12,7 +12,7 @@ const Sec18 = () => {
   const { tab30proConfig: config, src } = window as any
   const { isPc } = useContext(ScreenContext)
   const wrap = useRef<HTMLDivElement>(null)
-  const { contextSafe } = useGSAP({ scope: wrap })
+  const { contextSafe } = useGSAP({ scope: wrap, dependencies: [isPc] })
   const [timeline, setTimeline] = useState<any>()
 
   const picArray = [
@@ -486,7 +486,7 @@ const Sec18 = () => {
     // })
     ScrollTrigger.create({
       trigger: wrap.current,
-      start: `top ${triggerSpace()}`,
+      start: `top ${config?.navHeightMb || 60}`,
       end: "+=1000",
       pin: true,
       scrub: 0.2,

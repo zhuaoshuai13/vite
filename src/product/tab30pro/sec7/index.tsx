@@ -241,7 +241,7 @@ const Sec7 = () => {
       trigger: ".sec7_wrap",
       pin: true,
       start: `top ${getTriggerSpace(wrap.current, config?.navHeightMb)}`,
-      end: "+=300%",
+      end: "+=2000",
       animation: tl,
       scrub: 0.2,
     })

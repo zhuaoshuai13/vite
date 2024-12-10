@@ -59,6 +59,7 @@ export default defineConfig({
     fs: {
       strict: false,
     },
+    host: '0.0.0.0'
   },
 })
 
