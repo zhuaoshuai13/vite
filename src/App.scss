@@ -1,16 +1,21 @@
-@font-face {
-  font-family: 'HR';
-  src: url('../src/assets/font/HurmeGeometricSans_No3_4_Regular.otf');
-}
+// @font-face {
+//   font-family: 'HR';
+//   src: url('../src/assets/font/HurmeGeometricSans_No3_4_Regular.otf');
+// }
+
+// @font-face {
+//   font-family: 'HB';
+//   src: url('../src/assets/font/HurmeGeometricSans_No3_6_Bold.otf');
+// }
+
+// @font-face {
+//   font-family: 'KT';
+//   src: url('../src/assets/font/korataki-rg.otf');
+// }
 
 @font-face {
-  font-family: 'HB';
-  src: url('../src/assets/font/HurmeGeometricSans_No3_6_Bold.otf');
-}
-
-@font-face {
-  font-family: 'KT';
-  src: url('../src/assets/font/korataki-rg.otf');
+  font-family: "DysonCHS-Book";
+  src: url('./assets/dyson_ear571h/fonts/DysonCHS-Book.woff2');
 }
 
 html.lenis, html.lenis body {

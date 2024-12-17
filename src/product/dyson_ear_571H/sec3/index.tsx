@@ -1,0 +1,234 @@
+import { useRef, useContext } from "react"
+import { ScreenContext } from "../../../provider"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { useGSAP } from "@gsap/react"
+
+import "./index.scss"
+
+const Sec3 = () => {
+  const wrap = useRef(null)
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+  const sec3Ani = () => {
+    const tl = gsap
+      .timeline()
+      .from(
+        ".sec3 .part1 .pdp_title",
+        {
+          opacity: 0,
+          y: 100,
+          ease: "power2.inOut",
+          duration: 1,
+        },
+        "a"
+      )
+      .from(
+        ".sec3 .part1 .desc_wrap",
+        {
+          opacity: 0,
+          y: 100,
+          ease: "power2.inOut",
+          duration: 1,
+          delay: 0.2,
+        },
+        "a"
+      )
+      .from(
+        ".sec3 .switch_box",
+        {
+          opacity: 0,
+          y: 100,
+          ease: "power2.inOut",
+          duration: 1,
+          delay: 0.4,
+        },
+        "a"
+      )
+
+    ScrollTrigger.create({
+      trigger: ".sec3_wrap .part1",
+      start: `top 75%`,
+      animation: tl,
+      toggleActions: "play none none reverse",
+    })
+
+    const tl2 = gsap
+      .timeline()
+      .to(
+        ".sec3 .part1",
+        {
+          ease: "power2.inOut",
+          duration: 1,
+        },
+      )
+      .to(
+        ".sec3 .part1",
+        {
+          opacity: 0,
+          y: "-100%",
+          ease: "power2.inOut",
+          duration: 1,
+        },
+        "a"
+      )
+      .to(
+        ".sec3 .part2",
+        {
+          opacity: 1,
+          y: "",
+          ease: "power2.inOut",
+          duration: 1,
+        },
+        "a"
+      )
+      .from(
+        ".sec3 .part2 .pdp_title",
+        {
+          opacity: 0,
+          y: 100,
+          ease: "power2.inOut",
+          duration: 1,
+        },
+        "a"
+      )
+      .from(
+        ".sec3 .part2 .pdp_desc",
+        {
+          opacity: 0,
+          y: 100,
+          ease: "power2.inOut",
+          duration: 1,
+          delay: 0.2,
+        },
+        "a"
+      )
+      .from(
+        ".sec3 .part2 .action_wrap",
+        {
+          opacity: 0,
+          y: 100,
+          ease: "power2.inOut",
+          duration: 1,
+          delay: 0.4,
+        },
+        "a"
+      )
+
+    ScrollTrigger.create({
+      trigger: ".sec3_wrap",
+      start: `top 0%`,
+      end: "+=150%",
+      animation: tl2,
+      toggleActions: "play none none reverse",
+      pin: true,
+    })
+
+    // const tl3 = gsap
+    //   .timeline()
+    //   .from(
+    //     ".sec3 .part2 .pdp_title",
+    //     {
+    //       opacity: 0,
+    //       y: 100,
+    //       ease: "power2.inOut",
+    //       duration: 1,
+    //     },
+    //     "a"
+    //   )
+    //   .from(
+    //     ".sec3 .part2 .pdp_desc",
+    //     {
+    //       opacity: 0,
+    //       y: 100,
+    //       ease: "power2.inOut",
+    //       duration: 1,
+    //       delay: 0.2,
+    //     },
+    //     "a"
+    //   )
+    //   .from(
+    //     ".sec3 .part2 .action_wrap",
+    //     {
+    //       opacity: 0,
+    //       y: 100,
+    //       ease: "power2.inOut",
+    //       duration: 1,
+    //       delay: 0.4,
+    //     },
+    //     "a"
+    //   )
+
+    // ScrollTrigger.create({
+    //   trigger: ".sec3_wrap .part2",
+    //   start: `top 100%`,
+    //   animation: tl3,
+    //   toggleActions: "play none none reverse",
+    // })
+  }
+  useGSAP(
+    () => {
+      sec3Ani()
+    }
+    // { scope: wrap }
+  )
+
+  return (
+    <section className='sec3' ref={wrap}>
+      <div className='sec3_wrap'>
+        <div className='part part1'>
+          <h3 className='pdp_title'>先进降噪，声临其境</h3>
+          <div className='desc_wrap'>
+            <p className='pdp_desc'>
+              8 个主动降噪麦克风，
+              <br /> 高达 40 分贝降噪深度。
+            </p>
+            <p className='pdp_desc'>
+              戴森双麦克风波束成型技术，
+              <br /> 嘈杂中精准捕声，通话更清晰。
+            </p>
+          </div>
+          <div className='switch_box'>
+            <div className='double_click img_wrap'>
+              <img src='/src/assets/dyson_ear571h/images/double_click.gif' />
+            </div>
+            <p className='pdp_desc'>
+              双击切换 <br />
+              通透模式 / 沉浸模式
+            </p>
+          </div>
+        </div>
+        <div className='part part2'>
+          <h3 className='pdp_title'>非同凡响的现场级音质</h3>
+          <p className='pdp_desc'>
+            戴森采用尖端 DSP 技术，突破频率界限，6Hz 至 <br />
+            21kHz音频细腻呈现，音质卓越，完美适配各类音乐风格。
+          </p>
+          <div className='action_wrap'>
+            <div className='action_box'>
+              <button className=''>
+                <div className='play_icon img_wrap'>
+                  <img src='/src/assets/dyson_ear571h/images/play_icon.png' />
+                </div>
+                <div className='icon_desc'>PLAY</div>
+              </button>
+              <div className='btn_desc'>试听宽广音域表现</div>
+            </div>
+            <div className='action_box'>
+              <a href="music://geo.itunes.apple.com/albums/album/%E4%B8%83%E9%87%8C%E9%A6%99/536114662?i=536115195">
+              <button className=''>
+                <div className='link_icon img_wrap'>
+                  <img src='/src/assets/dyson_ear571h/images/link_icon.png' />
+                </div>
+              </button>
+              </a>
+              <div className='btn_desc'>试听歌单歌曲</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Sec3

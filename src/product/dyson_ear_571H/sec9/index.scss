@@ -1,0 +1,26 @@
+@import '../vars';
+
+.ear571h .sec9 {
+  .sec9_wrap {
+    height: 100vh;
+  }
+
+  .content_wrap {
+    display: flex;
+    gap: px-to-vw(45);
+    height: 100%;
+  }
+
+  .text_wrap {
+    margin: px-to-vw(170) 0 0 px-to-vw(100);
+  }
+
+  .pdp_desc {
+    margin-top: px-to-vw(8);
+  }
+
+  .img_wrap {
+    flex-shrink: 0;
+    width: px-to-vw(583);
+  }
+}

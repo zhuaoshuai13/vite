@@ -1,0 +1,30 @@
+@import '../vars';
+
+.ear571h .sec7 {
+  .sec7_wrap {
+    position: relative;
+    height: 100vh;
+    padding-top: px-to-vw(100);
+  }
+
+  .pic_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .img_wrap {
+      position: absolute;
+      top: 50%;
+      right: px-to-vw(50);
+      width: px-to-vw(490);
+      transform: translateY(-50%);
+    }
+  }
+
+  .text_wrap {
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+}

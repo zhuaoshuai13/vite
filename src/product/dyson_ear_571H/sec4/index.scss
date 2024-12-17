@@ -1,0 +1,18 @@
+@import '../vars';
+
+.ear571h .sec4 {
+  height: 100vh;
+
+  .sec4_wrap {
+    position: relative;
+  }
+
+  .text_wrap {
+    position: absolute;
+    top: px-to-vw(80);
+    right: 0;
+    left: 0;
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+}

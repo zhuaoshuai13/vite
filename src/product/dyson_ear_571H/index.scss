@@ -1,0 +1,61 @@
+@import "./vars";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.ear571h {
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  color: #000;
+  font-family: "DysonCHS-Book";
+  line-height: initial;
+  background-color: #fff;
+  background-image: none !important;
+
+  --content-width: calc(976vw / 11.8);
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "DysonCHS-Book";
+  }
+
+  section {
+    overflow: hidden;
+  }
+
+  button {
+    background-color: unset;
+    border: unset;
+  }
+
+  .img_wrap {
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .pdp_title {
+    margin: 0;
+    font-size: px-to-vw(40);
+    line-height: 1.3;
+  }
+
+  .pdp_desc {
+    font-size: px-to-vw(21);
+    line-height: 1.28;
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .ear571h {
+    --content-width: calc(670vw / 7.5);
+  }
+}

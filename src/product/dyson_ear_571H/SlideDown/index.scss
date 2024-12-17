@@ -1,0 +1,40 @@
+@import '../vars';
+
+.ear571h .slide_down {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  transform: translateX(-50%);
+
+  .hand_icon {
+    flex-shrink: 0;
+    width: px-to-vw(42);
+    animation: slidemove 3s infinite cubic-bezier(.65, .05, .36, 1) alternate;
+  }
+
+  p {
+    color: #fff;
+    font-size: px-to-vw(18);
+    writing-mode: vertical-lr;
+  }
+
+  @keyframes slidemove {
+    0% {
+      transform: translateY(0);
+    }
+
+    10% {
+      transform: translateY(0);
+    }
+
+    90% {
+      transform: translateY(px-to-vw(80));
+    }
+
+    100% {
+      transform: translateY(px-to-vw(80));
+    }
+  }
+}

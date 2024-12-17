@@ -1,0 +1,40 @@
+@import '../vars';
+
+.ear571h .sec8 {
+  .sec8_wrap {
+    position: relative;
+    height: 100vh;
+    padding-top: px-to-vw(188);
+  }
+
+  .content_wrap {
+    margin: 0 px-to-vw(100) 0 px-to-vw(600);
+  }
+
+  .img_wrap1 {
+    position: absolute;
+    top: px-to-vw(80);
+    left: px-to-vw(-100);
+    width: px-to-vw(569);
+  }
+
+  .code_wrap {
+    display: flex;
+    gap: px-to-vw(16);
+    align-items: center;
+    width: fit-content;
+    margin-top: px-to-vw(40);
+    padding: px-to-vw(16);
+    border: 1px solid #d3d3d3;
+  }
+
+  .img_wrap2 {
+    width: px-to-vw(146);
+  }
+
+  .line {
+    width: 1px;
+    height: px-to-vw(113);
+    background-color: #d3d3d3;
+  }
+}
