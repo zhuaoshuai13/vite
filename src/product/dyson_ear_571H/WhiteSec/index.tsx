@@ -6,6 +6,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
 import UseImagesLoad from "../../../hooks/useImagesLoad"
 import Sec4 from "../sec4"
+import Sec5 from "../sec5"
 import Sec6 from "../sec6"
 import Sec7 from "../sec7"
 import Sec8 from "../sec8"
@@ -18,6 +19,7 @@ const BlackSec = () => {
   return (
     <div className='white_wrap'>
       <Sec4 />
+      <Sec5 />
       <Sec6 />
       <Sec7 />
       <Sec8 />

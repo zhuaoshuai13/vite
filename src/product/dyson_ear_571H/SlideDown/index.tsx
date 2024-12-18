@@ -18,7 +18,10 @@ const SlideDown = () => {
         <div className='img_wrap hand_icon'>
           <img src='/src/assets/dyson_ear571h/images/slide_down.png' />
         </div>
-        <p>向下滑动</p>
+        <p>
+          开启 <br /> OnTrac™ <br />
+          音乐之旅
+        </p>
       </div>
     )
   )

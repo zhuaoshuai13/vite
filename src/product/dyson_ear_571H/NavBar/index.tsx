@@ -9,10 +9,8 @@ import { useScroll, useScrollView } from "../hooks/useScroll"
 
 import "./index.scss"
 
-const NavBar = ({ inViewIdList }) => {
-  console.log("🚀 ~ NavBar ~ inViewIdList:", inViewIdList)
+const NavBar = ({ inViewIdList }: { inViewIdList: number[] }) => {
   const { scrollPosition } = useScroll()
-  // const sectionIds = ["nav_link_0", "nav_link_1", "nav_link_2"]
   const navList = [
     { text: "试听体验", link: "nav_link_0" },
     { text: "个性化", link: "nav_link_1" },

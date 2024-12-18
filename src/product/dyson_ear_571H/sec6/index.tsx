@@ -1,14 +1,11 @@
-import { useContext, useRef, useEffect, useState } from "react"
-import { ScreenContext } from "../../../provider"
+import { useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
 
 const Sec6 = () => {
-  const { isPc } = useContext(ScreenContext)
   const wrap = useRef(null)
   const sec6_wrap = useRef<HTMLDivElement>(null)
   const isPausedRef = useRef(false)
@@ -58,6 +55,15 @@ const Sec6 = () => {
               <img src='/src/assets/dyson_ear571h/images/sec6_f3.png' />
             </div>
             <div className='img_wrap'>
+              <img src='/src/assets/dyson_ear571h/images/sec6_f4.png' />
+            </div>
+            <div className='img_wrap'>
+              <img src='/src/assets/dyson_ear571h/images/sec6_f5.png' />
+            </div>
+            <div className='img_wrap'>
+              <img src='/src/assets/dyson_ear571h/images/sec6_f6.png' />
+            </div>
+            <div className='img_wrap'>
               <img src='/src/assets/dyson_ear571h/images/sec6_f1.png' />
             </div>
             <div className='img_wrap'>
@@ -65,6 +71,15 @@ const Sec6 = () => {
             </div>
             <div className='img_wrap'>
               <img src='/src/assets/dyson_ear571h/images/sec6_f3.png' />
+            </div>
+            <div className='img_wrap'>
+              <img src='/src/assets/dyson_ear571h/images/sec6_f4.png' />
+            </div>
+            <div className='img_wrap'>
+              <img src='/src/assets/dyson_ear571h/images/sec6_f5.png' />
+            </div>
+            <div className='img_wrap'>
+              <img src='/src/assets/dyson_ear571h/images/sec6_f6.png' />
             </div>
           </div>
         </div>

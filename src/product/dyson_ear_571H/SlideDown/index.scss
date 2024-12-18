@@ -17,7 +17,6 @@
   p {
     color: #fff;
     font-size: px-to-vw(18);
-    writing-mode: vertical-lr;
   }
 
   @keyframes slidemove {
@@ -30,11 +29,11 @@
     }
 
     90% {
-      transform: translateY(px-to-vw(80));
+      transform: translateY(px-to-vw(60));
     }
 
     100% {
-      transform: translateY(px-to-vw(80));
+      transform: translateY(px-to-vw(60));
     }
   }
 }

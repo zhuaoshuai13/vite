@@ -2,14 +2,77 @@ import { useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
 
 const Sec8 = () => {
-  const { ear571hConfig: config, src } = window as any
   const wrap = useRef(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+
+  const sec8Ani = () => {
+      const tl = gsap
+        .timeline()
+        .from(
+          ".pdp_title",
+          {
+            y: 200,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.inOut",
+          },
+          "a"
+        )
+        .from(
+          ".text_wrap > .pdp_desc",
+          {
+            y: 200,
+            opacity: 0,
+            duration: 1,
+            delay: .2,
+            ease: "power2.inOut",
+          },
+          "a"
+        )
+        .from(
+          ".code_wrap",
+          {
+            y: 200,
+            opacity: 0,
+            duration: 1,
+            delay: .4,
+            ease: "power2.inOut",
+          },
+          "a"
+        )
+        .from(
+          ".img_wrap1",
+          {
+            y: 400,
+            opacity: 0,
+            duration: 1,
+            delay: .4,
+            ease: "power2.inOut",
+          },
+          "a"
+        )
+      ScrollTrigger.create({
+        trigger: wrap.current,
+        scrub: 1,
+        start: "top 100%",
+        end: "+=100%",
+        animation: tl,
+        toggleActions: "play none none reverse",
+      })
+    }
+  
+    useGSAP(
+      () => {
+        sec8Ani()
+      },
+      { scope: wrap }
+    )
 
   return (
     <section className='sec8' ref={wrap}>

@@ -1,14 +1,9 @@
 @import '../vars';
 
 .ear571h .sec10 {
-  .sec10_wrap {
-    height: 100vh;
-  }
-
   .content_wrap {
     display: flex;
     gap: px-to-vw(45);
-    height: 100%;
   }
 
   .text_wrap {
@@ -21,6 +16,7 @@
 
   .img_wrap {
     flex-shrink: 0;
-    width: px-to-vw(583);
+    width: px-to-vw(580);
+    height: px-to-vw(776);
   }
 }

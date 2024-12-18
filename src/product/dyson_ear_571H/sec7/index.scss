@@ -3,7 +3,7 @@
 .ear571h .sec7 {
   .sec7_wrap {
     position: relative;
-    height: 100vh;
+    height: px-to-vw(776);
     padding-top: px-to-vw(100);
   }
 
@@ -17,14 +17,20 @@
     .img_wrap {
       position: absolute;
       top: 50%;
-      right: px-to-vw(50);
-      width: px-to-vw(490);
+      right: px-to-vw(48);
+      width: px-to-vw(569);
       transform: translateY(-50%);
     }
   }
 
   .text_wrap {
+    position: relative;
+    z-index: 1;
     max-width: var(--content-width);
     margin: 0 auto;
+
+    .pdp_desc {
+      margin-top: px-to-vw(8);
+    }
   }
 }
