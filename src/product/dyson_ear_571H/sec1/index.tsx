@@ -47,7 +47,7 @@ const Sec1 = () => {
       <div className='sec1_wrap'>
         <video
           className='sec1_video'
-          src='/src/assets/dyson_ear571h/videos/sec1.mp4'
+          src={src + '/videos/sec1.mp4'}
           autoPlay
           muted
           loop

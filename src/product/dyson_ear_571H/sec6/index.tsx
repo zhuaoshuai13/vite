@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
 
@@ -9,6 +10,7 @@ const Sec6 = () => {
   const wrap = useRef(null)
   const sec6_wrap = useRef<HTMLDivElement>(null)
   const isPausedRef = useRef(false)
+  const { ear571hConfig: config, src } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -36,6 +38,36 @@ const Sec6 = () => {
     return () => cancelAnimationFrame(scroll) // 清理滚动
   }, [])
 
+
+   const sec6Ani = () => {
+      const tl = gsap
+        .timeline()
+        .from(
+          ".img_container",
+          {
+            opacity: 0,
+            y: 100,
+            ease: "power2.inOut",
+            duration: 1,
+          },
+          "a"
+        )
+      ScrollTrigger.create({
+        trigger: wrap.current,
+        scrub: 1,
+        start: "top 90%",
+        end: "+=80%",
+        animation: tl,
+        toggleActions: "play none none reverse",
+      })
+    }
+    useGSAP(
+      () => {
+        sec6Ani()
+      },
+      { scope: wrap }
+    )
+
   return (
     <section className='sec6' ref={wrap}>
       <div className='sec6_wrap' ref={sec6_wrap}>
@@ -46,40 +78,40 @@ const Sec6 = () => {
         >
           <div className='img_box' ref={trackRef}>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f1.png' />
+              <img src={src + "/images/sec6_f1.png"} />
             </div>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f2.png' />
+              <img src={src + "/images/sec6_f2.png"} />
             </div>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f3.png' />
+              <img src={src + "/images/sec6_f3.png"} />
             </div>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f4.png' />
+              <img src={src + "/images/sec6_f4.png"} />
             </div>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f5.png' />
+              <img src={src + "/images/sec6_f5.png"} />
             </div>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f6.png' />
+              <img src={src + "/images/sec6_f6.png"} />
             </div>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f1.png' />
+              <img src={src + "/images/sec6_f1.png"} />
             </div>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f2.png' />
+              <img src={src + "/images/sec6_f2.png"} />
             </div>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f3.png' />
+              <img src={src + "/images/sec6_f3.png"} />
             </div>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f4.png' />
+              <img src={src + "/images/sec6_f4.png"} />
             </div>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f5.png' />
+              <img src={src + "/images/sec6_f5.png"} />
             </div>
             <div className='img_wrap'>
-              <img src='/src/assets/dyson_ear571h/images/sec6_f6.png' />
+              <img src={src + "/images/sec6_f6.png"} />
             </div>
           </div>
         </div>

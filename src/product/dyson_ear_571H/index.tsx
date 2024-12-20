@@ -14,6 +14,7 @@ import "./index.scss"
 
 const Ear571H = () => {
   const wrap = useRef(null)
+  const [showSlideDown, setShowSlideDown] = useState(true)
   const [isWhite, setIsWhite] = useState(false)
   const [isBottom, setIsBottom] = useState(false)
   const linkEleList = ["#nav_link_0", "#nav_link_1", "#nav_link_2"]
@@ -35,8 +36,17 @@ const Ear571H = () => {
 
   useEffect(() => {
     const myElement = document.querySelector(".white_wrap")
+    const sec2Element = document.querySelector(".sec2")
     const bottomElement = document.querySelector(".sec10")
     window.addEventListener("scroll", () => {
+      if (
+        sec2Element &&
+        sec2Element.getBoundingClientRect().top < window.innerHeight / 2
+      ) {
+        setShowSlideDown(false)
+      } else {
+        setShowSlideDown(true)
+      }
       if (myElement && isElementScrolledPastViewport(myElement)) {
         setIsWhite(true)
       } else {
@@ -71,7 +81,7 @@ const Ear571H = () => {
         <BlackSec />
         <WhiteSec />
         <NavBar inViewIdList={inViewIdList} />
-        <SlideDown />
+        <SlideDown showSlideDown={showSlideDown} />
         <BackTop isBottom={isBottom} />
       </div>
     </ReactLenis>

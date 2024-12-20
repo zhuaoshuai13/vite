@@ -1,5 +1,4 @@
-import { useRef, useContext } from "react"
-import { ScreenContext } from "../../../provider"
+import { useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
@@ -9,7 +8,6 @@ import "./index.scss"
 
 const Sec2 = () => {
   const { ear571hConfig: config, src } = window as any
-  const { isPc } = useContext(ScreenContext)
   const wrap = useRef<HTMLDivElement>(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -62,7 +60,7 @@ const Sec2 = () => {
             <div className='img_wrap'>
               <img
                 loading='lazy'
-                src='/src/assets/dyson_ear571h/images/sec2_f1.png'
+                src={src + '/images/sec2_f1.png'}
               />
             </div>
             <div className='text_wrap'>
@@ -76,7 +74,7 @@ const Sec2 = () => {
             <div className='img_wrap'>
               <img
                 loading='lazy'
-                src='/src/assets/dyson_ear571h/images/sec2_f2.png'
+                src={src + '/images/sec2_f2.png'}
               />
             </div>
             <div className='text_wrap'>
@@ -89,7 +87,7 @@ const Sec2 = () => {
             <div className='img_wrap'>
               <img
                 loading='lazy'
-                src='/src/assets/dyson_ear571h/images/sec2_f3.png'
+                src={src + '/images/sec2_f3.png'}
               />
             </div>
             <div className='text_wrap'>

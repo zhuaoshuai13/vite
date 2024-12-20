@@ -20,7 +20,7 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           if (assetInfo.name.endsWith(".css")) {
             return `css/[name][extname]`
-          } else if (assetInfo.name.endsWith(".otf")) {
+          } else if (assetInfo.name.endsWith(".woff2")) {
             return "fonts/[name].[ext]"
           } else if (
             assetInfo.name.endsWith(".jpg") ||
@@ -36,15 +36,19 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: "src/product/tab30pro/config.js",
+              src: "src/assets/dyson_ear571h/*.js",
               dest: "dist/js",
             },
             {
-              src: "src/assets/tab30pro/images/*",
+              src: "src/assets/dyson_ear571h/*.css",
+              dest: "dist/css",
+            },
+            {
+              src: "src/assets/dyson_ear571h/images/*",
               dest: "dist/images",
             },
             {
-              src: "src/assets/tab30pro/videos/*",
+              src: "src/assets/dyson_ear571h/videos/*",
               dest: "dist/videos",
             },
           ],
@@ -61,10 +65,12 @@ export default defineConfig({
     },
     host: '0.0.0.0',
     proxy: {
-      "/rest": {
-        target: "https://cnm2wwwuat.dyson.cn",
+      "/picker": {
+        // target: "https://cnm2wwwuat.dyson.cn",
+        target: "https://dysondev.mez100.com.cn",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/rest/, ""),
+        secure: false,
+        // rewrite: (path) => path.replace(/^\/rest/, ""),
       },
     },
   },

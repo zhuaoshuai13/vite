@@ -9,6 +9,7 @@ import "./index.scss"
 const Sec9 = () => {
   const wrap = useRef<HTMLDivElement>(null)
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+  const { ear571hConfig: config, src } = window as any
 
   const sec9Ani = () => {
     const tl = gsap
@@ -90,7 +91,7 @@ const Sec9 = () => {
   )
 
   // 防止移动端上下滑动时 触发高度变化导致动画重新开始
-  ScrollTrigger.config({ ignoreMobileResize: true })
+  ScrollTrigger.config({ ignoreMobileResize: true, autoRefreshEvents: "DOMContentLoaded,load,resize" })
 
   return (
     <section className='sec9'>
@@ -106,7 +107,7 @@ const Sec9 = () => {
             </p>
           </div>
           <div className='img_wrap'>
-            <img src='/src/assets/dyson_ear571h/images/sec9.jpg' />
+            <img src={src + '/images/sec9.jpg'} />
           </div>
         </div>
       </div>

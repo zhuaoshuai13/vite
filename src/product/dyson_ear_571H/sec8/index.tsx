@@ -8,6 +8,7 @@ import "./index.scss"
 
 const Sec8 = () => {
   const wrap = useRef(null)
+  const { ear571hConfig: config, src } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -78,7 +79,7 @@ const Sec8 = () => {
     <section className='sec8' ref={wrap}>
       <div className='sec8_wrap'>
         <div className='img_wrap img_wrap1'>
-          <img src='/src/assets/dyson_ear571h/images/sec8_f1.jpg' />
+          <img src={src + '/images/sec8_f1.jpg'} />
         </div>
         <div className='content_wrap'>
           <div className='text_wrap'>
@@ -90,7 +91,7 @@ const Sec8 = () => {
           </div>
           <div className='code_wrap'>
             <div className='img_wrap img_wrap2'>
-              <img src='/src/assets/dyson_ear571h/images/sec8_f2.png' />
+              <img src={src + '/images/sec8_f2.png'} />
             </div>
             <div className="line"></div>
             <p className='pdp_desc'>

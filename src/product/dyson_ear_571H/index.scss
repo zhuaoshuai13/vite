@@ -1,5 +1,9 @@
 @import "./vars";
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -24,9 +28,9 @@
     font-family: "DysonCHS-Book";
   }
 
-  section {
-    overflow: hidden;
-  }
+  // section {
+  //   overflow: hidden;
+  // }
 
   button {
     background-color: unset;

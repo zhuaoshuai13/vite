@@ -10,6 +10,7 @@ import "./index.scss"
 const Sec10 = () => {
   const wrap = useRef<HTMLDivElement>(null)
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+  const { ear571hConfig: config, src } = window as any
 
   const sec10Ani = () => {
     const tl = gsap
@@ -57,8 +58,9 @@ const Sec10 = () => {
     ScrollTrigger.create({
       trigger: wrap.current,
       scrub: 1,
-      start: "top 90%",
-      end: "+=80%",
+      start: "top 100%",
+      // end: "+=80%",
+      end: `+=${wrap.current?.clientHeight}`,
       animation: tl,
       toggleActions: "play none none reverse",
     })
@@ -76,7 +78,7 @@ const Sec10 = () => {
       <div className='sec10_wrap' ref={wrap}>
         <div className='content_wrap'>
           <div className='img_wrap'>
-            <img src='/src/assets/dyson_ear571h/images/sec10.jpg' />
+            <img src={src + '/images/sec10.jpg'} />
           </div>
           <div className='text_wrap'>
             <h3 className='pdp_title'>
