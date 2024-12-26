@@ -1,90 +1,107 @@
-import { useRef, useEffect, useState } from "react"
+import { useRef, useEffect, useState, useCallback } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
 import { ReactLenis } from "lenis/react"
+import ReactFullpage from "@fullpage/react-fullpage"
 
-import BlackSec from "./BlackSec"
-import WhiteSec from "./WhiteSec"
 import NavBar from "./NavBar"
 import SlideDown from "./SlideDown"
 import BackTop from "./BackTop"
 import "./index.scss"
-
+import Sec1 from "./sec1"
+import Sec2 from "./sec2"
+import Sec3 from "./sec3"
+import Sec4 from "./sec4"
+import Sec5 from "./sec5"
+import Sec6 from "./sec6"
+import Sec7 from "./sec7"
+import Sec8 from "./sec8"
+import Sec9 from "./sec9"
+import Sec10 from "./sec10"
 const Ear571H = () => {
   const wrap = useRef(null)
-  const [showSlideDown, setShowSlideDown] = useState(true)
-  const [isWhite, setIsWhite] = useState(false)
-  const [isBottom, setIsBottom] = useState(false)
-  const linkEleList = ["#nav_link_0", "#nav_link_1", "#nav_link_2"]
-  const [inViewIdList, setInViewIdList] = useState<number[]>([])
+  const [isload, setIsload] = useState(true)
+  const [destination, setDestination] = useState()
+  const { src } = window as any
+  const [scrollTop, setScrollTop] = useState(0)
+  const [toBottomDistance, setToBottomDistance] = useState(window.innerHeight)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
-  const isElementScrolledPastViewport = (element: Element): boolean => {
-    const rect = element.getBoundingClientRect()
-    return rect.top < window.innerHeight - 100
-  }
-
-  useGSAP(
-    () => {
-      // specSecAni()
-    },
-    { scope: wrap }
-  )
-
   useEffect(() => {
-    const myElement = document.querySelector(".white_wrap")
-    const sec2Element = document.querySelector(".sec2")
-    const bottomElement = document.querySelector(".sec10")
-    window.addEventListener("scroll", () => {
-      if (
-        sec2Element &&
-        sec2Element.getBoundingClientRect().top < window.innerHeight / 2
-      ) {
-        setShowSlideDown(false)
-      } else {
-        setShowSlideDown(true)
-      }
-      if (myElement && isElementScrolledPastViewport(myElement)) {
-        setIsWhite(true)
-      } else {
-        setIsWhite(false)
-      }
-      if (bottomElement && isElementScrolledPastViewport(bottomElement)) {
-        setIsBottom(true)
-      } else {
-        setIsBottom(false)
-      }
-      linkEleList.map((item) => {
-        const linkItem = document.querySelector(item)
-        if (
-          linkItem &&
-          linkItem?.getBoundingClientRect().top < window.innerHeight
-        ) {
-          setInViewIdList((prev) => [
-            ...new Set([...prev, Number(item.split("_")[2])]),
-          ])
-        } else {
-          setInViewIdList((prev) =>
-            prev.filter((id) => id !== Number(item.split("_")[2]))
+    if (isload) {
+      document
+        .querySelector(".bottom_part .fp-overflow")
+        ?.addEventListener("scroll", (e) => {
+          setScrollTop(e.target.scrollTop)
+          setToBottomDistance(
+            e.target.scrollHeight - e.target.scrollTop - window.innerHeight
           )
-        }
-      })
-    })
+        })
+    }
+  }, [isload])
+
+  const handleTouchMove = useCallback((e) => {
+    e.preventDefault() // 阻止默认行为
   }, [])
 
+  useEffect(() => {
+    if (destination?.index < 7) {
+      document.addEventListener("touchmove", handleTouchMove, {
+        passive: false,
+      })
+    } else {
+      document.removeEventListener("touchmove", handleTouchMove)
+    }
+  }, [destination])
+
   return (
-    <ReactLenis root>
-      <div className={`ear571h ${isWhite ? "is_white" : ""}`} ref={wrap}>
-        <BlackSec />
-        <WhiteSec />
-        <NavBar inViewIdList={inViewIdList} />
-        <SlideDown showSlideDown={showSlideDown} />
-        <BackTop isBottom={isBottom} />
-      </div>
-    </ReactLenis>
+    <div className={`ear571h`} ref={wrap}>
+      <NavBar destination={destination} />
+      {!destination?.index ? <SlideDown /> : null}
+      {destination?.index == 7 &&
+        toBottomDistance < window.innerHeight * 0.5 && <BackTop />}
+      {destination?.index < 5 && (
+        <div
+          className={`sec3_video_wrap ${
+            destination?.index == 2 || destination?.index == 3 ? "active" : ""
+          } ${destination?.index > 3 ? "slide-up" : ""} ${
+            destination?.index < 2 ? "slide-down" : ""
+          }`}
+        >
+          <video src={src + "/video/s/e/sec3.mp4"} autoPlay muted loop></video>
+        </div>
+      )}
+      <ReactFullpage
+        licenseKey={"YOUR_KEY_HERE"}
+        scrollingSpeed={500}
+        afterRender={() => setIsload(false)}
+        onLeave={(origin, destination, direction) =>
+          setDestination(destination)
+        }
+        render={({ state, fullpageApi }) => {
+          return (
+            <ReactFullpage.Wrapper>
+              <Sec1 />
+              <Sec2 isload={isload} destination={destination} />
+              <Sec3 isload={isload} destination={destination} />
+              <Sec4 isload={isload} destination={destination} />
+              <Sec5 />
+              <Sec6 />
+              <section className='section bottom_part'>
+                <div id='nav_link_2' style={{ height: "200vh" }}></div>
+                <Sec8 isload={isload} destination={destination} />
+                <Sec9 isload={isload} destination={destination} />
+                <Sec10 isload={isload} destination={destination} />
+              </section>
+            </ReactFullpage.Wrapper>
+          )
+        }}
+      />
+      <Sec7 isload={isload} destination={destination} scrollTop={scrollTop} />
+    </div>
   )
 }
 

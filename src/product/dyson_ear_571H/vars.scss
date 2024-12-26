@@ -1,6 +1,5 @@
 $pcwidth: 11.8;
 $mobwidth: 7.5;
-$mobwidthPx: 750px;
 
 @mixin position {
   position: absolute;
@@ -11,19 +10,6 @@ $mobwidthPx: 750px;
 
 @mixin fontsize($fontSize) {
   font-size: calc(#{$fontSize} * (1 / $pcwidth) * 1vw);
-}
-
-@mixin bg($url, $size: true) {
-  background-image: url("../../../../src/assets/ear571h/images/#{$url}");
-  background-repeat: no-repeat;
-
-  @if $size ==true {
-    background-size: contain;
-  }
-
-  @if $size ==false {
-    background-size: cover;
-  }
 }
 
 @function px-to-vw($value) {

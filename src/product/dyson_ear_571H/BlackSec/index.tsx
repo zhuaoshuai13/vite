@@ -1,4 +1,4 @@
-import { useRef, useContext } from "react"
+import { useRef, useEffect } from "react"
 import { ScreenContext } from "../../../provider"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"

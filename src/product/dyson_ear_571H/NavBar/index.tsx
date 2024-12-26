@@ -1,38 +1,48 @@
-import { useRef, useContext } from "react"
-import { ScreenContext } from "../../../provider"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import { useGSAP } from "@gsap/react"
-import UseImagesLoad from "../../../hooks/useImagesLoad"
-import { useScroll, useScrollView } from "../hooks/useScroll"
-
 import "./index.scss"
 
-const NavBar = ({ inViewIdList }: { inViewIdList: number[] }) => {
-  const { scrollPosition } = useScroll()
+const NavBar = ({ destination }: {}) => {
   const navList = [
-    { text: "试听体验", link: "nav_link_0" },
-    { text: "个性化", link: "nav_link_1" },
-    { text: "产品细节", link: "nav_link_2" },
+    {
+      text: "试听体验",
+      link: "nav_link_0",
+      sectionIndex: 2,
+      includeSection: [1, 2, 3],
+    },
+    {
+      text: "个性化",
+      link: "nav_link_1",
+      sectionIndex: 5,
+      includeSection: [4, 5, 6],
+    },
+    {
+      text: "产品细节",
+      link: "nav_link_2",
+      sectionIndex: 8,
+      includeSection: [7],
+    },
   ]
-
-  // const { inViewIdList } = useScrollView(sectionIds)
 
   return (
     <div
-      className={`pdp_navbar ${
-        scrollPosition > window.innerHeight * 0.5 ? "active" : ""
+      className={`pdp_navbar ${destination?.index > 0 ? "active" : ""} ${
+        destination?.index > 3 ? "is_white" : ""
       }`}
     >
       {navList.map((item, index) => (
         <div
           className={`nav_item ${
-            index === Math.max(...inViewIdList) ? "active" : ""
+            item.includeSection.includes(destination?.index) ? "active" : ""
           }`}
           key={index}
         >
-          <a href={`#${item.link}`}>{item.text}</a>
+          <span
+            className='text'
+            onClick={() => {
+              window.fullpage_api.moveTo(item.sectionIndex)
+            }}
+          >
+            {item.text}
+          </span>
         </div>
       ))}
     </div>

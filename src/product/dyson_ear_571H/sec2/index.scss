@@ -3,8 +3,15 @@
 .ear571h .sec2 {
   position: relative;
   z-index: 2;
-  height: px-to-vw(776);
   padding-top: px-to-vw(112);
+
+  // &.active {
+  //   .feature_item {
+  //     transform: translate(0);
+  //     opacity: 1;
+  //     transition: all .5s;
+  //   }
+  // }
 
   .feature_items {
     display: flex;
@@ -12,10 +19,22 @@
     justify-content: center;
     width: var(--content-width);
     margin: 0 auto;
+    overflow: hidden;
   }
 
   .feature_item {
     flex: 1;
+    // transform: translateY(200px);
+    // opacity: 0;
+    // transition: all .5s;
+
+    // &:nth-child(2) {
+    //   transition-delay: .2s;
+    // }
+
+    // &:nth-child(3) {
+    //   transition-delay: .4s;
+    // }
   }
 
   .pdp_desc {

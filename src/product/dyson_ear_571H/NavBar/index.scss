@@ -25,6 +25,22 @@
       }
     }
 
+    &.is_white {
+      background: rgba(235, 235, 235, .70);
+      border: 1px solid #d5d5d5;
+      backdrop-filter: blur(5px);
+
+      .nav_item {
+        &.active {
+          color: #333;
+
+          .text {
+            border-bottom: 1px solid #333;
+          }
+        }
+      }
+    }
+
     .nav_item {
       position: relative;
       width: calc(100% / 3);
@@ -45,7 +61,7 @@
         content: "";
       }
 
-      a {
+      .text {
         padding-bottom: px-to-vw(4);
         color: inherit;
         text-decoration: unset;
@@ -56,26 +72,8 @@
       &.active {
         color: #fff;
 
-        a {
+        .text {
           border-bottom: 1px solid #fff;
-        }
-      }
-    }
-  }
-
-  &.is_white {
-    .pdp_navbar {
-      background: rgba(235, 235, 235, .70);
-      border: 1px solid #d5d5d5;
-      backdrop-filter: blur(5px);
-
-      .nav_item {
-        &.active {
-          color: #333;
-
-          a {
-            border-bottom: 1px solid #333;
-          }
         }
       }
     }

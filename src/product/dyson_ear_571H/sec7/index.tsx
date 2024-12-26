@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
@@ -6,26 +6,31 @@ import { useGSAP } from "@gsap/react"
 import { getTriggerSpace } from "../../../utils/getTriggerSpace"
 
 import "./index.scss"
+const flag = true
 
-const Sec7 = () => {
+const Sec7 = ({ isload, destination,scrollTop }) => {
   const wrap = useRef<HTMLDivElement>(null)
+  // const [scrollTop, setScrollTop] = useState(0)
   const { ear571hConfig: config, src } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
   const sec7Ani = () => {
-    const tl = gsap.timeline().from(".img_wrap2", {
-      clipPath: "inset(100% 0% 0% 0%)",
-      ease: "power2.inOut",
-    })
-    ScrollTrigger.create({
-      trigger: ".sec7_wrap",
-      pin: true,
-      start: `top ${getTriggerSpace(wrap.current)}`,
-      end: "+=100%",
-      animation: tl,
-      scrub: 0.2,
-    })
+    // const tl = gsap.timeline().from(".img_wrap2", {
+    //   clipPath: "inset(100% 0% 0% 0%)",
+    //   ease: "power2.inOut",
+    // })
+    // ScrollTrigger.create({
+    //   trigger: wrap.current,
+    //   // pin: true,
+    //   // start: `top ${getTriggerSpace(wrap.current)}`,
+    //   start: `top 0`,
+    //   // end: "+=100%",
+    //   end: `+=${1 * window.innerHeight}`,
+    //   animation: tl,
+    //   scrub: 0.2,
+    //   scroller: document.querySelector(".bottom_part .fp-overflow"),
+    // })
 
     const tl2 = gsap
       .timeline()
@@ -64,6 +69,7 @@ const Sec7 = () => {
     ScrollTrigger.create({
       trigger: wrap.current,
       start: "top 80%",
+      scroller: document.querySelector(".bottom_part .fp-overflow"),
       animation: tl2,
       toggleActions: "play none none reverse",
     })
@@ -71,20 +77,47 @@ const Sec7 = () => {
 
   useGSAP(
     () => {
-      sec7Ani()
+      if (!isload && destination?.index == 7) {
+        sec7Ani()
+
+        // document
+        //   .querySelector(".bottom_part .fp-overflow")
+        //   ?.addEventListener("scroll", (e) => {
+        //     setScrollTop(e.target.scrollTop)
+        //   })
+      }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isload, destination] }
   )
 
   return (
-    <section className='sec7' ref={wrap} id='nav_link_2'>
-      <div className='sec7_wrap'>
+    <section
+      className={`sec7 ${destination?.index == 7 ? "active" : ""}`}
+      ref={wrap}
+      // id='nav_link_2'
+    >
+      <div
+        className='sec7_wrap'
+        style={{
+          position: "relative",
+          top: `-${
+            scrollTop > window.innerHeight ? scrollTop - window.innerHeight : 0
+          }px`,
+        }}
+      >
         <div className='pic_wrap'>
           <div className='img_wrap img_wrap1'>
-            <img src={src + "/images/sec7_f1.png"} />
+            <img src={src + "/wysiwyg/ipadassets/571/sec7_f1.png"} />
           </div>
-          <div className='img_wrap img_wrap2'>
-            <img src={src + "/images/sec7_f2.png"} />
+          <div
+            className='img_wrap img_wrap2'
+            style={{
+              clipPath: `inset(${
+                (1 - Math.min(scrollTop / window.innerHeight, 1)) * 100
+              }% 0% 0% 0%)`,
+            }}
+          >
+            <img src={src + "/wysiwyg/ipadassets/571/sec7_f2.png"} />
           </div>
         </div>
         <div className='text_wrap'>

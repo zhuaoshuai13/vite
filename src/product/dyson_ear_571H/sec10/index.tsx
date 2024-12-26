@@ -6,8 +6,9 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
+let flag = true
 
-const Sec10 = () => {
+const Sec10 = ({ isload, destination }) => {
   const wrap = useRef<HTMLDivElement>(null)
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { ear571hConfig: config, src } = window as any
@@ -63,14 +64,18 @@ const Sec10 = () => {
       end: `+=${wrap.current?.clientHeight}`,
       animation: tl,
       toggleActions: "play none none reverse",
+      scroller: document.querySelector(".bottom_part .fp-overflow"),
     })
   }
 
   useGSAP(
     () => {
-      sec10Ani()
+      if (!isload && destination?.index == 7 && flag) {
+        sec10Ani()
+        flag = false
+      }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isload, destination] }
   )
 
   return (
@@ -78,7 +83,7 @@ const Sec10 = () => {
       <div className='sec10_wrap' ref={wrap}>
         <div className='content_wrap'>
           <div className='img_wrap'>
-            <img src={src + '/images/sec10.jpg'} />
+            <img src={src + "/wysiwyg/ipadassets/571/sec10.jpg"} />
           </div>
           <div className='text_wrap'>
             <h3 className='pdp_title'>

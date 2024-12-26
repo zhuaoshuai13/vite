@@ -5,8 +5,8 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
-
-const Sec2 = () => {
+const flag = true
+const Sec2 = ({ isload, destination }) => {
   const { ear571hConfig: config, src } = window as any
   const wrap = useRef<HTMLDivElement>(null)
 
@@ -39,7 +39,7 @@ const Sec2 = () => {
       )
 
     ScrollTrigger.create({
-      trigger: ".sec2_wrap",
+      trigger: ".sec2",
       start: `top 75%`,
       animation: tl,
       toggleActions: "play none none reverse",
@@ -47,20 +47,22 @@ const Sec2 = () => {
   }
   useGSAP(
     () => {
-      sec2Ani()
+      if (!isload && destination?.index == 1) {
+        sec2Ani()
+      }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isload, destination] }
   )
 
   return (
-    <section className='sec2' ref={wrap} id='nav_link_0'>
+    <section className='section sec2 slide_sec' ref={wrap} id='nav_link_0'>
       <div className='sec2_wrap'>
         <div className='feature_items'>
           <div className='feature_item'>
             <div className='img_wrap'>
               <img
                 loading='lazy'
-                src={src + '/images/sec2_f1.png'}
+                src={src + "/wysiwyg/ipadassets/571/sec2_f1.png"}
               />
             </div>
             <div className='text_wrap'>
@@ -74,7 +76,7 @@ const Sec2 = () => {
             <div className='img_wrap'>
               <img
                 loading='lazy'
-                src={src + '/images/sec2_f2.png'}
+                src={src + "/wysiwyg/ipadassets/571/sec2_f2.png"}
               />
             </div>
             <div className='text_wrap'>
@@ -87,7 +89,7 @@ const Sec2 = () => {
             <div className='img_wrap'>
               <img
                 loading='lazy'
-                src={src + '/images/sec2_f3.png'}
+                src={src + "/wysiwyg/ipadassets/571/sec2_f3.png"}
               />
             </div>
             <div className='text_wrap'>

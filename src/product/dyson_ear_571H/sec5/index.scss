@@ -2,8 +2,11 @@
 
 .ear571h .sec5 {
   .sec5_wrap {
-    height: px-to-vw(776);
-    padding-top: px-to-vw(80);
+    // padding-top: px-to-vw(80);
+  }
+  
+  .fp-overflow {
+    height: auto;
   }
 
   .colour_picker_widget {

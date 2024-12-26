@@ -38,38 +38,36 @@ const Sec6 = () => {
     return () => cancelAnimationFrame(scroll) // 清理滚动
   }, [])
 
-
-   const sec6Ani = () => {
-      const tl = gsap
-        .timeline()
-        .from(
-          ".img_container",
-          {
-            opacity: 0,
-            y: 100,
-            ease: "power2.inOut",
-            duration: 1,
-          },
-          "a"
-        )
-      ScrollTrigger.create({
-        trigger: wrap.current,
-        scrub: 1,
-        start: "top 90%",
-        end: "+=80%",
-        animation: tl,
-        toggleActions: "play none none reverse",
-      })
-    }
-    useGSAP(
-      () => {
-        sec6Ani()
+  const sec6Ani = () => {
+    const tl = gsap.timeline().from(
+      ".img_container",
+      {
+        opacity: 0,
+        y: 100,
+        ease: "power2.inOut",
+        duration: 1,
       },
-      { scope: wrap }
+      "a"
     )
+    ScrollTrigger.create({
+      trigger: wrap.current,
+      scrub: 1,
+      start: "top 90%",
+      // end: "+=80%",
+      end: `+=${0.8 * window.innerHeight}`,
+      animation: tl,
+      toggleActions: "play none none reverse",
+    })
+  }
+  useGSAP(
+    () => {
+      // sec6Ani()
+    },
+    { scope: wrap }
+  )
 
   return (
-    <section className='sec6' ref={wrap}>
+    <section className='section sec6 slide_sec' ref={wrap}>
       <div className='sec6_wrap' ref={sec6_wrap}>
         <div
           className='img_container'
@@ -78,40 +76,40 @@ const Sec6 = () => {
         >
           <div className='img_box' ref={trackRef}>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f1.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f1.png"} />
             </div>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f2.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f2.png"} />
             </div>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f3.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f3.png"} />
             </div>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f4.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f4.png"} />
             </div>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f5.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f5.png"} />
             </div>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f6.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f6.png"} />
             </div>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f1.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f1.png"} />
             </div>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f2.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f2.png"} />
             </div>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f3.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f3.png"} />
             </div>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f4.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f4.png"} />
             </div>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f5.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f5.png"} />
             </div>
             <div className='img_wrap'>
-              <img src={src + "/images/sec6_f6.png"} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec6_f6.png"} />
             </div>
           </div>
         </div>

@@ -12,7 +12,8 @@ html {
 .ear571h {
   box-sizing: border-box;
   width: 100%;
-  overflow: hidden;
+
+  // overflow: hidden;
   color: #000;
   font-family: "DysonCHS-Book";
   line-height: initial;
@@ -28,9 +29,11 @@ html {
     font-family: "DysonCHS-Book";
   }
 
-  // section {
-  //   overflow: hidden;
-  // }
+  section {
+    // position: relative;
+    // top: 0;
+    // will-change: transform;
+  }
 
   button {
     background-color: unset;
@@ -56,10 +59,86 @@ html {
     font-size: px-to-vw(21);
     line-height: 1.28;
   }
-}
 
-@media (max-width: $mobwidthPx) {
-  .ear571h {
-    --content-width: calc(670vw / 7.5);
+  .sec3_video_wrap {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    pointer-events: none;
+
+    // &.active {
+    //   video {
+    //     transform: translateY(0);
+    //     opacity: 1;
+    //     transition: all .5s;
+    //   }
+    // }
+
+    &.slide-up {
+      video {
+        transform: translateY(-100%);
+        transition: all .5s;
+      }
+    }
+
+    &.slide-down {
+      video {
+        transform: translateY(100%);
+        transition: all .5s;
+      }
+    }
+
+    video {
+      // width: 100%;
+      position: absolute;
+      top: px-to-vw(30);
+      left: px-to-vw(102);
+      width: px-to-vw(1800);
+      transition: all .5s;
+
+      // transform: translateY(200px);
+      // opacity: 0;
+      // transition: all .5s;
+    }
+  }
+
+  .ani_ele {
+    transform: translateY(200);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+
+  .section.active {
+    .ani_ele {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .fp-overflow {
+    height: 100%;
+  }
+
+  .sec1,
+  .sec2 {
+    color: #fff;
+    background-color: #000;
+  }
+
+  .sec3,
+  .sec32 {
+    color: #fff;
+  }
+
+  .sec4,
+  .sec5,
+  .sec6,
+  .bottom_part {
+    background-color: #fff;
+  }
+
+  .fp-watermark {
+    display: none;
   }
 }

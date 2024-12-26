@@ -1,9 +1,37 @@
 @import '../vars';
 
 .ear571h .sec7 {
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  // height: px-to-vw(776);
+  transform: translateY(100vh);
+  opacity: 0;
+  transition: all .75s;
+  pointer-events: none;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1s;
+  }
+
   .sec7_wrap {
+    // position: relative;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100vw;
+    // height: 100vh;
+    // // height: px-to-vw(776);
+    // padding-top: px-to-vw(100);
     position: relative;
-    height: px-to-vw(776);
+    width: 100%;
+    height: 100%;
     padding-top: px-to-vw(100);
   }
 
@@ -20,6 +48,7 @@
       right: px-to-vw(48);
       width: px-to-vw(569);
       transform: translateY(-50%);
+      will-change: clip-path;
     }
   }
 

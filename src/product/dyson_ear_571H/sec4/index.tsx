@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
 
-const Sec4 = () => {
+const Sec4 = ({isload, destination}) => {
   const wrap = useRef(null)
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { ear571hConfig: config, src } = window as any
@@ -38,32 +38,41 @@ const Sec4 = () => {
       .from(
         ".video_wrap",
         {
-          y: -200,
+          // y: -200,
           ease: "power2.inOut",
           duration: 1,
         },
         "a"
       )
     ScrollTrigger.create({
-      trigger: wrap.current,
-      scrub: 1,
-      start: "top 90%",
-      end: "+=80%",
+      trigger: ".sec4",
+      // scrub: 1,
+      start: "top 75%",
+      // end: "+=80%",
+      // end: `+=${.8 * window.innerHeight}`,
       animation: tl,
       toggleActions: "play none none reverse",
     })
   }
+
   useGSAP(
     () => {
-      sec4Ani()
+      if (!isload && destination?.index == 4) {
+        sec4Ani()
+      }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isload, destination] }
   )
   return (
-    <section className='sec4' id='nav_link_1' ref={wrap}>
+    <section className='section sec4 slide_sec' id='nav_link_1' ref={wrap}>
       <div className='sec4_wrap'>
         <div className='video_wrap'>
-          <video src={src + "/videos/sec4.mp4"} autoPlay muted loop></video>
+          <video
+            src={src + "/video/s/e/sec4_1.mp4"}
+            autoPlay
+            muted
+            loop
+          ></video>
         </div>
         <div className='text_wrap'>
           <h3 className='pdp_title'>颜色多选，颜值百变</h3>

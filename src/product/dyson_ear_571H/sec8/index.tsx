@@ -5,81 +5,87 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
+let flag = true
 
-const Sec8 = () => {
+const Sec8 = ({ isload, destination }) => {
   const wrap = useRef(null)
   const { ear571hConfig: config, src } = window as any
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
   const sec8Ani = () => {
-      const tl = gsap
-        .timeline()
-        .from(
-          ".pdp_title",
-          {
-            y: 200,
-            opacity: 0,
-            duration: 1,
-            ease: "power2.inOut",
-          },
-          "a"
-        )
-        .from(
-          ".text_wrap > .pdp_desc",
-          {
-            y: 200,
-            opacity: 0,
-            duration: 1,
-            delay: .2,
-            ease: "power2.inOut",
-          },
-          "a"
-        )
-        .from(
-          ".code_wrap",
-          {
-            y: 200,
-            opacity: 0,
-            duration: 1,
-            delay: .4,
-            ease: "power2.inOut",
-          },
-          "a"
-        )
-        .from(
-          ".img_wrap1",
-          {
-            y: 400,
-            opacity: 0,
-            duration: 1,
-            delay: .4,
-            ease: "power2.inOut",
-          },
-          "a"
-        )
-      ScrollTrigger.create({
-        trigger: wrap.current,
-        scrub: 1,
-        start: "top 100%",
-        end: "+=100%",
-        animation: tl,
-        toggleActions: "play none none reverse",
-      })
-    }
-  
-    useGSAP(
-      () => {
+    const tl = gsap
+      .timeline()
+      .from(
+        ".pdp_title",
+        {
+          y: 200,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .from(
+        ".text_wrap > .pdp_desc",
+        {
+          y: 200,
+          opacity: 0,
+          duration: 1,
+          delay: 0.2,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .from(
+        ".code_wrap",
+        {
+          y: 200,
+          opacity: 0,
+          duration: 1,
+          delay: 0.4,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+      .from(
+        ".img_wrap1",
+        {
+          y: 400,
+          opacity: 0,
+          duration: 1,
+          delay: 0.4,
+          ease: "power2.inOut",
+        },
+        "a"
+      )
+    ScrollTrigger.create({
+      trigger: wrap.current,
+      scrub: 1,
+      start: "top 100%",
+      // end: "+=100%",
+      end: `+=${1 * window.innerHeight}`,
+      animation: tl,
+      toggleActions: "play none none reverse",
+      scroller: document.querySelector(".bottom_part .fp-overflow"),
+    })
+  }
+
+  useGSAP(
+    () => {
+      if (!isload && destination?.index == 7 && flag) {
         sec8Ani()
-      },
-      { scope: wrap }
-    )
+        flag = false
+      }
+    },
+    { scope: wrap, dependencies: [isload, destination] }
+  )
 
   return (
     <section className='sec8' ref={wrap}>
       <div className='sec8_wrap'>
         <div className='img_wrap img_wrap1'>
-          <img src={src + '/images/sec8_f1.jpg'} />
+          <img src={src + "/wysiwyg/ipadassets/571/sec8_f1.jpg"} />
         </div>
         <div className='content_wrap'>
           <div className='text_wrap'>
@@ -91,9 +97,9 @@ const Sec8 = () => {
           </div>
           <div className='code_wrap'>
             <div className='img_wrap img_wrap2'>
-              <img src={src + '/images/sec8_f2.png'} />
+              <img src={src + "/wysiwyg/ipadassets/571/sec8_f2.png"} />
             </div>
-            <div className="line"></div>
+            <div className='line'></div>
             <p className='pdp_desc'>
               扫描二维码 <br />
               前往戴森官方小程序购买

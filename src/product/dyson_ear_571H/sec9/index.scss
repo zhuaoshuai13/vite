@@ -17,6 +17,14 @@
   .img_wrap {
     flex-shrink: 0;
     width: px-to-vw(580);
-    height: px-to-vw(776);
+
+    // height: px-to-vw(776);
+    height: 100vh;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
   }
 }

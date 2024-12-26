@@ -1,28 +1,18 @@
-import { useRef, useContext } from "react"
-import { ScreenContext } from "../../../provider"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import { useGSAP } from "@gsap/react"
-import UseImagesLoad from "../../../hooks/useImagesLoad"
-
 import "./index.scss"
 
-const SlideDown = ({ showSlideDown }: { showSlideDown: boolean }) => {
-  const { ear571hConfig: config, src } = window as any
+const SlideDown = () => {
+  const { src } = window as any
 
   return (
-    showSlideDown && (
-      <div className='slide_down'>
-        <div className='img_wrap hand_icon'>
-          <img src={src + "/images/slide_down.png"} />
-        </div>
-        <p>
-          开启 <br /> OnTrac™ <br />
-          音乐之旅
-        </p>
+    <div className='slide_down'>
+      <div className='img_wrap hand_icon'>
+        <img src={src + "/wysiwyg/ipadassets/571/slide_down.png"} />
       </div>
-    )
+      <p>
+        开启 <br /> OnTrac™ <br />
+        音乐之旅
+      </p>
+    </div>
   )
 }
 

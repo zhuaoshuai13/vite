@@ -9,6 +9,7 @@ import "./index.scss"
 const Sec5 = () => {
   const wrap = useRef<HTMLDivElement>(null)
   const [initData, setInitData] = useState<any>()
+  const [pickerColorData, setPickerColorData] = useState<any>()
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -24,6 +25,7 @@ const Sec5 = () => {
       success: function (result) {
         if (result.data?.code == 200) {
           setInitData(result.data.data)
+          setPickerColorData(result.data.data?.data[(Object.keys(result.data.data?.data || "")[0] || "")])
         }
       },
       error: function (result) {},
@@ -209,7 +211,7 @@ const Sec5 = () => {
         })
       }
     }
-  }, [initData])
+  }, [initData,pickerColorData])
 
   const sec5Ani = () => {
     const tl = gsap.timeline().from(
@@ -231,13 +233,13 @@ const Sec5 = () => {
   }
   useGSAP(
     () => {
-      sec5Ani()
+      // sec5Ani()
     },
     { scope: wrap }
   )
 
   return (
-    <section className='sec5' ref={wrap}>
+    <section className='section sec5 slide_sec' ref={wrap}>
       <div className='sec5_wrap'>
         <div
           className='colour_picker_widget container'
@@ -260,7 +262,7 @@ const Sec5 = () => {
               >
                 <img
                   className='composite-image'
-                  src={initData?.data?.stephen?.selected_composite?.image}
+                  src={pickerColorData?.selected_composite?.image}
                 />
                 <div className='video-wrapper video-hidden'>
                   {initData?.default_composite_video ? (
@@ -295,7 +297,7 @@ const Sec5 = () => {
                   <img
                     className='part-image-2'
                     src={
-                      initData?.data?.stephen?.selected_part_image?.part1_image
+                      pickerColorData?.selected_part_image?.part1_image
                     }
                     alt=''
                   />
@@ -304,7 +306,7 @@ const Sec5 = () => {
                   <img
                     className='part-image-3'
                     src={
-                      initData?.data?.stephen?.selected_part_image?.part2_image
+                      pickerColorData?.selected_part_image?.part2_image
                     }
                     alt=''
                   />
@@ -321,7 +323,7 @@ const Sec5 = () => {
                 data-required-part="<?= implode(',', $requiredPart) ?>"
                 data-widget-group={(Object.keys(initData?.data || "")[0] || "")}
               >
-                {initData?.data?.stephen?.required_part?.map(
+                {pickerColorData?.required_part?.map(
                   (partItem, partIndex) => (
                     <div
                       key={partIndex}
@@ -330,12 +332,12 @@ const Sec5 = () => {
                     >
                       <label className='colour_picker_part_item_label'>
                         <span className='colour_picker_part_item_name'>
-                          {initData?.data?.stephen.group[partItem].part_name}
+                          {pickerColorData.group[partItem].part_name}
                         </span>
                         ：
                         <span className='colour_picker_part_item_color_name'>
                           {
-                            initData?.data?.stephen.group[partItem]
+                            pickerColorData.group[partItem]
                               ?.selected_color_name
                           }
                         </span>
@@ -344,7 +346,7 @@ const Sec5 = () => {
                         className='colour_picker_part_color '
                         data-part-number={partIndex + 1}
                       >
-                        {initData?.data?.stephen.group[partItem].colors.map(
+                        {pickerColorData.group[partItem].colors.map(
                           (colorItem, colorIndex: number) => (
                             <li
                               className='colour_picker_part_color_wrapper'
@@ -353,7 +355,7 @@ const Sec5 = () => {
                               <div
                                 className={`colour_picker_part_color_item_border ${
                                   colorItem.id ==
-                                  initData?.data?.stephen.group[partItem]
+                                  pickerColorData.group[partItem]
                                     ?.selected_color_id
                                     ? "selected"
                                     : ""
@@ -363,7 +365,7 @@ const Sec5 = () => {
                                   <div
                                     className={`colour_picker_part_color_item ${
                                       colorItem.id ==
-                                      initData?.data?.stephen.group[partItem]
+                                      pickerColorData.group[partItem]
                                         ?.selected_color_id
                                         ? "selected"
                                         : ""
@@ -385,7 +387,7 @@ const Sec5 = () => {
                                   <div
                                     className={`colour_picker_part_color_item ${
                                       colorItem.id ==
-                                      initData?.data?.stephen.group[partItem]
+                                      pickerColorData.group[partItem]
                                         ?.selected_color_id
                                         ? "selected"
                                         : ""

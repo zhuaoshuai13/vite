@@ -5,8 +5,9 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
+let flag = true
 
-const Sec9 = () => {
+const Sec9 = ({ isload, destination }) => {
   const wrap = useRef<HTMLDivElement>(null)
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
   const { ear571hConfig: config, src } = window as any
@@ -77,21 +78,29 @@ const Sec9 = () => {
       trigger: wrap.current,
       scrub: 1,
       start: "top 100%",
-      end: "+=200%",
+      // end: "+=200%",
+      end: `+=${2 * window.innerHeight}`,
       animation: tl,
       toggleActions: "play none none reverse",
+      scroller: document.querySelector(".bottom_part .fp-overflow"),
     })
   }
 
   useGSAP(
     () => {
-      sec9Ani()
+      if (!isload && destination?.index == 7 && flag) {
+        sec9Ani()
+        flag = false
+      }
     },
-    { scope: wrap }
+    { scope: wrap, dependencies: [isload, destination] }
   )
 
   // 防止移动端上下滑动时 触发高度变化导致动画重新开始
-  ScrollTrigger.config({ ignoreMobileResize: true, autoRefreshEvents: "DOMContentLoaded,load,resize" })
+  // ScrollTrigger.config({
+  //   ignoreMobileResize: true,
+  //   autoRefreshEvents: "DOMContentLoaded,load,resize",
+  // })
 
   return (
     <section className='sec9'>
@@ -107,7 +116,7 @@ const Sec9 = () => {
             </p>
           </div>
           <div className='img_wrap'>
-            <img src={src + '/images/sec9.jpg'} />
+            <img src={src + "/wysiwyg/ipadassets/571/sec9.jpg"} />
           </div>
         </div>
       </div>
