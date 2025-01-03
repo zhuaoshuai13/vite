@@ -2,9 +2,11 @@
 
 .ear571h .sec5 {
   .sec5_wrap {
-    // padding-top: px-to-vw(80);
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
-  
+
   .fp-overflow {
     height: auto;
   }

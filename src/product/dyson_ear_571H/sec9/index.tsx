@@ -82,7 +82,7 @@ const Sec9 = ({ isload, destination }) => {
       end: `+=${2 * window.innerHeight}`,
       animation: tl,
       toggleActions: "play none none reverse",
-      scroller: document.querySelector(".bottom_part .fp-overflow"),
+      scroller: document.querySelector(".bottom_part"),
     })
   }
 

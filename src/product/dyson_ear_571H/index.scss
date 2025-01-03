@@ -33,6 +33,7 @@ html {
     // position: relative;
     // top: 0;
     // will-change: transform;
+    height: 100%;
   }
 
   button {
@@ -140,5 +141,9 @@ html {
 
   .fp-watermark {
     display: none;
+  }
+
+  .main_swiper {
+    height: 100vh;
   }
 }

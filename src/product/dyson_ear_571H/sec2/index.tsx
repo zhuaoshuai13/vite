@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
@@ -9,28 +9,29 @@ const flag = true
 const Sec2 = ({ isload, destination }) => {
   const { ear571hConfig: config, src } = window as any
   const wrap = useRef<HTMLDivElement>(null)
+  const [timeline, setTimeline] = useState()
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
   const sec2Ani = () => {
     const tl = gsap
       .timeline()
-      .from(
+      .to(
         ".feature_item",
         {
-          opacity: 0,
-          y: "50%",
+          opacity: 1,
+          y: 0,
           ease: "power2.inOut",
           duration: 1,
           stagger: 0.2,
         },
         "a"
       )
-      .from(
+      .to(
         ".feature_item .pdp_desc",
         {
-          opacity: 0,
-          y: 100,
+          opacity: 1,
+          y: 0,
           ease: "power2.inOut",
           duration: 1,
           stagger: 0.2,
@@ -44,11 +45,16 @@ const Sec2 = ({ isload, destination }) => {
       animation: tl,
       toggleActions: "play none none reverse",
     })
+    setTimeline(tl)
   }
   useGSAP(
     () => {
       if (!isload && destination?.index == 1) {
         sec2Ani()
+      }else {
+        if(timeline) {
+          timeline.progress(0).pause()
+        }
       }
     },
     { scope: wrap, dependencies: [isload, destination] }

@@ -6,39 +6,30 @@ import { useGSAP } from "@gsap/react"
 
 import "./index.scss"
 
-const Sec4 = ({isload, destination}) => {
+const Sec4 = ({ isload, destination }) => {
   const wrap = useRef(null)
+  const [timeline, setTimeline] = useState()
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
-  const { ear571hConfig: config, src } = window as any
+  const { src } = window as any
 
   const sec4Ani = () => {
     const tl = gsap
       .timeline()
-      .from(
+      .to(
         ".pdp_title",
         {
-          opacity: 0,
-          y: -200,
+          opacity: 1,
+          y: 0,
           ease: "power2.inOut",
           duration: 1,
-          // delay: 0.2,
         },
         "a"
       )
-      .from(
+      .to(
         ".pdp_desc",
         {
-          opacity: 0,
-          y: -100,
-          ease: "power2.inOut",
-          duration: 1,
-        },
-        "a"
-      )
-      .from(
-        ".video_wrap",
-        {
-          // y: -200,
+          opacity: 1,
+          y: 0,
           ease: "power2.inOut",
           duration: 1,
         },
@@ -46,10 +37,7 @@ const Sec4 = ({isload, destination}) => {
       )
     ScrollTrigger.create({
       trigger: ".sec4",
-      // scrub: 1,
       start: "top 75%",
-      // end: "+=80%",
-      // end: `+=${.8 * window.innerHeight}`,
       animation: tl,
       toggleActions: "play none none reverse",
     })
@@ -59,6 +47,10 @@ const Sec4 = ({isload, destination}) => {
     () => {
       if (!isload && destination?.index == 4) {
         sec4Ani()
+      } else {
+        if (timeline) {
+          timeline.progress(0).pause()
+        }
       }
     },
     { scope: wrap, dependencies: [isload, destination] }

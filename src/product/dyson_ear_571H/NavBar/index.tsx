@@ -1,6 +1,6 @@
 import "./index.scss"
 
-const NavBar = ({ destination }: {}) => {
+const NavBar = ({ destination, swiperInstance }: {}) => {
   const navList = [
     {
       text: "试听体验",
@@ -37,8 +37,13 @@ const NavBar = ({ destination }: {}) => {
         >
           <span
             className='text'
+            // onClick={() => {
+            //   window.fullpage_api.moveTo(item.sectionIndex)
+            // }}
             onClick={() => {
-              window.fullpage_api.moveTo(item.sectionIndex)
+              if (swiperInstance) {
+                swiperInstance.slideTo(item.sectionIndex)
+              }
             }}
           >
             {item.text}

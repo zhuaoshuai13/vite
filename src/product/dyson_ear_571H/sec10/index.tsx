@@ -64,7 +64,7 @@ const Sec10 = ({ isload, destination }) => {
       end: `+=${wrap.current?.clientHeight}`,
       animation: tl,
       toggleActions: "play none none reverse",
-      scroller: document.querySelector(".bottom_part .fp-overflow"),
+      scroller: document.querySelector(".bottom_part"),
     })
   }
 

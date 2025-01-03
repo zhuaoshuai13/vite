@@ -1,12 +1,16 @@
 import "./index.scss"
 
-const BackTop = () => {
+const BackTop = ({swiperInstance}) => {
   return (
     <div
       className='back_top'
+      // onClick={() => {
+      //   document.querySelector(".bottom_part .fp-overflow")?.scrollTo(0, 0)
+      //   window.fullpage_api.moveTo(1)
+      // }}
       onClick={() => {
-        document.querySelector(".bottom_part .fp-overflow")?.scrollTo(0, 0)
-        window.fullpage_api.moveTo(1)
+        document.querySelector(".bottom_part")?.scrollTo(0, 0)
+        swiperInstance.slideTo(0)
       }}
     >
       <svg

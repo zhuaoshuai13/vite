@@ -15,8 +15,15 @@
     max-width: var(--content-width);
     margin: 0 auto;
 
+    .pdp_title {
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+
     .pdp_desc {
       margin-top: px-to-vw(8);
+      transform: translateY(-100px);
+      opacity: 0;
     }
   }
 

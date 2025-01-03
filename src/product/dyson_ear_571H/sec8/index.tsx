@@ -67,7 +67,7 @@ const Sec8 = ({ isload, destination }) => {
       end: `+=${1 * window.innerHeight}`,
       animation: tl,
       toggleActions: "play none none reverse",
-      scroller: document.querySelector(".bottom_part .fp-overflow"),
+      scroller: document.querySelector(".bottom_part"),
     })
   }
 

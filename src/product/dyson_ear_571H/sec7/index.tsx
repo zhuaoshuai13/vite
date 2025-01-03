@@ -67,9 +67,9 @@ const Sec7 = ({ isload, destination,scrollTop }) => {
         "a"
       )
     ScrollTrigger.create({
-      trigger: wrap.current,
-      start: "top 80%",
-      scroller: document.querySelector(".bottom_part .fp-overflow"),
+      // trigger: wrap.current,
+      // start: "top 80%",
+      // scroller: document.querySelector(".bottom_part .fp-overflow"),
       animation: tl2,
       toggleActions: "play none none reverse",
     })
@@ -78,7 +78,7 @@ const Sec7 = ({ isload, destination,scrollTop }) => {
   useGSAP(
     () => {
       if (!isload && destination?.index == 7) {
-        sec7Ani()
+        // sec7Ani()
 
         // document
         //   .querySelector(".bottom_part .fp-overflow")
@@ -100,9 +100,9 @@ const Sec7 = ({ isload, destination,scrollTop }) => {
         className='sec7_wrap'
         style={{
           position: "relative",
-          top: `-${
+          transform: `translateY(-${
             scrollTop > window.innerHeight ? scrollTop - window.innerHeight : 0
-          }px`,
+          }px)`,
         }}
       >
         <div className='pic_wrap'>
