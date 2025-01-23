@@ -75,9 +75,7 @@ const Index = () => {
       <div id='smooth-content'>
         <div className='a80' ref={container}>
           <div>
-            {/* <div className='adams'></div> */}
             <Sec1 {...commonProps} />
-            {/* <Sec2 {...commonProps} /> */}
             <Sec3 {...commonProps} />
             <Sec4 {...commonProps} />
             <Sec5 {...commonProps} />

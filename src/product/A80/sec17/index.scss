@@ -20,7 +20,7 @@
   }
 
   .subTitle {
-    max-width: 90%;
+    max-width: 98%;
     margin-left: 0;
     text-align: left;
   }
@@ -67,11 +67,11 @@
     white-space: nowrap;
   }
 
-  .f1 {
+  .f2 {
     span {
       margin-left: pvw(-20);
       color: #000;
-      font-size: pvw(40);
+      font-size: pvw(30);
       line-height: calc(50 / 40);
     }
   }
@@ -82,13 +82,20 @@
     background-color: rgba(0, 0, 0, 0.1);
   }
 
-  .f2 {
+  .f1 {
     span {
       margin-left: pvw(0);
       color: #000;
-      font-size: pvw(50);
+      font-size: pvw(30);
       line-height: calc(63 / 50);
       vertical-align: super;
+    }
+
+    .param div{
+      display: inline-flex;
+      p{
+        color: #000;
+      }
     }
   }
 

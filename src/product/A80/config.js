@@ -3,22 +3,23 @@ window.AEighty = {
     slogen: "Awesome All-in-One",
     titlea: "Up to 128+8GB*",
     infoa: "Extended RAM",
-    titleb: "50MP HDR CAM",
-    infob: "Premium Memory Version",
-    titlec: '120Hz 6.7"',
-    infoc: "Punch-Hole Display",
+    titleb: "50MP*",
+    infob: "Super HDR Camera",
+    titlec: `6.7" Punch-Hole`,
+    infoc: "Support up to 120Hz",
+    desc: "Supports 3 Years Lag-free",
   },
   sec2: {
     video: {
       H: {
         post: "",
-        src: "/fileadmin/assets/v/A80/dist/videos/Hvideo.mp4",
-        shortSrc: "/fileadmin/assets/v/A80/dist/videos/HShortVideo.mp4",
+        src: "/fileadmin/assets/v/A80/dist/videos/HvideoEN.mp4",
+        shortSrc: "/fileadmin/assets/v/A80/dist/videos/HvideoShort.mp4",
       },
       V: {
         post: "",
-        src: "/fileadmin/assets/v/A80/dist/videos/Hvideo.mp4",
-        shortSrc: "/fileadmin/assets/v/A80/dist/videos/HShortVideo.mp4",
+        src: "/fileadmin/assets/v/A80/dist/videos/VvideoEN.mp4",
+        shortSrc: "/fileadmin/assets/v/A80/dist/videos/VvideoShort.mp4",
       },
     },
   },
@@ -34,9 +35,9 @@ window.AEighty = {
     title: "Unleash Unmatched Performance",
   },
   sec5: {
-    titlea: "Exceptional 128GB Memory",
+    titlea: "Up to 128GB Memory*",
     infoa:
-      "Store up to 40,000 photos directly, download any offline content<br class='mb'/> including <br class='pc'/> music, movies, any TV shows.",
+      "Store up to 40,000 photos directly, download any offline content<br class='mb'/> including <br class='pc'/> music, movies, and TV shows.",
     titleb: "Expansion 2TB External Memory",
     infob:
       "Insert the external memory in a 3-card slot to store more content,<br class='mb'/> nothing to <br class='pc'/> worry about running out of space.",
@@ -62,12 +63,12 @@ window.AEighty = {
     title: "Crystal Clear Shots Every Time",
   },
   sec9: {
-    title: "50MP Super HDR Camera Stunning Details，Vibrant Colors",
+    title: `50MP Super HDR Camera<br />with Unique Ring Light<br />Stunning Details, Vibrant Colors`,
     info: "The 50MP super HDR camera for premium memory version enhances highlight suppression and brings out fantastic details, making every photo professional.*",
-    subTitlea: "50MP Super HDR Camare",
-    subInfoa: "128+4GB with 4GB Extended RAM",
-    subTitleb: "13MP Super HDR Camare",
-    subInfob: "128+3GB with 5GB Extended RAM",
+    subTitlea: "50MP Super HDR Camera*",
+    subInfoa: "",
+    subTitleb: "13MP Super HDR Camera*",
+    subInfob: "",
   },
   sec10: {
     title: "Automatic <br class='mb'/> Scene Classification",
@@ -81,7 +82,7 @@ window.AEighty = {
   },
   sec11: {
     title: "9 Creative Filters",
-    info: "Enhance your photos with 8 different filters, adding<br class='pc'/> a <br class='mb'/> professional touch to every shot. Fresh, Forest,<br /> Flames, Fade, Nature, Baby, Blues, Mono;",
+    info: "Enhance your photos with 8 different filters, adding<br class='pc'/> a <br class='mb'/> professional touch to every shot. Fresh, Forest,<br /> Flames, Fade, Nature, Baby, Blues, Mono.",
     play: "Play",
   },
   sec12: {
@@ -104,21 +105,24 @@ window.AEighty = {
   },
   sec15: {
     title: "Glass-feel high  <br class='mb'/> value craftsmanship",
+    titleb: "Supports IP54 <br /> Water Resistance*",
     eight: "8.54",
     mm: "mm",
+    ip: "IP",
+    num: "54",
   },
   sec16: {
     title: "Comfortable <br class='mb'/> Viewing Experience",
   },
   sec17: {
-    title: `Support Up to 120Hz <br class='pc'/> for Smoother Experience`,
+    title: `6.7" Punch-Hole Display <br class='pc'/> for Better Visual Experience`,
     info: `This expansive display ensures immersive viewing, whether you're watching videos or browsing content.`,
-    f1: "Support up to",
-    f1n: "120",
-    f1p: "HZ",
-    f2: "Punch-Hole Display",
-    f2n: "6.7",
-    f2p: `"`,
+    f2: "Support up to",
+    f2n: "120",
+    f2p: "Hz",
+    f1: "Punch-Hole Display",
+    f1n: "6.7",
+    f1p: `"`,
     f3: "Max brightness",
     f3n: "500",
     f3p: "nits",
@@ -163,6 +167,9 @@ window.AEighty = {
     subTitlec: "Smart Link+",
     subInfoc:
       "Smart Link+ improves signal stability, enabling automatic repair in areas of poor network signal and reducing latency by 20%.",
+    subTitled: "36 Months Lag-Free",
+    subInfod:
+      "A80 promises a smooth user experience for over 36 months, delivering durability and reliability that stands the test of time.",
   },
   sec23: {
     title: "T603 Octa-core LTE Chipset with AI",
@@ -171,10 +178,10 @@ window.AEighty = {
 
   sec24: {
     note: "Notes",
-    f1: "*RAM has been extended up to 8GB (4+4GB). ",
-    f2: "A80 functions vary by device model of 128+4GB with 50MP HDR camera and 128+3GB with 13MP HDR camera.",
+    f2: "A80 functions vary by device models of 128+8GB(4+4GB) extended RAM with 50MP/13MP HDR camera and 128/64+8GB(3+5GB) extended RAM with 13MP HDR camera.",
     f3: "The data is from itel labs, results may vary depending on the test environment.",
     f4: "itel reserves the right to make changes and improvements to any of the products without notice.",
     f5: "Availability of specific products, features and services may vary by region. Please check with the nearest itel dealer in your particular region.",
+    f6: "IP54 Water Resistance: Based on tests conducted by itel Lab, this rating ensures that the device is protected from water sprays coming from any direction.",
   },
 }

@@ -6,6 +6,7 @@ export interface Sec1 {
   infob: string
   titlec: string
   infoc: string
+  desc: string
 }
 
 export interface Sec2 {
@@ -112,8 +113,11 @@ export interface Sec14 {
 
 export interface Sec15 {
   title: string
+  titleb: string
   eight: string
   mm: string
+  ip: string
+  num: string
 }
 
 export interface Sec16 {
@@ -176,6 +180,8 @@ export interface Sec22 {
   subInfob: string
   subTitlec: string
   subInfoc: string
+  subTitled: string
+  subInfod: string
 }
 
 export interface Sec23 {
@@ -190,6 +196,7 @@ export interface Sec24 {
   f3: string
   f4: string
   f5: string
+  f6: string
 }
 
 export interface RootObject {

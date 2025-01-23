@@ -31,7 +31,7 @@ const Sec20 = ({
             transform: "rotate3d(-4, 9, 0, 20deg)",
             x: 100,
             y: -200,
-            easy: "none",
+            ease: "none",
             duration: 0.75,
 
             scrollTrigger: {
@@ -45,7 +45,7 @@ const Sec20 = ({
 
           gsap.from(".sec20 .line", {
             transform: "translate3d(-40px, 100px, 22px)",
-            easy: "none",
+            ease: "none",
 
             duration: 0.75,
 
@@ -91,7 +91,7 @@ const Sec20 = ({
             y: 200,
             opacity: 0,
             duration: 1.5,
-            easy: "none",
+            ease: "none",
             scrollTrigger: {
               trigger: ".sec20 .phoneOut",
               start: "center bottom",
@@ -106,7 +106,7 @@ const Sec20 = ({
             y: 200,
             opacity: 0,
             duration: 1.5,
-            easy: "none",
+            ease: "none",
             scrollTrigger: {
               trigger: ".sec20 .phoneOut",
               start: "center bottom",
@@ -119,7 +119,7 @@ const Sec20 = ({
             transform: "translate3d(-120px, 240px, 22px)",
             opacity: 0,
             duration: 1.5,
-            easy: "none",
+            ease: "none",
             scrollTrigger: {
               trigger: ".sec20 .phoneOut",
               start: "center bottom",

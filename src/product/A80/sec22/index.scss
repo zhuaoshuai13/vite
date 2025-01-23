@@ -17,9 +17,9 @@
   .box {
     display: grid;
     grid-template-rows: pvw(460) pvw(460);
-    grid-template-columns: pvw(814) pvw(1060);
+    grid-template-columns: pvw(940) pvw(940);
     width: 100%;
-    margin-top: pvw(120);
+    margin-top: pvw(40);
     column-gap: pvw(26);
     row-gap: pvw(20);
 
@@ -30,7 +30,6 @@
   }
 
   .f2 {
-    grid-row: 1 /3;
     padding-top: pvw(80);
 
     .title {
@@ -56,7 +55,7 @@
   }
 
   .title {
-    font-size: pvw(50);
+    font-size: pvw(40);
     font-family: "Bold";
     line-height: calc(63 / 50);
   }
@@ -68,20 +67,37 @@
     line-height: calc(40 / 26);
   }
 
+  .fa {
+    order: 1;
+  }
+
+  .fb {
+    order: 2;
+  }
+
+  .fc {
+    order: 3;
+  }
+
+  .fd {
+    order: 4;
+  }
+
   .f1 {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: pvw(85) pvw(0) pvw(120) pvw(80);
+    justify-content: flex-start;
+    padding: pvw(100) pvw(0) pvw(120) pvw(20);
+    overflow: hidden;
 
     .title {
-      max-width: 40%;
+      max-width: 30%;
       margin-left: 0;
     }
 
     .info {
-      max-width: 35%;
+      max-width: 38%;
       margin-top: pvw(28);
     }
 
@@ -97,6 +113,37 @@
       margin: auto;
       background: url("../../../assets/images/sec22F1.png") no-repeat top center /
         contain;
+      margin-right: pvw(-46);
+    }
+  }
+
+  .f1.f4 {
+    .img {
+      width: pvw(284);
+      min-width: pvw(284);
+      height: pvw(284);
+      background: url("../../../assets/images/sec22F4.png") no-repeat top center /
+        contain;
+      margin-right: pvw(63);
+    }
+
+    .info {
+      max-width: 50%;
+    }
+  }
+
+  .f1.fnew {
+    .img {
+      width: pvw(191);
+      min-width: pvw(191);
+      height: pvw(407);
+      background: url("../../../assets/images/sec22F22.png") no-repeat top
+        center / contain;
+      margin-right: pvw(110);
+    }
+
+    .info {
+      max-width: 50%;
     }
   }
 
@@ -104,14 +151,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: pvw(91) pvw(124) pvw(90) pvw(80);
+    padding: pvw(100) pvw(124) pvw(90) pvw(20);
 
     .title {
       max-width: 60%;
     }
 
     .info {
-      max-width: 75%;
+      max-width: 89%;
       margin-top: pvw(28);
     }
 
@@ -139,24 +186,25 @@
     }
 
     .box {
-      grid-template-rows: mvw(396) mvw(428);
+      grid-template-rows: mvw(428) mvw(428);
       grid-template-columns: mvw(333) mvw(333);
       gap: mvw(16);
       margin-top: mvw(24);
 
       & > div {
         border-radius: mvw(20);
+        min-height: mvw(428);
       }
     }
 
     .f1 {
       display: flex;
       flex-direction: column;
-      grid-row: 1 / 2;
-      grid-column: 1 / 3;
       padding-top: mvw(20);
+      padding-bottom: 0;
 
       .title {
+        max-width: 90%;
         margin: auto;
         margin-top: 0;
         margin-bottom: 0;
@@ -164,9 +212,11 @@
 
       .img {
         position: relative;
-        width: mvw(525);
-        height: mvw(198);
-        margin: mvw(40) auto 0;
+        width: mvw(323);
+        height: mvw(122);
+        margin-top: mvw(94);
+        margin-left: mvw(18);
+        margin-right: unset;
         background: url("../../../assets/images/sec22MobF1.png") no-repeat top
           center / cover;
       }
@@ -175,6 +225,19 @@
         max-width: 72%;
         margin: mvw(20) auto 0;
         margin-bottom: 0;
+      }
+    }
+
+    .f1.f4 {
+      .info {
+        max-width: 84%;
+        margin-top: mvw(20);
+      }
+
+      .img {
+        width: mvw(170);
+        height: mvw(170);
+        margin: mvw(52) auto 0;
       }
     }
 
@@ -230,6 +293,24 @@
         background: url("../../../assets/images/sec22MobF3.png") no-repeat top
           center / cover;
       }
+    }
+
+    .f1.fnew {
+      .info {
+        max-width: 90%;
+      }
+
+      .img {
+        width: mvw(121);
+        height: mvw(253);
+        margin: mvw(41) auto 0;
+        background: url("../../../assets/images/sec22f22mb.png") no-repeat top
+          center / contain;
+      }
+    }
+
+    .fb {
+      order: 2;
     }
 
     .title {

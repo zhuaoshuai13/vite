@@ -19,7 +19,7 @@ const Sec6 = ({
           gsap.from(".sec6 .f2", {
             x: -(643 / 2560) * window.innerWidth,
             duration: 0.75,
-            easy: "none",
+            ease: "none",
             scrollTrigger: {
               trigger: ".sec6",
               start: "top center",
@@ -30,7 +30,7 @@ const Sec6 = ({
           gsap.from(".sec6 .f3", {
             x: -(1286 / 2560) * window.innerWidth,
             duration: 0.75,
-            easy: "none",
+            ease: "none",
 
             scrollTrigger: {
               trigger: ".sec6",

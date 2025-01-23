@@ -33,6 +33,8 @@ const Sec2 = ({
     gsap.to(".fullVideo", {
       top: 0,
     })
+
+
   })
   return (
     <section ref={ref}>

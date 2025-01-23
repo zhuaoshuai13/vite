@@ -15,8 +15,30 @@
     height: pvw(1544);
     margin-top: pvw(0);
     margin-left: pvw(124);
-    background: url("../../../assets/images/sec15Bg.png") no-repeat top center /
-      cover;
+
+    position: relative;
+
+    .img1 {
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/sec15Bg.png") no-repeat top center /
+        cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    .img2 {
+      width: 100%;
+      height: 100%;
+      background: url("../../../assets/images/sec15Bg2.png") no-repeat top
+        center / cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
   }
 
   .texta {
@@ -38,11 +60,48 @@
     font-family: "Light";
     line-height: calc(461 / 364);
   }
+
+  .textc {
+    position: absolute;
+    top: pvw(378);
+    left: pvw(800);
+    z-index: 2;
+    font-size: pvw(364);
+    font-family: "Light";
+    line-height: calc(461 / 364);
+  }
+
+  .textd {
+    position: absolute;
+    top: pvw(566);
+    left: pvw(1295);
+    z-index: 2;
+    font-size: pvw(364);
+    font-family: "Light";
+    line-height: calc(461 / 364);
+    display: flex;
+    .dot {
+      font-size: pvw(70);
+      margin-left: pvw(20);
+      margin-top: pvw(100);
+      display: inline-block;
+    }
+  }
+
+  .titleb {
+    position: absolute;
+    top: 0;
+    left: pvw(330);
+  }
 }
 
 @media screen and (max-width: 751px) {
   .sec15 {
     margin-top: mvw(320);
+
+    .titleb {
+      left: mvw(34);
+    }
 
     .img {
       width: 120%;
@@ -64,6 +123,18 @@
       left: mvw(364);
       font-size: mvw(160);
       line-height: calc(202 / 160);
+    }
+
+    .textc {
+      top: mvw(213);
+      left: mvw(265);
+      font-size: mvw(160);
+    }
+
+    .textd {
+      top: mvw(380);
+      left: mvw(364);
+      font-size: mvw(160);
     }
   }
 }

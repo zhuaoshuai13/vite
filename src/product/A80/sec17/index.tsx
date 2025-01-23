@@ -116,7 +116,7 @@ const Sec17 = ({
             <div className='top'>
               <div className='f1 fcom'>
                 <div className='param'>
-                  {config.sec17.f1n} <span>{config.sec17.f1p}</span>
+                  <div dangerouslySetInnerHTML={{__html:config.sec17.f1n}}></div> <span>{config.sec17.f1p}</span>
                 </div>
                 <div className='desc'>{config.sec17.f1}</div>
               </div>

@@ -32,35 +32,65 @@ const Sec22 = ({
             },
           })
 
-          gsap.from(".sec22 .f2", {
+          gsap.from(".sec22 .fa", {
             opacity: 0,
             x: -100,
             scrollTrigger: {
-              trigger: ".sec22 .f2",
+              trigger: ".sec22 .fa",
               start: `center bottom`,
               toggleActions: "restart none none reverse",
             },
           })
 
-          gsap.from(".sec22 .f1", {
+          gsap.from(".sec22 .fb", {
             opacity: 0,
             x: 100,
             scrollTrigger: {
-              trigger: ".sec22 .f1",
+              trigger: ".sec22 .fb",
               start: `center bottom`,
               toggleActions: "restart none none reverse",
             },
           })
 
-          gsap.from(".sec22 .f3", {
+          gsap.from(".sec22 .fc", {
             opacity: 0,
-            x: 100,
+            x: -100,
             scrollTrigger: {
-              trigger: ".sec22 .f3",
+              trigger: ".sec22 .fc",
               start: `center bottom`,
               toggleActions: "restart none none reverse",
             },
           })
+
+          gsap.from(".sec22 .fd", {
+            opacity: 0,
+            x: 100,
+            scrollTrigger: {
+              trigger: ".sec22 .fd",
+              start: `center bottom`,
+              toggleActions: "restart none none reverse",
+            },
+          })
+
+          // gsap.from(".sec22 .f1", {
+          //   opacity: 0,
+          //   x: 100,
+          //   scrollTrigger: {
+          //     trigger: ".sec22 .f1",
+          //     start: `center bottom`,
+          //     toggleActions: "restart none none reverse",
+          //   },
+          // })
+
+          // gsap.from(".sec22 .f3", {
+          //   opacity: 0,
+          //   x: 100,
+          //   scrollTrigger: {
+          //     trigger: ".sec22 .f3",
+          //     start: `center bottom`,
+          //     toggleActions: "restart none none reverse",
+          //   },
+          // })
         } else {
           gsap.from(".sec22 .titlea", {
             duration: 1,
@@ -74,31 +104,41 @@ const Sec22 = ({
             },
           })
 
-          gsap.from(".sec22 .f1", {
+          gsap.from(".sec22 .fa", {
             opacity: 0,
-            y: 100,
+            x: -100,
             scrollTrigger: {
-              trigger: ".sec22 .f1",
+              trigger: ".sec22 .fa",
               start: `center bottom`,
               toggleActions: "restart none none reverse",
             },
           })
 
-          gsap.from(".sec22 .f2", {
+          gsap.from(".sec22 .fb", {
             opacity: 0,
-            x: -50,
+            x: 100,
             scrollTrigger: {
-              trigger: ".sec22 .f2",
+              trigger: ".sec22 .fb",
               start: `center bottom`,
               toggleActions: "restart none none reverse",
             },
           })
 
-          gsap.from(".sec22 .f3", {
+          gsap.from(".sec22 .fc", {
             opacity: 0,
-            x: 50,
+            x: -100,
             scrollTrigger: {
-              trigger: ".sec22 .f2",
+              trigger: ".sec22 .fc",
+              start: `center bottom`,
+              toggleActions: "restart none none reverse",
+            },
+          })
+
+          gsap.from(".sec22 .fd", {
+            opacity: 0,
+            x: 100,
+            scrollTrigger: {
+              trigger: ".sec22 .fd",
               start: `center bottom`,
               toggleActions: "restart none none reverse",
             },
@@ -116,12 +156,17 @@ const Sec22 = ({
         <div className='subInfo titlea'>{config.sec22.info}</div>
         <div className='mainContent'>
           <div className='box'>
-            <div className='f1'>
+            <div className='f4 f1 fa'>
+              <div className='title'>{config.sec22.subTitled}</div>
+              <div className='img'></div>
+              <div className='info'>{config.sec22.subInfod}</div>
+            </div>
+            <div className='f1 fb'>
               <div className='title'>{config.sec22.subTitlea}</div>
               <div className='img'></div>
               <div className='info'>{config.sec22.subInfoa}</div>
             </div>
-            <div className='f2'>
+            <div className='f1 fnew fc'>
               <div>
                 <div className='title'>{config.sec22.subTitleb}</div>
                 <div
@@ -131,7 +176,7 @@ const Sec22 = ({
               </div>
               <div className='img'></div>
             </div>
-            <div className='f3'>
+            <div className='f3 fd'>
               <div>
                 <div className='title'>{config.sec22.subTitlec}</div>
                 <div className='info'>{config.sec22.subInfoc}</div>

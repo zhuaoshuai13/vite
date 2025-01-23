@@ -15,16 +15,16 @@ const Sec8 = ({
   useGSAP(
     () => {
       if (container.current) {
-        gsap.from(".sec8 .titles", {
-          duration: 1,
-          opacity: 0,
-          y: 60,
-          scrollTrigger: {
-            trigger: ".sec8 .titles",
-            start: `bottom bottom`,
-            toggleActions: "restart none none reverse",
-          },
-        })
+        // gsap.from(".sec8 .titles", {
+        //   duration: 1,
+        //   opacity: 0,
+        //   y: 60,
+        //   scrollTrigger: {
+        //     trigger: ".sec8 .titles",
+        //     start: `bottom bottom`,
+        //     toggleActions: "restart none none reverse",
+        //   },
+        // })
 
         gsap.from(".sec8 .title", {
           duration: 1,
@@ -60,7 +60,10 @@ const Sec8 = ({
         <div className='light'></div>
         <div className='dark mb'></div>
         <div className='text'>
-          <div className='subTitle title'>{config.sec9.title}</div>
+          <div
+            className='subTitle title'
+            dangerouslySetInnerHTML={{ __html: config.sec9.title }}
+          ></div>
           <div className='subInfo title'>{config.sec9.info}</div>
         </div>
       </div>

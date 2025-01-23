@@ -262,7 +262,6 @@ const Sec3 = ({
   useEffect(() => {
     const handleTouchStart = (e: any) => {
       if (e.target.closest(".bigTouch")) {
-        console.log(e.target)
         if (e.target.className === "alink") {
           return
         } else {

@@ -4,6 +4,17 @@
   position: relative;
   height: pvw(1430);
 
+  .colorText {
+    font-size: pvw(48);
+    font-family: "Bold";
+    margin-left: pvw(75);
+    margin-top: pvw(64);
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+  }
+
   .sec2Wrapper {
     position: absolute;
     top: 0;
@@ -36,7 +47,7 @@
     display: flex;
     gap: pvw(40);
     align-items: center;
-    padding-left: pvw(60);
+    padding-left: pvw(0);
   }
 
   .slogen {
@@ -58,15 +69,15 @@
     display: flex;
     gap: pvw(20);
     align-items: center;
-    margin-top: pvw(59);
+    margin-top: pvw(40);
     color: rgba(50, 50, 60, 1);
     text-align: center;
   }
 
   .line {
-    width: pvw(2);
+    width: 0px;
     height: pvw(62);
-    background-color: rgba(255, 7, 60, 1);
+    box-shadow: 0 0 0 1px rgb(255, 7, 60);
   }
 
   .f1 {
@@ -118,6 +129,12 @@
 @media screen and (max-width: 751px) {
   .sec1out {
     height: auto;
+
+    .colorText {
+      margin: auto;
+      font-size: mvw(24);
+      margin-top: mvw(20);
+    }
   }
 
   .sec1 {
@@ -132,14 +149,14 @@
     }
 
     .sec1white {
-      top: mvw(526);
+      top: mvw(576);
       left: mvw(50);
       width: mvw(424);
       height: mvw(800);
     }
 
     .sec1blue {
-      top: mvw(310);
+      top: mvw(360);
       left: mvw(267);
       width: mvw(437);
       height: mvw(489);
@@ -148,7 +165,7 @@
     }
 
     .sec1mask {
-      top: mvw(730);
+      top: mvw(780);
       left: mvw(266);
       width: mvw(289);
       height: mvw(368);
@@ -174,7 +191,7 @@
     .params {
       gap: mvw(32);
       width: fit-content;
-      margin: mvw(10) auto 0;
+      margin: mvw(12) auto 0;
     }
 
     .f1 {
@@ -189,7 +206,7 @@
     }
 
     .line {
-      width: mvw(2);
+      width: mvw(0);
       height: mvw(28);
     }
   }

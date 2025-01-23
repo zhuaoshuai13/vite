@@ -13,7 +13,7 @@ const Sec1 = ({
     () => {
       if (container.current) {
         gsap.from(".sec1 .sec1white", {
-          easy: "none",
+          ease: "none",
           x: 10,
           y: 200,
           opacity: 0,
@@ -21,7 +21,7 @@ const Sec1 = ({
         })
 
         gsap.from(".sec1 .sec1blue", {
-          easy: "none",
+          ease: "none",
           opacity: 0,
           x: 10,
           y: -200,
@@ -30,7 +30,7 @@ const Sec1 = ({
         })
 
         gsap.from(".sec1 .sec1mask", {
-          easy: "none",
+          ease: "none",
           opacity: 0,
           // x: 10,
           y: -20,
@@ -41,7 +41,7 @@ const Sec1 = ({
         const tl = gsap.timeline()
         tl.to(".sec1out .sec1Wrapper", {
           top: "-100%",
-          easy: "none",
+          ease: "none",
           scrollTrigger: {
             trigger: ".sec1out",
             start: "top top",
@@ -65,6 +65,11 @@ const Sec1 = ({
   })
 
   const fa = contextSafe(() => {
+    const video = document.querySelector(".fullVideo video")
+    if (video) {
+      //@ts-ignore
+      video.play()
+    }
     gsap.to(".fullVideo", {
       top: 0,
     })
@@ -75,8 +80,12 @@ const Sec1 = ({
         <div className='sec1'>
           <div className='group'>
             <div className='logo'></div>
-            <div className='slogen'>{config.sec1.slogen}</div>
+            <div
+              className='slogen'
+              dangerouslySetInnerHTML={{ __html: config.sec1.slogen }}
+            ></div>
           </div>
+          <div className='colorText'>{config.sec1.desc}</div>
           <div className='params'>
             <div className='param'>
               <div className='f1'>{config.sec1.titlea}</div>

@@ -2,14 +2,13 @@
 
 .sec8 {
   position: relative;
-  height: pvw(2025);
+  height: 80vw;
   padding-top: pvw(0);
-  background: url("../../../assets/images/sec8Dark.jpg") no-repeat top center /
-    contain;
+  background: url("../../../assets/images/sec8Dark.jpg") no-repeat 204% center / contain;
   background-color: rgba(17, 17, 17, 1);
 
   .subTitle {
-    max-width: 38%;
+    max-width: 80%;
     margin-left: 0;
     color: #fff;
     text-align: left;
@@ -47,10 +46,9 @@
     top: 0;
     left: 0;
     z-index: 1;
-    width: 100%;
+    width: 132%;
     height: 100%;
-    background: url("../../../assets/images/sec8Light.jpg") no-repeat top center /
-      contain;
+    background: url("../../../assets/images/sec8Light.jpg") no-repeat top center / contain;
   }
 }
 

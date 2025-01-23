@@ -32,7 +32,6 @@ const Sec14 = ({
         const domHeight = computenum(1100)
 
         // 如果屏幕高度>nav+domHeight，则定在顶部)
-        console.log(winHeight - domHeight)
 
         if (!responsive?.md) {
           dis = (0 / 720) * winWidth - 60
