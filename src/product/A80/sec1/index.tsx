@@ -88,7 +88,7 @@ const Sec1 = ({
           <div className='colorText'>{config.sec1.desc}</div>
           <div className='params'>
             <div className='param'>
-              <div className='f1'>{config.sec1.titlea}</div>
+              <div className='f1' dangerouslySetInnerHTML={{__html: config.sec1.titlea}}></div>
               <div className='f2'>{config.sec1.infoa}</div>
             </div>
             <div className='line'></div>

@@ -292,7 +292,7 @@ const Sec3 = ({
             onTouchEnd={touchEndes}
           >
             <div className='box f1'>
-              <div className='text'>{config.sec3.f1}</div>
+              <div className='text' dangerouslySetInnerHTML={{__html: config.sec3.f1}}></div>
               <div className='icon'>
                 <a href='#sec4Id' className='alink'></a>
               </div>
