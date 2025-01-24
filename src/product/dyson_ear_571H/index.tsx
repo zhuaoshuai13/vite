@@ -39,7 +39,6 @@ const Ear571H = () => {
   const bottomrRef = useRef(null)
   const swiperRef = useRef(null)
   const [swiperInstance, setSwiperInstance] = useState<any>()
-  console.log("🚀 ~ Ear571H ~ swiperInstance:", swiperInstance)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -73,7 +72,6 @@ const Ear571H = () => {
   }, [])
 
   useEffect(() => {
-    console.log("🚀 ~ useEffect ~ destination:", destination)
     if (destination?.index < 7) {
       document.addEventListener("touchmove", handleTouchMove, {
         passive: false,
@@ -88,7 +86,9 @@ const Ear571H = () => {
       <NavBar destination={destination} swiperInstance={swiperInstance} />
       {!destination?.index ? <SlideDown /> : null}
       {destination?.index == 7 &&
-        toBottomDistance < window.innerHeight * 0.5 && <BackTop swiperInstance={swiperInstance} />}
+        toBottomDistance < window.innerHeight * 0.5 && (
+          <BackTop swiperInstance={swiperInstance} />
+        )}
       {destination?.index < 5 && (
         <div
           className={`sec3_video_wrap ${
@@ -128,18 +128,19 @@ const Ear571H = () => {
       /> */}
       <Swiper
         // effect={"fade"}
-        className='main_swiper'
+        // className='main_swiper'
         direction='vertical'
-        modules={[EffectFade]}
+        // modules={[EffectFade]}
+        // effect={"fade"}
         slidesPerView={1}
         onSlideChange={(swiper) => {
-          console.log("swiper", swiper)
           setDestination({ index: swiper.activeIndex })
           if (swiper.activeIndex == 7) {
             // document.querySelector(".bottom_part")?.scrollTop = 10
             bottomrRef.current.scrollTop = 10
           }
         }}
+        speed={1150}
         // ref={swiperRef}
         onSwiper={(swiper) => {
           setSwiperInstance(swiper)
@@ -150,7 +151,7 @@ const Ear571H = () => {
         allowTouchMove={scrollTop == 0 ? true : false}
       >
         <SwiperSlide>
-          <Sec1 />
+          <Sec1 destination={destination} />
         </SwiperSlide>
         <SwiperSlide>
           <Sec2 isload={isload} destination={destination} />
@@ -181,9 +182,9 @@ const Ear571H = () => {
             ref={bottomrRef}
           >
             <div id='nav_link_2' style={{ height: "200vh" }}></div>
-            <Sec8 isload={isload} destination={destination} />
+            {/* <Sec8 isload={isload} destination={destination} /> */}
             <Sec9 isload={isload} destination={destination} />
-            <Sec10 isload={isload} destination={destination} />
+            {/* <Sec10 isload={isload} destination={destination} /> */}
           </div>
         </SwiperSlide>
       </Swiper>

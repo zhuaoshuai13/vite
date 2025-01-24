@@ -316,7 +316,7 @@ const Sec5 = () => {
 
             <div className='right'>
               <div className='title'>{initData?.title}</div>
-              <div className='description'>{initData?.description}</div>
+              <div className='description'>{initData?.description} &nbsp;</div>
 
               <div
                 className='colour_picker_group'

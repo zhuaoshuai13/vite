@@ -78,15 +78,15 @@ html {
 
     &.slide-up {
       video {
-        transform: translateY(-100%);
-        transition: all .5s;
+        transform: translateY(-100vh);
+        transition: all 1s;
       }
     }
 
     &.slide-down {
       video {
-        transform: translateY(100%);
-        transition: all .5s;
+        transform: translateY(100vh);
+        transition: all 1s;
       }
     }
 
@@ -96,7 +96,7 @@ html {
       top: px-to-vw(30);
       left: px-to-vw(102);
       width: px-to-vw(1800);
-      transition: all .5s;
+      transition: all 1s;
 
       // transform: translateY(200px);
       // opacity: 0;
@@ -121,8 +121,7 @@ html {
     height: 100%;
   }
 
-  .sec1,
-  .sec2 {
+  .sec1 {
     color: #fff;
     background-color: #000;
   }
@@ -143,7 +142,13 @@ html {
     display: none;
   }
 
-  .main_swiper {
-    height: 100vh;
+  .main_swiper,
+  .swiper {
+    // height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }

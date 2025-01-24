@@ -112,11 +112,20 @@ const Sec9 = ({ isload, destination }) => {
               而设计
             </h3>
             <p className='pdp_desc'>
+              戴森从马鞍的设计汲取灵感，并大胆引入新材质，在重量和质感上取得了平衡。{" "}
+              <br />
+              <br />
               通过对不同佩戴者进行测试，戴森降噪耳机可以轻松适配不同尺寸的头型。日常佩戴依旧持久舒适。
             </p>
           </div>
           <div className='img_wrap'>
-            <img src={src + "/wysiwyg/ipadassets/571/sec9.jpg"} />
+            <video
+              className='sec1_video'
+              src={src + "/video/c/o/comfort-loop-owned.mp4"}
+              autoPlay
+              muted
+              loop
+            ></video>
           </div>
         </div>
       </div>
