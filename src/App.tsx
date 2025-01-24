@@ -1,5 +1,5 @@
 import Providers from "./provider"
-import Proudct from "./product/dyson_ear_571H"
+import Proudct from "./product/s25ultraAr"
 
 import "./App.scss"
 

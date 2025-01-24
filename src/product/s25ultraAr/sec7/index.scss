@@ -1,0 +1,61 @@
+@import '../vars';
+
+.s25ultra .sec7 {
+  .sec7_wrap {
+    position: relative;
+  }
+
+  .content_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .text_wrap {
+    position: relative;
+    z-index: 2;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .desc {
+    margin-top: px-to-vw(36);
+    font-size: px-to-vw(37.5);
+  }
+
+  .pic_wrap {
+    position: relative;
+    margin-top: px-to-vw(-230);
+  }
+
+  .phone1 {
+    visibility: hidden;
+  }
+
+  .phone2 {
+    position: absolute;
+    top: px-to-vw(18);
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+@media (max-width: $mobwidthPx) {
+  .s25ultra .sec7 {
+    .content_wrap {
+      justify-content: flex-end;
+      height: auto;
+    }
+
+    .pic_wrap {
+      height: px-to-vw-mb(1162);
+      margin-top: px-to-vw-mb(-250);
+    }
+
+    .desc {
+      font-size: px-to-vw-mb(29);
+    }
+  }
+}

@@ -36,19 +36,15 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: "src/assets/dyson_ear571h/*.js",
+              src: "src/product/s25ultraAr/config_ar.js",
               dest: "dist/js",
             },
             {
-              src: "src/assets/dyson_ear571h/*.css",
-              dest: "dist/css",
-            },
-            {
-              src: "src/assets/dyson_ear571h/images/*",
+              src: "src/assets/s25ultra/images/*",
               dest: "dist/images",
             },
             {
-              src: "src/assets/dyson_ear571h/videos/*",
+              src: "src/assets/s25ultra/videos/*",
               dest: "dist/videos",
             },
           ],
