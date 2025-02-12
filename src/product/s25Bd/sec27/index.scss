@@ -1,0 +1,91 @@
+@import "../var";
+
+#sec27 {
+  margin-top: pvw(250);
+  margin-bottom: pvw(110);
+
+  .sec27 {
+    display: flex;
+  }
+
+  .textGroup {
+    min-width: pvw(480);
+    padding-top: pvw(187);
+  }
+
+  .watch {
+    min-width: pvw(550);
+    height: pvw(397);
+    margin-top: pvw(345);
+    margin-left: pvw(75);
+
+    @include bg("sec28Watch");
+  }
+
+  .phone {
+    min-width: pvw(580);
+    height: pvw(816);
+    margin-left: pvw(-230);
+
+    @include bg("sec28Phone");
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sec27 {
+    margin-top: mvw(190);
+    margin-bottom: mvw(20);
+    padding-bottom: mvw(160);
+
+    .smallContent {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .textGroup {
+      width: mvw(650);
+      margin: auto;
+    }
+
+    .sec27 {
+      flex-direction: column;
+
+      .textGroup {
+        padding-top: 0;
+      }
+
+      .desc {
+        font-size: mvw(20);
+      }
+
+      .phone {
+        position: absolute;
+        right: mvw(-180);
+        bottom: 0;
+        z-index: 2;
+        width: mvw(538);
+        height: mvw(816);
+
+        @include bg("sec28Phonemb", true, "png");
+      }
+
+      .watch {
+        position: absolute;
+        right: mvw(100);
+        bottom: mvw(50);
+        z-index: 1;
+        width: mvw(560);
+        height: mvw(413);
+
+        @include bg("sec28Watchmb", true, "png");
+      }
+
+      .mb {
+        position: relative;
+        width: 100%;
+        height: mvw(816);
+        margin-top: mvw(50);
+      }
+    }
+  }
+}

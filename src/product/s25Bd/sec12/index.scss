@@ -1,0 +1,117 @@
+/* stylelint-disable at-rule-empty-line-before */
+@import "../var";
+
+#sec12 {
+  padding-top: pvw(190);
+
+  .oneTitle {
+    margin-left: pvw(960);
+  }
+
+  .btns {
+    position: relative;
+    z-index: 3;
+    width: pvw(34);
+    height: pvw(34);
+    margin-top: pvw(20);
+    margin-left: pvw(574);
+    cursor: pointer;
+  }
+
+  .desc {
+    margin-top: pvw(200);
+    margin-left: pvw(574);
+  }
+
+  .group {
+    position: relative;
+    width: pvw(1200);
+    height: pvw(712);
+    margin: pvw(-120) auto 0;
+  }
+
+  .f1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+
+    .desc {
+      color: #fff;
+    }
+
+    .btns {
+      z-index: 9;
+
+      @include bg("sec12White", false);
+    }
+
+    @include bg("sec12F1");
+  }
+
+  .f2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .desc {
+      color: #000;
+    }
+
+    .btns {
+      @include bg("sec12Black", false);
+    }
+
+    @include bg("sec12F2");
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sec12 {
+    padding-top: mvw(170);
+
+    .group {
+      width: mvw(650);
+      height: mvw(549);
+      margin-top: mvw(-80);
+    }
+
+    .btns {
+      position: absolute;
+      top: mvw(130);
+      left: mvw(600);
+      width: mvw(34);
+      height: mvw(34);
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    .f1 {
+      @include bg("sec12F1mb");
+
+      .btns {
+        @include bg("sec12Black", false);
+      }
+    }
+
+    .f2 {
+      @include bg("sec12F2mb");
+    }
+
+    .desc {
+      width: mvw(650);
+      margin: mvw(40) auto 0;
+      font-size: mvw(20);
+      line-height: 1.5;
+      text-align: right;
+    }
+  }
+}

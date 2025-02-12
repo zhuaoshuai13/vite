@@ -1,0 +1,262 @@
+/* stylelint-disable at-rule-empty-line-before */
+@import "../var";
+
+#sec14 {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  margin-top: -200vh;
+  text-align: center;
+
+  @include bg("sec14Bg");
+
+  background-position: bottom right;
+  background-size: pvw(1920) pvw(990);
+
+  .sec14 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+
+    .inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .img1 {
+      position: absolute;
+      right: pvw(678);
+      bottom: pvw(196);
+      width: pvw(293);
+      height: pvw(443);
+      overflow: hidden;
+
+      .light {
+        position: absolute;
+        right: 0;
+        z-index: 3;
+        width: 1vw;
+        height: 10vw;
+        background-color: #fff6;
+        transform: translate(0%, -100%) rotate(0deg);
+      }
+
+      .img {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        @include bg("sec14F1");
+      }
+
+      .imgTop {
+        position: absolute;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        @include bg("bd/f2", true, "png");
+      }
+    }
+
+    .img2 {
+      position: absolute;
+      right: pvw(324);
+      bottom: pvw(198);
+      width: pvw(291);
+      height: pvw(441);
+      overflow: hidden;
+
+      .light {
+        position: absolute;
+        z-index: 3;
+        width: 1vw;
+        height: 10vw;
+        background-color: #fff6;
+        transform: translate(-58%, -100%) rotate(0deg);
+      }
+
+      .img {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        @include bg("sec14F2");
+      }
+
+      .imgTop {
+        position: absolute;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        @include bg("sec14F2Top", true, "png");
+      }
+    }
+
+    .img3 {
+      position: absolute;
+      bottom: pvw(0);
+      z-index: 10;
+      width: pvw(1920);
+      height: pvw(252);
+      background-size: contain;
+
+      @include bg("sec14F3");
+
+      // background-size: pvw(1920) pvw(252);
+    }
+
+    .smallContent {
+      padding-top: 54px;
+      text-align: left;
+    }
+  }
+
+  .outBox {
+    width: fit-content;
+    margin-top: pvw(100);
+    padding: pvw(76) pvw(50);
+    background-color: #f3f3f3;
+    border-radius: pvw(20);
+  }
+
+  .f2 {
+    margin-top: pvw(60);
+  }
+
+  .texta {
+    font-size: pvw(25);
+  }
+
+  .textb {
+    margin-left: pvw(10);
+    font-size: pvw(37.5);
+    font-family: "Bold";
+  }
+
+  .textc {
+    margin-top: pvw(10);
+    font-size: pvw(25);
+    font-family: "Book";
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sec14 {
+    height: fit-content;
+    margin-top: mvw(200);
+    background: unset;
+
+    .sec14 {
+      width: 100%;
+      height: 100%;
+      height: mvw(1170);
+      padding-top: mvw(120);
+
+      @include bg("sec14Bgmb");
+
+      .oneTitle {
+        letter-spacing: -1px;
+      }
+
+      .smallContent {
+        padding-top: 0;
+      }
+
+      .desc {
+        font-size: mvw(20);
+      }
+
+      .img1 {
+        top: mvw(500);
+        left: mvw(55);
+        width: mvw(292);
+        height: mvw(442);
+
+        .light {
+          width: 2vw;
+          transform: translate(0%, -180%) rotate(0deg);
+        }
+
+        .img {
+          @include bg("sec14F1mb");
+        }
+
+        .imgTop {
+          @include bg("bd/f2_mb", true, "png");
+        }
+      }
+
+      .img2 {
+        top: mvw(500);
+        left: mvw(410);
+        width: mvw(291);
+        height: mvw(440);
+
+        .light {
+          width: 2vw;
+          transform: translate(-58%, -122%) rotate(0deg);
+        }
+
+        .imgTop {
+          @include bg("sec14F2Topmb", true, "png");
+        }
+
+        .img {
+          @include bg("sec14F2mb");
+        }
+      }
+
+      .img3 {
+        width: 100%;
+        height: mvw(289);
+
+        @include bg("sec14F3mb");
+      }
+    }
+
+    .bigContent {
+      position: relative;
+      z-index: 10;
+      margin-top: mvw(-170);
+      overflow: hidden;
+      background-color: #f3f3f3;
+      border-radius: mvw(13);
+
+      .outBox {
+        margin-top: 0;
+        padding: mvw(65);
+        text-align: left;
+        border-radius: mvw(13);
+      }
+
+      .f2 {
+        margin-top: mvw(45);
+      }
+
+      .texta {
+        font-size: mvw(25);
+      }
+
+      .textb {
+        margin-left: mvw(10);
+        font-size: mvw(33);
+      }
+
+      .textc {
+        margin-top: mvw(10);
+        font-size: mvw(20);
+      }
+    }
+  }
+}

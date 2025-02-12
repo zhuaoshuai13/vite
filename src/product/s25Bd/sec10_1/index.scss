@@ -1,0 +1,81 @@
+/* stylelint-disable selector-id-pattern */
+
+@import "../var";
+
+#sec10_1 {
+  height: calc(100vh - 54px);
+  margin-top: pvw(120);
+  padding-bottom: 20px;
+
+  .sec10_1 {
+    position: relative;
+    height: 100%;
+  }
+
+  .color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .colorTitle {
+    font-size: pvw(37.5);
+    font-family: "Book";
+  }
+
+  .imgc {
+    flex: 1;
+    margin-top: pvw(50);
+
+    @include bg("sec10F3", false);
+  }
+
+  .bot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: pvw(25);
+
+    .desc {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sec10_1 {
+    height: calc(100vh - 60px);
+    margin-top: mvw(170);
+
+    .sec10_1 {
+      .desc {
+        font-size: mvw(20);
+      }
+
+      .imgc {
+        margin-top: mvw(75);
+
+        @include bg("sec10F3mb");
+      }
+
+      .bot {
+        flex-direction: column;
+        margin-top: mvw(30);
+
+        .desc {
+          min-height: mvw(120);
+          margin-top: mvw(30);
+          font-size: mvw(20);
+        }
+      }
+
+      .colorTitle {
+        font-size: mvw(33);
+        font-family: "Medium";
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+/* stylelint-disable at-rule-empty-line-before */
+@import "../var";
+
+#sec19 {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  margin-top: -200vh;
+  text-align: center;
+  background-color: #fff;
+
+  .sec19 {
+    position: relative;
+    height: 100%;
+
+    @include bg("sec19Bg");
+  }
+
+  .phonea {
+    position: absolute;
+    top: pvw(0);
+    left: pvw(648);
+    width: pvw(332);
+    height: pvw(662);
+
+    @include bg("sec19Up");
+  }
+
+  .big {
+    font-size: pvw(75);
+    font-family: "Medium";
+  }
+
+  .mid {
+    font-size: pvw(25);
+    font-family: "Book";
+  }
+
+  .small {
+    display: flex;
+    gap: pvw(20);
+    margin-top: pvw(10);
+    font-size: pvw(16.67);
+    font-family: "Light";
+    opacity: 0.8;
+  }
+
+  .texta {
+    position: absolute;
+    top: pvw(170);
+    left: pvw(1047);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .textb {
+    position: absolute;
+    top: pvw(680);
+    left: pvw(450);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tops {
+    display: flex;
+    gap: pvw(15);
+    align-items: flex-end;
+  }
+
+  .phoneb {
+    position: absolute;
+    top: 22.6vw;
+    left: pvw(1020);
+    width: pvw(342);
+    height: pvw(646);
+
+    @include bg("sec19Down");
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sec19 {
+    height: mvw(950);
+    margin-top: mvw(246);
+
+    .sec19 {
+      @include bg("sec19Bgmb");
+    }
+
+    .phonea {
+      top: mvw(0);
+      left: mvw(50);
+      width: mvw(295);
+      height: mvw(589);
+
+      @include bg("sec19Upmb");
+    }
+
+    .big {
+      font-size: mvw(55);
+    }
+
+    .mid {
+      font-size: mvw(25);
+    }
+
+    .small {
+      gap: mvw(35);
+      margin-top: mvw(15);
+      font-size: mvw(16.67);
+    }
+
+    .tops {
+      flex-direction: column;
+      gap: mvw(10);
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .textb {
+      top: mvw(620);
+      left: mvw(50);
+    }
+
+    .texta {
+      top: unset;
+      right: mvw(66);
+      bottom: mvw(630);
+      left: unset;
+    }
+
+    .phoneb {
+      top: unset;
+      right: mvw(66);
+      bottom: 0;
+      width: mvw(304);
+      height: mvw(574);
+
+      @include bg("sec19Downmb");
+    }
+  }
+}

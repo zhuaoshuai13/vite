@@ -1,0 +1,359 @@
+@import "./var";
+
+@media screen and (min-width: 751px) {
+  .pc {
+    display: block;
+  }
+
+  .mb {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .pc {
+    display: none;
+  }
+
+  .mb {
+    display: block;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.s25 {
+  position: relative;
+  font-family: "Normal";
+  line-height: normal;
+
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 54px;
+    background-color: yellow;
+  }
+
+  .top {
+    height: 100vh;
+    background-color: green;
+  }
+
+  section {
+    margin-top: -1px;
+    overflow: hidden;
+  }
+
+  .smallContent {
+    max-width: pvw(1200);
+    margin: auto;
+  }
+
+  .bigContent {
+    max-width: pvw(1300);
+    margin: auto;
+  }
+
+  .oneTitle {
+    color: #000;
+    font-size: pvw(75);
+    font-family: "Medium";
+    line-height: calc(83 / 75);
+  }
+
+  .desc {
+    margin-top: pvw(40);
+    color: #000;
+    font-size: pvw(16.67);
+    line-height: calc(33.33 / 16.67);
+    opacity: 0.8;
+  }
+
+  .bigTitle {
+    max-width: 90%;
+    margin: auto;
+    color: #000;
+    font-size: pvw(146);
+    font-family: "Bold";
+    line-height: calc(158 / 146);
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 767px) {
+    .oneTitle {
+      margin-left: -2px;
+      font-size: mvw(54);
+      font-family: "Medium";
+      line-height: 0.9;
+    }
+
+    .desc {
+      margin-top: mvw(40);
+      font-size: mvw(16.67);
+      line-height: 1.5;
+    }
+
+    .smallContent {
+      width: mvw(650);
+      max-width: mvw(650);
+    }
+
+    .bigContent {
+      width: mvw(650);
+      max-width: mvw(650);
+    }
+
+    .bigTitle {
+      font-size: mvw(83);
+      line-height: calc(100 / 83);
+      white-space: nowrap;
+    }
+  }
+}
+
+.imgLoadfalse {
+  div {
+    background-image: unset !important;
+  }
+}
+
+// .s25 .sec28 p {
+//   white-space: pre-wrap;
+// }
+
+// @media screen and (min-width: 768px) {
+//   .s25 #sec3 .small {
+//     font-size: 1.3vw;
+//   }
+
+//   .s25 #sec4 .desc {
+//     max-width: 50%;
+//   }
+
+//   .s25 #sec5 .oneTitle {
+//     font-size: 3.3vw;
+//   }
+
+//   .s25 #sec7 .oneTitle {
+//     font-size: 3vw;
+//   }
+
+//   .s25 #sec11 .img {
+//     height: 31vw;
+//     background-size: contain !important;
+//   }
+
+//   .s25 .oneTitle {
+//     font-size: 3.6vw;
+//   }
+
+//   .s25 #sec10 .bot .desc {
+//     max-width: 61%;
+//   }
+
+//   .s25 #sec10_1 .bot .desc {
+//     max-width: 61%;
+//   }
+
+//   .s25 #sec11 .desc {
+//     max-width: 46%;
+//   }
+
+//   .s25 #sec12 .f1 .desc {
+//     width: 32vw;
+//   }
+
+//   .s25 #sec12 .f2 .desc {
+//     width: 32vw;
+//   }
+
+//   .s25 #sec14 .oneTitle {
+//     font-size: 3.3vw;
+//   }
+
+//   .s25 #sec14 .textc {
+//     font-size: 1vw;
+//   }
+
+//   .s25 #sec15 .desc {
+//     max-width: 62.5vw;
+//     margin: 1.04vw auto 0;
+//   }
+
+//   .s25 #sec16 .desc {
+//     max-width: 74%;
+//     margin-top: 1vw;
+//     margin-right: auto;
+//     margin-left: auto;
+//   }
+
+//   .s25 #sec16 .small {
+//     line-height: 1.3;
+//   }
+
+//   .s25 #sec17 .oneTitle {
+//     font-size: 2vw;
+//   }
+
+//   .s25 #sec20 .tips .desc {
+//     font-size: 0.7vw;
+//   }
+
+//   .s25 #sec21 .groupTwo {
+//     gap: 2vw;
+//   }
+
+//   .s25 #sec21 .groupTwo .twoImg {
+//     min-width: 37.8125vw;
+//   }
+
+//   .s25 #sec22 .desc {
+//     max-width: 62.5vw;
+//   }
+
+//   .s25 #sec23 .desc {
+//     max-width: 62.5vw;
+//   }
+
+//   .s25 #sec25 .desc {
+//     max-width: 62.5vw;
+//   }
+
+//   .s25 #sec26 .android .desc {
+//     max-width: 52%;
+//   }
+
+//   .s25 #sec26 .dts .desc {
+//     max-width: 51%;
+//   }
+
+//   .s25 #sec26 .nfc .desc {
+//     max-width: 52%;
+//   }
+
+//   .s25 #sec26 .inTitle {
+//     font-size: 1.6vw;
+//   }
+
+//   .s25 #sec26 .dynamic .desc {
+//     width: 30vw;
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   .s25 #sec3 .big {
+//     font-size: 3.8vw;
+//   }
+
+//   .s25 #sec4 .sec4 .desc {
+//     max-width: 90%;
+//   }
+
+//   .s25 #sec6 .oneTitle {
+//     font-size: 6.2vw;
+//   }
+
+//   .s25 #sec7 .oneTitle {
+//     font-size: 6.2vw;
+//   }
+
+//   .s25 #sec8 .sec8 .desc {
+//     max-width: 90%;
+//   }
+
+//   .s25 #sec12 .oneTitle {
+//     font-size: 6.2vw;
+//   }
+
+//   .s25 #sec13 .sec13 .desc {
+//     max-width: 90%;
+//   }
+
+//   .s25 #sec14 .oneTitle {
+//     font-size: 6.2vw;
+//   }
+
+//   .s25 #sec16 .desc {
+//     max-width: 86%;
+//     margin-right: auto;
+//     margin-left: auto;
+//   }
+
+//   .s25 #sec17 .oneTitle {
+//     font-size: 6.2vw;
+//   }
+
+//   .s25 #sec17 .sec17 .bot {
+//     clip-path: inset(75vw 0 0 0);
+//   }
+
+//   .s25 #sec18 .sec18 .desc {
+//     max-width: 90%;
+//   }
+
+//   .s25 #sec21 .oneTitle {
+//     font-size: 6.2vw;
+//   }
+
+//   .s25 #sec24 .sec24 .desc {
+//     max-width: 90%;
+//   }
+
+//   .s25 .bigTitle {
+//     font-size: 8vw;
+//   }
+
+//   .s25 #sec6 .desc {
+//     font-size: 2.6vw;
+//   }
+
+//   .s25 #sec16 .small {
+//     font-size: 1.7vw;
+//   }
+
+//   .s25 #sec20 .tips.mb .desc {
+//     font-size: 1.8vw;
+//   }
+
+//   .s25 #sec23 .desc {
+//     max-width: 90%;
+//   }
+
+//   .s25 #sec25 .desc {
+//     max-width: 90%;
+//   }
+
+//   .s25 #sec26 .aiCall .inTitle {
+//     font-size: 3vw;
+//   }
+
+//   .s25 #sec26 .android .desc {
+//     max-width: 86%;
+//   }
+
+//   .s25 #sec26 .desc {
+//     font-size: 2.5vw;
+//   }
+
+//   .s25 #sec26 .gpt .gptImg {
+//     min-width: 40.666vw;
+//   }
+
+//   .s25 #sec26 .gpt .desc {
+//     margin-top: 1vw;
+//   }
+
+//   .s25 #sec26 .inTitle {
+//     font-size: 4vw;
+//   }
+
+//   .s25 #sec26 .dynamic .desc {
+//     width: 70vw;
+//   }
+// }
