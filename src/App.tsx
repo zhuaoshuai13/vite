@@ -1,5 +1,5 @@
 import Providers from "./provider"
-import Proudct from "./product/s25ultraAr"
+import Proudct from "./product/s25ultraBd"
 
 import "./App.scss"
 

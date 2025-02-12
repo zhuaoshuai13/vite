@@ -20,7 +20,7 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           if (assetInfo.name.endsWith(".css")) {
             return `css/[name][extname]`
-          } else if (assetInfo.name.endsWith(".woff2")) {
+          } else if (assetInfo.name.endsWith(".otf")) {
             return "fonts/[name].[ext]"
           } else if (
             assetInfo.name.endsWith(".jpg") ||
@@ -36,7 +36,7 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: "src/product/s25ultraAr/config_ar.js",
+              src: "src/product/s25ultraBd/config_bd.js",
               dest: "dist/js",
             },
             {
