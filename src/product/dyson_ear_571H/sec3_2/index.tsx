@@ -134,7 +134,7 @@ const Sec3 = ({ isload, destination }) => {
               <div className='action_box'>
                 <a
                   target='_blank'
-                  href='https://music.apple.com/cn/album/%E4%B8%83%E9%87%8C%E9%A6%99/536114662?i=536115195'
+                  href='https://music.apple.com/cn/playlist/barefoot-acoustic/pl.8e7d5f0c316f4d9da9db9c29281f10a4?l=en-GB'
                 >
                   <button className=''>
                     <div className='link_icon img_wrap'>

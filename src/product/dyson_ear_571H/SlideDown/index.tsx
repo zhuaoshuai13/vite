@@ -5,13 +5,15 @@ const SlideDown = () => {
 
   return (
     <div className='slide_down'>
-      <div className='img_wrap hand_icon'>
+      {/* <div className='img_wrap hand_icon'>
         <img src={src + "/wysiwyg/ipadassets/571/slide_down.png"} />
-      </div>
+      </div> */}
       <p>
-        开启 <br /> OnTrac™ <br />
-        音乐之旅
+        开启 OnTrac™音乐之旅
       </p>
+      <div className='img_wrap arrow_icon'>
+        <img src={src + "/.thumbswysiwyg/ipadassets/571/arrow_down.png"} />
+      </div>
     </div>
   )
 }

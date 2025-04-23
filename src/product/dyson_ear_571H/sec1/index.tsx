@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import { useGSAP } from "@gsap/react"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
@@ -18,6 +19,8 @@ const Sec1 = ({ destination }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
   const videoRef2 = useRef<HTMLVideoElement>(null)
   const videoRef3 = useRef<HTMLVideoElement>(null)
+  const videoRef4 = useRef<HTMLVideoElement>(null)
+  const videoRef5 = useRef<HTMLVideoElement>(null)
   const swiperRef = useRef(null)
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -83,6 +86,8 @@ const Sec1 = ({ destination }) => {
       videoRef.current &&
       videoRef2.current &&
       videoRef3.current &&
+      videoRef4.current &&
+      videoRef5.current &&
       swiperRef.current
     ) {
       if (destination?.index == 0) {
@@ -100,6 +105,8 @@ const Sec1 = ({ destination }) => {
         videoRef.current.pause()
         videoRef2.current.pause()
         videoRef3.current.pause()
+        videoRef4.current.pause()
+        videoRef5.current.pause()
       }
     }
   }, [destination])
@@ -107,17 +114,34 @@ const Sec1 = ({ destination }) => {
   return (
     <section className='section sec1 slide_sec' ref={wrap}>
       <div className='sec1_wrap'>
+        <div className='swiper_btn swiper_prev img_wrap'>
+          <img src={src + "/.thumbswysiwyg/ipadassets/571/arrow_left.png"} />
+        </div>
+        <div className='swiper_btn swiper_next img_wrap'>
+          <img
+            style={{ transform: "rotate(180deg)" }}
+            src={src + "/.thumbswysiwyg/ipadassets/571/arrow_left.png"}
+          />
+        </div>
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={(e) => {
             handleSlideChange()
           }}
           loop
+          modules={[Navigation]}
+          navigation={{
+            nextEl: ".swiper_next",
+            prevEl: ".swiper_prev",
+          }}
         >
-          <SwiperSlide>
+          <SwiperSlide className="sec1_slide">
             <video
               className='sec1_video'
-              src={src + "/video/m/a/main_kv1.mp4"}
+              src={
+                src +
+                "/video/1/2/1206296353_dyson_ec_ipad_content_kv_video_20s_2360x1152_pp01.mp4"
+              }
               autoPlay
               muted
               // loop
@@ -128,8 +152,8 @@ const Sec1 = ({ destination }) => {
           <SwiperSlide>
             <video
               className='sec1_video'
-              src={src + "/video/m/a/main_kv3.mp4"}
-              // autoPlay
+              src={src + "/video/1/_/1_launch_film.mp4"}
+              autoPlay
               muted
               // loop
               ref={videoRef2}
@@ -139,7 +163,7 @@ const Sec1 = ({ destination }) => {
           <SwiperSlide>
             <video
               className='sec1_video'
-              src={src + "/video/m/a/main_kv2.mp4"}
+              src={src + "/video/2/_/2_media_endorsement_.mp4"}
               // autoPlay
               muted
               // loop
@@ -147,14 +171,44 @@ const Sec1 = ({ destination }) => {
               onEnded={handleVideoEnd}
             ></video>
           </SwiperSlide>
+          <SwiperSlide>
+            <video
+              className='sec1_video'
+              src={src + "/video/3/_/3_raye.mp4"}
+              // autoPlay
+              muted
+              // loop
+              ref={videoRef4}
+              onEnded={handleVideoEnd}
+            ></video>
+          </SwiperSlide>
+          <SwiperSlide>
+            <video
+              className='sec1_video'
+              src={src + "/video/4/_/4_ac_milan.mp4"}
+              // autoPlay
+              muted
+              // loop
+              ref={videoRef5}
+              onEnded={handleVideoEnd}
+            ></video>
+          </SwiperSlide>
         </Swiper>
         <div
           className='voice_icon'
           onClick={() => {
-            if (videoRef.current && videoRef2.current && videoRef3.current) {
+            if (
+              videoRef.current &&
+              videoRef2.current &&
+              videoRef3.current &&
+              videoRef4.current &&
+              videoRef5.current
+            ) {
               videoRef.current.muted = !isMute
               videoRef2.current.muted = !isMute
               videoRef3.current.muted = !isMute
+              videoRef4.current.muted = !isMute
+              videoRef5.current.muted = !isMute
             }
             setIsMute(!isMute)
           }}
@@ -168,6 +222,17 @@ const Sec1 = ({ destination }) => {
             src={src + "/wysiwyg/ipadassets/571/volume-mute.png"}
           />
         </div>
+        <a
+          target='_blank'
+          className='music_icon_wrap'
+          href='https://music.apple.com/cn/playlist/barefoot-acoustic/pl.8e7d5f0c316f4d9da9db9c29281f10a4?l=en-GB'
+        >
+          <img
+            className='music_icon'
+            src={src + "/.thumbswysiwyg/ipadassets/571/apple_music_icon.png"}
+          />
+          <div className='music_text'>推荐歌单</div>
+        </a>
       </div>
     </section>
   )
