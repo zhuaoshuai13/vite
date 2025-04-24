@@ -135,12 +135,12 @@ const Sec1 = ({ destination }) => {
             prevEl: ".swiper_prev",
           }}
         >
-          <SwiperSlide className="sec1_slide">
+          <SwiperSlide>
             <video
               className='sec1_video'
               src={
                 src +
-                "/video/1/2/1206296353_dyson_ec_ipad_content_kv_video_20s_2360x1152_pp01.mp4"
+                "/video/1/2/1206296353_dyson_ec_ipad_content_kv_video_20s_2336x1536_pp02.mp4"
               }
               autoPlay
               muted
